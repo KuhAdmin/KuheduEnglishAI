@@ -1,0 +1,311 @@
+/*
+ * Design tokens — the single source of truth for color, type, radius, shadow and motion.
+ * Components use the generated Tailwind utilities (bg-surface, text-fg-muted, rounded-lg, ...).
+ * Tailwind's default palette and type scale are cleared so off-system values cannot creep in.
+ *
+ * Colors are semantic, not literal, and come from the user's chosen NAMED THEME. Each theme is
+ * one complete look (light or dark) defined in a single `[data-theme='<id>']` block below.
+ * The attribute works on any element, so a subtree can render in another theme (the theme
+ * picker's previews do this).
+ *
+ * To add a theme: add a block here, an entry in src/shared/theme/themes.ts, a name in en.ts and
+ * the id in the boot script in index.html. themes.contrast.test.ts checks completeness + WCAG AA.
+ */
+
+@theme {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Default values = Indigo Dawn. Must mirror the [data-theme='indigo-dawn'] block (tested). */
+
+  /* Surfaces */
+  --color-bg: #f8f8fd;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #eeeef8;
+  --color-scrim: rgb(20 18 50 / 0.48);
+
+  /* Text */
+  --color-fg: #1a1a2e;
+  --color-fg-muted: #4c4f6b;
+  --color-fg-subtle: #696c87;
+  --color-fg-inverse: #f8f8fd;
+
+  /* Lines */
+  --color-border: #e2e2f0;
+  --color-border-strong: #c9c9de;
+  --color-focus: #4f46e5;
+
+  /* Brand */
+  --color-primary: #4f46e5;
+  --color-primary-pressed: #4338ca;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: #e0e7ff;
+  --color-on-primary-soft: #3730a3;
+
+  --color-accent: #f97352;
+  --color-accent-soft: #ffe8e1;
+  --color-on-accent-soft: #9a3412;
+
+  /* Feedback */
+  --color-success: #15803d;
+  --color-success-soft: #dcfce7;
+  --color-warning: #b45309;
+  --color-warning-soft: #fef3c7;
+  --color-danger: #b91c1c;
+  --color-danger-soft: #fee2e2;
+
+  /* Text over photos: the scrim guarantees contrast whatever image an admin uploads. */
+  --color-hero-scrim: #25207e;
+  --color-on-hero: #ffffff;
+  --color-on-hero-muted: #d4d4f7;
+
+  /* Typography — body never below 1rem (16px). Nunito comes first and covers Latin text;
+     Baloo Da 2 then supplies Bengali glyphs and Baloo 2 Devanagari (Hindi) ones. Each is
+     downloaded only when its script is actually on screen. */
+  --font-sans:
+    'Nunito Variable', 'Baloo Da 2 Variable', 'Baloo 2 Variable', ui-sans-serif, system-ui,
+    -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --text-*: initial;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.625rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 2.625rem;
+
+  /* Shape */
+  --radius-*: initial;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Elevation */
+  --shadow-*: initial;
+  --shadow-sm: 0 1px 2px rgb(17 21 26 / 0.06), 0 1px 3px rgb(17 21 26 / 0.08);
+  --shadow-md: 0 4px 12px rgb(17 21 26 / 0.08), 0 2px 4px rgb(17 21 26 / 0.06);
+  --shadow-lg: 0 12px 32px rgb(17 21 26 / 0.12), 0 4px 8px rgb(17 21 26 / 0.06);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1.3);
+  --ease-exit: cubic-bezier(0.3, 0, 1, 1);
+
+  --animate-rise-in: rise-in var(--duration-slow) var(--ease-standard) both;
+
+  /* A two-faced coin: rests on one face, flips, rests on the other (see ProfileAvatar). */
+  --animate-coin-flip: coin-flip 5s var(--ease-standard) infinite;
+
+  /* A pair for content that takes turns: the old one leaves to the left as the new one arrives
+     from the right (see HeadlineSlider). */
+  --animate-slide-in-left: slide-in-left var(--duration-slow) var(--ease-standard) both;
+  --animate-slide-out-left: slide-out-left var(--duration-slow) var(--ease-standard) both;
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes slide-out-left {
+    to {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+  }
+
+  @keyframes coin-flip {
+    0%,
+    40% {
+      transform: rotateY(0deg);
+    }
+    50%,
+    90% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+}
+
+/* Non-utility tokens */
+:root {
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+
+  --z-sticky: 10;
+  --z-nav: 20;
+  --z-sheet: 40;
+  --z-toast: 50;
+
+  --touch-target: 2.75rem; /* 44px minimum */
+  --gutter: 1rem;
+}
+
+/* ───────────────────────── Named themes ───────────────────────── */
+
+/* Indigo Dawn — light, crisp indigo. Default, and "Auto" on a light system. */
+[data-theme='indigo-dawn'] {
+  color-scheme: light;
+  --color-bg: #f8f8fd;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #eeeef8;
+  --color-scrim: rgb(20 18 50 / 0.48);
+  --color-fg: #1a1a2e;
+  --color-fg-muted: #4c4f6b;
+  --color-fg-subtle: #696c87;
+  --color-fg-inverse: #f8f8fd;
+  --color-border: #e2e2f0;
+  --color-border-strong: #c9c9de;
+  --color-focus: #4f46e5;
+  --color-primary: #4f46e5;
+  --color-primary-pressed: #4338ca;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: #e0e7ff;
+  --color-on-primary-soft: #3730a3;
+  --color-accent: #f97352;
+  --color-accent-soft: #ffe8e1;
+  --color-on-accent-soft: #9a3412;
+  --color-success: #15803d;
+  --color-success-soft: #dcfce7;
+  --color-warning: #b45309;
+  --color-warning-soft: #fef3c7;
+  --color-danger: #b91c1c;
+  --color-danger-soft: #fee2e2;
+  --color-hero-scrim: #25207e;
+  --color-on-hero: #ffffff;
+  --color-on-hero-muted: #d4d4f7;
+}
+
+/* Morning Bliss — light, warm peach and terracotta. */
+[data-theme='morning-bliss'] {
+  color-scheme: light;
+  --color-bg: #fff8f3;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #fbeee5;
+  --color-scrim: rgb(60 25 10 / 0.48);
+  --color-fg: #2b1d16;
+  --color-fg-muted: #6b5145;
+  --color-fg-subtle: #846a5d;
+  --color-fg-inverse: #fff8f3;
+  --color-border: #f1dfd3;
+  --color-border-strong: #e2c7b6;
+  --color-focus: #c2410c;
+  --color-primary: #c2410c;
+  --color-primary-pressed: #9a3412;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: #ffe6d9;
+  --color-on-primary-soft: #8a2c0d;
+  --color-accent: #f59e0b;
+  --color-accent-soft: #fef3c7;
+  --color-on-accent-soft: #92400e;
+  --color-success: #15803d;
+  --color-success-soft: #dcfce7;
+  --color-warning: #a16207;
+  --color-warning-soft: #fef3c7;
+  --color-danger: #b91c1c;
+  --color-danger-soft: #fee2e2;
+  --color-hero-scrim: #5a1d0a;
+  --color-on-hero: #ffffff;
+  --color-on-hero-muted: #fbd9c8;
+}
+
+/* Sage Dusk — dark, muted sage green with a warm amber accent. */
+[data-theme='sage-dusk'] {
+  color-scheme: dark;
+  --color-bg: #141a17;
+  --color-surface: #1b2320;
+  --color-surface-raised: #232d29;
+  --color-surface-sunken: #0e1311;
+  --color-scrim: rgb(0 0 0 / 0.6);
+  --color-fg: #e9efeb;
+  --color-fg-muted: #a8b5ad;
+  --color-fg-subtle: #87958c;
+  --color-fg-inverse: #141a17;
+  --color-border: #2b3631;
+  --color-border-strong: #3c4a44;
+  --color-focus: #b7d6bf;
+  --color-primary: #9dc4a8;
+  --color-primary-pressed: #b7d6bf;
+  --color-on-primary: #0f2417;
+  --color-primary-soft: #22382b;
+  --color-on-primary-soft: #c5e3cd;
+  --color-accent: #e8b07a;
+  --color-accent-soft: #3b2a1a;
+  --color-on-accent-soft: #f3cfa6;
+  --color-success: #6fd08c;
+  --color-success-soft: #15301f;
+  --color-warning: #f0c060;
+  --color-warning-soft: #3a2c0e;
+  --color-danger: #f28b82;
+  --color-danger-soft: #3d1a17;
+  --color-hero-scrim: #0f2a1c;
+  --color-on-hero: #ffffff;
+  --color-on-hero-muted: #cfe3d5;
+}
+
+/* Midnight Iris — dark indigo. "Auto" on a dark system. */
+[data-theme='midnight-iris'] {
+  color-scheme: dark;
+  --color-bg: #0f1020;
+  --color-surface: #17182b;
+  --color-surface-raised: #1f2037;
+  --color-surface-sunken: #0a0b17;
+  --color-scrim: rgb(0 0 0 / 0.6);
+  --color-fg: #ecedf8;
+  --color-fg-muted: #a9abc8;
+  --color-fg-subtle: #8688a8;
+  --color-fg-inverse: #0f1020;
+  --color-border: #292a45;
+  --color-border-strong: #3a3c5c;
+  --color-focus: #c7d2fe;
+  --color-primary: #a5b4fc;
+  --color-primary-pressed: #c7d2fe;
+  --color-on-primary: #1e1b4b;
+  --color-primary-soft: #26285a;
+  --color-on-primary-soft: #c7d2fe;
+  --color-accent: #ff8a6b;
+  --color-accent-soft: #3d1f17;
+  --color-on-accent-soft: #fdba74;
+  --color-success: #4ade80;
+  --color-success-soft: #12321f;
+  --color-warning: #fbbf24;
+  --color-warning-soft: #3a2a0b;
+  --color-danger: #f87171;
+  --color-danger-soft: #3b1515;
+  --color-hero-scrim: #1a1650;
+  --color-on-hero: #ffffff;
+  --color-on-hero-muted: #d4d4f7;
+}
+
+/* `dark:` applies when the active theme is a dark one (<html data-scheme> is set with the theme). */
+@custom-variant dark (&:where([data-scheme='dark'], [data-scheme='dark'] *));
