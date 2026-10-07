@@ -4,7 +4,7 @@ import { useT } from '@/shared/lib/i18n'
 import { Button } from '@/shared/ui/Button'
 import { ChoiceList } from '@/shared/ui/ChoiceList'
 import { LanguageFlag } from './LanguageFlag'
-import { OnboardingStep } from './OnboardingStep'
+import { StepScreen } from '@/shared/ui/StepScreen'
 
 export type LanguageChooserProps = {
   languages: readonly SupportLanguage[]
@@ -26,7 +26,7 @@ export function LanguageChooser({
   const t = useT()
 
   return (
-    <OnboardingStep
+    <StepScreen
       title={t('onboarding.language.title')}
       subtitle={t('onboarding.language.subtitle')}
       footer={
@@ -58,6 +58,6 @@ export function LanguageChooser({
           ),
         }))}
       />
-    </OnboardingStep>
+    </StepScreen>
   )
 }

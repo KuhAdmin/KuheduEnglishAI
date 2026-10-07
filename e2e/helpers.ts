@@ -42,6 +42,45 @@ export async function signInAsAdmin(page: Page) {
   await expect(page).toHaveURL(/\/admin\/texts$/)
 }
 
+/**
+ * Replace the browser's text-to-speech, which has no voices in a headless browser. `works`
+ * "speaks" instantly; `fails` reports an error, as a device with no usable voice would.
+ */
+export async function stubSpeech(target: Page | BrowserContext, mode: 'works' | 'fails' = 'works') {
+  await target.addInitScript((behaviour) => {
+    type Utterance = {
+      onstart?: () => void
+      onend?: () => void
+      onerror?: (event: { error: string }) => void
+    }
+    const fake = {
+      getVoices: () => [],
+      cancel: () => {},
+      speak: (utterance: Utterance) => {
+        setTimeout(() => {
+          if (behaviour === 'fails') {
+            utterance.onerror?.({ error: 'synthesis-failed' })
+          } else {
+            utterance.onstart?.()
+            utterance.onend?.()
+          }
+        }, 50)
+      },
+    }
+    Object.defineProperty(window, 'speechSynthesis', { value: fake, configurable: true })
+  }, mode)
+}
+
+/** Make the browser refuse the microphone, as when the learner taps "Block". */
+export async function denyMicrophone(target: Page | BrowserContext) {
+  await target.addInitScript(() => {
+    Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+      value: () => Promise.reject(new DOMException('Permission denied', 'NotAllowedError')),
+      configurable: true,
+    })
+  })
+}
+
 export async function expectNoHorizontalScroll(page: Page) {
   const overflow = await page.evaluate(
     () => document.documentElement.scrollWidth - document.documentElement.clientWidth,

@@ -36,7 +36,7 @@ test('after choosing Hindi, every following screen is in Hindi', async ({ page }
   await page.getByRole('link', { name: 'प्लेसमेंट टेस्ट शुरू करें' }).click()
 
   // Beyond onboarding, and after a reload
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('प्लेसमेंट टेस्ट')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('पहले, चलिए सुनते हैं')
   await page.goto('/home')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('बोलने के लिए तैयार?')
   await page.goto('/profile')

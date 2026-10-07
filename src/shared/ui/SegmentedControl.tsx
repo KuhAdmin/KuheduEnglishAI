@@ -40,7 +40,9 @@ export function SegmentedControl<Value extends string>({
             <label
               key={option.value}
               className={cn(
-                'flex min-h-10 cursor-pointer items-center rounded-full px-4 font-bold whitespace-nowrap',
+                // `relative` keeps the hidden radio inside its segment, so the scroller clips it;
+                // otherwise a segment scrolled out of view would widen the whole page.
+                'relative flex min-h-10 cursor-pointer items-center rounded-full px-4 font-bold whitespace-nowrap',
                 'transition-colors duration-(--duration-fast) ease-standard',
                 'has-focus-visible:outline-2 has-focus-visible:outline-offset-0 has-focus-visible:outline-focus',
                 fullWidth ? 'flex-1 justify-center' : 'shrink-0',

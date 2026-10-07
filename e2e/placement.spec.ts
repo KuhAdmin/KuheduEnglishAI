@@ -23,6 +23,8 @@ test('explains the placement test in Bengali, with all four skills', async ({ pa
 
   await start.click()
   await expect(page).toHaveURL(/\/placement-test$/)
+  // The test opens on its first part, in the learner's language.
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('প্রথমে, চলুন শুনি')
 })
 
 test('leaves out "Translate" for learners who chose English only', async ({ page }) => {

@@ -10,6 +10,7 @@ export const paths = {
   onboardingProfile: '/onboarding/profile',
   onboardingPlacement: '/onboarding/placement',
   placementTest: '/placement-test',
+  placementResult: '/placement-test/result',
   home: '/home',
   practice: '/practice',
   lessons: '/lessons',

@@ -29,7 +29,9 @@ const pngFile = () => new File(['x'], 'picture.png', { type: 'image/png' })
 beforeEach(() => localStorage.clear())
 afterEach(() => vi.restoreAllMocks())
 
-describe('ScreenTextsPage', () => {
+// This page lists every screen text (150+ fields); finding one by role is slow in jsdom, so
+// these tests get more time than the default. Real-browser speed is covered by Playwright.
+describe('ScreenTextsPage', { timeout: 30_000 }, () => {
   it('lists every text in English first, with nothing to save yet', () => {
     render(<ScreenTextsPage />)
 

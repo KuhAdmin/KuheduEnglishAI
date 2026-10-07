@@ -28,12 +28,12 @@ export const router = createBrowserRouter([
           // Full-bleed screens
           ...landingRoutes,
           ...onboardingRoutes,
+          ...placementRoutes,
           // Padded screens
           {
             Component: ScreenLayout,
             children: [
               ...authRoutes,
-              ...placementRoutes,
               ...homeRoutes,
               ...conversationRoutes,
               ...lessonsRoutes,

@@ -11,7 +11,7 @@ import { Link } from 'react-router'
 import { isEnglish, useLanguage, useT, type TranslationKey } from '@/shared/lib/i18n'
 import { paths } from '@/shared/lib/paths'
 import { Button } from '@/shared/ui/Button'
-import { OnboardingStep } from '../components/OnboardingStep'
+import { StepScreen } from '@/shared/ui/StepScreen'
 
 type Skill = {
   id: string
@@ -40,7 +40,7 @@ export function PlacementIntroPage() {
   const shownSkills = skills.filter((skill) => !(skill.needsMotherTongue && englishOnly))
 
   return (
-    <OnboardingStep
+    <StepScreen
       title={t('onboarding.placement.title')}
       subtitle={t('onboarding.placement.subtitle')}
       footer={
@@ -68,6 +68,6 @@ export function PlacementIntroPage() {
           </li>
         ))}
       </ul>
-    </OnboardingStep>
+    </StepScreen>
   )
 }
