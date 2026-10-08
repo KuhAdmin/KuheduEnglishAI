@@ -1,8 +1,6 @@
-import { useMemo, useState } from 'react'
-import { useLanguagesConfig } from '@/shared/lib/appConfig/useLanguagesConfig'
+import { useState } from 'react'
 import {
   builtInCatalogs,
-  DEFAULT_LANGUAGE,
   en,
   primarySubtag,
   translationKeys,
@@ -14,13 +12,14 @@ import {
   screenTextsSchema,
   type ScreenTexts,
 } from '@/shared/lib/i18n/screenTexts'
-import { SegmentedControl } from '@/shared/ui/SegmentedControl'
 import { SelectField } from '@/shared/ui/SelectField'
 import { TextField } from '@/shared/ui/TextField'
 import { adminText } from '../adminText'
 import { AdminPage } from '../components/AdminPage'
 import { AdminSection } from '../components/AdminSection'
+import { EditLanguagePicker } from '../components/EditLanguagePicker'
 import { ScreenTextRow } from '../components/ScreenTextRow'
+import { useEditLanguage } from '../hooks/useEditLanguage'
 import { useSettingsDraft } from '../hooks/useSettingsDraft'
 import { groupTextKeys, type TextGroupId } from '../lib/textGroups'
 
@@ -45,25 +44,13 @@ function countFilled(language: string, texts: ScreenTexts): number {
 
 /** Edit what learners read, per language. */
 export function ScreenTextsPage() {
-  const { languages } = useLanguagesConfig()
+  const { options: languageOptions, language, setLanguage } = useEditLanguage()
   const draft = useSettingsDraft<ScreenTexts>({
     name: SCREEN_TEXTS_CONFIG_NAME,
     schema: screenTextsSchema,
     defaults: defaultScreenTexts,
   })
   const texts = draft.value
-
-  // English first (it is the fallback for everything), then the learner languages.
-  const languageOptions = useMemo(() => {
-    const names = new Map<string, string>([[DEFAULT_LANGUAGE, 'English']])
-    for (const language of languages) names.set(language.code, language.nativeName)
-    return [...names].map(([code, name]) => ({ code, name }))
-  }, [languages])
-
-  const [chosenLanguage, setChosenLanguage] = useState(DEFAULT_LANGUAGE)
-  const language = languageOptions.some((option) => option.code === chosenLanguage)
-    ? chosenLanguage
-    : DEFAULT_LANGUAGE
   const builtIn = builtInFor(language)
 
   const [search, setSearch] = useState('')
@@ -101,21 +88,12 @@ export function ScreenTextsPage() {
       onResetToDefaults={draft.resetToDefaults}
     >
       <div className="flex flex-col gap-4">
-        <SegmentedControl
-          legend={adminText.texts.languageLegend}
+        <EditLanguagePicker
+          options={languageOptions}
           value={language}
-          onChange={setChosenLanguage}
-          options={languageOptions.map(({ code, name }) => ({
-            value: code,
-            label: (
-              <>
-                <span lang={code}>{name}</span>{' '}
-                <span className="font-normal">
-                  {countFilled(code, texts)}/{translationKeys.length}
-                </span>
-              </>
-            ),
-          }))}
+          onChange={setLanguage}
+          countFilled={(code) => countFilled(code, texts)}
+          total={translationKeys.length}
         />
         <div className="grid gap-4 md:grid-cols-2">
           <SelectField

@@ -1,10 +1,18 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { cancelSpeech, isSpeechSupported, pickEnglishVoice, speak, SpeechError } from './speech'
+import {
+  cancelSpeech,
+  isSpeechSupported,
+  pickEnglishVoice,
+  speak,
+  speakAll,
+  SpeechError,
+} from './speech'
 
 class FakeUtterance {
   voice: unknown = null
   lang = ''
   rate = 1
+  pitch = 1
   onstart: (() => void) | null = null
   onend: (() => void) | null = null
   onerror: ((event: { error: string }) => void) | null = null
@@ -101,6 +109,82 @@ describe('speak', () => {
     await vi.advanceTimersByTimeAsync(60_000)
     spoken().onend?.()
     await expect(result).resolves.toBe('ended')
+  })
+})
+
+describe('speakAll', () => {
+  const queued = () => synth.speak.mock.calls.map(([utterance]) => utterance)
+
+  it('hands every part to the device at once, each with its own pitch', () => {
+    void speakAll(
+      [{ text: 'Hello!', pitch: 1.1 }, { text: 'Good morning!', pitch: 0.85 }, { text: 'Bye.' }],
+      { rate: 0.75 },
+    )
+
+    // All inside the call, because iOS only lets speech start from the tap that asked for it.
+    expect(queued().map((utterance) => utterance.text)).toEqual(['Hello!', 'Good morning!', 'Bye.'])
+    expect(queued().map((utterance) => utterance.pitch)).toEqual([1.1, 0.85, 1])
+    expect(queued().every((utterance) => utterance.rate === 0.75)).toBe(true)
+    expect(queued().every((utterance) => utterance.lang === 'en-IN')).toBe(true)
+  })
+
+  it('says which part is starting, and ends only after the last one', async () => {
+    const started: number[] = []
+    let outcome: string | undefined
+    void speakAll([{ text: 'One.' }, { text: 'Two.' }], {
+      onPartStart: (index) => started.push(index),
+    }).then((result) => {
+      outcome = result
+    })
+    const [first, second] = queued()
+
+    first?.onstart?.()
+    first?.onend?.()
+    await Promise.resolve()
+    expect(outcome).toBeUndefined()
+
+    second?.onstart?.()
+    second?.onend?.()
+    await Promise.resolve()
+    expect(started).toEqual([0, 1])
+    expect(outcome).toBe('ended')
+  })
+
+  it('is cancelled by cancelSpeech, whatever event the browser then fires', async () => {
+    const started: number[] = []
+    const result = speakAll([{ text: 'One.' }, { text: 'Two.' }], {
+      onPartStart: (index) => started.push(index),
+    })
+    const [first, second] = queued()
+    first?.onstart?.()
+
+    cancelSpeech()
+    // Safari reports a cancelled utterance as ended; that must not count as heard.
+    first?.onend?.()
+    second?.onstart?.()
+    second?.onend?.()
+
+    await expect(result).resolves.toBe('cancelled')
+    expect(started).toEqual([0])
+  })
+
+  it('cancels what was being said when something new is asked for', async () => {
+    const first = speakAll([{ text: 'One.' }, { text: 'Two.' }])
+    const second = speakAll([{ text: 'Three.' }])
+
+    await expect(first).resolves.toBe('cancelled')
+    queued().at(-1)?.onend?.()
+    await expect(second).resolves.toBe('ended')
+  })
+
+  it('rejects when any part fails, and has nothing to do for an empty list', async () => {
+    const result = speakAll([{ text: 'One.' }, { text: 'Two.' }])
+    queued()[1]?.onerror?.({ error: 'synthesis-failed' })
+    await expect(result).rejects.toMatchObject({ reason: 'failed' })
+
+    synth.speak.mockClear()
+    await expect(speakAll([])).resolves.toBe('ended')
+    expect(synth.speak).not.toHaveBeenCalled()
   })
 })
 

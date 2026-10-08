@@ -9,6 +9,7 @@ const shapeClass = {
   circle: 'size-20 rounded-full',
   square: 'size-20 rounded-md',
   portrait: 'h-32 w-18 rounded-md',
+  landscape: 'h-18 w-32 rounded-md',
 }
 
 export type ImageFieldProps = {

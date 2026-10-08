@@ -12,6 +12,8 @@ export const adminText = {
 
   nav: {
     texts: 'Screen texts',
+    curriculum: 'Curriculum',
+    lessons: 'Lessons',
     landing: 'Landing page',
     languages: 'Languages',
     profiles: 'Profile pictures',
@@ -43,21 +45,24 @@ export const adminText = {
     none: 'No image',
   },
 
+  /** Shared by the editors of per-language wording (Screen texts, Curriculum). */
+  wording: {
+    languageLegend: 'Language to edit',
+    statusBuiltIn: 'Built-in',
+    statusEdited: 'Edited',
+    statusMissing: 'Missing — shows English',
+    resetOne: 'Reset this text',
+  },
+
   texts: {
     heading: 'Screen texts',
     intro:
       'Every text learners see, in each language. Edit a text to replace the built-in one for that language; pick a screen to see only its texts.',
-    languageLegend: 'Language to edit',
     screenFilter: 'Screen',
     allScreens: 'All screens',
     search: 'Search texts',
     searchPlaceholder: 'Search by text or key',
     noMatches: 'No texts match your search.',
-    filled: 'filled',
-    statusBuiltIn: 'Built-in',
-    statusEdited: 'Edited',
-    statusMissing: 'Missing — shows English',
-    resetOne: 'Reset this text',
     /** Extra guidance for a group, shown under its title. */
     groupNotes: {
       signIn:
@@ -69,12 +74,74 @@ export const adminText = {
       profile: 'Onboarding · About you',
       placement: 'Onboarding · Placement test',
       onboarding: 'Onboarding · Shared',
-      main: 'Home, practice and lessons',
+      main: 'Home, journey and the other main screens',
       profileScreen: 'Profile and themes',
       app: 'App name and navigation',
       errors: 'Errors',
       other: 'Other',
     },
+  },
+
+  curriculum: {
+    heading: 'Curriculum',
+    intro:
+      'The 50-week course learners see on Home, in each language: ten sections of five weeks. Each week has a goal (an “I can …” statement), the real-life situation it is set in, the challenge the learner has to manage there, and an overview screen with a picture and five outcomes.',
+    sectionPicker: 'Section',
+    section: 'Section',
+    weeks: 'Weeks',
+    week: 'Week',
+    sectionName: 'Section name',
+    goal: 'Goal',
+    situation: 'Situation',
+    challenge: 'Challenge',
+    overview: 'Weekly overview',
+    overviewNote:
+      'Shown when a learner opens the week: the situation above, this picture, and five things they will be able to do. The fifth sums the week up.',
+    picture: 'Picture',
+    pictureHint:
+      'Landscape image, ideally 640 × 360. The same in every language. Without one, a drawing is shown.',
+    outcome: 'Outcome',
+    english: 'English',
+    missing: 'missing',
+    previous: 'Previous section',
+    next: 'Next section',
+  },
+
+  lessons: {
+    heading: 'Lessons',
+    intro:
+      'Day 1 of every week opens with “Watch and listen”: a short conversation set in the week’s situation, which learners hear and read. Write it here, with its translation into each learner language. A week without a conversation tells learners that its lessons are coming soon.',
+    weekPicker: 'Week',
+    week: 'Week',
+    lines: 'lines',
+    noConversation: 'no conversation yet',
+    translationLegend: 'Translation to write',
+    conversation: 'Conversation',
+    conversationIntro:
+      'In the order it is said. Keep each line to a sentence or two, in words the week teaches.',
+    situation: 'This week’s situation',
+    empty: 'This week has no conversation yet. Add a line to start one.',
+    line: 'Line',
+    speaker: 'Speaker',
+    english: 'English',
+    addLine: 'Add line',
+    moveUp: 'Move up: line',
+    moveDown: 'Move down: line',
+    remove: 'Remove line',
+    useBuiltIn: 'Use built-in',
+    removeConversation: 'Remove',
+    video: 'Video',
+    videoIntro:
+      'Optional. Without a video, the phone’s own voice reads the conversation over the week’s picture (uploaded under Curriculum). Learners must hear or watch it through once before they can go on.',
+    videoUrl: 'Video link',
+    videoHint:
+      'A link to a video file kept elsewhere, for example an .mp4. A video cannot be uploaded here: there is no server yet.',
+    errorSpeaker: 'Enter who says this.',
+    errorText: 'Enter what they say.',
+    errorVideo: 'Use a link that starts with https://',
+    errorNoLines: 'Add the conversation the video shows: at least one line.',
+    errorTooMany: 'That is the maximum number of lines.',
+    errorOtherWeeks: 'Finish or remove the conversation of week',
   },
 
   landing: {

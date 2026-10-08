@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { translationKeys } from '@/shared/lib/i18n'
 import { fitWithin } from './imageUpload'
 import { groupOfText, groupTextKeys } from './textGroups'
+import { validateDialogue } from './validateDialogue'
 import { validateLanguages } from './validateLanguages'
 
 describe('text groups', () => {
@@ -75,5 +76,54 @@ describe('fitWithin', () => {
 
   it('never enlarges a small image', () => {
     expect(fitWithin(64, 48, { maxWidth: 256, maxHeight: 256 })).toEqual({ width: 64, height: 48 })
+  })
+})
+
+describe('validateDialogue', () => {
+  const line = { speaker: 'Asha', text: 'Hello!', translations: {} }
+
+  it('accepts a conversation, with or without a video link', () => {
+    expect(validateDialogue({ videoUrl: null, lines: [line] }).valid).toBe(true)
+    expect(
+      validateDialogue({ videoUrl: 'https://cdn.example.com/week1.mp4', lines: [line] }).valid,
+    ).toBe(true)
+    // No conversation at all is nothing to fix.
+    expect(validateDialogue({ videoUrl: null, lines: [] }).valid).toBe(true)
+  })
+
+  it('points at the line that is unfinished', () => {
+    const result = validateDialogue({
+      videoUrl: null,
+      lines: [line, { speaker: ' ', text: '', translations: {} }],
+    })
+    expect(result.valid).toBe(false)
+    expect(result.lines).toEqual([
+      {},
+      { speaker: 'Enter who says this.', text: 'Enter what they say.' },
+    ])
+  })
+
+  it('refuses a video link that is not https, and a video without its conversation', () => {
+    for (const videoUrl of [
+      'http://example.com/a.mp4',
+      'javascript:alert(1)',
+      'data:video/mp4;base64,AAAA',
+    ]) {
+      expect(validateDialogue({ videoUrl, lines: [line] })).toMatchObject({
+        valid: false,
+        video: 'Use a link that starts with https://',
+      })
+    }
+    expect(validateDialogue({ videoUrl: 'https://example.com/a.mp4', lines: [] })).toMatchObject({
+      valid: false,
+      list: 'Add the conversation the video shows: at least one line.',
+    })
+  })
+
+  it('refuses more lines than a conversation may have', () => {
+    const lines = Array.from({ length: 17 }, () => line)
+    expect(validateDialogue({ videoUrl: null, lines }).list).toBe(
+      'That is the maximum number of lines.',
+    )
   })
 })

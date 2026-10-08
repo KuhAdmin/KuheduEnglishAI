@@ -1,6 +1,6 @@
 import { Mic, Square } from 'lucide-react'
 import { useRef, type MouseEvent, type PointerEvent } from 'react'
-import { BigRoundButton } from './BigRoundButton'
+import { BigRoundButton } from '@/shared/ui/BigRoundButton'
 
 /** Holding the button at least this long makes it "hold to talk": letting go stops it. */
 export const HOLD_TO_TALK_MS = 500

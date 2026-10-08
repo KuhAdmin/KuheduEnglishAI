@@ -52,7 +52,7 @@ export function PlacementResultPage() {
       subtitle={fillText(t('placementTest.result.ready'), { level: levelLabel(t, startLevel) })}
       footer={
         <Button asChild size="lg" fullWidth>
-          {/* TODO(lessons): open the learning journey at the recommended week and day. */}
+          {/* Home is the journey. TODO(lessons): open it at the recommended week and day. */}
           <Link to={paths.home}>
             {t('placementTest.result.start')}
             <ArrowRight aria-hidden="true" className="size-5" strokeWidth={2.5} />

@@ -2,8 +2,8 @@ import { Play, Snail, Volume2 } from 'lucide-react'
 import { cn } from '@/shared/lib/cn'
 import { useT } from '@/shared/lib/i18n'
 import { Button } from '@/shared/ui/Button'
-import type { PlaybackStatus } from '../hooks/useSpeechPlayback'
-import { BigRoundButton } from './BigRoundButton'
+import type { PlaybackStatus } from '@/shared/lib/audio/useSpeechPlayback'
+import { BigRoundButton } from '@/shared/ui/BigRoundButton'
 
 export type AudioPromptProps = {
   status: PlaybackStatus

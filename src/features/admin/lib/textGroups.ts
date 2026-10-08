@@ -13,7 +13,10 @@ const groupPrefixes: { id: TextGroupId; prefixes: string[] }[] = [
   { id: 'profile', prefixes: ['onboarding.profile.', 'ageGroup.'] },
   { id: 'placement', prefixes: ['onboarding.placement.', 'placementTest.'] },
   { id: 'onboarding', prefixes: ['onboarding.'] },
-  { id: 'main', prefixes: ['home.', 'practice.', 'lessons.'] },
+  {
+    id: 'main',
+    prefixes: ['home.', 'journey.', 'week.', 'lessonDay.', 'practice.', 'lessons.', 'progress.'],
+  },
   { id: 'profileScreen', prefixes: ['profile.', 'theme.'] },
   { id: 'signIn', prefixes: ['auth.'] },
   { id: 'errors', prefixes: ['error.', 'notFound.'] },

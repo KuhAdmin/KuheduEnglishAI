@@ -127,7 +127,7 @@ describe('a full run', () => {
     await tap('Continue')
 
     await heading('Listen and choose the answer')
-    // Nothing to choose from until the sentence has been heard.
+    // Nothing to read or choose from until the sentence has been heard.
     expect(screen.queryByRole('radio')).not.toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Continue' })).toBeDisabled()
     await answerStage('A2')
@@ -200,6 +200,53 @@ describe('a question', () => {
       correct: true,
       helpOpened: false,
     })
+  })
+
+  it('opens on Play alone, stays that way while playing, then shows the question and answers', async () => {
+    let finishSpeaking: (outcome: 'ended') => void = () => {}
+    vi.mocked(speak).mockImplementationOnce(
+      () => new Promise((resolve) => (finishSpeaking = resolve)),
+    )
+    renderTest()
+    await heading('First, let’s listen')
+    await tap('Continue')
+    const item = currentItem()
+    if (item?.stage !== 'LISTEN') throw new Error('expected a listening question')
+
+    await heading('Listen and choose the answer')
+    expect(screen.getByRole('button', { name: 'Play' })).toBeVisible()
+    expect(screen.queryByText(item.question)).not.toBeInTheDocument()
+
+    // While the sentence plays nothing else comes on screen.
+    await tap('Play')
+    expect(screen.getByRole('button', { name: 'Playing…' })).toBeDisabled()
+    expect(screen.queryByText(item.question)).not.toBeInTheDocument()
+    expect(screen.queryByRole('radio')).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Play slowly' })).not.toBeInTheDocument()
+
+    // Heard through: the question screen, with the replay controls.
+    finishSpeaking('ended')
+    expect(await screen.findAllByRole('radio')).toHaveLength(item.options.length)
+    expect(screen.getByText(item.question)).toBeVisible()
+    expect(screen.getByRole('button', { name: 'Play again' })).toBeVisible()
+    expect(screen.getByRole('button', { name: 'Play slowly' })).toBeVisible()
+  })
+
+  it('brings in the question for a learner who asks for help before playing', async () => {
+    renderTest()
+    await heading('First, let’s listen')
+    await tap('Continue')
+    const item = currentItem()
+    if (item?.stage !== 'LISTEN') throw new Error('expected a listening question')
+    await heading('Listen and choose the answer')
+
+    await tap('I’m not sure')
+
+    expect(screen.getByText(item.question)).toBeVisible()
+    expect(screen.getByRole('region', { name: 'Need help?' })).toBeVisible()
+    // Still nothing to choose from before listening.
+    expect(screen.queryByRole('radio')).not.toBeInTheDocument()
+    expect(speak).not.toHaveBeenCalled()
   })
 
   it('offers the text and a skip to a learner who is not sure, and records the help used', async () => {
@@ -313,7 +360,8 @@ describe('leaving and coming back', () => {
     await tap('Continue Test')
 
     await heading('Listen and choose the answer')
-    expect(screen.getByText(next.question)).toBeVisible()
+    await tap('Play')
+    expect(await screen.findByText(next.question)).toBeVisible()
     expect(session().responses).toHaveLength(1)
   })
 

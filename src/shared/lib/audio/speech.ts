@@ -19,6 +19,18 @@ export type SpeakOptions = {
   rate?: number
 }
 
+/** One of several texts said in a row. */
+export type SpeechPart = {
+  text: string
+  /** 1 is the voice's own pitch; a different one tells two speakers apart. */
+  pitch?: number
+}
+
+export type SpeakAllOptions = SpeakOptions & {
+  /** Called as each part begins, with its position in the list. */
+  onPartStart?: (index: number) => void
+}
+
 /** How a spoken text finished: played to the end, or stopped by `cancelSpeech`. */
 export type SpeechOutcome = 'ended' | 'cancelled'
 
@@ -63,27 +75,44 @@ export function pickEnglishVoice(
     )[0]
 }
 
-// Chrome can garbage-collect an utterance that is still speaking, which loses its `end` event.
-let current: SpeechSynthesisUtterance | null = null
+// What is being said now. Chrome can garbage-collect an utterance that is still speaking, which
+// loses its `end` event, so the utterances are kept here; `stop` settles the promise as
+// cancelled, because browsers disagree on which event (if any) a cancelled utterance fires.
+let current: { utterances: SpeechSynthesisUtterance[]; stop: () => void } | null = null
 
-/** Say a text aloud. Call it from a tap. Rejects with `SpeechError` when it cannot be played. */
-export function speak(text: string, { rate = 1 }: SpeakOptions = {}): Promise<SpeechOutcome> {
+/**
+ * Say several texts aloud, one after another. Call it from a tap: every text is handed to the
+ * device at once, because iOS only lets speech start inside the tap that asked for it.
+ * Rejects with `SpeechError` when it cannot be played.
+ */
+export function speakAll(
+  parts: readonly SpeechPart[],
+  { rate = 1, onPartStart }: SpeakAllOptions = {},
+): Promise<SpeechOutcome> {
   if (!isSpeechSupported()) return Promise.reject(new SpeechError('unsupported'))
+  if (parts.length === 0) return Promise.resolve('ended')
 
   return new Promise((resolve, reject) => {
     const synth = window.speechSynthesis
+    current?.stop()
     synth.cancel()
 
-    const utterance = new SpeechSynthesisUtterance(text)
     const voice = pickEnglishVoice(synth.getVoices())
-    if (voice) utterance.voice = voice
-    utterance.lang = voice?.lang ?? 'en-US'
-    utterance.rate = rate
-    current = utterance
+    const utterances = parts.map(({ text, pitch = 1 }) => {
+      const utterance = new SpeechSynthesisUtterance(text)
+      if (voice) utterance.voice = voice
+      utterance.lang = voice?.lang ?? 'en-US'
+      utterance.rate = rate
+      utterance.pitch = pitch
+      return utterance
+    })
 
+    let settled = false
     const finish = (settle: () => void) => {
+      if (settled) return
+      settled = true
       clearTimeout(startTimer)
-      if (current === utterance) current = null
+      if (current?.utterances === utterances) current = null
       settle()
     }
     const startTimer = setTimeout(() => {
@@ -91,19 +120,33 @@ export function speak(text: string, { rate = 1 }: SpeakOptions = {}): Promise<Sp
       finish(() => reject(new SpeechError('failed')))
     }, START_TIMEOUT_MS)
 
-    utterance.onstart = () => clearTimeout(startTimer)
-    utterance.onend = () => finish(() => resolve('ended'))
-    utterance.onerror = (event) =>
-      finish(() =>
-        event.error === 'canceled' || event.error === 'interrupted'
-          ? resolve('cancelled')
-          : reject(new SpeechError('failed')),
-      )
+    current = { utterances, stop: () => finish(() => resolve('cancelled')) }
 
-    synth.speak(utterance)
+    utterances.forEach((utterance, index) => {
+      utterance.onstart = () => {
+        clearTimeout(startTimer)
+        if (!settled) onPartStart?.(index)
+      }
+      utterance.onend = () => {
+        if (index === utterances.length - 1) finish(() => resolve('ended'))
+      }
+      utterance.onerror = (event) =>
+        finish(() =>
+          event.error === 'canceled' || event.error === 'interrupted'
+            ? resolve('cancelled')
+            : reject(new SpeechError('failed')),
+        )
+      synth.speak(utterance)
+    })
   })
 }
 
+/** Say a text aloud. Call it from a tap. Rejects with `SpeechError` when it cannot be played. */
+export function speak(text: string, options: SpeakOptions = {}): Promise<SpeechOutcome> {
+  return speakAll([{ text }], options)
+}
+
 export function cancelSpeech(): void {
+  current?.stop()
   if (isSpeechSupported()) window.speechSynthesis.cancel()
 }

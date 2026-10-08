@@ -11,13 +11,23 @@ export const paths = {
   onboardingPlacement: '/onboarding/placement',
   placementTest: '/placement-test',
   placementResult: '/placement-test/result',
+  /** The 50-week journey. */
   home: '/home',
+  /** One section of the journey; `:section` is 1 to 10. */
+  homeSection: '/home/sections/:section',
+  /** One week of the journey, in overview; `:week` is 1 to 50. */
+  homeWeek: '/home/weeks/:week',
   practice: '/practice',
   lessons: '/lessons',
+  /** One day of a week's lessons; `:day` is 1 to 7. */
+  lessonDay: '/lessons/weeks/:week/days/:day',
+  progress: '/progress',
   profile: '/profile',
   /** Redirects to the first admin section. */
   admin: '/admin',
   adminTexts: '/admin/texts',
+  adminCurriculum: '/admin/curriculum',
+  adminLessons: '/admin/lessons',
   adminLanding: '/admin/landing',
   adminLanguages: '/admin/languages',
   adminProfiles: '/admin/profiles',

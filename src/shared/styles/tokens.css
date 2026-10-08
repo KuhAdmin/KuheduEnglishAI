@@ -118,6 +118,15 @@
   --animate-slide-in-left: slide-in-left var(--duration-slow) var(--ease-standard) both;
   --animate-slide-out-left: slide-out-left var(--duration-slow) var(--ease-standard) both;
 
+  /* For content that appears in place once the learner has asked for it. */
+  --animate-fade-in: fade-in var(--duration-slow) var(--ease-standard) both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
   /* A ring that swells and fades around a control while it is playing or recording sound. */
   --animate-pulse-ring: pulse-ring 1.4s var(--ease-standard) infinite;
 

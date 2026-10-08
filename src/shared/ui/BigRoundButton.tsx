@@ -6,7 +6,7 @@ export type BigRoundButtonProps = ComponentProps<'button'> & {
   pulsing?: boolean
 }
 
-/** The one large control of an audio step: play the sentence, or record an answer. */
+/** The one large control of an audio step: play what is to be heard, or record an answer. */
 export function BigRoundButton({
   pulsing = false,
   className,

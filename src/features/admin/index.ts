@@ -15,6 +15,18 @@ export const adminRoutes: RouteObject[] = [
         }),
       },
       {
+        path: paths.adminCurriculum,
+        lazy: async () => ({
+          Component: (await import('./pages/CurriculumPage')).CurriculumPage,
+        }),
+      },
+      {
+        path: paths.adminLessons,
+        lazy: async () => ({
+          Component: (await import('./pages/LessonsPage')).LessonsPage,
+        }),
+      },
+      {
         path: paths.adminLanding,
         lazy: async () => ({
           Component: (await import('./pages/LandingSettingsPage')).LandingSettingsPage,

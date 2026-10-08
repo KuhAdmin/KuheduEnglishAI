@@ -11,8 +11,10 @@ const routes = [
   '/onboarding/placement',
   '/placement-test',
   '/home',
+  '/home/sections/4',
   '/practice',
   '/lessons',
+  '/progress',
   '/profile',
 ]
 

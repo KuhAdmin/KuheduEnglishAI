@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { ADMIN, PIXEL_PNG, seedLanguage, signInAsAdmin } from './helpers'
+import { ADMIN, expectNoHorizontalScroll, PIXEL_PNG, seedLanguage, signInAsAdmin } from './helpers'
 
 const save = 'Save changes'
 
@@ -44,6 +44,8 @@ test.describe('admin sign-in', () => {
   test('every section is reachable from the tabs', async ({ page }) => {
     await signInAsAdmin(page)
     for (const [tab, heading] of [
+      ['Curriculum', 'Curriculum'],
+      ['Lessons', 'Lessons'],
       ['Landing page', 'Landing page'],
       ['Languages', 'Languages'],
       ['Profile pictures', 'Profile pictures'],
@@ -120,6 +122,130 @@ test.describe('admin and app side by side', () => {
     // The other languages keep their own wording.
     await learnerTab.getByRole('combobox', { name: 'Language' }).selectOption('hi')
     await expect(learnerTab.getByRole('button', { name: 'खाता बनाएँ' })).toBeVisible()
+  })
+
+  test('the course is reworded per language and the journey follows without a reload', async ({
+    context,
+    page: adminTab,
+  }) => {
+    await signInAsAdmin(adminTab)
+    await adminTab.goto('/admin/curriculum')
+
+    const learnerTab = await context.newPage()
+    await learnerTab.goto('/home/sections/4')
+    await expect(learnerTab.getByRole('heading', { level: 1 })).toHaveText(
+      'Handle Everyday Interactions',
+    )
+
+    await adminTab.getByRole('combobox', { name: 'Section' }).selectOption('4')
+    await expect(adminTab.getByRole('textbox')).toHaveCount(41)
+    await adminTab.getByRole('textbox', { name: 'Section name' }).fill('Everyday Interactions')
+    await adminTab
+      .getByRole('textbox', { name: 'Goal (Week 16)' })
+      .fill('I can join a conversation.')
+    await adminTab
+      .getByRole('textbox', { name: 'Situation (Week 16)' })
+      .fill('A birthday party at a friend’s home')
+    await adminTab
+      .getByRole('textbox', { name: 'Challenge (Week 16)' })
+      .fill('Say hello, ask a question and introduce someone.')
+    await adminTab.getByRole('button', { name: save }).click()
+    await expect(adminTab.getByRole('status')).toContainText('Saved')
+
+    await expect(learnerTab.getByRole('heading', { level: 1 })).toHaveText('Everyday Interactions')
+    const week = learnerTab.getByRole('article').first()
+    await expect(week).toContainText('I can join a conversation.')
+    await expect(week).toContainText('A birthday party at a friend’s home')
+    await expect(week).toContainText('Say hello, ask a question and introduce someone.')
+    // The other weeks keep the built-in wording.
+    await expect(learnerTab.getByRole('article').nth(1)).toContainText(
+      'I can ask for help and information.',
+    )
+
+    // Bengali is written separately: it still has its own built-in wording …
+    await adminTab.getByText('বাংলা').click()
+    const bengaliName = adminTab.getByRole('textbox', { name: 'Section name' })
+    await expect(bengaliName).toHaveValue('রোজকার কথাবার্তা সামলাই')
+    // … with the English it is now written from shown beside it.
+    await expect(adminTab.getByText('English: Everyday Interactions')).toBeVisible()
+    await bengaliName.fill('রোজকার কথাবার্তা')
+    await adminTab.getByRole('button', { name: save }).click()
+    await expect(adminTab.getByRole('status')).toContainText('Saved')
+    await expectNoHorizontalScroll(adminTab)
+
+    // The learner switches to Bengali (the account screen's picker is closed to a signed-in admin).
+    await learnerTab.evaluate(() =>
+      localStorage.setItem(
+        'kuhedu-language',
+        JSON.stringify({ state: { language: 'bn' }, version: 0 }),
+      ),
+    )
+    await learnerTab.goto('/home')
+    const sections = learnerTab.getByRole('list', { name: 'বিভাগ' }).getByRole('link')
+    await expect(sections.nth(3)).toContainText('রোজকার কথাবার্তা')
+    await expect(sections.nth(3)).not.toContainText('সামলাই')
+
+    // Both edits survive a reload of the editor; resetting brings the built-in course back.
+    await adminTab.reload()
+    await adminTab.getByRole('combobox', { name: 'Section' }).selectOption('4')
+    await expect(adminTab.getByRole('textbox', { name: 'Section name' })).toHaveValue(
+      'Everyday Interactions',
+    )
+    adminTab.once('dialog', (dialog) => dialog.accept())
+    await adminTab.getByRole('button', { name: 'Reset to defaults' }).click()
+    await expect(sections.nth(3)).toContainText('রোজকার কথাবার্তা সামলাই')
+  })
+
+  test('a week’s outcomes and picture reach its overview without a reload', async ({
+    context,
+    page: adminTab,
+  }) => {
+    await signInAsAdmin(adminTab)
+    await adminTab.goto('/admin/curriculum')
+
+    const learnerTab = await context.newPage()
+    await learnerTab.goto('/home/weeks/20')
+    const outcomes = learnerTab
+      .getByRole('list', { name: 'What you will be able to do' })
+      .getByRole('listitem')
+    await expect(outcomes.first()).toHaveText('Order food and drink')
+    // No picture yet: the drawn stand-in.
+    const picture = learnerTab.locator('main img')
+    await expect(picture).toHaveCount(0)
+
+    await adminTab.getByRole('combobox', { name: 'Section' }).selectOption('4')
+    await adminTab.getByRole('textbox', { name: 'Outcome 1 (Week 20)' }).fill('Order a coffee')
+    await adminTab.getByLabel('Picture: Week 20').setInputFiles({
+      name: 'cafe.png',
+      mimeType: 'image/png',
+      buffer: PIXEL_PNG,
+    })
+    await expect(adminTab.getByRole('button', { name: 'Remove image' })).toBeVisible()
+    await adminTab.getByRole('button', { name: save }).click()
+    await expect(adminTab.getByRole('status')).toContainText('Saved')
+    await expectNoHorizontalScroll(adminTab)
+
+    await expect(outcomes).toHaveText([
+      'Order a coffee',
+      'Ask about the menu and price',
+      'Make special requests',
+      'Respond to a follow-up question',
+      'Complete a natural café conversation',
+    ])
+    await expect(picture).toHaveAttribute('src', /^data:image\/(webp|png|jpeg);base64,/)
+    expect(await picture.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0)
+    // Other weeks keep the stand-in.
+    await learnerTab.getByRole('link', { name: 'Next week' }).click()
+    await expect(learnerTab.getByText('Week 21 of 50')).toBeVisible()
+    await expect(picture).toHaveCount(0)
+
+    // Both survive a reload; resetting brings back the built-in wording and the stand-in.
+    await learnerTab.goto('/home/weeks/20')
+    await expect(picture).toHaveCount(1)
+    adminTab.once('dialog', (dialog) => dialog.accept())
+    await adminTab.getByRole('button', { name: 'Reset to defaults' }).click()
+    await expect(outcomes.first()).toHaveText('Order food and drink')
+    await expect(picture).toHaveCount(0)
   })
 
   test('a language added by the admin shows up on the language step, with its own texts', async ({

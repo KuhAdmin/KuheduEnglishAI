@@ -38,7 +38,7 @@ test('after choosing Hindi, every following screen is in Hindi', async ({ page }
   // Beyond onboarding, and after a reload
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('पहले, चलिए सुनते हैं')
   await page.goto('/home')
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('बोलने के लिए तैयार?')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('आपकी 50 हफ़्तों की यात्रा')
   await page.goto('/profile')
   await expect(page.getByRole('radio', { name: 'सेज डस्क' })).toBeVisible()
 })
@@ -61,6 +61,6 @@ test('Hindi and Bengali text are drawn with their bundled fonts', async ({ page 
 
 test('a learner who has not chosen yet sees English outside onboarding', async ({ page }) => {
   await page.goto('/home')
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Ready to speak?')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Your 50-week journey')
   await expect(page.locator(html)).toHaveAttribute('lang', 'en')
 })

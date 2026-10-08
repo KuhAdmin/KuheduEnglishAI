@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { useHaptics } from '@/shared/hooks/useHaptics'
+import { cn } from '@/shared/lib/cn'
 import { fillText, useT } from '@/shared/lib/i18n'
 import { Button } from '@/shared/ui/Button'
 import { ChoiceList } from '@/shared/ui/ChoiceList'
 import { useItemTranslation } from '../hooks/useItemTranslation'
-import { useSpeechPlayback } from '../hooks/useSpeechPlayback'
+import { useSpeechPlayback } from '@/shared/lib/audio/useSpeechPlayback'
 import type { ChoiceItem } from '../lib/itemSchema'
 import { usePlacementStore, type AnswerInput } from '../store/usePlacementStore'
 import { AudioPrompt } from './AudioPrompt'
@@ -22,6 +23,10 @@ export type ChoiceQuestionProps = {
 /**
  * One Listen or Understand question. Nothing here says right or wrong — the learner answers
  * and moves on. Mounted afresh for each question, so its state starts empty.
+ *
+ * A Listen question is two screens in one. First Play alone, in the middle, and it stays that
+ * way while the sentence plays. Once it has been heard through, the question and its answers
+ * take over, with Play again and Play slowly at the top.
  */
 export function ChoiceQuestion({ item, onPause }: ChoiceQuestionProps) {
   const t = useT()
@@ -43,6 +48,8 @@ export function ChoiceQuestion({ item, onPause }: ChoiceQuestionProps) {
 
   const listening = item.stage === 'LISTEN'
   const heard = plays.normal + plays.slow > 0
+  // Asking for help needs the room too, so it shows the question before anything was played.
+  const opened = !listening || heard || helpOpened
 
   const play = async (slow: boolean) => {
     if (item.stage !== 'LISTEN') return
@@ -98,7 +105,13 @@ export function ChoiceQuestion({ item, onPause }: ChoiceQuestionProps) {
         />
       }
     >
-      <div className="flex flex-col gap-5">
+      <div
+        className={cn(
+          'flex flex-1 flex-col gap-5',
+          // The question screen fades in as one piece; nothing slides.
+          opened ? listening && 'animate-fade-in' : 'justify-center',
+        )}
+      >
         {item.stage === 'LISTEN' && (
           <AudioPrompt
             status={playback.status}
@@ -117,11 +130,14 @@ export function ChoiceQuestion({ item, onPause }: ChoiceQuestionProps) {
             {item.context}
           </p>
         )}
-        <p lang="en" className="text-lg font-bold">
-          {item.question}
-        </p>
+        {opened && (
+          <p lang="en" className="text-lg font-bold">
+            {item.question}
+          </p>
+        )}
 
-        {!listening || heard ? (
+        {/* Answers only once the sentence has been heard, even if help was opened first. */}
+        {(!listening || heard) && (
           <ChoiceList
             legend={t('placementTest.answers')}
             value={selected === null ? null : String(selected)}
@@ -134,8 +150,6 @@ export function ChoiceQuestion({ item, onPause }: ChoiceQuestionProps) {
               label: <span lang="en">{option}</span>,
             }))}
           />
-        ) : (
-          <p className="text-center text-fg-muted">{t('placementTest.listen.first')}</p>
         )}
 
         {helpOpened && (

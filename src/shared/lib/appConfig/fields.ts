@@ -27,6 +27,17 @@ export function isSafeAssetUrl(value: string): boolean {
 /** URL of an image an admin uploaded or picked. */
 export const assetUrl = z.string().refine(isSafeAssetUrl)
 
+/**
+ * Safe source of a video or sound kept elsewhere: an https URL or a root-relative path. Never
+ * a `data:` URL: media is far too big for the browser's settings storage.
+ */
+export function isSafeMediaUrl(value: string): boolean {
+  return !value.startsWith('data:') && isSafeAssetUrl(value)
+}
+
+/** URL of a video or sound an admin linked to. */
+export const mediaUrl = z.string().refine(isSafeMediaUrl)
+
 /** Required, trimmed, length-limited text. */
 export const text = (max: number) => z.string().trim().min(1).max(max)
 

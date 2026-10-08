@@ -8,6 +8,8 @@ import { adminText } from '../adminText'
 
 const sections = [
   { to: paths.adminTexts, label: adminText.nav.texts },
+  { to: paths.adminCurriculum, label: adminText.nav.curriculum },
+  { to: paths.adminLessons, label: adminText.nav.lessons },
   { to: paths.adminLanding, label: adminText.nav.landing },
   { to: paths.adminLanguages, label: adminText.nav.languages },
   { to: paths.adminProfiles, label: adminText.nav.profiles },

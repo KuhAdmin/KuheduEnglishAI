@@ -46,6 +46,45 @@ async function answerStage(page: Page, ability: string, labels: Labels = EN) {
   }
 }
 
+/** A Listen question opens on Play alone, centred; once heard, the question screen takes over. */
+async function expectListenQuestionToOpenOnPlay(page: Page) {
+  const now = await session(page)
+  const item = itemBank.find((entry) => entry.id === now.currentItemId)
+  if (!item || item.stage !== 'LISTEN') throw new Error('expected a listening question')
+  const viewport = page.viewportSize()
+  if (!viewport) throw new Error('no viewport')
+  // Its name changes as it is used; "Play slowly" is a different button.
+  const play = page.getByRole('button', { name: /^(Play|Playing…|Play again)$/ })
+  const settled = () =>
+    page.evaluate(() =>
+      Promise.all(document.getAnimations().map((animation) => animation.finished)),
+    )
+  /** Where the button's centre is, as a share of the screen's height. */
+  const centreOf = async () => {
+    const box = await play.boundingBox()
+    if (!box) throw new Error('Play is not on screen')
+    return (box.y + box.height / 2) / viewport.height
+  }
+  await settled()
+  await expect(page.getByText(item.question, { exact: true })).toHaveCount(0)
+  await expect(page.getByRole('radio')).toHaveCount(0)
+  expect(Math.round((await play.boundingBox())?.height ?? 0)).toBeGreaterThanOrEqual(44)
+  const before = await centreOf()
+  expect(before).toBeGreaterThan(0.4)
+  expect(before).toBeLessThan(0.6)
+
+  await play.click()
+  await expect(page.getByText(item.question, { exact: true })).toBeVisible()
+  await expect(page.getByRole('radio')).toHaveCount(item.options.length)
+  await settled()
+  expect(await centreOf()).toBeLessThan(0.35)
+  await expectNoHorizontalScroll(page)
+
+  await page.getByText(item.options[item.answer] ?? '', { exact: true }).click()
+  await tap(page, 'Continue')
+  await movedOnFrom(page, item.id)
+}
+
 async function recordAnAnswer(page: Page) {
   await tap(page, 'Tap to speak')
   await expect(page.getByRole('status')).toContainText('Recording…')
@@ -83,11 +122,9 @@ test.describe('with a microphone', () => {
     await expectNoHorizontalScroll(page)
     await tap(page, 'Continue')
 
-    // A listening question: nothing to choose until it has been heard, and no countdown.
+    // A listening question opens on Play alone, in the middle of the screen. No countdown.
     await expect(heading(page)).toHaveText('Listen and choose the answer')
-    await expect(page.getByRole('radio')).toHaveCount(0)
-    const play = page.getByRole('button', { name: 'Play', exact: true })
-    expect(Math.round((await play.boundingBox())?.height ?? 0)).toBeGreaterThanOrEqual(44)
+    await expectListenQuestionToOpenOnPlay(page)
     await expect(page.getByText(/remaining|\d:\d\d/)).toHaveCount(0)
     await answerStage(page, 'A1')
 
@@ -143,6 +180,7 @@ test.describe('with a microphone', () => {
     await expect(page.getByText('You’re ready to begin at Level A1.')).toBeVisible()
     await page.getByRole('link', { name: 'Start My Learning Journey' }).click()
     await expect(page).toHaveURL(/\/home$/)
+    await expect(heading(page)).toHaveText('Your 50-week journey')
   })
 
   test('a recording can be played back and made again', async ({ page }) => {
