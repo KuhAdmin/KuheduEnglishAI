@@ -6,8 +6,18 @@ import { LANGUAGES_CONFIG_NAME } from '@/shared/lib/appConfig/languagesConfig'
 import { PROFILES_CONFIG_NAME } from '@/shared/lib/appConfig/profilesConfig'
 import { parseSettings, settingsRepository } from '@/shared/lib/appConfig/settingsRepository'
 import { CURRICULUM_CONFIG_NAME } from '@/shared/lib/curriculum/curriculumOverrides'
+import { WEEK_CHALLENGES_CONFIG_NAME } from '@/shared/lib/curriculum/weekChallenges'
 import { WEEK_DIALOGUES_CONFIG_NAME } from '@/shared/lib/curriculum/weekDialogues'
 import { WEEK_PICTURES_CONFIG_NAME } from '@/shared/lib/curriculum/weekPictures'
+import { WEEK_QUIZZES_CONFIG_NAME } from '@/shared/lib/curriculum/weekQuizzes'
+import {
+  WEEK_REVIEW_DIALOGUES_CONFIG_NAME,
+  WEEK_REVIEW_ROLEPLAYS_CONFIG_NAME,
+} from '@/shared/lib/curriculum/weekReviews'
+import { WEEK_ROLEPLAYS_CONFIG_NAME } from '@/shared/lib/curriculum/weekRoleplays'
+import { WEEK_SCENARIOS_CONFIG_NAME } from '@/shared/lib/curriculum/weekScenarios'
+import { WEEK_SENTENCES_CONFIG_NAME } from '@/shared/lib/curriculum/weekSentences'
+import { WEEK_VOCABULARY_CONFIG_NAME } from '@/shared/lib/curriculum/weekVocabulary'
 import { SCREEN_TEXTS_CONFIG_NAME } from '@/shared/lib/i18n/screenTexts'
 import type * as ImageUpload from '../lib/imageUpload'
 import { CurriculumPage } from './CurriculumPage'
@@ -34,10 +44,10 @@ const pngFile = () => new File(['x'], 'picture.png', { type: 'image/png' })
 beforeEach(() => localStorage.clear())
 afterEach(() => vi.restoreAllMocks())
 
-// This page lists every screen text (170+ fields); finding one by role is slow in jsdom, and
+// This page lists every screen text (290+ fields); finding one by role is slow in jsdom, and
 // slower still while the other test files run beside it, so these tests get much more time
 // than the default. Real-browser speed is covered by Playwright.
-describe('ScreenTextsPage', { timeout: 60_000 }, () => {
+describe('ScreenTextsPage', { timeout: 120_000 }, () => {
   it('lists every text in English first, with nothing to save yet', () => {
     render(<ScreenTextsPage />)
 
@@ -489,7 +499,7 @@ describe('LessonsPage', () => {
     await userEvent.selectOptions(weekPicker(), '1')
 
     expect(screen.getByRole('alert')).toHaveTextContent(
-      'Finish or remove the conversation of week 3',
+      'Finish or remove what is unfinished in: Week 3, Day 1',
     )
     expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
   })
@@ -500,8 +510,984 @@ describe('LessonsPage', () => {
     })
     render(<LessonsPage />)
 
-    expect(screen.queryByRole('radio')).toBeNull()
+    expect(screen.queryByRole('radio', { name: 'বাংলা' })).toBeNull()
     expect(screen.getAllByRole('textbox')).toHaveLength(9 * 2 + 1)
+  })
+
+  describe('Day 2: the week’s words', () => {
+    const openWords = () =>
+      userEvent.click(screen.getByRole('radio', { name: 'Day 2 · Learn useful words' }))
+    const vocabulary = () =>
+      stored(WEEK_VOCABULARY_CONFIG_NAME) as unknown as Record<
+        string,
+        { words: { word: string; phonetic: string; imageUrl: string | null; meanings: object }[] }
+      >
+
+    it('shows Week 1’s built-in words, with nothing to save yet', async () => {
+      render(<LessonsPage />)
+      expect(screen.getByRole('radio', { name: 'Day 1 · Watch and listen' })).toBeChecked()
+      await openWords()
+
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 1 · I can say hello and introduce myself. — 6 words',
+        }),
+      ).toBeDefined()
+      expect(
+        screen.getByRole('option', { name: 'Week 2 · I can get to know someone. — no words yet' }),
+      ).toBeDefined()
+
+      expect(lines()).toHaveLength(6)
+      expect(field('Word or phrase (Word 1)')).toHaveValue('hello')
+      expect(field('Phonetic spelling (Word 1)')).toHaveValue('/həˈləʊ/')
+      expect(field('Meaning: বাংলা (Word 1)')).toHaveValue('হ্যালো')
+      expect(field('Meaning: বাংলা (Word 1)')).toHaveAttribute('lang', 'bn')
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      // The conversation's fields have made way for the words'.
+      expect(screen.queryByRole('textbox', { name: 'Video link' })).toBeNull()
+    })
+
+    it('saves an edited word with its meaning and an uploaded picture', async () => {
+      render(<LessonsPage />)
+      await openWords()
+
+      const word = field('Word or phrase (Word 1)')
+      await userEvent.clear(word)
+      await userEvent.type(word, 'hi')
+      await userEvent.click(screen.getByRole('radio', { name: 'हिन्दी' }))
+      const meaning = field('Meaning: हिन्दी (Word 1)')
+      expect(meaning).toHaveValue('नमस्ते')
+      await userEvent.clear(meaning)
+      await userEvent.type(meaning, 'हाय')
+      await userEvent.upload(screen.getByLabelText('Picture: Word 1'), pngFile())
+      await screen.findByRole('button', { name: 'Remove image' })
+      await save()
+
+      expect(vocabulary()['1']?.words).toHaveLength(6)
+      expect(vocabulary()['1']?.words[0]).toEqual({
+        word: 'hi',
+        phonetic: '/həˈləʊ/',
+        imageUrl: 'data:image/webp;base64,UklGRg==',
+        meanings: { bn: 'হ্যালো', hi: 'हाय' },
+      })
+      // The conversation was not touched, so nothing was written for it.
+      expect(stored(WEEK_DIALOGUES_CONFIG_NAME)).toBeUndefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Use built-in' }))
+      expect(field('Word or phrase (Word 1)')).toHaveValue('hello')
+      await save()
+      expect(stored(WEEK_VOCABULARY_CONFIG_NAME)).toEqual({})
+    })
+
+    it('writes the words of a week that has none, and refuses a word twice', async () => {
+      render(<LessonsPage />)
+      await openWords()
+      await userEvent.selectOptions(weekPicker(), '2')
+
+      expect(screen.getByText('This week has no words yet. Add a word to start.')).toBeVisible()
+      await userEvent.click(screen.getByRole('button', { name: 'Add word' }))
+      expect(screen.getByText('Enter the word.')).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      expect(screen.getByRole('button', { name: 'Remove word 1' })).toBeDisabled()
+
+      await userEvent.type(field('Word or phrase (Word 1)'), 'city')
+      await userEvent.type(field('Phonetic spelling (Word 1)'), '/ˈsɪti/')
+      await userEvent.click(screen.getByRole('button', { name: 'Add word' }))
+      await userEvent.type(field('Word or phrase (Word 2)'), 'City')
+      expect(screen.getByText('This word is already in the list.')).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+
+      await userEvent.clear(field('Word or phrase (Word 2)'))
+      await userEvent.type(field('Word or phrase (Word 2)'), 'work')
+      await userEvent.type(field('Meaning: বাংলা (Word 2)'), 'কাজ')
+      await userEvent.click(screen.getByRole('button', { name: 'Move up: word 2' }))
+      await save()
+
+      expect(stored(WEEK_VOCABULARY_CONFIG_NAME)).toEqual({
+        2: {
+          words: [
+            { word: 'work', phonetic: '', imageUrl: null, meanings: { bn: 'কাজ' } },
+            { word: 'city', phonetic: '/ˈsɪti/', imageUrl: null, meanings: {} },
+          ],
+        },
+      })
+      expect(
+        screen.getByRole('option', { name: 'Week 2 · I can get to know someone. — 2 words' }),
+      ).toBeDefined()
+    })
+
+    it('saves a day’s words and another day’s conversation together, and says where one is unfinished', async () => {
+      render(<LessonsPage />)
+      await userEvent.type(field('English (Line 1)'), '!')
+      await openWords()
+      await userEvent.selectOptions(weekPicker(), '4')
+      await userEvent.click(screen.getByRole('button', { name: 'Add word' }))
+
+      // Back on Day 1 of Week 1, the unfinished word of Week 4 still blocks saving.
+      await userEvent.selectOptions(weekPicker(), '1')
+      await userEvent.click(screen.getByRole('radio', { name: 'Day 1 · Watch and listen' }))
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Finish or remove what is unfinished in: Week 4, Day 2',
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+
+      await openWords()
+      await userEvent.selectOptions(weekPicker(), '4')
+      await userEvent.type(field('Word or phrase (Word 1)'), 'like')
+      await save()
+
+      expect(dialogues()['1']?.lines[0]?.text).toBe('Hello! Good morning.!')
+      expect(vocabulary()['4']?.words.map((entry) => entry.word)).toEqual(['like'])
+      expect(screen.getByRole('status')).toHaveTextContent(/^Saved/)
+    })
+  })
+
+  describe('Day 3: the week’s sentences', () => {
+    const openSentences = () =>
+      userEvent.click(screen.getByRole('radio', { name: 'Day 3 · Translate and speak' }))
+    const sentences = () =>
+      stored(WEEK_SENTENCES_CONFIG_NAME) as unknown as Record<
+        string,
+        {
+          sentences: {
+            english: string
+            alsoAccepted: string[]
+            translations: Record<string, string>
+            tips: Record<string, string[]>
+          }[]
+        }
+      >
+
+    it('shows Week 1’s built-in sentences, with nothing to save yet', async () => {
+      render(<LessonsPage />)
+      await openSentences()
+
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 1 · I can say hello and introduce myself. — 5 sentences',
+        }),
+      ).toBeDefined()
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 2 · I can get to know someone. — no sentences yet',
+        }),
+      ).toBeDefined()
+
+      expect(lines()).toHaveLength(5)
+      expect(field('English: the answer (Sentence 1)')).toHaveValue('Hello! Good morning.')
+      expect(field('Also accepted (Sentence 1)')).toHaveValue('Hi! Good morning.')
+      expect(field('Sentence in বাংলা (Sentence 1)')).toHaveValue('হ্যালো! সুপ্রভাত।')
+      expect(field('Sentence in বাংলা (Sentence 1)')).toHaveAttribute('lang', 'bn')
+      // One tip per line.
+      expect(field('Tips: English (Sentence 1)')).toHaveValue(
+        'Say “Good morning” before noon.\n“Hello” works at any time of day.',
+      )
+      expect(field('Tips: বাংলা (Sentence 1)')).toHaveAttribute('lang', 'bn')
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      // The other days' fields have made way.
+      expect(screen.queryByRole('textbox', { name: 'Video link' })).toBeNull()
+    })
+
+    it('saves more accepted sentences and Hindi tips, and can go back to the built-in', async () => {
+      render(<LessonsPage />)
+      await openSentences()
+
+      await userEvent.type(
+        field('Also accepted (Sentence 2)'),
+        'How are you doing?{Enter}How do you do?',
+      )
+      await userEvent.click(screen.getByRole('radio', { name: 'हिन्दी' }))
+      const tips = field('Tips: हिन्दी (Sentence 2)')
+      await userEvent.clear(tips)
+      // A fourth line is one too many: like a text at its full length, it takes no more.
+      await userEvent.type(tips, 'एक{Enter}दो{Enter}तीन{Enter}चार')
+      expect(tips).toHaveValue('एक\nदो\nतीनचार')
+      await save()
+
+      expect(sentences()['1']?.sentences).toHaveLength(5)
+      expect(sentences()['1']?.sentences[1]).toMatchObject({
+        english: 'How are you?',
+        alsoAccepted: ['How are you doing?', 'How do you do?'],
+        translations: { bn: 'আপনি কেমন আছেন?', hi: 'आप कैसे हैं?' },
+        tips: { hi: ['एक', 'दो', 'तीनचार'] },
+      })
+      // The other days were not touched, so nothing was written for them.
+      expect(stored(WEEK_DIALOGUES_CONFIG_NAME)).toBeUndefined()
+      expect(stored(WEEK_VOCABULARY_CONFIG_NAME)).toBeUndefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Use built-in' }))
+      expect(field('Also accepted (Sentence 2)')).toHaveValue('')
+      await save()
+      expect(stored(WEEK_SENTENCES_CONFIG_NAME)).toEqual({})
+    })
+
+    it('has nothing to save once an edit is typed back', async () => {
+      render(<LessonsPage />)
+      await openSentences()
+      const saveButton = () => screen.getByRole('button', { name: 'Save changes' })
+
+      for (const name of [
+        'Also accepted (Sentence 2)',
+        'Tips: English (Sentence 1)',
+        'Sentence in বাংলা (Sentence 1)',
+      ]) {
+        await userEvent.type(field(name), '!')
+        expect(saveButton(), name).toBeEnabled()
+        await userEvent.type(field(name), '{Backspace}')
+        expect(saveButton(), name).toBeDisabled()
+      }
+    })
+
+    it('writes the sentences of a week that has none', async () => {
+      render(<LessonsPage />)
+      await openSentences()
+      await userEvent.selectOptions(weekPicker(), '2')
+
+      expect(
+        screen.getByText('This week has no sentences yet. Add a sentence to start.'),
+      ).toBeVisible()
+      await userEvent.click(screen.getByRole('button', { name: 'Add sentence' }))
+      expect(screen.getByText('Enter the sentence in English.')).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      expect(screen.getByRole('button', { name: 'Remove sentence 1' })).toBeDisabled()
+
+      await userEvent.type(field('English: the answer (Sentence 1)'), 'Where are you from?')
+      await userEvent.type(field('Sentence in বাংলা (Sentence 1)'), 'আপনি কোথা থেকে এসেছেন?')
+      await userEvent.type(field('Tips: English (Sentence 1)'), 'Start with “Where”.')
+      await userEvent.click(screen.getByRole('button', { name: 'Add sentence' }))
+      await userEvent.type(field('English: the answer (Sentence 2)'), 'I’m from Kolkata.')
+      await userEvent.click(screen.getByRole('button', { name: 'Move up: sentence 2' }))
+      await save()
+
+      expect(stored(WEEK_SENTENCES_CONFIG_NAME)).toEqual({
+        2: {
+          sentences: [
+            { english: 'I’m from Kolkata.', alsoAccepted: [], translations: {}, tips: {} },
+            {
+              english: 'Where are you from?',
+              alsoAccepted: [],
+              translations: { bn: 'আপনি কোথা থেকে এসেছেন?' },
+              tips: { en: ['Start with “Where”.'] },
+            },
+          ],
+        },
+      })
+      expect(
+        screen.getByRole('option', { name: 'Week 2 · I can get to know someone. — 2 sentences' }),
+      ).toBeDefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Remove' }))
+      await save()
+      expect(stored(WEEK_SENTENCES_CONFIG_NAME)).toEqual({})
+    })
+
+    it('will not save while another week’s sentence is unfinished, and says where', async () => {
+      render(<LessonsPage />)
+      await openSentences()
+      await userEvent.selectOptions(weekPicker(), '4')
+      await userEvent.click(screen.getByRole('button', { name: 'Add sentence' }))
+
+      await userEvent.selectOptions(weekPicker(), '1')
+      await userEvent.click(screen.getByRole('radio', { name: 'Day 2 · Learn useful words' }))
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Finish or remove what is unfinished in: Week 4, Day 3',
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+    })
+  })
+
+  describe('Day 4: the week’s role-play', () => {
+    const openRoleplay = () =>
+      userEvent.click(screen.getByRole('radio', { name: 'Day 4 · Role-play' }))
+    const roleplays = () =>
+      stored(WEEK_ROLEPLAYS_CONFIG_NAME) as unknown as Record<
+        string,
+        {
+          partner: string
+          imageUrl: string | null
+          turns: { partner: string; reply: string; cues: Record<string, string> }[]
+        }
+      >
+
+    it('shows Week 1’s built-in role-play, with nothing to save yet', async () => {
+      render(<LessonsPage />)
+      await openRoleplay()
+
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 1 · I can say hello and introduce myself. — 5 turns',
+        }),
+      ).toBeDefined()
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 2 · I can get to know someone. — no role-play yet',
+        }),
+      ).toBeDefined()
+
+      expect(field('Name or role')).toHaveValue('Ravi')
+      expect(lines()).toHaveLength(5)
+      expect(field('Partner says (Turn 1)')).toHaveValue('Hello! Good morning.')
+      expect(field('Suggested reply (Turn 1)')).toHaveValue('Good morning!')
+      expect(field('What to say, in বাংলা (Turn 1)')).toHaveValue('তাঁকে সুপ্রভাত জানান।')
+      expect(field('What to say, in বাংলা (Turn 1)')).toHaveAttribute('lang', 'bn')
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      // The other days' fields have made way.
+      expect(screen.queryByRole('textbox', { name: 'Video link' })).toBeNull()
+    })
+
+    it('saves a renamed partner, their picture and a Hindi cue, and can go back to the built-in', async () => {
+      render(<LessonsPage />)
+      await openRoleplay()
+
+      const name = field('Name or role')
+      await userEvent.clear(name)
+      await userEvent.type(name, 'Meera')
+      await userEvent.upload(screen.getByLabelText('Picture of the partner'), pngFile())
+      await screen.findByRole('button', { name: 'Remove image' })
+      await userEvent.click(screen.getByRole('radio', { name: 'हिन्दी' }))
+      const cue = field('What to say, in हिन्दी (Turn 3)')
+      expect(cue).toHaveValue('अपना नाम बताएँ।')
+      await userEvent.clear(cue)
+      await userEvent.type(cue, 'अपना नाम कहें।')
+      await save()
+
+      expect(roleplays()['1']).toMatchObject({
+        partner: 'Meera',
+        imageUrl: 'data:image/webp;base64,UklGRg==',
+      })
+      expect(roleplays()['1']?.turns).toHaveLength(5)
+      expect(roleplays()['1']?.turns[2]).toEqual({
+        partner: 'I’m good, thanks. My name is Ravi. What’s your name?',
+        reply: 'My name is …',
+        cues: { bn: 'নিজের নাম বলুন।', hi: 'अपना नाम कहें।' },
+      })
+      // The other days were not touched, so nothing was written for them.
+      expect(stored(WEEK_SENTENCES_CONFIG_NAME)).toBeUndefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Use built-in' }))
+      expect(field('Name or role')).toHaveValue('Ravi')
+      await save()
+      expect(stored(WEEK_ROLEPLAYS_CONFIG_NAME)).toEqual({})
+    })
+
+    it('has nothing to save once an edit is typed back', async () => {
+      render(<LessonsPage />)
+      await openRoleplay()
+      const saveButton = () => screen.getByRole('button', { name: 'Save changes' })
+
+      for (const name of [
+        'Name or role',
+        'Suggested reply (Turn 2)',
+        'What to say, in বাংলা (Turn 1)',
+      ]) {
+        await userEvent.type(field(name), '!')
+        expect(saveButton(), name).toBeEnabled()
+        await userEvent.type(field(name), '{Backspace}')
+        expect(saveButton(), name).toBeDisabled()
+      }
+    })
+
+    it('writes the role-play of a week that has none, and says what is still missing', async () => {
+      render(<LessonsPage />)
+      await openRoleplay()
+      await userEvent.selectOptions(weekPicker(), '2')
+
+      expect(
+        screen.getByText('This week has no role-play yet. Add a turn to start one.'),
+      ).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+
+      // A partner alone is not a role-play.
+      await userEvent.type(field('Name or role'), 'the barista')
+      expect(screen.getByText('Add what is said: at least one turn.')).toBeVisible()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Add turn' }))
+      expect(screen.getByText('Enter what the partner says.')).toBeVisible()
+      expect(screen.getByText('Enter a reply the learner could give.')).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      expect(screen.getByRole('button', { name: 'Remove turn 1' })).toBeDisabled()
+
+      await userEvent.type(field('Partner says (Turn 1)'), 'What would you like today?')
+      await userEvent.type(field('Suggested reply (Turn 1)'), 'I’d like a coffee, please.')
+      await userEvent.type(field('What to say, in বাংলা (Turn 1)'), 'ভদ্রভাবে এক কাপ কফি চান।')
+      await userEvent.click(screen.getByRole('button', { name: 'Add turn' }))
+      await userEvent.type(field('Partner says (Turn 2)'), 'Hi! Welcome!')
+      await userEvent.type(field('Suggested reply (Turn 2)'), 'Hello!')
+      await userEvent.click(screen.getByRole('button', { name: 'Move up: turn 2' }))
+      await save()
+
+      expect(stored(WEEK_ROLEPLAYS_CONFIG_NAME)).toEqual({
+        2: {
+          partner: 'the barista',
+          imageUrl: null,
+          turns: [
+            { partner: 'Hi! Welcome!', reply: 'Hello!', cues: {} },
+            {
+              partner: 'What would you like today?',
+              reply: 'I’d like a coffee, please.',
+              cues: { bn: 'ভদ্রভাবে এক কাপ কফি চান।' },
+            },
+          ],
+        },
+      })
+      expect(
+        screen.getByRole('option', { name: 'Week 2 · I can get to know someone. — 2 turns' }),
+      ).toBeDefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Remove' }))
+      await save()
+      expect(stored(WEEK_ROLEPLAYS_CONFIG_NAME)).toEqual({})
+    })
+
+    it('will not save while another week’s role-play is unfinished, and says where', async () => {
+      render(<LessonsPage />)
+      await openRoleplay()
+      await userEvent.selectOptions(weekPicker(), '4')
+      await userEvent.click(screen.getByRole('button', { name: 'Add turn' }))
+
+      await userEvent.selectOptions(weekPicker(), '1')
+      await userEvent.click(screen.getByRole('radio', { name: 'Day 1 · Watch and listen' }))
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Finish or remove what is unfinished in: Week 4, Day 4',
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+    })
+  })
+
+  describe('Day 5: the week’s challenge', () => {
+    const openChallenge = () =>
+      userEvent.click(screen.getByRole('radio', { name: 'Day 5 · Challenge' }))
+    const challenges = () =>
+      stored(WEEK_CHALLENGES_CONFIG_NAME) as unknown as Record<
+        string,
+        {
+          title: { text: string; translations: Record<string, string> }
+          instruction: { text: string; translations: Record<string, string> }
+          tasks: { text: string; translations: Record<string, string> }[]
+          phrases: string[]
+        }
+      >
+
+    it('shows Week 1’s built-in challenge, with nothing to save yet', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 1 · I can say hello and introduce myself. — 5 tasks',
+        }),
+      ).toBeDefined()
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 2 · I can get to know someone. — no challenge yet',
+        }),
+      ).toBeDefined()
+
+      expect(field('Name of the challenge')).toHaveValue('First meeting challenge')
+      expect(field('Name in বাংলা')).toHaveValue('প্রথম পরিচয়ের চ্যালেঞ্জ')
+      expect(field('Name in বাংলা')).toHaveAttribute('lang', 'bn')
+      expect(field('Instruction')).toHaveValue(
+        'Meet someone new, from hello to goodbye. Try it on your own.',
+      )
+      expect(lines()).toHaveLength(5)
+      expect(field('What to do (Task 1)')).toHaveValue('Greet the person')
+      expect(field('In বাংলা (Task 1)')).toHaveValue('শুভেচ্ছা জানান')
+      // One phrase per line.
+      expect(field('Phrases')).toHaveValue(
+        [
+          'Hello! Good morning.',
+          'How are you?',
+          'My name is …',
+          'What’s your name?',
+          'Nice to meet you.',
+          'Goodbye! Have a nice day.',
+        ].join('\n'),
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      // The other days' fields have made way.
+      expect(screen.queryByRole('textbox', { name: 'Name or role' })).toBeNull()
+    })
+
+    it('saves a renamed challenge, a Hindi task and one phrase fewer, and can go back', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+
+      const name = field('Name of the challenge')
+      await userEvent.clear(name)
+      await userEvent.type(name, 'Say hello challenge')
+      await userEvent.click(screen.getByRole('radio', { name: 'हिन्दी' }))
+      const task = field('In हिन्दी (Task 5)')
+      expect(task).toHaveValue('विदा लें')
+      await userEvent.clear(task)
+      await userEvent.type(task, 'अलविदा कहें')
+      await userEvent.clear(field('Phrases'))
+      await userEvent.type(field('Phrases'), 'Hello!{Enter}Goodbye!')
+      await save()
+
+      expect(challenges()['1']?.title).toEqual({
+        text: 'Say hello challenge',
+        translations: { bn: 'প্রথম পরিচয়ের চ্যালেঞ্জ', hi: 'पहली मुलाक़ात की चुनौती' },
+      })
+      expect(challenges()['1']?.tasks).toHaveLength(5)
+      expect(challenges()['1']?.tasks[4]).toEqual({
+        text: 'Say goodbye',
+        translations: { bn: 'বিদায় জানান', hi: 'अलविदा कहें' },
+      })
+      expect(challenges()['1']?.phrases).toEqual(['Hello!', 'Goodbye!'])
+      // The other days were not touched, so nothing was written for them.
+      expect(stored(WEEK_ROLEPLAYS_CONFIG_NAME)).toBeUndefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Use built-in' }))
+      expect(field('Name of the challenge')).toHaveValue('First meeting challenge')
+      await save()
+      expect(stored(WEEK_CHALLENGES_CONFIG_NAME)).toEqual({})
+    })
+
+    it('has nothing to save once an edit is typed back', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+      const saveButton = () => screen.getByRole('button', { name: 'Save changes' })
+
+      for (const name of [
+        'Name of the challenge',
+        'Instruction in বাংলা',
+        'In বাংলা (Task 2)',
+        'Phrases',
+      ]) {
+        await userEvent.type(field(name), '!')
+        expect(saveButton(), name).toBeEnabled()
+        await userEvent.type(field(name), '{Backspace}')
+        expect(saveButton(), name).toBeDisabled()
+      }
+    })
+
+    it('writes the challenge of a week that has none, and says what is still missing', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+      await userEvent.selectOptions(weekPicker(), '2')
+
+      expect(
+        screen.getByText('This week has no challenge yet. Add a task to start one.'),
+      ).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+
+      // A name alone is not a challenge.
+      await userEvent.type(field('Name of the challenge'), 'Café challenge')
+      expect(screen.getByText('Add what to do: at least one task.')).toBeVisible()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Add task' }))
+      expect(screen.getByText('Enter what to do.')).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      expect(screen.getByRole('button', { name: 'Remove task 1' })).toBeDisabled()
+
+      await userEvent.type(field('What to do (Task 1)'), 'Order food and drink')
+      await userEvent.type(field('In বাংলা (Task 1)'), 'খাবার ও পানীয় অর্ডার করুন')
+      await userEvent.click(screen.getByRole('button', { name: 'Add task' }))
+      await userEvent.type(field('What to do (Task 2)'), 'Greet the staff')
+      await userEvent.click(screen.getByRole('button', { name: 'Move up: task 2' }))
+      await userEvent.type(field('Instruction'), 'Place your full order.')
+      await save()
+
+      expect(stored(WEEK_CHALLENGES_CONFIG_NAME)).toEqual({
+        2: {
+          title: { text: 'Café challenge', translations: {} },
+          instruction: { text: 'Place your full order.', translations: {} },
+          tasks: [
+            { text: 'Greet the staff', translations: {} },
+            {
+              text: 'Order food and drink',
+              translations: { bn: 'খাবার ও পানীয় অর্ডার করুন' },
+            },
+          ],
+          phrases: [],
+        },
+      })
+      expect(
+        screen.getByRole('option', { name: 'Week 2 · I can get to know someone. — 2 tasks' }),
+      ).toBeDefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Remove' }))
+      await save()
+      expect(stored(WEEK_CHALLENGES_CONFIG_NAME)).toEqual({})
+    })
+
+    it('will not save while another week’s challenge is unfinished, and says where', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+      await userEvent.selectOptions(weekPicker(), '4')
+      await userEvent.click(screen.getByRole('button', { name: 'Add task' }))
+
+      await userEvent.selectOptions(weekPicker(), '1')
+      await userEvent.click(screen.getByRole('radio', { name: 'Day 1 · Watch and listen' }))
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Finish or remove what is unfinished in: Week 4, Day 5',
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+    })
+  })
+
+  describe('Day 6: the week’s review', () => {
+    const openReview = () => userEvent.click(screen.getByRole('radio', { name: 'Day 6 · Review' }))
+    const openPart = (name: string) => userEvent.click(screen.getByRole('radio', { name }))
+    const quizzes = () =>
+      stored(WEEK_QUIZZES_CONFIG_NAME) as unknown as Record<
+        string,
+        {
+          questions: {
+            question: { text: string; translations: Record<string, string> }
+            answer: string
+            others: string[]
+          }[]
+        }
+      >
+
+    it('shows Week 1’s built-in quiz first, with nothing to save yet', async () => {
+      render(<LessonsPage />)
+      await openReview()
+
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 1 · I can say hello and introduce myself. — 3 of 3 review parts',
+        }),
+      ).toBeDefined()
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 2 · I can get to know someone. — no review yet',
+        }),
+      ).toBeDefined()
+
+      // The words and the challenge it repeats are written under their own days.
+      expect(screen.getByText(/“Speaking practice” is Day 5’s challenge/)).toBeVisible()
+      expect(screen.getByRole('radio', { name: 'Quick quiz' })).toBeChecked()
+      expect(lines()).toHaveLength(5)
+      expect(field('What is asked (Question 1)')).toHaveValue(
+        'It is morning. How do you greet someone?',
+      )
+      expect(field('In বাংলা (Question 1)')).toHaveValue('এখন সকাল। কাউকে কীভাবে শুভেচ্ছা জানাবেন?')
+      expect(field('In বাংলা (Question 1)')).toHaveAttribute('lang', 'bn')
+      expect(field('Right answer (Question 1)')).toHaveValue('Good morning.')
+      // One choice per line.
+      expect(field('Other choices (Question 1)')).toHaveValue('Goodbye.\nThank you.')
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+    })
+
+    it('shows the review’s own conversation and role-play in the editors of Days 1 and 4', async () => {
+      render(<LessonsPage />)
+      await openReview()
+
+      await openPart('Listening practice')
+      expect(lines()).toHaveLength(9)
+      expect(field('Speaker (Line 1)')).toHaveValue('Meera')
+      expect(field('English (Line 1)')).toHaveValue('Hi! Good afternoon.')
+      expect(screen.queryByRole('textbox', { name: 'Right answer (Question 1)' })).toBeNull()
+
+      await openPart('Mini role-play')
+      expect(field('Name or role')).toHaveValue('Meera')
+      expect(lines()).toHaveLength(4)
+      expect(field('Partner says (Turn 1)')).toHaveValue('Hi! Good afternoon.')
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+    })
+
+    it('saves a quiz written for another week, and removes it again', async () => {
+      render(<LessonsPage />)
+      await openReview()
+      await userEvent.selectOptions(weekPicker(), '2')
+      expect(
+        screen.getByText('This week has no quiz yet. Add a question to start one.'),
+      ).toBeVisible()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Add question' }))
+      await userEvent.type(field('What is asked (Question 1)'), 'How do you order a coffee?')
+      await userEvent.type(field('In বাংলা (Question 1)'), 'কফি কীভাবে চাইবেন?')
+      await userEvent.type(field('Right answer (Question 1)'), 'A coffee, please.')
+      await userEvent.type(field('Other choices (Question 1)'), 'Goodbye.{Enter}Thank you.')
+      await save()
+
+      expect(quizzes()).toEqual({
+        2: {
+          questions: [
+            {
+              question: {
+                text: 'How do you order a coffee?',
+                translations: { bn: 'কফি কীভাবে চাইবেন?' },
+              },
+              answer: 'A coffee, please.',
+              others: ['Goodbye.', 'Thank you.'],
+            },
+          ],
+        },
+      })
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 2 · I can get to know someone. — 1 of 3 review parts',
+        }),
+      ).toBeDefined()
+      // Nothing was written into the other days' settings.
+      expect(stored(WEEK_DIALOGUES_CONFIG_NAME)).toBeUndefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Remove' }))
+      await save()
+      expect(stored(WEEK_QUIZZES_CONFIG_NAME)).toEqual({})
+    })
+
+    it('says what is wrong with a question, and will not save it', async () => {
+      render(<LessonsPage />)
+      await openReview()
+
+      const others = field('Other choices (Question 1)')
+      await userEvent.clear(others)
+      expect(screen.getByRole('alert')).toHaveTextContent('Enter at least one other choice.')
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+
+      await userEvent.type(others, 'good morning.')
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'A choice is the same as the right answer, or is listed twice.',
+      )
+
+      await userEvent.type(others, '{Enter}Goodbye.')
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'A choice is the same as the right answer, or is listed twice.',
+      )
+      await userEvent.clear(others)
+      await userEvent.type(others, 'Goodbye.')
+      expect(screen.queryByRole('alert')).toBeNull()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeEnabled()
+    })
+
+    it('keeps the review’s conversation and role-play apart from those of Days 1 and 4', async () => {
+      render(<LessonsPage />)
+      await openReview()
+      await userEvent.selectOptions(weekPicker(), '2')
+
+      await openPart('Listening practice')
+      await userEvent.click(screen.getByRole('button', { name: 'Add line' }))
+      await userEvent.type(field('Speaker (Line 1)'), 'Barista')
+      await userEvent.type(field('English (Line 1)'), 'What would you like?')
+
+      await openPart('Mini role-play')
+      await userEvent.type(field('Name or role'), 'the barista')
+      await userEvent.click(screen.getByRole('button', { name: 'Add turn' }))
+      await userEvent.type(field('Partner says (Turn 1)'), 'Hello!')
+      await userEvent.type(field('Suggested reply (Turn 1)'), 'Hi!')
+      await save()
+
+      expect(stored(WEEK_REVIEW_DIALOGUES_CONFIG_NAME)).toEqual({
+        2: {
+          videoUrl: null,
+          lines: [{ speaker: 'Barista', text: 'What would you like?', translations: {} }],
+        },
+      })
+      expect(stored(WEEK_REVIEW_ROLEPLAYS_CONFIG_NAME)).toEqual({
+        2: {
+          partner: 'the barista',
+          imageUrl: null,
+          turns: [{ partner: 'Hello!', reply: 'Hi!', cues: {} }],
+        },
+      })
+      expect(stored(WEEK_DIALOGUES_CONFIG_NAME)).toBeUndefined()
+      expect(stored(WEEK_ROLEPLAYS_CONFIG_NAME)).toBeUndefined()
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 2 · I can get to know someone. — 2 of 3 review parts',
+        }),
+      ).toBeDefined()
+    })
+
+    it('will not save while a part out of sight is unfinished, and says which, here and from other days', async () => {
+      render(<LessonsPage />)
+      await openReview()
+      await userEvent.selectOptions(weekPicker(), '4')
+      await openPart('Mini role-play')
+      await userEvent.click(screen.getByRole('button', { name: 'Add turn' }))
+
+      await openPart('Quick quiz')
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Finish or remove what is unfinished in: Mini role-play',
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+
+      await userEvent.selectOptions(weekPicker(), '1')
+      await userEvent.click(screen.getByRole('radio', { name: 'Day 1 · Watch and listen' }))
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Finish or remove what is unfinished in: Week 4, Day 6',
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+    })
+  })
+
+  describe('Day 7: the real-world challenge', () => {
+    const openChallenge = () =>
+      userEvent.click(screen.getByRole('radio', { name: 'Day 7 · Real-world challenge' }))
+    const scenarioTabs = () =>
+      within(screen.getByRole('group', { name: 'Scenario to fill' }))
+        .getAllByRole('radio')
+        .map((radio) => (radio as HTMLInputElement).labels?.[0]?.textContent)
+    const scenarios = () =>
+      stored(WEEK_SCENARIOS_CONFIG_NAME) as unknown as Record<
+        string,
+        {
+          scenarios: {
+            name: { text: string; translations: Record<string, string> }
+            roleplay: { partner: string; imageUrl: string | null; turns: object[] }
+          }[]
+        }
+      >
+    /** Everything a scenario needs, written into the one on screen. */
+    const fill = async (name: string, partner: string) => {
+      await userEvent.type(field('Name of the scenario'), name)
+      await userEvent.type(field('Name or role'), partner)
+      await userEvent.click(screen.getByRole('button', { name: 'Add turn' }))
+      await userEvent.type(field('Partner says (Turn 1)'), 'Hello!')
+      await userEvent.type(field('Suggested reply (Turn 1)'), 'Hi!')
+    }
+
+    it('shows Week 1’s built-in scenarios one at a time, with nothing to save yet', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 1 · I can say hello and introduce myself. — 3 scenarios',
+        }),
+      ).toBeDefined()
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 2 · I can get to know someone. — no scenarios yet',
+        }),
+      ).toBeDefined()
+
+      // The levels are amounts of help, so there is nothing to write for them.
+      expect(screen.getByText(/The three levels are not written/)).toBeVisible()
+      expect(scenarioTabs()).toEqual([
+        '1 · A new neighbour',
+        '2 · First day at work',
+        '3 · A phone call',
+      ])
+      expect(screen.getByRole('radio', { name: '1 · A new neighbour' })).toBeChecked()
+      expect(field('Name of the scenario')).toHaveValue('A new neighbour')
+      expect(field('Name in বাংলা')).toHaveValue('নতুন প্রতিবেশী')
+      expect(field('Name in বাংলা')).toHaveAttribute('lang', 'bn')
+      // Its role-play, in Day 4's editor.
+      expect(field('Name or role')).toHaveValue('Priya')
+      expect(lines()).toHaveLength(4)
+      expect(field('Partner says (Turn 1)')).toHaveValue('Hello! Good evening.')
+      expect(field('What to say, in বাংলা (Turn 1)')).toHaveValue('তাঁকে শুভ সন্ধ্যা জানান।')
+
+      await userEvent.click(screen.getByRole('radio', { name: '3 · A phone call' }))
+      expect(field('Name of the scenario')).toHaveValue('A phone call')
+      expect(field('Name or role')).toHaveValue('Anita')
+
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      // Three is as many as a week may have.
+      expect(screen.getByRole('button', { name: 'Add scenario' })).toBeDisabled()
+    })
+
+    it('says what a new scenario still needs, and will not save it', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+      await userEvent.selectOptions(weekPicker(), '2')
+      expect(
+        screen.getByText('This week has no scenarios yet. Add a scenario to start.'),
+      ).toBeVisible()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Add scenario' }))
+
+      expect(screen.getAllByRole('alert').map((alert) => alert.textContent)).toEqual([
+        'Enter the name of the scenario.',
+        'Enter who the learner talks to.',
+        'Add what is said: at least one turn.',
+      ])
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+    })
+
+    it('saves a scenario written for another week, and removes it again', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+      await userEvent.selectOptions(weekPicker(), '2')
+      await userEvent.click(screen.getByRole('button', { name: 'Add scenario' }))
+      await fill('Takeaway café', 'the barista')
+      await userEvent.type(field('Name in বাংলা'), 'টেকঅ্যাওয়ে ক্যাফে')
+      expect(screen.queryByRole('alert')).toBeNull()
+      await save()
+
+      expect(scenarios()).toEqual({
+        2: {
+          scenarios: [
+            {
+              name: { text: 'Takeaway café', translations: { bn: 'টেকঅ্যাওয়ে ক্যাফে' } },
+              roleplay: {
+                partner: 'the barista',
+                imageUrl: null,
+                turns: [{ partner: 'Hello!', reply: 'Hi!', cues: {} }],
+              },
+            },
+          ],
+        },
+      })
+      expect(scenarioTabs()).toEqual(['1 · Takeaway café'])
+      expect(
+        screen.getByRole('option', {
+          name: 'Week 2 · I can get to know someone. — 1 scenarios',
+        }),
+      ).toBeDefined()
+      // Day 4's own role-plays are another settings object.
+      expect(stored(WEEK_ROLEPLAYS_CONFIG_NAME)).toBeUndefined()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Remove' }))
+      await save()
+      expect(stored(WEEK_SCENARIOS_CONFIG_NAME)).toEqual({})
+    })
+
+    it('reorders and removes the built-in scenarios, and can go back to them', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+
+      await userEvent.click(screen.getByRole('button', { name: 'Move later: scenario 1' }))
+      expect(scenarioTabs()).toEqual([
+        '1 · First day at work',
+        '2 · A new neighbour',
+        '3 · A phone call',
+      ])
+      // The scenario that moved is still the one on screen.
+      expect(screen.getByRole('radio', { name: '2 · A new neighbour' })).toBeChecked()
+      expect(field('Name or role')).toHaveValue('Priya')
+
+      await userEvent.click(screen.getByRole('button', { name: 'Remove scenario 2' }))
+      expect(scenarioTabs()).toEqual(['1 · First day at work', '2 · A phone call'])
+      await save()
+
+      expect(scenarios()[1]?.scenarios.map((scenario) => scenario.name.text)).toEqual([
+        'First day at work',
+        'A phone call',
+      ])
+
+      await userEvent.click(screen.getByRole('button', { name: 'Use built-in' }))
+      expect(scenarioTabs()).toHaveLength(3)
+      await save()
+      expect(stored(WEEK_SCENARIOS_CONFIG_NAME)).toEqual({})
+    })
+
+    it('will not save while a scenario out of sight is unfinished, and says which, here and from other days', async () => {
+      render(<LessonsPage />)
+      await openChallenge()
+      await userEvent.selectOptions(weekPicker(), '4')
+      await userEvent.click(screen.getByRole('button', { name: 'Add scenario' }))
+      await fill('Bakery', 'the baker')
+      await userEvent.click(screen.getByRole('button', { name: 'Add scenario' }))
+
+      await userEvent.click(screen.getByRole('radio', { name: '1 · Bakery' }))
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Finish or remove what is unfinished in: 2 · Scenario',
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+
+      await userEvent.selectOptions(weekPicker(), '1')
+      await userEvent.click(screen.getByRole('radio', { name: 'Day 1 · Watch and listen' }))
+      expect(screen.getByRole('alert')).toHaveTextContent(
+        'Finish or remove what is unfinished in: Week 4, Day 7',
+      )
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+    })
   })
 })
 

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import type { MicrophoneProblem } from '@/shared/lib/audio/microphone'
+import type { MicrophoneProblem } from './microphone'
 import { useT } from '@/shared/lib/i18n'
 
 export type MicrophoneHelpProps = {
@@ -15,12 +15,12 @@ export function MicrophoneHelp({ problem, children }: MicrophoneHelpProps) {
   return (
     <div role="alert" className="flex w-full flex-col gap-3 rounded-lg bg-accent-soft p-4">
       <p className="font-extrabold text-on-accent-soft">
-        {t(problem === 'denied' ? 'placementTest.speak.denied' : 'placementTest.speak.unavailable')}
+        {t(problem === 'denied' ? 'microphone.denied' : 'microphone.unavailable')}
       </p>
       {problem === 'denied' && (
         <ul className="flex list-disc flex-col gap-1 ps-5 text-on-accent-soft">
-          <li>{t('placementTest.speak.deniedAndroid')}</li>
-          <li>{t('placementTest.speak.deniedIos')}</li>
+          <li>{t('microphone.deniedAndroid')}</li>
+          <li>{t('microphone.deniedIos')}</li>
         </ul>
       )}
       {children && <div className="flex flex-col gap-2">{children}</div>}

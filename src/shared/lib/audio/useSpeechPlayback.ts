@@ -12,7 +12,7 @@ import {
 export type PlaybackStatus = 'idle' | 'playing' | 'failed'
 
 /**
- * Plays English text aloud with the device's voice. Playback stops when the screen is hidden
+ * Plays text aloud with the device's voice: English, unless `play` is given another language. Playback stops when the screen is hidden
  * or the component goes away. `play` and `playAll` must be called from a tap.
  */
 export function useSpeechPlayback() {
@@ -39,7 +39,11 @@ export function useSpeechPlayback() {
     [],
   )
 
-  const play = useCallback((text: string, rate = 1) => run(() => speak(text, { rate })), [run])
+  const play = useCallback(
+    (text: string, rate = 1, lang?: string) =>
+      run(() => speak(text, lang ? { rate, lang } : { rate })),
+    [run],
+  )
 
   /** Several texts in a row (e.g. the lines of a conversation). */
   const playAll = useCallback(

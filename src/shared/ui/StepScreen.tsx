@@ -2,6 +2,8 @@ import type { ReactNode, Ref } from 'react'
 import { cn } from '@/shared/lib/cn'
 
 export type StepScreenProps = {
+  /** A picture above the heading (a medal, a scene). Decorative: the heading names the step. */
+  media?: ReactNode
   /** A short line above the heading saying where this step sits (e.g. "Week 20 of 50"). */
   eyebrow?: string
   title: string
@@ -28,6 +30,7 @@ export type StepScreenProps = {
  * safe areas.
  */
 export function StepScreen({
+  media,
   eyebrow,
   title,
   subtitle,
@@ -44,6 +47,11 @@ export function StepScreen({
         <header
           className={cn('flex shrink-0 flex-col gap-2 pb-6 text-center', topBar ? 'pt-4' : 'pt-8')}
         >
+          {media && (
+            <div aria-hidden="true" className="flex justify-center">
+              {media}
+            </div>
+          )}
           {eyebrow && <p className="text-sm font-extrabold text-primary">{eyebrow}</p>}
           <h1
             ref={headingRef}

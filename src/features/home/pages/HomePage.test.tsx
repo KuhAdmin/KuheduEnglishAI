@@ -12,6 +12,7 @@ import { CURRICULUM_CONFIG_NAME } from '@/shared/lib/curriculum/curriculumOverri
 import { WEEK_PICTURES_CONFIG_NAME } from '@/shared/lib/curriculum/weekPictures'
 import { getCurriculum } from '@/shared/lib/curriculum/useCurriculum'
 import { AppLanguageProvider, useLanguageStore } from '@/shared/lib/i18n'
+import { useLessonProgressStore } from '@/shared/lib/learner/lessonProgress'
 import { paths } from '@/shared/lib/paths'
 import { SectionCard } from '../components/SectionCard'
 import { homeRoutes, weekRoutes } from '../index'
@@ -45,6 +46,7 @@ beforeAll(async () => {
 beforeEach(() => {
   localStorage.clear()
   useLanguageStore.setState({ language: null })
+  useLessonProgressStore.setState({ heardWeeks: [], doneDays: {} })
 })
 
 describe('HomePage', () => {
@@ -230,6 +232,65 @@ describe('WeekPage', () => {
     expect(screen.getByRole('link', { name: 'Start Day 1' })).toHaveAttribute(
       'href',
       '/lessons/weeks/20/days/1',
+    )
+  })
+
+  it('opens the first day the learner has not finished in that week', async () => {
+    useLessonProgressStore.setState({ doneDays: { 20: [1], 21: [1, 2] } })
+    const router = renderHome('/home/weeks/20')
+    await overview()
+
+    expect(screen.getByRole('link', { name: 'Start Day 2' })).toHaveAttribute(
+      'href',
+      '/lessons/weeks/20/days/2',
+    )
+
+    // Each week keeps its own count.
+    await userEvent.click(screen.getByRole('link', { name: 'Next week' }))
+    expect(router.state.location.pathname).toBe('/home/weeks/21')
+    expect(await screen.findByRole('link', { name: 'Start Day 3' })).toHaveAttribute(
+      'href',
+      '/lessons/weeks/21/days/3',
+    )
+    await userEvent.click(screen.getByRole('link', { name: 'Next week' }))
+    expect(await screen.findByRole('link', { name: 'Start Day 1' })).toHaveAttribute(
+      'href',
+      '/lessons/weeks/22/days/1',
+    )
+  })
+
+  it('says a week is complete once all seven days are done, and leads on to the next week', async () => {
+    useLessonProgressStore.setState({
+      doneDays: { 20: [1, 2, 3, 4, 5, 6, 7], 21: [1, 2, 3, 4, 5, 6] },
+    })
+    const router = renderHome('/home/weeks/20')
+    await overview()
+
+    expect(screen.getByText('You finished this week. Well done!')).toBeVisible()
+    // The button no longer loops back to Day 1.
+    expect(screen.queryByRole('link', { name: /^Start Day/ })).toBeNull()
+    expect(screen.getByRole('link', { name: 'Go to Week 21' })).toHaveAttribute(
+      'href',
+      '/home/weeks/21',
+    )
+
+    // A week with a day left, even an optional one, is not complete.
+    await userEvent.click(screen.getByRole('link', { name: 'Go to Week 21' }))
+    expect(router.state.location.pathname).toBe('/home/weeks/21')
+    expect(await screen.findByRole('link', { name: 'Start Day 7' })).toBeVisible()
+    expect(screen.queryByText('You finished this week. Well done!')).toBeNull()
+  })
+
+  it('leads back to the journey from the last week of the course, once it is complete', async () => {
+    useLessonProgressStore.setState({ doneDays: { 50: [1, 2, 3, 4, 5, 6, 7] } })
+    renderHome('/home/weeks/50')
+    await overview()
+
+    expect(screen.getByText('You finished this week. Well done!')).toBeVisible()
+    expect(screen.queryByRole('link', { name: /^Go to Week/ })).toBeNull()
+    expect(screen.getByRole('link', { name: 'Back to your journey' })).toHaveAttribute(
+      'href',
+      '/home',
     )
   })
 

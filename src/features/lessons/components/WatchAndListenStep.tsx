@@ -1,17 +1,15 @@
-import { ArrowLeft, ArrowRight, MessagesSquare, ScrollText } from 'lucide-react'
-import { useId, useState } from 'react'
-import { Link } from 'react-router'
+import { MessagesSquare, ScrollText } from 'lucide-react'
+import { useState } from 'react'
 import { isSpeechSupported } from '@/shared/lib/audio/speech'
 import { lineTranslation, type WeekDialogue } from '@/shared/lib/curriculum/weekDialogues'
-import { formatNumber, isEnglish, useLanguage, useT } from '@/shared/lib/i18n'
-import { Button } from '@/shared/ui/Button'
-import { IconButton } from '@/shared/ui/IconButton'
-import { ProgressBar } from '@/shared/ui/ProgressBar'
+import { isEnglish, useLanguage, useT } from '@/shared/lib/i18n'
 import { SegmentedControl } from '@/shared/ui/SegmentedControl'
 import { StepScreen } from '@/shared/ui/StepScreen'
 import { SLOW_RATE, useConversationPlayback } from '../hooks/useConversationPlayback'
 import { ConversationMedia } from './ConversationMedia'
 import { DialogueLines } from './DialogueLines'
+import { LessonNextButton } from './LessonNextButton'
+import { LessonTopBar } from './LessonTopBar'
 
 type View = 'dialogue' | 'transcript'
 
@@ -19,11 +17,16 @@ export type WatchAndListenStepProps = {
   dialogue: WeekDialogue
   /** The picture of the week's situation, if an admin uploaded one. */
   picture: string | null
-  /** This step's place in the day, e.g. 1 of 6. */
-  step: number
-  stepCount: number
+  /** This day's place in the week, e.g. 1 of 7. */
+  day: number
+  dayCount: number
   /** Where the back arrow leads: the week's overview. */
   backTo: string
+  /** What the back arrow is called, when it does not lead to the week. */
+  backLabel?: string
+  /** The heading, when this is not Day 1 (the review's listening practice). */
+  title?: string
+  subtitle?: string
   /** The learner heard the conversation through once before, so nothing is locked. */
   heardBefore: boolean
   /** The conversation was just heard (or watched) to its end. */
@@ -32,23 +35,26 @@ export type WatchAndListenStepProps = {
 }
 
 /**
- * "Watch and listen": the week's conversation, played and written out. "Next" opens once the
- * learner has heard it through — or at once on a device that cannot play it, which must not
+ * Day 1, "Watch and listen" (and the listening practice of Day 6's review, with another
+ * conversation): the week's conversation, played and written out. "Next" opens once
+ * the learner has heard it through — or at once on a device that cannot play it, which must not
  * trap them.
  */
 export function WatchAndListenStep({
   dialogue,
   picture,
-  step,
-  stepCount,
+  day,
+  dayCount,
   backTo,
+  backLabel,
+  title,
+  subtitle,
   heardBefore,
   onHeard,
   onNext,
 }: WatchAndListenStepProps) {
   const t = useT()
   const language = useLanguage()
-  const hintId = useId()
   const playback = useConversationPlayback(dialogue.lines)
   const [view, setView] = useState<View>('dialogue')
   // A video that will not play gives way to the device's voice.
@@ -68,45 +74,16 @@ export function WatchAndListenStep({
     if (await playback.playConversation(slowly ? SLOW_RATE : 1)) onHeard()
   }
 
-  const count = (value: number) => formatNumber(language, value)
-
   return (
     <StepScreen
-      title={t('lessonDay.watch.title')}
-      subtitle={t('lessonDay.watch.subtitle')}
-      topBar={
-        <div className="flex items-center gap-3">
-          <IconButton asChild label={t('lessonDay.back')} className="-ms-2">
-            <Link to={backTo}>
-              <ArrowLeft aria-hidden="true" className="size-6" />
-            </Link>
-          </IconButton>
-          <ProgressBar
-            className="flex-1"
-            value={step / stepCount}
-            label={t('lessonDay.progressLabel')}
-          />
-          <p aria-hidden="true" className="text-sm font-bold text-fg-muted tabular-nums">
-            {count(step)}/{count(stepCount)}
-          </p>
-        </div>
-      }
+      title={title ?? t('lessonDay.watch.title')}
+      subtitle={subtitle ?? t('lessonDay.watch.subtitle')}
+      topBar={<LessonTopBar backTo={backTo} backLabel={backLabel} day={day} dayCount={dayCount} />}
       footer={
-        <div className="flex flex-col gap-2">
-          <p id={hintId} role="status" className="text-center text-sm text-fg-muted empty:hidden">
-            {!canContinue && t('lessonDay.watch.listenFirst')}
-          </p>
-          <Button
-            size="lg"
-            fullWidth
-            disabled={!canContinue}
-            aria-describedby={canContinue ? undefined : hintId}
-            onClick={onNext}
-          >
-            {t('lessonDay.next')}
-            <ArrowRight aria-hidden="true" className="size-5" />
-          </Button>
-        </div>
+        <LessonNextButton
+          lockedBecause={canContinue ? null : t('lessonDay.watch.listenFirst')}
+          onNext={onNext}
+        />
       }
     >
       <div className="flex animate-rise-in flex-col gap-4">

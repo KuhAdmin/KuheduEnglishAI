@@ -18,6 +18,8 @@ export type ChoiceListProps<Value extends string> = {
   /** `null` when nothing is chosen yet. */
   value: Value | null
   onChange: (value: Value) => void
+  /** The choice has been made and can no longer change; it stays readable. */
+  disabled?: boolean
   className?: string
 }
 
@@ -27,12 +29,13 @@ export function ChoiceList<Value extends string>({
   options,
   value,
   onChange,
+  disabled = false,
   className,
 }: ChoiceListProps<Value>) {
   const name = useId()
 
   return (
-    <fieldset className={cn('min-w-0', className)}>
+    <fieldset disabled={disabled} className={cn('min-w-0', className)}>
       <legend className="sr-only">{legend}</legend>
       <div className="flex flex-col gap-3">
         {options.map((option) => {
@@ -41,8 +44,9 @@ export function ChoiceList<Value extends string>({
             <label
               key={option.value}
               className={cn(
-                'flex min-h-18 cursor-pointer items-center gap-4 rounded-xl border-2 px-4 py-3',
-                'transition-[transform,background-color,border-color] duration-(--duration-fast) ease-standard active:scale-98',
+                'flex min-h-18 items-center gap-4 rounded-xl border-2 px-4 py-3',
+                'transition-[transform,background-color,border-color] duration-(--duration-fast) ease-standard',
+                !disabled && 'cursor-pointer active:scale-98',
                 'has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-focus',
                 selected
                   ? 'border-primary bg-surface shadow-sm'

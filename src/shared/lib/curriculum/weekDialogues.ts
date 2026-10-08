@@ -1,8 +1,9 @@
 import { useMemo } from 'react'
 import { z } from 'zod'
-import { isSafeMediaUrl, languageTag } from '../appConfig/fields'
+import { isSafeMediaUrl } from '../appConfig/fields'
 import { useAppConfig } from '../appConfig/useAppConfig'
 import { primarySubtag } from '../i18n'
+import { isRecord, tidy, tidyByLanguage } from './contentText'
 import { isWeekNumber } from './curriculum'
 import { week1Dialogue } from './dialogues/week1'
 
@@ -38,27 +39,13 @@ export const MAX_LINE_TRANSLATION_LENGTH = 300
 /** The conversations that ship with the app. TODO(content): weeks 2 to 50. */
 export const builtInWeekDialogues: WeekDialogues = { 1: week1Dialogue }
 
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  typeof value === 'object' && value !== null && !Array.isArray(value)
-
-const tidy = (value: unknown, max: number): string => {
-  if (typeof value !== 'string') return ''
-  const text = value.trim().replace(/\s+/g, ' ')
-  return text.length <= max ? text : ''
-}
-
 function parseLine(value: unknown): DialogueLine | null {
   if (!isRecord(value)) return null
   const speaker = tidy(value.speaker, MAX_SPEAKER_LENGTH)
   const text = tidy(value.text, MAX_LINE_LENGTH)
   if (!speaker || !text) return null
 
-  const translations: Record<string, string> = {}
-  const given = isRecord(value.translations) ? value.translations : {}
-  for (const language of Object.keys(given).sort()) {
-    const translation = tidy(given[language], MAX_LINE_TRANSLATION_LENGTH)
-    if (languageTag.safeParse(language).success && translation) translations[language] = translation
-  }
+  const translations = tidyByLanguage(value.translations, MAX_LINE_TRANSLATION_LENGTH)
   return { speaker, text, translations }
 }
 

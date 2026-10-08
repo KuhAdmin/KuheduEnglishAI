@@ -33,6 +33,18 @@ describe('ChoiceList', () => {
     expect(handleChange).toHaveBeenCalledWith('c')
   })
 
+  it('can be locked once the choice is made: it stays readable but cannot change', async () => {
+    const handleChange = vi.fn()
+    render(
+      <ChoiceList legend="Pick one" options={options} value="b" onChange={handleChange} disabled />,
+    )
+
+    for (const radio of screen.getAllByRole('radio')) expect(radio).toBeDisabled()
+    expect(screen.getByRole('radio', { name: 'Beta' })).toBeChecked()
+    await userEvent.click(screen.getByText('Gamma'))
+    expect(handleChange).not.toHaveBeenCalled()
+  })
+
   it('is operable from the keyboard', async () => {
     const handleChange = vi.fn()
     render(<ChoiceList legend="Pick one" options={options} value="a" onChange={handleChange} />)

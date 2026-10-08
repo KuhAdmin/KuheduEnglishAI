@@ -10,7 +10,7 @@ import { useT } from '@/shared/lib/i18n'
 import { Button } from '@/shared/ui/Button'
 import { usePlacementStore } from '../store/usePlacementStore'
 import type { NotAssessedReason } from '../types'
-import { MicrophoneHelp } from './MicrophoneHelp'
+import { MicrophoneHelp } from '@/shared/lib/audio/MicrophoneHelp'
 import { TestFrame } from './TestFrame'
 
 const skipReasons = {

@@ -43,6 +43,19 @@ describe('StepScreen', () => {
     expect(screen.getByText('Ordering at a café')).toHaveClass('font-extrabold')
   })
 
+  it('can show a small picture above the heading, as decoration', () => {
+    render(
+      <StepScreen media={<span data-testid="medal" />} title="Weekly review" footer={null}>
+        <p>Step</p>
+      </StepScreen>,
+    )
+
+    const medal = screen.getByTestId('medal')
+    const heading = screen.getByRole('heading', { level: 1, name: 'Weekly review' })
+    expect(medal.compareDocumentPosition(heading) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+    expect(medal.parentElement).toHaveAttribute('aria-hidden', 'true')
+  })
+
   it('shows a top bar and lets the caller move focus to the heading', () => {
     const heading = createRef<HTMLHeadingElement>()
     render(

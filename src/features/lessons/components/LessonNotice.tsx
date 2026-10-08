@@ -5,8 +5,6 @@ import { Button } from '@/shared/ui/Button'
 import { StepScreen } from '@/shared/ui/StepScreen'
 
 export type LessonNoticeProps = {
-  /** Which day this is about, when the title does not say. */
-  eyebrow?: string
   title: string
   subtitle: string
   /** The week's overview. */
@@ -14,12 +12,11 @@ export type LessonNoticeProps = {
 }
 
 /** A screen of a day that has nothing to do yet: it says so, and leads back to the week. */
-export function LessonNotice({ eyebrow, title, subtitle, backTo }: LessonNoticeProps) {
+export function LessonNotice({ title, subtitle, backTo }: LessonNoticeProps) {
   const t = useT()
 
   return (
     <StepScreen
-      eyebrow={eyebrow}
       title={title}
       subtitle={subtitle}
       footer={

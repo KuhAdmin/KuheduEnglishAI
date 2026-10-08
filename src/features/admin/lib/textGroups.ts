@@ -19,7 +19,7 @@ const groupPrefixes: { id: TextGroupId; prefixes: string[] }[] = [
   },
   { id: 'profileScreen', prefixes: ['profile.', 'theme.'] },
   { id: 'signIn', prefixes: ['auth.'] },
-  { id: 'errors', prefixes: ['error.', 'notFound.'] },
+  { id: 'errors', prefixes: ['error.', 'notFound.', 'microphone.'] },
   { id: 'app', prefixes: ['app.', 'nav.', 'landing.'] },
 ]
 

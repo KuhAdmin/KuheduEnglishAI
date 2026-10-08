@@ -1,6 +1,7 @@
 /**
- * Spoken English from the device's own text-to-speech (the Web Speech API). It needs no audio
- * files and no server, but the voice differs from device to device and some have none.
+ * Speech from the device's own text-to-speech (the Web Speech API): English, and a learner's
+ * own language where the device has a voice for it. It needs no audio files and no server, but
+ * the voice differs from device to device and some have none.
  * TODO(content): recorded audio per prompt, so every learner hears the same voice.
  */
 
@@ -17,6 +18,8 @@ export class SpeechError extends Error {
 export type SpeakOptions = {
   /** 1 is normal speed; lower is slower. */
   rate?: number
+  /** The language of the text when it is not English, as a language tag (`bn`, `hi-IN`). */
+  lang?: string
 }
 
 /** One of several texts said in a row. */
@@ -75,6 +78,39 @@ export function pickEnglishVoice(
     )[0]
 }
 
+const baseLanguage = (tag: string) => tag.toLowerCase().split(/[-_]/)[0]
+
+/** The device's voice for a language other than English, if it has one. */
+export function pickVoiceFor(
+  voices: readonly SpeechSynthesisVoice[],
+  language: string,
+): SpeechSynthesisVoice | undefined {
+  const wanted = baseLanguage(language)
+  return voices
+    .filter((voice) => baseLanguage(voice.lang) === wanted)
+    .sort((a, b) => Number(b.localService) - Number(a.localService))[0]
+}
+
+/**
+ * Whether the device can say a text in this language. Unlike English, which any voice will at
+ * least attempt, a sentence in another script is only offered when there is a voice for it.
+ */
+export function hasVoiceFor(language: string): boolean {
+  return (
+    isSpeechSupported() && pickVoiceFor(window.speechSynthesis.getVoices(), language) !== undefined
+  )
+}
+
+/** Be told when the device's voices have loaded or changed. Returns how to stop listening. */
+export function onVoicesChanged(listener: () => void): () => void {
+  if (!isSpeechSupported()) return () => {}
+  const synth = window.speechSynthesis
+  // Older Safari has the voices but not the event.
+  if (typeof synth.addEventListener !== 'function') return () => {}
+  synth.addEventListener('voiceschanged', listener)
+  return () => synth.removeEventListener('voiceschanged', listener)
+}
+
 // What is being said now. Chrome can garbage-collect an utterance that is still speaking, which
 // loses its `end` event, so the utterances are kept here; `stop` settles the promise as
 // cancelled, because browsers disagree on which event (if any) a cancelled utterance fires.
@@ -87,7 +123,7 @@ let current: { utterances: SpeechSynthesisUtterance[]; stop: () => void } | null
  */
 export function speakAll(
   parts: readonly SpeechPart[],
-  { rate = 1, onPartStart }: SpeakAllOptions = {},
+  { rate = 1, lang, onPartStart }: SpeakAllOptions = {},
 ): Promise<SpeechOutcome> {
   if (!isSpeechSupported()) return Promise.reject(new SpeechError('unsupported'))
   if (parts.length === 0) return Promise.resolve('ended')
@@ -97,11 +133,12 @@ export function speakAll(
     current?.stop()
     synth.cancel()
 
-    const voice = pickEnglishVoice(synth.getVoices())
+    const voices = synth.getVoices()
+    const voice = lang ? pickVoiceFor(voices, lang) : pickEnglishVoice(voices)
     const utterances = parts.map(({ text, pitch = 1 }) => {
       const utterance = new SpeechSynthesisUtterance(text)
       if (voice) utterance.voice = voice
-      utterance.lang = voice?.lang ?? 'en-US'
+      utterance.lang = voice?.lang ?? lang ?? 'en-US'
       utterance.rate = rate
       utterance.pitch = pitch
       return utterance

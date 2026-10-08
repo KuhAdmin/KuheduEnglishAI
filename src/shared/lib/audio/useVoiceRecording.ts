@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { MicrophoneError, type MicrophoneProblem } from '@/shared/lib/audio/microphone'
-import { startRecording, type ActiveRecording } from '@/shared/lib/audio/recorder'
+import { MicrophoneError, type MicrophoneProblem } from './microphone'
+import { startRecording, type ActiveRecording } from './recorder'
 
 export type RecordingPhase = 'idle' | 'starting' | 'recording' | 'recorded'
 
@@ -10,7 +10,7 @@ export type Take = { url: string; durationMs: number }
 const TICK_MS = 200
 
 /**
- * One spoken answer: record, play back, record again. The recording lives in memory only — it
+ * One spoken attempt: record, play back, record again. The recording lives in memory only — it
  * is never stored or sent anywhere — and is dropped when a new one is made or the screen goes.
  * The microphone is released when recording ends, when the page is hidden, and on unmount.
  * TODO(backend): hand the recording to the server for scoring before dropping it.
@@ -28,6 +28,8 @@ export function useVoiceRecording() {
   /** The learner let go before the microphone had opened. */
   const stopWhenReady = useRef(false)
   const mounted = useRef(true)
+  /** Goes up on `reset`, so a recording made before it is not taken for a new one. */
+  const generation = useRef(0)
   const url = useRef<string | null>(null)
   const player = useRef<HTMLAudioElement | null>(null)
 
@@ -41,6 +43,8 @@ export function useVoiceRecording() {
   const start = useCallback(async () => {
     if (busy.current) return
     busy.current = true
+    const run = generation.current
+    const current = () => mounted.current && run === generation.current
     stopWhenReady.current = false
     dropTake()
     setTake(null)
@@ -52,7 +56,7 @@ export function useVoiceRecording() {
     try {
       const recording = await startRecording()
       active.current = recording
-      if (stopWhenReady.current || !mounted.current) recording.stop()
+      if (stopWhenReady.current || !current()) recording.stop()
       else setPhase('recording')
 
       const began = performance.now()
@@ -60,7 +64,7 @@ export function useVoiceRecording() {
       const result = await recording.finished
       clearInterval(ticker)
       active.current = null
-      if (!mounted.current) return
+      if (!current()) return
 
       url.current = URL.createObjectURL(result.blob)
       setTake({ url: url.current, durationMs: result.durationMs })
@@ -68,7 +72,7 @@ export function useVoiceRecording() {
       setPhase('recorded')
     } catch (error) {
       active.current = null
-      if (!mounted.current) return
+      if (!current()) return
       setProblem(error instanceof MicrophoneError ? error.problem : 'unavailable')
       setPhase('idle')
     } finally {
@@ -80,6 +84,18 @@ export function useVoiceRecording() {
     if (active.current) active.current.stop()
     else stopWhenReady.current = true
   }, [])
+
+  /** Forget the attempt (e.g. the learner moved on to another word); stops a recording under way. */
+  const reset = useCallback(() => {
+    generation.current += 1
+    stop()
+    dropTake()
+    setTake(null)
+    setPlaying(false)
+    setProblem(null)
+    setElapsedMs(0)
+    setPhase('idle')
+  }, [stop, dropTake])
 
   const playTake = useCallback(() => {
     if (!url.current) return
@@ -107,5 +123,5 @@ export function useVoiceRecording() {
     }
   }, [stop, dropTake])
 
-  return { phase, elapsedMs, take, attempts, problem, playing, start, stop, playTake }
+  return { phase, elapsedMs, take, attempts, problem, playing, start, stop, reset, playTake }
 }

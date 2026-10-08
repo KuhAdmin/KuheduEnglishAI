@@ -31,8 +31,9 @@ import { AdminSection } from '../components/AdminSection'
 import { CurriculumTextField } from '../components/CurriculumTextField'
 import { CurriculumWeekSection } from '../components/CurriculumWeekSection'
 import { EditLanguagePicker } from '../components/EditLanguagePicker'
+import { combineDrafts } from '../hooks/combineDrafts'
 import { useEditLanguage } from '../hooks/useEditLanguage'
-import { useSettingsDraft, type DraftStatus } from '../hooks/useSettingsDraft'
+import { useSettingsDraft } from '../hooks/useSettingsDraft'
 
 const text = adminText.curriculum
 
@@ -50,6 +51,7 @@ export function CurriculumPage() {
     schema: weekPicturesSchema,
     defaults: defaultWeekPictures,
   })
+  const drafts = combineDrafts(wording, pictures)
   const overrides = wording.value
 
   const [section, setSection] = useState(1)
@@ -94,31 +96,16 @@ export function CurriculumPage() {
     sectionPicker.current?.focus()
   }
 
-  // A picture that does not fit is the thing to say, whatever happened to the wording.
-  const statuses: DraftStatus[] = [pictures.status, wording.status]
-  const status = statuses.includes('storage-full')
-    ? 'storage-full'
-    : (statuses.find((entry) => entry !== 'idle') ?? 'idle')
-
   return (
     <AdminPage
       heading={text.heading}
       intro={text.intro}
-      isDirty={wording.isDirty || pictures.isDirty}
-      isCustomised={wording.isCustomised || pictures.isCustomised}
-      status={status}
-      onSave={() => {
-        if (wording.isDirty) wording.save()
-        if (pictures.isDirty) pictures.save()
-      }}
-      onDiscard={() => {
-        wording.discard()
-        pictures.discard()
-      }}
-      onResetToDefaults={() => {
-        wording.resetToDefaults()
-        pictures.resetToDefaults()
-      }}
+      isDirty={drafts.isDirty}
+      isCustomised={drafts.isCustomised}
+      status={drafts.status}
+      onSave={drafts.save}
+      onDiscard={drafts.discard}
+      onResetToDefaults={drafts.resetToDefaults}
     >
       <div className="flex flex-col gap-4">
         <EditLanguagePicker

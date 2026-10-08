@@ -1,8 +1,11 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import {
   cancelSpeech,
+  hasVoiceFor,
   isSpeechSupported,
+  onVoicesChanged,
   pickEnglishVoice,
+  pickVoiceFor,
   speak,
   speakAll,
   SpeechError,
@@ -55,6 +58,50 @@ describe('pickEnglishVoice', () => {
 
   it('prefers a voice on the device over one that needs the network', () => {
     expect(pickEnglishVoice([voice('en-IN', false), voice('en-GB', true)])?.lang).toBe('en-GB')
+  })
+})
+
+describe('a voice for the learner’s own language', () => {
+  it('is picked by the language, whatever the region, preferring one on the device', () => {
+    const all = [voice('en-IN'), voice('bn-BD', false), voice('bn_IN'), voice('hi-IN')]
+    expect(pickVoiceFor(all, 'bn')?.lang).toBe('bn_IN')
+    expect(pickVoiceFor(all, 'hi-IN')?.lang).toBe('hi-IN')
+    expect(pickVoiceFor(all, 'ta')).toBeUndefined()
+  })
+
+  it('is known to be there or not', () => {
+    expect(hasVoiceFor('hi')).toBe(true)
+    expect(hasVoiceFor('bn')).toBe(false)
+  })
+
+  it('says the text in that language instead of English', () => {
+    void speak('आप कैसे हैं?', { lang: 'hi' })
+    expect(spoken().voice).toMatchObject({ lang: 'hi-IN' })
+    expect(spoken().lang).toBe('hi-IN')
+
+    // Without a voice for it, the device is at least told which language the text is in.
+    void speak('আপনি কেমন আছেন?', { lang: 'bn' })
+    expect(spoken().voice).toBeNull()
+    expect(spoken().lang).toBe('bn')
+  })
+
+  it('tells a listener when the voices have loaded, until it stops listening', () => {
+    const listeners = new Set<() => void>()
+    vi.stubGlobal('speechSynthesis', {
+      ...synth,
+      addEventListener: (_type: string, listener: () => void) => listeners.add(listener),
+      removeEventListener: (_type: string, listener: () => void) => listeners.delete(listener),
+    })
+    const listener = vi.fn()
+
+    const stop = onVoicesChanged(listener)
+    expect(listeners).toEqual(new Set([listener]))
+    stop()
+    expect(listeners.size).toBe(0)
+  })
+
+  it('has nothing to listen to on a browser without that event', () => {
+    expect(() => onVoicesChanged(vi.fn())()).not.toThrow()
   })
 })
 
@@ -193,6 +240,8 @@ describe('without speech synthesis', () => {
 
   it('says so instead of throwing', async () => {
     expect(isSpeechSupported()).toBe(false)
+    expect(hasVoiceFor('hi')).toBe(false)
+    expect(() => onVoicesChanged(vi.fn())()).not.toThrow()
     await expect(speak('Hello.')).rejects.toMatchObject({ reason: 'unsupported' })
     expect(() => cancelSpeech()).not.toThrow()
   })
