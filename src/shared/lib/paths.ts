@@ -23,6 +23,11 @@ export const paths = {
   lessonDay: '/lessons/weeks/:week/days/:day',
   progress: '/progress',
   profile: '/profile',
+  /** Settings opened from Profile, each its own screen. */
+  profileLanguage: '/profile/language',
+  profileAppearance: '/profile/appearance',
+  profileVoice: '/profile/voice',
+  profileTutor: '/profile/tutor',
   /** Redirects to the first admin section. */
   admin: '/admin',
   adminTexts: '/admin/texts',

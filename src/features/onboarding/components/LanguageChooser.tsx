@@ -2,8 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import type { SupportLanguage } from '@/shared/lib/appConfig/languagesConfig'
 import { useT } from '@/shared/lib/i18n'
 import { Button } from '@/shared/ui/Button'
-import { ChoiceList } from '@/shared/ui/ChoiceList'
-import { LanguageFlag } from './LanguageFlag'
+import { LanguageChoiceList } from '@/shared/ui/LanguageChoiceList'
 import { StepScreen } from '@/shared/ui/StepScreen'
 
 export type LanguageChooserProps = {
@@ -36,27 +35,11 @@ export function LanguageChooser({
         </Button>
       }
     >
-      <ChoiceList
+      <LanguageChoiceList
         legend={t('onboarding.language.title')}
+        languages={languages}
         value={selected}
         onChange={onSelect}
-        options={languages.map((language) => ({
-          value: language.code,
-          media: <LanguageFlag flagUrl={language.flagUrl} code={language.code} />,
-          label: (
-            <>
-              <span lang={language.code}>{language.nativeName}</span>
-              {language.caption && (
-                <>
-                  {' '}
-                  <span lang="en" className="font-normal text-fg-muted">
-                    ({language.caption})
-                  </span>
-                </>
-              )}
-            </>
-          ),
-        }))}
       />
     </StepScreen>
   )

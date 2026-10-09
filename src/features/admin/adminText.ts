@@ -75,7 +75,7 @@ export const adminText = {
       placement: 'Onboarding · Placement test',
       onboarding: 'Onboarding · Shared',
       main: 'Home, journey and the other main screens',
-      profileScreen: 'Profile and themes',
+      profileScreen: 'Profile, themes, voices and tutor',
       app: 'App name and navigation',
       errors: 'Errors',
       other: 'Other',

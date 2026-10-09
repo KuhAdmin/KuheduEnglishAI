@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test'
-import { expectNoHorizontalScroll, seedLanguage } from './helpers'
+import { expectNoHorizontalScroll, scrollToEnd, seedLanguage } from './helpers'
 
 const nav = (page: Page) => page.getByRole('navigation', { name: 'Main navigation' })
 const heading = (page: Page) => page.getByRole('heading', { level: 1 })
@@ -25,8 +25,7 @@ test('Home is the 50-week journey: ten sections, the current one marked', async 
 
   // Scrolled to the end, the last section sits clear of the navigation.
   const last = sections(page).last()
-  await last.scrollIntoViewIfNeeded()
-  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight))
+  await scrollToEnd(last)
   await expect(last).toContainText('Communicate Independently')
   const lastBox = await last.boundingBox()
   const navBox = await nav(page).boundingBox()
@@ -160,13 +159,14 @@ test('the bottom navigation moves between the four main screens and stays in rea
   }
 
   // It stays put while the journey scrolls.
-  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight))
+  await scrollToEnd(sections(page).last())
+  await expect(sections(page).last()).toBeInViewport()
   await expect(nav(page)).toBeInViewport({ ratio: 1 })
 
   for (const [tab, url, title] of [
     ['Learn', /\/lessons$/, 'Lessons'],
     ['Progress', /\/progress$/, 'Your progress'],
-    ['Profile', /\/profile$/, 'Your profile'],
+    ['Profile', /\/profile$/, 'My profile'],
     ['Home', /\/home$/, 'Your 50-week journey'],
   ] as const) {
     await nav(page).getByRole('link', { name: tab }).click()

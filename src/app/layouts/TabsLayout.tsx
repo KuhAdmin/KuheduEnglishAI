@@ -14,14 +14,14 @@ const tabs = [
 
 /**
  * The app's main screens: padded content with the bottom navigation under it. The navigation
- * sticks to the bottom of the phone-width column, so it stays put while the screen scrolls and
- * never covers the end of the content.
+ * sticks to the bottom of the phone frame, so it stays put while the screen scrolls and never
+ * covers the end of the content.
  */
 export function TabsLayout() {
   const t = useT()
 
   return (
-    <div className="flex min-h-dvh flex-col pt-safe">
+    <div className="flex min-h-viewport flex-col pt-safe">
       <main className="flex-1 px-gutter pb-6">
         <Outlet />
       </main>

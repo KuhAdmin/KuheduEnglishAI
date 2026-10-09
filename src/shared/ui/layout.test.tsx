@@ -68,6 +68,17 @@ describe('StepScreen', () => {
     heading.current?.focus()
     expect(screen.getByRole('heading', { level: 1 })).toHaveFocus()
   })
+
+  it('has no footer on a screen that saves as it is used', () => {
+    render(
+      <StepScreen title="Appearance">
+        <p>Themes</p>
+      </StepScreen>,
+    )
+
+    expect(screen.queryByRole('contentinfo')).not.toBeInTheDocument()
+    expect(screen.getByRole('main')).toContainElement(screen.getByText('Themes'))
+  })
 })
 
 describe('ProgressBar', () => {

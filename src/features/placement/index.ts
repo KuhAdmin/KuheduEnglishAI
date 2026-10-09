@@ -2,6 +2,7 @@ import type { RouteObject } from 'react-router'
 import { paths } from '@/shared/lib/paths'
 import { usePlacementStore } from './store/usePlacementStore'
 
+export { levelLabel } from './lib/levelText'
 export type { PlacementResult } from './lib/sessionSchema'
 export type { Level, SupportLevel } from './types'
 

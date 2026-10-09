@@ -3,8 +3,8 @@ import { createJSONStorage, persist } from 'zustand/middleware'
 
 type LanguageState = {
   /**
-   * BCP-47 code of the language the learner chose during onboarding: the app is shown in it
-   * and explanations are given in it. `null` until they choose.
+   * BCP-47 code of the language the learner chose (during onboarding, or later on Profile):
+   * the app is shown in it and explanations are given in it. `null` until they choose.
    */
   language: string | null
   setLanguage: (language: string) => void

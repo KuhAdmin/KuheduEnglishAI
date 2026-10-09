@@ -52,7 +52,8 @@ export function ChoiceChips<Value extends string>({
             <label
               key={option.value}
               className={cn(
-                'flex min-h-11 min-w-0 cursor-pointer rounded-lg border-2 px-3 py-2',
+                // `relative` keeps the hidden radio inside its chip, so it scrolls with the chip.
+                'relative flex min-h-11 min-w-0 cursor-pointer rounded-lg border-2 px-3 py-2',
                 'transition-[transform,background-color,border-color] duration-(--duration-fast) ease-standard active:scale-97',
                 'has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-focus',
                 equal ? 'flex-1 flex-col items-center gap-1 text-center' : 'items-center gap-2',

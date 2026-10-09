@@ -95,3 +95,54 @@
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 }
+
+/*
+ * The phone frame (see PhoneFrame). Tablets and anything wider show learner screens inside a
+ * phone drawn in the middle of the display. It needs the height as well as the width: a phone
+ * held sideways is wide, but has no room for a phone drawn on it.
+ */
+@custom-variant framed {
+  @media (min-width: 48rem) and (min-height: 40rem) {
+    @slot;
+  }
+}
+
+/*
+ * The height a full-height learner screen fills: the device's own viewport, or the screen of
+ * the phone frame where there is one. Use these, never `h-dvh` / `min-h-dvh`, in learner screens.
+ */
+@utility h-viewport {
+  height: var(--viewport-height, 100dvh);
+}
+@utility min-h-viewport {
+  min-height: var(--viewport-height, 100dvh);
+}
+
+/* Inside the frame, "the viewport" is the frame's screen: as tall as a phone, or as the display
+   has room for. */
+@utility frame-viewport {
+  --viewport-height: min(
+    var(--frame-max-height),
+    calc(100dvh - 2 * var(--frame-margin) - 2 * var(--frame-bezel))
+  );
+}
+
+/* A phone's scrollbars take no room and show only while scrolling; a desktop's would narrow the
+   frame's screen by their width, and only on the screens that scroll. So the frame has none, for
+   its own scrolling and for anything that scrolls inside it: the wheel, touch and the keyboard
+   scroll it as before. */
+@utility frame-scrollbars {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & * {
+    scrollbar-width: none;
+  }
+
+  & *::-webkit-scrollbar {
+    display: none;
+  }
+}

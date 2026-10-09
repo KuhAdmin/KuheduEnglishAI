@@ -18,7 +18,14 @@ export type Translate = (key: TranslationKey) => string
  * module scope — so texts follow the learner's language and an admin's edits immediately.
  */
 export function useT(): Translate {
-  const language = useLanguage()
+  return useTFor(useLanguage())
+}
+
+/**
+ * `t(key)` for a language other than the screen's own: for a text that is content in that
+ * language, like the sentence a Bengali voice says as its sample.
+ */
+export function useTFor(language: string): Translate {
   const adminTexts = useScreenTexts()
   return useCallback((key) => translate(language, key, adminTexts), [language, adminTexts])
 }

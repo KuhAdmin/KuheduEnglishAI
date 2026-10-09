@@ -45,6 +45,33 @@ describe('ChoiceList', () => {
     expect(handleChange).not.toHaveBeenCalled()
   })
 
+  it('can give an option a control of its own, which does not choose it', async () => {
+    const handleChange = vi.fn()
+    const handlePlay = vi.fn()
+    render(
+      <ChoiceList
+        legend="Pick one"
+        value="a"
+        onChange={handleChange}
+        options={[
+          { value: 'a', label: 'Alpha' },
+          { value: 'b', label: 'Beta', action: <button onClick={handlePlay}>Play Beta</button> },
+        ]}
+      />,
+    )
+
+    const play = screen.getByRole('button', { name: 'Play Beta' })
+    // A button may not sit inside a label.
+    expect(play.closest('label')).toBeNull()
+    await userEvent.click(play)
+    expect(handlePlay).toHaveBeenCalledOnce()
+    expect(handleChange).not.toHaveBeenCalled()
+
+    // The option's name is its own, without the control's.
+    await userEvent.click(screen.getByRole('radio', { name: 'Beta' }))
+    expect(handleChange).toHaveBeenCalledWith('b')
+  })
+
   it('is operable from the keyboard', async () => {
     const handleChange = vi.fn()
     render(<ChoiceList legend="Pick one" options={options} value="a" onChange={handleChange} />)

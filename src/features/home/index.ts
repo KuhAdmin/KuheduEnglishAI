@@ -2,6 +2,8 @@ import type { RouteObject } from 'react-router'
 import { isSectionNumber, isWeekNumber } from '@/shared/lib/curriculum/curriculum'
 import { paths } from '@/shared/lib/paths'
 
+export { useJourneyProgress } from './lib/journeyProgress'
+
 export const homeRoutes: RouteObject[] = [
   {
     path: paths.home,

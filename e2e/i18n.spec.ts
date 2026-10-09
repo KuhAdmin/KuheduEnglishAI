@@ -39,8 +39,29 @@ test('after choosing Hindi, every following screen is in Hindi', async ({ page }
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('पहले, चलिए सुनते हैं')
   await page.goto('/home')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('आपकी 50 हफ़्तों की यात्रा')
-  await page.goto('/profile')
+  await page.goto('/profile/appearance')
   await expect(page.getByRole('radio', { name: 'सेज डस्क' })).toBeVisible()
+})
+
+test('the language can be changed on Profile, at once and for every screen', async ({ page }) => {
+  await seedLanguage(page, 'hi')
+  await page.goto('/profile')
+  // The row says which language is in use, and opens the screen that changes it.
+  await page.getByRole('link', { name: 'भाषा हिन्दी' }).click()
+  await expect(page).toHaveURL(/\/profile\/language$/)
+  await expect(page.getByRole('radio', { name: 'हिन्दी (Hindi)' })).toBeChecked()
+
+  await page.getByText('বাংলা').click()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('ভাষা')
+  await expect(page.getByRole('radio', { name: 'বাংলা (Bengali)' })).toBeChecked()
+  await expect(page.locator(html)).toHaveAttribute('lang', 'bn')
+
+  await page.reload()
+  await expect(page.getByRole('radio', { name: 'বাংলা (Bengali)' })).toBeChecked()
+  await page.getByRole('link', { name: 'প্রোফাইলে ফিরে যান' }).click()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('আমার প্রোফাইল')
+  await page.goto('/home')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('আপনার ৫০ সপ্তাহের যাত্রা')
 })
 
 test('Hindi and Bengali text are drawn with their bundled fonts', async ({ page }) => {

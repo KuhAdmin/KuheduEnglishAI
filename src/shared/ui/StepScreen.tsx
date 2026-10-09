@@ -17,8 +17,8 @@ export type StepScreenProps = {
    * column as tall as the free space, so `flex-1` on a child fills it.
    */
   children: ReactNode
-  /** Primary action, pinned in the thumb zone. */
-  footer: ReactNode
+  /** Primary action, pinned in the thumb zone. Left out on a screen that saves as it is used. */
+  footer?: ReactNode
   /** Lets the caller move focus to the heading when the step changes in place. */
   headingRef?: Ref<HTMLHeadingElement>
 }
@@ -40,10 +40,13 @@ export function StepScreen({
   footer,
   headingRef,
 }: StepScreenProps) {
+  const hasFooter = footer !== undefined
+
   return (
-    <div className="flex h-dvh flex-col pt-safe">
+    <div className="flex h-viewport flex-col pt-safe">
       {topBar && <div className="pt-2 px-gutter">{topBar}</div>}
-      <main className="flex flex-1 flex-col overflow-y-auto scroll-contained px-gutter pb-4">
+      {/* `relative`: anything `absolute` inside (a visually hidden label) scrolls with the content. */}
+      <main className="relative flex flex-1 flex-col overflow-y-auto scroll-contained px-gutter pb-4">
         <header
           className={cn('flex shrink-0 flex-col gap-2 pb-6 text-center', topBar ? 'pt-4' : 'pt-8')}
         >
@@ -74,10 +77,14 @@ export function StepScreen({
         </header>
         {/* Fills what is left under the heading, so a step can centre its content there. */}
         <div className="flex flex-1 flex-col">{children}</div>
+        {/* With no footer under it, the content itself keeps clear of the home indicator. */}
+        {!hasFooter && <div className="shrink-0 pb-safe" />}
       </main>
-      <footer className="px-gutter pb-safe">
-        <div className="pt-3 pb-4">{footer}</div>
-      </footer>
+      {hasFooter && (
+        <footer className="px-gutter pb-safe">
+          <div className="pt-3 pb-4">{footer}</div>
+        </footer>
+      )}
     </div>
   )
 }

@@ -5,7 +5,7 @@ const html = 'html'
 test('a chosen theme applies, persists across reloads and carries to other screens', async ({
   page,
 }) => {
-  await page.goto('/profile')
+  await page.goto('/profile/appearance')
   await expect(page.getByRole('radio', { name: /Auto/ })).toBeChecked()
 
   await page.getByText('Sage Dusk').click()

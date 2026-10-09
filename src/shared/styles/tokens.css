@@ -141,6 +141,63 @@
     }
   }
 
+  /* A drawn face blinking: closed eyelids show for a moment every few seconds (see MaleAvatar). */
+  --animate-blink: blink 4.6s linear infinite;
+
+  @keyframes blink {
+    0%,
+    95% {
+      opacity: 0;
+    }
+    96%,
+    99% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* A drawn face speaking: its head sways about the neck and lifts and dips, very slightly. The
+     two have different lengths, so the pair does not look like a loop (see AvatarHead). */
+  --animate-head-sway: head-sway 4.3s ease-in-out infinite;
+  --animate-head-nod: head-nod 2.9s ease-in-out infinite;
+
+  @keyframes head-sway {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    22% {
+      transform: rotate(-1.8deg);
+    }
+    48% {
+      transform: rotate(0.5deg);
+    }
+    70% {
+      transform: rotate(2deg);
+    }
+    86% {
+      transform: rotate(0.7deg);
+    }
+  }
+
+  @keyframes head-nod {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    28% {
+      transform: translate(0.5px, -1.6px);
+    }
+    55% {
+      transform: translate(-0.4px, 0.9px);
+    }
+    80% {
+      transform: translate(0.2px, -0.7px);
+    }
+  }
+
   @keyframes slide-in-left {
     from {
       opacity: 0;
@@ -190,6 +247,38 @@
 
   --touch-target: 2.75rem; /* 44px minimum */
   --gutter: 1rem;
+
+  /* The phone drawn around learner screens on tablets and wider (see PhoneFrame). */
+  --frame-width: 24.375rem; /* 390px: the screen of a common phone */
+  --frame-max-height: 52.75rem; /* 844px: as tall as that phone, where the display allows */
+  --frame-margin: 1.5rem; /* kept clear above and below the phone */
+  --frame-bezel: 0.625rem;
+  --frame-radius: 2.75rem;
+
+  /* The drawn tutors (see MaleAvatar, FemaleAvatar). A person's own colors, so the same in every
+     theme; what is behind them comes from the theme. */
+  --figure-skin-light: #ffeadb;
+  --figure-skin: #f8d3b8;
+  --figure-skin-shade: #e7b08f;
+  --figure-skin-deep: #b9805f;
+  --figure-blush: #f28c86;
+  --figure-hair-light: #5a3d2e;
+  --figure-hair: #2a1a14;
+  --figure-eye: #24150f;
+  --figure-iris-light: #a86f3d;
+  --figure-iris: #5c3518;
+  --figure-eye-white: #ffffff;
+  --figure-lip: #c2575c;
+  --figure-lip-light: #e0868a;
+  --figure-mouth: #4a1a1a;
+  --figure-tongue: #d9756b;
+  --figure-teeth: #ffffff;
+  --figure-shirt: #3f6fa8;
+  --figure-shirt-light: #6494cb;
+  --figure-shirt-shade: #2f5683;
+  --figure-top: #b8457a;
+  --figure-top-light: #dc77a2;
+  --figure-top-shade: #8d2f5c;
 }
 
 /* ───────────────────────── Named themes ───────────────────────── */

@@ -18,7 +18,7 @@ export function LandingPage() {
   )
 
   return (
-    <main className="relative isolate flex min-h-dvh flex-col">
+    <main className="relative isolate flex min-h-viewport flex-col">
       <LandingHero {...hero} className="-z-10" />
 
       <header className="pt-safe px-gutter">

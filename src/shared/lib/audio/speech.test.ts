@@ -10,6 +10,8 @@ import {
   speakAll,
   SpeechError,
 } from './speech'
+import { useTutorAvatarStore } from '@/shared/lib/learner/tutorAvatar'
+import { useVoiceStore } from './useVoiceStore'
 
 class FakeUtterance {
   voice: unknown = null
@@ -40,6 +42,9 @@ const spoken = () => {
 
 beforeEach(() => {
   voices = [voice('hi-IN'), voice('en-US'), voice('en-IN')]
+  localStorage.clear()
+  useVoiceStore.setState({ voices: {} })
+  useTutorAvatarStore.setState({ avatar: null })
   vi.stubGlobal('SpeechSynthesisUtterance', FakeUtterance)
   vi.stubGlobal('speechSynthesis', synth)
 })
@@ -232,6 +237,56 @@ describe('speakAll', () => {
     synth.speak.mockClear()
     await expect(speakAll([])).resolves.toBe('ended')
     expect(synth.speak).not.toHaveBeenCalled()
+  })
+})
+
+describe('the voice of the learner’s tutor', () => {
+  const named = (lang: string, voiceURI: string) =>
+    ({ lang, localService: true, name: voiceURI, voiceURI }) as SpeechSynthesisVoice
+  const saidBy = (text: string, options = {}) => {
+    void speak(text, options)
+    return spoken().voice
+  }
+
+  beforeEach(() => {
+    voices = [
+      named('en-IN', 'heera'),
+      named('en-IN', 'ravi'),
+      named('en-US', 'zira'),
+      named('hi-IN', 'hindi'),
+    ]
+  })
+
+  it('is a man’s for the male tutor and a woman’s for the female, before any is chosen', () => {
+    // The male tutor is the learner's until they choose.
+    expect(saidBy('Hello.')).toMatchObject({ voiceURI: 'ravi' })
+
+    useTutorAvatarStore.getState().setAvatar('female')
+    expect(saidBy('Hello.')).toMatchObject({ voiceURI: 'heera' })
+  })
+
+  it('is the one chosen for that tutor, each tutor and each language keeping its own', () => {
+    // Any voice can be given to either tutor.
+    useVoiceStore.getState().setVoice('en', 'male', 'heera')
+    useVoiceStore.getState().setVoice('en', 'female', 'zira')
+
+    expect(saidBy('Hello.')).toMatchObject({ voiceURI: 'heera' })
+    expect(saidBy('नमस्ते', { lang: 'hi' })).toMatchObject({ voiceURI: 'hindi' })
+
+    useTutorAvatarStore.getState().setAvatar('female')
+    expect(saidBy('Hello.')).toMatchObject({ voiceURI: 'zira' })
+  })
+
+  it('is passed over once the device no longer has it', () => {
+    useVoiceStore.getState().setVoice('en', 'male', 'a voice that was uninstalled')
+
+    expect(saidBy('Hello.')).toMatchObject({ voiceURI: 'ravi' })
+  })
+
+  it('gives way to a voice that is being tried out', () => {
+    expect(saidBy('Hello.', { voiceURI: 'zira' })).toMatchObject({ voiceURI: 'zira' })
+    // A voice of another language is never used for this one.
+    expect(saidBy('Hello.', { voiceURI: 'hindi' })).toMatchObject({ voiceURI: 'ravi' })
   })
 })
 

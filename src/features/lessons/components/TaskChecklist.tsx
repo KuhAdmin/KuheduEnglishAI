@@ -40,7 +40,8 @@ export function TaskChecklist({ label, tasks, tickable, ticked, onToggle }: Task
             <label
               className={cn(
                 rowClass,
-                'cursor-pointer transition-colors duration-(--duration-fast) ease-standard active:bg-surface-sunken',
+                // `relative` keeps the hidden tick box inside its row, so it scrolls with the row.
+                'relative cursor-pointer transition-colors duration-(--duration-fast) ease-standard active:bg-surface-sunken',
                 'has-focus-visible:outline-2 has-focus-visible:outline-offset-0 has-focus-visible:outline-focus',
               )}
             >

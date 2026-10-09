@@ -16,6 +16,10 @@ const routes = [
   '/lessons',
   '/progress',
   '/profile',
+  '/profile/language',
+  '/profile/appearance',
+  '/profile/voice',
+  '/profile/tutor',
 ]
 
 for (const route of routes) {

@@ -7,7 +7,7 @@ import { landingRoutes } from '@/features/landing'
 import { lessonDayRoutes, lessonsRoutes } from '@/features/lessons'
 import { onboardingRoutes } from '@/features/onboarding'
 import { placementRoutes } from '@/features/placement'
-import { profileRoutes } from '@/features/profile'
+import { profileRoutes, profileSettingsRoutes } from '@/features/profile'
 import { progressRoutes } from '@/features/progress'
 import { PhoneLayout } from './layouts/PhoneLayout'
 import { RootLayout } from './layouts/RootLayout'
@@ -33,6 +33,7 @@ export const router = createBrowserRouter([
           ...placementRoutes,
           ...weekRoutes,
           ...lessonDayRoutes,
+          ...profileSettingsRoutes,
           // Padded screens outside the main tabs
           {
             Component: ScreenLayout,

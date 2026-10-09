@@ -8,8 +8,8 @@ import { ageGroups, DEFAULT_AGE_GROUP, type AgeGroupId } from '@/shared/lib/lear
 import { paths } from '@/shared/lib/paths'
 import { Button } from '@/shared/ui/Button'
 import { ChoiceList } from '@/shared/ui/ChoiceList'
+import { ProfileAvatar } from '@/shared/ui/ProfileAvatar'
 import { StepScreen } from '@/shared/ui/StepScreen'
-import { ProfileAvatar } from '../components/ProfileAvatar'
 import { useOnboardingStore } from '../store/useOnboardingStore'
 
 /** Seconds between neighbouring avatars flipping, so they ripple instead of turning together. */

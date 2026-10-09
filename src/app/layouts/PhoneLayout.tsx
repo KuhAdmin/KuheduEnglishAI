@@ -1,14 +1,16 @@
 import { Outlet } from 'react-router'
+import { PhoneFrame } from './PhoneFrame'
 
 /**
- * Keeps learner screens in a phone-width column on larger screens. It adds no padding, so
+ * Puts every learner screen in the phone frame: the device's own screen on a phone, a phone
+ * drawn in the middle of the display on a tablet or anything wider. It adds no padding, so
  * full-bleed screens (landing, onboarding) can draw under the status bar; ordinary screens go
  * through ScreenLayout.
  */
 export function PhoneLayout() {
   return (
-    <div className="mx-auto min-h-dvh w-full max-w-lg bg-bg">
+    <PhoneFrame>
       <Outlet />
-    </div>
+    </PhoneFrame>
   )
 }

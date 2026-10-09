@@ -5,6 +5,10 @@
  * TODO(content): recorded audio per prompt, so every learner hears the same voice.
  */
 
+import { tutorVoiceKind } from '@/shared/lib/learner/tutorAvatar'
+import { chosenVoiceURI } from './useVoiceStore'
+import { voiceForFace, voicesFor } from './voices'
+
 export class SpeechError extends Error {
   readonly reason: 'unsupported' | 'failed'
 
@@ -20,6 +24,8 @@ export type SpeakOptions = {
   rate?: number
   /** The language of the text when it is not English, as a language tag (`bn`, `hi-IN`). */
   lang?: string
+  /** Say it with this voice, whatever the learner chose: for trying a voice out before choosing it. */
+  voiceURI?: string
 }
 
 /** One of several texts said in a row. */
@@ -56,39 +62,37 @@ export function primeVoices(): void {
   if (isSpeechSupported()) window.speechSynthesis.getVoices()
 }
 
-const languageRank = (lang: string) => {
-  const tag = lang.toLowerCase().replace('_', '-')
-  // Indian English first: it is what learners hear around them.
-  if (tag === 'en-in') return 0
-  if (tag === 'en-gb') return 1
-  if (tag === 'en-us') return 2
-  return 3
-}
-
 /** The best English voice on offer; on-device voices win, as they also work offline. */
 export function pickEnglishVoice(
   voices: readonly SpeechSynthesisVoice[],
 ): SpeechSynthesisVoice | undefined {
-  return voices
-    .filter((voice) => voice.lang.toLowerCase().startsWith('en'))
-    .sort(
-      (a, b) =>
-        Number(b.localService) - Number(a.localService) ||
-        languageRank(a.lang) - languageRank(b.lang),
-    )[0]
+  return voicesFor(voices, 'en')[0]
 }
-
-const baseLanguage = (tag: string) => tag.toLowerCase().split(/[-_]/)[0]
 
 /** The device's voice for a language other than English, if it has one. */
 export function pickVoiceFor(
   voices: readonly SpeechSynthesisVoice[],
   language: string,
 ): SpeechSynthesisVoice | undefined {
-  const wanted = baseLanguage(language)
-  return voices
-    .filter((voice) => baseLanguage(voice.lang) === wanted)
-    .sort((a, b) => Number(b.localService) - Number(a.localService))[0]
+  return voicesFor(voices, language)[0]
+}
+
+/**
+ * The voice a text is said with: the one asked for, else the voice of the learner's tutor for
+ * that language (Profile › Voice settings has one for the male tutor and one for the female,
+ * Profile › Tutor avatar says which tutor is theirs), else the device's best. A voice the
+ * device no longer has is passed over, so a choice made on another day cannot leave the app
+ * silent.
+ */
+function voiceToUse(
+  voices: readonly SpeechSynthesisVoice[],
+  language: string,
+  voiceURI: string | undefined,
+): SpeechSynthesisVoice | undefined {
+  const asked = voiceURI && voicesFor(voices, language).find((voice) => voice.voiceURI === voiceURI)
+  if (asked) return asked
+  const kind = tutorVoiceKind()
+  return voiceForFace(voices, language, kind, chosenVoiceURI(language, kind))?.voice
 }
 
 /**
@@ -111,6 +115,27 @@ export function onVoicesChanged(listener: () => void): () => void {
   return () => synth.removeEventListener('voiceschanged', listener)
 }
 
+/**
+ * What the device's voice is doing, for anything that moves with it (a talking face). `word` is
+ * only told on devices that report where they are in a text: on-device voices mostly do, voices
+ * fetched over the network and many phones do not.
+ */
+export type SpeechActivity =
+  | { type: 'start'; text: string; rate: number }
+  | { type: 'word'; word: string; rate: number }
+  | { type: 'end' }
+
+const activityListeners = new Set<(activity: SpeechActivity) => void>()
+const tell = (activity: SpeechActivity) => {
+  for (const listener of activityListeners) listener(activity)
+}
+
+/** Be told as texts are said aloud, whoever asked for them. Returns how to stop listening. */
+export function onSpeechActivity(listener: (activity: SpeechActivity) => void): () => void {
+  activityListeners.add(listener)
+  return () => activityListeners.delete(listener)
+}
+
 // What is being said now. Chrome can garbage-collect an utterance that is still speaking, which
 // loses its `end` event, so the utterances are kept here; `stop` settles the promise as
 // cancelled, because browsers disagree on which event (if any) a cancelled utterance fires.
@@ -123,7 +148,7 @@ let current: { utterances: SpeechSynthesisUtterance[]; stop: () => void } | null
  */
 export function speakAll(
   parts: readonly SpeechPart[],
-  { rate = 1, lang, onPartStart }: SpeakAllOptions = {},
+  { rate = 1, lang, voiceURI, onPartStart }: SpeakAllOptions = {},
 ): Promise<SpeechOutcome> {
   if (!isSpeechSupported()) return Promise.reject(new SpeechError('unsupported'))
   if (parts.length === 0) return Promise.resolve('ended')
@@ -133,8 +158,7 @@ export function speakAll(
     current?.stop()
     synth.cancel()
 
-    const voices = synth.getVoices()
-    const voice = lang ? pickVoiceFor(voices, lang) : pickEnglishVoice(voices)
+    const voice = voiceToUse(synth.getVoices(), lang ?? 'en', voiceURI)
     const utterances = parts.map(({ text, pitch = 1 }) => {
       const utterance = new SpeechSynthesisUtterance(text)
       if (voice) utterance.voice = voice
@@ -150,6 +174,7 @@ export function speakAll(
       settled = true
       clearTimeout(startTimer)
       if (current?.utterances === utterances) current = null
+      tell({ type: 'end' })
       settle()
     }
     const startTimer = setTimeout(() => {
@@ -162,7 +187,16 @@ export function speakAll(
     utterances.forEach((utterance, index) => {
       utterance.onstart = () => {
         clearTimeout(startTimer)
-        if (!settled) onPartStart?.(index)
+        if (settled) return
+        onPartStart?.(index)
+        tell({ type: 'start', text: utterance.text, rate })
+      }
+      utterance.onboundary = (event) => {
+        // Sentence boundaries say nothing a word does not.
+        if (settled || (event.name && event.name !== 'word')) return
+        const from = utterance.text.slice(event.charIndex)
+        const word = (event.charLength ? from.slice(0, event.charLength) : from).match(/^\S+/)?.[0]
+        if (word) tell({ type: 'word', word, rate })
       }
       utterance.onend = () => {
         if (index === utterances.length - 1) finish(() => resolve('ended'))

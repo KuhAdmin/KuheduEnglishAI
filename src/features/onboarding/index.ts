@@ -1,5 +1,9 @@
 import { redirect, type RouteObject } from 'react-router'
 import { paths } from '@/shared/lib/paths'
+import { useOnboardingStore } from './store/useOnboardingStore'
+
+/** The age group the learner said they are in, or `null` if they have not been asked. */
+export const useAgeGroup = () => useOnboardingStore((state) => state.ageGroup)
 
 // Steps in order: language → profile → placement-test intro.
 export const onboardingRoutes: RouteObject[] = [
