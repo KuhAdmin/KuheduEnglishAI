@@ -1,15 +1,24 @@
+import { apiErrorSchema, type ApiErrorCode } from '@kuhedu/contracts'
 import type { z } from 'zod'
 import { env } from '../env'
 
 export class ApiError extends Error {
   readonly status: number
   readonly body: unknown
+  /** Why the server refused, in its own word; `undefined` when the answer was not the server's. */
+  readonly code: ApiErrorCode | undefined
+  /** For a form: the field at fault and the screen-text key that says why. */
+  readonly fields: Readonly<Record<string, string>>
 
   constructor(status: number, message: string, body?: unknown) {
     super(message)
     this.name = 'ApiError'
     this.status = status
     this.body = body
+    // A proxy or a dead server answers in shapes of its own; only ours is read.
+    const parsed = apiErrorSchema.safeParse(body)
+    this.code = parsed.success ? parsed.data.error.code : undefined
+    this.fields = (parsed.success && parsed.data.error.fields) || {}
   }
 }
 

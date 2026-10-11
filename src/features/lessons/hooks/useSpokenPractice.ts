@@ -1,13 +1,13 @@
 import { useHaptics } from '@/shared/hooks/useHaptics'
-import { useVoiceRecording } from '@/shared/lib/audio/useVoiceRecording'
+import { useVoiceRecording, type VoiceRecordingOptions } from '@/shared/lib/audio/useVoiceRecording'
 
 /**
  * A learner saying something into the microphone on a lesson day, for `PronunciationPractice`:
  * the recording itself and the handlers for its button.
  */
-export function useSpokenPractice(stopPlayback: () => void) {
+export function useSpokenPractice(stopPlayback: () => void, options?: VoiceRecordingOptions) {
   const haptic = useHaptics()
-  const recording = useVoiceRecording()
+  const recording = useVoiceRecording(options)
 
   const startSpeaking = () => {
     // The device's voice must not be recorded as the learner's own.
@@ -19,6 +19,11 @@ export function useSpokenPractice(stopPlayback: () => void) {
     haptic('recordStop')
     recording.stop()
   }
+  /** The microphone shuts with nothing made of what it picked up. */
+  const cancelSpeaking = () => {
+    haptic('recordStop')
+    recording.cancel()
+  }
 
-  return { recording, startSpeaking, stopSpeaking }
+  return { recording, startSpeaking, stopSpeaking, cancelSpeaking }
 }

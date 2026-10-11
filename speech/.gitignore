@@ -1,0 +1,11 @@
+.venv
+# Downloads and the model, kept beside the code when the system drive has no room (see README).
+.cache
+.models
+__pycache__
+.pytest_cache
+*.egg-info
+# Learners' voices: never in the repository.
+recordings
+# Voices said to be listened to (`python -m tts.samples`).
+samples

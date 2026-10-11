@@ -4,12 +4,13 @@ import { useWakeLock } from '@/shared/hooks/useWakeLock'
 import { MicrophoneHelp } from '@/shared/lib/audio/MicrophoneHelp'
 import { cn } from '@/shared/lib/cn'
 import type { WeekRoleplay } from '@/shared/lib/curriculum/weekRoleplays'
-import { fillText, useT } from '@/shared/lib/i18n'
+import { fillText, formatNumber, useLanguage, useT } from '@/shared/lib/i18n'
 import { Button } from '@/shared/ui/Button'
 import { StepScreen } from '@/shared/ui/StepScreen'
 import { useRolePlay, type RolePlayHelp } from '../hooks/useRolePlay'
 import { clock } from '../lib/clock'
 import { revealOnMount } from '../lib/revealOnMount'
+import { PAUSE_ENDS_TURN_MS } from '../lib/turnTiming'
 import { EndChatConfirm } from './EndChatConfirm'
 import { LessonNextButton } from './LessonNextButton'
 import { LessonTopBar } from './LessonTopBar'
@@ -40,8 +41,10 @@ export type RolePlayStepProps = {
  * Day 4, a role-play (and, with other ones, the mini role-play of Day 6's review and the
  * scenarios of Day 7's challenge): the learner talks with a partner whose lines are written (there is no AI
  * yet, so the screen does not claim one). It starts on a tap, so the device may speak and the
- * microphone has been explained. "Next" comes after the last turn; leaving before that asks
- * first and does not finish the day. Speaking is never required: every turn can be skipped.
+ * microphone has been explained. Once the browser allows the microphone it opens by itself on
+ * each of the learner's turns, counting down the time to begin and the end of a long turn.
+ * "Next" comes after the last turn; leaving before that asks first and does not finish the day.
+ * Speaking is never required: every turn can be skipped.
  */
 export function RolePlayStep({
   roleplay,
@@ -55,6 +58,7 @@ export function RolePlayStep({
   onNext,
 }: RolePlayStepProps) {
   const t = useT()
+  const language = useLanguage()
   const talk = useRolePlay(roleplay, help)
   const { recording, stage } = talk
   const [confirmingEnd, setConfirmingEnd] = useState(false)
@@ -62,21 +66,43 @@ export function RolePlayStep({
   // Listening and speaking leave the screen untouched for a while; it must not go dark.
   useWakeLock(stage === 'talking')
 
+  const { countdown } = talk
   const status =
     recording.phase === 'starting'
       ? t('lessonDay.practice.checking')
       : recording.phase === 'recording'
-        ? `${t('lessonDay.practice.recording')} ${clock(recording.elapsedMs)}`
+        ? t(
+            countdown?.kind === 'start'
+              ? 'lessonDay.talk.startSpeaking'
+              : countdown?.kind === 'limit'
+                ? 'lessonDay.talk.timeAlmostUp'
+                : 'lessonDay.practice.recording',
+          )
         : talk.speakingTurn !== null
           ? fillText(t('lessonDay.talk.speaking'), { name: roleplay.partner })
           : t('lessonDay.talk.yourTurn')
 
   const footer = confirmingEnd ? (
-    <EndChatConfirm backTo={backTo} note={endNote} onStay={() => setConfirmingEnd(false)} />
+    <EndChatConfirm
+      backTo={backTo}
+      note={endNote}
+      onStay={() => {
+        talk.resume()
+        setConfirmingEnd(false)
+      }}
+    />
   ) : stage === 'intro' ? (
     <div className="flex flex-col gap-2">
-      {/* Said before the browser asks, so the request for the microphone is no surprise. */}
-      <p className="text-center text-sm text-fg-muted">{t('lessonDay.practice.micNote')}</p>
+      {/* Said before the browser asks, so the request for the microphone is no surprise; nor is
+          a microphone that then opens by itself, or a turn that ends on a pause. */}
+      <div className="flex flex-col gap-1 text-center text-sm text-fg-muted">
+        <p>{t('lessonDay.practice.micNote')}</p>
+        <p>
+          {fillText(t('lessonDay.talk.autoMic'), {
+            seconds: formatNumber(language, PAUSE_ENDS_TURN_MS / 1000),
+          })}
+        </p>
+      </div>
       <Button size="lg" fullWidth onClick={talk.begin}>
         <Play aria-hidden="true" className="size-5" />
         {t('lessonDay.talk.start')}
@@ -85,6 +111,8 @@ export function RolePlayStep({
   ) : stage === 'talking' ? (
     <TalkControls
       status={status}
+      countdown={countdown && { seconds: countdown.seconds, ending: countdown.kind === 'limit' }}
+      elapsed={recording.phase === 'recording' ? clock(recording.elapsedMs) : undefined}
       phase={recording.phase}
       hintLabel={t(talk.moreHelpLeft ? 'lessonDay.talk.hintMore' : 'lessonDay.talk.hint')}
       hintDisabled={talk.noHelpLeft}
@@ -148,7 +176,7 @@ export function RolePlayStep({
               playingTake={recording.playing}
               onReplay={talk.canSpeak ? talk.replayPartner : undefined}
               onSayReply={talk.canSpeak ? talk.sayReply : undefined}
-              onListenToSelf={recording.playTake}
+              onListenToSelf={talk.listenToSelf}
             />
           </div>
         )}

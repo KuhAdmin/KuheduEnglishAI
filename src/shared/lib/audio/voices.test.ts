@@ -1,185 +1,96 @@
-import { beforeEach, describe, expect, it } from 'vitest'
-import { useVoiceStore } from './useVoiceStore'
-import { shortVoiceName, voiceChoices, voiceForFace, voiceGender, voicesFor } from './voices'
+import { describe, expect, it } from 'vitest'
+import { TEST_VOICES, testVoice } from '@/test/fakeSound'
+import { baseLanguage, voiceForFace, voiceForSpeaker, voicesFor } from './voices'
 
-const voice = (name: string, lang: string, localService = true) =>
-  ({ name, lang, localService, voiceURI: name }) as SpeechSynthesisVoice
-
-describe('voiceGender', () => {
-  it('reads it from a voice that says so in its name', () => {
-    expect(voiceGender('Google UK English Female')).toBe('female')
-    expect(voiceGender('Google UK English Male')).toBe('male')
-  })
-
-  it('knows the voices that are named after a person', () => {
-    expect(voiceGender('Microsoft Heera - English (India)')).toBe('female')
-    expect(voiceGender('Microsoft Ravi - English (India)')).toBe('male')
-    expect(voiceGender('Microsoft Neerja Online (Natural) - English (India)')).toBe('female')
-    expect(voiceGender('Samantha')).toBe('female')
-    expect(voiceGender('Rishi (Enhanced)')).toBe('male')
-    expect(voiceGender('Google हिन्दी')).toBe('female')
-    // Edge joins the name to a word.
-    expect(
-      voiceGender('Microsoft AvaMultilingual Online (Natural) - English (United States)'),
-    ).toBe('female')
-    expect(voiceGender('Microsoft AndrewMultilingual Online (Natural)')).toBe('male')
-  })
-
-  it('does not guess for a voice named after its language only', () => {
-    expect(voiceGender('English India')).toBe('other')
-    expect(voiceGender('en-in-x-ene-network')).toBe('other')
-    expect(voiceGender('Bangla Bangladesh')).toBe('other')
-  })
-})
+const ids = (voices: readonly { id: string }[]) => voices.map((voice) => voice.id)
 
 describe('voicesFor', () => {
-  const all = [
-    voice('US', 'en-US'),
-    voice('Network India', 'en-IN', false),
-    voice('Hindi', 'hi-IN'),
-    voice('UK', 'en_GB'),
-    voice('India', 'en-IN'),
-  ]
-
-  it('keeps one language, on-device voices first, then Indian accents', () => {
-    expect(voicesFor(all, 'en').map(({ name }) => name)).toEqual([
-      'India',
-      'UK',
-      'US',
-      'Network India',
+  it('gives a language’s voices whatever their accent, in the server’s order', () => {
+    expect(ids(voicesFor(TEST_VOICES, 'en'))).toEqual([
+      'af_heart',
+      'af_bella',
+      'am_michael',
+      'am_fenrir',
+      'bf_emma',
+      'bm_george',
     ])
-    expect(voicesFor(all, 'hi-IN').map(({ name }) => name)).toEqual(['Hindi'])
-    expect(voicesFor(all, 'bn')).toEqual([])
+    expect(ids(voicesFor(TEST_VOICES, 'hi-IN'))).toEqual(['hf_alpha', 'hm_omega'])
+    expect(ids(voicesFor(TEST_VOICES, 'bn'))).toEqual(['bn_alpha', 'bn_omega'])
   })
 
-  it('lists a voice the device repeats only once', () => {
-    expect(voicesFor([voice('India', 'en-IN'), voice('India', 'en-IN')], 'en')).toHaveLength(1)
-  })
-})
-
-describe('shortVoiceName', () => {
-  it('keeps the part of the device’s name that tells a voice from the others', () => {
-    expect(shortVoiceName('Microsoft David - English (United States)')).toBe('David')
-    expect(shortVoiceName('Microsoft Neerja Online (Natural) - English (India)')).toBe('Neerja')
-    expect(shortVoiceName('Microsoft Zira Desktop - English (United States)')).toBe('Zira Desktop')
-  })
-
-  it('leaves a name that has nothing to cut', () => {
-    expect(shortVoiceName('Google UK English Male')).toBe('Google UK English Male')
-    expect(shortVoiceName('Google हिन्दी')).toBe('Google हिन्दी')
-    expect(shortVoiceName('Samantha')).toBe('Samantha')
-    expect(shortVoiceName('English India')).toBe('English India')
-    expect(shortVoiceName('Microsoft')).toBe('Microsoft')
-  })
-})
-
-describe('voiceChoices', () => {
-  const all = [
-    voice('Microsoft Ravi - English (India)', 'en-IN'),
-    voice('Microsoft Heera - English (India)', 'en-IN'),
-    voice('English United States', 'en-US'),
-    voice('Google UK English Female', 'en-GB', false),
-    voice('English United Kingdom', 'en-GB'),
-  ]
-
-  it('lists a language’s voices, best first, each by its short name and in its group', () => {
-    expect(voiceChoices(all, 'en').map((choice) => [choice.name, choice.gender])).toEqual([
-      ['Ravi', 'male'],
-      ['Heera', 'female'],
-      ['English United Kingdom', 'other'],
-      ['English United States', 'other'],
-      ['Google UK English Female', 'female'],
-    ])
-  })
-
-  it('keeps the full names of two voices that would otherwise read the same', () => {
-    const twins = [
-      voice('Microsoft Zira - English (United States)', 'en-US'),
-      voice('Microsoft Zira - English (India)', 'en-IN'),
-      voice('Microsoft David - English (United States)', 'en-US'),
-    ]
-    expect(voiceChoices(twins, 'en').map(({ name }) => name)).toEqual([
-      'Microsoft Zira - English (India)',
-      'Microsoft Zira - English (United States)',
-      'David',
-    ])
-  })
-
-  it('knows a voice by its `voiceURI`, which is what a choice is saved as', () => {
-    const samantha = { ...voice('Samantha', 'en-US'), voiceURI: 'com.apple.samantha' }
-    expect(voiceChoices([samantha], 'en')[0]?.id).toBe('com.apple.samantha')
+  it('has none for a language the server does not speak', () => {
+    expect(voicesFor(TEST_VOICES, 'ta')).toEqual([])
+    expect(voicesFor([], 'en')).toEqual([])
   })
 })
 
 describe('voiceForFace', () => {
-  const ravi = voice('Microsoft Ravi - English (India)', 'en-IN')
-  const heera = voice('Microsoft Heera - English (India)', 'en-IN')
-  const zira = voice('Microsoft Zira - English (United States)', 'en-US')
-  const plain = voice('English India', 'en-IN')
-
-  it('gives each kind of tutor the device’s first voice of that kind', () => {
-    expect(voiceForFace([ravi, heera, zira], 'en', 'male')?.name).toBe('Ravi')
-    expect(voiceForFace([ravi, heera, zira], 'en', 'female')?.name).toBe('Heera')
-    // A voice known to suit wins over one that does not say what it is.
-    expect(voiceForFace([plain, heera], 'en', 'female')?.name).toBe('Heera')
+  it('gives each kind of tutor that kind’s default voice until one is chosen', () => {
+    expect(voiceForFace(TEST_VOICES, 'en', 'female')?.id).toBe('af_heart')
+    expect(voiceForFace(TEST_VOICES, 'en', 'male')?.id).toBe('am_michael')
+    expect(voiceForFace(TEST_VOICES, 'hi', 'male')?.id).toBe('hm_omega')
+    // A Bengali voice says whose it is in the list, not in its id.
+    expect(voiceForFace(TEST_VOICES, 'bn', 'female')?.id).toBe('bn_alpha')
+    expect(voiceForFace(TEST_VOICES, 'bn', 'male')?.id).toBe('bn_omega')
   })
 
-  it('gives a tutor the voice chosen for it, whatever that voice is', () => {
-    expect(voiceForFace([ravi, heera, zira], 'en', 'female', zira.voiceURI)?.name).toBe('Zira')
-    expect(voiceForFace([ravi, heera], 'en', 'female', ravi.voiceURI)?.name).toBe('Ravi')
-    expect(voiceForFace([plain, heera], 'en', 'male', plain.voiceURI)?.name).toBe('English India')
+  it('gives the voice that was chosen, whatever its kind or accent', () => {
+    expect(voiceForFace(TEST_VOICES, 'en', 'male', 'bm_george')?.id).toBe('bm_george')
+    // Any voice can be given to either tutor.
+    expect(voiceForFace(TEST_VOICES, 'en', 'male', 'bf_emma')?.id).toBe('bf_emma')
   })
 
-  it('passes over a chosen voice the device no longer has', () => {
-    expect(voiceForFace([ravi, heera], 'en', 'female', 'uninstalled')?.name).toBe('Heera')
+  it('passes over a choice the server does not offer, or one of another language', () => {
+    // Saved while the app still spoke with the device's own voices.
+    expect(voiceForFace(TEST_VOICES, 'en', 'female', 'Microsoft Heera - English (India)')?.id).toBe(
+      'af_heart',
+    )
+    expect(voiceForFace(TEST_VOICES, 'en', 'female', 'hf_alpha')?.id).toBe('af_heart')
+    // Bengali is said by Hindi's speakers, but a Hindi voice is still not a Bengali one.
+    expect(voiceForFace(TEST_VOICES, 'bn', 'female', 'hf_alpha')?.id).toBe('bn_alpha')
   })
 
-  it('falls back to the device’s best voice when it has none of the kind', () => {
-    expect(voiceForFace([ravi], 'en', 'female')?.name).toBe('Ravi')
-    expect(voiceForFace([plain], 'en', 'female')?.name).toBe('English India')
-    expect(voiceForFace([], 'en', 'female')).toBeUndefined()
+  it('falls back to the first of the kind, then to any voice, and to none where there is none', () => {
+    const noDefaults = [testVoice('bf_emma', 'en-GB'), testVoice('bm_george', 'en-GB')]
+    expect(voiceForFace(noDefaults, 'en', 'male')?.id).toBe('bm_george')
+    expect(voiceForFace([testVoice('bm_george', 'en-GB')], 'en', 'female')?.id).toBe('bm_george')
+    expect(voiceForFace(TEST_VOICES, 'ta', 'female')).toBeUndefined()
   })
 })
 
-describe('useVoiceStore', () => {
-  const saved = () => JSON.parse(localStorage.getItem('kuhedu-voice') ?? '{}') as unknown
+describe('voiceForSpeaker', () => {
+  const speaker = (index: number, tutor: 'female' | 'male' = 'male', chosen = {}) =>
+    voiceForSpeaker(TEST_VOICES, 'en', tutor, chosen, index)?.id
 
-  beforeEach(() => {
-    localStorage.clear()
-    useVoiceStore.setState({ voices: {} })
+  it('gives the first speaker the learner’s tutor’s voice and the second the other tutor’s', () => {
+    expect([speaker(0), speaker(1)]).toEqual(['am_michael', 'af_heart'])
+    expect([speaker(0, 'female'), speaker(1, 'female')]).toEqual(['af_heart', 'am_michael'])
   })
 
-  it('keeps two voices per language, one for each kind of tutor', () => {
-    useVoiceStore.getState().setVoice('en-IN', 'male', 'ravi')
-    useVoiceStore.getState().setVoice('en', 'female', 'heera')
-    useVoiceStore.getState().setVoice('bn', 'female', 'bangla')
-    // Choosing again replaces that tutor's voice only.
-    useVoiceStore.getState().setVoice('en', 'male', 'david')
-
-    const voices = { en: { male: 'david', female: 'heera' }, bn: { female: 'bangla' } }
-    expect(useVoiceStore.getState().voices).toEqual(voices)
-    expect(saved()).toMatchObject({ state: { voices } })
+  it('uses the voices the learner chose for the two tutors', () => {
+    const chosen = { male: 'bm_george', female: 'bf_emma' }
+    expect([speaker(0, 'male', chosen), speaker(1, 'male', chosen)]).toEqual([
+      'bm_george',
+      'bf_emma',
+    ])
   })
 
-  it('keeps only what is a voice for a kind of tutor when reading what was saved', async () => {
-    localStorage.setItem(
-      'kuhedu-voice',
-      JSON.stringify({
-        state: {
-          voices: {
-            // From a build that had one voice per language: which tutor it was for is not known.
-            en: 'ravi',
-            hi: { female: 'hindi', male: 5, robot: 'x' },
-            bn: {},
-          },
-        },
-      }),
-    )
-    await useVoiceStore.persist.rehydrate()
-    expect(useVoiceStore.getState().voices).toEqual({ hi: { female: 'hindi' } })
+  it('gives a third and a fourth speaker other voices of the same kinds', () => {
+    expect([speaker(2), speaker(3)]).toEqual(['am_fenrir', 'af_bella'])
+    // No two alike while there are voices left; then they come round again.
+    expect(new Set([0, 1, 2, 3].map((index) => speaker(index))).size).toBe(4)
+    expect(speaker(8)).toBeDefined()
+  })
 
-    localStorage.setItem('kuhedu-voice', JSON.stringify({ state: { voices: 'nonsense' } }))
-    await useVoiceStore.persist.rehydrate()
-    expect(useVoiceStore.getState().voices).toEqual({})
+  it('has no voice for a language the server does not speak', () => {
+    expect(voiceForSpeaker(TEST_VOICES, 'ta', 'male', {}, 0)).toBeUndefined()
+  })
+})
+
+describe('baseLanguage', () => {
+  it('is the language without its region, however the tag is written', () => {
+    expect(baseLanguage('en-GB')).toBe('en')
+    expect(baseLanguage('hi_IN')).toBe('hi')
+    expect(baseLanguage('BN')).toBe('bn')
   })
 })

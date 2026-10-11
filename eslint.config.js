@@ -6,7 +6,7 @@ import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
-  { ignores: ['dist', 'dev-dist', 'coverage', 'playwright-report', 'test-results'] },
+  { ignores: ['dist', 'dev-dist', 'coverage', 'playwright-report', 'test-results', 'speech'] },
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -33,6 +33,11 @@ export default tseslint.config(
         },
       ],
     },
+  },
+  {
+    // The server and the contracts it shares with the app run in Node, not in a browser.
+    files: ['server/**/*.ts', 'packages/**/*.ts'],
+    languageOptions: { globals: globals.node },
   },
   {
     // shared/ must never depend on features/.

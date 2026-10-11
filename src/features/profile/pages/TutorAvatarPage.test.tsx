@@ -1,41 +1,16 @@
 import { act, fireEvent, render, screen } from '@testing-library/react'
 import { createMemoryRouter, RouterProvider } from 'react-router'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { cancelSpeech } from '@/shared/lib/audio/speech'
 import { useVoiceStore } from '@/shared/lib/audio/useVoiceStore'
 import { AppLanguageProvider, useLanguageStore } from '@/shared/lib/i18n'
 import { useTutorAvatarStore } from '@/shared/lib/learner/tutorAvatar'
 import { paths } from '@/shared/lib/paths'
+import { installFakeSound, removeFakeSound, testVoice, type FakeSound } from '@/test/fakeSound'
 import { TutorAvatarPage } from './TutorAvatarPage'
 
-class FakeUtterance {
-  voice: { voiceURI: string } | null = null
-  lang = ''
-  rate = 1
-  pitch = 1
-  onstart: (() => void) | null = null
-  onend: (() => void) | null = null
-  onerror: ((event: { error: string }) => void) | null = null
+const SAMPLE = 'Hello! Let’s practise speaking English together.'
 
-  constructor(readonly text: string) {}
-}
-
-const RAVI = 'Microsoft Ravi - English (India)'
-const HEERA = 'Microsoft Heera - English (India)'
-const ZIRA = 'Microsoft Zira - English (India)'
-const voice = (name: string) => ({ name, lang: 'en-IN', localService: true, voiceURI: name })
-
-let deviceVoices: ReturnType<typeof voice>[] = []
-const synth = {
-  speak: vi.fn<(utterance: FakeUtterance) => void>(),
-  cancel: vi.fn(),
-  getVoices: vi.fn(() => deviceVoices),
-}
-const spoken = () => {
-  const utterance = synth.speak.mock.lastCall?.[0]
-  if (!utterance) throw new Error('nothing was spoken')
-  return utterance
-}
+let sound: FakeSound
 
 function renderTutorAvatar() {
   const router = createMemoryRouter(
@@ -60,21 +35,20 @@ const tutor = (name: string) => {
   return frame
 }
 const play = () => screen.getByRole('button', { name: 'Play a sample' })
-/** Does something that ends the sample, and lets the screen hear of it. */
-const settle = (end: () => void) =>
+/** Does something, then lets the sound that follows from it be fetched, start or end. */
+const settle = (something: () => void = () => {}) =>
   act(async () => {
-    end()
+    something()
     await vi.advanceTimersByTimeAsync(0)
   })
+const lastPlayed = () => sound.played.at(-1)
 
 beforeEach(() => {
-  deviceVoices = []
   localStorage.clear()
   useLanguageStore.setState({ language: null })
   useVoiceStore.setState({ voices: {} })
   useTutorAvatarStore.setState({ avatar: null })
-  vi.stubGlobal('SpeechSynthesisUtterance', FakeUtterance)
-  vi.stubGlobal('speechSynthesis', synth)
+  sound = installFakeSound()
   vi.stubGlobal('matchMedia', () => ({
     matches: false,
     addEventListener: vi.fn(),
@@ -84,10 +58,8 @@ beforeEach(() => {
 })
 
 afterEach(() => {
-  cancelSpeech()
   vi.useRealTimers()
-  vi.unstubAllGlobals()
-  vi.clearAllMocks()
+  removeFakeSound()
 })
 
 describe('TutorAvatarPage', () => {
@@ -117,13 +89,12 @@ describe('TutorAvatarPage', () => {
   it('plays a sample: the lips move while it is said, then the tutor gives a thumbs up', async () => {
     renderTutorAvatar()
 
-    fireEvent.click(play())
-    expect(spoken().text).toBe('Hello! Let’s practise speaking English together.')
-    expect(screen.getByText(spoken().text)).toHaveAttribute('lang', 'en')
+    await settle(() => fireEvent.click(play()))
+    expect(lastPlayed()?.text).toBe(SAMPLE)
+    expect(screen.getByText(SAMPLE)).toHaveAttribute('lang', 'en')
     expect(screen.getByRole('button', { name: 'Stop' })).toBeVisible()
     expect(tutor('Male tutor')).toHaveAttribute('data-mood', 'neutral')
 
-    act(() => spoken().onstart?.())
     const shapes = new Set<string | null>()
     for (let frame = 0; frame < 6; frame += 1) {
       shapes.add(tutor('Male tutor').getAttribute('data-mouth'))
@@ -132,7 +103,7 @@ describe('TutorAvatarPage', () => {
     expect(shapes.size).toBeGreaterThan(2)
 
     // Said to the end: a thumbs up for a moment, then back to the smile.
-    await settle(() => spoken().onend?.())
+    await settle(() => sound.endSound())
     expect(tutor('Male tutor')).toHaveAttribute('data-mouth', 'rest')
     expect(tutor('Male tutor')).toHaveAttribute('data-mood', 'encourage')
     expect(play()).toBeVisible()
@@ -144,64 +115,67 @@ describe('TutorAvatarPage', () => {
   it('stops a sample that is playing, without the thumbs up', async () => {
     renderTutorAvatar()
 
-    fireEvent.click(play())
-    act(() => spoken().onstart?.())
+    await settle(() => fireEvent.click(play()))
     await settle(() => fireEvent.click(screen.getByRole('button', { name: 'Stop' })))
 
-    expect(synth.cancel).toHaveBeenCalled()
+    expect(sound.paused()).toBe(true)
     expect(tutor('Male tutor')).toHaveAttribute('data-mood', 'smile')
     expect(tutor('Male tutor')).toHaveAttribute('data-mouth', 'rest')
     expect(play()).toBeVisible()
   })
 
-  it('says so on a device that cannot read aloud, and still shows the thumbs up', async () => {
+  it('says so when the sample cannot be played, and still shows the thumbs up', async () => {
+    sound.serverUp(false)
     renderTutorAvatar()
 
-    fireEvent.click(play())
-    await settle(() => spoken().onerror?.({ error: 'synthesis-failed' }))
+    await settle(() => fireEvent.click(play()))
 
     expect(
-      screen.getByText('This device cannot read aloud, so the tutor’s lips will not move.'),
+      screen.getByText('The sample cannot be played right now, so the tutor’s lips will not move.'),
     ).toBeVisible()
     expect(tutor('Male tutor')).toHaveAttribute('data-mood', 'encourage')
   })
 
-  it('gives each tutor a voice of their own: the device’s first of that kind', () => {
-    deviceVoices = [voice(RAVI), voice(HEERA)]
+  it('gives each tutor a voice of their own: the default of that kind', async () => {
     renderTutorAvatar()
 
-    expect(screen.getByText('Voice: Ravi')).toBeVisible()
-    fireEvent.click(play())
-    expect(spoken().voice?.voiceURI).toBe(RAVI)
-    fireEvent.click(screen.getByRole('button', { name: 'Stop' }))
+    expect(screen.getByText('Voice: Michael')).toBeVisible()
+    await settle(() => fireEvent.click(play()))
+    expect(lastPlayed()?.voice).toBe('am_michael')
+    await settle(() => fireEvent.click(screen.getByRole('button', { name: 'Stop' })))
 
     fireEvent.click(screen.getByRole('radio', { name: 'Female tutor' }))
-    expect(screen.getByText('Voice: Heera')).toBeVisible()
-    fireEvent.click(play())
-    expect(spoken().voice?.voiceURI).toBe(HEERA)
+    expect(screen.getByText('Voice: Heart')).toBeVisible()
+    await settle(() => fireEvent.click(play()))
+    expect(lastPlayed()?.voice).toBe('af_heart')
     // Nothing is chosen by trying a tutor out.
     expect(useVoiceStore.getState().voices).toEqual({})
   })
 
-  it('speaks with the voice chosen for the tutor in Voice settings', () => {
-    deviceVoices = [voice(RAVI), voice(HEERA), voice(ZIRA)]
-    useVoiceStore.setState({ voices: { en: { female: ZIRA } } })
+  it('speaks with the voice chosen for the tutor in Voice settings', async () => {
+    useVoiceStore.setState({ voices: { en: { female: 'bf_emma' } } })
     useTutorAvatarStore.setState({ avatar: 'female' })
     renderTutorAvatar()
 
-    expect(screen.getByText('Voice: Zira')).toBeVisible()
-    fireEvent.click(play())
-    expect(spoken().voice?.voiceURI).toBe(ZIRA)
+    expect(screen.getByText('Voice: Emma')).toBeVisible()
+    await settle(() => fireEvent.click(play()))
+    expect(lastPlayed()?.voice).toBe('bf_emma')
   })
 
-  it('uses the device’s best voice for a tutor it has no voice to suit', () => {
-    deviceVoices = [voice(RAVI)]
+  it('uses whatever voice there is for a tutor the server has no voice to suit', async () => {
+    removeFakeSound()
+    sound = installFakeSound([testVoice('bm_george', 'en-GB')])
+    vi.stubGlobal('matchMedia', () => ({
+      matches: false,
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+    }))
     useTutorAvatarStore.setState({ avatar: 'female' })
     renderTutorAvatar()
 
-    expect(screen.getByText('Voice: Ravi')).toBeVisible()
-    fireEvent.click(play())
-    expect(spoken().voice?.voiceURI).toBe(RAVI)
+    expect(screen.getByText('Voice: George')).toBeVisible()
+    await settle(() => fireEvent.click(play()))
+    expect(lastPlayed()?.voice).toBe('bm_george')
   })
 
   it('points to where the tutor’s voice is chosen', () => {

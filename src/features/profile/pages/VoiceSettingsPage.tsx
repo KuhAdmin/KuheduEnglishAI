@@ -12,13 +12,13 @@ const noticeClass = 'rounded-lg bg-surface-sunken p-4 text-center text-fg-muted'
 /**
  * The learner chooses the voices the app speaks each language with, one for the male tutor and
  * one for the female: a language, a tutor, a kind of voice, then a voice to hear and to set.
- * Any voice can be given to either tutor. The voices are the device's own, so the list differs
- * from phone to phone, and a language may have none.
+ * Any voice can be given to either tutor. The voices are the server's, the same on every phone;
+ * a language it cannot speak yet has none, and without a connection there are none to load.
  */
 export function VoiceSettingsPage() {
   const t = useT()
   const choice = useVoiceChoice()
-  const canChoose = choice.supported && choice.hasVoices
+  const canChoose = choice.available && choice.hasVoices
 
   const status = choice.playFailed
     ? t('voice.failed')
@@ -64,11 +64,13 @@ export function VoiceSettingsPage() {
           onChange={(event) => choice.changeLanguage(event.target.value)}
         />
 
-        {!choice.supported && <p className={noticeClass}>{t('voice.unsupported')}</p>}
+        {!choice.available && !choice.waiting && (
+          <p className={noticeClass}>{t('voice.unsupported')}</p>
+        )}
 
-        {choice.supported && !choice.hasVoices && (
+        {choice.available && !choice.hasVoices && (
           <p className={noticeClass}>
-            {fillText(t('voice.none'), { language: choice.languageName })} {t('voice.noneHint')}
+            {fillText(t('voice.none'), { language: choice.languageName })}
           </p>
         )}
 
@@ -91,27 +93,24 @@ export function VoiceSettingsPage() {
               <SegmentedControl
                 fullWidth
                 legend={t('voice.group')}
-                options={choice.groups.map((gender) => ({
-                  value: gender,
-                  label: t(`voice.${gender}`),
+                options={choice.groups.map((kind) => ({
+                  value: kind,
+                  label: t(`voice.${kind}`),
                 }))}
                 value={choice.group}
                 onChange={choice.changeGroup}
               />
             )}
 
-            <div className="flex flex-col gap-3">
-              {choice.group === 'other' && <p className="text-fg-muted">{t('voice.otherNote')}</p>}
-              <VoiceList
-                legend={t('voice.listLabel')}
-                voices={choice.voices}
-                selectedId={choice.selected?.id ?? null}
-                defaultId={choice.defaultId}
-                onSelect={choice.select}
-                playingId={choice.playingId}
-                onPlay={choice.play}
-              />
-            </div>
+            <VoiceList
+              legend={t('voice.listLabel')}
+              voices={choice.voices}
+              selectedId={choice.selected?.id ?? null}
+              defaultId={choice.defaultId}
+              onSelect={choice.select}
+              playingId={choice.playingId}
+              onPlay={choice.play}
+            />
 
             <section aria-labelledby="voice-sample-heading" className="flex flex-col gap-2">
               <h2 id="voice-sample-heading" className="text-sm font-bold">

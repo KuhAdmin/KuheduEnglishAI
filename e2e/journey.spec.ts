@@ -1,5 +1,13 @@
 import { expect, test, type Page } from '@playwright/test'
-import { expectNoHorizontalScroll, scrollToEnd, seedLanguage } from './helpers'
+import {
+  expectNoHorizontalScroll,
+  scrollToEnd,
+  seedLanguage,
+  serverVoicesWithout,
+  spoken,
+  stubSpeech,
+  untouchedUntilTapped,
+} from './helpers'
 
 const nav = (page: Page) => page.getByRole('navigation', { name: 'Main navigation' })
 const heading = (page: Page) => page.getByRole('heading', { level: 1 })
@@ -64,7 +72,8 @@ test('a section opens its five weeks, and Back returns to the journey', async ({
   // Section 1 holds the week the learner is on.
   await sections(page).first().click()
   await expect(page.getByRole('article').first()).toContainText('This week')
-  await expect(page.getByText('This week')).toHaveCount(1)
+  // Among the weeks; the tutor at the top speaks of this week too.
+  await expect(page.getByRole('list', { name: 'Weeks' }).getByText('This week')).toHaveCount(1)
 })
 
 test('a week opens its overview, with Start Day 1 in the thumb zone', async ({ page }) => {
@@ -97,14 +106,14 @@ test('a week opens its overview, with Start Day 1 in the thumb zone', async ({ p
   expect(Math.round(startBox.height)).toBeGreaterThanOrEqual(48)
   expect(startBox.y).toBeGreaterThan((viewport.height * 2) / 3)
 
-  for (const name of ['Back to the weeks', 'Next week']) {
-    const box = await page.getByRole('link', { name }).boundingBox()
-    expect(Math.round(box?.height ?? 0)).toBeGreaterThanOrEqual(44)
-    expect(Math.round(box?.width ?? 0)).toBeGreaterThanOrEqual(44)
-  }
+  const backBox = await page.getByRole('link', { name: 'Back to the weeks' }).boundingBox()
+  expect(Math.round(backBox?.height ?? 0)).toBeGreaterThanOrEqual(44)
+  expect(Math.round(backBox?.width ?? 0)).toBeGreaterThanOrEqual(44)
+  // The bar for the week's place in the course stands alone: no arrow beside it.
+  await expect(page.getByRole('progressbar', { name: 'Your place in the course' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Next week' })).toHaveCount(0)
 
-  await page.getByRole('link', { name: 'Next week' }).click()
-  await expect(page).toHaveURL(/\/home\/weeks\/21$/)
+  await page.goto('/home/weeks/21')
   await expect(page.getByText('Week 21 of 50')).toBeVisible()
   await expect(page.getByText('Ask open questions')).toBeVisible()
 
@@ -130,10 +139,13 @@ test('Start Day 1 opens a day that says its lessons are coming, and leads back',
   await expect(heading(page)).toHaveText('Real-life situation')
 })
 
-test('the last week has no next week', async ({ page }) => {
+test('the last week shows the course as complete on its bar', async ({ page }) => {
   await page.goto('/home/weeks/50')
   await expect(page.getByText('Week 50 of 50')).toBeVisible()
-  await expect(page.getByRole('button', { name: 'Next week' })).toBeDisabled()
+  await expect(page.getByRole('progressbar', { name: 'Your place in the course' })).toHaveAttribute(
+    'aria-valuenow',
+    '100',
+  )
 })
 
 test('a section, week or day that does not exist is a page that does not exist', async ({
@@ -217,4 +229,123 @@ test('the journey is in the learner’s language, digits included', async ({ pag
   ).toHaveCount(5)
   await expect(page.getByRole('link', { name: 'দিন ১ শুরু করুন' })).toBeInViewport({ ratio: 1 })
   await expectNoHorizontalScroll(page)
+})
+
+const tutor = (page: Page) => page.getByRole('region', { name: 'Your tutor' })
+const said = async (page: Page) => (await spoken(page)).map((line) => line.text)
+
+test('the tutor keeps its place at the top and says what matters on each journey screen', async ({
+  page,
+}) => {
+  await stubSpeech(page)
+  await untouchedUntilTapped(page)
+  await page.goto('/home')
+
+  // Written from the start; nothing may sound before the learner has touched the page.
+  await expect(tutor(page)).toContainText(
+    'You are in Section 1, Start Communicating. Tap it to see your weeks.',
+  )
+  await expect(tutor(page)).toBeInViewport({ ratio: 1 })
+  expect(await said(page)).toEqual([])
+  for (const name of ['Hear the tutor again', 'Mute the tutor']) {
+    const box = await tutor(page).getByRole('button', { name }).boundingBox()
+    expect(Math.round(box?.height ?? 0)).toBeGreaterThanOrEqual(44)
+    expect(Math.round(box?.width ?? 0)).toBeGreaterThanOrEqual(44)
+  }
+  await expectNoHorizontalScroll(page)
+
+  // The list scrolls under the tutor: the heading leaves, the tutor stays.
+  await scrollToEnd(sections(page).last())
+  await expect(heading(page)).not.toBeInViewport()
+  await expect(tutor(page)).toBeInViewport({ ratio: 1 })
+
+  // Asked for, it says its line; a screen opened by a tap is told by itself.
+  await tutor(page).getByRole('button', { name: 'Hear the tutor again' }).click()
+  await expect.poll(() => said(page)).toHaveLength(1)
+  await sections(page).first().click()
+  await expect(tutor(page)).toContainText(
+    'This week is Week 1: Meeting someone for the first time. Tap it to begin.',
+  )
+  await expect
+    .poll(() => said(page))
+    .toEqual([
+      'You are in Section 1, Start Communicating. Tap it to see your weeks.',
+      'This week is Week 1: Meeting someone for the first time. Tap it to begin.',
+    ])
+
+  // On a week's overview it stays above the part that scrolls, and names the pinned button.
+  await page.getByRole('article').first().getByRole('link').click()
+  await expect(tutor(page)).toContainText('Day 1 is next. Tap “Start Day 1” when you are ready.')
+  await expect(tutor(page)).toBeInViewport({ ratio: 1 })
+  await expect(page.getByRole('link', { name: 'Start Day 1' })).toBeInViewport({ ratio: 1 })
+  await expect.poll(() => said(page)).toHaveLength(3)
+  await expectNoHorizontalScroll(page)
+})
+
+test('a muted tutor stays written and silent, on later screens and after the app is reopened', async ({
+  page,
+}) => {
+  await stubSpeech(page)
+  await page.goto('/home')
+  await tutor(page).getByRole('button', { name: 'Mute the tutor' }).click()
+  await expect(tutor(page).getByRole('button', { name: 'Let the tutor speak' })).toBeVisible()
+
+  await sections(page).first().click()
+  await expect(tutor(page)).toContainText('This week is Week 1')
+  await page.reload()
+  await expect(tutor(page).getByRole('button', { name: 'Let the tutor speak' })).toBeVisible()
+  expect(await said(page)).toEqual([])
+})
+
+test('a Bengali learner’s tutor says its Bengali line in a Bengali voice', async ({ page }) => {
+  await stubSpeech(page)
+  await untouchedUntilTapped(page)
+  await seedLanguage(page, 'bn')
+  await page.goto('/home')
+
+  const bengaliTutor = page.getByRole('region', { name: 'আপনার টিউটর' })
+  await page.getByRole('list', { name: 'বিভাগ' }).getByRole('link').first().click()
+  await expect(page).toHaveURL(/\/home\/sections\/1$/)
+  // In the male tutor's Bengali voice, and what is heard is what is read: the line as written.
+  await expect.poll(() => spoken(page)).toHaveLength(1)
+  const [heard] = await spoken(page)
+  expect(heard?.voice).toBe('bn_omega')
+  expect(heard?.text).toBe((await bengaliTutor.locator('p').innerText()).trim())
+})
+
+test('a learner whose language the server cannot speak reads the tutor, and hears nothing', async ({
+  page,
+}) => {
+  // The server as it was before it could speak Bengali.
+  await stubSpeech(page, 'works', serverVoicesWithout('bn'))
+  await seedLanguage(page, 'bn')
+  await page.goto('/home')
+
+  const bengaliTutor = page.getByRole('region', { name: 'আপনার টিউটর' })
+  await expect(bengaliTutor).toContainText('আপনি এখন বিভাগ ১-এ আছেন: কথা বলা শুরু করি।')
+  // Nothing to hear, so nothing to press: what is heard is always what is read, so the line is
+  // neither read by the English voice nor said in English.
+  await expect(bengaliTutor.getByRole('button')).toHaveCount(0)
+  await page.getByRole('list', { name: 'বিভাগ' }).getByRole('link').first().click()
+  await expect(bengaliTutor).toContainText('এই সপ্তাহটি হলো সপ্তাহ ১')
+  expect(await said(page)).toEqual([])
+  // The section's way back is in the tutor's band, and stays there.
+  await expect(bengaliTutor.getByRole('link', { name: 'আপনার যাত্রায় ফিরে যান' })).toBeInViewport()
+  await expectNoHorizontalScroll(page)
+})
+
+test('a Hindi learner’s tutor says its Hindi line in a Hindi voice', async ({ page }) => {
+  await stubSpeech(page)
+  await untouchedUntilTapped(page)
+  await seedLanguage(page, 'hi')
+  await page.goto('/home')
+
+  const hindiTutor = page.getByRole('region', { name: 'आपका ट्यूटर' })
+  await page.getByRole('list', { name: 'खंड' }).getByRole('link').first().click()
+  await expect(page).toHaveURL(/\/home\/sections\/1$/)
+  // In the male tutor's Hindi voice, and what is heard is what is read: the line as written.
+  await expect.poll(() => spoken(page)).toHaveLength(1)
+  const [heard] = await spoken(page)
+  expect(heard?.voice).toBe('hm_omega')
+  expect(heard?.text).toBe((await hindiTutor.locator('p').innerText()).trim())
 })

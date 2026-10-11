@@ -85,6 +85,22 @@
   padding-right: max(var(--gutter), env(safe-area-inset-right));
 }
 
+/*
+ * A bar that stays at the top of a screen which scrolls as a whole (the main tabs). It reaches
+ * both screen edges out of a `px-gutter` box, and covers the notch both at rest, where the
+ * layout's `pt-safe` sits above it, and once the content scrolls under it. Give it a background.
+ */
+@utility sticky-screen-top {
+  position: sticky;
+  top: 0;
+  margin-top: calc(-1 * env(safe-area-inset-top));
+  margin-left: calc(-1 * max(var(--gutter), env(safe-area-inset-left)));
+  margin-right: calc(-1 * max(var(--gutter), env(safe-area-inset-right)));
+  padding-top: env(safe-area-inset-top);
+  padding-left: max(var(--gutter), env(safe-area-inset-left));
+  padding-right: max(var(--gutter), env(safe-area-inset-right));
+}
+
 /* Minimum touch target. */
 @utility touch-target {
   min-width: var(--touch-target);

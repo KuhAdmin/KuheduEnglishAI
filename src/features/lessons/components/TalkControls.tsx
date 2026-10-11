@@ -4,10 +4,15 @@ import { useT } from '@/shared/lib/i18n'
 import { Button } from '@/shared/ui/Button'
 import { MicButton } from '@/shared/ui/MicButton'
 import { LabelledAction } from './LabelledAction'
+import { TurnCountdown, type TurnCountdownProps } from './TurnCountdown'
 
 export type TalkControlsProps = {
   /** What is happening now: who speaks, or that it is the learner's turn. */
   status: string
+  /** Seconds running out while the microphone is open: to begin speaking, or to the turn's end. */
+  countdown?: TurnCountdownProps | null
+  /** How long the recording has run, e.g. "0:07"; shown when nothing is being counted down. */
+  elapsed?: string
   phase: RecordingPhase
   /** "Hint", or what a second tap gives. */
   hintLabel: string
@@ -25,6 +30,8 @@ export type TalkControlsProps = {
 /** The learner's side of a conversation: the microphone, with help and the ways out around it. */
 export function TalkControls({
   status,
+  countdown,
+  elapsed,
   phase,
   hintLabel,
   hintDisabled,
@@ -38,8 +45,19 @@ export function TalkControls({
 
   return (
     <div className="flex flex-col items-center gap-1">
-      <p role="status" className="text-center text-sm font-bold text-fg-muted">
-        {status}
+      {/* As tall as the countdown at all times, so the controls under it never move. */}
+      <p className="flex min-h-8 items-center justify-center gap-2 text-center text-sm font-bold text-fg-muted">
+        <span role="status">{status}</span>
+        {/* Time that ticks is kept out of the announced line, which would be read every second. */}
+        {countdown ? (
+          <TurnCountdown {...countdown} />
+        ) : (
+          elapsed && (
+            <span aria-hidden="true" className="tabular-nums">
+              {elapsed}
+            </span>
+          )
+        )}
       </p>
       <div className="flex w-full items-center justify-between">
         {onHint ? (

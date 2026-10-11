@@ -4,12 +4,17 @@ import { useT } from '@/shared/lib/i18n'
 import { IconButton } from '@/shared/ui/IconButton'
 import { MicButton } from '@/shared/ui/MicButton'
 import { clock } from '../lib/clock'
+import { SyllableLine } from './SyllableLine'
 
 export type PronunciationPracticeProps = {
   /** What the panel is for, when it is not a single word's pronunciation. */
   title?: string
   /** The word to say, in English. Left out when the screen already shows what to say. */
   word?: string
+  /** The word in the parts it is said in, when they are written; shown in place of the word. */
+  syllables?: readonly string[]
+  /** Which of those parts is the strong one, counted from 1. */
+  stress?: number | null
   phase: RecordingPhase
   elapsedMs: number
   /** The longest a recording may run, when the screen sets a limit; shown beside the time. */
@@ -30,6 +35,8 @@ export type PronunciationPracticeProps = {
 export function PronunciationPractice({
   title,
   word,
+  syllables = [],
+  stress = null,
   phase,
   elapsedMs,
   limitMs,
@@ -41,6 +48,7 @@ export function PronunciationPractice({
 }: PronunciationPracticeProps) {
   const t = useT()
   const active = phase === 'starting' || phase === 'recording'
+  const inParts = syllables.length > 0
   const [before = '', after = ''] = t('lessonDay.practice.say').split('{word}')
 
   const status =
@@ -63,17 +71,19 @@ export function PronunciationPractice({
         startLabel={t('lessonDay.practice.start')}
         stopLabel={t('lessonDay.practice.stop')}
       />
-      <div className="flex min-w-0 flex-1 flex-col">
+      <div className="relative flex min-w-0 flex-1 flex-col">
         <h2 className={word ? 'text-sm font-extrabold' : 'text-lg font-extrabold'}>
           {title ?? t('lessonDay.practice.title')}
         </h2>
         {word && (
-          <p className="text-lg font-extrabold wrap-break-word">
+          // In parts, the parts are the word to the eye; a screen reader still gets it whole.
+          <p className={inParts ? 'sr-only' : 'text-lg font-extrabold wrap-break-word'}>
             {before}
             <span lang="en">{word}</span>
             {after}
           </p>
         )}
+        {word && inParts && <SyllableLine syllables={syllables} stress={stress} />}
         <p role="status" className="text-sm">
           {status}
         </p>

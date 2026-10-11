@@ -35,13 +35,13 @@ export function MaleAvatar({ mouth = 'rest', mood = 'neutral', ...rest }: Avatar
       <circle cx={100} cy={94} r={94} fill={paint.glow} />
 
       {/* Shoulders, in a denim shirt with an open collar. */}
-      <path d="M20 200 C20 162 56 144 100 144 C144 144 180 162 180 200 Z" fill={paint.cloth} />
-      <rect x={84} y={116} width={32} height={40} rx={13} fill={paint.neck} />
-      <path className="fill-(--figure-shirt-light)" d="M100 170 L79 141 L63 165 L85 181 Z" />
-      <path className="fill-(--figure-shirt-light)" d="M100 170 L121 141 L137 165 L115 181 Z" />
+      <path d="M20 200 C20 159 56 140 100 140 C144 140 180 159 180 200 Z" fill={paint.cloth} />
+      <rect x={84} y={116} width={32} height={36} rx={13} fill={paint.neck} />
+      <path className="fill-(--figure-shirt-light)" d="M100 166 L79 137 L63 161 L85 177 Z" />
+      <path className="fill-(--figure-shirt-light)" d="M100 166 L121 137 L137 161 L115 177 Z" />
       <path
         className="stroke-(--figure-shirt-shade)"
-        d="M100 170 V200"
+        d="M100 166 V200"
         fill="none"
         strokeWidth={2}
       />

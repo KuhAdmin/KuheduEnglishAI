@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { createMemoryRouter, RouterProvider } from 'react-router'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { LANGUAGES_CONFIG_NAME } from '@/shared/lib/appConfig/languagesConfig'
 import { settingsRepository } from '@/shared/lib/appConfig/settingsRepository'
 import { useVoiceStore } from '@/shared/lib/audio/useVoiceStore'
@@ -9,12 +9,22 @@ import { useTutorAvatarStore } from '@/shared/lib/learner/tutorAvatar'
 import { AppLanguageProvider, useLanguageStore } from '@/shared/lib/i18n'
 import { paths } from '@/shared/lib/paths'
 import { useThemeStore } from '@/shared/theme'
-import { profileRoutes, profileSettingsRoutes } from '../index'
+import { installFakeSound, removeFakeSound } from '@/test/fakeSound'
+import { ProfileAppearancePage } from './ProfileAppearancePage'
+import { ProfileLanguagePage } from './ProfileLanguagePage'
+import { ProfilePage } from './ProfilePage'
 
 function renderProfile(initialPath: string = paths.profile) {
-  const router = createMemoryRouter([...profileRoutes, ...profileSettingsRoutes], {
-    initialEntries: [initialPath],
-  })
+  // The screens themselves, not the app's lazy routes: loading a route's code can take longer
+  // than a test waits for a heading on a busy machine.
+  const router = createMemoryRouter(
+    [
+      { path: paths.profile, Component: ProfilePage },
+      { path: paths.profileLanguage, Component: ProfileLanguagePage },
+      { path: paths.profileAppearance, Component: ProfileAppearancePage },
+    ],
+    { initialEntries: [initialPath] },
+  )
   render(
     <AppLanguageProvider>
       <RouterProvider router={router} />
@@ -34,7 +44,7 @@ beforeEach(() => {
   useTutorAvatarStore.setState({ avatar: null })
 })
 
-afterEach(() => vi.unstubAllGlobals())
+afterEach(() => removeFakeSound())
 
 describe('ProfilePage', () => {
   it('lists the settings, each with its current value, and where the learner stands', async () => {
@@ -62,31 +72,15 @@ describe('ProfilePage', () => {
     ])
   })
 
-  it('names the voice lessons are heard in, once the device has one', async () => {
-    vi.stubGlobal('SpeechSynthesisUtterance', vi.fn())
-    vi.stubGlobal('speechSynthesis', {
-      getVoices: () => [
-        {
-          name: 'Microsoft Heera - English (India)',
-          lang: 'en-IN',
-          localService: true,
-          voiceURI: 'heera',
-        },
-        {
-          name: 'Microsoft Ravi - English (India)',
-          lang: 'en-IN',
-          localService: true,
-          voiceURI: 'ravi',
-        },
-      ],
-    })
-    useVoiceStore.setState({ voices: { en: { male: 'heera' } } })
+  it('names the voice lessons are heard in, once the server’s voices are known', async () => {
+    installFakeSound()
+    useVoiceStore.setState({ voices: { en: { male: 'bf_emma' } } })
     renderProfile()
 
     await screen.findByRole('heading', { level: 1, name: 'My profile' })
     expect(settings('Settings').getByRole('link', { name: /Voice settings/ })).toHaveTextContent(
       // The male tutor is theirs, and they gave him this voice.
-      'Voice settings Heera',
+      'Voice settings Emma',
     )
   })
 

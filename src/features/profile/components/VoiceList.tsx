@@ -20,9 +20,9 @@ export type VoiceListProps = {
 }
 
 /**
- * Voices to choose from, each with a button to hear it. A voice goes by the device's name for
- * it, cut short, and is described by what is known about it — its accent, whether it needs the internet —
- * never by how it sounds: that is what the sample is for.
+ * Voices to choose from, each with a button to hear it. A voice goes by its own name and is
+ * described by what is known about it, its accent, never by how it sounds: that is what the
+ * sample is for.
  */
 export function VoiceList({
   legend,
@@ -43,15 +43,13 @@ export function VoiceList({
       onChange={onSelect}
       options={voices.map((voice) => {
         const { name } = voice
-        const { lang, localService } = voice.voice
         const playing = voice.id === playingId
-        const facts = [accentName(language, lang), ...(localService ? [] : [t('voice.online')])]
 
         return {
           value: voice.id,
           label: (
             <>
-              {/* The device's name for the voice: not a text of ours, so not translated. */}
+              {/* The voice's own name: not a text of ours, so not translated. */}
               <span className="wrap-break-word">{name}</span>
               {voice.id === defaultId && (
                 <>
@@ -63,7 +61,7 @@ export function VoiceList({
               )}
             </>
           ),
-          description: <span className="text-sm">{facts.join(' · ')}</span>,
+          description: <span className="text-sm">{accentName(language, voice.language)}</span>,
           action: (
             <IconButton
               variant="secondary"

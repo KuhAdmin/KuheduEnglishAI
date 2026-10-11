@@ -1,0 +1,13 @@
+{
+  "name": "@kuhedu/contracts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "The shapes the app and the server both use: Zod schemas only, no React, no Node.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}

@@ -20,6 +20,8 @@ const buttonVariants = cva(
         ghost: 'bg-transparent text-primary active:bg-primary-soft',
       },
       size: {
+        // For a bar that has little room: still a full touch target, with less around the label.
+        sm: 'min-h-11 px-3 text-sm',
         md: 'min-h-11 px-5 text-base',
         lg: 'min-h-14 px-6 text-lg',
       },

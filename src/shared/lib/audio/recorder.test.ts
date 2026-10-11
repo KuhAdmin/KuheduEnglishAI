@@ -69,6 +69,8 @@ describe('startRecording', () => {
     supportedTypes = ['audio/mp4']
     const recording = await startRecording()
     expect(track.stop).not.toHaveBeenCalled()
+    // The same microphone can be listened to while it is recorded.
+    expect(recording.stream).toBe(stream)
 
     recording.stop()
     const result = await recording.finished

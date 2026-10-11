@@ -14,7 +14,15 @@ import { WordFields } from './WordFields'
 
 const text = adminText.lessons
 
-const newWord: VocabularyWord = { word: '', phonetic: '', imageUrl: null, meanings: {} }
+const newWord: VocabularyWord = {
+  word: '',
+  phonetic: '',
+  imageUrl: null,
+  meanings: {},
+  syllables: [],
+  stress: null,
+  tips: {},
+}
 
 export type VocabularyEditorProps = {
   editor: WeekContentEditor<WeekVocabulary>

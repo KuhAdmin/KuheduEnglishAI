@@ -1,6 +1,7 @@
 import { ExternalLink, LogOut } from 'lucide-react'
+import { useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router'
-import { useSessionStore } from '@/features/auth'
+import { signOut } from '@/shared/lib/account'
 import { cn } from '@/shared/lib/cn'
 import { paths } from '@/shared/lib/paths'
 import { Button } from '@/shared/ui/Button'
@@ -18,10 +19,17 @@ const sections = [
 /** Shell of the admin area: header, section tabs and the current section. English only. */
 export function AdminLayout() {
   const navigate = useNavigate()
-  const signOut = useSessionStore((state) => state.signOut)
+  const [signOutFailed, setSignOutFailed] = useState(false)
 
-  const handleSignOut = () => {
-    signOut()
+  const handleSignOut = async () => {
+    setSignOutFailed(false)
+    try {
+      await signOut()
+    } catch {
+      // The server was not told, so this browser is still signed in: say so, and stay.
+      setSignOutFailed(true)
+      return
+    }
     navigate(paths.signIn, { replace: true })
   }
 
@@ -38,7 +46,7 @@ export function AdminLayout() {
                 <ExternalLink aria-hidden="true" className="size-4" />
               </a>
             </Button>
-            <Button variant="ghost" onClick={handleSignOut}>
+            <Button variant="ghost" onClick={() => void handleSignOut()}>
               <LogOut aria-hidden="true" className="size-4" />
               {adminText.signOut}
             </Button>
@@ -68,6 +76,14 @@ export function AdminLayout() {
       </header>
 
       <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-gutter pb-safe">
+        {signOutFailed && (
+          <p
+            role="alert"
+            className="mt-4 rounded-md bg-danger-soft px-4 py-3 font-bold text-danger"
+          >
+            {adminText.signOutFailed}
+          </p>
+        )}
         <p className="mt-4 rounded-md bg-warning-soft px-4 py-3 text-sm text-fg">
           {adminText.localNotice}
         </p>

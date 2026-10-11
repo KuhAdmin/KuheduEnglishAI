@@ -30,15 +30,56 @@ export function classifyMicrophoneError(error: unknown): MicrophoneProblem {
   return error instanceof Error && DENIED_ERRORS.has(error.name) ? 'denied' : 'unavailable'
 }
 
+// What is known about the permission without asking: what the browser says of it, and whether
+// it has handed the microphone over on this page (some browsers allow one visit at a time and
+// go on saying "ask").
+let granted = false
+let opened = false
+let watching = false
+
 /**
- * Ask for the microphone — only ever from a tap, after explaining why. The caller owns the
- * returned stream and must pass it to `releaseStream` when done.
+ * Whether opening the microphone now would ask the learner nothing: the browser has already
+ * allowed it. Only then may the app open it without a tap.
+ */
+export function microphoneAllowed(): boolean {
+  return granted || opened
+}
+
+/**
+ * Find out, without asking the learner anything, whether the microphone is already allowed,
+ * and keep up with a change of mind. `microphoneAllowed` has the answer once it is known.
+ */
+export function primeMicrophonePermission(): void {
+  if (watching || typeof navigator === 'undefined') return
+  if (typeof navigator.permissions?.query !== 'function') return
+  watching = true
+  navigator.permissions
+    .query({ name: 'microphone' as PermissionName })
+    .then((status) => {
+      const read = () => {
+        granted = status.state === 'granted'
+        if (status.state === 'denied') opened = false
+      }
+      read()
+      status.onchange = read
+    })
+    // Some browsers do not answer for the microphone; a tap then finds out.
+    .catch(() => {})
+}
+
+/**
+ * Ask for the microphone — only ever from a tap, after explaining why, unless
+ * `microphoneAllowed` says there is nothing left to ask. The caller owns the returned stream
+ * and must pass it to `releaseStream` when done.
  */
 export async function requestMicrophone(): Promise<MediaStream> {
   if (!isRecordingSupported()) throw new MicrophoneError('unavailable')
   try {
-    return await navigator.mediaDevices.getUserMedia({ audio: true })
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+    opened = true
+    return stream
   } catch (error) {
+    opened = false
     throw new MicrophoneError(classifyMicrophoneError(error))
   }
 }

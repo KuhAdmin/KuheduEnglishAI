@@ -1,6 +1,6 @@
-import { render, screen, within } from '@testing-library/react'
+import { configure, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { LANDING_CONFIG_NAME } from '@/shared/lib/appConfig/landingConfig'
 import { LANGUAGES_CONFIG_NAME } from '@/shared/lib/appConfig/languagesConfig'
 import { PROFILES_CONFIG_NAME } from '@/shared/lib/appConfig/profilesConfig'
@@ -17,7 +17,10 @@ import {
 import { WEEK_ROLEPLAYS_CONFIG_NAME } from '@/shared/lib/curriculum/weekRoleplays'
 import { WEEK_SCENARIOS_CONFIG_NAME } from '@/shared/lib/curriculum/weekScenarios'
 import { WEEK_SENTENCES_CONFIG_NAME } from '@/shared/lib/curriculum/weekSentences'
-import { WEEK_VOCABULARY_CONFIG_NAME } from '@/shared/lib/curriculum/weekVocabulary'
+import {
+  builtInWeekVocabularies,
+  WEEK_VOCABULARY_CONFIG_NAME,
+} from '@/shared/lib/curriculum/weekVocabulary'
 import { SCREEN_TEXTS_CONFIG_NAME } from '@/shared/lib/i18n/screenTexts'
 import type * as ImageUpload from '../lib/imageUpload'
 import { CurriculumPage } from './CurriculumPage'
@@ -44,10 +47,20 @@ const pngFile = () => new File(['x'], 'picture.png', { type: 'image/png' })
 beforeEach(() => localStorage.clear())
 afterEach(() => vi.restoreAllMocks())
 
-// This page lists every screen text (290+ fields); finding one by role is slow in jsdom, and
-// slower still while the other test files run beside it, so these tests get much more time
-// than the default. Real-browser speed is covered by Playwright.
+// This page lists every screen text (340+ fields, and more with every screen that is built);
+// finding one by role is slow in jsdom, and slower still while the other test files run beside
+// it, so these tests get much more time than the default. Real-browser speed is covered by
+// Playwright.
 describe('ScreenTextsPage', { timeout: 120_000 }, () => {
+  // Most of that time goes on checking, for every query, that each field is not hidden. Nothing
+  // on this page is hidden, so the check is skipped here, and only here.
+  beforeAll(() => {
+    configure({ defaultHidden: true })
+  })
+  afterAll(() => {
+    configure({ defaultHidden: false })
+  })
+
   it('lists every text in English first, with nothing to save yet', () => {
     render(<ScreenTextsPage />)
 
@@ -523,6 +536,9 @@ describe('LessonsPage', () => {
         { words: { word: string; phonetic: string; imageUrl: string | null; meanings: object }[] }
       >
 
+    // What a word has when nothing is written about how it is said.
+    const unsaid = { syllables: [], stress: null, tips: {} }
+
     it('shows Week 1’s built-in words, with nothing to save yet', async () => {
       render(<LessonsPage />)
       expect(screen.getByRole('radio', { name: 'Day 1 · Watch and listen' })).toBeChecked()
@@ -542,6 +558,14 @@ describe('LessonsPage', () => {
       expect(field('Phonetic spelling (Word 1)')).toHaveValue('/həˈləʊ/')
       expect(field('Meaning: বাংলা (Word 1)')).toHaveValue('হ্যালো')
       expect(field('Meaning: বাংলা (Word 1)')).toHaveAttribute('lang', 'bn')
+      // How it is said: its parts joined by hyphens, the strong one, and tips in two languages.
+      expect(field('Parts it is said in (Word 1)')).toHaveValue('hel-lo')
+      expect(screen.getByRole('combobox', { name: 'Strong part (Word 1)' })).toHaveValue('2')
+      expect(field('How to say it: English (Word 1)')).toHaveValue(
+        'Say the second part longer and louder.\nKeep the first part short and soft.',
+      )
+      expect(field('How to say it: বাংলা (Word 1)')).toHaveAttribute('lang', 'bn')
+      expect(field('Parts it is said in (Word 3)')).toHaveValue('nam(e)')
       expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
       // The conversation's fields have made way for the words'.
       expect(screen.queryByRole('textbox', { name: 'Video link' })).toBeNull()
@@ -554,6 +578,11 @@ describe('LessonsPage', () => {
       const word = field('Word or phrase (Word 1)')
       await userEvent.clear(word)
       await userEvent.type(word, 'hi')
+      // The parts were hello's: they are refused until they are this word's, or gone.
+      expect(screen.getByText(/^The parts must spell the word/)).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+      await userEvent.clear(field('Parts it is said in (Word 1)'))
+      expect(screen.getByRole('combobox', { name: 'Strong part (Word 1)' })).toHaveValue('')
       await userEvent.click(screen.getByRole('radio', { name: 'हिन्दी' }))
       const meaning = field('Meaning: हिन्दी (Word 1)')
       expect(meaning).toHaveValue('नमस्ते')
@@ -569,6 +598,9 @@ describe('LessonsPage', () => {
         phonetic: '/həˈləʊ/',
         imageUrl: 'data:image/webp;base64,UklGRg==',
         meanings: { bn: 'হ্যালো', hi: 'हाय' },
+        syllables: [],
+        stress: null,
+        tips: builtInWeekVocabularies[1]?.words[0]?.tips,
       })
       // The conversation was not touched, so nothing was written for it.
       expect(stored(WEEK_DIALOGUES_CONFIG_NAME)).toBeUndefined()
@@ -606,14 +638,72 @@ describe('LessonsPage', () => {
       expect(stored(WEEK_VOCABULARY_CONFIG_NAME)).toEqual({
         2: {
           words: [
-            { word: 'work', phonetic: '', imageUrl: null, meanings: { bn: 'কাজ' } },
-            { word: 'city', phonetic: '/ˈsɪti/', imageUrl: null, meanings: {} },
+            { word: 'work', phonetic: '', imageUrl: null, meanings: { bn: 'কাজ' }, ...unsaid },
+            { word: 'city', phonetic: '/ˈsɪti/', imageUrl: null, meanings: {}, ...unsaid },
           ],
         },
       })
       expect(
         screen.getByRole('option', { name: 'Week 2 · I can get to know someone. — 2 words' }),
       ).toBeDefined()
+    })
+
+    it('saves how a word is said: its parts, the strong one and tips in two languages', async () => {
+      render(<LessonsPage />)
+      await openWords()
+      await userEvent.selectOptions(weekPicker(), '2')
+      await userEvent.click(screen.getByRole('button', { name: 'Add word' }))
+      await userEvent.type(field('Word or phrase (Word 1)'), 'Wednesday')
+
+      const parts = () => field('Parts it is said in (Word 1)')
+      const strong = () => screen.getByRole('combobox', { name: 'Strong part (Word 1)' })
+      const choices = () =>
+        within(strong())
+          .getAllByRole('option')
+          .map((option) => option.textContent)
+
+      expect(choices()).toEqual(['None marked'])
+      await userEvent.type(parts(), 'Wed-nes')
+      expect(screen.getByText(/^The parts must spell the word/)).toBeVisible()
+      expect(screen.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+
+      await userEvent.clear(parts())
+      await userEvent.type(parts(), 'We(d)n(e)s-day')
+      expect(screen.queryByText(/^The parts must spell the word/)).toBeNull()
+      expect(choices()).toEqual(['None marked', '1 · We(d)n(e)s', '2 · day'])
+
+      // A strong part that is taken away does not stay chosen.
+      await userEvent.selectOptions(strong(), '2')
+      await userEvent.type(parts(), '{Backspace}{Backspace}{Backspace}{Backspace}')
+      expect(strong()).toHaveValue('')
+      await userEvent.type(parts(), '-day')
+      await userEvent.selectOptions(strong(), '1')
+
+      await userEvent.type(
+        field('How to say it: English (Word 1)'),
+        'The “d” is not said.{Enter}Two parts, not three.',
+      )
+      await userEvent.type(field('How to say it: বাংলা (Word 1)'), '“d” উচ্চারণ হয় না।')
+      await save()
+
+      expect(stored(WEEK_VOCABULARY_CONFIG_NAME)).toEqual({
+        2: {
+          words: [
+            {
+              word: 'Wednesday',
+              phonetic: '',
+              imageUrl: null,
+              meanings: {},
+              syllables: ['We(d)n(e)s', 'day'],
+              stress: 1,
+              tips: {
+                bn: ['“d” উচ্চারণ হয় না।'],
+                en: ['The “d” is not said.', 'Two parts, not three.'],
+              },
+            },
+          ],
+        },
+      })
     })
 
     it('saves a day’s words and another day’s conversation together, and says where one is unfinished', async () => {

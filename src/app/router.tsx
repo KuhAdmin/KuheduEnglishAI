@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router'
 import { adminRoutes } from '@/features/admin'
-import { authRoutes, requireAdmin } from '@/features/auth'
+import { authRoutes, authStepRoutes, requireAdmin } from '@/features/auth'
 import { conversationRoutes } from '@/features/conversation'
 import { homeRoutes, weekRoutes } from '@/features/home'
 import { landingRoutes } from '@/features/landing'
@@ -29,6 +29,7 @@ export const router = createBrowserRouter([
         children: [
           // Full-bleed screens
           ...landingRoutes,
+          ...authStepRoutes,
           ...onboardingRoutes,
           ...placementRoutes,
           ...weekRoutes,

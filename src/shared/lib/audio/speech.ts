@@ -1,15 +1,23 @@
 /**
- * Speech from the device's own text-to-speech (the Web Speech API): English, and a learner's
- * own language where the device has a voice for it. It needs no audio files and no server, but
- * the voice differs from device to device and some have none.
- * TODO(content): recorded audio per prompt, so every learner hears the same voice.
+ * Everything the app says aloud. A text is said in one of the server's voices: the sound is made
+ * there (once, then kept) and played here, so every learner hears the same voice on every
+ * device. The device's own text-to-speech is not used at all: where the server has no voice for
+ * a language, or cannot be reached and the sound was never heard before, the text is only shown.
  */
 
 import { tutorVoiceKind } from '@/shared/lib/learner/tutorAvatar'
-import { chosenVoiceURI } from './useVoiceStore'
-import { voiceForFace, voicesFor } from './voices'
+import { env } from '../env'
+import {
+  loadSpeechVoices,
+  onSpeechVoicesChanged,
+  speechVoices,
+  speechVoicesKnown,
+} from './speechCatalogue'
+import { chosenVoices } from './useVoiceStore'
+import { voiceForSpeaker, voicesFor, type VoiceChoice } from './voices'
 
 export class SpeechError extends Error {
+  /** `unsupported`: there is no voice for it. `failed`: there is, and it could not be played. */
   readonly reason: 'unsupported' | 'failed'
 
   constructor(reason: 'unsupported' | 'failed') {
@@ -20,19 +28,22 @@ export class SpeechError extends Error {
 }
 
 export type SpeakOptions = {
-  /** 1 is normal speed; lower is slower. */
+  /** 1 is normal speed; lower is slower. The same sound is played slower, at its own pitch. */
   rate?: number
-  /** The language of the text when it is not English, as a language tag (`bn`, `hi-IN`). */
+  /** The language of the text when it is not English, as a language tag (`hi`, `hi-IN`). */
   lang?: string
   /** Say it with this voice, whatever the learner chose: for trying a voice out before choosing it. */
-  voiceURI?: string
+  voiceId?: string
 }
 
 /** One of several texts said in a row. */
 export type SpeechPart = {
   text: string
-  /** 1 is the voice's own pitch; a different one tells two speakers apart. */
-  pitch?: number
+  /**
+   * Who says it, counted from 0, when several people speak (a conversation). The first has the
+   * voice of the learner's tutor, the second the other tutor's. Left out: the learner's tutor.
+   */
+  speaker?: number
 }
 
 export type SpeakAllOptions = SpeakOptions & {
@@ -43,87 +54,38 @@ export type SpeakAllOptions = SpeakOptions & {
 /** How a spoken text finished: played to the end, or stopped by `cancelSpeech`. */
 export type SpeechOutcome = 'ended' | 'cancelled'
 
-/** If nothing starts within this time the device has no usable voice. */
-const START_TIMEOUT_MS = 4000
+const canPlaySound = () => typeof window !== 'undefined' && typeof Audio !== 'undefined'
 
+/**
+ * Whether the app can say anything. True until the server has said that it offers no voices:
+ * while its answer is on the way nothing is called impossible.
+ */
 export function isSpeechSupported(): boolean {
-  return (
-    typeof window !== 'undefined' &&
-    'speechSynthesis' in window &&
-    'SpeechSynthesisUtterance' in window
-  )
+  return canPlaySound() && (speechVoices().length > 0 || !speechVoicesKnown())
 }
 
-/**
- * Ask the browser for its voices ahead of time. Chrome loads them asynchronously, and `speak`
- * cannot wait for them: on iOS speech must start inside the tap that asked for it.
- */
+/** Ask the server for its voices ahead of time, so that the first tap does not wait for them. */
 export function primeVoices(): void {
-  if (isSpeechSupported()) window.speechSynthesis.getVoices()
-}
-
-/** The best English voice on offer; on-device voices win, as they also work offline. */
-export function pickEnglishVoice(
-  voices: readonly SpeechSynthesisVoice[],
-): SpeechSynthesisVoice | undefined {
-  return voicesFor(voices, 'en')[0]
-}
-
-/** The device's voice for a language other than English, if it has one. */
-export function pickVoiceFor(
-  voices: readonly SpeechSynthesisVoice[],
-  language: string,
-): SpeechSynthesisVoice | undefined {
-  return voicesFor(voices, language)[0]
+  if (canPlaySound()) void loadSpeechVoices()
 }
 
 /**
- * The voice a text is said with: the one asked for, else the voice of the learner's tutor for
- * that language (Profile › Voice settings has one for the male tutor and one for the female,
- * Profile › Tutor avatar says which tutor is theirs), else the device's best. A voice the
- * device no longer has is passed over, so a choice made on another day cannot leave the app
- * silent.
- */
-function voiceToUse(
-  voices: readonly SpeechSynthesisVoice[],
-  language: string,
-  voiceURI: string | undefined,
-): SpeechSynthesisVoice | undefined {
-  const asked = voiceURI && voicesFor(voices, language).find((voice) => voice.voiceURI === voiceURI)
-  if (asked) return asked
-  const kind = tutorVoiceKind()
-  return voiceForFace(voices, language, kind, chosenVoiceURI(language, kind))?.voice
-}
-
-/**
- * Whether the device can say a text in this language. Unlike English, which any voice will at
- * least attempt, a sentence in another script is only offered when there is a voice for it.
+ * Whether there is a voice for this language. Only what is known counts: a language is not
+ * offered to be heard until the server has said it has a voice for it.
  */
 export function hasVoiceFor(language: string): boolean {
-  return (
-    isSpeechSupported() && pickVoiceFor(window.speechSynthesis.getVoices(), language) !== undefined
-  )
+  return canPlaySound() && voicesFor(speechVoices(), language).length > 0
 }
 
-/** Be told when the device's voices have loaded or changed. Returns how to stop listening. */
-export function onVoicesChanged(listener: () => void): () => void {
-  if (!isSpeechSupported()) return () => {}
-  const synth = window.speechSynthesis
-  // Older Safari has the voices but not the event.
-  if (typeof synth.addEventListener !== 'function') return () => {}
-  synth.addEventListener('voiceschanged', listener)
-  return () => synth.removeEventListener('voiceschanged', listener)
-}
+/** Be told when the server's voices have arrived or changed. Returns how to stop listening. */
+export const onVoicesChanged = onSpeechVoicesChanged
 
 /**
- * What the device's voice is doing, for anything that moves with it (a talking face). `word` is
- * only told on devices that report where they are in a text: on-device voices mostly do, voices
- * fetched over the network and many phones do not.
+ * What the voice is doing, for anything that moves with it (a talking face): each part as its
+ * sound starts, and the end. A sound does not say where in its text it is, so a face runs
+ * through each part at a likely pace from its `start`.
  */
-export type SpeechActivity =
-  | { type: 'start'; text: string; rate: number }
-  | { type: 'word'; word: string; rate: number }
-  | { type: 'end' }
+export type SpeechActivity = { type: 'start'; text: string; rate: number } | { type: 'end' }
 
 const activityListeners = new Set<(activity: SpeechActivity) => void>()
 const tell = (activity: SpeechActivity) => {
@@ -136,88 +98,214 @@ export function onSpeechActivity(listener: (activity: SpeechActivity) => void): 
   return () => activityListeners.delete(listener)
 }
 
-// What is being said now. Chrome can garbage-collect an utterance that is still speaking, which
-// loses its `end` event, so the utterances are kept here; `stop` settles the promise as
-// cancelled, because browsers disagree on which event (if any) a cancelled utterance fires.
-let current: { utterances: SpeechSynthesisUtterance[]; stop: () => void } | null = null
+/**
+ * The voice a text is said with: the one asked for, else the voice of the learner's tutor for
+ * that language (Profile › Voice settings has one for the male tutor and one for the female,
+ * Profile › Tutor avatar says which tutor is theirs). A voice the server no longer offers is
+ * passed over, so a choice made on another day cannot leave the app silent.
+ */
+function voiceToUse(
+  language: string,
+  voiceId: string | undefined,
+  speaker: number,
+): VoiceChoice | undefined {
+  const voices = speechVoices()
+  const asked = voiceId && voicesFor(voices, language).find((voice) => voice.id === voiceId)
+  if (asked) return asked
+  return voiceForSpeaker(voices, language, tutorVoiceKind(), chosenVoices(language), speaker)
+}
+
+/** Where the sound of a text in a voice is. The address is the sound's name: it never changes. */
+export const soundUrl = (text: string, voiceId: string) =>
+  `${env.VITE_API_BASE_URL}/speech/audio?${new URLSearchParams({ voice: voiceId, text })}`
+
+// Sounds fetched in this session, each as the address the player is given for it, so that
+// hearing a line again, or slowly, asks for nothing. The browser and the service worker keep
+// them for longer; this is only the nearest shelf.
+const MAX_KEPT = 80
+const kept = new Map<string, Promise<string>>()
+
+const forget = (url: string) => {
+  // An address is let go only when its sound leaves the shelf: never while the player may
+  // still be holding it.
+  void kept.get(url)?.then(
+    (address) => URL.revokeObjectURL(address),
+    () => {},
+  )
+  kept.delete(url)
+}
+
+/** The sound of a text in a voice, fetched once, as an address the player can play. */
+function fetchSound(text: string, voiceId: string): Promise<string> {
+  const url = soundUrl(text, voiceId)
+  const known = kept.get(url)
+  if (known) return known
+
+  const sound = fetch(url)
+    .then((response) => {
+      if (!response.ok) throw new Error(`No sound (${response.status})`)
+      return response.blob()
+    })
+    .then((blob) => URL.createObjectURL(blob))
+  kept.set(url, sound)
+  // A sound that could not be fetched is asked for again next time.
+  sound.catch(() => kept.delete(url))
+  if (kept.size > MAX_KEPT) {
+    const oldest = kept.keys().next().value
+    if (oldest !== undefined) forget(oldest)
+  }
+  return sound
+}
+
+// One player for everything: a phone lets a sound start by itself only on a player the learner
+// has already started once with a tap (iOS), so the same one is kept and reused.
+let player: HTMLAudioElement | null = null
+function soundPlayer(): HTMLAudioElement {
+  if (!player) {
+    player = new Audio()
+    player.preload = 'auto'
+  }
+  return player
+}
+
+// The shortest silent sound there is: played inside the learner's first tap, it is what lets
+// later sounds start after their fetch, when the tap itself is over.
+const SILENCE =
+  'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA'
+// What a phone counts as the learner's own doing; the press that comes before a tap is not.
+const TAPS = ['click', 'touchend', 'keydown'] as const
+let unlocked = false
+
+function unlockOnTap() {
+  // Nothing to unlock for an app that has nothing to say; and a tap that already started a
+  // sound has done the unlocking itself.
+  if (unlocked || speechVoices().length === 0 || current) return
+  const audio = soundPlayer()
+  audio.src = SILENCE
+  // `play` gives no promise in a test's pretend browser.
+  void Promise.resolve(audio.play())
+    .then(() => {
+      unlocked = true
+      for (const tap of TAPS) window.removeEventListener(tap, unlockOnTap, true)
+    })
+    .catch(() => {})
+}
+// Before the screen's own handlers hear of the tap: one of them may be about to speak.
+if (canPlaySound()) for (const tap of TAPS) window.addEventListener(tap, unlockOnTap, true)
+
+// What is being said now. `stop` settles its promise as cancelled.
+let current: { stop: () => void } | null = null
 
 /**
- * Say several texts aloud, one after another. Call it from a tap: every text is handed to the
- * device at once, because iOS only lets speech start inside the tap that asked for it.
- * Rejects with `SpeechError` when it cannot be played.
+ * Say several texts aloud, one after another. While one is being said the ones after it are
+ * fetched, so that a later line is ready when its turn comes. Rejects with `SpeechError` when
+ * it cannot be played.
  */
 export function speakAll(
   parts: readonly SpeechPart[],
-  { rate = 1, lang, voiceURI, onPartStart }: SpeakAllOptions = {},
+  { rate = 1, lang, voiceId, onPartStart }: SpeakAllOptions = {},
 ): Promise<SpeechOutcome> {
-  if (!isSpeechSupported()) return Promise.reject(new SpeechError('unsupported'))
+  if (!canPlaySound()) return Promise.reject(new SpeechError('unsupported'))
   if (parts.length === 0) return Promise.resolve('ended')
 
+  current?.stop()
+
   return new Promise((resolve, reject) => {
-    const synth = window.speechSynthesis
-    current?.stop()
-    synth.cancel()
-
-    const voice = voiceToUse(synth.getVoices(), lang ?? 'en', voiceURI)
-    const utterances = parts.map(({ text, pitch = 1 }) => {
-      const utterance = new SpeechSynthesisUtterance(text)
-      if (voice) utterance.voice = voice
-      utterance.lang = voice?.lang ?? lang ?? 'en-US'
-      utterance.rate = rate
-      utterance.pitch = pitch
-      return utterance
-    })
-
+    const audio = soundPlayer()
     let settled = false
+    let handed = false
+
     const finish = (settle: () => void) => {
       if (settled) return
       settled = true
-      clearTimeout(startTimer)
-      if (current?.utterances === utterances) current = null
+      audio.onended = null
+      audio.onerror = null
+      // Only a sound that was handed to the player is there to be stopped.
+      if (handed) audio.pause()
+      if (current === me) current = null
       tell({ type: 'end' })
       settle()
     }
-    const startTimer = setTimeout(() => {
-      synth.cancel()
-      finish(() => reject(new SpeechError('failed')))
-    }, START_TIMEOUT_MS)
+    const fail = (reason: 'unsupported' | 'failed') => finish(() => reject(new SpeechError(reason)))
+    const me = { stop: () => finish(() => resolve('cancelled')) }
+    current = me
 
-    current = { utterances, stop: () => finish(() => resolve('cancelled')) }
-
-    utterances.forEach((utterance, index) => {
-      utterance.onstart = () => {
-        clearTimeout(startTimer)
+    const play = async (sounds: readonly Promise<string>[], index: number) => {
+      const part = parts[index]
+      const sound = sounds[index]
+      if (!part || !sound) return finish(() => resolve('ended'))
+      try {
+        const address = await sound
         if (settled) return
+        audio.src = address
+        handed = true
+        // Set after the source, which puts the speed back to the player's own.
+        audio.defaultPlaybackRate = rate
+        audio.playbackRate = rate
+        audio.preservesPitch = true
+        // The player is shared, so what it reports is only taken as this sound's while this
+        // sound is the one it holds.
+        const mine = () => !settled && audio.src === address
+        audio.onended = () => {
+          if (mine()) void play(sounds, index + 1)
+        }
+        audio.onerror = () => {
+          if (mine()) fail('failed')
+        }
+        await audio.play()
+        if (settled) return
+        unlocked = true
         onPartStart?.(index)
-        tell({ type: 'start', text: utterance.text, rate })
+        tell({ type: 'start', text: part.text, rate })
+      } catch {
+        // Stopped by `cancelSpeech`, the wait simply ends; anything else could not be played.
+        fail('failed')
       }
-      utterance.onboundary = (event) => {
-        // Sentence boundaries say nothing a word does not.
-        if (settled || (event.name && event.name !== 'word')) return
-        const from = utterance.text.slice(event.charIndex)
-        const word = (event.charLength ? from.slice(0, event.charLength) : from).match(/^\S+/)?.[0]
-        if (word) tell({ type: 'word', word, rate })
-      }
-      utterance.onend = () => {
-        if (index === utterances.length - 1) finish(() => resolve('ended'))
-      }
-      utterance.onerror = (event) =>
-        finish(() =>
-          event.error === 'canceled' || event.error === 'interrupted'
-            ? resolve('cancelled')
-            : reject(new SpeechError('failed')),
-        )
-      synth.speak(utterance)
-    })
+    }
+
+    const begin = () => {
+      if (settled) return
+      const language = lang ?? 'en'
+      const voices = parts.map((part) => voiceToUse(language, voiceId, part.speaker ?? 0))
+      if (voices.some((voice) => voice === undefined)) return fail('unsupported')
+
+      // Asked for one after another, in the order they will be heard, each as soon as the one
+      // before it has arrived. The server makes one sound at a time: asked for all at once, the
+      // first line of a conversation could be kept waiting behind its last.
+      const sounds: Promise<string>[] = []
+      let next: Promise<unknown> = Promise.resolve()
+      parts.forEach((part, index) => {
+        const sound = next.then(() => {
+          if (settled) throw new Error('No longer wanted')
+          return fetchSound(part.text, voices[index]?.id ?? '')
+        })
+        // A later line that cannot be fetched fails when its turn comes, not before; and the
+        // lines after it are still asked for.
+        next = sound.catch(() => {})
+        sounds.push(sound)
+      })
+      void play(sounds, 0)
+    }
+
+    // On a first visit the voices may still be on their way: wait for them, once.
+    if (speechVoicesKnown()) begin()
+    else void loadSpeechVoices().then(begin)
   })
 }
 
-/** Say a text aloud. Call it from a tap. Rejects with `SpeechError` when it cannot be played. */
+/** Say a text aloud. Rejects with `SpeechError` when it cannot be played. */
 export function speak(text: string, options: SpeakOptions = {}): Promise<SpeechOutcome> {
   return speakAll([{ text }], options)
 }
 
 export function cancelSpeech(): void {
   current?.stop()
-  if (isSpeechSupported()) window.speechSynthesis.cancel()
+}
+
+/** For tests: forget the sounds fetched and whatever is playing. */
+export function resetSpeech(): void {
+  current?.stop()
+  for (const url of [...kept.keys()]) forget(url)
+  unlocked = false
+  player = null
 }

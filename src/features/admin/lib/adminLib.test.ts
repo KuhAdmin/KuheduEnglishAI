@@ -136,7 +136,15 @@ describe('validateDialogue', () => {
 })
 
 describe('validateVocabulary', () => {
-  const word = (text: string) => ({ word: text, phonetic: '', imageUrl: null, meanings: {} })
+  const word = (text: string, syllables: string[] = [], stress: number | null = null) => ({
+    word: text,
+    phonetic: '',
+    imageUrl: null,
+    meanings: {},
+    syllables,
+    stress,
+    tips: {},
+  })
 
   it('accepts a list of different words, and an empty list', () => {
     expect(validateVocabulary({ words: [word('hello'), word('goodbye')] }).valid).toBe(true)
@@ -156,6 +164,32 @@ describe('validateVocabulary', () => {
   it('refuses more words than a screen may hold', () => {
     const words = Array.from({ length: 9 }, (_, index) => word(`word ${index}`))
     expect(validateVocabulary({ words }).list).toBe('That is the maximum number of words.')
+  })
+
+  it('accepts parts that spell the word, and points at parts or a strong part that do not fit', () => {
+    const partsError =
+      'The parts must spell the word: a hyphen between parts, brackets around letters that are not said. Leave empty to show none.'
+
+    expect(
+      validateVocabulary({
+        words: [word('Wednesday', ['We(d)n(e)s', 'day'], 1), word('name', ['nam(e)'])],
+      }).valid,
+    ).toBe(true)
+
+    const result = validateVocabulary({
+      words: [
+        // Typed half-way: a hyphen with nothing after it yet.
+        word('hello', ['hel', '']),
+        word('goodbye', ['good', 'buy']),
+        word('thank you', ['thank', 'you'], 3),
+      ],
+    })
+    expect(result.valid).toBe(false)
+    expect(result.words).toEqual([
+      { syllables: partsError },
+      { syllables: partsError },
+      { stress: 'Choose one of the parts.' },
+    ])
   })
 })
 

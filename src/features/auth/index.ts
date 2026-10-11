@@ -1,8 +1,9 @@
 import type { RouteObject } from 'react-router'
 import { paths } from '@/shared/lib/paths'
 
+import { requireUnverified } from './lib/requireUnverified'
+
 export { requireAdmin } from './lib/requireAdmin'
-export { useSessionStore } from './store/useSessionStore'
 
 export const authRoutes: RouteObject[] = [
   {
@@ -13,5 +14,20 @@ export const authRoutes: RouteObject[] = [
       { path: paths.signIn, element: null },
       { path: paths.signUp, element: null },
     ],
+  },
+]
+
+/** Full-screen steps beside the account screen: the emailed code, and a forgotten password. */
+export const authStepRoutes: RouteObject[] = [
+  {
+    path: paths.verifyEmail,
+    loader: requireUnverified,
+    lazy: async () => ({ Component: (await import('./pages/VerifyEmailPage')).VerifyEmailPage }),
+  },
+  {
+    path: paths.forgotPassword,
+    lazy: async () => ({
+      Component: (await import('./pages/ForgotPasswordPage')).ForgotPasswordPage,
+    }),
   },
 ]

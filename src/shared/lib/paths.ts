@@ -4,6 +4,9 @@ export const paths = {
   /** Same screen as `signUp`, opened on its "Sign in" half. */
   signIn: '/sign-in',
   signUp: '/sign-up',
+  /** The code sent to a new account's address. */
+  verifyEmail: '/verify-email',
+  forgotPassword: '/forgot-password',
   /** Redirects to the first onboarding step. */
   onboarding: '/onboarding',
   onboardingLanguage: '/onboarding/language',

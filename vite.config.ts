@@ -75,6 +75,23 @@ export default defineConfig({
             },
           },
           {
+            // A text said in a voice is the same sound for good, so what has been heard once
+            // is played from here ever after: offline too.
+            urlPattern: ({ url }) => url.pathname.startsWith('/api/speech/audio'),
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'speech',
+              cacheableResponse: { statuses: [200] },
+              expiration: { maxEntries: 600, maxAgeSeconds: 60 * 60 * 24 * 60 },
+            },
+          },
+          {
+            // The list of voices: instant from cache, refreshed behind.
+            urlPattern: ({ url }) => url.pathname.startsWith('/api/speech/voices'),
+            handler: 'StaleWhileRevalidate',
+            options: { cacheName: 'speech-voices', expiration: { maxEntries: 2 } },
+          },
+          {
             urlPattern: ({ request }) => request.destination === 'image',
             handler: 'StaleWhileRevalidate',
             options: {
@@ -90,7 +107,15 @@ export default defineConfig({
   resolve: {
     alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
   },
-  server: { host: true },
+  server: {
+    host: true,
+    // The backend (`npm run dev:server`) answers on the same origin as the app, as it will in
+    // production, so its session cookie needs no cross-site rules.
+    proxy: {
+      '/api': 'http://127.0.0.1:8787',
+      '/media': 'http://127.0.0.1:8787',
+    },
+  },
   test: {
     environment: 'jsdom',
     globals: true,

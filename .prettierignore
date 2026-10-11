@@ -5,3 +5,5 @@ playwright-report
 test-results
 package-lock.json
 public
+server/src/db/migrations/meta
+speech

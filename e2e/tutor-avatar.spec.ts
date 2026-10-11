@@ -1,25 +1,11 @@
 import { expect, test } from '@playwright/test'
-import {
-  expectNoHorizontalScroll,
-  seedLanguage,
-  spoken,
-  stubSpeech,
-  type FakeVoice,
-} from './helpers'
-
-const RAVI = 'Microsoft Ravi - English (India)'
-const HEERA = 'Microsoft Heera - English (India)'
-// The device's best voice is a man's; it has a woman's too.
-const VOICES: FakeVoice[] = [
-  { name: RAVI, lang: 'en-IN', localService: true, voiceURI: RAVI },
-  { name: HEERA, lang: 'en-IN', localService: true, voiceURI: HEERA },
-]
+import { expectNoHorizontalScroll, seedLanguage, spoken, stubSpeech } from './helpers'
 
 const SAMPLE = 'Hello! Let’s practise speaking English together.'
 // "Male tutor" is also the end of "Female tutor", so it is asked for exactly.
 
 test('the tutor’s face is chosen on Profile, tried out, and kept', async ({ page }) => {
-  await stubSpeech(page, 'works', VOICES)
+  await stubSpeech(page)
   await page.goto('/profile')
 
   // The row names the face in use, and opens the screen that changes it.
@@ -29,7 +15,7 @@ test('the tutor’s face is chosen on Profile, tried out, and kept', async ({ pa
   await expect(page.getByRole('navigation', { name: 'Main navigation' })).toHaveCount(0)
   await expect(page.getByRole('radio', { name: 'Male tutor', exact: true })).toBeChecked()
   await expect(page.getByRole('img', { name: 'Male tutor', exact: true })).toBeVisible()
-  await expect(page.getByText('Voice: Ravi')).toBeVisible()
+  await expect(page.getByText('Voice: Michael')).toBeVisible()
   await expect(page.getByRole('button', { name: 'Play a sample' })).toBeInViewport({ ratio: 1 })
   await expectNoHorizontalScroll(page)
 
@@ -40,12 +26,12 @@ test('the tutor’s face is chosen on Profile, tried out, and kept', async ({ pa
     has: page.getByRole('img', { name: 'Female tutor' }),
   })
   await expect(tutor).toHaveAttribute('data-mood', 'smile')
-  // A woman's face is given the device's woman's voice, not its best one.
-  await expect(page.getByText('Voice: Heera')).toBeVisible()
+  // A woman's face is given a woman's voice: the default of that kind.
+  await expect(page.getByText('Voice: Heart')).toBeVisible()
 
   // The play check: the sample is said, then the tutor gives a thumbs up for a moment.
   await page.getByRole('button', { name: 'Play a sample' }).click()
-  await expect.poll(() => spoken(page)).toEqual([{ text: SAMPLE, voice: HEERA }])
+  await expect.poll(() => spoken(page)).toEqual([{ text: SAMPLE, voice: 'af_heart' }])
   await expect(tutor).toHaveAttribute('data-mood', 'encourage')
   await expect(tutor.locator('[data-part="thumbs-up"]')).toHaveAttribute('data-shown', 'true')
   await expect(tutor).toHaveAttribute('data-mood', 'smile')
@@ -72,12 +58,12 @@ test('the tutor’s screen is in the learner’s language, and leads to the voic
   await expect(page).toHaveURL(/\/profile\/voice$/)
 })
 
-test('a device that cannot read aloud is told the lips will not move', async ({ page }) => {
+test('a learner whose sample cannot be played is told the lips will not move', async ({ page }) => {
   await stubSpeech(page, 'fails')
   await page.goto('/profile/tutor')
 
   await page.getByRole('button', { name: 'Play a sample' }).click()
   await expect(
-    page.getByText('This device cannot read aloud, so the tutor’s lips will not move.'),
+    page.getByText('The sample cannot be played right now, so the tutor’s lips will not move.'),
   ).toBeVisible()
 })

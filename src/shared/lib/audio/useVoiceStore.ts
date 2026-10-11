@@ -2,19 +2,19 @@ import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 import { baseLanguage, VOICE_KINDS, type VoiceKind } from './voices'
 
-/** The voice chosen for each kind of tutor, as its `voiceURI`. */
+/** The voice chosen for each kind of tutor, as its id (`af_heart`). */
 export type ChosenVoices = Partial<Record<VoiceKind, string>>
 
 type VoiceChoices = {
   /**
-   * The voices the learner chose, by base language (`en`, `bn`): one for the male tutor and one
-   * for the female. A kind without an entry is spoken with the device's first voice of that kind.
+   * The voices the learner chose, by base language (`en`, `hi`): one for the male tutor and one
+   * for the female. A kind without an entry is spoken with that kind's default voice.
    */
   voices: Record<string, ChosenVoices>
 }
 
 type VoiceState = VoiceChoices & {
-  setVoice: (language: string, kind: VoiceKind, voiceURI: string) => void
+  setVoice: (language: string, kind: VoiceKind, voiceId: string) => void
 }
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
@@ -29,24 +29,26 @@ function readChoices(saved: unknown): Record<string, ChosenVoices> {
     if (!isRecord(kinds)) continue
     const chosen: ChosenVoices = {}
     for (const kind of VOICE_KINDS) {
-      const voiceURI = kinds[kind]
-      if (typeof voiceURI === 'string') chosen[kind] = voiceURI
+      const voiceId = kinds[kind]
+      if (typeof voiceId === 'string') chosen[kind] = voiceId
     }
     if (Object.keys(chosen).length > 0) voices[language] = chosen
   }
   return voices
 }
 
-// Voices belong to the device, so these choices stay on it even once learners have accounts.
+// A choice made while the app spoke with the device's own voices names a voice the server does
+// not have; it is passed over when a voice is picked (`voiceForFace`), not cleaned up here.
+// TODO(backend): keep these with the learner's account, now that the voices are the same everywhere.
 export const useVoiceStore = create<VoiceState>()(
   persist(
     (set) => ({
       voices: {},
-      setVoice: (language, kind, voiceURI) =>
+      setVoice: (language, kind, voiceId) =>
         set((state) => {
           const base = baseLanguage(language)
           return {
-            voices: { ...state.voices, [base]: { ...state.voices[base], [kind]: voiceURI } },
+            voices: { ...state.voices, [base]: { ...state.voices[base], [kind]: voiceId } },
           }
         }),
     }),
@@ -62,6 +64,6 @@ export const useVoiceStore = create<VoiceState>()(
   ),
 )
 
-/** The voice chosen for a kind of tutor in a language, if any. For code outside React. */
-export const chosenVoiceURI = (language: string, kind: VoiceKind): string | undefined =>
-  useVoiceStore.getState().voices[baseLanguage(language)]?.[kind]
+/** The voices chosen for a language, by kind of tutor. For code outside React. */
+export const chosenVoices = (language: string): ChosenVoices =>
+  useVoiceStore.getState().voices[baseLanguage(language)] ?? {}

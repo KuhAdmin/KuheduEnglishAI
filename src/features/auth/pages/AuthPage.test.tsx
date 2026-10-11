@@ -1,16 +1,26 @@
+import type { SessionUser } from '@kuhedu/contracts'
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { createMemoryRouter, RouterProvider } from 'react-router'
-import { beforeAll, beforeEach, describe, expect, it } from 'vitest'
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
+import { useSessionStore } from '@/shared/lib/account'
 import { LANDING_CONFIG_NAME } from '@/shared/lib/appConfig/landingConfig'
 import { LANGUAGES_CONFIG_NAME } from '@/shared/lib/appConfig/languagesConfig'
 import { settingsRepository } from '@/shared/lib/appConfig/settingsRepository'
 import { AppLanguageProvider, useLanguageStore } from '@/shared/lib/i18n'
 import { paths } from '@/shared/lib/paths'
-import { authRoutes } from '../index'
-import { verifyLocalAdmin } from '../lib/localAdmin'
+import { fakeServer, refusal, serverUnreachable } from '@/test/fakeServer'
+import { authRoutes, authStepRoutes } from '../index'
 import { requireAdmin } from '../lib/requireAdmin'
-import { useSessionStore } from '../store/useSessionStore'
+
+const learner: SessionUser = {
+  id: 'u-1',
+  email: 'asha@example.com',
+  emailVerified: false,
+  role: 'learner',
+  displayName: null,
+}
+const admin: SessionUser = { ...learner, id: 'u-2', email: 'admin@example.com', role: 'admin' }
 
 /** `language` is what the learner chose earlier; `null` for a newcomer. */
 function renderApp(initialPath: string = paths.signIn, language: string | null = null) {
@@ -18,8 +28,10 @@ function renderApp(initialPath: string = paths.signIn, language: string | null =
   const router = createMemoryRouter(
     [
       ...authRoutes,
+      ...authStepRoutes,
       { path: paths.landing, element: <h1>Landing</h1> },
       { path: paths.onboarding, element: <h1>Onboarding</h1> },
+      { path: paths.home, element: <h1>Journey</h1> },
       { path: paths.admin, loader: requireAdmin, element: <h1>Admin area</h1> },
     ],
     { initialEntries: [paths.landing, initialPath] },
@@ -40,25 +52,21 @@ async function fillIn(email: string, password: string) {
   await userEvent.type(screen.getByLabelText('Password'), password)
 }
 
-// The route is lazy; load its chunk up front so the first test does not wait on the transform.
+// The routes are lazy; load their chunks up front so the first test does not wait on the transform.
 beforeAll(async () => {
   await import('./AuthPage')
+  await import('./VerifyEmailPage')
 })
 
 beforeEach(() => {
   localStorage.clear()
-  useSessionStore.setState({ role: null })
+  useSessionStore.setState({ user: null, loaded: false })
   useLanguageStore.setState({ language: null })
+  fakeServer({ 'GET /auth/session': { body: { user: null } } })
 })
 
-describe('verifyLocalAdmin', () => {
-  it('accepts only the default admin credentials', () => {
-    expect(verifyLocalAdmin('admin', 'Kuhedu@123')).toBe(true)
-    expect(verifyLocalAdmin(' Admin ', 'Kuhedu@123')).toBe(true)
-    expect(verifyLocalAdmin('admin', 'kuhedu@123')).toBe(false)
-    expect(verifyLocalAdmin('admin', '')).toBe(false)
-    expect(verifyLocalAdmin('learner', 'Kuhedu@123')).toBe(false)
-  })
+afterEach(() => {
+  vi.unstubAllGlobals()
 })
 
 describe('AuthPage', () => {
@@ -72,7 +80,11 @@ describe('AuthPage', () => {
     expect(screen.getByRole('radio', { name: 'Sign Up' })).toBeChecked()
     expect(submitButton('Create Account')).toBeVisible()
     expect(screen.getByLabelText('Password')).toHaveAttribute('autocomplete', 'new-password')
-    expect(screen.queryByRole('button', { name: 'Forgot password?' })).not.toBeInTheDocument()
+    // A new account is told beforehand that a code will be sent.
+    expect(screen.getByLabelText('Email address')).toHaveAccessibleDescription(
+      'We’ll send a code to this address to verify it.',
+    )
+    expect(screen.queryByRole('link', { name: 'Forgot password?' })).not.toBeInTheDocument()
   })
 
   it('switches halves in place, keeping what was typed and dropping the complaints', async () => {
@@ -97,7 +109,8 @@ describe('AuthPage', () => {
     expect(await screen.findByRole('heading', { name: 'Landing' })).toBeVisible()
   })
 
-  it('checks a new account’s email and password before anything else', async () => {
+  it('checks a new account’s email and password before asking the server', async () => {
+    const { calls } = fakeServer()
     renderApp(paths.signUp)
     await userEvent.click(await screen.findByRole('button', { name: 'Create Account' }))
     expect(await screen.findByText('Enter your email address.')).toBeVisible()
@@ -108,52 +121,96 @@ describe('AuthPage', () => {
     await userEvent.click(submitButton('Create Account'))
     expect(await screen.findByText('Use at least 8 characters.')).toBeVisible()
     expect(screen.queryByText('Enter your email address.')).not.toBeInTheDocument()
+    expect(calls).toEqual([])
   })
 
-  it('says accounts are not available yet instead of pretending to create one', async () => {
-    const router = renderApp(paths.signUp)
-    await fillIn('learner@example.com', 'long-enough-password')
+  it('creates an account and goes on to the emailed code', async () => {
+    const { calls } = fakeServer({ 'POST /auth/sign-up': { status: 201, body: { user: learner } } })
+    renderApp(paths.signUp)
+    await fillIn(' Asha@Example.com', 'long-enough-password')
     await userEvent.click(submitButton('Create Account'))
 
-    expect(await screen.findByRole('alert')).toHaveTextContent('Accounts are coming soon.')
-    expect(router.state.location.pathname).toBe(paths.signUp)
-    expect(useSessionStore.getState().role).toBeNull()
-    expect(localStorage.getItem('kuhedu-session') ?? '').not.toContain('long-enough-password')
-
-    await userEvent.type(screen.getByLabelText('Password'), '!')
-    expect(screen.queryByRole('alert')).not.toBeInTheDocument()
-
-    await userEvent.click(screen.getByRole('button', { name: 'Continue with Google' }))
-    expect(screen.getByRole('alert')).toHaveTextContent('Accounts are coming soon.')
+    expect(await screen.findByRole('heading', { name: 'Check your email' })).toBeVisible()
+    expect(screen.getByText('We sent a 6-digit code to asha@example.com.')).toBeVisible()
+    expect(calls).toEqual([
+      {
+        method: 'POST',
+        path: '/auth/sign-up',
+        body: { email: 'asha@example.com', password: 'long-enough-password' },
+      },
+    ])
+    expect(useSessionStore.getState().user).toEqual(learner)
+    // Who is signed in is the server's to remember: the browser's storage holds none of it.
+    expect(JSON.stringify(localStorage)).not.toMatch(/asha|long-enough-password/)
   })
 
-  it('lets a visitor continue as a guest into onboarding', async () => {
+  it('says under the field that an address already has an account', async () => {
+    fakeServer({
+      'POST /auth/sign-up': refusal(409, 'conflict', { email: 'auth.emailTaken' }),
+    })
+    const router = renderApp(paths.signUp)
+    await fillIn('asha@example.com', 'long-enough-password')
+    await userEvent.click(submitButton('Create Account'))
+
+    expect(
+      await screen.findByText('This email already has an account. Sign in instead.'),
+    ).toBeVisible()
+    expect(screen.getByLabelText('Email address')).toBeInvalid()
+    expect(router.state.location.pathname).toBe(paths.signUp)
+    expect(useSessionStore.getState().user).toBeNull()
+  })
+
+  it('says so when the server cannot be reached, and a guest can still go on', async () => {
+    serverUnreachable()
     renderApp(paths.signUp)
-    await userEvent.click(await screen.findByRole('link', { name: 'Continue as Guest' }))
+    await fillIn('asha@example.com', 'long-enough-password')
+    await userEvent.click(submitButton('Create Account'))
+
+    expect(await screen.findByRole('alert')).toHaveTextContent('That did not work.')
+
+    await userEvent.click(screen.getByRole('link', { name: 'Continue as Guest' }))
     expect(await screen.findByRole('heading', { name: 'Onboarding' })).toBeVisible()
   })
 
-  it('opens the admin area for the default admin', async () => {
+  it('signs a learner in to their journey', async () => {
+    fakeServer({ 'POST /auth/sign-in': { body: { user: { ...learner, emailVerified: true } } } })
     renderApp()
-    await fillIn('admin', 'Kuhedu@123')
+    await fillIn('asha@example.com', 'the-password')
+    await userEvent.click(submitButton('Sign In'))
+    expect(await screen.findByRole('heading', { name: 'Journey' })).toBeVisible()
+  })
+
+  it('opens the admin area for an admin', async () => {
+    fakeServer({ 'POST /auth/sign-in': { body: { user: admin } } })
+    renderApp()
+    await fillIn('admin@example.com', 'the-password')
     await userEvent.click(submitButton('Sign In'))
 
     expect(await screen.findByRole('heading', { name: 'Admin area' })).toBeVisible()
-    expect(useSessionStore.getState().role).toBe('admin')
+    expect(useSessionStore.getState().user?.role).toBe('admin')
   })
 
   it('rejects wrong credentials without saying which part was wrong', async () => {
+    fakeServer({ 'POST /auth/sign-in': refusal(401, 'unauthenticated') })
     renderApp()
-    await fillIn('admin', 'wrong-password')
+    await fillIn('asha@example.com', 'wrong-password')
     await userEvent.click(submitButton('Sign In'))
 
     expect(await screen.findByRole('alert')).toHaveTextContent('Incorrect email or password.')
-    expect(useSessionStore.getState().role).toBeNull()
-    expect(screen.queryByRole('heading', { name: 'Admin area' })).not.toBeInTheDocument()
+    expect(useSessionStore.getState().user).toBeNull()
 
     // The message clears as soon as they start correcting.
     await userEvent.type(screen.getByLabelText('Password'), 'x')
     expect(screen.queryByRole('alert')).not.toBeInTheDocument()
+  })
+
+  it('asks someone who keeps trying to wait', async () => {
+    fakeServer({ 'POST /auth/sign-in': refusal(429, 'rate_limited') })
+    renderApp()
+    await fillIn('asha@example.com', 'a-guess')
+    await userEvent.click(submitButton('Sign In'))
+
+    expect(await screen.findByRole('alert')).toHaveTextContent('Too many attempts.')
   })
 
   it('asks for missing fields when signing in', async () => {
@@ -165,10 +222,27 @@ describe('AuthPage', () => {
     expect(screen.getByLabelText('Email address')).toBeInvalid()
   })
 
-  it('answers "Forgot password?" honestly while there are no accounts', async () => {
-    renderApp()
-    await userEvent.click(await screen.findByRole('button', { name: 'Forgot password?' }))
-    expect(screen.getByRole('alert')).toHaveTextContent('Accounts are coming soon.')
+  it('leads from "Forgot password?" to choosing a new one', async () => {
+    const router = renderApp()
+    await userEvent.click(await screen.findByRole('link', { name: 'Forgot password?' }))
+
+    expect(
+      await screen.findByRole('heading', { name: 'Forgot your password?' }, { timeout: 5000 }),
+    ).toBeVisible()
+    expect(router.state.location.pathname).toBe(paths.forgotPassword)
+  })
+
+  it('says Google sign-in is not available in a build without its id', async () => {
+    renderApp(paths.signUp)
+    await userEvent.click(await screen.findByRole('button', { name: 'Continue with Google' }))
+
+    expect(screen.getByRole('alert')).toHaveTextContent('Google sign-in is not available yet.')
+  })
+
+  it('lets a visitor continue as a guest into onboarding', async () => {
+    renderApp(paths.signUp)
+    await userEvent.click(await screen.findByRole('link', { name: 'Continue as Guest' }))
+    expect(await screen.findByRole('heading', { name: 'Onboarding' })).toBeVisible()
   })
 
   it('is shown in the learner’s language', async () => {
@@ -219,9 +293,41 @@ describe('AuthPage', () => {
     expect(within(picker).getByRole('option', { name: 'বাংলা' })).toHaveAttribute('lang', 'bn')
     expect(picker).toHaveValue('en')
   })
+})
 
-  it('sends an already signed-in admin straight to the admin area from sign-in only', async () => {
-    useSessionStore.setState({ role: 'admin' })
+describe('someone already signed in', () => {
+  it('is told who they are instead of being asked again, and can sign out', async () => {
+    const { calls } = fakeServer({ 'POST /auth/sign-out': {} })
+    useSessionStore.getState().setUser(learner)
+    renderApp()
+
+    expect(await screen.findByText('You are signed in as asha@example.com.')).toBeVisible()
+    expect(screen.queryByLabelText('Password')).not.toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Continue' })).toHaveAttribute('href', paths.home)
+    // Their address is not verified yet, so the way to do it is offered.
+    expect(screen.getByRole('link', { name: 'Verify your email' })).toBeVisible()
+
+    await userEvent.click(screen.getByRole('button', { name: 'Sign out' }))
+
+    expect(await screen.findByLabelText('Password')).toBeVisible()
+    expect(calls).toEqual([{ method: 'POST', path: '/auth/sign-out', body: undefined }])
+    expect(useSessionStore.getState().user).toBeNull()
+  })
+
+  it('stays signed in, and says so, when the server could not be told of the sign-out', async () => {
+    serverUnreachable()
+    useSessionStore.getState().setUser({ ...learner, emailVerified: true })
+    renderApp()
+
+    await userEvent.click(await screen.findByRole('button', { name: 'Sign out' }))
+
+    expect(await screen.findByRole('alert')).toHaveTextContent('That did not work.')
+    expect(screen.queryByRole('link', { name: 'Verify your email' })).not.toBeInTheDocument()
+    expect(useSessionStore.getState().user?.email).toBe('asha@example.com')
+  })
+
+  it('goes straight to the admin area from sign-in only, when an admin', async () => {
+    useSessionStore.getState().setUser(admin)
     renderApp(paths.signUp)
     expect(await screen.findByRole('button', { name: 'Create Account' })).toBeVisible()
 
@@ -238,17 +344,26 @@ describe('requireAdmin', () => {
     expect(router.state.location.pathname).toBe(paths.signIn)
   })
 
-  it('lets a signed-in admin through, and no longer after sign-out', async () => {
-    useSessionStore.setState({ role: 'admin' })
+  it('waits for the server to say who is signed in, and lets an admin through', async () => {
+    fakeServer({ 'GET /auth/session': { body: { user: admin } } })
     renderApp(paths.admin)
-    expect(await screen.findByRole('heading', { name: 'Admin area' })).toBeVisible()
 
-    useSessionStore.getState().signOut()
-    expect(() => requireAdmin()).toThrow()
+    expect(await screen.findByRole('heading', { name: 'Admin area' })).toBeVisible()
   })
 
-  it('remembers the session in this browser', () => {
-    useSessionStore.getState().signInAsAdmin()
-    expect(JSON.parse(localStorage.getItem('kuhedu-session') ?? '{}').state.role).toBe('admin')
+  it('keeps a signed-in learner out', async () => {
+    fakeServer({ 'GET /auth/session': { body: { user: learner } } })
+    const router = renderApp(paths.admin)
+
+    expect(await screen.findByText('You are signed in as asha@example.com.')).toBeVisible()
+    expect(router.state.location.pathname).toBe(paths.signIn)
+  })
+
+  it('keeps everyone out while there is no server to ask', async () => {
+    serverUnreachable()
+    const router = renderApp(paths.admin)
+
+    expect(await screen.findByRole('button', { name: 'Sign In' })).toBeVisible()
+    expect(router.state.location.pathname).toBe(paths.signIn)
   })
 })

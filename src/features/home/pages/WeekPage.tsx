@@ -10,6 +10,7 @@ import {
   useLessonProgressStore,
 } from '@/shared/lib/learner/lessonProgress'
 import { paths } from '@/shared/lib/paths'
+import { TutorNarrator } from '@/shared/lib/tutor/TutorNarrator'
 import { Button } from '@/shared/ui/Button'
 import { IconButton } from '@/shared/ui/IconButton'
 import { ProgressBar } from '@/shared/ui/ProgressBar'
@@ -21,8 +22,9 @@ import { lessonDayPath, sectionPath, weekPath } from '../lib/journeyProgress'
 /**
  * One week in overview: where it sits in the course, its real-life situation and what the
  * learner will be able to do by the end of it. Its button opens the first day not finished yet;
- * once all seven are, it says so and leads on to the next week. The route's loader has checked
- * the number.
+ * once all seven are, it says so and leads on to the next week. That button is the only way on
+ * to another week from here; any other week is opened from its section's list. The route's
+ * loader has checked the number.
  * TODO(lessons): a list of the week's days, to open a finished one again.
  */
 export function WeekPage() {
@@ -40,7 +42,12 @@ export function WeekPage() {
   if (!week) return null
 
   const format = (value: number) => formatNumber(language, value)
-  const nextWeek = <ArrowRight aria-hidden="true" className="size-6" />
+  // What the pinned button says; the tutor names it, so the two can never disagree.
+  const actionLabel = !weekDone
+    ? fillText(t('week.start'), { number: format(nextDay) })
+    : number < WEEK_COUNT
+      ? fillText(t('week.goToNext'), { number: format(number + 1) })
+      : t('week.toJourney')
 
   return (
     <StepScreen
@@ -50,27 +57,31 @@ export function WeekPage() {
       title={t('week.situationHeading')}
       subtitle={week.context}
       subtitleTone="strong"
+      topBarTone="soft"
       topBar={
-        <div className="flex items-center gap-2">
-          <IconButton asChild label={t('week.back')} className="-ms-2">
-            <Link to={sectionPath(sectionOfWeek(number))}>
-              <ArrowLeft aria-hidden="true" className="size-6" />
-            </Link>
-          </IconButton>
-          <ProgressBar
-            className="flex-1"
-            value={number / WEEK_COUNT}
-            label={t('week.progressLabel')}
+        <div className="flex flex-col pb-4">
+          {/* In the part of the screen that does not scroll, and first in it, padded as on Home
+              and a section: the tutor is in the same place on every screen. The band around it
+              is the top bar's own. */}
+          <TutorNarrator
+            className="rounded-none px-0"
+            cheering={weekDone}
+            line={
+              weekDone
+                ? fillText(t('tutorSays.weekDone'), { number: format(number), button: actionLabel })
+                : fillText(t('tutorSays.week'), { day: format(nextDay), button: actionLabel })
+            }
+            leading={
+              <IconButton asChild variant="secondary" label={t('week.back')}>
+                <Link to={sectionPath(sectionOfWeek(number))}>
+                  <ArrowLeft aria-hidden="true" className="size-6" />
+                </Link>
+              </IconButton>
+            }
           />
-          {number < WEEK_COUNT ? (
-            <IconButton asChild label={t('week.next')} className="-me-2">
-              <Link to={weekPath(number + 1)}>{nextWeek}</Link>
-            </IconButton>
-          ) : (
-            <IconButton disabled label={t('week.next')} className="-me-2">
-              {nextWeek}
-            </IconButton>
-          )}
+          {/* Under the tutor's two rows: the week's place in the course. It stands alone: an
+              arrow beside a bar reads as moving the bar, not as opening another week. */}
+          <ProgressBar value={number / WEEK_COUNT} label={t('week.progressLabel')} />
         </div>
       }
       footer={
@@ -89,19 +100,19 @@ export function WeekPage() {
             <Button asChild size="lg" fullWidth>
               {number < WEEK_COUNT ? (
                 <Link to={weekPath(number + 1)}>
-                  {fillText(t('week.goToNext'), { number: format(number + 1) })}
+                  {actionLabel}
                   <ArrowRight aria-hidden="true" className="size-5" />
                 </Link>
               ) : (
                 // The last week of the course has no next one.
-                <Link to={paths.home}>{t('week.toJourney')}</Link>
+                <Link to={paths.home}>{actionLabel}</Link>
               )}
             </Button>
           </div>
         ) : (
           <Button asChild size="lg" fullWidth>
             <Link to={lessonDayPath(number, nextDay)}>
-              {fillText(t('week.start'), { number: format(nextDay) })}
+              {actionLabel}
               <ArrowRight aria-hidden="true" className="size-5" />
             </Link>
           </Button>

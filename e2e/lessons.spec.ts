@@ -6,6 +6,7 @@ import {
   seedLanguage,
   seedSettings,
   signInAsAdmin,
+  spoken,
   stubSpeech,
 } from './helpers'
 
@@ -107,10 +108,26 @@ test('Week 1, Day 2: hear every word, then Next opens and the week moves on', as
   await word(page, 'goodbye').click()
   await expect(word(page, 'goodbye')).toHaveAttribute('aria-pressed', 'true')
   await expect(word(page, 'goodbye')).toHaveAccessibleName('goodbye Heard')
-  await expect(page.locator('section').getByText('goodbye')).toBeVisible()
+  // The panel shows it in the parts it is said in: the strong one named, the silent "e" crossed
+  // out. A screen reader still gets the word whole.
+  const parts = page.getByRole('list', { name: 'The word in parts' })
+  await expect(parts.getByRole('listitem')).toHaveText(['good', 'byeStrong'])
+  await expect(parts.locator('s')).toHaveText('e')
+  await expect(parts.locator('s')).toHaveCSS('text-decoration-line', 'line-through')
+  await expect(page.getByText('Crossed-out letters are not said')).toBeVisible()
+  await expect(page.locator('section').getByText('goodbye', { exact: true })).toHaveCount(1)
+  await expect(page.getByRole('button', { name: 'Tap to speak' })).toBeInViewport({ ratio: 1 })
+  await expect(next(page)).toBeInViewport({ ratio: 1 })
+  await expect(page.getByRole('heading', { level: 2, name: 'How to say it' })).toBeAttached()
+  await expectNoHorizontalScroll(page)
   await expect(next(page)).toBeDisabled()
 
-  await hear(page, week1Words.slice(0, 5))
+  // Slowly is a speed for every word that follows.
+  await page.getByText('Slowly', { exact: true }).click()
+  await word(page, 'hello').click()
+  await expect(word(page, 'hello')).toHaveAccessibleName('hello Heard')
+
+  await hear(page, week1Words.slice(1, 5))
   await expect(next(page)).toBeEnabled()
   await expect(page.getByText('Listen to every word once to continue.')).toHaveCount(0)
 
@@ -149,8 +166,9 @@ test('Week 1, Day 3: a Bengali learner translates each sentence, then the day is
   await expect(page.getByText('৫টি বাক্যের মধ্যে বাক্য ১')).toBeVisible()
   const sentence = page.getByRole('region', { name: bn.sentence })
   await expect(sentence).toContainText('হ্যালো! সুপ্রভাত।')
-  // The browser under test has no Bengali voice, so nothing offers to read the sentence out.
-  await expect(sentence.getByRole('button')).toHaveCount(0)
+  // There is a Bengali voice, so the sentence can be heard in the language it is written in.
+  await sentence.getByRole('button', { name: 'বাক্যটি শুনুন' }).click()
+  await expect.poll(() => spoken(page)).toEqual([{ text: 'হ্যালো! সুপ্রভাত।', voice: 'bn_omega' }])
   await expect(page.getByText('দুপুরের আগে “Good morning” বলুন।')).toBeVisible()
   await expect(page.getByRole('navigation', { name: 'Main navigation' })).toHaveCount(0)
   await expectNoHorizontalScroll(page)
@@ -748,7 +766,8 @@ test.describe('practising the pronunciation', () => {
     // Another word is another attempt.
     await word(page, 'name').click()
     await expect(listen).toHaveCount(0)
-    await expect(page.locator('section').getByText('name')).toBeVisible()
+    // The panel now shows that word, in the parts it is said in (one, with a silent "e").
+    await expect(page.getByRole('list', { name: 'The word in parts' })).toHaveText('name')
     // Speaking opened nothing: Next still waits for the words to be heard.
     await expect(next(page)).toBeDisabled()
     await expectNoHorizontalScroll(page)
@@ -834,7 +853,8 @@ test.describe('answering in the role-play', () => {
     await expect(page.getByText('Your turn. Tap to speak.')).toBeVisible()
 
     await page.getByRole('button', { name: 'Tap to speak' }).click()
-    await expect(page.getByText(/^Recording…/)).toBeVisible()
+    // A tapped microphone waits for a voice too; the generated tone may or may not pass for one.
+    await expect(page.getByText(/^(Start speaking now|Recording…)$/)).toBeVisible()
     await page.getByRole('button', { name: 'Stop recording' }).click()
 
     await expect(talk(page)).toHaveText([
@@ -848,6 +868,37 @@ test.describe('answering in the role-play', () => {
     expect(Math.round(box?.height ?? 0)).toBeGreaterThanOrEqual(44)
     await listen.click()
     await expectNoHorizontalScroll(page)
+  })
+
+  test('once the browser allows the microphone, it opens by itself on the learner’s turn', async ({
+    page,
+    context,
+  }) => {
+    await context.grantPermissions(['microphone'])
+    await stubSpeech(page)
+    await page.goto('/lessons/weeks/1/days/4')
+    // Said before it happens, like the request for the microphone itself.
+    await expect(
+      page.getByText(
+        'Once the microphone is allowed, it opens by itself on your turn. Stop speaking for 3 seconds to end your turn.',
+      ),
+    ).toBeVisible()
+    await page.getByRole('button', { name: 'Start the conversation' }).click()
+
+    // No tap: the partner's line ends and the microphone is open, with its controls in reach.
+    await expect(page.getByText(/^(Start speaking now|Recording…)$/)).toBeVisible()
+    const stop = page.getByRole('button', { name: 'Stop recording' })
+    await expect(stop).toBeInViewport({ ratio: 1 })
+    await expect(page.getByRole('button', { name: 'Skip this turn' })).toBeInViewport({ ratio: 1 })
+    await expectNoHorizontalScroll(page)
+
+    // Tapping still ends the turn at once, without waiting for a pause.
+    await stop.click()
+    await expect(talk(page)).toHaveText([
+      'RaviHello! Good morning.',
+      'You could sayGood morning!',
+      'RaviHow are you?',
+    ])
   })
 })
 
@@ -941,6 +992,9 @@ test('words written by the admin open that week’s Day 2, pictures included', a
   // Week 1's built-in words can be reworded, and put back.
   await adminTab.getByRole('combobox', { name: 'Week' }).selectOption('1')
   await adminTab.getByRole('textbox', { name: 'Word or phrase (Word 1)' }).fill('hi')
+  // The parts it is said in were hello's, and are refused for another word.
+  await expect(adminTab.getByRole('button', { name: 'Save changes' })).toBeDisabled()
+  await adminTab.getByRole('textbox', { name: 'Parts it is said in (Word 1)' }).fill('')
   await adminTab.getByRole('button', { name: 'Save changes' }).click()
   await expect(adminTab.getByRole('status')).toContainText('Saved')
   await learnerTab.goto('/lessons/weeks/1/days/2')
@@ -1147,7 +1201,7 @@ test('a device that cannot speak does not trap the learner', async ({ page }) =>
 
   await page.getByRole('button', { name: 'Play the conversation' }).click()
   await expect(page.getByRole('alert')).toHaveText(
-    'This device cannot play the conversation. Read it below, then continue.',
+    'The conversation cannot be played right now. Read it below, then continue.',
   )
   await expect(next(page)).toBeEnabled()
 })

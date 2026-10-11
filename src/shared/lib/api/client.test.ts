@@ -21,6 +21,33 @@ describe('apiRequest', () => {
     await expect(apiRequest('/x', { schema })).rejects.toBeInstanceOf(ApiError)
   })
 
+  it('reads why the server refused, and which fields are at fault', async () => {
+    mockFetch(400, {
+      error: {
+        code: 'validation_failed',
+        message: 'The request is not valid',
+        fields: { email: 'auth.emailInvalid' },
+      },
+    })
+
+    await expect(apiRequest('/x', { schema })).rejects.toMatchObject({
+      status: 400,
+      code: 'validation_failed',
+      fields: { email: 'auth.emailInvalid' },
+    })
+  })
+
+  it('claims no reason when the failure is not in the server’s own shape', async () => {
+    // What a proxy answers when the server is down.
+    mockFetch(502, { message: 'Bad Gateway' })
+
+    await expect(apiRequest('/x', { schema })).rejects.toMatchObject({
+      status: 502,
+      code: undefined,
+      fields: {},
+    })
+  })
+
   it('rejects responses that do not match the schema', async () => {
     mockFetch(200, { id: 42 })
     await expect(apiRequest('/x', { schema })).rejects.toThrow()

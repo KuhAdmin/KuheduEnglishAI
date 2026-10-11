@@ -42,70 +42,174 @@ export async function signInAsAdmin(page: Page) {
   await expect(page).toHaveURL(/\/admin\/texts$/)
 }
 
-/** A voice of the fake device: what `SpeechSynthesisVoice` has. */
-export type FakeVoice = { name: string; lang: string; localService: boolean; voiceURI: string }
+/** A voice as the server lists it (`GET /api/speech/voices`). */
+export type ServerVoice = {
+  id: string
+  name: string
+  language: string
+  gender: 'female' | 'male'
+  default: boolean
+}
 
-/** One thing the fake device was asked to say, and the voice it was to say it in. */
-export type Spoken = { text: string; voice: string | null }
+const serverVoice = (
+  id: string,
+  language: string,
+  isDefault = false,
+  // Read off the id unless given: a Bengali voice's id does not say it.
+  gender: ServerVoice['gender'] = id.charAt(1) === 'f' ? 'female' : 'male',
+): ServerVoice => {
+  const name = id.split('_')[1] ?? id
+  return {
+    id,
+    name: `${name.charAt(0).toUpperCase()}${name.slice(1)}`,
+    language,
+    gender,
+    default: isDefault,
+  }
+}
 
 /**
- * Replace the browser's text-to-speech, which has no voices in a headless browser. `works`
- * "speaks" instantly; `fails` reports an error, as a device with no usable voice would. The
- * device has the `voices` given (none unless a test is about them), and what it is asked to
- * say can be read back with `spoken`.
+ * A small version of what the server offers: two accents of English, Hindi, and Bengali, which
+ * is said by Hindi's speakers under ids of its own. Nothing for any other language.
+ */
+export const SERVER_VOICES: ServerVoice[] = [
+  serverVoice('af_heart', 'en-US', true),
+  serverVoice('af_bella', 'en-US'),
+  serverVoice('am_michael', 'en-US', true),
+  serverVoice('am_fenrir', 'en-US'),
+  serverVoice('bf_emma', 'en-GB'),
+  serverVoice('bm_george', 'en-GB'),
+  serverVoice('hf_alpha', 'hi-IN', true),
+  serverVoice('hm_omega', 'hi-IN', true),
+  serverVoice('bn_alpha', 'bn-IN', true, 'female'),
+  serverVoice('bn_omega', 'bn-IN', true, 'male'),
+]
+
+/** The same server before it could speak the language: what a learner of it then gets. */
+export const serverVoicesWithout = (language: string): ServerVoice[] =>
+  SERVER_VOICES.filter((voice) => !voice.language.startsWith(language))
+
+/**
+ * A twentieth of a second of silence, as a real sound file: the player is handed it, and one
+ * it cannot read would be reported as a sound that failed.
+ */
+function silentWav(): Buffer {
+  const rate = 8000
+  const samples = rate / 20
+  const data = Buffer.alloc(samples * 2)
+  const header = Buffer.alloc(44)
+  header.write('RIFF', 0)
+  header.writeUInt32LE(36 + data.length, 4)
+  header.write('WAVEfmt ', 8)
+  header.writeUInt32LE(16, 16)
+  header.writeUInt16LE(1, 20)
+  header.writeUInt16LE(1, 22)
+  header.writeUInt32LE(rate, 24)
+  header.writeUInt32LE(rate * 2, 28)
+  header.writeUInt16LE(2, 32)
+  header.writeUInt16LE(16, 34)
+  header.write('data', 36)
+  header.writeUInt32LE(data.length, 40)
+  return Buffer.concat([header, data])
+}
+
+/** One thing that was said: the text, and the id of the voice it was said in. */
+export type Spoken = { text: string; voice: string }
+
+/**
+ * Stand in for the server's speaking routes, which no test has behind it, and for the player:
+ * a sound "plays" at once and ends a moment later. `works`: the server lists `voices` and
+ * answers every sound. `fails`: it lists them, but no sound can be fetched. `unreachable`: it
+ * does not answer at all. What was said can be read back with `spoken`.
  */
 export async function stubSpeech(
   target: Page | BrowserContext,
-  mode: 'works' | 'fails' = 'works',
-  voices: readonly FakeVoice[] = [],
+  mode: 'works' | 'fails' | 'unreachable' = 'works',
+  voices: readonly ServerVoice[] = SERVER_VOICES,
 ) {
-  await target.addInitScript(
-    ([behaviour, deviceVoices]) => {
-      type Utterance = {
-        text: string
-        voice?: { voiceURI: string } | null
-        onstart?: () => void
-        onend?: () => void
-        onerror?: (event: { error: string }) => void
-      }
-      const said: { text: string; voice: string | null }[] = []
-      Object.defineProperty(window, '__spoken', { value: said, configurable: true })
-      const fake = {
-        getVoices: () => deviceVoices,
-        cancel: () => {},
-        speak: (utterance: Utterance) => {
-          said.push({ text: utterance.text, voice: utterance.voice?.voiceURI ?? null })
-          setTimeout(() => {
-            if (behaviour === 'fails') {
-              utterance.onerror?.({ error: 'synthesis-failed' })
-            } else {
-              utterance.onstart?.()
-              utterance.onend?.()
-            }
-          }, 50)
-        },
-      }
-      Object.defineProperty(window, 'speechSynthesis', { value: fake, configurable: true })
-      // The browser's own utterance only takes one of its own voices, and these are not.
-      class FakeUtterance {
-        voice: { voiceURI: string } | null = null
-        lang = ''
-        rate = 1
-        pitch = 1
-        constructor(readonly text: string) {}
-      }
-      Object.defineProperty(window, 'SpeechSynthesisUtterance', {
-        value: FakeUtterance,
-        configurable: true,
-      })
-    },
-    [mode, voices] as const,
+  await target.route('**/api/speech/voices', (route) =>
+    mode === 'unreachable' ? route.abort() : route.fulfill({ json: { voices } }),
   )
+  const sound = silentWav()
+  await target.route('**/api/speech/audio**', (route) => {
+    if (mode === 'works') {
+      return route.fulfill({ status: 200, contentType: 'audio/wav', body: sound })
+    }
+    if (mode === 'unreachable') return route.abort()
+    return route.fulfill({
+      status: 503,
+      json: { error: { code: 'unavailable', message: 'The speaking service is not answering' } },
+    })
+  })
+
+  await target.addInitScript(() => {
+    type Sound = { text: string; voice: string }
+    const said: Sound[] = []
+    Object.defineProperty(window, '__spoken', { value: said, configurable: true })
+
+    // Which sound a fetched blob is, and which sound a blob's address is: the player is only
+    // ever given the address.
+    const sounds = new WeakMap<Blob, Sound>()
+    const addresses = new Map<string, Sound>()
+
+    const realFetch = window.fetch.bind(window)
+    window.fetch = async (input, init) => {
+      const response = await realFetch(input, init)
+      const url = new URL(input instanceof Request ? input.url : String(input), location.href)
+      if (url.pathname.endsWith('/speech/audio') && response.ok) {
+        const sound = {
+          text: url.searchParams.get('text') ?? '',
+          voice: url.searchParams.get('voice') ?? '',
+        }
+        const realBlob = response.blob.bind(response)
+        response.blob = async () => {
+          const blob = await realBlob()
+          sounds.set(blob, sound)
+          return blob
+        }
+      }
+      return response
+    }
+
+    const realCreate = URL.createObjectURL.bind(URL)
+    URL.createObjectURL = (object: Blob | MediaSource) => {
+      const address = realCreate(object)
+      const sound = object instanceof Blob ? sounds.get(object) : undefined
+      if (sound) addresses.set(address, sound)
+      return address
+    }
+
+    const realPlay = HTMLMediaElement.prototype.play
+    HTMLMediaElement.prototype.play = function play(this: HTMLMediaElement) {
+      const sound = addresses.get(this.src)
+      // Anything else (a learner's own recording) is the browser's to play.
+      if (!sound && !this.src.startsWith('data:audio/')) return realPlay.call(this)
+      if (sound) said.push(sound)
+      if (sound) setTimeout(() => this.dispatchEvent(new Event('ended')), 50)
+      return Promise.resolve()
+    }
+  })
 }
 
-/** Everything the fake device (`stubSpeech`) has been asked to say since the page loaded. */
+/** Everything said (`stubSpeech`) since the page loaded: each text, and the voice it was in. */
 export const spoken = (page: Page) =>
   page.evaluate(() => (window as unknown as { __spoken: Spoken[] }).__spoken)
+
+/**
+ * Make "has the learner touched the page?" answer for real taps only. Playwright's own look at
+ * the page counts as a touch to the browser, so a test about what happens before the first tap
+ * would otherwise depend on which came first, its look or the app's first screen.
+ */
+export async function untouchedUntilTapped(target: Page | BrowserContext) {
+  await target.addInitScript(() => {
+    let touched = false
+    window.addEventListener('pointerdown', () => (touched = true), { capture: true })
+    Object.defineProperty(navigator, 'userActivation', {
+      get: () => ({ hasBeenActive: touched, isActive: touched }),
+      configurable: true,
+    })
+  })
+}
 
 /** Make the browser refuse the microphone, as when the learner taps "Block". */
 export async function denyMicrophone(target: Page | BrowserContext) {

@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen, within } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import {
   createMemoryRouter,
@@ -6,9 +6,10 @@ import {
   RouterProvider,
   useRouteError,
 } from 'react-router'
-import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import { settingsRepository } from '@/shared/lib/appConfig/settingsRepository'
-import { MicrophoneError } from '@/shared/lib/audio/microphone'
+import type * as Microphone from '@/shared/lib/audio/microphone'
+import { MicrophoneError, microphoneAllowed } from '@/shared/lib/audio/microphone'
 import { startRecording } from '@/shared/lib/audio/recorder'
 import {
   cancelSpeech,
@@ -17,6 +18,11 @@ import {
   speak,
   speakAll,
 } from '@/shared/lib/audio/speech'
+import {
+  canListenForVoice,
+  listenForVoice,
+  type VoiceReading,
+} from '@/shared/lib/audio/voiceActivity'
 import { WEEK_CHALLENGES_CONFIG_NAME } from '@/shared/lib/curriculum/weekChallenges'
 import { WEEK_DIALOGUES_CONFIG_NAME } from '@/shared/lib/curriculum/weekDialogues'
 import { WEEK_PICTURES_CONFIG_NAME } from '@/shared/lib/curriculum/weekPictures'
@@ -45,6 +51,18 @@ vi.mock('@/shared/lib/audio/speech', () => ({
   speakAll: vi.fn(),
 }))
 vi.mock('@/shared/lib/audio/recorder', () => ({ startRecording: vi.fn() }))
+// Nor a way to measure sound, or a browser that remembers allowing the microphone.
+vi.mock('@/shared/lib/audio/voiceActivity', () => ({
+  prepareListening: vi.fn(),
+  restListening: vi.fn(),
+  canListenForVoice: vi.fn(),
+  listenForVoice: vi.fn(),
+}))
+vi.mock('@/shared/lib/audio/microphone', async (importOriginal) => ({
+  ...(await importOriginal<typeof Microphone>()),
+  microphoneAllowed: vi.fn(),
+  primeMicrophonePermission: vi.fn(),
+}))
 
 function NotFound() {
   const error = useRouteError()
@@ -85,6 +103,7 @@ const recordUntilStopped: typeof startRecording = async () => {
   return {
     stop: () => end({ blob: new Blob(['voice']), durationMs: 1200, mimeType: 'audio/webm' }),
     finished,
+    stream: {} as MediaStream,
   }
 }
 
@@ -110,6 +129,10 @@ beforeEach(() => {
   vi.mocked(speakAll).mockReset().mockImplementation(speakToTheEnd)
   vi.mocked(speak).mockReset().mockResolvedValue('ended')
   vi.mocked(startRecording).mockReset().mockImplementation(recordUntilStopped)
+  // Like a first visit on a device that cannot measure sound: every turn is taken by tapping.
+  vi.mocked(microphoneAllowed).mockReset().mockReturnValue(false)
+  vi.mocked(canListenForVoice).mockReset().mockReturnValue(false)
+  vi.mocked(listenForVoice).mockReset().mockReturnValue(null)
 })
 
 describe('Day 1: Watch and listen', () => {
@@ -147,18 +170,20 @@ describe('Day 1: Watch and listen', () => {
     expect(speakAll).not.toHaveBeenCalled()
   })
 
-  it('reads the conversation aloud, one pitch per speaker, and then opens Next', async () => {
+  it('reads the conversation aloud, each speaker in a voice of their own, and then opens Next', async () => {
     renderDay()
     await step()
 
     await userEvent.click(screen.getByRole('button', { name: 'Play the conversation' }))
 
+    // The speakers are numbered as they first speak; which voice each number has is the
+    // speech module's to say.
     const [parts, options] = vi.mocked(speakAll).mock.lastCall ?? []
     expect(parts).toHaveLength(9)
     expect(parts?.slice(0, 3)).toEqual([
-      { text: 'Hello! Good morning.', pitch: 1.1 },
-      { text: 'Good morning! How are you?', pitch: 0.85 },
-      { text: 'I’m fine, thank you. And you?', pitch: 1.1 },
+      { text: 'Hello! Good morning.', speaker: 0 },
+      { text: 'Good morning! How are you?', speaker: 1 },
+      { text: 'I’m fine, thank you. And you?', speaker: 0 },
     ])
     expect(options?.rate).toBe(1)
 
@@ -214,7 +239,7 @@ describe('Day 1: Watch and listen', () => {
       screen.getByRole('button', { name: 'Listen to this line: Good morning! How are you?' }),
     )
     expect(vi.mocked(speakAll).mock.lastCall?.[0]).toEqual([
-      { text: 'Good morning! How are you?', pitch: 0.85 },
+      { text: 'Good morning! How are you?', speaker: 1 },
     ])
     expect(next()).toBeDisabled()
   })
@@ -250,7 +275,7 @@ describe('Day 1: Watch and listen', () => {
       await userEvent.click(screen.getByRole('button', { name: 'Play the conversation' }))
 
       expect(await screen.findByRole('alert')).toHaveTextContent(
-        'This device cannot play the conversation. Read it below, then continue.',
+        'The conversation cannot be played right now. Read it below, then continue.',
       )
       expect(next()).toBeEnabled()
       // Not being able to hear it is not having heard it.
@@ -356,6 +381,65 @@ describe('Day 1: Watch and listen', () => {
   })
 })
 
+describe('going back a day, to go through it again', () => {
+  const previous = (day: number) => screen.queryByRole('link', { name: `Go back to Day ${day}` })
+
+  it.each([2, 3, 4, 5, 6, 7])('Day %i has a way back to the day before it', async (day) => {
+    renderDay(`/lessons/weeks/1/days/${day}`)
+    await screen.findByRole('link', { name: 'Back to the week' })
+
+    const back = previous(day - 1)
+    expect(back).toHaveAttribute('href', `/lessons/weeks/1/days/${day - 1}`)
+    // What is written on it is part of what it is called.
+    expect(back).toHaveTextContent(`Day ${day - 1}`)
+  })
+
+  it('Day 1 has none: the week’s overview is what lies behind it', async () => {
+    renderDay('/lessons/weeks/1/days/1')
+    await screen.findByRole('heading', { level: 1, name: 'Watch and listen' })
+
+    expect(screen.queryByRole('link', { name: /^Go back to Day/ })).toBeNull()
+  })
+
+  it.each([
+    ['a part of the review', '/lessons/weeks/1/days/6?part=quiz', 'Back to the review'],
+    [
+      'a challenge under way',
+      '/lessons/weeks/1/days/7?scenario=1&level=standard',
+      'Back to the scenarios',
+    ],
+  ])('%s has only its own way back, to the day it belongs to', async (_, path, backName) => {
+    renderDay(path)
+
+    expect(await screen.findByRole('link', { name: backName })).toBeVisible()
+    expect(screen.queryByRole('link', { name: /^Go back to Day/ })).toBeNull()
+    expect(screen.queryByRole('link', { name: 'Back to the week' })).toBeNull()
+  })
+
+  it('opens the day before with nothing locked, when it was finished', async () => {
+    useLessonProgressStore.setState({ heardWeeks: [1], doneDays: { 1: [1] } })
+    const router = renderDay('/lessons/weeks/1/days/2')
+    await screen.findByRole('heading', { level: 1, name: 'Learn useful words' })
+
+    await userEvent.click(previous(1) as HTMLElement)
+
+    expect(await screen.findByRole('heading', { level: 1, name: 'Watch and listen' })).toBeVisible()
+    expect(router.state.location.pathname).toBe('/lessons/weeks/1/days/1')
+    expect(next()).toBeEnabled()
+    // Going through it again changes nothing that was done.
+    await userEvent.click(next())
+    expect(progress().doneDays).toEqual({ 1: [1] })
+  })
+
+  it('counts the day in the learner’s digits, in their language', async () => {
+    useLanguageStore.setState({ language: 'bn' })
+    renderDay('/lessons/weeks/1/days/3')
+
+    const back = await screen.findByRole('link', { name: 'দিন ২-এ ফিরে যান' })
+    expect(back).toHaveTextContent('দিন ২')
+  })
+})
+
 describe('Day 2: Learn useful words', () => {
   const day2 = '/lessons/weeks/1/days/2'
   const step = () => screen.findByRole('heading', { level: 1, name: 'Learn useful words' })
@@ -456,6 +540,92 @@ describe('Day 2: Learn useful words', () => {
     expect(within(first as HTMLElement).getByText('hello')).toHaveAttribute('lang', 'en')
   })
 
+  describe('how a word is said', () => {
+    const parts = () =>
+      within(screen.getByRole('list', { name: 'The word in parts' }))
+        .getAllByRole('listitem')
+        .map((part) => part.textContent)
+    const tips = () => {
+      const card = screen.getByRole('heading', { level: 2, name: 'How to say it' }).parentElement
+      return within(card as HTMLElement)
+        .getAllByRole('listitem')
+        .map((tip) => tip.textContent)
+    }
+
+    it('shows the parts of the word being practised, and names the strong one', async () => {
+      renderDay(day2)
+      await step()
+
+      expect(parts()).toEqual(['hel', 'loStrong'])
+      expect(screen.getByText('lo')).toHaveAttribute('lang', 'en')
+      expect(screen.queryByText(/^Crossed-out letters/)).toBeNull()
+
+      await userEvent.click(card('nice to meet you'))
+      expect(parts()).toEqual(['nice', 'to', 'meetStrong', 'you'])
+    })
+
+    it('crosses out the letters that are not said, and says which to a screen reader', async () => {
+      renderDay(day2)
+      await step()
+      await userEvent.click(card('name'))
+
+      // One part: nothing to call strong.
+      expect(parts()).toEqual(['name'])
+      const crossed = within(screen.getByRole('list', { name: 'The word in parts' })).getByText('e')
+      expect(crossed.tagName).toBe('S')
+      expect(crossed).toHaveAttribute('aria-hidden', 'true')
+      expect(screen.getByText(/^Crossed-out letters are not said/)).toHaveTextContent(
+        'Crossed-out letters are not said: e',
+      )
+    })
+
+    it('gives that word’s tips, which change with the word', async () => {
+      renderDay(day2)
+      await step()
+      expect(tips()).toEqual([
+        'Say the second part longer and louder.',
+        'Keep the first part short and soft.',
+      ])
+
+      await userEvent.click(card('name'))
+      expect(tips()).toEqual(['The “a” sounds like “ay”.', 'The last “e” is not said.'])
+    })
+
+    it('says the words slowly when asked, and that counts as heard too', async () => {
+      renderDay(day2)
+      await step()
+      expect(screen.getByRole('radio', { name: 'Normal' })).toBeChecked()
+
+      await userEvent.click(screen.getByRole('radio', { name: 'Slowly' }))
+      await userEvent.click(card('hello'))
+
+      expect(speak).toHaveBeenLastCalledWith('hello', { rate: 0.75 })
+      expect(card('hello')).toHaveAccessibleName('hello Heard')
+    })
+
+    it('gives the tips in the learner’s language, and in English where theirs has none', async () => {
+      useLanguageStore.setState({ language: 'bn' })
+      renderDay(day2)
+      await screen.findByRole('heading', { level: 1, name: 'দরকারি শব্দ শিখুন' })
+
+      const own = screen.getByText('প্রথম অংশটি ছোট ও হালকা রাখুন।')
+      expect(own.closest('ul')).toHaveAttribute('lang', 'bn')
+      expect(screen.getByText('জোর দিন')).toBeVisible()
+
+      const written = {
+        word: 'coffee',
+        syllables: ['cof', 'fee'],
+        stress: 1,
+        tips: { en: ['Say “cof” louder.'] },
+      }
+      act(() => settingsRepository.write(WEEK_VOCABULARY_CONFIG_NAME, { 1: { words: [written] } }))
+      expect((await screen.findByText('Say “cof” louder.')).closest('ul')).toHaveAttribute(
+        'lang',
+        'en',
+      )
+    })
+  })
+
   it('lets a learner go on when the device cannot say the words', async () => {
     vi.mocked(speak).mockRejectedValue(new Error('no voice'))
     renderDay(day2)
@@ -464,9 +634,11 @@ describe('Day 2: Learn useful words', () => {
 
     await userEvent.click(card('hello'))
     expect(await screen.findByRole('alert')).toHaveTextContent(
-      'This device cannot play the words. Read them, then continue.',
+      'The words cannot be played right now. Read them, then continue.',
     )
     expect(next()).toBeEnabled()
+    // A speed for a voice that is not there would be a control that does nothing.
+    expect(screen.queryByRole('group', { name: 'Speed' })).toBeNull()
   })
 
   describe('practising the pronunciation', () => {
@@ -551,6 +723,11 @@ describe('Day 2: Learn useful words', () => {
 
       fireEvent.error(picture)
       expect(card('coffee')).toHaveTextContent('ccoffee/ˈkɒfi/')
+
+      // Words with nothing written about how they are said are shown whole, with no tips.
+      expect(screen.getByText('coffee', { selector: 'section span' })).toBeVisible()
+      expect(screen.queryByRole('list', { name: 'The word in parts' })).toBeNull()
+      expect(screen.queryByRole('heading', { level: 2, name: 'How to say it' })).toBeNull()
     })
 
     it('opens the day for a week once it has words', async () => {
@@ -598,7 +775,7 @@ describe('Day 3: Translate and speak', () => {
 
       const card = screen.getByRole('region', { name: bn.sentence })
       expect(within(card).getByText('হ্যালো! সুপ্রভাত।')).toHaveAttribute('lang', 'bn')
-      // This device has no Bengali voice, so no button promises to read it out.
+      // Without a voice for Bengali, no button promises to read it out.
       expect(within(card).queryByRole('button')).toBeNull()
 
       expect(field()).toHaveValue('')
@@ -691,7 +868,7 @@ describe('Day 3: Translate and speak', () => {
       expect(progress().doneDays).toEqual({ 1: [3] })
     })
 
-    it('reads the sentence out in Bengali on a device that has a voice for it', async () => {
+    it('reads the sentence out in Bengali when there is a voice for it', async () => {
       vi.mocked(hasVoiceFor).mockImplementation((language) => language === 'bn')
       await openInBengali()
 
@@ -739,7 +916,7 @@ describe('Day 3: Translate and speak', () => {
 
       await userEvent.click(button('Listen to the sentence'))
       expect(await screen.findByRole('alert')).toHaveTextContent(
-        'This device cannot play the sentence. Read it, then say it.',
+        'The sentence cannot be played right now. Read it, then say it.',
       )
     })
 
@@ -919,12 +1096,184 @@ describe('Day 4: a role-play', () => {
       'You could sayGood morning!',
       'RaviHow are you?',
     ])
-    // Their own recording stays with the turn it answered, until they record again.
+    // Their own recording stays with the turn it answered, until another answer replaces it.
     await userEvent.click(await screen.findByRole('button', { name: 'Listen to yourself' }))
     expect(play).toHaveBeenCalledOnce()
     await userEvent.click(button('Tap to speak'))
-    expect(screen.queryByRole('button', { name: 'Listen to yourself' })).toBeNull()
+    await screen.findByText(/^Recording…/)
+    expect(button('Listen to yourself')).toBeVisible()
+    await userEvent.click(button('Stop recording'))
+
+    // It has moved to the second answer: the last of the two "You could say" bubbles.
+    const answers = () =>
+      within(screen.getByRole('list', { name: 'Conversation' }))
+        .getAllByRole('listitem')
+        .filter((item) => item.textContent.startsWith('You could say'))
+    await waitFor(() =>
+      expect(
+        within(answers().at(-1) ?? document.body).getByRole('button', {
+          name: 'Listen to yourself',
+        }),
+      ).toBeVisible(),
+    )
+    expect(answers()).toHaveLength(2)
+    expect(screen.getAllByRole('button', { name: 'Listen to yourself' })).toHaveLength(1)
     play.mockRestore()
+  })
+
+  describe('taking turns without tapping', () => {
+    /** What the device makes of the microphone's sound, as the test tells it. */
+    let report: (reading: VoiceReading) => void = () => {}
+    let clockAhead: ReturnType<typeof vi.spyOn> | null = null
+
+    /** A device that can tell whether someone is speaking. */
+    const hearing = () => {
+      vi.mocked(canListenForVoice).mockReturnValue(true)
+      vi.mocked(listenForVoice).mockImplementation((_stream, onReading) => {
+        report = onReading
+        return () => {}
+      })
+    }
+    /** A browser that has been given the microphone before, on such a device. */
+    const allowed = () => {
+      vi.mocked(microphoneAllowed).mockReturnValue(true)
+      hearing()
+    }
+    /** Time passes; the recording under way notices on its next tick. */
+    const later = (ms: number) => {
+      const now = performance.now()
+      clockAhead?.mockRestore()
+      clockAhead = vi.spyOn(performance, 'now').mockReturnValue(now + ms)
+    }
+    /** The learner is speaking right now. */
+    const speaking = () => report({ heard: true, lastVoiceAt: performance.now() })
+
+    afterEach(() => {
+      clockAhead?.mockRestore()
+      clockAhead = null
+    })
+
+    it('opens the microphone by itself after the partner’s line, and counts down the time to begin', async () => {
+      allowed()
+      await start()
+
+      expect(await screen.findByText('Start speaking now')).toBeVisible()
+      expect(startRecording).toHaveBeenCalledOnce()
+      // A turn may run for two minutes; the recorder's own limit is only a backstop.
+      expect(startRecording).toHaveBeenCalledWith({ maxDurationMs: 122_000 })
+      expect(screen.getByText('5')).toBeVisible()
+      expect(button('Stop recording')).toBeVisible()
+    })
+
+    it('never opens it by itself until the browser allows the microphone, but a tap follows the same rules', async () => {
+      hearing()
+      await start()
+
+      expect(await screen.findByText('Your turn. Tap to speak.')).toBeVisible()
+      expect(startRecording).not.toHaveBeenCalled()
+
+      await userEvent.click(button('Tap to speak'))
+      expect(await screen.findByText('Start speaking now')).toBeVisible()
+      expect(screen.getByText('5')).toBeVisible()
+    })
+
+    it('leaves the microphone to a tap on a device that cannot tell whether anyone speaks', async () => {
+      vi.mocked(microphoneAllowed).mockReturnValue(true)
+      await start()
+
+      expect(await screen.findByText('Your turn. Tap to speak.')).toBeVisible()
+      expect(startRecording).not.toHaveBeenCalled()
+
+      // Tapped, it records as before: no countdown that the device could not end.
+      await userEvent.click(button('Tap to speak'))
+      expect(await screen.findByText(/^Recording…/)).toBeVisible()
+      expect(screen.queryByText('Start speaking now')).toBeNull()
+    })
+
+    it('shuts the microphone when nothing is said in five seconds, and the turn waits', async () => {
+      allowed()
+      await start()
+      await screen.findByText('Start speaking now')
+
+      later(5100)
+
+      expect(await screen.findByText('Your turn. Tap to speak.')).toBeVisible()
+      expect(button('Tap to speak')).toBeVisible()
+      expect(screen.queryByText('5')).toBeNull()
+      // Nothing was said, so the conversation has not moved.
+      expect(said()).toHaveLength(1)
+      expect(speak).toHaveBeenCalledOnce()
+    })
+
+    it('drops the countdown when the learner speaks, and takes a pause of three seconds as their answer', async () => {
+      allowed()
+      await start()
+      await screen.findByText('Start speaking now')
+
+      speaking()
+      expect(await screen.findByText(/^Recording…/)).toBeVisible()
+      expect(screen.queryByText('5')).toBeNull()
+      expect(said()).toHaveLength(1)
+
+      later(3100)
+
+      await waitFor(() => expect(speak).toHaveBeenLastCalledWith('How are you?', { rate: 1 }))
+      expect(said()).toEqual([
+        'RaviHello! Good morning.',
+        'You could sayGood morning!',
+        'RaviHow are you?',
+      ])
+    })
+
+    it('counts down the last twenty seconds of a turn, then hands it to the partner', async () => {
+      allowed()
+      await start()
+      await screen.findByText('Start speaking now')
+
+      later(105_000)
+      speaking()
+      expect(await screen.findByText('Time is almost up')).toBeVisible()
+      expect(screen.getByText('15')).toBeVisible()
+      expect(said()).toHaveLength(1)
+
+      later(15_000)
+      speaking()
+      await waitFor(() => expect(speak).toHaveBeenLastCalledWith('How are you?', { rate: 1 }))
+      expect(said()).toHaveLength(3)
+    })
+
+    it('keeps the learner’s last answer to listen to when the microphone shuts on the next turn', async () => {
+      const play = vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue()
+      allowed()
+      await start()
+      await screen.findByText('Start speaking now')
+      speaking()
+      await screen.findByText(/^Recording…/)
+      later(3100)
+      // The second turn's microphone opens by itself too.
+      await waitFor(() => expect(startRecording).toHaveBeenCalledTimes(2))
+      await screen.findByText('Start speaking now')
+
+      later(5100)
+
+      await screen.findByText('Your turn. Tap to speak.')
+      await userEvent.click(button('Listen to yourself'))
+      expect(play).toHaveBeenCalledOnce()
+      play.mockRestore()
+    })
+
+    it('closes the microphone while the learner decides whether to leave', async () => {
+      allowed()
+      await start()
+      await screen.findByText('Start speaking now')
+
+      await userEvent.click(button('End chat'))
+      expect(screen.getByRole('heading', { level: 2, name: 'End the conversation?' })).toBeVisible()
+      await userEvent.click(button('Keep talking'))
+
+      expect(screen.getByText('Your turn. Tap to speak.')).toBeVisible()
+      expect(said()).toHaveLength(1)
+    })
   })
 
   it('lets a turn be skipped, so speaking is never a condition', async () => {
@@ -1066,7 +1415,7 @@ describe('Day 4: a role-play', () => {
       await start()
 
       expect(await screen.findByRole('alert')).toHaveTextContent(
-        'This device cannot say the lines aloud. Read them, then answer.',
+        'The lines cannot be said aloud right now. Read them, then answer.',
       )
       await userEvent.click(button('Skip this turn'))
       expect(said()).toHaveLength(3)
@@ -1183,6 +1532,8 @@ describe('Day 5: the week’s challenge', () => {
 
     await userEvent.click(button('Tap to speak'))
     expect(await screen.findByText(/^Recording… 0:0\d \/ 2:00$/)).toBeVisible()
+    // The recorder is given the same limit, or its own shorter one would end the take.
+    expect(startRecording).toHaveBeenCalledWith({ maxDurationMs: 120_000 })
     // While the attempt is under way there is nothing to judge yet.
     expect(screen.queryByRole('checkbox')).toBeNull()
     await userEvent.click(button('Stop recording'))
@@ -1324,7 +1675,7 @@ describe('Day 5: the week’s challenge', () => {
 
       await userEvent.click(button('Listen to this phrase: How are you?'))
       expect(await screen.findByRole('alert')).toHaveTextContent(
-        'This device cannot say the phrases aloud. Read them instead.',
+        'The phrases cannot be said aloud right now. Read them instead.',
       )
     })
   })
@@ -1812,7 +2163,7 @@ describe('Day 6: the week’s review', () => {
 
       await userEvent.click(button('Listen to the word: hello'))
       expect(await screen.findByRole('alert')).toHaveTextContent(
-        'This device cannot play the words. Read them, then continue.',
+        'The words cannot be played right now. Read them, then continue.',
       )
     })
 

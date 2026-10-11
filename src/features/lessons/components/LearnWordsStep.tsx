@@ -2,15 +2,20 @@ import { useState } from 'react'
 import { MicrophoneHelp } from '@/shared/lib/audio/MicrophoneHelp'
 import { isSpeechSupported } from '@/shared/lib/audio/speech'
 import { useSpeechPlayback } from '@/shared/lib/audio/useSpeechPlayback'
-import { wordMeaning, type WeekVocabulary } from '@/shared/lib/curriculum/weekVocabulary'
+import { wordMeaning, wordTips, type WeekVocabulary } from '@/shared/lib/curriculum/weekVocabulary'
 import { isEnglish, useLanguage, useT } from '@/shared/lib/i18n'
+import { SegmentedControl } from '@/shared/ui/SegmentedControl'
 import { StepScreen } from '@/shared/ui/StepScreen'
+import { SLOW_RATE } from '../hooks/useConversationPlayback'
 import { useSpokenPractice } from '../hooks/useSpokenPractice'
 import { revealOnMount } from '../lib/revealOnMount'
 import { LessonNextButton } from './LessonNextButton'
 import { LessonTopBar } from './LessonTopBar'
 import { PronunciationPractice } from './PronunciationPractice'
+import { TipsCard } from './TipsCard'
 import { WordCard } from './WordCard'
+
+type Speed = 'normal' | 'slow'
 
 export type LearnWordsStepProps = {
   vocabulary: WeekVocabulary
@@ -25,8 +30,9 @@ export type LearnWordsStepProps = {
 }
 
 /**
- * Day 2, "Learn useful words": tap a word to hear it, then say it and listen to yourself.
- * "Next" opens once every word has been heard. Speaking is never required — a learner whose
+ * Day 2, "Learn useful words": tap a word to hear it (slowly, if asked), see how it is said — its
+ * parts, the strong one, the letters that are not said, a tip or two — then say it and listen
+ * to yourself. Nothing said is judged. "Next" opens once every word has been heard. Speaking is never required — a learner whose
  * microphone is blocked must not be stuck — and neither is listening on a device with no voice.
  */
 export function LearnWordsStep({
@@ -48,11 +54,13 @@ export function LearnWordsStep({
   const selected = words.find((entry) => entry.word === selectedWord) ?? words[0]
   const [heard, setHeard] = useState<ReadonlySet<string>>(new Set())
   const [saying, setSaying] = useState<string | null>(null)
+  const [speed, setSpeed] = useState<Speed>('normal')
 
   const cannotPlay = playback.status === 'failed' || !isSpeechSupported()
   const allHeard = words.every((entry) => heard.has(entry.word))
   const canContinue = doneBefore || allHeard || cannotPlay
   const meaningLang = isEnglish(language) ? undefined : language
+  const tips = selected ? wordTips(selected, language) : undefined
 
   const handleSelect = async (word: string) => {
     // A new word starts a new attempt, and the device's voice must not be recorded as the
@@ -60,7 +68,7 @@ export function LearnWordsStep({
     if (word !== selected?.word || recording.phase !== 'recorded') recording.reset()
     setSelectedWord(word)
     setSaying(word)
-    const outcome = await playback.play(word)
+    const outcome = await playback.play(word, speed === 'slow' ? SLOW_RATE : 1)
     if (outcome === 'ended') setHeard((before) => new Set(before).add(word))
     setSaying((current) => (current === word ? null : current))
   }
@@ -75,6 +83,8 @@ export function LearnWordsStep({
           {selected && (
             <PronunciationPractice
               word={selected.word}
+              syllables={selected.syllables}
+              stress={selected.stress}
               phase={recording.phase}
               elapsedMs={recording.elapsedMs}
               firstTime={recording.attempts === 0}
@@ -101,6 +111,19 @@ export function LearnWordsStep({
           </p>
         )}
 
+        {!cannotPlay && (
+          <SegmentedControl
+            legend={t('lessonDay.words.speed')}
+            options={[
+              { value: 'normal', label: t('lessonDay.words.speedNormal') },
+              { value: 'slow', label: t('lessonDay.words.speedSlow') },
+            ]}
+            value={speed}
+            onChange={setSpeed}
+            fullWidth
+          />
+        )}
+
         <ul aria-label={t('lessonDay.words.list')} className="grid grid-cols-2 gap-3">
           {words.map((entry) => (
             <li key={entry.word}>
@@ -117,6 +140,10 @@ export function LearnWordsStep({
             </li>
           ))}
         </ul>
+
+        {tips && tips.tips.length > 0 && (
+          <TipsCard title={t('lessonDay.words.tips')} tips={tips.tips} lang={tips.lang} />
+        )}
 
         {recording.problem && (
           <div ref={revealOnMount}>

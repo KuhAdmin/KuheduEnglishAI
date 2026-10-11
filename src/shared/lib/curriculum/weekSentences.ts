@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 import { z } from 'zod'
 import { useAppConfig } from '../appConfig/useAppConfig'
-import { DEFAULT_LANGUAGE, primarySubtag } from '../i18n'
-import { byLanguage, isRecord, tidy, tidyByLanguage, tidyList } from './contentText'
+import { primarySubtag } from '../i18n'
+import { isRecord, tidy, tidyByLanguage, tidyList, tidyListByLanguage, tipsIn } from './contentText'
 import { isWeekNumber } from './curriculum'
 import { week1Sentences } from './sentences/week1'
 
@@ -46,10 +46,7 @@ function parseSentence(value: unknown): PracticeSentence | null {
     english,
     alsoAccepted: tidyList(value.alsoAccepted, MAX_SENTENCE_LENGTH, MAX_ALSO_ACCEPTED),
     translations: tidyByLanguage(value.translations, MAX_SENTENCE_TRANSLATION_LENGTH),
-    tips: byLanguage(value.tips, (entry) => {
-      const tips = tidyList(entry, MAX_TIP_LENGTH, MAX_TIPS)
-      return tips.length > 0 ? tips : null
-    }),
+    tips: tidyListByLanguage(value.tips, MAX_TIP_LENGTH, MAX_TIPS),
   }
 }
 
@@ -97,16 +94,8 @@ export function sentenceTranslation(
  * A sentence's tips for a learner: in their language if it has any, else in English. `lang` is
  * the language they are written in, for the element that shows them.
  */
-export function sentenceTips(
-  sentence: PracticeSentence,
-  language: string,
-): { lang: string; tips: string[] } {
-  for (const lang of [language, primarySubtag(language)]) {
-    const tips = sentence.tips[lang]
-    if (tips) return { lang, tips }
-  }
-  return { lang: DEFAULT_LANGUAGE, tips: sentence.tips[DEFAULT_LANGUAGE] ?? [] }
-}
+export const sentenceTips = (sentence: PracticeSentence, language: string) =>
+  tipsIn(sentence.tips, language)
 
 /** Every English sentence that counts as a right translation, the model answer first. */
 export const acceptedAnswers = (sentence: PracticeSentence): string[] => [

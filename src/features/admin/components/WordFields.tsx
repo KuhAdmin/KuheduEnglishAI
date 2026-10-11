@@ -12,6 +12,7 @@ import { adminText } from '../adminText'
 import type { EditLanguage } from '../hooks/useEditLanguage'
 import type { VocabularyWordErrors } from '../lib/validateVocabulary'
 import { ImageField } from './ImageField'
+import { WordSoundFields } from './WordSoundFields'
 
 const text = adminText.lessons
 
@@ -29,7 +30,7 @@ export type WordFieldsProps = {
   onRemove: () => void
 }
 
-/** One word to learn: how it is written, how it sounds, what it means, and its picture. */
+/** One word to learn: how it is written, how it sounds and is said, what it means, its picture. */
 export function WordFields({
   index,
   count,
@@ -42,9 +43,16 @@ export function WordFields({
 }: WordFieldsProps) {
   const name = `${text.word} ${index + 1}`
   // Every word has the same fields; its number tells them apart for assistive technology.
-  const named = (label: string) => (
+  const named = (label: string, language?: EditLanguage) => (
     <>
-      {label} <span className="sr-only">({name})</span>
+      {label}
+      {language && (
+        <>
+          {' '}
+          <span lang={language.code}>{language.name}</span>
+        </>
+      )}{' '}
+      <span className="sr-only">({name})</span>
     </>
   )
 
@@ -127,6 +135,14 @@ export function WordFields({
           onChange={(event) => setMeaning(translateTo.code, event.target.value)}
         />
       )}
+
+      <WordSoundFields
+        word={word}
+        errors={errors}
+        translateTo={translateTo}
+        named={named}
+        onChange={onChange}
+      />
 
       <ImageField
         label={`${text.wordPicture}: ${name}`}

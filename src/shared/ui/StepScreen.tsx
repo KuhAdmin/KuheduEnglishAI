@@ -13,6 +13,12 @@ export type StepScreenProps = {
   /** Stays in view above the heading (e.g. a close button and progress). */
   topBar?: ReactNode
   /**
+   * `soft` draws the top bar as a band in the theme's soft primary colour, from edge to edge and
+   * over the notch, so the part that stays is told apart from what scrolls under it. Controls
+   * in it then want the variants drawn for that colour (`IconButton` `secondary`).
+   */
+  topBarTone?: 'plain' | 'soft'
+  /**
    * The step's question (choices, inputs); scrolls if it does not fit. It is laid out in a
    * column as tall as the free space, so `flex-1` on a child fills it.
    */
@@ -36,15 +42,30 @@ export function StepScreen({
   subtitle,
   subtitleTone = 'muted',
   topBar,
+  topBarTone = 'plain',
   children,
   footer,
   headingRef,
 }: StepScreenProps) {
   const hasFooter = footer !== undefined
+  const band = topBar !== undefined && topBarTone === 'soft'
 
   return (
-    <div className="flex h-viewport flex-col pt-safe">
-      {topBar && <div className="pt-2 px-gutter">{topBar}</div>}
+    // A band keeps clear of the notch itself, so that its colour reaches the screen's top edge.
+    <div className={cn('flex h-viewport flex-col', !band && 'pt-safe')}>
+      {topBar && (
+        <div
+          className={cn(
+            // Above the content, or its shadow would be painted under it.
+            band &&
+              'relative z-(--z-sticky) bg-primary-soft pt-safe text-on-primary-soft shadow-sm',
+          )}
+        >
+          {/* A band leaves the space above and below to what is in it, so that a tutor in it
+              sits exactly where the tutor sits on other screens. */}
+          <div className={cn('px-gutter', !band && 'pt-2')}>{topBar}</div>
+        </div>
+      )}
       {/* `relative`: anything `absolute` inside (a visually hidden label) scrolls with the content. */}
       <main className="relative flex flex-1 flex-col overflow-y-auto scroll-contained px-gutter pb-4">
         <header

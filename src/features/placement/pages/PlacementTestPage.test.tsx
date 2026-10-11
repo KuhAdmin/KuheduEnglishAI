@@ -330,7 +330,7 @@ describe('a question', () => {
     renderTest()
 
     await heading('First, let’s listen')
-    expect(screen.getByText(/can’t play the audio/)).toBeVisible()
+    expect(screen.getByText(/audio can’t be played right now/)).toBeVisible()
     await tap('Continue')
 
     await heading('Now, a few questions')

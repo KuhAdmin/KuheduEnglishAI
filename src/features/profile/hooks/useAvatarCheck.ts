@@ -14,8 +14,7 @@ const CHEER_MS = 2500
 /**
  * Trying the tutor's face out: it says a sample sentence with its lips moving, then gives a
  * thumbs up for a moment, and smiles the rest of the time. The sample is said in that tutor's
- * voice (`voiceForFace`): the one chosen for its kind in Voice settings, else the device's first
- * voice of that kind.
+ * voice (`voiceForFace`): the one chosen for its kind in Voice settings, else that kind's default.
  */
 export function useAvatarCheck() {
   const mouth = useLipSync()
@@ -44,7 +43,7 @@ export function useAvatarCheck() {
       return
     }
     void playback
-      .playAll([{ text: sample }], voice ? { voiceURI: voice.id } : {})
+      .playAll([{ text: sample }], voice ? { voiceId: voice.id } : {})
       .then((outcome) => {
         // A device that cannot speak still shows what the face does; a sample cut short does not.
         if (outcome === 'cancelled') return

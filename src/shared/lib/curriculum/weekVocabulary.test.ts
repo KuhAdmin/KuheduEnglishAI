@@ -5,13 +5,24 @@ import {
   MAX_MEANING_LENGTH,
   MAX_VOCABULARY_WORDS,
   MAX_WORD_LENGTH,
+  syllableLetters,
+  syllablesSpell,
   weekVocabulariesSchema,
   weekVocabulary,
   wordMeaning,
+  wordTips,
 } from './weekVocabulary'
 
 const parse = (value: unknown) => weekVocabulariesSchema.parse(value)
-const word = { word: 'coffee', phonetic: '/ˈkɒfi/', imageUrl: null, meanings: { bn: 'কফি' } }
+// What a word has when nothing is written about how it is said.
+const unsaid = { syllables: [], stress: null, tips: {} }
+const word = {
+  word: 'coffee',
+  phonetic: '/ˈkɒfi/',
+  imageUrl: null,
+  meanings: { bn: 'কফি' },
+  ...unsaid,
+}
 
 describe('the built-in vocabulary', () => {
   it.each(Object.entries(builtInWeekVocabularies))(
@@ -31,6 +42,19 @@ describe('the built-in vocabulary', () => {
         expect(entry.phonetic).toMatch(/^\/.+\/$/)
         expect(wordMeaning(entry, 'bn')).toBeTruthy()
         expect(wordMeaning(entry, 'hi')).toBeTruthy()
+      }
+    }
+  })
+
+  it('says how every word is said: parts that spell it, and tips in all three languages', () => {
+    for (const vocabulary of Object.values(builtInWeekVocabularies)) {
+      for (const entry of vocabulary?.words ?? []) {
+        expect(syllablesSpell(entry.word, entry.syllables), entry.word).toBe(true)
+        // A word of one part has no strong part to mark; every other word has one.
+        if (entry.syllables.length > 1) expect(entry.stress, entry.word).not.toBeNull()
+        for (const language of ['bn', 'en', 'hi']) {
+          expect(entry.tips[language]?.length, `${entry.word} ${language}`).toBeGreaterThan(0)
+        }
       }
     }
   })
@@ -71,8 +95,9 @@ describe('weekVocabulariesSchema', () => {
             phonetic: '/ɡʊd/',
             imageUrl: '/words/a.webp',
             meanings: { bn: 'সুপ্রভাত', hi: 'सुप्रभात' },
+            ...unsaid,
           },
-          { word: 'name', phonetic: '', imageUrl: null, meanings: {} },
+          { word: 'name', phonetic: '', imageUrl: null, meanings: {}, ...unsaid },
         ],
       },
     })
@@ -106,11 +131,96 @@ describe('weekVocabulariesSchema', () => {
     const kept = parse({ 1: { words } })[1]?.words ?? []
 
     expect(kept).toHaveLength(MAX_VOCABULARY_WORDS)
-    expect(kept[0]).toEqual({ word: 'tea', phonetic: '', imageUrl: null, meanings: {} })
+    expect(kept[0]).toEqual({ word: 'tea', phonetic: '', imageUrl: null, meanings: {}, ...unsaid })
+  })
+
+  it('keeps how a word is said: its parts, the strong one, and tips by language', () => {
+    const said = {
+      word: 'Wednesday',
+      syllables: [' We(d)n(e)s ', 'day'],
+      stress: 1,
+      tips: {
+        hi: ['“d” नहीं बोला जाता।'],
+        en: [' The “d” is not said. ', '', 'x', 'y', 'z'],
+        ta: [],
+      },
+    }
+
+    expect(parse({ 1: { words: [said] } })[1]?.words[0]).toMatchObject({
+      syllables: ['We(d)n(e)s', 'day'],
+      stress: 1,
+      tips: { en: ['The “d” is not said.', 'x', 'y'], hi: ['“d” नहीं बोला जाता।'] },
+    })
+  })
+
+  it.each([
+    ['parts that spell another word', { syllables: ['Wed', 'nes'], stress: 1 }],
+    ['a part with nothing said in it', { syllables: ['(Wednes)', 'day'], stress: 1 }],
+    ['brackets left open', { syllables: ['We(dnes', 'day'], stress: 1 }],
+    ['more parts than a word may have', { syllables: 'Wednesday'.split(''), stress: 1 }],
+    ['parts that are not a list', { syllables: 'Wednes-day', stress: 1 }],
+  ])('drops %s, and the strong part with them', (_, written) => {
+    expect(parse({ 1: { words: [{ word: 'Wednesday', ...written }] } })[1]?.words[0]).toEqual({
+      word: 'Wednesday',
+      phonetic: '',
+      imageUrl: null,
+      meanings: {},
+      ...unsaid,
+    })
+  })
+
+  it.each([0, 3, 1.5, '1', null])('drops a strong part of %j from a word of two', (stress) => {
+    const written = { word: 'hello', syllables: ['hel', 'lo'], stress }
+    expect(parse({ 1: { words: [written] } })[1]?.words[0]).toMatchObject({
+      syllables: ['hel', 'lo'],
+      stress: null,
+    })
   })
 
   it.each([null, 'text', 4, []])('reads %j as "nothing written"', (value) => {
     expect(parse(value)).toEqual({})
+  })
+})
+
+describe('syllablesSpell', () => {
+  it('holds when the parts, brackets and spaces aside, are the word', () => {
+    expect(syllablesSpell('Wednesday', ['We(d)n(e)s', 'day'])).toBe(true)
+    expect(syllablesSpell('good morning', ['good', 'mor', 'ning'])).toBe(true)
+    expect(syllablesSpell('What’s', ['what’s'])).toBe(true)
+    expect(syllablesSpell('T-shirt', ['T', 'shirt'])).toBe(true)
+  })
+
+  it('fails for no parts, an empty part, and letters added, missing or out of place', () => {
+    expect(syllablesSpell('hello', [])).toBe(false)
+    expect(syllablesSpell('hello', ['hel', '', 'lo'])).toBe(false)
+    expect(syllablesSpell('hello', ['hel', 'low'])).toBe(false)
+    expect(syllablesSpell('hello', ['he', 'lo'])).toBe(false)
+    expect(syllablesSpell('hello', ['lo', 'hel'])).toBe(false)
+    expect(syllablesSpell('name', ['nam()e'])).toBe(false)
+    expect(syllablesSpell('name', ['na(m(e))'])).toBe(false)
+  })
+})
+
+describe('syllableLetters', () => {
+  it('tells the letters that are said from the ones that are not', () => {
+    expect(syllableLetters('We(d)n(e)s')).toEqual([
+      { text: 'We', silent: false },
+      { text: 'd', silent: true },
+      { text: 'n', silent: false },
+      { text: 'e', silent: true },
+      { text: 's', silent: false },
+    ])
+    expect(syllableLetters('day')).toEqual([{ text: 'day', silent: false }])
+  })
+})
+
+describe('wordTips', () => {
+  const tipped = { ...word, tips: { bn: ['বাংলা'], en: ['English'] } }
+
+  it('gives the learner’s language, through its base if need be, and English otherwise', () => {
+    expect(wordTips(tipped, 'bn-IN')).toEqual({ lang: 'bn', tips: ['বাংলা'] })
+    expect(wordTips(tipped, 'hi')).toEqual({ lang: 'en', tips: ['English'] })
+    expect(wordTips(word, 'hi')).toEqual({ lang: 'en', tips: [] })
   })
 })
 

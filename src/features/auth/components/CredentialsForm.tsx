@@ -1,11 +1,14 @@
 import { ArrowRight, Lock, Mail } from 'lucide-react'
-import type { FieldError } from 'react-hook-form'
-import { isTranslationKey, useT } from '@/shared/lib/i18n'
+import { Link } from 'react-router'
+import { useT } from '@/shared/lib/i18n'
+import { paths } from '@/shared/lib/paths'
 import { Button } from '@/shared/ui/Button'
 import { PasswordField } from '@/shared/ui/PasswordField'
 import { TextField } from '@/shared/ui/TextField'
 import type { CredentialsFormState } from '../hooks/useCredentialsForm'
+import { useFieldError } from '../hooks/useFieldError'
 import type { AuthMode } from '../types'
+import { AuthFeedbackMessage } from './AuthFeedbackMessage'
 
 export type CredentialsFormProps = {
   mode: AuthMode
@@ -15,16 +18,12 @@ export type CredentialsFormProps = {
 /** Email and password, with the action for the current half of the account screen. */
 export function CredentialsForm({ mode, form }: CredentialsFormProps) {
   const t = useT()
-  const { register, errors, feedback, submit, showUnavailable, clearFeedback } = form
+  const errorText = useFieldError()
+  const { register, errors, feedback, submit, busy, clearFeedback } = form
   const signingUp = mode === 'signUp'
-
-  // The schemas report problems as screen-text keys (see lib/credentialsSchema).
-  const errorText = (error: FieldError | undefined) =>
-    error?.message && isTranslationKey(error.message) ? t(error.message) : undefined
 
   return (
     <form noValidate onSubmit={submit} className="flex flex-col gap-4">
-      {/* TODO(auth): add the "We'll send an OTP to verify your email" hint with email verification. */}
       <TextField
         label={t('auth.email')}
         type="email"
@@ -35,6 +34,7 @@ export function CredentialsForm({ mode, form }: CredentialsFormProps) {
         spellCheck={false}
         enterKeyHint="next"
         startAdornment={<Mail className="size-5" />}
+        hint={signingUp ? t('auth.codeHint') : undefined}
         error={errorText(errors.email)}
         {...register('email', { onChange: clearFeedback })}
       />
@@ -51,31 +51,19 @@ export function CredentialsForm({ mode, form }: CredentialsFormProps) {
           {...register('password', { onChange: clearFeedback })}
         />
         {!signingUp && (
-          <button
-            type="button"
-            onClick={showUnavailable}
-            className="touch-target px-1 font-bold text-primary underline underline-offset-4 active:opacity-70"
+          <Link
+            to={paths.forgotPassword}
+            className="inline-flex touch-target items-center px-1 font-bold text-primary underline underline-offset-4 active:opacity-70"
           >
             {t('auth.forgotPassword')}
-          </button>
+          </Link>
         )}
       </div>
 
-      {feedback === 'rejected' && (
-        <p role="alert" className="rounded-md bg-danger-soft px-4 py-3 font-bold text-danger">
-          {t('auth.invalid')}
-        </p>
-      )}
-      {feedback === 'unavailable' && (
-        <p
-          role="alert"
-          className="rounded-md bg-primary-soft px-4 py-3 font-bold text-on-primary-soft"
-        >
-          {t('auth.unavailable')}
-        </p>
-      )}
+      <AuthFeedbackMessage feedback={feedback} />
 
-      <Button type="submit" size="lg" fullWidth>
+      {/* Not `disabled`, which would take the focus away from whoever just pressed it. */}
+      <Button type="submit" size="lg" fullWidth aria-disabled={busy || undefined}>
         {t(signingUp ? 'auth.signUpSubmit' : 'auth.signInSubmit')}
         <ArrowRight aria-hidden="true" className="size-5" strokeWidth={2.5} />
       </Button>

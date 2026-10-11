@@ -235,7 +235,7 @@ test.describe('admin and app side by side', () => {
     await expect(picture).toHaveAttribute('src', /^data:image\/(webp|png|jpeg);base64,/)
     expect(await picture.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0)
     // Other weeks keep the stand-in.
-    await learnerTab.getByRole('link', { name: 'Next week' }).click()
+    await learnerTab.goto('/home/weeks/21')
     await expect(learnerTab.getByText('Week 21 of 50')).toBeVisible()
     await expect(picture).toHaveCount(0)
 

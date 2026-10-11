@@ -5,20 +5,19 @@ import type { DialogueLine } from '@/shared/lib/curriculum/weekDialogues'
 /** Slower, but still natural speech. */
 export const SLOW_RATE = 0.75
 
-// One device voice plays everyone, so each speaker gets a pitch of their own.
-const SPEAKER_PITCHES = [1.1, 0.85, 1.3, 0.7]
-
-/** What the device is to say for each line, with one pitch per speaker. */
+/**
+ * What is to be said for each line, and by whom: the speakers are numbered in the order they
+ * first speak, and each number has a voice of its own (the first the learner's tutor's, the
+ * second the other tutor's).
+ */
 function toParts(lines: readonly DialogueLine[]) {
   const speakers = [...new Set(lines.map((line) => line.speaker))]
-  return lines.map((line) => ({
-    text: line.text,
-    pitch: SPEAKER_PITCHES[speakers.indexOf(line.speaker) % SPEAKER_PITCHES.length],
-  }))
+  return lines.map((line) => ({ text: line.text, speaker: speakers.indexOf(line.speaker) }))
 }
 
 /**
- * Reads a conversation aloud with the device's voice: all of it, or one line again. Knows
+ * Reads a conversation aloud, each speaker in a voice of their own: all of it, or one line
+ * again. Knows
  * which line is being said, and how many have been said in the current run.
  */
 export function useConversationPlayback(lines: readonly DialogueLine[]) {

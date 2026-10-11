@@ -10,6 +10,8 @@ test-results
 !.env.example
 .DS_Store
 Thumbs.db
+# Sounds the server has made and keeps (see server/src/modules/speech).
+server/var
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json

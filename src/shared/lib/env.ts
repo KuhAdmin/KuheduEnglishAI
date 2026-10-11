@@ -3,10 +3,11 @@ import { z } from 'zod'
 const envSchema = z.object({
   VITE_API_BASE_URL: z.string().default('/api'),
 
-  // Local admin sign-in — for testing while there is no backend. See features/auth/lib/localAdmin.
-  VITE_LOCAL_ADMIN: z.enum(['true', 'false']).default('true'),
-  VITE_LOCAL_ADMIN_USERNAME: z.string().min(1).default('admin'),
-  VITE_LOCAL_ADMIN_PASSWORD: z.string().min(1).default('Kuhedu@123'),
+  /**
+   * The app's Google sign-in id. It is public (Google's own script needs it in the page);
+   * without it "Continue with Google" says it is not available. The server has the same id.
+   */
+  VITE_GOOGLE_CLIENT_ID: z.string().min(1).optional(),
 })
 
 export const env = envSchema.parse(import.meta.env)

@@ -11,6 +11,8 @@ export type ActiveRecording = {
   stop: () => void
   /** Resolves when the recording has ended, however it ended, with the microphone released. */
   finished: Promise<Recording>
+  /** The microphone being recorded, for listening to it meanwhile; the recorder releases it. */
+  stream: MediaStream
 }
 
 export type StartRecordingOptions = {
@@ -83,5 +85,5 @@ export async function startRecording({
   })
 
   recorder.start()
-  return { stop, finished }
+  return { stop, finished, stream }
 }

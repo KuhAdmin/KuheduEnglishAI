@@ -9,12 +9,12 @@ const FRAME_MS = 85
 const STILL_TALKING: MouthShape[] = ['mid', 'open', 'mid', 'closed']
 
 /**
- * The shape of a mouth that moves with the device's voice, whatever on the screen asked it to
+ * The shape of a mouth that moves with the app's voice, whatever on the screen asked it to
  * speak; `rest` while it is silent.
  *
- * It follows the words where the device says when each begins, and otherwise runs through the
- * whole text at a likely pace from the moment the voice starts. Either way the shapes come from
- * the spelling (`mouthShapesFor`), so it looks like speech without being exact. With reduced
+ * A sound says when it starts and when it ends, not where in the text it is. So the mouth runs
+ * through the whole text at a likely pace from the moment the sound starts, with the shapes read
+ * off the spelling (`mouthShapesFor`): it looks like speech without being exact. With reduced
  * motion the mouth opens while the voice speaks and does not move.
  */
 export function useLipSync(): MouthShape {
@@ -25,8 +25,6 @@ export function useLipSync(): MouthShape {
     let queue: MouthShape[] = []
     let timer: ReturnType<typeof setInterval> | undefined
     let speaking = false
-    // Once a device has told us one word, it will tell us the rest: wait for them.
-    let followingWords = false
 
     const stop = () => {
       clearInterval(timer)
@@ -36,12 +34,11 @@ export function useLipSync(): MouthShape {
       const next = queue.shift()
       if (next) {
         setMouth(next)
-      } else if (speaking && !followingWords) {
+      } else if (speaking) {
         // The voice is slower than the guess: keep talking until it says it has ended.
         queue = [...STILL_TALKING]
       } else {
-        // Between two words the lips are together.
-        setMouth(speaking ? 'closed' : 'rest')
+        setMouth('rest')
         stop()
       }
     }
@@ -60,13 +57,9 @@ export function useLipSync(): MouthShape {
         setMouth('rest')
       } else if (reducedMotion) {
         setMouth('mid')
-      } else if (activity.type === 'start') {
-        speaking = true
-        followingWords = false
-        run(mouthShapesFor(activity.text), activity.rate)
       } else {
-        followingWords = true
-        run(mouthShapesFor(activity.word), activity.rate)
+        speaking = true
+        run(mouthShapesFor(activity.text), activity.rate)
       }
     })
 

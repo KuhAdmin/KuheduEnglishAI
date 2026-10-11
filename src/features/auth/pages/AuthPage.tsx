@@ -1,5 +1,6 @@
 import { ArrowLeft } from 'lucide-react'
 import { Link, Navigate, useMatch, useNavigate } from 'react-router'
+import { useSessionStore } from '@/shared/lib/account'
 import { useLandingConfig } from '@/shared/lib/appConfig/useLandingConfig'
 import { useT } from '@/shared/lib/i18n'
 import { paths } from '@/shared/lib/paths'
@@ -9,26 +10,29 @@ import { SegmentedControl } from '@/shared/ui/SegmentedControl'
 import { AuthAlternatives } from '../components/AuthAlternatives'
 import { AuthLanguageSelect } from '../components/AuthLanguageSelect'
 import { CredentialsForm } from '../components/CredentialsForm'
+import { SignedInNotice } from '../components/SignedInNotice'
 import { useCredentialsForm } from '../hooks/useCredentialsForm'
-import { useSessionStore } from '../store/useSessionStore'
 import type { AuthMode } from '../types'
 
 const modePaths = { signIn: paths.signIn, signUp: paths.signUp } satisfies Record<AuthMode, string>
 
 /**
  * Sign in / sign up, between the landing page and onboarding. One screen serves both paths, so
- * what was typed survives switching halves. See useCredentialsForm for what works today.
+ * what was typed survives switching halves. A learner who is already signed in is told so
+ * instead of being asked again.
  */
 export function AuthPage() {
   const t = useT()
   const navigate = useNavigate()
   const mode: AuthMode = useMatch(paths.signUp) ? 'signUp' : 'signIn'
   const { brand } = useLandingConfig()
-  const role = useSessionStore((state) => state.role)
+  const user = useSessionStore((state) => state.user)
   const form = useCredentialsForm(mode)
 
   // Only on the sign-in half, so an admin can still walk the newcomer's path in this browser.
-  if (mode === 'signIn' && role === 'admin') return <Navigate to={paths.admin} replace />
+  if (mode === 'signIn' && user?.role === 'admin') return <Navigate to={paths.admin} replace />
+  // Not while an attempt of this screen's own is leading on to the next one.
+  const signedInLearner = user?.role === 'learner' && !form.entering ? user : null
 
   const handleModeChange = (next: AuthMode) => {
     form.clearMessages()
@@ -64,24 +68,30 @@ export function AuthPage() {
         </p>
       </header>
 
-      <SegmentedControl
-        fullWidth
-        legend={t('auth.modeLegend')}
-        value={mode}
-        onChange={handleModeChange}
-        options={[
-          { value: 'signIn', label: t('auth.signInTab') },
-          { value: 'signUp', label: t('auth.signUpTab') },
-        ]}
-      />
+      {signedInLearner ? (
+        <SignedInNotice user={signedInLearner} />
+      ) : (
+        <>
+          <SegmentedControl
+            fullWidth
+            legend={t('auth.modeLegend')}
+            value={mode}
+            onChange={handleModeChange}
+            options={[
+              { value: 'signIn', label: t('auth.signInTab') },
+              { value: 'signUp', label: t('auth.signUpTab') },
+            ]}
+          />
 
-      <CredentialsForm mode={mode} form={form} />
+          <CredentialsForm mode={mode} form={form} />
 
-      <AuthAlternatives
-        mode={mode}
-        onGoogle={form.showUnavailable}
-        onSwitchMode={form.clearMessages}
-      />
+          <AuthAlternatives
+            mode={mode}
+            onGoogle={() => void form.continueWithGoogle()}
+            onSwitchMode={form.clearMessages}
+          />
+        </>
+      )}
     </div>
   )
 }

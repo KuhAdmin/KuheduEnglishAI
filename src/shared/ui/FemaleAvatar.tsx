@@ -44,17 +44,16 @@ export function FemaleAvatar({ mouth = 'rest', mood = 'neutral', ...rest }: Avat
         />
       </AvatarHead>
 
-      {/* Shoulders, in a top with a round neck. */}
-      <path d="M26 200 C26 162 58 144 100 144 C142 144 174 162 174 200 Z" fill={paint.cloth} />
-      <rect x={87} y={116} width={26} height={36} rx={11} fill={paint.neck} />
-      <path className="fill-(--figure-skin-shade)" d="M77 145 Q100 175 123 145 Q100 151 77 145 Z" />
-      <path
-        className="stroke-(--figure-top-light)"
-        d="M76 145 Q100 177 124 145"
-        fill="none"
-        strokeWidth={4}
-        strokeLinecap="round"
-      />
+      {/* Shoulders, in a top with a collar: it wraps the neck and opens in a small V at the front,
+          with a rounded leaf to each side. */}
+      <path d="M26 200 C26 159 58 140 100 140 C142 140 174 159 174 200 Z" fill={paint.cloth} />
+      <rect x={87} y={116} width={26} height={32} rx={11} fill={paint.neck} />
+      <path className="fill-(--figure-skin-shade)" d="M86 138 L100 161 L114 138 Z" />
+      <g className="fill-(--figure-top-light) stroke-(--figure-top-shade)" strokeWidth={1.2}>
+        <path d="M100 162 L84 136 Q69 142 64 156 Q75 168 89 170 Z" strokeLinejoin="round" />
+        <path d="M100 162 L116 136 Q131 142 136 156 Q125 168 111 170 Z" strokeLinejoin="round" />
+      </g>
+      <path className="stroke-(--figure-top-shade)" d="M100 162 V200" fill="none" strokeWidth={2} />
 
       <AvatarHead speaking={speaking}>
         {/* Head: face, the shadow her hair throws on it, then the hair swept across the forehead. */}

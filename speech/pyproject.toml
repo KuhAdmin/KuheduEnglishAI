@@ -1,0 +1,27 @@
+[project]
+name = "kuhedu-speech"
+version = "0.0.0"
+description = "Speaks with Kokoro, and assesses a learner's recording of one word, on our own machine."
+# Kokoro does not run on 3.13 or later yet.
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "kokoro>=0.9.4",
+  "soundfile>=0.12",
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.29",
+  "numpy>=1.24",
+  "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+# The scorer (assess/): not needed to speak. Pinned: sounds.py reads the shape of its results.
+assess = ["openpronounce==0.3.0", "praat-parselmouth>=0.4.5"]
+dev = ["pytest>=8", "httpx>=0.27", "praat-parselmouth>=0.4.5"]
+
+[tool.setuptools]
+packages = ["assess", "tts"]
+py-modules = ["evaluate"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

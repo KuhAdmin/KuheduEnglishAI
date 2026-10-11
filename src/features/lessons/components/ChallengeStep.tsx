@@ -54,7 +54,10 @@ export function ChallengeStep({
   const t = useT()
   const language = useLanguage()
   const playback = useSpeechPlayback()
-  const { recording, startSpeaking, stopSpeaking } = useSpokenPractice(playback.stop)
+  // Without it the recorder's own, shorter limit would end the take first.
+  const { recording, startSpeaking, stopSpeaking } = useSpokenPractice(playback.stop, {
+    maxDurationMs: MAX_CHALLENGE_TAKE_MS,
+  })
   const [ticked, setTicked] = useState<ReadonlySet<number>>(new Set())
   const [helpOpen, setHelpOpen] = useState(false)
   const [cannotRecord, setCannotRecord] = useState(false)

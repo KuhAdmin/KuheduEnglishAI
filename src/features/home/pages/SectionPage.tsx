@@ -4,6 +4,7 @@ import { useCurriculum } from '@/shared/lib/curriculum/useCurriculum'
 import { fillText, formatNumber, useLanguage, useT } from '@/shared/lib/i18n'
 import { paths } from '@/shared/lib/paths'
 import { IconButton } from '@/shared/ui/IconButton'
+import { JourneyTutor } from '../components/JourneyTutor'
 import { WeekCard } from '../components/WeekCard'
 import { useJourneyProgress } from '../lib/journeyProgress'
 
@@ -19,14 +20,32 @@ export function SectionPage() {
   if (!section) return null
 
   const number = (value: number) => formatNumber(language, value)
+  // The week the learner is on, where it is one of this section's: the one thing to point at.
+  const thisWeek = section.weeks.find((week) => week.week === currentWeek)
 
   return (
-    <div className="flex flex-col gap-5 pt-2">
-      <IconButton asChild label={t('journey.back')} className="-ms-2">
-        <Link to={paths.home}>
-          <ArrowLeft aria-hidden="true" className="size-6" />
-        </Link>
-      </IconButton>
+    <div className="flex flex-col gap-5">
+      <JourneyTutor
+        line={
+          thisWeek
+            ? fillText(t('tutorSays.sectionCurrent'), {
+                number: number(thisWeek.week),
+                situation: thisWeek.context,
+              })
+            : fillText(t('tutorSays.section'), {
+                from: number(section.firstWeek),
+                to: number(section.lastWeek),
+              })
+        }
+        // In the tutor's band, which does not scroll: the way back is always in reach.
+        leading={
+          <IconButton asChild variant="secondary" label={t('journey.back')}>
+            <Link to={paths.home}>
+              <ArrowLeft aria-hidden="true" className="size-6" />
+            </Link>
+          </IconButton>
+        }
+      />
 
       <header className="flex flex-col gap-1">
         <p className="text-sm font-extrabold text-primary">

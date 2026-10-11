@@ -6,6 +6,7 @@ export const adminText = {
   title: 'Kuhedu Admin',
   openApp: 'Open app',
   signOut: 'Sign out',
+  signOutFailed: 'Could not sign out: the server did not answer. You are still signed in.',
   sectionsLabel: 'Admin sections',
   localNotice:
     'No database yet: changes are saved in this browser only and show up in other tabs of the same browser.',
@@ -170,9 +171,18 @@ export const adminText = {
     moveWordUp: 'Move up: word',
     moveWordDown: 'Move down: word',
     removeWord: 'Remove word',
+    wordParts: 'Parts it is said in',
+    wordPartsHint:
+      'Optional. The word as it is spelled, with a hyphen between the parts and brackets around letters that are not said: We(d)n(e)s-day.',
+    strongPart: 'Strong part',
+    noStrongPart: 'None marked',
+    wordTips: 'How to say it',
     errorWord: 'Enter the word.',
     errorDuplicateWord: 'This word is already in the list.',
     errorTooManyWords: 'That is the maximum number of words.',
+    errorWordParts:
+      'The parts must spell the word: a hyphen between parts, brackets around letters that are not said. Leave empty to show none.',
+    errorStrongPart: 'Choose one of the parts.',
 
     sentenceCount: 'sentences',
     noSentences: 'no sentences yet',

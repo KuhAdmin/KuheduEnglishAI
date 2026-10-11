@@ -246,13 +246,12 @@ describe('WeekPage', () => {
     )
 
     // Each week keeps its own count.
-    await userEvent.click(screen.getByRole('link', { name: 'Next week' }))
-    expect(router.state.location.pathname).toBe('/home/weeks/21')
+    await act(() => router.navigate('/home/weeks/21'))
     expect(await screen.findByRole('link', { name: 'Start Day 3' })).toHaveAttribute(
       'href',
       '/lessons/weeks/21/days/3',
     )
-    await userEvent.click(screen.getByRole('link', { name: 'Next week' }))
+    await act(() => router.navigate('/home/weeks/22'))
     expect(await screen.findByRole('link', { name: 'Start Day 1' })).toHaveAttribute(
       'href',
       '/lessons/weeks/22/days/1',
@@ -294,7 +293,7 @@ describe('WeekPage', () => {
     )
   })
 
-  it('leads back to the week’s section and on to the next week', async () => {
+  it('leads back to the week’s own section, whichever week is open', async () => {
     const router = renderHome('/home/weeks/20')
     await overview()
 
@@ -302,8 +301,7 @@ describe('WeekPage', () => {
       'href',
       '/home/sections/4',
     )
-    await userEvent.click(screen.getByRole('link', { name: 'Next week' }))
-    expect(router.state.location.pathname).toBe('/home/weeks/21')
+    await act(() => router.navigate('/home/weeks/21'))
     expect(await screen.findByText('Week 21 of 50')).toBeVisible()
     expect(
       screen.getByText('Interviewing someone about their interests or experiences'),
@@ -315,13 +313,20 @@ describe('WeekPage', () => {
     )
   })
 
-  it('has no next week after the last one', async () => {
-    renderHome('/home/weeks/50')
+  it('has no arrow beside the bar: a week is left by its back arrow or its pinned button', async () => {
+    renderHome('/home/weeks/20')
     await overview()
 
-    expect(screen.getByText('Week 50 of 50')).toBeVisible()
-    expect(screen.queryByRole('link', { name: 'Next week' })).not.toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Next week' })).toBeDisabled()
+    const bar = screen.getByRole('progressbar', { name: 'Your place in the course' })
+    expect(bar).toHaveAttribute('aria-valuenow', '40')
+    // The bar is in the tutor's band, under the tutor, and nothing shares its row.
+    expect(bar.parentElement?.lastElementChild).toBe(bar)
+    expect(screen.queryByRole('link', { name: 'Next week' })).toBeNull()
+    expect(screen.queryByRole('button', { name: 'Next week' })).toBeNull()
+    expect(screen.getAllByRole('link').map((link) => link.getAttribute('href'))).toEqual([
+      '/home/sections/4',
+      '/lessons/weeks/20/days/1',
+    ])
   })
 
   it('shows a drawing until an admin uploads the week’s picture, and if that picture fails', async () => {
@@ -376,6 +381,66 @@ describe('WeekPage', () => {
       expect(await screen.findByRole('heading', { name: 'Not found' })).toBeVisible()
     },
   )
+})
+
+describe('the tutor on the journey screens', () => {
+  const tutor = () => screen.findByRole('region', { name: 'Your tutor' })
+
+  it('points at the learner’s section on Home, and reads out nothing else of the list', async () => {
+    renderHome()
+
+    expect(await tutor()).toHaveTextContent(
+      'You are in Section 1, Start Communicating. Tap it to see your weeks.',
+    )
+    expect(await tutor()).not.toHaveTextContent('My Everyday World')
+    // First on the screen, ahead of the heading, so it is where the eye and a screen reader begin.
+    const heading = screen.getByRole('heading', { level: 1 })
+    expect(
+      (await tutor()).compareDocumentPosition(heading) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy()
+  })
+
+  it('points at this week in the section that holds it', async () => {
+    renderHome('/home/sections/1')
+
+    expect(await tutor()).toHaveTextContent(
+      'This week is Week 1: Meeting someone for the first time. Tap it to begin.',
+    )
+  })
+
+  it('says what a section holds when the learner’s week is not in it', async () => {
+    renderHome('/home/sections/4')
+
+    expect(await tutor()).toHaveTextContent(
+      'These are Weeks 16 to 20. Tap a week to see what it teaches.',
+    )
+  })
+
+  it('names the day that is next on a week’s overview, by the button’s own words', async () => {
+    useLessonProgressStore.setState({ doneDays: { 20: [1, 2] } })
+    renderHome('/home/weeks/20')
+
+    expect(await tutor()).toHaveTextContent('Day 3 is next. Tap “Start Day 3” when you are ready.')
+    expect(screen.getByRole('link', { name: 'Start Day 3' })).toBeVisible()
+  })
+
+  it('praises a finished week and points on to the next', async () => {
+    useLessonProgressStore.setState({ doneDays: { 20: [1, 2, 3, 4, 5, 6, 7] } })
+    renderHome('/home/weeks/20')
+
+    expect(await tutor()).toHaveTextContent(
+      'You finished Week 20. Well done! Tap “Go to Week 21” to go on.',
+    )
+  })
+
+  it('speaks to a Bengali learner in Bengali, digits included', async () => {
+    useLanguageStore.setState({ language: 'bn' })
+    renderHome()
+
+    expect(await screen.findByRole('region', { name: 'আপনার টিউটর' })).toHaveTextContent(
+      'আপনি এখন বিভাগ ১-এ আছেন: কথা বলা শুরু করি। আপনার সপ্তাহগুলো দেখতে এতে ট্যাপ করুন।',
+    )
+  })
 })
 
 describe('SectionCard', () => {

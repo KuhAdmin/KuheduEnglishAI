@@ -1,0 +1,33 @@
+{
+  "name": "@kuhedu/server",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "The Kuhedu backend: accounts, content, progress and the AI proxy.",
+  "scripts": {
+    "dev": "node --watch src/index.ts",
+    "start": "node src/index.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node src/db/migrate.ts",
+    "admin:create": "node src/commands/createAdmin.ts"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.1.3",
+    "@fastify/rate-limit": "^10.3.0",
+    "@kuhedu/contracts": "*",
+    "drizzle-orm": "^0.45.4",
+    "fastify": "^5.12.5",
+    "fastify-type-provider-zod": "^7.0.0",
+    "google-auth-library": "^11.2.0",
+    "nodemailer": "^10.0.16",
+    "pg": "^8.23.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^8.0.2",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11"
+  }
+}

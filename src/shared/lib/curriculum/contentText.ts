@@ -1,4 +1,5 @@
 import { languageTag } from '../appConfig/fields'
+import { DEFAULT_LANGUAGE, primarySubtag } from '../i18n'
 
 /**
  * Reading lesson content back from settings storage, where anything may have been put: the
@@ -42,3 +43,29 @@ export function byLanguage<T>(
 /** One text per language. */
 export const tidyByLanguage = (value: unknown, max: number): Record<string, string> =>
   byLanguage(value, (entry) => tidy(entry, max) || null)
+
+/** A few short texts per language (tips); a language with none usable is left out. */
+export const tidyListByLanguage = (
+  value: unknown,
+  max: number,
+  maxItems: number,
+): Record<string, string[]> =>
+  byLanguage(value, (entry) => {
+    const list = tidyList(entry, max, maxItems)
+    return list.length > 0 ? list : null
+  })
+
+/**
+ * Tips for a learner: in their language if it has any (`bn-IN` falls back to `bn`), else in
+ * English. `lang` is the language they are written in, for the element that shows them.
+ */
+export function tipsIn(
+  tips: Record<string, string[]>,
+  language: string,
+): { lang: string; tips: string[] } {
+  for (const lang of [language, primarySubtag(language)]) {
+    const written = tips[lang]
+    if (written) return { lang, tips: written }
+  }
+  return { lang: DEFAULT_LANGUAGE, tips: tips[DEFAULT_LANGUAGE] ?? [] }
+}

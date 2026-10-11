@@ -1,27 +1,8 @@
 import { expect, test, type Page } from '@playwright/test'
-import { expectNoHorizontalScroll, spoken, stubSpeech, type FakeVoice } from './helpers'
-
-const HEERA = 'Microsoft Heera - English (India)'
-const RAVI = 'Microsoft Ravi - English (India)'
-const ZIRA = 'Microsoft Zira - English (United States)'
-const HINDI = 'Google हिन्दी'
-
-// A desktop-like device: its voices are named after people, so their gender can be told.
-const NAMED_VOICES: FakeVoice[] = [
-  { name: HEERA, lang: 'en-IN', localService: true, voiceURI: HEERA },
-  { name: RAVI, lang: 'en-IN', localService: true, voiceURI: RAVI },
-  { name: ZIRA, lang: 'en-US', localService: true, voiceURI: ZIRA },
-  { name: HINDI, lang: 'hi-IN', localService: false, voiceURI: HINDI },
-]
-
-// A phone-like device: its voices are named after their language, and nothing more.
-const UNNAMED_VOICES: FakeVoice[] = [
-  { name: 'English India', lang: 'en_IN', localService: true, voiceURI: 'en-in-x-ene-local' },
-  { name: 'English United States', lang: 'en_US', localService: true, voiceURI: 'en-us-x-tpf' },
-]
+import { expectNoHorizontalScroll, seedSettings, spoken, stubSpeech } from './helpers'
 
 const SAMPLE = 'Hello! Let’s practise speaking English together.'
-const setVoice = { name: 'Set as my voice' }
+const setVoice = { name: 'Set as tutor voice' }
 
 /**
  * The two tiles that say whose voice is being chosen, the tabs of kinds, and the list.
@@ -36,22 +17,22 @@ const savedVoices = (page: Page) =>
 test('each tutor is given a voice, which is heard, kept, and used by the lessons', async ({
   page,
 }) => {
-  await stubSpeech(page, 'works', NAMED_VOICES)
+  await stubSpeech(page)
   await page.goto('/profile')
 
-  // The row names the voice of the learner's tutor: for the male tutor, the first man's voice.
+  // The row names the voice of the learner's tutor: for the male tutor, the default man's voice.
   const row = page.getByRole('link', { name: /Voice settings/ })
-  await expect(row).toContainText('Ravi')
+  await expect(row).toContainText('Michael')
   await row.click()
   await expect(page).toHaveURL(/\/profile\/voice$/)
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Voice settings')
   await expect(page.getByRole('navigation', { name: 'Main navigation' })).toHaveCount(0)
   await expect(
-    tutors(page).getByRole('radio', { name: 'Male tutor Ravi', exact: true }),
+    tutors(page).getByRole('radio', { name: 'Male tutor Michael', exact: true }),
   ).toBeChecked()
-  await expect(tutors(page).getByRole('radio', { name: 'Female tutor Heera' })).not.toBeChecked()
+  await expect(tutors(page).getByRole('radio', { name: 'Female tutor Heart' })).not.toBeChecked()
   await expect(
-    voices(page).getByRole('radio', { name: 'Ravi Default English (India)' }),
+    voices(page).getByRole('radio', { name: 'Michael Default English (United States)' }),
   ).toBeChecked()
   await expect(page.getByRole('button', setVoice)).toBeDisabled()
   await expect(page.getByRole('button', setVoice)).toBeInViewport({ ratio: 1 })
@@ -60,98 +41,109 @@ test('each tutor is given a voice, which is heard, kept, and used by the lessons
   // The female tutor: hearing a voice does not choose it.
   await tutors(page).getByText('Female tutor').click()
   await expect(kinds(page).getByRole('radio', { name: 'Female' })).toBeChecked()
-  await page.getByRole('button', { name: 'Play a sample: Zira' }).click()
-  await expect.poll(() => spoken(page)).toEqual([{ text: SAMPLE, voice: ZIRA }])
+  await page.getByRole('button', { name: 'Play a sample: Emma' }).click()
+  await expect.poll(() => spoken(page)).toEqual([{ text: SAMPLE, voice: 'bf_emma' }])
   await expect(page.getByRole('button', setVoice)).toBeDisabled()
 
-  await voices(page).getByText('Zira', { exact: true }).click()
+  await voices(page).getByText('Emma', { exact: true }).click()
   await page.getByRole('button', setVoice).click()
-  await expect(page.getByText('Female tutor: Zira is now the voice for English.')).toBeVisible()
+  await expect(page.getByText('Female tutor: Emma is now the voice for English.')).toBeVisible()
   // The male tutor keeps his.
   await expect(
-    tutors(page).getByRole('radio', { name: 'Male tutor Ravi', exact: true }),
+    tutors(page).getByRole('radio', { name: 'Male tutor Michael', exact: true }),
   ).toBeVisible()
-  expect(await savedVoices(page)).toEqual({ en: { female: ZIRA } })
+  expect(await savedVoices(page)).toEqual({ en: { female: 'bf_emma' } })
 
   await page.reload()
-  await expect(tutors(page).getByRole('radio', { name: 'Female tutor Zira' })).toBeVisible()
+  await expect(tutors(page).getByRole('radio', { name: 'Female tutor Emma' })).toBeVisible()
 
-  // Lessons speak with the voice of the learner's tutor: the male one until they choose her.
+  // Lessons speak with the voice of the learner's tutor, the male one until they choose her;
+  // the second speaker of a conversation has the other tutor's voice.
   await page.goto('/lessons/weeks/1/days/1')
   await page.getByRole('button', { name: 'Play the conversation' }).click()
   await expect
-    .poll(async () => (await spoken(page)).at(0))
-    .toEqual({ text: 'Hello! Good morning.', voice: RAVI })
+    .poll(async () => (await spoken(page)).slice(0, 2))
+    .toEqual([
+      { text: 'Hello! Good morning.', voice: 'am_michael' },
+      { text: 'Good morning! How are you?', voice: 'bf_emma' },
+    ])
 
   await page.goto('/profile/tutor')
   await page.getByText('Female tutor').click()
-  await expect(page.getByText('Voice: Zira')).toBeVisible()
+  await expect(page.getByText('Voice: Emma')).toBeVisible()
   await page.goto('/profile')
-  await expect(page.getByRole('link', { name: /Voice settings/ })).toContainText('Zira')
+  await expect(page.getByRole('link', { name: /Voice settings/ })).toContainText('Emma')
 
   await page.goto('/lessons/weeks/1/days/1')
   await page.getByRole('button', { name: 'Play the conversation' }).click()
   await expect
     .poll(async () => (await spoken(page)).at(0))
-    .toEqual({ text: 'Hello! Good morning.', voice: ZIRA })
+    .toEqual({ text: 'Hello! Good morning.', voice: 'bf_emma' })
 })
 
 test('each language has its own voices, and its own sample', async ({ page }) => {
-  await stubSpeech(page, 'works', NAMED_VOICES)
+  await stubSpeech(page)
   await page.goto('/profile/voice')
 
   await page.getByRole('combobox', { name: 'Language' }).selectOption('hi')
-  await expect(voices(page).getByRole('radio')).toHaveCount(1)
   await expect(
-    voices(page).getByRole('radio', { name: /^Google हिन्दी .* Needs internet$/ }),
+    voices(page).getByRole('radio', { name: 'Omega Default Hindi (India)' }),
   ).toBeChecked()
-  await page.getByRole('button', { name: `Play a sample: ${HINDI}` }).click()
+  await page.getByRole('button', { name: 'Play a sample: Omega' }).click()
   await expect
     .poll(() => spoken(page))
-    .toEqual([{ text: 'नमस्ते! आइए, साथ मिलकर अंग्रेज़ी बोलने का अभ्यास करें।', voice: HINDI }])
+    .toEqual([
+      { text: 'नमस्ते! आइए, साथ मिलकर अंग्रेज़ी बोलने का अभ्यास करें।', voice: 'hm_omega' },
+    ])
 
-  // This device has no Bengali voice, and says so instead of showing an empty list.
+  // Bengali is said by the same speakers, but its voices are its own, and so is its sample.
   await page.getByRole('combobox', { name: 'Language' }).selectOption('bn')
-  await expect(page.getByText(/This device has no voice for বাংলা\./)).toBeVisible()
-  await expect(page.getByRole('button', setVoice)).toHaveCount(0)
+  await expect(voices(page).getByRole('radio', { name: /^Omega Default/ })).toBeChecked()
+  await page.getByRole('button', { name: 'Play a sample: Omega' }).click()
+  await expect
+    .poll(async () => (await spoken(page)).at(-1))
+    .toEqual({ text: 'নমস্কার! চলুন, একসঙ্গে ইংরেজি বলা অনুশীলন করি।', voice: 'bn_omega' })
 })
 
-test('voices that do not say what they are can still be given to either tutor', async ({
+test('a language the server cannot speak yet says so instead of showing an empty list', async ({
   page,
 }) => {
-  await stubSpeech(page, 'works', UNNAMED_VOICES)
-  await page.goto('/profile/voice')
-
-  // With no voice of his kind, the male tutor has the device's best.
-  await expect(
-    tutors(page).getByRole('radio', { name: 'Male tutor English India', exact: true }),
-  ).toBeChecked()
-  await expect(voices(page).getByRole('radio', { name: /^English India Default/ })).toBeChecked()
-  await expect(
-    page.getByText('This device does not say whether these voices are male or female.'),
-  ).toBeVisible()
-  // One kind only, so there is nothing to switch between.
-  await expect(kinds(page)).toHaveCount(0)
-
-  await tutors(page).getByText('Female tutor').click()
-  await voices(page).getByText('English United States', { exact: true }).click()
-  await page.getByRole('button', setVoice).click()
-  await expect(
-    page.getByText('Female tutor: English United States is now the voice for English.'),
-  ).toBeVisible()
-  // What is saved is the voice's own id, not its name, and for that tutor only.
-  expect(await savedVoices(page)).toEqual({ en: { female: 'en-us-x-tpf' } })
-})
-
-test('a device that cannot read aloud is told so', async ({ page }) => {
-  await page.addInitScript(() => {
-    Object.defineProperty(window, 'speechSynthesis', { value: undefined, configurable: true })
-    Reflect.deleteProperty(window, 'speechSynthesis')
+  await stubSpeech(page)
+  // One an admin added: the server speaks the built-in languages only.
+  await seedSettings(page, 'languages', {
+    defaultCode: 'ta',
+    languages: [{ code: 'ta', nativeName: 'தமிழ்', caption: 'Tamil' }],
   })
   await page.goto('/profile/voice')
 
+  await page.getByRole('combobox', { name: 'Language' }).selectOption('ta')
+  await expect(page.getByText('There are no voices for தமிழ் yet.')).toBeVisible()
+  await expect(page.getByRole('button', setVoice)).toHaveCount(0)
+})
+
+test('any voice can be given to either tutor, whatever its kind or accent', async ({ page }) => {
+  await stubSpeech(page)
+  await page.goto('/profile/voice')
+
+  await tutors(page).getByText('Female tutor').click()
+  // Every voice says what it is, so there are two kinds and no third.
+  await expect(kinds(page).getByRole('radio')).toHaveCount(2)
+  await kinds(page).getByText('Male', { exact: true }).click()
+  await voices(page).getByText('George', { exact: true }).click()
+  await page.getByRole('button', setVoice).click()
+  await expect(page.getByText('Female tutor: George is now the voice for English.')).toBeVisible()
+  // What is saved is the voice's own id, not its name, and for that tutor only.
+  expect(await savedVoices(page)).toEqual({ en: { female: 'bm_george' } })
+})
+
+test('a learner whose voices cannot be loaded is told so', async ({ page }) => {
+  await stubSpeech(page, 'unreachable')
+  await page.goto('/profile/voice')
+
   await expect(
-    page.getByText('This device cannot read aloud, so there are no voices to choose.'),
+    page.getByText(
+      'The voices cannot be loaded right now. Check your connection, then open this screen again.',
+    ),
   ).toBeVisible()
   await expect(page.getByRole('button', setVoice)).toHaveCount(0)
 })

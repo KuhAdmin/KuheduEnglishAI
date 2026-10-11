@@ -1,18 +1,16 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useHaptics } from '@/shared/hooks/useHaptics'
 import { useLanguagesConfig } from '@/shared/lib/appConfig/useLanguagesConfig'
-import { isSpeechSupported } from '@/shared/lib/audio/speech'
+import { loadSpeechVoices, speechVoicesKnown } from '@/shared/lib/audio/speechCatalogue'
 import { useSpeechPlayback } from '@/shared/lib/audio/useSpeechPlayback'
 import { useVoices } from '@/shared/lib/audio/useVoices'
 import { useVoiceStore } from '@/shared/lib/audio/useVoiceStore'
 import {
   baseLanguage,
-  voiceChoices,
   voiceForFace,
-  VOICE_GENDERS,
+  voicesFor,
   VOICE_KINDS,
   type VoiceChoice,
-  type VoiceGender,
   type VoiceKind,
 } from '@/shared/lib/audio/voices'
 import { DEFAULT_LANGUAGE, isEnglish, useTFor } from '@/shared/lib/i18n'
@@ -20,23 +18,35 @@ import { useTutorVoiceKind } from '@/shared/lib/learner/tutorAvatar'
 
 /**
  * Choosing the two voices the app speaks a language with, one for each kind of tutor: which
- * language, tutor and group of voices are on show, the voice picked (not saved until `save`),
- * trying one out, and saving it for the tutor on show.
+ * language, tutor and kind of voice are on show, the voice picked (not saved until `save`),
+ * trying one out, and saving it for the tutor on show. The voices are the server's.
  */
 export function useVoiceChoice() {
   const haptic = useHaptics()
   const { languages: learnerLanguages } = useLanguagesConfig()
-  const deviceVoices = useVoices()
+  const allVoices = useVoices()
   const allChosen = useVoiceStore((state) => state.voices)
   const setVoice = useVoiceStore((state) => state.setVoice)
   const playback = useSpeechPlayback()
   const ownTutor = useTutorVoiceKind()
 
+  // On a first visit the voices are still on their way: nothing is called missing meanwhile.
+  const [waiting, setWaiting] = useState(() => !speechVoicesKnown())
+  useEffect(() => {
+    let gone = false
+    void loadSpeechVoices().then(() => {
+      if (!gone) setWaiting(false)
+    })
+    return () => {
+      gone = true
+    }
+  }, [])
+
   const [language, setLanguage] = useState(DEFAULT_LANGUAGE)
   // The screen opens on the learner's own tutor.
   const [pickedTutor, setPickedTutor] = useState<VoiceKind | null>(null)
   const tutor = pickedTutor ?? ownTutor
-  const [pickedGroup, setPickedGroup] = useState<VoiceGender | null>(null)
+  const [pickedGroup, setPickedGroup] = useState<VoiceKind | null>(null)
   const [pickedId, setPickedId] = useState<string | null>(null)
   const [playingId, setPlayingId] = useState<string | null>(null)
   const [savedId, setSavedId] = useState<string | null>(null)
@@ -56,16 +66,16 @@ export function useVoiceChoice() {
     [learnerLanguages],
   )
 
-  const voices = useMemo(() => voiceChoices(deviceVoices, language), [deviceVoices, language])
+  const voices = useMemo(() => voicesFor(allVoices, language), [allVoices, language])
   const chosen = allChosen[baseLanguage(language)]
-  /** The voice each kind of tutor speaks with now: the one chosen for it, or the device's pick. */
-  const voiceOf = (kind: VoiceKind) => voiceForFace(deviceVoices, language, kind, chosen?.[kind])
+  /** The voice each kind of tutor speaks with now: the one chosen for it, or its default. */
+  const voiceOf = (kind: VoiceKind) => voiceForFace(allVoices, language, kind, chosen?.[kind])
   const inUse = voiceOf(tutor)
-  const groups = VOICE_GENDERS.filter((gender) => voices.some((voice) => voice.gender === gender))
+  const groups = VOICE_KINDS.filter((kind) => voices.some((voice) => voice.gender === kind))
   const group =
     pickedGroup !== null && groups.includes(pickedGroup)
       ? pickedGroup
-      : (inUse?.gender ?? groups[0] ?? 'other')
+      : (inUse?.gender ?? groups[0] ?? 'female')
   const listed = voices.filter((voice) => voice.gender === group)
   const picked = listed.find((voice) => voice.id === pickedId)
   const selected = picked ?? listed.find((voice) => voice.id === inUse?.id)
@@ -84,13 +94,16 @@ export function useVoiceChoice() {
       return
     }
     setPlayingId(voice.id)
-    void playback.playAll([{ text: sample }], { lang: language, voiceURI: voice.id }).then(() => {
+    void playback.playAll([{ text: sample }], { lang: language, voiceId: voice.id }).then(() => {
       setPlayingId((current) => (current === voice.id ? null : current))
     })
   }
 
   return {
-    supported: isSpeechSupported(),
+    /** The server's voices are not known yet, and nothing has been said about them. */
+    waiting: waiting && allVoices.length === 0,
+    /** The server offers voices at all; without them there is nothing to choose from. */
+    available: allVoices.length > 0,
     languages,
     language,
     languageName: languages.find(({ code }) => code === language)?.nativeName ?? language,
@@ -109,17 +122,17 @@ export function useVoiceChoice() {
     },
     groups,
     group,
-    changeGroup: (gender: VoiceGender) => {
+    changeGroup: (kind: VoiceKind) => {
       forget()
-      setPickedGroup(gender)
+      setPickedGroup(kind)
     },
-    /** The voices of the group on show. */
+    /** The voices of the kind on show. */
     voices: listed,
-    /** Whether the device has any voice for the language, in whatever group. */
+    /** Whether there is any voice for the language, of either kind. */
     hasVoices: voices.length > 0,
     selected,
     /** The voice this tutor speaks with when none is chosen for it. */
-    defaultId: voiceForFace(deviceVoices, language, tutor)?.id ?? null,
+    defaultId: voiceForFace(allVoices, language, tutor)?.id ?? null,
     select: (id: string) => {
       haptic('tap')
       setPickedId(id)
