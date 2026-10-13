@@ -27,17 +27,17 @@ const alpha: SpeechVoice = {
   gender: 'female',
   default: true,
 }
-// Bengali is said by Hindi's speakers under ids of its own, which do not say what the voice is.
-const omega: SpeechVoice = {
-  id: 'bn_omega',
-  name: 'Omega',
+// Bengali is said by another model than the rest, and its id does not say what the voice is.
+const diya: SpeechVoice = {
+  id: 'bn_diya',
+  name: 'Diya',
   language: 'bn-IN',
-  gender: 'male',
+  gender: 'female',
   default: true,
 }
 
 /** A speaking service that says nothing, counts what it was asked, and can be switched off. */
-function fakeSpeaker(model = 'kokoro-test') {
+function fakeSpeaker(model = 'kokoro-test', bengaliModel = 'indic-test') {
   const state = {
     up: true,
     said: [] as { text: string; voice: string }[],
@@ -48,7 +48,8 @@ function fakeSpeaker(model = 'kokoro-test') {
   const speaker: Speaker = {
     catalogue: async () => {
       if (!state.up) throw new Error('connect ECONNREFUSED 127.0.0.1:8788')
-      return { model: state.model, voices: [heart, alpha, omega] }
+      // Only the voice another model says names its model; the rest are the service's own.
+      return { model: state.model, voices: [heart, alpha, { ...diya, model: bengaliModel }] }
     },
     speak: async (text, voice) => {
       if (!state.up) throw new Error('connect ECONNREFUSED 127.0.0.1:8788')
@@ -88,7 +89,9 @@ describe('GET /api/speech/voices', () => {
     const response = await start(fakeSpeaker().speaker).inject('/api/speech/voices')
 
     expect(response.statusCode).toBe(200)
-    expect(speechVoicesSchema.parse(response.json()).voices).toEqual([heart, alpha, omega])
+    expect(speechVoicesSchema.parse(response.json()).voices).toEqual([heart, alpha, diya])
+    // Which model says a voice is the shelf's business: the app is told the voice and no more.
+    expect(response.json().voices).toEqual([heart, alpha, diya])
   })
 
   it('answers with no voices, not with a failure, while the service is down', async () => {
@@ -184,10 +187,10 @@ describe('GET /api/speech/audio', () => {
     const { speaker, state } = fakeSpeaker()
     const text = 'আপনি এখন বিভাগ ১-এ আছেন: কথা বলা শুরু করি।'
 
-    const response = await start(speaker).inject(audio(text, 'bn_omega'))
+    const response = await start(speaker).inject(audio(text, 'bn_diya'))
 
     expect(response.statusCode).toBe(200)
-    expect(state.said).toEqual([{ text, voice: 'bn_omega' }])
+    expect(state.said).toEqual([{ text, voice: 'bn_diya' }])
   })
 
   it('goes on serving what it has kept when the service stops answering', async () => {
@@ -223,6 +226,29 @@ describe('GET /api/speech/audio', () => {
     await start(second.speaker).inject(audio('Hello.'))
 
     expect(second.state.said).toHaveLength(1)
+  })
+
+  it("keeps a voice's sounds under the model that says it, so a change to one model leaves the other's", async () => {
+    const first = fakeSpeaker('kokoro-one', 'indic-one')
+    const server = start(first.speaker)
+    await server.inject(audio('Hello.'))
+    await server.inject(audio('নমস্কার।', 'bn_diya'))
+    await app?.close()
+
+    // The Bengali model is replaced: its sound is made again, the English one is still good.
+    const second = fakeSpeaker('kokoro-one', 'indic-two')
+    const changed = start(second.speaker)
+    await changed.inject(audio('Hello.'))
+    await changed.inject(audio('নমস্কার।', 'bn_diya'))
+    expect(second.state.said).toEqual([{ text: 'নমস্কার।', voice: 'bn_diya' }])
+    await app?.close()
+
+    // And the other way round.
+    const third = fakeSpeaker('kokoro-two', 'indic-two')
+    const again = start(third.speaker)
+    await again.inject(audio('Hello.'))
+    await again.inject(audio('নমস্কার।', 'bn_diya'))
+    expect(third.state.said).toEqual([{ text: 'Hello.', voice: 'af_heart' }])
   })
 
   it.each([

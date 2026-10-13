@@ -1,4 +1,6 @@
 .venv
+# The scorer's own environment: OpenPronounce and the voices cannot share one (see README).
+.venv-assess
 # Downloads and the model, kept beside the code when the system drive has no room (see README).
 .cache
 .models

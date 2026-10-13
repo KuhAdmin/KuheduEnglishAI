@@ -1,11 +1,19 @@
 [project]
 name = "kuhedu-speech"
 version = "0.0.0"
-description = "Speaks with Kokoro, and assesses a learner's recording of one word, on our own machine."
+description = "Speaks with Kokoro and Indic-TTS, and assesses a learner's recording of one word, on our own machine."
 # Kokoro does not run on 3.13 or later yet.
 requires-python = ">=3.10,<3.13"
 dependencies = [
   "kokoro>=0.9.4",
+  # Bengali (tts/indic.py). coqui-tts runs AI4Bharat's Indic-TTS model; pinned, because indic.py
+  # runs its two steps itself to keep each letter's length. torchaudio and torchcodec are only
+  # what it refuses to be imported without: install torchaudio with torch, from PyTorch's CPU
+  # index (see README). bnnumerizer says a number as its Bengali word.
+  "coqui-tts==0.27.5",
+  "torchaudio>=2.9",
+  "torchcodec>=0.8",
+  "bnnumerizer>=0.0.2",
   "soundfile>=0.12",
   "fastapi>=0.110",
   "uvicorn[standard]>=0.29",

@@ -6,11 +6,13 @@ keeps what this makes. Nothing said here is kept here.
 
 from __future__ import annotations
 
+from collections.abc import Sequence
+
 from fastapi import FastAPI, HTTPException, Response
 from pydantic import BaseModel, Field, field_validator
 
 from .synth import MODEL_VERSION, Synth
-from .voices import VOICES, find_voice
+from .voices import VOICES, Voice
 
 # A sentence or two: what a lesson or the tutor says in one go. The Node server holds the same limit.
 MAX_TEXT_LENGTH = 400
@@ -31,20 +33,22 @@ class SpeakRequest(BaseModel):
         return tidy
 
 
-def create_app(synth: Synth) -> FastAPI:
+def create_app(synth: Synth, voices: Sequence[Voice] = VOICES) -> FastAPI:
+    """The service, offering `voices`: those of the catalogue that can be said on this machine."""
     app = FastAPI(title="Kuhedu speech", docs_url=None, redoc_url=None, openapi_url=None)
+    offered = {voice.id: voice for voice in voices}
 
     @app.get("/health")
     def health() -> dict:
         return {"status": "ok", "model": MODEL_VERSION}
 
     @app.get("/voices")
-    def voices() -> dict:
-        return {"model": MODEL_VERSION, "voices": [voice.to_json() for voice in VOICES]}
+    def listed() -> dict:
+        return {"model": MODEL_VERSION, "voices": [voice.to_json() for voice in voices]}
 
     @app.post("/speak")
     def speak(request: SpeakRequest) -> Response:
-        voice = find_voice(request.voice)
+        voice = offered.get(request.voice)
         if voice is None:
             raise HTTPException(status_code=404, detail="No such voice")
         try:

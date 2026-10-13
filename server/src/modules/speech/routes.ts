@@ -6,7 +6,7 @@ import {
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
 import { HttpError } from '../../plugins/errors.ts'
 import type { SoundCache } from './soundCache.ts'
-import type { Speaker, SpeechCatalogue, Spoken } from './speaker.ts'
+import { modelOf, type Speaker, type SpeechCatalogue, type Spoken } from './speaker.ts'
 
 export type SpeechRoutesOptions = {
   speaker: Speaker
@@ -64,11 +64,10 @@ export const speechRoutes: FastifyPluginAsyncZod<SpeechRoutesOptions> = async (a
       const { voice, text } = request.query
       const voices = await catalogue()
       if (!voices) throw new HttpError(503, 'unavailable', 'The speaking service is not answering')
-      if (!voices.voices.some((offered) => offered.id === voice)) {
-        throw new HttpError(404, 'not_found', 'No such voice')
-      }
+      const offered = voices.voices.find((listed) => listed.id === voice)
+      if (!offered) throw new HttpError(404, 'not_found', 'No such voice')
 
-      const key = { model: voices.model, voice, text }
+      const key = { model: modelOf(voices, offered), voice, text }
       let spoken: Spoken | null = await cache.read(key)
       if (!spoken) {
         const id = `${voice}\n${text}`

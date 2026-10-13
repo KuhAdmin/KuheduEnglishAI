@@ -1,26 +1,22 @@
-"""Text to sound: the one place that touches Kokoro."""
+"""Text to sound: the one place that touches Kokoro, and the way in to whatever says a voice."""
 
 from __future__ import annotations
 
 import io
 import os
 import threading
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
 
-from . import bengali
 from .mouth import mouth_of
-from .voices import Voice, base_language
-
-# A language Kokoro cannot read, and what reads it instead: a text to the sounds the model is
-# given, in parts it can take. The model and the voices are Kokoro's either way.
-READERS = {"bn": bengali.sounds}
+from .voices import MODELS, Voice
 
 # Kokoro's own rate.
 SAMPLE_RATE = 24_000
-# Goes into the name a made sound is kept under, so sounds made by another model are not served.
-MODEL_VERSION = "kokoro-82m-v1.0"
+# What the service calls itself. Each voice names the model that says it (`Voice.model`).
+MODEL_VERSION = MODELS["kokoro"]
 # Where the model and its voices are fetched from, the first time each is used.
 REPO_ID = "hexgrad/Kokoro-82M"
 
@@ -44,12 +40,49 @@ class Synth(Protocol):
     def synthesize(self, text: str, voice: Voice) -> Spoken: ...
 
 
-def to_mp3(samples) -> bytes:
-    """A mono waveform at Kokoro's rate, as MP3: small enough for a phone on 4G, played everywhere."""
+class Engine(Synth, Protocol):
+    """One model, and the voices it says."""
+
+    def ready(self, voice: Voice) -> bool:
+        """Whether what it needs to say this voice is on this machine."""
+        ...
+
+    def warm(self, voice: Voice) -> None: ...
+
+
+class Speakers:
+    """Every voice behind one way in: a text goes to whichever model says its voice."""
+
+    def __init__(self, engines: Mapping[str, Engine]) -> None:
+        self._engines = engines
+        # One sentence at a time, whichever model: the processor is the limit, and two at once
+        # only take longer.
+        self._lock = threading.Lock()
+
+    def ready(self, voices: Iterable[Voice]) -> tuple[Voice, ...]:
+        """Those of the voices that can be said here: a voice whose model was never fetched is not offered."""
+        return tuple(voice for voice in voices if self._engines[voice.engine].ready(voice))
+
+    def warm(self, voices: Iterable[Voice]) -> None:
+        """Load every model and say a word with it, so that no first learner waits for either."""
+        warmed: set[str] = set()
+        for voice in voices:
+            if voice.engine not in warmed:
+                warmed.add(voice.engine)
+                with self._lock:
+                    self._engines[voice.engine].warm(voice)
+
+    def synthesize(self, text: str, voice: Voice) -> Spoken:
+        with self._lock:
+            return self._engines[voice.engine].synthesize(text, voice)
+
+
+def to_mp3(samples, rate: int = SAMPLE_RATE) -> bytes:
+    """A mono waveform as MP3: small enough for a phone on 4G, played everywhere."""
     import soundfile
 
     buffer = io.BytesIO()
-    soundfile.write(buffer, samples, SAMPLE_RATE, format="MP3")
+    soundfile.write(buffer, samples, rate, format="MP3")
     return buffer.getvalue()
 
 
@@ -91,6 +124,10 @@ class KokoroSynth:
             )
         return self._pipelines[lang_code]
 
+    def ready(self, voice: Voice) -> bool:
+        # Its model and voices are fetched by themselves, the first time each is wanted.
+        return True
+
     def warm(self, voice: Voice) -> None:
         """Load the model and say a word, so that the first learner does not wait for either.
 
@@ -106,18 +143,7 @@ class KokoroSynth:
         timed = []
         with self._lock:
             pipeline = self._pipeline(voice.lang_code)
-            reader = READERS.get(base_language(voice.language))
-            speaker = voice_file(voice.speaker)
-            if reader is None:
-                results = pipeline(text, voice=speaker, speed=1.0)
-            else:
-                results = (
-                    result
-                    for sounds in reader(text)
-                    for result in pipeline.generate_from_tokens(
-                        tokens=sounds, voice=speaker, speed=1.0
-                    )
-                )
+            results = pipeline(text, voice=voice_file(voice.speaker), speed=1.0)
             known = self._model.vocab
             # A long text comes back in pieces; they are one sound to the caller.
             for result in results:

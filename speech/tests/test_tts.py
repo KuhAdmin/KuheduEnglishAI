@@ -2,15 +2,23 @@ import pytest
 from fastapi.testclient import TestClient
 
 from tts.server import MAX_TEXT_LENGTH, create_app
-from tts.synth import Spoken
+from tts.synth import Speakers, Spoken
 from tts.voices import VOICES, Voice, find_voice
 
 
 class FakeSynth:
     """Says nothing, and remembers what it was asked to say."""
 
-    def __init__(self) -> None:
+    def __init__(self, has: bool = True) -> None:
         self.asked: list[tuple[str, str]] = []
+        self.warmed: list[str] = []
+        self.has = has
+
+    def ready(self, voice: Voice) -> bool:
+        return self.has
+
+    def warm(self, voice: Voice) -> None:
+        self.warmed.append(voice.id)
 
     def synthesize(self, text: str, voice: Voice) -> Spoken:
         if text == "…":
@@ -31,7 +39,7 @@ def client(synth: FakeSynth) -> TestClient:
 
 
 def test_every_one_of_kokoros_own_voices_says_what_it_is_in_its_id():
-    own = [voice for voice in VOICES if voice.language != "bn-IN"]
+    own = [voice for voice in VOICES if voice.engine == "kokoro"]
 
     for voice in own:
         language, gender = voice.id[0], voice.id[1]
@@ -39,6 +47,7 @@ def test_every_one_of_kokoros_own_voices_says_what_it_is_in_its_id():
         assert {"f": "female", "m": "male"}[gender] == voice.gender
         assert voice.name and voice.name[0].isupper() and "_" not in voice.name
         assert voice.speaker == voice.id
+        assert voice.model == "kokoro-82m-v1.0"
     assert len(own) == 17
     assert len({voice.id for voice in VOICES}) == len(VOICES)
 
@@ -67,22 +76,34 @@ def test_british_hindi_and_bengali_voices_are_on_offer_too():
     assert languages == {"en-US", "en-GB", "hi-IN", "bn-IN"}
 
 
-def test_bengali_is_said_by_the_hindi_voices_under_ids_of_its_own():
+def test_bengali_is_said_by_a_model_that_was_taught_bengali_in_a_womans_voice_and_a_mans():
     bengali = [voice for voice in VOICES if voice.language == "bn-IN"]
-    hindi = {voice.id: voice for voice in VOICES if voice.language == "hi-IN"}
 
-    assert [voice.id for voice in bengali] == ["bn_alpha", "bn_beta", "bn_omega", "bn_psi"]
+    assert [(voice.id, voice.name, voice.gender) for voice in bengali] == [
+        ("bn_diya", "Diya", "female"),
+        ("bn_arjun", "Arjun", "male"),
+    ]
     for voice in bengali:
-        said_by = hindi[voice.speaker]
-        assert (voice.name, voice.gender) == (said_by.name, said_by.gender)
-        # Kokoro keeps a speaker with the language it was made for.
-        assert voice.lang_code == "h"
-    assert [voice.id for voice in bengali if voice.default] == ["bn_alpha", "bn_omega"]
-    # What the app is told about a voice does not say whose it is.
-    assert "speaker" not in bengali[0].to_json()
+        # The model calls its two speakers only this.
+        assert (voice.engine, voice.speaker) == ("indic", voice.gender)
+        # Its sounds are kept under a name of their own, so Kokoro's are left alone by a change to it.
+        assert voice.model == "indic-tts-v1"
+        assert voice.default
+    # What is said about a voice does not say who the model knows it as.
+    assert "speaker" not in bengali[0].to_json() and "engine" not in bengali[0].to_json()
 
 
-def test_the_service_lists_its_voices(client: TestClient):
+def test_kokoros_hindi_voices_no_longer_read_bengali():
+    assert all(find_voice(gone) is None for gone in ("bn_alpha", "bn_beta", "bn_omega", "bn_psi"))
+    assert {voice.id for voice in VOICES if voice.language == "hi-IN"} == {
+        "hf_alpha",
+        "hf_beta",
+        "hm_omega",
+        "hm_psi",
+    }
+
+
+def test_the_service_lists_its_voices_each_with_the_model_that_says_it(client: TestClient):
     answer = client.get("/voices").json()
 
     assert answer["model"] == "kokoro-82m-v1.0"
@@ -92,8 +113,47 @@ def test_the_service_lists_its_voices(client: TestClient):
         "language": "en-US",
         "gender": "female",
         "default": True,
+        "model": "kokoro-82m-v1.0",
     }
     assert len(answer["voices"]) == len(VOICES)
+    assert {voice["id"]: voice["model"] for voice in answer["voices"]}["bn_diya"] == "indic-tts-v1"
+
+
+def test_a_service_offers_only_the_voices_its_machine_can_say(synth: FakeSynth):
+    without_bengali = [voice for voice in VOICES if voice.language != "bn-IN"]
+    client = TestClient(create_app(synth, without_bengali))
+
+    assert "bn_diya" not in {voice["id"] for voice in client.get("/voices").json()["voices"]}
+    assert client.post("/speak", json={"text": "নমস্কার", "voice": "bn_diya"}).status_code == 404
+    assert client.post("/speak", json={"text": "Hello", "voice": "af_heart"}).status_code == 200
+    assert synth.asked == [("Hello", "af_heart")]
+
+
+def test_a_text_goes_to_whichever_model_says_its_voice():
+    kokoro, indic = FakeSynth(), FakeSynth()
+    speakers = Speakers({"kokoro": kokoro, "indic": indic})
+
+    speakers.synthesize("Hello.", find_voice("af_heart"))
+    speakers.synthesize("নমস্কার।", find_voice("bn_arjun"))
+    speakers.synthesize("नमस्ते।", find_voice("hf_alpha"))
+
+    assert kokoro.asked == [("Hello.", "af_heart"), ("नमस्ते।", "hf_alpha")]
+    assert indic.asked == [("নমস্কার।", "bn_arjun")]
+
+
+def test_a_voice_whose_model_was_never_fetched_is_not_offered_and_each_model_is_warmed_once():
+    kokoro, indic = FakeSynth(), FakeSynth(has=False)
+    speakers = Speakers({"kokoro": kokoro, "indic": indic})
+
+    offered = speakers.ready(VOICES)
+    assert {voice.language for voice in offered} == {"en-US", "en-GB", "hi-IN"}
+
+    speakers.warm(offered)
+    assert (kokoro.warmed, indic.warmed) == (["af_heart"], [])
+
+    everything = Speakers({"kokoro": FakeSynth(), "indic": (bengali := FakeSynth())})
+    everything.warm(everything.ready(VOICES))
+    assert bengali.warmed == ["bn_diya"]
 
 
 def test_a_text_is_said_in_the_voice_asked_for_tidied_of_stray_spaces(client: TestClient, synth: FakeSynth):
@@ -131,5 +191,5 @@ def test_what_cannot_be_said_is_refused_and_nothing_is_made(client: TestClient, 
 
 def test_a_voice_is_found_by_its_id_and_an_unknown_one_is_not():
     assert find_voice("hf_alpha").language == "hi-IN"
-    assert find_voice("bn_alpha").language == "bn-IN"
+    assert find_voice("bn_diya").language == "bn-IN"
     assert find_voice("af_nicole") is None

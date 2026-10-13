@@ -6,8 +6,22 @@ import {
 } from '@kuhedu/contracts'
 import { z } from 'zod'
 
+/**
+ * A voice as the speaking service lists it: with the model that says it, where it is not the
+ * service's own. The app is not told (`speechVoicesSchema` leaves it out); it is for the shelf.
+ */
+export type ListedVoice = SpeechVoice & { model?: string }
+
 /** The voices on offer, and the model that speaks them: a sound made by another is not reused. */
-export type SpeechCatalogue = { model: string; voices: SpeechVoice[] }
+export type SpeechCatalogue = { model: string; voices: ListedVoice[] }
+
+/**
+ * The model a voice's sounds are kept under: its own where the service names one (Bengali is
+ * said by another model than the rest), so that a change to one model leaves the others' sounds.
+ */
+export function modelOf(catalogue: SpeechCatalogue, voice: ListedVoice): string {
+  return voice.model ?? catalogue.model
+}
 
 /** A text said aloud: the sound as MP3, and the mouth for it as it is sent, where it is known. */
 export type Spoken = { sound: Buffer; mouth: string | null }
@@ -19,9 +33,11 @@ export type Speaker = {
   speak: (text: string, voiceId: string) => Promise<Spoken>
 }
 
+const modelSchema = z.string().regex(/^[a-z0-9.-]{1,60}$/)
+
 const catalogueSchema = z.object({
-  model: z.string().regex(/^[a-z0-9.-]{1,60}$/),
-  voices: z.array(speechVoiceSchema),
+  model: modelSchema,
+  voices: z.array(speechVoiceSchema.extend({ model: modelSchema.optional() })),
 })
 
 /**

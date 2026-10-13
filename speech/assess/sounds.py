@@ -7,6 +7,7 @@ shown. Nothing here sends anything anywhere once the model has been downloaded.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from .result import Difference, Heard, Sound
@@ -14,8 +15,23 @@ from .result import Difference, Heard, Sound
 RATE = 16_000
 
 
+def _prepare() -> None:
+    """What OpenPronounce reads from the environment, said before it is imported."""
+    # The model is kept beside the code, with the voices': the system drive may have no room.
+    os.environ.setdefault("HF_HOME", str(Path(__file__).resolve().parents[1] / ".models"))
+    try:
+        import espeakng_loader
+    except ImportError:
+        # espeak-ng is then looked for on the system, as OpenPronounce expects.
+        return
+    # Its own copy of espeak-ng, as the voices have: nothing to install on the system.
+    os.environ.setdefault("PHONEMIZER_ESPEAK_LIBRARY", espeakng_loader.get_library_path())
+    os.environ.setdefault("ESPEAK_DATA_PATH", espeakng_loader.get_data_path())
+
+
 def hear(recording: Path, text: str, lang: str = "en"):
     """The recording as a waveform, and the sounds heard in it against those `text` expects."""
+    _prepare()
     # Imported here: it loads PyTorch, which the rest of this package and its tests do not need.
     from openpronounce import compare_phones, load_audio, recognize_phones
 
