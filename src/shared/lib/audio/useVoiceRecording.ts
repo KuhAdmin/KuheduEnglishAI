@@ -33,10 +33,11 @@ export type VoiceRecordingOptions = {
 const TICK_MS = 200
 
 /**
- * One spoken attempt: record, play back, record again. The recording lives in memory only — it
- * is never stored or sent anywhere — and is dropped when a new one is made or the screen goes.
- * The microphone is released when recording ends, when the page is hidden, and on unmount.
- * TODO(backend): hand the recording to the server for scoring before dropping it.
+ * One spoken attempt: record, play back, record again. The recording lives in memory only and
+ * is dropped when a new one is made or the screen goes. Nothing here stores it or sends it: a
+ * screen that has it checked by the server does so on the learner's tap, from `take.url`
+ * (Day 2, `usePronunciationCheck`). The microphone is released when recording ends, when the
+ * page is hidden, and on unmount.
  */
 export function useVoiceRecording(options: VoiceRecordingOptions = {}) {
   const [phase, setPhase] = useState<RecordingPhase>('idle')

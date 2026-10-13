@@ -1,3 +1,4 @@
+import { WEEK_CONTENT_KINDS } from '@kuhedu/contracts'
 import { sql } from 'drizzle-orm'
 import { check, index, integer, jsonb, pgTable, primaryKey, text, uuid } from 'drizzle-orm/pg-core'
 import { users } from './accounts.ts'
@@ -14,20 +15,6 @@ export const APP_CONFIG_NAMES = ['landing', 'languages', 'learner-profiles'] as 
 
 /** The app's `screen-texts` and `curriculum` settings. */
 export const TEXT_SCOPES = ['screen', 'curriculum'] as const
-
-/** One per `week-…` settings object of the app. */
-export const WEEK_CONTENT_KINDS = [
-  'picture',
-  'dialogue',
-  'vocabulary',
-  'sentences',
-  'roleplay',
-  'challenge',
-  'quiz',
-  'review_dialogue',
-  'review_roleplay',
-  'scenarios',
-] as const
 
 export const CONTENT_SOURCES = ['app_config', 'text_override', 'week_content'] as const
 
@@ -80,7 +67,9 @@ export const textOverrides = pgTable(
 
 /**
  * One row per kind of content and week, so a phone downloads the week it opens, not all 50.
- * `value` is that week's entry of the app's settings object (a `WeekDialogue`, a `WeekQuiz`, …).
+ * `value` is that week's entry of the app's settings object (a `WeekDialogue`, a `WeekQuiz`, …),
+ * as `parseWeekContent` in `@kuhedu/contracts` reads it; the kinds are its `WEEK_CONTENT_KINDS`,
+ * one per `week-…` settings object of the app.
  */
 export const weekContent = pgTable(
   'week_content',

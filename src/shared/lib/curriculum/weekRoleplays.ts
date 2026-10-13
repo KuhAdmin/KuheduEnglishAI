@@ -1,47 +1,26 @@
+import { parseByWeek, parseRoleplay, type RoleplayTurn, type WeekRoleplay } from '@kuhedu/contracts'
 import { useMemo } from 'react'
 import { z } from 'zod'
-import { isSafeAssetUrl } from '../appConfig/fields'
 import { useAppConfig } from '../appConfig/useAppConfig'
 import { primarySubtag } from '../i18n'
-import { isRecord, tidy, tidyByLanguage } from './contentText'
-import { isWeekNumber } from './curriculum'
 import { week1Roleplay } from './roleplays/week1'
 
-/** One exchange: the partner says something, the learner answers. */
-export type RoleplayTurn = {
-  /** What the partner says, in English, as the device's voice will say it. */
-  partner: string
-  /** A good answer, in English: shown as the last hint, and once the learner has answered. */
-  reply: string
-  /**
-   * What the learner should say, told in their own language without the English words ("Tell
-   * him your name"), by language tag: the first hint. A language may be missing.
-   */
-  cues: Record<string, string>
-}
-
-/**
- * The conversation a learner takes part in (Day 4): a partner whose lines are written, and what
- * the learner could answer to each. The partner always says the next line, whatever was said.
- * TODO(backend): a partner that listens and answers, in place of the script.
- */
-export type WeekRoleplay = {
-  /** Who the learner talks to, as it reads after "Talk to": "Ravi", "the barista". */
-  partner: string
-  /** A picture of them; `null` shows a drawn stand-in. */
-  imageUrl: string | null
-  /** In the order they are taken. Never empty. */
-  turns: RoleplayTurn[]
-}
+// What a role-play is, how long it may be and how one is read back are written once, in
+// `@kuhedu/contracts`: the server checks what an admin saves with the same rules.
+// TODO(backend): a partner that listens and answers, in place of the script.
+export {
+  MAX_CUE_LENGTH,
+  MAX_PARTNER_LENGTH,
+  MAX_PARTNER_LINE_LENGTH,
+  MAX_REPLY_LENGTH,
+  MAX_ROLEPLAY_TURNS,
+  parseRoleplay,
+  type RoleplayTurn,
+  type WeekRoleplay,
+} from '@kuhedu/contracts'
 
 /** Role-plays by week number. */
 export type WeekRoleplays = Partial<Record<number, WeekRoleplay>>
-
-export const MAX_ROLEPLAY_TURNS = 8
-export const MAX_PARTNER_LENGTH = 30
-export const MAX_PARTNER_LINE_LENGTH = 200
-export const MAX_REPLY_LENGTH = 120
-export const MAX_CUE_LENGTH = 200
 
 /** The partner's picture is shown in a circle, about a third of a phone's width. */
 export const ROLEPLAY_PICTURE_BOUNDS = { maxWidth: 320, maxHeight: 320 }
@@ -49,30 +28,40 @@ export const ROLEPLAY_PICTURE_BOUNDS = { maxWidth: 320, maxHeight: 320 }
 /** The role-plays that ship with the app. TODO(content): weeks 2 to 50. */
 export const builtInWeekRoleplays: WeekRoleplays = { 1: week1Roleplay }
 
-function parseTurn(value: unknown): RoleplayTurn | null {
-  if (!isRecord(value)) return null
-  const partner = tidy(value.partner, MAX_PARTNER_LINE_LENGTH)
-  const reply = tidy(value.reply, MAX_REPLY_LENGTH)
-  if (!partner || !reply) return null
-  return { partner, reply, cues: tidyByLanguage(value.cues, MAX_CUE_LENGTH) }
-}
+/** The two kinds of tutor, either of whom may play a partner. */
+export type TutorKind = 'female' | 'male'
+
+/** Who the learner talks to, when their tutor of this kind plays them. */
+export const partnerNameFor = (roleplay: WeekRoleplay, kind: TutorKind): string =>
+  (kind === 'female' ? roleplay.asWoman : roleplay.asMan) || roleplay.partner
+
+/** Text to be found as it is written, whatever marks it holds. */
+const literally = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
 /**
- * One role-play read back from settings storage, where anything may have been put: the turns
- * that have both of their lines, or `null` without a partner or without any such turn.
+ * A role-play as the learner's tutor plays it. The partner's lines are said in the tutor's voice
+ * and from the tutor's face, so the partner is called what fits that tutor: in the heading, and
+ * wherever a line says the name ("My name is Ravi" is "My name is Asha" from a woman). Only the
+ * name as a whole word: a longer word that holds it is left alone.
  */
-export function parseRoleplay(value: unknown): WeekRoleplay | null {
-  if (!isRecord(value)) return null
-  const partner = tidy(value.partner, MAX_PARTNER_LENGTH)
-  const turns = (Array.isArray(value.turns) ? value.turns : [])
-    .map(parseTurn)
-    .filter((turn) => turn !== null)
-    .slice(0, MAX_ROLEPLAY_TURNS)
-  if (!partner || turns.length === 0) return null
+export function roleplayPlayedBy(roleplay: WeekRoleplay, kind: TutorKind): WeekRoleplay {
+  const name = partnerNameFor(roleplay, kind)
+  if (name === roleplay.partner) return roleplay
 
-  const imageUrl =
-    typeof value.imageUrl === 'string' && isSafeAssetUrl(value.imageUrl) ? value.imageUrl : null
-  return { partner, imageUrl, turns }
+  const written = new RegExp(
+    `(?<![\\p{L}\\p{N}])${literally(roleplay.partner)}(?![\\p{L}\\p{N}])`,
+    'gu',
+  )
+  const named = (line: string) => line.replace(written, name)
+  return {
+    ...roleplay,
+    partner: name,
+    turns: roleplay.turns.map((turn) => ({
+      ...turn,
+      partner: named(turn.partner),
+      reply: named(turn.reply),
+    })),
+  }
 }
 
 /**
@@ -80,17 +69,9 @@ export function parseRoleplay(value: unknown): WeekRoleplay | null {
  * that have both of their lines, and the weeks that have a partner and at least one such turn;
  * drops everything else instead of failing.
  */
-export const weekRoleplaysSchema = z.unknown().transform((value): WeekRoleplays => {
-  if (!isRecord(value)) return {}
-
-  const roleplays: WeekRoleplays = {}
-  for (const [week, entry] of Object.entries(value)) {
-    if (!isWeekNumber(Number(week)) || String(Number(week)) !== week) continue
-    const roleplay = parseRoleplay(entry)
-    if (roleplay) roleplays[Number(week)] = roleplay
-  }
-  return roleplays
-})
+export const weekRoleplaysSchema = z
+  .unknown()
+  .transform((value): WeekRoleplays => parseByWeek(value, parseRoleplay))
 
 export const defaultWeekRoleplays: WeekRoleplays = {}
 

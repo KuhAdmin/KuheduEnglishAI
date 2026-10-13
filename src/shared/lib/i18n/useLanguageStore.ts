@@ -10,7 +10,7 @@ type LanguageState = {
   setLanguage: (language: string) => void
 }
 
-// TODO(auth): sync to the learner's account once sign-in exists.
+// For someone signed in it is kept with their account too (`shared/lib/learnerData`).
 export const useLanguageStore = create<LanguageState>()(
   persist(
     (set) => ({

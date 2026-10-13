@@ -1,0 +1,627 @@
+{
+  "week": 7,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Teena",
+          "text": "Kiran, what is this?",
+          "translations": { "bn": "কিরণ, এটি কী?", "hi": "किरण, यह क्या है?" }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "That is my new bag. It is small and blue.",
+          "translations": {
+            "bn": "ওটা আমার নতুন ব্যাগ। এটি ছোট আর নীল।",
+            "hi": "वह मेरा नया बैग है। वह छोटा और नीला है।"
+          }
+        },
+        {
+          "speaker": "Teena",
+          "text": "And what are those?",
+          "translations": { "bn": "আর ওগুলো কী?", "hi": "और वे क्या हैं?" }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "Those are my books. They are on the table.",
+          "translations": {
+            "bn": "ওগুলো আমার বই। সেগুলো টেবিলের ওপর আছে।",
+            "hi": "वे मेरी किताबें हैं। वे मेज़ पर रखी हैं।"
+          }
+        },
+        {
+          "speaker": "Teena",
+          "text": "Is this big black box yours?",
+          "translations": {
+            "bn": "এই বড় কালো বাক্সটি কি আপনার?",
+            "hi": "क्या यह बड़ा काला डिब्बा आपका है?"
+          }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "No, it isn’t mine. It is Dev’s.",
+          "translations": {
+            "bn": "না, এটি আমার নয়। এটি দেবের।",
+            "hi": "नहीं, यह मेरा नहीं है। यह देव का है।"
+          }
+        },
+        {
+          "speaker": "Teena",
+          "text": "Where is my pen? I cannot find it.",
+          "translations": {
+            "bn": "আমার কলম কোথায়? আমি খুঁজে পাচ্ছি না।",
+            "hi": "मेरा पेन कहाँ है? मुझे नहीं मिल रहा।"
+          }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "It is under the chair, next to your shoes.",
+          "translations": {
+            "bn": "এটি চেয়ারের নিচে, আপনার জুতোর পাশে।",
+            "hi": "वह कुर्सी के नीचे है, आपके जूतों के बगल में।"
+          }
+        },
+        {
+          "speaker": "Teena",
+          "text": "Oh, I see it now. Thank you!",
+          "translations": {
+            "bn": "ও, এখন দেখতে পেয়েছি। ধন্যবাদ!",
+            "hi": "अरे, अब दिख गया। धन्यवाद!"
+          }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "No problem. Your keys are in the drawer.",
+          "translations": {
+            "bn": "কোনো সমস্যা নেই। আপনার চাবিগুলো ড্রয়ারে আছে।",
+            "hi": "कोई बात नहीं। आपकी चाबियाँ दराज़ में हैं।"
+          }
+        },
+        {
+          "speaker": "Teena",
+          "text": "Great. Everything is here!",
+          "translations": {
+            "bn": "দারুণ। সবকিছুই এখানে আছে!",
+            "hi": "बहुत बढ़िया। सब कुछ यहीं है!"
+          }
+        }
+      ],
+      "voices": { "Teena": "female", "Kiran": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "big",
+          "phonetic": "/bɪɡ/",
+          "imageUrl": null,
+          "meanings": { "bn": "বড়", "hi": "बड़ा" },
+          "syllables": ["big"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i” ছোট, “sit”-এর মতো।", "শেষে “g” স্পষ্ট বলুন।"],
+            "en": ["The “i” is short, as in “sit”.", "End with a clear “g”."],
+            "hi": ["“i” छोटा है, “sit” जैसा।", "अंत में “g” साफ़ बोलें।"]
+          }
+        },
+        {
+          "word": "small",
+          "phonetic": "/smɔːl/",
+          "imageUrl": null,
+          "meanings": { "bn": "ছোট", "hi": "छोटा" },
+          "syllables": ["small"],
+          "stress": null,
+          "tips": {
+            "bn": ["“s” আর “m” একসঙ্গে বলুন।", "“a” লম্বা “অ”-এর মতো।"],
+            "en": ["Say “s” and “m” together.", "The “a” sounds like a long “aw”."],
+            "hi": ["“s” और “m” एक साथ बोलें।", "“a” की आवाज़ लंबे “ऑ” जैसी है।"]
+          }
+        },
+        {
+          "word": "round",
+          "phonetic": "/raʊnd/",
+          "imageUrl": null,
+          "meanings": { "bn": "গোল", "hi": "गोल" },
+          "syllables": ["round"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ou”-এর উচ্চারণ “আউ”-এর মতো।", "শেষে “d” স্পষ্ট বলুন।"],
+            "en": ["The “ou” sounds like “ow”.", "End with a clear “d”."],
+            "hi": ["“ou” की आवाज़ “आउ” जैसी है।", "अंत में “d” साफ़ बोलें।"]
+          }
+        },
+        {
+          "word": "square",
+          "phonetic": "/skweə/",
+          "imageUrl": null,
+          "meanings": { "bn": "চৌকো", "hi": "चौकोर" },
+          "syllables": ["squar(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["শুরুতে “skw” একসঙ্গে বলুন।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["Say “skw” together at the start.", "The last “e” is not said."],
+            "hi": ["शुरू में “skw” एक साथ बोलें।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "shape",
+          "phonetic": "/ʃeɪp/",
+          "imageUrl": null,
+          "meanings": { "bn": "আকার", "hi": "आकार" },
+          "syllables": ["shap(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["“a”-এর উচ্চারণ “এই”-এর মতো।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["The “a” sounds like “ay”.", "The last “e” is not said."],
+            "hi": ["“a” की आवाज़ “एइ” जैसी है।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "colour",
+          "phonetic": "/ˈkʌlə/",
+          "imageUrl": null,
+          "meanings": { "bn": "রং", "hi": "रंग" },
+          "syllables": ["col", "our"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“o”-এর উচ্চারণ “cup”-এর “u”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “o” sounds like the “u” in “cup”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“o” की आवाज़ “cup” के “u” जैसी है।"]
+          }
+        },
+        {
+          "word": "heavy",
+          "phonetic": "/ˈhevi/",
+          "imageUrl": null,
+          "meanings": { "bn": "ভারী", "hi": "भारी" },
+          "syllables": ["hea", "vy"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“ea”-এর উচ্চারণ ছোট “e”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “ea” sounds like a short “e”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“ea” की आवाज़ छोटे “e” जैसी है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Where is my phone?",
+          "alsoAccepted": ["Where is my mobile?"],
+          "translations": { "bn": "আমার ফোন কোথায়?", "hi": "मेरा फ़ोन कहाँ है?" },
+          "tips": {
+            "bn": [
+              "জায়গা জানতে “Where is” দিয়ে শুরু করুন।",
+              "একটি জিনিসের জন্য “is”, একাধিকের জন্য “are”।"
+            ],
+            "en": [
+              "Start with “Where is” to ask about a place.",
+              "Use “is” for one thing and “are” for more."
+            ],
+            "hi": [
+              "जगह पूछने के लिए “Where is” से शुरू करें।",
+              "एक चीज़ के लिए “is”, एक से ज़्यादा के लिए “are”।"
+            ]
+          }
+        },
+        {
+          "english": "It is on the table.",
+          "alsoAccepted": ["It’s on the table."],
+          "translations": { "bn": "এটি টেবিলের ওপর আছে।", "hi": "वह मेज़ पर है।" },
+          "tips": {
+            "bn": ["ওপরে বোঝাতে “on” বলুন।", "“the” আগের মতো ছোট ও হালকা রাখুন।"],
+            "en": ["Use “on” for something on top of a surface.", "Say “the” short and soft."],
+            "hi": ["किसी सतह के ऊपर के लिए “on” कहें।", "“the” को छोटा और हल्का बोलें।"]
+          }
+        },
+        {
+          "english": "The keys are in the bag.",
+          "alsoAccepted": ["The keys are inside the bag."],
+          "translations": { "bn": "চাবিগুলো ব্যাগের ভেতরে আছে।", "hi": "चाबियाँ बैग के अंदर हैं।" },
+          "tips": {
+            "bn": ["ভেতরে বোঝাতে “in” বলুন।", "একাধিক জিনিসের সঙ্গে “are” বলুন।"],
+            "en": ["Use “in” for something inside.", "Use “are” with more than one thing."],
+            "hi": ["अंदर के लिए “in” कहें।", "एक से ज़्यादा चीज़ों के साथ “are” कहें।"]
+          }
+        },
+        {
+          "english": "The cat is under the chair.",
+          "alsoAccepted": [],
+          "translations": {
+            "bn": "বিড়ালটি চেয়ারের নিচে আছে।",
+            "hi": "बिल्ली कुर्सी के नीचे है।"
+          },
+          "tips": {
+            "bn": ["নিচে বোঝাতে “under” বলুন।", "“under”-এ প্রথম অংশে জোর দিন।"],
+            "en": ["Use “under” for something below.", "In “under”, the first part is stronger."],
+            "hi": ["नीचे के लिए “under” कहें।", "“under” में पहले हिस्से पर ज़ोर दें।"]
+          }
+        },
+        {
+          "english": "The school is next to the bank.",
+          "alsoAccepted": ["The school is beside the bank."],
+          "translations": { "bn": "স্কুলটি ব্যাংকের পাশে।", "hi": "स्कूल बैंक के बगल में है।" },
+          "tips": {
+            "bn": ["পাশে বোঝাতে “next to” বলুন।", "“next to” দুটি শব্দ একসঙ্গে বলুন।"],
+            "en": ["Use “next to” for something beside.", "Say “next to” together, as one."],
+            "hi": ["बगल के लिए “next to” कहें।", "“next to” को एक साथ बोलें।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Mohit",
+      "asWoman": "Mona",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! I found a bag in the office. Is this your bag?",
+          "reply": "Yes, it is mine. Thank you!",
+          "cues": {
+            "bn": "বলুন হ্যাঁ, ব্যাগটি আপনার, আর ধন্যবাদ দিন।",
+            "hi": "कहें कि हाँ, बैग आपका है, और धन्यवाद दें।"
+          }
+        },
+        {
+          "partner": "And whose is this black umbrella?",
+          "reply": "It isn’t mine. I think it is Ravi’s.",
+          "cues": {
+            "bn": "বলুন ছাতাটি আপনার নয়; সম্ভবত রবির।",
+            "hi": "कहें कि छाता आपका नहीं है; शायद रवि का है।"
+          }
+        },
+        {
+          "partner": "OK. Are these your keys?",
+          "reply": "No, they aren’t mine.",
+          "cues": { "bn": "বলুন না, এগুলো আপনার নয়।", "hi": "कहें कि नहीं, ये आपकी नहीं हैं।" }
+        },
+        {
+          "partner": "Whose are they, then? Do you know?",
+          "reply": "Maybe they are Asha’s.",
+          "cues": { "bn": "বলুন, হয়তো এগুলো আশার।", "hi": "कहें कि शायद ये आशा की हैं।" }
+        },
+        {
+          "partner": "Good idea. I will ask her. Thanks for your help!",
+          "reply": "You are welcome.",
+          "cues": { "bn": "বলুন, আপনাকেও স্বাগত।", "hi": "कहें कि कोई बात नहीं।" }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Describe and find the object",
+        "translations": { "bn": "বর্ণনা দিন, জিনিসটি খুঁজুন", "hi": "वर्णन करें, चीज़ खोजें" }
+      },
+      "instruction": {
+        "text": "Choose an object near you. Describe it so a friend can find it.",
+        "translations": {
+          "bn": "কাছের একটি জিনিস বেছে নিন। এমনভাবে বর্ণনা দিন যাতে বন্ধু খুঁজে পায়।",
+          "hi": "अपने पास की एक चीज़ चुनें। उसका ऐसा वर्णन करें कि दोस्त उसे खोज ले।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what the object is for",
+          "translations": { "bn": "জিনিসটি কীসের জন্য, বলুন", "hi": "बताएँ कि वह चीज़ किसलिए है" }
+        },
+        {
+          "text": "Say its size, shape and colour",
+          "translations": {
+            "bn": "এর আকার, গড়ন আর রং বলুন",
+            "hi": "उसका आकार, बनावट और रंग बताएँ"
+          }
+        },
+        {
+          "text": "Say where it is",
+          "translations": { "bn": "এটি কোথায় আছে, বলুন", "hi": "बताएँ कि वह कहाँ है" }
+        },
+        {
+          "text": "Say whose it is",
+          "translations": { "bn": "এটি কার, বলুন", "hi": "बताएँ कि वह किसकी है" }
+        },
+        {
+          "text": "End with “Can you find it?”",
+          "translations": {
+            "bn": "শেষে বলুন “Can you find it?”",
+            "hi": "अंत में कहें “Can you find it?”"
+          }
+        }
+      ],
+      "phrases": [
+        "It is small and round.",
+        "It is red.",
+        "It is on the table.",
+        "It is next to the window.",
+        "It is mine.",
+        "Can you find it?"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "You point to a pen near you. What do you say?",
+            "translations": {
+              "bn": "আপনি কাছের একটি কলম দেখাচ্ছেন। কী বলবেন?",
+              "hi": "आप अपने पास के एक पेन की ओर इशारा करते हैं। क्या कहेंगे?"
+            }
+          },
+          "answer": "This is my pen.",
+          "others": ["That are my pen.", "Those is my pen."]
+        },
+        {
+          "question": {
+            "text": "You point to two books far from you. What do you say?",
+            "translations": {
+              "bn": "আপনি দূরের দুটি বই দেখাচ্ছেন। কী বলবেন?",
+              "hi": "आप दूर रखी दो किताबों की ओर इशारा करते हैं। क्या कहेंगे?"
+            }
+          },
+          "answer": "Those are my books.",
+          "others": ["This is my books.", "That are my books."]
+        },
+        {
+          "question": {
+            "text": "The cup is inside the box. Which sentence is right?",
+            "translations": {
+              "bn": "কাপটি বাক্সের ভেতরে। কোন বাক্যটি ঠিক?",
+              "hi": "कप डिब्बे के अंदर है। कौन-सा वाक्य सही है?"
+            }
+          },
+          "answer": "The cup is in the box.",
+          "others": ["The cup is on the box.", "The cup is under the box."]
+        },
+        {
+          "question": {
+            "text": "How do you ask who owns something?",
+            "translations": {
+              "bn": "কিছু কার, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "कोई चीज़ किसकी है, यह कैसे पूछें?"
+            }
+          },
+          "answer": "Whose is this?",
+          "others": ["Who is this?", "Where is this?"]
+        },
+        {
+          "question": {
+            "text": "Which word describes a shape?",
+            "translations": { "bn": "কোন শব্দটি আকার বোঝায়?", "hi": "कौन-सा शब्द आकार बताता है?" }
+          },
+          "answer": "round",
+          "others": ["heavy", "blue"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Clerk",
+          "text": "Good morning. This is the lost and found office.",
+          "translations": {
+            "bn": "সুপ্রভাত। এটি হারানো-প্রাপ্তি দপ্তর।",
+            "hi": "सुप्रभात। यह खोया-पाया कार्यालय है।"
+          }
+        },
+        {
+          "speaker": "Jaya",
+          "text": "Hello. I think I lost my bag on the bus.",
+          "translations": {
+            "bn": "হ্যালো। আমার মনে হয় বাসে আমার ব্যাগ হারিয়ে গেছে।",
+            "hi": "नमस्ते। मुझे लगता है मेरा बैग बस में खो गया।"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "What does it look like?",
+          "translations": { "bn": "দেখতে কেমন সেটি?", "hi": "वह दिखने में कैसा है?" }
+        },
+        {
+          "speaker": "Jaya",
+          "text": "It is big and green. It has two small pockets.",
+          "translations": {
+            "bn": "এটি বড় আর সবুজ। এতে দুটি ছোট পকেট আছে।",
+            "hi": "वह बड़ा और हरा है। उसमें दो छोटी जेबें हैं।"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Is it round or square?",
+          "translations": { "bn": "এটি কি গোল, না চৌকো?", "hi": "वह गोल है या चौकोर?" }
+        },
+        {
+          "speaker": "Jaya",
+          "text": "It is square. It is heavy too.",
+          "translations": { "bn": "এটি চৌকো। আর ভারীও।", "hi": "वह चौकोर है। और भारी भी है।" }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "What is inside it?",
+          "translations": { "bn": "এর ভেতরে কী আছে?", "hi": "उसके अंदर क्या है?" }
+        },
+        {
+          "speaker": "Jaya",
+          "text": "My lunch box, a blue book and my glasses.",
+          "translations": {
+            "bn": "আমার টিফিন বাক্স, একটি নীল বই আর আমার চশমা।",
+            "hi": "मेरा टिफ़िन, एक नीली किताब और मेरा चश्मा।"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Wait a moment. Is this your bag, next to the door?",
+          "translations": {
+            "bn": "এক মিনিট অপেক্ষা করুন। দরজার পাশের এটিই কি আপনার ব্যাগ?",
+            "hi": "एक मिनट रुकिए। क्या दरवाज़े के बगल का यह बैग आपका है?"
+          }
+        },
+        {
+          "speaker": "Jaya",
+          "text": "Yes, it is mine! Thank you so much.",
+          "translations": {
+            "bn": "হ্যাঁ, এটি আমারই! অনেক ধন্যবাদ।",
+            "hi": "जी हाँ, यह मेरा ही है! बहुत धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "You are welcome. Please sign here.",
+          "translations": {
+            "bn": "আপনাকেও স্বাগত। দয়া করে এখানে সই করুন।",
+            "hi": "कोई बात नहीं। कृपया यहाँ हस्ताक्षर कीजिए।"
+          }
+        }
+      ],
+      "voices": { "Clerk": "male", "Jaya": "female" }
+    },
+    "review_roleplay": {
+      "partner": "the clerk",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good morning. How can I help?",
+          "reply": "I think I lost my bag.",
+          "cues": { "bn": "বলুন আপনার ব্যাগ হারিয়ে গেছে।", "hi": "कहें कि आपका बैग खो गया है।" }
+        },
+        {
+          "partner": "What does it look like?",
+          "reply": "It is big and green.",
+          "cues": { "bn": "ব্যাগটির আকার আর রং বলুন।", "hi": "बैग का आकार और रंग बताएँ।" }
+        },
+        {
+          "partner": "Where did you leave it?",
+          "reply": "I think it is on the bus.",
+          "cues": {
+            "bn": "বলুন আপনার মনে হয় ওটা বাসে আছে।",
+            "hi": "कहें कि आपको लगता है वह बस में है।"
+          }
+        },
+        {
+          "partner": "We will call you. Thank you.",
+          "reply": "Thank you very much.",
+          "cues": { "bn": "অনেক ধন্যবাদ দিন।", "hi": "बहुत धन्यवाद दें।" }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": { "text": "At a shop", "translations": { "bn": "দোকানে", "hi": "दुकान पर" } },
+          "roleplay": {
+            "partner": "the shopkeeper",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning! What are you looking for?",
+                "reply": "I am looking for a bag.",
+                "cues": {
+                  "bn": "বলুন আপনি একটি ব্যাগ খুঁজছেন।",
+                  "hi": "कहें कि आप एक बैग ढूँढ रहे हैं।"
+                }
+              },
+              {
+                "partner": "What size and colour?",
+                "reply": "A small, blue one, please.",
+                "cues": { "bn": "আকার আর রং বলুন।", "hi": "आकार और रंग बताएँ।" }
+              },
+              {
+                "partner": "This one is nice, isn’t it? Do you like it?",
+                "reply": "Yes, I like it. Is that one bigger?",
+                "cues": {
+                  "bn": "বলুন ভালো লেগেছে, আর জিজ্ঞেস করুন ওটি কি বড়।",
+                  "hi": "कहें कि पसंद आया, और पूछें कि क्या वह बड़ा है।"
+                }
+              },
+              {
+                "partner": "Yes, that one is bigger. It is on the top shelf.",
+                "reply": "Thank you. I will take the small one.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর বলুন ছোটটি নেবেন।",
+                  "hi": "धन्यवाद दें, और कहें कि आप छोटा वाला लेंगे।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Finding my keys",
+            "translations": { "bn": "চাবি খোঁজা", "hi": "चाबियाँ खोजना" }
+          },
+          "roleplay": {
+            "partner": "Vikas",
+            "asWoman": "Vandana",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "You look worried. What is wrong?",
+                "reply": "I cannot find my keys.",
+                "cues": {
+                  "bn": "বলুন আপনি চাবি খুঁজে পাচ্ছেন না।",
+                  "hi": "कहें कि आपको अपनी चाबियाँ नहीं मिल रहीं।"
+                }
+              },
+              {
+                "partner": "What do they look like?",
+                "reply": "They are small. They are on a red ring.",
+                "cues": {
+                  "bn": "চাবিগুলো দেখতে কেমন, বলুন।",
+                  "hi": "बताएँ कि चाबियाँ कैसी दिखती हैं।"
+                }
+              },
+              {
+                "partner": "Are they in your bag?",
+                "reply": "No, they aren’t.",
+                "cues": { "bn": "বলুন না, নেই।", "hi": "कहें कि नहीं, नहीं हैं।" }
+              },
+              {
+                "partner": "Look! They are under the newspaper, next to the lamp.",
+                "reply": "Oh, thank you! There they are.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর বলুন ওই তো ওগুলো।",
+                  "hi": "धन्यवाद दें, और कहें कि वे रहीं।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A lost umbrella",
+            "translations": { "bn": "হারানো ছাতা", "hi": "खोया हुआ छाता" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Excuse me, is this black umbrella yours?",
+                "reply": "No, it isn’t mine.",
+                "cues": { "bn": "বলুন না, এটি আপনার নয়।", "hi": "कहें कि नहीं, यह आपका नहीं है।" }
+              },
+              {
+                "partner": "Oh. Whose is it, then?",
+                "reply": "Maybe it is the teacher’s.",
+                "cues": { "bn": "বলুন, হয়তো এটি শিক্ষকের।", "hi": "कहें कि शायद यह शिक्षक का है।" }
+              },
+              {
+                "partner": "Where is the teacher’s room?",
+                "reply": "It is next to the library.",
+                "cues": {
+                  "bn": "বলুন ঘরটি লাইব্রেরির পাশে।",
+                  "hi": "कहें कि कमरा पुस्तकालय के बगल में है।"
+                }
+              },
+              {
+                "partner": "Thank you. I will take it there.",
+                "reply": "You are welcome.",
+                "cues": { "bn": "বলুন, আপনাকেও স্বাগত।", "hi": "कहें कि कोई बात नहीं।" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

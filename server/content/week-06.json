@@ -1,0 +1,681 @@
+{
+  "week": 6,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rajesh",
+          "text": "Who are you waiting for, Meena?",
+          "translations": {
+            "bn": "আপনি কার জন্য অপেক্ষা করছেন, মীনা?",
+            "hi": "मीना, आप किसका इंतज़ार कर रही हैं?"
+          }
+        },
+        {
+          "speaker": "Meena",
+          "text": "My cousin, Arun. He is coming today.",
+          "translations": {
+            "bn": "আমার খুড়তুতো ভাই, অরুণ। সে আজ আসছে।",
+            "hi": "मेरा चचेरा भाई, अरुण। वह आज आ रहा है।"
+          }
+        },
+        {
+          "speaker": "Rajesh",
+          "text": "What does he look like?",
+          "translations": { "bn": "দেখতে কেমন সে?", "hi": "वह कैसा दिखता है?" }
+        },
+        {
+          "speaker": "Meena",
+          "text": "He is tall and thin. He has short black hair.",
+          "translations": {
+            "bn": "সে লম্বা আর রোগা। তার চুল ছোট আর কালো।",
+            "hi": "वह लंबा और दुबला है। उसके बाल छोटे और काले हैं।"
+          }
+        },
+        {
+          "speaker": "Rajesh",
+          "text": "How old is he?",
+          "translations": { "bn": "তার বয়স কত?", "hi": "उसकी उम्र कितनी है?" }
+        },
+        {
+          "speaker": "Meena",
+          "text": "He is twenty-five years old.",
+          "translations": { "bn": "তার বয়স পঁচিশ বছর।", "hi": "वह पच्चीस साल का है।" }
+        },
+        {
+          "speaker": "Rajesh",
+          "text": "What is he like?",
+          "translations": { "bn": "স্বভাবে সে কেমন?", "hi": "वह स्वभाव से कैसा है?" }
+        },
+        {
+          "speaker": "Meena",
+          "text": "He is kind and funny, but a little shy.",
+          "translations": {
+            "bn": "সে দয়ালু আর মজার, তবে একটু লাজুক।",
+            "hi": "वह दयालु और मज़ाकिया है, पर थोड़ा शर्मीला है।"
+          }
+        },
+        {
+          "speaker": "Rajesh",
+          "text": "Is that him? The man in the blue shirt?",
+          "translations": {
+            "bn": "ওই কি সে? নীল শার্ট পরা লোকটি?",
+            "hi": "क्या वह वही है? नीली शर्ट वाला आदमी?"
+          }
+        },
+        {
+          "speaker": "Meena",
+          "text": "Yes, that is him. He wears glasses too.",
+          "translations": {
+            "bn": "হ্যাঁ, ওই-ই সে। সে চশমাও পরে।",
+            "hi": "हाँ, वही है। वह चश्मा भी पहनता है।"
+          }
+        },
+        {
+          "speaker": "Rajesh",
+          "text": "He looks friendly.",
+          "translations": { "bn": "তাকে বন্ধুসুলভ মনে হচ্ছে।", "hi": "वह मिलनसार लगता है।" }
+        },
+        {
+          "speaker": "Meena",
+          "text": "He is. Come, let me introduce you.",
+          "translations": {
+            "bn": "সে তাই। আসুন, আপনার সঙ্গে পরিচয় করিয়ে দিই।",
+            "hi": "है भी। आइए, मैं आपका परिचय करा दूँ।"
+          }
+        }
+      ],
+      "voices": { "Rajesh": "male", "Meena": "female" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "kind",
+          "phonetic": "/kaɪnd/",
+          "imageUrl": null,
+          "meanings": { "bn": "দয়ালু", "hi": "दयालु" },
+          "syllables": ["kind"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i”-এর উচ্চারণ “eye”-এর মতো।", "শেষে “d” স্পষ্ট বলুন।"],
+            "en": ["The “i” sounds like “eye”.", "End with a clear “d”."],
+            "hi": ["“i” की आवाज़ “eye” जैसी है।", "अंत में “d” साफ़ बोलें।"]
+          }
+        },
+        {
+          "word": "funny",
+          "phonetic": "/ˈfʌni/",
+          "imageUrl": null,
+          "meanings": { "bn": "মজার", "hi": "मज़ाकिया" },
+          "syllables": ["fun", "ny"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“u”-এর উচ্চারণ “cup”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “u” sounds like the “u” in “cup”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“u” की आवाज़ “cup” के “u” जैसी है।"]
+          }
+        },
+        {
+          "word": "shy",
+          "phonetic": "/ʃaɪ/",
+          "imageUrl": null,
+          "meanings": { "bn": "লাজুক", "hi": "शर्मीला" },
+          "syllables": ["shy"],
+          "stress": null,
+          "tips": {
+            "bn": ["“sh” একটিই নরম ধ্বনি।", "শেষের “y”-এর উচ্চারণ “eye”-এর মতো।"],
+            "en": ["“sh” is one soft sound.", "The “y” sounds like “eye”."],
+            "hi": ["“sh” एक ही नरम आवाज़ है।", "“y” की आवाज़ “eye” जैसी है।"]
+          }
+        },
+        {
+          "word": "friendly",
+          "phonetic": "/ˈfrendli/",
+          "imageUrl": null,
+          "meanings": { "bn": "বন্ধুসুলভ", "hi": "मिलनसार" },
+          "syllables": ["friend", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“friend”-এর “ie” আসলে ছোট “e”-এর মতো শোনায়।"],
+            "en": ["Say the first part stronger.", "The “ie” in “friend” sounds like a short “e”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“friend” का “ie” छोटे “e” जैसा सुनाई देता है।"]
+          }
+        },
+        {
+          "word": "polite",
+          "phonetic": "/pəˈlaɪt/",
+          "imageUrl": null,
+          "meanings": { "bn": "ভদ্র", "hi": "विनम्र" },
+          "syllables": ["po", "lit(e)"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["Say the second part stronger.", "The last “e” is not said."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "quiet",
+          "phonetic": "/ˈkwaɪət/",
+          "imageUrl": null,
+          "meanings": { "bn": "শান্ত, চুপচাপ", "hi": "शांत, चुप" },
+          "syllables": ["qui", "et"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "প্রথম অংশের উচ্চারণ “কোয়াই”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The first part sounds like “kwy”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "पहले हिस्से की आवाज़ “क्वाइ” जैसी है।"]
+          }
+        },
+        {
+          "word": "clever",
+          "phonetic": "/ˈklevə/",
+          "imageUrl": null,
+          "meanings": { "bn": "বুদ্ধিমান", "hi": "समझदार, होशियार" },
+          "syllables": ["clev", "er"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "শেষ অংশটি ছোট ও হালকা রাখুন।"],
+            "en": ["Say the first part stronger.", "Keep the last part short and soft."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "आख़िरी हिस्सा छोटा और हल्का रखें।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "How old is your sister?",
+          "alsoAccepted": [],
+          "translations": { "bn": "আপনার বোনের বয়স কত?", "hi": "आपकी बहन की उम्र कितनी है?" },
+          "tips": {
+            "bn": ["বয়স জানতে “How old” দিয়ে শুরু করুন।", "উত্তরে বলুন “She is … years old.”"],
+            "en": ["Start with “How old” to ask about age.", "The answer is “She is … years old.”"],
+            "hi": [
+              "उम्र पूछने के लिए “How old” से शुरू करें।",
+              "जवाब में “She is … years old.” कहें।"
+            ]
+          }
+        },
+        {
+          "english": "She is twenty years old.",
+          "alsoAccepted": ["She is twenty.", "She is 20 years old."],
+          "translations": { "bn": "তার বয়স কুড়ি বছর।", "hi": "वह बीस साल की है।" },
+          "tips": {
+            "bn": [
+              "আগে সংখ্যা, তারপর “years old” বলুন।",
+              "শুধু সংখ্যাও বলা যায়: “She is twenty.”"
+            ],
+            "en": [
+              "Say the number, then “years old”.",
+              "You can also say only the number: “She is twenty.”"
+            ],
+            "hi": [
+              "पहले संख्या, फिर “years old” कहें।",
+              "सिर्फ़ संख्या भी कह सकते हैं: “She is twenty.”"
+            ]
+          }
+        },
+        {
+          "english": "My father is fifty-two.",
+          "alsoAccepted": ["My father is fifty-two years old.", "My dad is fifty-two."],
+          "translations": { "bn": "আমার বাবার বয়স বাহান্ন।", "hi": "मेरे पिता बावन साल के हैं।" },
+          "tips": {
+            "bn": ["“fifty” (৫০) আর “fifteen” (১৫) আলাদা করে বলুন।", "“fifty”-তে জোর প্রথম অংশে।"],
+            "en": [
+              "Say “fifty” (50) and “fifteen” (15) differently.",
+              "In “fifty”, the first part is stronger."
+            ],
+            "hi": [
+              "“fifty” (50) और “fifteen” (15) अलग-अलग बोलें।",
+              "“fifty” में पहला हिस्सा ज़ोर से बोला जाता है।"
+            ]
+          }
+        },
+        {
+          "english": "He is tall, with grey hair.",
+          "alsoAccepted": ["He is tall and he has grey hair.", "He is tall with grey hair."],
+          "translations": {
+            "bn": "সে লম্বা, আর তার চুল পাকা।",
+            "hi": "वह लंबा है और उसके बाल सफ़ेद हैं।"
+          },
+          "tips": {
+            "bn": [
+              "“with” দিয়ে চেহারার আরেকটি বিবরণ যোগ করা যায়।",
+              "“grey hair” মানে পাকা বা ধূসর চুল।"
+            ],
+            "en": [
+              "Use “with” to add another detail about how someone looks.",
+              "“grey hair” means hair that is grey or white."
+            ],
+            "hi": [
+              "“with” से चेहरे-मोहरे की एक और बात जोड़ी जा सकती है।",
+              "“grey hair” का मतलब है सफ़ेद या भूरे बाल।"
+            ]
+          }
+        },
+        {
+          "english": "She is young and very clever.",
+          "alsoAccepted": ["She is young and she is very clever."],
+          "translations": {
+            "bn": "সে অল্পবয়সী আর খুব বুদ্ধিমতী।",
+            "hi": "वह छोटी उम्र की और बहुत समझदार है।"
+          },
+          "tips": {
+            "bn": ["“very” বসান বিশেষণের ঠিক আগে।", "দুটি বিশেষণ “and” দিয়ে জোড়া যায়।"],
+            "en": [
+              "Put “very” just before the describing word.",
+              "Join two describing words with “and”."
+            ],
+            "hi": [
+              "“very” को विशेषण से ठीक पहले लगाएँ।",
+              "दो विशेषणों को “and” से जोड़ा जा सकता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Neeraj",
+      "asWoman": "Neeta",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! I want to tell you about my two friends, Ravi and Sam. Ravi is tall. Sam is short. Who is taller?",
+          "reply": "Ravi is taller than Sam.",
+          "cues": {
+            "bn": "বলুন কে বেশি লম্বা, “taller than” ব্যবহার করে।",
+            "hi": "“taller than” का प्रयोग करके बताएँ कि कौन ज़्यादा लंबा है।"
+          }
+        },
+        {
+          "partner": "Right! Ravi is thirty and Sam is twenty-five. Who is older?",
+          "reply": "Ravi is older than Sam.",
+          "cues": {
+            "bn": "বলুন কে বেশি বয়সী, “older than” ব্যবহার করে।",
+            "hi": "“older than” का प्रयोग करके बताएँ कि उम्र में कौन बड़ा है।"
+          }
+        },
+        {
+          "partner": "Yes. Ravi is quiet, but Sam is very funny. Are they the same?",
+          "reply": "No, they are different.",
+          "cues": { "bn": "বলুন না, তাঁরা আলাদা।", "hi": "कहें कि नहीं, वे अलग हैं।" }
+        },
+        {
+          "partner": "But both are kind. What is the same about them?",
+          "reply": "They are both kind.",
+          "cues": { "bn": "বলুন তাঁরা দুজনেই দয়ালু।", "hi": "कहें कि वे दोनों दयालु हैं।" }
+        },
+        {
+          "partner": "Good. Now tell me about two people in your family.",
+          "reply": "My … is taller than my …",
+          "cues": {
+            "bn": "পরিবারের দুজনের তুলনা করুন।",
+            "hi": "अपने परिवार के दो लोगों की तुलना करें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Who am I describing?",
+        "translations": { "bn": "আমি কার কথা বলছি?", "hi": "यह किसका वर्णन है?" }
+      },
+      "instruction": {
+        "text": "Describe a person without saying their name. Can a friend guess who it is?",
+        "translations": {
+          "bn": "কারও নাম না বলে তাঁর বর্ণনা দিন। বন্ধু কি আন্দাজ করতে পারবে?",
+          "hi": "किसी का नाम लिए बिना उसका वर्णन करें। क्या दोस्त अंदाज़ा लगा पाएगा?"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Choose a person you know",
+          "translations": {
+            "bn": "আপনার চেনা একজনকে বেছে নিন",
+            "hi": "अपने किसी जानने वाले को चुनें"
+          }
+        },
+        {
+          "text": "Say how he or she looks",
+          "translations": { "bn": "দেখতে কেমন, বলুন", "hi": "बताएँ कि वह दिखने में कैसा है" }
+        },
+        {
+          "text": "Say how old he or she is",
+          "translations": { "bn": "বয়স কত, বলুন", "hi": "बताएँ कि उसकी उम्र कितनी है" }
+        },
+        {
+          "text": "Say what he or she is like",
+          "translations": { "bn": "স্বভাবে কেমন, বলুন", "hi": "बताएँ कि वह स्वभाव से कैसा है" }
+        },
+        {
+          "text": "End with “Can you guess who it is?”",
+          "translations": {
+            "bn": "শেষে বলুন “Can you guess who it is?”",
+            "hi": "अंत में कहें “Can you guess who it is?”"
+          }
+        }
+      ],
+      "phrases": [
+        "He is tall and thin.",
+        "She has long black hair.",
+        "He is about thirty years old.",
+        "She is kind and funny.",
+        "He wears glasses.",
+        "Can you guess who it is?"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you ask what someone looks like?",
+            "translations": {
+              "bn": "কেউ দেখতে কেমন, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "कोई दिखने में कैसा है, यह कैसे पूछें?"
+            }
+          },
+          "answer": "What does she look like?",
+          "others": ["What is she like?", "How old is she?"]
+        },
+        {
+          "question": {
+            "text": "How do you ask about someone’s personality?",
+            "translations": {
+              "bn": "কারও স্বভাব কেমন, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी के स्वभाव के बारे में कैसे पूछें?"
+            }
+          },
+          "answer": "What is he like?",
+          "others": ["What does he look like?", "Where is he from?"]
+        },
+        {
+          "question": {
+            "text": "Which sentence is about age?",
+            "translations": {
+              "bn": "কোন বাক্যটি বয়সের কথা বলে?",
+              "hi": "कौन-सा वाक्य उम्र के बारे में है?"
+            }
+          },
+          "answer": "He is forty years old.",
+          "others": ["He is very tall.", "He is kind and funny."]
+        },
+        {
+          "question": {
+            "text": "Ravi is 30. Sam is 25. Complete: Ravi is ___ than Sam.",
+            "translations": {
+              "bn": "রবির বয়স ৩০, স্যামের ২৫। পূরণ করুন: Ravi is ___ than Sam.",
+              "hi": "रवि 30 का है, सैम 25 का। पूरा करें: Ravi is ___ than Sam."
+            }
+          },
+          "answer": "older",
+          "others": ["young", "oldest"]
+        },
+        {
+          "question": {
+            "text": "Which word means a person who is not loud and not talkative?",
+            "translations": {
+              "bn": "যে মানুষ জোরে কথা বলে না, বেশি কথাও বলে না, তাকে কোন শব্দে বোঝায়?",
+              "hi": "जो व्यक्ति न तेज़ बोलता है, न ज़्यादा बात करता है, उसके लिए कौन-सा शब्द है?"
+            }
+          },
+          "answer": "quiet",
+          "others": ["funny", "friendly"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Guard",
+          "text": "Good afternoon, madam. Can I help you?",
+          "translations": {
+            "bn": "শুভ অপরাহ্ন, ম্যাডাম। আমি কি সাহায্য করতে পারি?",
+            "hi": "नमस्ते मैडम। क्या मैं आपकी मदद कर सकता हूँ?"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "Yes, please. I cannot find my little brother.",
+          "translations": {
+            "bn": "হ্যাঁ, দয়া করে। আমি আমার ছোট ভাইকে খুঁজে পাচ্ছি না।",
+            "hi": "जी हाँ, कृपया। मुझे अपना छोटा भाई नहीं मिल रहा।"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "Don’t worry. What does he look like?",
+          "translations": {
+            "bn": "চিন্তা করবেন না। সে দেখতে কেমন?",
+            "hi": "चिंता न करें। वह दिखने में कैसा है?"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "He is short, with curly black hair.",
+          "translations": {
+            "bn": "সে বেঁটে, আর তার চুল কোঁকড়ানো কালো।",
+            "hi": "वह छोटे क़द का है और उसके बाल घुँघराले काले हैं।"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "How old is he?",
+          "translations": { "bn": "তার বয়স কত?", "hi": "उसकी उम्र कितनी है?" }
+        },
+        {
+          "speaker": "Anita",
+          "text": "He is eight years old.",
+          "translations": { "bn": "তার বয়স আট বছর।", "hi": "वह आठ साल का है।" }
+        },
+        {
+          "speaker": "Guard",
+          "text": "What is he wearing?",
+          "translations": { "bn": "সে কী পরে আছে?", "hi": "उसने क्या पहना है?" }
+        },
+        {
+          "speaker": "Anita",
+          "text": "A red T-shirt and blue shorts.",
+          "translations": {
+            "bn": "একটি লাল টি-শার্ট আর নীল হাফ প্যান্ট।",
+            "hi": "लाल टी-शर्ट और नीली निकर।"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "Is he shy or friendly?",
+          "translations": { "bn": "সে কি লাজুক, না মিশুকে?", "hi": "वह शर्मीला है या मिलनसार?" }
+        },
+        {
+          "speaker": "Anita",
+          "text": "He is very friendly. He talks to everyone.",
+          "translations": {
+            "bn": "সে খুব মিশুকে। সে সবার সঙ্গে কথা বলে।",
+            "hi": "वह बहुत मिलनसार है। वह सबसे बात करता है।"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "I think I saw him near the gate. Please come with me.",
+          "translations": {
+            "bn": "আমার মনে হয় আমি তাকে গেটের কাছে দেখেছি। দয়া করে আমার সঙ্গে আসুন।",
+            "hi": "मुझे लगता है मैंने उसे गेट के पास देखा था। कृपया मेरे साथ आइए।"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "Thank you so much!",
+          "translations": { "bn": "অনেক অনেক ধন্যবাদ!", "hi": "बहुत-बहुत धन्यवाद!" }
+        }
+      ],
+      "voices": { "Guard": "male", "Anita": "female" }
+    },
+    "review_roleplay": {
+      "partner": "the guard",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good afternoon. Can I help you?",
+          "reply": "Yes, please. I cannot find my friend.",
+          "cues": {
+            "bn": "বলুন আপনি আপনার বন্ধুকে খুঁজে পাচ্ছেন না।",
+            "hi": "कहें कि आपको अपना दोस्त नहीं मिल रहा।"
+          }
+        },
+        {
+          "partner": "What does your friend look like?",
+          "reply": "He is tall, with short black hair.",
+          "cues": {
+            "bn": "বন্ধু দেখতে কেমন, বলুন।",
+            "hi": "बताएँ कि आपका दोस्त दिखने में कैसा है।"
+          }
+        },
+        {
+          "partner": "How old is your friend?",
+          "reply": "He is about thirty years old.",
+          "cues": { "bn": "বন্ধুর আনুমানিক বয়স বলুন।", "hi": "दोस्त की अनुमानित उम्र बताएँ।" }
+        },
+        {
+          "partner": "What is your friend like?",
+          "reply": "He is kind and funny.",
+          "cues": {
+            "bn": "বন্ধুর স্বভাব কেমন, বলুন।",
+            "hi": "बताएँ कि आपका दोस्त स्वभाव से कैसा है।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Meeting at the airport",
+            "translations": { "bn": "বিমানবন্দরে দেখা", "hi": "हवाई अड्डे पर मुलाक़ात" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! I’m coming to meet your cousin. What does he look like?",
+                "reply": "He is tall, with short hair.",
+                "cues": {
+                  "bn": "আপনার খুড়তুতো ভাই দেখতে কেমন, বলুন।",
+                  "hi": "बताएँ कि आपका चचेरा भाई दिखने में कैसा है।"
+                }
+              },
+              {
+                "partner": "How old is he?",
+                "reply": "He is about twenty-five.",
+                "cues": { "bn": "তার আনুমানিক বয়স বলুন।", "hi": "उसकी अनुमानित उम्र बताएँ।" }
+              },
+              {
+                "partner": "What is he like?",
+                "reply": "He is kind, but a little shy.",
+                "cues": { "bn": "তার স্বভাব কেমন, বলুন।", "hi": "बताएँ कि वह स्वभाव से कैसा है।" }
+              },
+              {
+                "partner": "Great. I think I can see him now. Thank you!",
+                "reply": "You are welcome!",
+                "cues": { "bn": "বলুন, আপনাকেও স্বাগত।", "hi": "कहें कि कोई बात नहीं।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A guessing game",
+            "translations": { "bn": "আন্দাজের খেলা", "hi": "अंदाज़ा लगाने का खेल" }
+          },
+          "roleplay": {
+            "partner": "Dinesh",
+            "asWoman": "Dina",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Let’s play a game! I think of a person. You ask questions. Ask me about the person’s looks.",
+                "reply": "What does the person look like?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন মানুষটি দেখতে কেমন।",
+                  "hi": "पूछें कि वह व्यक्ति दिखने में कैसा है।"
+                }
+              },
+              {
+                "partner": "The person is short, with long grey hair. Now ask about the age.",
+                "reply": "How old is the person?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন মানুষটির বয়স কত।",
+                  "hi": "पूछें कि उस व्यक्ति की उम्र कितनी है।"
+                }
+              },
+              {
+                "partner": "The person is about sixty. Ask what the person is like.",
+                "reply": "What is the person like?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন মানুষটি স্বভাবে কেমন।",
+                  "hi": "पूछें कि वह व्यक्ति स्वभाव से कैसा है।"
+                }
+              },
+              {
+                "partner": "The person is kind and very clever. Can you guess who it is?",
+                "reply": "Is it your grandmother?",
+                "cues": {
+                  "bn": "আন্দাজ করুন: এটি কি তাঁর ঠাকুমা?",
+                  "hi": "अंदाज़ा लगाएँ: क्या यह उनकी दादी हैं?"
+                }
+              },
+              {
+                "partner": "Yes! Well done!",
+                "reply": "Thank you! That was fun.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর বলুন খেলাটি মজার ছিল।",
+                  "hi": "धन्यवाद दें, और कहें कि खेल मज़ेदार था।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Describing a colleague",
+            "translations": { "bn": "সহকর্মীর বর্ণনা", "hi": "सहकर्मी का वर्णन" }
+          },
+          "roleplay": {
+            "partner": "the manager",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "A new person starts tomorrow. Do you know him or her?",
+                "reply": "Yes, a little.",
+                "cues": { "bn": "বলুন, হ্যাঁ, একটু চিনি।", "hi": "कहें कि हाँ, थोड़ा जानते हैं।" }
+              },
+              {
+                "partner": "What is the person like?",
+                "reply": "The person is polite and quiet.",
+                "cues": {
+                  "bn": "মানুষটির স্বভাব কেমন, বলুন।",
+                  "hi": "बताएँ कि वह व्यक्ति स्वभाव से कैसा है।"
+                }
+              },
+              {
+                "partner": "Good. And is the person young?",
+                "reply": "Yes, about twenty-three.",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, আনুমানিক তেইশ।",
+                  "hi": "कहें कि हाँ, लगभग तेईस साल का।"
+                }
+              },
+              {
+                "partner": "Thank you. That is helpful.",
+                "reply": "You are welcome.",
+                "cues": { "bn": "বলুন, আপনাকেও স্বাগত।", "hi": "कहें कि कोई बात नहीं।" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -4,6 +4,9 @@ import { connectDatabase } from './db/client.ts'
 import { readEnv } from './env.ts'
 import { createMailer } from './lib/mailer.ts'
 import { createGoogleSignIn } from './modules/auth/google.ts'
+import { createGrader } from './modules/conversation/grader.ts'
+import { createListener } from './modules/conversation/listener.ts'
+import { createScorer } from './modules/pronunciation/scorer.ts'
 import { createSoundCache } from './modules/speech/soundCache.ts'
 import { createSpeaker } from './modules/speech/speaker.ts'
 
@@ -25,6 +28,12 @@ const app = buildApp({
       env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET
         ? createGoogleSignIn(env.GOOGLE_CLIENT_ID, env.GOOGLE_CLIENT_SECRET)
         : undefined,
+    scorer: createScorer(env.SCORER_URL),
+    replies: {
+      // The scoring service writes down what was said, too.
+      listener: createListener(env.SCORER_URL),
+      grader: createGrader(env.GRADER_URL, env.GRADER_MODEL),
+    },
   },
   speech: {
     speaker: createSpeaker(env.SPEECH_URL),

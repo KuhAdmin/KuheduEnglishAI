@@ -1,0 +1,728 @@
+{
+  "week": 2,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Neha",
+          "text": "Hello! I’m Neha. What’s your name?",
+          "translations": {
+            "bn": "হ্যালো! আমি নেহা। আপনার নাম কী?",
+            "hi": "नमस्ते! मैं नेहा हूँ। आपका नाम क्या है?"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "Hi, Neha. My name is Amit.",
+          "translations": {
+            "bn": "হাই, নেহা। আমার নাম অমিত।",
+            "hi": "हाय, नेहा। मेरा नाम अमित है।"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "Nice to meet you, Amit. Are you new here?",
+          "translations": {
+            "bn": "আপনার সঙ্গে পরিচিত হয়ে ভালো লাগল, অমিত। আপনি কি এখানে নতুন?",
+            "hi": "आपसे मिलकर अच्छा लगा, अमित। क्या आप यहाँ नए हैं?"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "Yes, I am. I’m from Pune.",
+          "translations": {
+            "bn": "হ্যাঁ, আমি নতুন। আমি পুনে থেকে এসেছি।",
+            "hi": "जी हाँ, मैं नया हूँ। मैं पुणे से हूँ।"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "Where do you live now?",
+          "translations": { "bn": "আপনি এখন কোথায় থাকেন?", "hi": "आप अभी कहाँ रहते हैं?" }
+        },
+        {
+          "speaker": "Amit",
+          "text": "I live on Station Road, near the market. And you?",
+          "translations": {
+            "bn": "আমি স্টেশন রোডে থাকি, বাজারের কাছে। আর আপনি?",
+            "hi": "मैं स्टेशन रोड पर रहता हूँ, बाज़ार के पास। और आप?"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "I live near the school. What do you do?",
+          "translations": {
+            "bn": "আমি স্কুলের কাছে থাকি। আপনি কী করেন?",
+            "hi": "मैं स्कूल के पास रहती हूँ। आप क्या करते हैं?"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "I’m a teacher. What about you?",
+          "translations": { "bn": "আমি একজন শিক্ষক। আর আপনি?", "hi": "मैं शिक्षक हूँ। और आप?" }
+        },
+        {
+          "speaker": "Neha",
+          "text": "I’m a student. I study at City College.",
+          "translations": {
+            "bn": "আমি একজন ছাত্রী। আমি সিটি কলেজে পড়ি।",
+            "hi": "मैं छात्रा हूँ। मैं सिटी कॉलेज में पढ़ती हूँ।"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "That’s good. What do you like to do?",
+          "translations": {
+            "bn": "বেশ ভালো। আপনি কী করতে ভালোবাসেন?",
+            "hi": "बहुत अच्छा। आपको क्या करना पसंद है?"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "I like music. Do you like music?",
+          "translations": {
+            "bn": "আমার সংগীত ভালো লাগে। আপনার কি সংগীত ভালো লাগে?",
+            "hi": "मुझे संगीत पसंद है। क्या आपको संगीत पसंद है?"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "Yes, I do. I like cricket too.",
+          "translations": {
+            "bn": "হ্যাঁ, লাগে। আমার ক্রিকেটও ভালো লাগে।",
+            "hi": "जी हाँ, पसंद है। मुझे क्रिकेट भी पसंद है।"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "Great! See you again, Amit.",
+          "translations": {
+            "bn": "দারুণ! আবার দেখা হবে, অমিত।",
+            "hi": "बहुत बढ़िया! फिर मिलेंगे, अमित।"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "See you, Neha. Bye!",
+          "translations": { "bn": "দেখা হবে, নেহা। বাই!", "hi": "फिर मिलेंगे, नेहा। बाय!" }
+        }
+      ],
+      "voices": { "Neha": "female", "Amit": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "live",
+          "phonetic": "/lɪv/",
+          "imageUrl": null,
+          "meanings": { "bn": "থাকা, বাস করা", "hi": "रहना" },
+          "syllables": ["liv(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i” ছোট, “sit”-এর মতো।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["The “i” is short, as in “sit”.", "The last “e” is not said."],
+            "hi": ["“i” छोटा है, “sit” जैसा।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "city",
+          "phonetic": "/ˈsɪti/",
+          "imageUrl": null,
+          "meanings": { "bn": "শহর", "hi": "शहर" },
+          "syllables": ["ci", "ty"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“c”-এর উচ্চারণ “s”-এর মতো।", "প্রথম অংশটি জোর দিয়ে বলুন।"],
+            "en": ["The “c” sounds like “s”.", "Say the first part stronger."],
+            "hi": ["“c” की आवाज़ “s” जैसी है।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        },
+        {
+          "word": "village",
+          "phonetic": "/ˈvɪlɪdʒ/",
+          "imageUrl": null,
+          "meanings": { "bn": "গ্রাম", "hi": "गाँव" },
+          "syllables": ["vil", "lag(e)"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "শেষ অংশের উচ্চারণ “ইজ”-এর মতো, “এজ” নয়।",
+              "“v” বলতে ওপরের দাঁত নিচের ঠোঁটে ছোঁয়ান।"
+            ],
+            "en": [
+              "The ending sounds like “ij”, not “age”.",
+              "For “v”, touch your top teeth to your lower lip."
+            ],
+            "hi": [
+              "आख़िरी हिस्से की आवाज़ “इज” जैसी है, “एज” नहीं।",
+              "“v” के लिए ऊपर के दाँत निचले होंठ से छुआएँ।"
+            ]
+          }
+        },
+        {
+          "word": "near",
+          "phonetic": "/nɪə/",
+          "imageUrl": null,
+          "meanings": { "bn": "কাছে", "hi": "पास" },
+          "syllables": ["near"],
+          "stress": null,
+          "tips": {
+            "bn": ["এটি “here”-এর সঙ্গে মেলে।", "“ই” থেকে হালকা “আ”-তে না থেমে চলে যান।"],
+            "en": ["It rhymes with “here”.", "Glide from “ee” to a soft “uh” without stopping."],
+            "hi": ["इसकी तुक “here” से मिलती है।", "“ई” से हल्के “अ” तक बिना रुके जाएँ।"]
+          }
+        },
+        {
+          "word": "address",
+          "phonetic": "/əˈdres/",
+          "imageUrl": null,
+          "meanings": { "bn": "ঠিকানা", "hi": "पता" },
+          "syllables": ["ad", "dress"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "প্রথম অংশটি ছোট ও হালকা রাখুন।"],
+            "en": ["Say the second part stronger.", "Keep the first part short and soft."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "पहला हिस्सा छोटा और हल्का रखें।"]
+          }
+        },
+        {
+          "word": "neighbour",
+          "phonetic": "/ˈneɪbə/",
+          "imageUrl": null,
+          "meanings": { "bn": "প্রতিবেশী", "hi": "पड़ोसी" },
+          "syllables": ["nei(gh)", "bour"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“gh” উচ্চারণ হয় না।", "প্রথম অংশের উচ্চারণ “নেই”-এর মতো।"],
+            "en": ["The “gh” is not said.", "The first part sounds like “nay”."],
+            "hi": ["“gh” बोला नहीं जाता।", "पहले हिस्से की आवाज़ “नेइ” जैसी है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "What do you do?",
+          "alsoAccepted": [],
+          "translations": { "bn": "আপনি কী করেন?", "hi": "आप क्या करते हैं?" },
+          "tips": {
+            "bn": [
+              "এটি কারও কাজ বা পড়াশোনার কথা জানতে জিজ্ঞেস করা হয়।",
+              "উত্তরে বলুন “I’m a …”।"
+            ],
+            "en": ["This asks about someone’s work or study.", "Answer with “I’m a …”."],
+            "hi": ["यह किसी के काम या पढ़ाई के बारे में पूछता है।", "जवाब में “I’m a …” कहें।"]
+          }
+        },
+        {
+          "english": "I’m a student.",
+          "alsoAccepted": [],
+          "translations": { "bn": "আমি একজন শিক্ষার্থী।", "hi": "मैं विद्यार्थी हूँ।" },
+          "tips": {
+            "bn": [
+              "পেশার নামের আগে “a” বসান: a student, a teacher।",
+              "“I’m” হলো “I am”-এর সংক্ষিপ্ত রূপ।"
+            ],
+            "en": [
+              "Use “a” before the name of a job: a student, a teacher.",
+              "“I’m” is short for “I am”."
+            ],
+            "hi": [
+              "पेशे के नाम से पहले “a” लगाएँ: a student, a teacher।",
+              "“I’m”, “I am” का छोटा रूप है।"
+            ]
+          }
+        },
+        {
+          "english": "What do you study?",
+          "alsoAccepted": [],
+          "translations": { "bn": "আপনি কী নিয়ে পড়েন?", "hi": "आप क्या पढ़ते हैं?" },
+          "tips": {
+            "bn": ["কোনো শিক্ষার্থীকে এই প্রশ্নটি করুন।", "উত্তরে বলা হয় “I study …”।"],
+            "en": ["Ask a student this question.", "The answer is “I study …”."],
+            "hi": ["किसी विद्यार्थी से यह सवाल पूछें।", "जवाब में “I study …” कहा जाता है।"]
+          }
+        },
+        {
+          "english": "Where do you work?",
+          "alsoAccepted": [],
+          "translations": { "bn": "আপনি কোথায় কাজ করেন?", "hi": "आप कहाँ काम करते हैं?" },
+          "tips": {
+            "bn": [
+              "জায়গার কথা জানতে প্রশ্ন “Where” দিয়ে শুরু করুন।",
+              "উত্তরে বলুন “I work in …” অথবা “I work at …”।"
+            ],
+            "en": [
+              "Start with “Where” to ask about a place.",
+              "Answer with “I work in …” or “I work at …”."
+            ],
+            "hi": [
+              "जगह के बारे में पूछने के लिए सवाल “Where” से शुरू करें।",
+              "जवाब में “I work in …” या “I work at …” कहें।"
+            ]
+          }
+        },
+        {
+          "english": "My office is near the station.",
+          "alsoAccepted": ["My office is close to the station."],
+          "translations": {
+            "bn": "আমার অফিস স্টেশনের কাছে।",
+            "hi": "मेरा दफ़्तर स्टेशन के पास है।"
+          },
+          "tips": {
+            "bn": [
+              "নিজের জিনিসের কথা বলতে “My …” দিয়ে শুরু করুন।",
+              "“near” মানে কোনো জায়গার কাছে।"
+            ],
+            "en": [
+              "Start with “My …” to talk about something of yours.",
+              "“near” means close to a place."
+            ],
+            "hi": [
+              "अपनी चीज़ के बारे में बताने के लिए “My …” से शुरू करें।",
+              "“near” का मतलब है किसी जगह के पास।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Amit",
+      "asWoman": "Neha",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! I’m Amit. What’s your name?",
+          "reply": "My name is … Nice to meet you.",
+          "cues": {
+            "bn": "নিজের নাম বলুন, আর বলুন পরিচিত হয়ে ভালো লাগল।",
+            "hi": "अपना नाम बताएँ, और कहें कि मिलकर अच्छा लगा।"
+          }
+        },
+        {
+          "partner": "Nice to meet you too. Where do you live?",
+          "reply": "I live in … And you?",
+          "cues": {
+            "bn": "আপনি কোথায় থাকেন বলুন, আর তাঁকেও জিজ্ঞেস করুন।",
+            "hi": "अपने रहने की जगह बताएँ, और उनसे भी पूछें।"
+          }
+        },
+        {
+          "partner": "I live near the market. What do you do?",
+          "reply": "I’m a … What do you like to do?",
+          "cues": {
+            "bn": "নিজের কাজ বা পড়াশোনার কথা বলুন, আর জিজ্ঞেস করুন তিনি কী করতে ভালোবাসেন।",
+            "hi": "अपने काम या पढ़ाई के बारे में बताएँ, और पूछें कि उन्हें क्या करना पसंद है।"
+          }
+        },
+        {
+          "partner": "I like music and cricket. What do you like?",
+          "reply": "I like … Do you like films?",
+          "cues": {
+            "bn": "আপনার কী ভালো লাগে বলুন, আর জিজ্ঞেস করুন তাঁর সিনেমা ভালো লাগে কি না।",
+            "hi": "बताएँ कि आपको क्या पसंद है, और पूछें कि क्या उन्हें फ़िल्में पसंद हैं।"
+          }
+        },
+        {
+          "partner": "Yes, I do. I like films very much. See you again!",
+          "reply": "See you again. Bye!",
+          "cues": {
+            "bn": "বলুন আবার দেখা হবে, আর বিদায় জানান।",
+            "hi": "कहें कि फिर मिलेंगे, और विदा लें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Let’s get to know each other",
+        "translations": { "bn": "চলুন, পরিচিত হই", "hi": "आइए, एक-दूसरे को जानें" }
+      },
+      "instruction": {
+        "text": "Meet someone new. Say something about yourself, then ask them the same question.",
+        "translations": {
+          "bn": "নতুন কারও সঙ্গে পরিচিত হন। নিজের কথা বলুন, তারপর তাঁকেও একই প্রশ্ন করুন।",
+          "hi": "किसी नए व्यक्ति से मिलें। अपनी बात कहें, फिर उनसे भी वही सवाल पूछें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say your name and ask theirs",
+          "translations": {
+            "bn": "নিজের নাম বলুন, তাঁর নাম জিজ্ঞেস করুন",
+            "hi": "अपना नाम बताएँ, उनका नाम पूछें"
+          }
+        },
+        {
+          "text": "Say where you live and ask where they live",
+          "translations": {
+            "bn": "কোথায় থাকেন বলুন, তিনি কোথায় থাকেন জিজ্ঞেস করুন",
+            "hi": "अपने रहने की जगह बताएँ, और उनकी पूछें"
+          }
+        },
+        {
+          "text": "Say what you do and ask what they do",
+          "translations": {
+            "bn": "কী করেন বলুন, তিনি কী করেন জিজ্ঞেস করুন",
+            "hi": "अपना काम या पढ़ाई बताएँ, और उनसे भी पूछें"
+          }
+        },
+        {
+          "text": "Say one thing you like and ask what they like",
+          "translations": {
+            "bn": "আপনার ভালো লাগা একটি জিনিস বলুন, তাঁর কী ভালো লাগে জিজ্ঞেস করুন",
+            "hi": "अपनी पसंद की एक चीज़ बताएँ, और उनकी पसंद पूछें"
+          }
+        },
+        { "text": "Say goodbye", "translations": { "bn": "বিদায় জানান", "hi": "विदा लें" } }
+      ],
+      "phrases": [
+        "What’s your name?",
+        "Where do you live?",
+        "I live in …",
+        "What do you do?",
+        "I’m a …",
+        "What do you like to do?"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you ask where someone lives?",
+            "translations": {
+              "bn": "কেউ কোথায় থাকেন, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी के रहने की जगह कैसे पूछें?"
+            }
+          },
+          "answer": "Where do you live?",
+          "others": ["What do you do?", "What’s your name?"]
+        },
+        {
+          "question": {
+            "text": "Someone asks, “What do you do?” What do you say?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “What do you do?” আপনি কী বলবেন?",
+              "hi": "कोई पूछे, “What do you do?” तो क्या कहें?"
+            }
+          },
+          "answer": "I’m a student.",
+          "others": ["I live near the market.", "I like music."]
+        },
+        {
+          "question": {
+            "text": "How do you ask about someone’s interests?",
+            "translations": {
+              "bn": "কারও শখ বা পছন্দের কথা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी की रुचियों के बारे में कैसे पूछें?"
+            }
+          },
+          "answer": "What do you like to do?",
+          "others": ["Where do you work?", "Are you new here?"]
+        },
+        {
+          "question": {
+            "text": "Someone asks, “Where are you from?” What do you say?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “Where are you from?” আপনি কী বলবেন?",
+              "hi": "कोई पूछे, “Where are you from?” तो क्या कहें?"
+            }
+          },
+          "answer": "I’m from Pune.",
+          "others": ["I’m a teacher.", "Yes, I do."]
+        },
+        {
+          "question": {
+            "text": "Which word means a person who lives near you?",
+            "translations": {
+              "bn": "যিনি আপনার কাছাকাছি থাকেন, তাঁকে কোন শব্দে বোঝায়?",
+              "hi": "किस शब्द का मतलब है आपके पास रहने वाला व्यक्ति?"
+            }
+          },
+          "answer": "neighbour",
+          "others": ["address", "village"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Vikram",
+          "text": "Good morning! Are you new here?",
+          "translations": {
+            "bn": "সুপ্রভাত! আপনি কি এখানে নতুন?",
+            "hi": "सुप्रभात! क्या आप यहाँ नई हैं?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "Yes, I am. My name is Pooja.",
+          "translations": {
+            "bn": "হ্যাঁ, আমি নতুন। আমার নাম পূজা।",
+            "hi": "जी हाँ, मैं नई हूँ। मेरा नाम पूजा है।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Welcome, Pooja. I’m Vikram. Where are you from?",
+          "translations": {
+            "bn": "স্বাগত, পূজা। আমি বিক্রম। আপনি কোথা থেকে এসেছেন?",
+            "hi": "स्वागत है, पूजा। मैं विक्रम हूँ। आप कहाँ से हैं?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "I’m from Jaipur. Where do you live, Vikram?",
+          "translations": {
+            "bn": "আমি জয়পুর থেকে এসেছি। আপনি কোথায় থাকেন, বিক্রম?",
+            "hi": "मैं जयपुर से हूँ। आप कहाँ रहते हैं, विक्रम?"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "I live in the city, near the office.",
+          "translations": {
+            "bn": "আমি শহরে থাকি, অফিসের কাছে।",
+            "hi": "मैं शहर में रहता हूँ, दफ़्तर के पास।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "I live on Lake Road. It is not far.",
+          "translations": {
+            "bn": "আমি লেক রোডে থাকি। বেশি দূরে নয়।",
+            "hi": "मैं लेक रोड पर रहती हूँ। यह ज़्यादा दूर नहीं है।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "What do you do here?",
+          "translations": { "bn": "আপনি এখানে কী করেন?", "hi": "आप यहाँ क्या करती हैं?" }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "I work with computers. And you?",
+          "translations": {
+            "bn": "আমি কম্পিউটারের কাজ করি। আর আপনি?",
+            "hi": "मैं कंप्यूटर का काम करती हूँ। और आप?"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "I’m a driver. What do you like to do?",
+          "translations": {
+            "bn": "আমি একজন চালক। আপনি কী করতে ভালোবাসেন?",
+            "hi": "मैं ड्राइवर हूँ। आपको क्या करना पसंद है?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "I like reading. Do you like reading?",
+          "translations": {
+            "bn": "আমার বই পড়তে ভালো লাগে। আপনার কি পড়তে ভালো লাগে?",
+            "hi": "मुझे पढ़ना पसंद है। क्या आपको पढ़ना पसंद है?"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Not much. I like films.",
+          "translations": {
+            "bn": "খুব একটা নয়। আমার সিনেমা ভালো লাগে।",
+            "hi": "ज़्यादा नहीं। मुझे फ़िल्में पसंद हैं।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "Nice! See you at lunch.",
+          "translations": {
+            "bn": "বেশ! দুপুরের খাবারের সময় দেখা হবে।",
+            "hi": "बढ़िया! दोपहर के खाने पर मिलते हैं।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "See you, Pooja.",
+          "translations": { "bn": "দেখা হবে, পূজা।", "hi": "फिर मिलते हैं, पूजा।" }
+        }
+      ],
+      "voices": { "Vikram": "male", "Pooja": "female" }
+    },
+    "review_roleplay": {
+      "partner": "Pooja",
+      "asMan": "Vikram",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good morning! I’m Pooja. Are you new here?",
+          "reply": "Yes, I am. My name is …",
+          "cues": { "bn": "বলুন হ্যাঁ, আর নিজের নাম বলুন।", "hi": "हाँ कहें, और अपना नाम बताएँ।" }
+        },
+        {
+          "partner": "Welcome! Where are you from?",
+          "reply": "I’m from … Where do you live?",
+          "cues": {
+            "bn": "বলুন আপনি কোথা থেকে এসেছেন, আর জিজ্ঞেস করুন তিনি কোথায় থাকেন।",
+            "hi": "बताएँ कि आप कहाँ से हैं, और उनके रहने की जगह पूछें।"
+          }
+        },
+        {
+          "partner": "I live near the office. What do you like to do?",
+          "reply": "I like … And you?",
+          "cues": {
+            "bn": "আপনার কী ভালো লাগে বলুন, আর তাঁকেও জিজ্ঞেস করুন।",
+            "hi": "बताएँ कि आपको क्या पसंद है, और उनसे भी पूछें।"
+          }
+        },
+        {
+          "partner": "I like reading. See you at lunch!",
+          "reply": "See you. Bye!",
+          "cues": {
+            "bn": "বলুন দেখা হবে, আর বিদায় জানান।",
+            "hi": "कहें कि फिर मिलेंगे, और विदा लें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A new classmate",
+            "translations": { "bn": "নতুন সহপাঠী", "hi": "नए सहपाठी" }
+          },
+          "roleplay": {
+            "partner": "Riya",
+            "asMan": "Rohan",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! I’m Riya. Are you in this class too?",
+                "reply": "Yes, I am. My name is …",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, আর নিজের নাম বলুন।",
+                  "hi": "हाँ कहें, और अपना नाम बताएँ।"
+                }
+              },
+              {
+                "partner": "Nice to meet you. Where do you live?",
+                "reply": "I live in … Where do you live?",
+                "cues": {
+                  "bn": "আপনি কোথায় থাকেন বলুন, আর তাঁকেও একই প্রশ্ন করুন।",
+                  "hi": "अपने रहने की जगह बताएँ, और उनसे भी वही पूछें।"
+                }
+              },
+              {
+                "partner": "I live near the college. What do you like to do?",
+                "reply": "I like … Do you like music?",
+                "cues": {
+                  "bn": "আপনার কী ভালো লাগে বলুন, আর জিজ্ঞেস করুন তাঁর সংগীত ভালো লাগে কি না।",
+                  "hi": "बताएँ कि आपको क्या पसंद है, और पूछें कि क्या उन्हें संगीत पसंद है।"
+                }
+              },
+              {
+                "partner": "Yes, I love music. See you in class!",
+                "reply": "See you in class. Bye!",
+                "cues": {
+                  "bn": "বলুন ক্লাসে দেখা হবে, আর বিদায় জানান।",
+                  "hi": "कहें कि क्लास में मिलेंगे, और विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At the bus stop",
+            "translations": { "bn": "বাস স্টপে", "hi": "बस स्टॉप पर" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning! Do you live near here?",
+                "reply": "Good morning! Yes, I live in …",
+                "cues": {
+                  "bn": "সুপ্রভাত জানান, আর বলুন আপনি কোথায় থাকেন।",
+                  "hi": "सुप्रभात कहें, और अपने रहने की जगह बताएँ।"
+                }
+              },
+              {
+                "partner": "I’m Sam. I’m new in this city. What’s your name?",
+                "reply": "My name is … Where are you from?",
+                "cues": {
+                  "bn": "নিজের নাম বলুন, আর জিজ্ঞেস করুন তিনি কোথা থেকে এসেছেন।",
+                  "hi": "अपना नाम बताएँ, और पूछें कि वे कहाँ से हैं।"
+                }
+              },
+              {
+                "partner": "I’m from Goa. I work in a hotel. What do you do?",
+                "reply": "I’m a …",
+                "cues": {
+                  "bn": "নিজের কাজ বা পড়াশোনার কথা বলুন।",
+                  "hi": "अपने काम या पढ़ाई के बारे में बताएँ।"
+                }
+              },
+              {
+                "partner": "That’s good. Here is my bus. Goodbye!",
+                "reply": "Goodbye! Nice to meet you.",
+                "cues": {
+                  "bn": "বিদায় জানান, আর বলুন পরিচিত হয়ে ভালো লাগল।",
+                  "hi": "विदा लें, और कहें कि मिलकर अच्छा लगा।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A new colleague",
+            "translations": { "bn": "নতুন সহকর্মী", "hi": "नए सहकर्मी" }
+          },
+          "roleplay": {
+            "partner": "Kavita",
+            "asMan": "Karan",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! Welcome to the office. I’m Kavita.",
+                "reply": "Hello! I’m … Nice to meet you.",
+                "cues": {
+                  "bn": "হ্যালো বলুন, নিজের নাম বলুন, আর বলুন পরিচিত হয়ে ভালো লাগল।",
+                  "hi": "हैलो कहें, अपना नाम बताएँ, और कहें कि मिलकर अच्छा लगा।"
+                }
+              },
+              {
+                "partner": "Nice to meet you too. Where are you from?",
+                "reply": "I’m from … And you?",
+                "cues": {
+                  "bn": "বলুন আপনি কোথা থেকে এসেছেন, আর তাঁকেও জিজ্ঞেস করুন।",
+                  "hi": "बताएँ कि आप कहाँ से हैं, और उनसे भी पूछें।"
+                }
+              },
+              {
+                "partner": "I’m from Delhi. What do you like to do?",
+                "reply": "I like … What do you like?",
+                "cues": {
+                  "bn": "আপনার কী ভালো লাগে বলুন, আর তাঁর কী ভালো লাগে জিজ্ঞেস করুন।",
+                  "hi": "बताएँ कि आपको क्या पसंद है, और उनकी पसंद पूछें।"
+                }
+              },
+              {
+                "partner": "I like cooking. See you at lunch!",
+                "reply": "See you at lunch. Bye!",
+                "cues": {
+                  "bn": "বলুন দুপুরের খাবারের সময় দেখা হবে, আর বিদায় জানান।",
+                  "hi": "कहें कि दोपहर के खाने पर मिलेंगे, और विदा लें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { useSessionStore } from '@/shared/lib/account'
 import type { TranslationKey } from '@/shared/lib/i18n'
 import { fileToStoredImage, ImageUnreadableError } from '@/shared/lib/image/imageUpload'
 import { isStoredPhoto, useProfilePhotoStore } from '@/shared/lib/learner/profilePhoto'
+import { useLearnerPicture } from '@/shared/lib/learner/useLearnerPicture'
 
 /** Plenty for a picture shown some 80px across, on the sharpest screens, in a few dozen KB. */
 const PHOTO_BOUNDS = { maxWidth: 512, maxHeight: 512 }
@@ -15,15 +15,15 @@ const problems = {
 } satisfies Partial<Record<Status, TranslationKey>>
 
 /**
- * The learner's picture in Profile, and changing it. Their own photo, chosen here and kept in
- * this browser, comes first; else the picture of the Google account they signed in with; else
- * none, and the screen draws its stand-in.
+ * The learner's picture in Profile, and changing it. Which picture is theirs is
+ * `useLearnerPicture`'s to say (their own photo, else their Google account's, else none, and the
+ * screen draws its stand-in); this adds choosing a photo and taking it away.
  */
 export function useProfilePhoto() {
   const own = useProfilePhotoStore((state) => state.photo)
   const setPhoto = useProfilePhotoStore((state) => state.setPhoto)
   const removePhoto = useProfilePhotoStore((state) => state.removePhoto)
-  const fromGoogle = useSessionStore((state) => state.user?.pictureUrl ?? null)
+  const src = useLearnerPicture()
   const [status, setStatus] = useState<Status>('idle')
 
   const choose = async (file: File) => {
@@ -40,8 +40,7 @@ export function useProfilePhoto() {
   }
 
   return {
-    // The server's word is checked like anything else it sends: only an `https` address is shown.
-    src: own ?? (fromGoogle?.startsWith('https://') ? fromGoogle : null),
+    src,
     /** The picture on show is the learner's own photo, which they can remove. */
     isOwn: own !== null,
     busy: status === 'working',

@@ -1,0 +1,778 @@
+{
+  "week": 13,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rhea",
+          "text": "Zubin, I want a new phone. Can you help me choose?",
+          "translations": {
+            "bn": "জুবিন, আমি একটি নতুন ফোন কিনতে চাই। বাছতে সাহায্য করবেন?",
+            "hi": "ज़ुबिन, मुझे एक नया फ़ोन चाहिए। क्या आप चुनने में मदद करेंगे?"
+          }
+        },
+        {
+          "speaker": "Zubin",
+          "text": "Sure. Here are two phones. This one is bigger than that one.",
+          "translations": {
+            "bn": "অবশ্যই। এখানে দুটি ফোন আছে। এটি ওটির চেয়ে বড়।",
+            "hi": "ज़रूर। यहाँ दो फ़ोन हैं। यह उस वाले से बड़ा है।"
+          }
+        },
+        {
+          "speaker": "Rhea",
+          "text": "But that one is lighter. Which one do you prefer?",
+          "translations": {
+            "bn": "কিন্তু ওটি হালকা। আপনি কোনটি বেশি পছন্দ করেন?",
+            "hi": "पर वह हल्का है। आपको कौन-सा ज़्यादा पसंद है?"
+          }
+        },
+        {
+          "speaker": "Zubin",
+          "text": "I prefer the bigger one. The screen is better.",
+          "translations": {
+            "bn": "আমার বড়টি বেশি পছন্দ। এর স্ক্রিন ভালো।",
+            "hi": "मुझे बड़ा वाला ज़्यादा पसंद है। उसकी स्क्रीन बेहतर है।"
+          }
+        },
+        {
+          "speaker": "Rhea",
+          "text": "Is it more expensive?",
+          "translations": {
+            "bn": "এটি কি বেশি দামি?",
+            "hi": "क्या वह ज़्यादा महँगा है?"
+          }
+        },
+        {
+          "speaker": "Zubin",
+          "text": "Yes, it is more expensive, but the battery is the best.",
+          "translations": {
+            "bn": "হ্যাঁ, বেশি দামি, কিন্তু এর ব্যাটারি সবচেয়ে ভালো।",
+            "hi": "हाँ, ज़्यादा महँगा है, पर उसकी बैटरी सबसे अच्छी है।"
+          }
+        },
+        {
+          "speaker": "Rhea",
+          "text": "My old phone is slower than my sister’s phone.",
+          "translations": {
+            "bn": "আমার পুরোনো ফোন আমার বোনের ফোনের চেয়ে ধীর।",
+            "hi": "मेरा पुराना फ़ोन मेरी बहन के फ़ोन से धीमा है।"
+          }
+        },
+        {
+          "speaker": "Zubin",
+          "text": "Then you need a faster one. Is the other phone cheaper?",
+          "translations": {
+            "bn": "তাহলে আপনার দ্রুত একটি দরকার। অন্য ফোনটি কি সস্তা?",
+            "hi": "तो आपको तेज़ वाला चाहिए। क्या दूसरा फ़ोन सस्ता है?"
+          }
+        },
+        {
+          "speaker": "Rhea",
+          "text": "Yes. But it is not as good as this one.",
+          "translations": {
+            "bn": "হ্যাঁ। কিন্তু এটির মতো ভালো নয়।",
+            "hi": "हाँ। पर वह इसके जितना अच्छा नहीं है।"
+          }
+        },
+        {
+          "speaker": "Zubin",
+          "text": "It is the most popular phone in the shop. Many people like it.",
+          "translations": {
+            "bn": "দোকানের সবচেয়ে জনপ্রিয় ফোন এটি। অনেকেই এটি পছন্দ করে।",
+            "hi": "यह दुकान का सबसे लोकप्रिय फ़ोन है। बहुत से लोगों को यह पसंद है।"
+          }
+        },
+        {
+          "speaker": "Rhea",
+          "text": "That is the most interesting thing you told me. I will take the bigger one.",
+          "translations": {
+            "bn": "এটিই আপনার বলা সবচেয়ে আকর্ষণীয় কথা। আমি বড়টি নেব।",
+            "hi": "यह आपकी बताई सबसे दिलचस्प बात है। मैं बड़ा वाला लूँगी।"
+          }
+        },
+        {
+          "speaker": "Zubin",
+          "text": "Good choice. I think you will be happy with it.",
+          "translations": {
+            "bn": "ভালো পছন্দ। আমার মনে হয় আপনি এটিতে খুশি হবেন।",
+            "hi": "अच्छा चुनाव। मुझे लगता है आप इससे ख़ुश होंगी।"
+          }
+        }
+      ],
+      "voices": {
+        "Rhea": "female",
+        "Zubin": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "taller",
+          "phonetic": "/ˈtɔːlə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আরও লম্বা",
+            "hi": "ज़्यादा लंबा"
+          },
+          "syllables": ["tall", "er"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“a” লম্বা “অ”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “a” sounds like a long “aw”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“a” की आवाज़ लंबे “ऑ” जैसी है।"]
+          }
+        },
+        {
+          "word": "older",
+          "phonetic": "/ˈəʊldə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আরও বয়সী",
+            "hi": "उम्र में बड़ा"
+          },
+          "syllables": ["old", "er"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“o”-এর উচ্চারণ “ওউ”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “o” sounds like “oh”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“o” की आवाज़ “ओउ” जैसी है।"]
+          }
+        },
+        {
+          "word": "same",
+          "phonetic": "/seɪm/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "একই",
+            "hi": "वही, एक जैसा"
+          },
+          "syllables": ["sam(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["“a”-এর উচ্চারণ “এই”-এর মতো।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["The “a” sounds like “ay”.", "The last “e” is not said."],
+            "hi": ["“a” की आवाज़ “एइ” जैसी है।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "different",
+          "phonetic": "/ˈdɪfrənt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আলাদা",
+            "hi": "अलग"
+          },
+          "syllables": ["dif", "fer", "ent"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "মাঝের অংশটি খুব হালকা, প্রায় শোনা যায় না।"],
+            "en": [
+              "Say the first part stronger.",
+              "The middle part is very light, almost not heard."
+            ],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "बीच का हिस्सा बहुत हल्का है, लगभग सुनाई नहीं देता।"
+            ]
+          }
+        },
+        {
+          "word": "both",
+          "phonetic": "/bəʊθ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দুজনেই, দুটিই",
+            "hi": "दोनों"
+          },
+          "syllables": ["both"],
+          "stress": null,
+          "tips": {
+            "bn": ["“o”-এর উচ্চারণ “ওউ”-এর মতো।", "শেষে “th” বলতে জিভের ডগা দাঁতের ফাঁকে রাখুন।"],
+            "en": [
+              "The “o” sounds like “oh”.",
+              "For the final “th”, put your tongue between your teeth."
+            ],
+            "hi": ["“o” की आवाज़ “ओउ” जैसी है।", "अंत के “th” के लिए जीभ दाँतों के बीच रखें।"]
+          }
+        },
+        {
+          "word": "alike",
+          "phonetic": "/əˈlaɪk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "একরকম",
+            "hi": "एक जैसे"
+          },
+          "syllables": ["a", "lik(e)"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["Say the second part stronger.", "The last “e” is not said."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "than",
+          "phonetic": "/ðæn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "চেয়ে (তুলনায়)",
+            "hi": "से (तुलना में)"
+          },
+          "syllables": ["than"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“th” বলতে জিভের ডগা দাঁতের ফাঁকে রেখে গলার স্বর দিন।",
+              "তুলনার বাক্যে “than” ছোট ও হালকা বলুন।"
+            ],
+            "en": [
+              "For “th”, put the tip of your tongue between your teeth and use your voice.",
+              "In a comparison, say “than” short and soft."
+            ],
+            "hi": [
+              "“th” के लिए जीभ की नोक दाँतों के बीच रखें और आवाज़ के साथ बोलें।",
+              "तुलना में “than” को छोटा और हल्का बोलें।"
+            ]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Which one do you prefer?",
+          "alsoAccepted": ["Which do you prefer?"],
+          "translations": {
+            "bn": "আপনি কোনটি বেশি পছন্দ করেন?",
+            "hi": "आपको कौन-सा ज़्यादा पसंद है?"
+          },
+          "tips": {
+            "bn": ["দুটির মধ্যে বাছতে “Which one” বলুন।", "“prefer”-এ দ্বিতীয় অংশে জোর দিন।"],
+            "en": [
+              "Use “Which one” to choose between things.",
+              "In “prefer”, the second part is stronger."
+            ],
+            "hi": [
+              "चीज़ों में से चुनने के लिए “Which one” कहें।",
+              "“prefer” में दूसरे हिस्से पर ज़ोर दें।"
+            ]
+          }
+        },
+        {
+          "english": "I prefer tea to coffee.",
+          "alsoAccepted": ["I like tea more than coffee.", "I like tea better than coffee."],
+          "translations": {
+            "bn": "আমার কফির চেয়ে চা বেশি পছন্দ।",
+            "hi": "मुझे कॉफ़ी से ज़्यादा चाय पसंद है।"
+          },
+          "tips": {
+            "bn": ["“prefer A to B” মানে A-কে বেশি পছন্দ।", "“more than” দিয়েও একই কথা বলা যায়।"],
+            "en": [
+              "“prefer A to B” means you like A more.",
+              "You can say the same with “more than”."
+            ],
+            "hi": [
+              "“prefer A to B” का मतलब है A ज़्यादा पसंद है।",
+              "“more than” से भी यही बात कही जा सकती है।"
+            ]
+          }
+        },
+        {
+          "english": "My sister is taller than my brother.",
+          "alsoAccepted": [],
+          "translations": {
+            "bn": "আমার বোন আমার ভাইয়ের চেয়ে লম্বা।",
+            "hi": "मेरी बहन मेरे भाई से लंबी है।"
+          },
+          "tips": {
+            "bn": [
+              "ছোট বিশেষণের শেষে “-er” যোগ করুন: tall → taller।",
+              "দুটির তুলনায় “than” বসান।"
+            ],
+            "en": [
+              "Add “-er” to a short word: tall → taller.",
+              "Use “than” to compare two things."
+            ],
+            "hi": [
+              "छोटे विशेषण में “-er” जोड़ें: tall → taller।",
+              "दो चीज़ों की तुलना में “than” लगाएँ।"
+            ]
+          }
+        },
+        {
+          "english": "This bag is more expensive than that bag.",
+          "alsoAccepted": [],
+          "translations": {
+            "bn": "এই ব্যাগটি ওই ব্যাগটির চেয়ে বেশি দামি।",
+            "hi": "यह बैग उस बैग से ज़्यादा महँगा है।"
+          },
+          "tips": {
+            "bn": ["লম্বা বিশেষণের আগে “more” বসান।", "“expensive”-এ “-er” যোগ হয় না।"],
+            "en": ["Put “more” before a long word.", "Do not add “-er” to “expensive”."],
+            "hi": ["लंबे विशेषण से पहले “more” लगाएँ।", "“expensive” में “-er” नहीं जुड़ता।"]
+          }
+        },
+        {
+          "english": "This is the best film of the year.",
+          "alsoAccepted": ["This is the best movie of the year."],
+          "translations": {
+            "bn": "এটি বছরের সেরা সিনেমা।",
+            "hi": "यह साल की सबसे अच्छी फ़िल्म है।"
+          },
+          "tips": {
+            "bn": ["সবচেয়ে বোঝাতে “the best” বলুন।", "“the” ভুলবেন না।"],
+            "en": ["Use “the best” for number one.", "Do not forget “the”."],
+            "hi": ["सबसे अच्छे के लिए “the best” कहें।", "“the” लगाना न भूलें।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Sunil",
+      "asWoman": "Sunita",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! I need help. I want to buy a bag. Here are two bags. Which one is bigger?",
+          "reply": "This one is bigger than that one.",
+          "cues": {
+            "bn": "“bigger than” দিয়ে বলুন কোনটি বড়।",
+            "hi": "“bigger than” से बताएँ कि कौन-सा बड़ा है।"
+          }
+        },
+        {
+          "partner": "Right. The bigger one is more expensive. Which one is cheaper?",
+          "reply": "That one is cheaper.",
+          "cues": {
+            "bn": "বলুন কোনটি সস্তা।",
+            "hi": "बताएँ कि कौन-सा सस्ता है।"
+          }
+        },
+        {
+          "partner": "Hmm. Which one do you prefer?",
+          "reply": "I prefer … because …",
+          "cues": {
+            "bn": "বলুন কোনটি বেশি পছন্দ, আর কারণ।",
+            "hi": "बताएँ कि कौन-सा ज़्यादा पसंद है, और कारण।"
+          }
+        },
+        {
+          "partner": "I see. What is the best thing about it?",
+          "reply": "The best thing is …",
+          "cues": {
+            "bn": "এর সবচেয়ে ভালো দিকটি বলুন।",
+            "hi": "उसकी सबसे अच्छी बात बताएँ।"
+          }
+        },
+        {
+          "partner": "That makes sense. I will take it. Thank you for helping me choose!",
+          "reply": "You are welcome.",
+          "cues": {
+            "bn": "বলুন, আপনাকেও স্বাগত।",
+            "hi": "कहें कि कोई बात नहीं।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Help me choose",
+        "translations": {
+          "bn": "বাছতে আমাকে সাহায্য করুন",
+          "hi": "चुनने में मेरी मदद कीजिए"
+        }
+      },
+      "instruction": {
+        "text": "A friend must choose between two things. Compare them and say which is best, and why.",
+        "translations": {
+          "bn": "বন্ধুকে দুটি জিনিসের একটি বাছতে হবে। তুলনা করুন, আর বলুন কোনটি সেরা ও কেন।",
+          "hi": "दोस्त को दो चीज़ों में से एक चुननी है। तुलना करें, और बताएँ कि कौन-सी सबसे अच्छी है और क्यों।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Name the two things",
+          "translations": {
+            "bn": "দুটি জিনিসের নাম বলুন",
+            "hi": "दोनों चीज़ों के नाम बताएँ"
+          }
+        },
+        {
+          "text": "Compare them with “-er” or “more”",
+          "translations": {
+            "bn": "“-er” বা “more” দিয়ে তুলনা করুন",
+            "hi": "“-er” या “more” से तुलना करें"
+          }
+        },
+        {
+          "text": "Say what is the same",
+          "translations": {
+            "bn": "কী একই রকম, বলুন",
+            "hi": "बताएँ कि क्या एक जैसा है"
+          }
+        },
+        {
+          "text": "Say which one you prefer",
+          "translations": {
+            "bn": "কোনটি বেশি পছন্দ, বলুন",
+            "hi": "बताएँ कि कौन-सी ज़्यादा पसंद है"
+          }
+        },
+        {
+          "text": "Give a reason for your choice",
+          "translations": {
+            "bn": "আপনার পছন্দের কারণ বলুন",
+            "hi": "अपने चुनाव का कारण बताएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "This one is bigger than that one.",
+        "Both are good.",
+        "I prefer … to …",
+        "This one is the best.",
+        "It is cheaper, but …",
+        "I think you should choose …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Complete: My house is ___ than your house. (big)",
+            "translations": {
+              "bn": "পূরণ করুন: My house is ___ than your house. (big)",
+              "hi": "पूरा करें: My house is ___ than your house. (big)"
+            }
+          },
+          "answer": "bigger",
+          "others": ["biger", "more big"]
+        },
+        {
+          "question": {
+            "text": "Which sentence compares two things correctly?",
+            "translations": {
+              "bn": "কোন বাক্যটি দুটি জিনিসের তুলনা ঠিকভাবে করে?",
+              "hi": "कौन-सा वाक्य दो चीज़ों की सही तुलना करता है?"
+            }
+          },
+          "answer": "This car is more expensive than that car.",
+          "others": [
+            "This car is expensiver than that car.",
+            "This car is more expensive that that car."
+          ]
+        },
+        {
+          "question": {
+            "text": "How do you ask which of two things someone likes more?",
+            "translations": {
+              "bn": "দুটির মধ্যে কেউ কোনটি বেশি পছন্দ করে, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "दो में से कोई किसे ज़्यादा पसंद करता है, यह कैसे पूछें?"
+            }
+          },
+          "answer": "Which one do you prefer?",
+          "others": ["Which one is you?", "What one do you like?"]
+        },
+        {
+          "question": {
+            "text": "Which word means number one, better than all?",
+            "translations": {
+              "bn": "কোন শব্দটি বোঝায় সবার চেয়ে ভালো, এক নম্বর?",
+              "hi": "कौन-सा शब्द सबसे ऊपर, सबसे अच्छा बताता है?"
+            }
+          },
+          "answer": "the best",
+          "others": ["better", "good"]
+        },
+        {
+          "question": {
+            "text": "Which pair means the opposite?",
+            "translations": {
+              "bn": "কোন জোড়াটি বিপরীত অর্থ বোঝায়?",
+              "hi": "कौन-सी जोड़ी विपरीत अर्थ बताती है?"
+            }
+          },
+          "answer": "cheap – expensive",
+          "others": ["big – bigger", "tall – taller"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Tarun",
+          "text": "We have two holiday plans. Plan A is the beach. Plan B is the mountains.",
+          "translations": {
+            "bn": "আমাদের ছুটির দুটি পরিকল্পনা আছে। পরিকল্পনা ক সমুদ্র, খ পাহাড়।",
+            "hi": "हमारी छुट्टी की दो योजनाएँ हैं। योजना क समुद्र है, योजना ख पहाड़।"
+          }
+        },
+        {
+          "speaker": "Uma",
+          "text": "The beach is hotter than the mountains.",
+          "translations": {
+            "bn": "সমুদ্র পাহাড়ের চেয়ে গরম।",
+            "hi": "समुद्र पहाड़ों से ज़्यादा गरम है।"
+          }
+        },
+        {
+          "speaker": "Tarun",
+          "text": "Yes, and the beach is more crowded. The mountains are quieter.",
+          "translations": {
+            "bn": "হ্যাঁ, আর সমুদ্রে ভিড় বেশি। পাহাড় আরও শান্ত।",
+            "hi": "हाँ, और समुद्र पर ज़्यादा भीड़ होती है। पहाड़ ज़्यादा शांत हैं।"
+          }
+        },
+        {
+          "speaker": "Uma",
+          "text": "But the beach is cheaper. The hotels are not as expensive.",
+          "translations": {
+            "bn": "কিন্তু সমুদ্র সস্তা। হোটেলগুলো অত দামি নয়।",
+            "hi": "पर समुद्र सस्ता है। वहाँ के होटल इतने महँगे नहीं हैं।"
+          }
+        },
+        {
+          "speaker": "Tarun",
+          "text": "Which one do you prefer?",
+          "translations": {
+            "bn": "আপনি কোনটি বেশি পছন্দ করেন?",
+            "hi": "आपको कौन-सा ज़्यादा पसंद है?"
+          }
+        },
+        {
+          "speaker": "Uma",
+          "text": "I prefer the mountains. The air is fresher and the view is more beautiful.",
+          "translations": {
+            "bn": "আমার পাহাড় বেশি পছন্দ। হাওয়া আরও তাজা আর দৃশ্য আরও সুন্দর।",
+            "hi": "मुझे पहाड़ ज़्यादा पसंद हैं। वहाँ की हवा ज़्यादा ताज़ी है और नज़ारा ज़्यादा सुंदर है।"
+          }
+        },
+        {
+          "speaker": "Tarun",
+          "text": "That is the best reason. And the food is also good there.",
+          "translations": {
+            "bn": "এটিই সবচেয়ে ভালো কারণ। আর সেখানে খাবারও ভালো।",
+            "hi": "यह सबसे अच्छा कारण है। और वहाँ खाना भी अच्छा है।"
+          }
+        },
+        {
+          "speaker": "Uma",
+          "text": "Then the mountains are better in every way.",
+          "translations": {
+            "bn": "তাহলে সব দিক থেকেই পাহাড় ভালো।",
+            "hi": "तो हर तरह से पहाड़ बेहतर हैं।"
+          }
+        },
+        {
+          "speaker": "Tarun",
+          "text": "OK. Let’s choose the mountains.",
+          "translations": {
+            "bn": "ঠিক আছে। পাহাড়ই বেছে নিই।",
+            "hi": "ठीक है। पहाड़ ही चुनते हैं।"
+          }
+        },
+        {
+          "speaker": "Uma",
+          "text": "Great! I will book the tickets today.",
+          "translations": {
+            "bn": "দারুণ! আমি আজই টিকিট বুক করব।",
+            "hi": "बहुत बढ़िया! मैं आज ही टिकट बुक करूँगी।"
+          }
+        }
+      ],
+      "voices": {
+        "Tarun": "male",
+        "Uma": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Uma",
+      "asMan": "Umesh",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! I want to buy a new fan. Here are two. Which one do you prefer?",
+          "reply": "I prefer … because …",
+          "cues": {
+            "bn": "বলুন কোনটি বেশি পছন্দ, আর কারণ।",
+            "hi": "बताएँ कि कौन-सा ज़्यादा पसंद है, और कारण।"
+          }
+        },
+        {
+          "partner": "Is it cheaper than the other?",
+          "reply": "Yes, it is cheaper.",
+          "cues": {
+            "bn": "বলুন হ্যাঁ, এটি সস্তা।",
+            "hi": "कहें कि हाँ, यह सस्ता है।"
+          }
+        },
+        {
+          "partner": "Which one is better?",
+          "reply": "This one is better than that one.",
+          "cues": {
+            "bn": "“better than” দিয়ে বলুন।",
+            "hi": "“better than” से बताएँ।"
+          }
+        },
+        {
+          "partner": "Thank you. That helps a lot!",
+          "reply": "You are welcome.",
+          "cues": {
+            "bn": "বলুন, আপনাকেও স্বাগত।",
+            "hi": "कहें कि कोई बात नहीं।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Choosing a phone",
+            "translations": {
+              "bn": "ফোন বাছাই",
+              "hi": "फ़ोन चुनना"
+            }
+          },
+          "roleplay": {
+            "partner": "the shopkeeper",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning. Here are two phones. Which one do you like?",
+                "reply": "I like this one. It is bigger.",
+                "cues": {
+                  "bn": "একটি পছন্দ করুন, আর বলুন এটি বড়।",
+                  "hi": "एक चुनें, और कहें कि यह बड़ा है।"
+                }
+              },
+              {
+                "partner": "It is more expensive than the other one.",
+                "reply": "Is the other one cheaper?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন অন্যটি কি সস্তা।",
+                  "hi": "पूछें कि क्या दूसरा सस्ता है।"
+                }
+              },
+              {
+                "partner": "Yes, but the camera is not as good.",
+                "reply": "Then I prefer this one.",
+                "cues": {
+                  "bn": "বলুন তাহলে এটিই বেশি পছন্দ।",
+                  "hi": "कहें कि तब यही ज़्यादा पसंद है।"
+                }
+              },
+              {
+                "partner": "A good choice. It is our best phone.",
+                "reply": "Thank you. I will take it.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর বলুন এটি নেবেন।",
+                  "hi": "धन्यवाद दें, और कहें कि आप यही लेंगे।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Two holiday places",
+            "translations": {
+              "bn": "ছুটির দুই জায়গা",
+              "hi": "छुट्टी की दो जगहें"
+            }
+          },
+          "roleplay": {
+            "partner": "Mira",
+            "asMan": "Mihir",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Let’s plan a holiday. Goa or Kerala?",
+                "reply": "Goa is hotter than Kerala.",
+                "cues": {
+                  "bn": "তুলনা করে বলুন কোথায় বেশি গরম।",
+                  "hi": "तुलना करके बताएँ कि कहाँ ज़्यादा गरमी है।"
+                }
+              },
+              {
+                "partner": "True. But Kerala is greener. Which is cheaper?",
+                "reply": "Goa is cheaper, I think.",
+                "cues": {
+                  "bn": "বলুন আপনার ধারণায় কোনটি সস্তা।",
+                  "hi": "बताएँ कि आपके विचार से कौन-सा सस्ता है।"
+                }
+              },
+              {
+                "partner": "Which one do you prefer?",
+                "reply": "I prefer … because …",
+                "cues": {
+                  "bn": "বলুন কোনটি বেশি পছন্দ, আর কারণ।",
+                  "hi": "बताएँ कि कौन-सा ज़्यादा पसंद है, और कारण।"
+                }
+              },
+              {
+                "partner": "Good reason. Let’s book it!",
+                "reply": "Great idea!",
+                "cues": {
+                  "bn": "রাজি হোন।",
+                  "hi": "सहमति जताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Which school is better?",
+            "translations": {
+              "bn": "কোন স্কুল ভালো?",
+              "hi": "कौन-सा स्कूल बेहतर?"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I must choose a school for my daughter. School A is near. School B is bigger.",
+                "reply": "Which one is cheaper?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন কোনটি সস্তা।",
+                  "hi": "पूछें कि कौन-सा सस्ता है।"
+                }
+              },
+              {
+                "partner": "School A is cheaper. School B has the best teachers.",
+                "reply": "Teachers are very important.",
+                "cues": {
+                  "bn": "বলুন শিক্ষকরা খুব গুরুত্বপূর্ণ।",
+                  "hi": "कहें कि शिक्षक बहुत ज़रूरी हैं।"
+                }
+              },
+              {
+                "partner": "Which one would you choose?",
+                "reply": "I would choose … because …",
+                "cues": {
+                  "bn": "কোনটি বাছতেন আর কেন, বলুন।",
+                  "hi": "बताएँ कि आप कौन-सा चुनते और क्यों।"
+                }
+              },
+              {
+                "partner": "Thank you. I will think about it.",
+                "reply": "You are welcome.",
+                "cues": {
+                  "bn": "বলুন, আপনাকেও স্বাগত।",
+                  "hi": "कहें कि कोई बात नहीं।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

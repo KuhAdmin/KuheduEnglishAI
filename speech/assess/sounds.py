@@ -14,6 +14,14 @@ from .result import Difference, Heard, Sound
 
 RATE = 16_000
 
+# OpenPronounce reports a word when its wrong sounds add up to two, "whatever the length of the
+# word". But no wrong sound is ever counted as quite a whole one (each is scaled by how unlikely
+# the right sound was), so two sounds that are plainly wrong come to 1.99, and a word of five
+# sounds or more with two of them wrong was passed as right: "evening" was not told from
+# "morning" (measured 2026-10-13). This is two sounds, each at least nine parts in ten sure.
+# Two near misses (a sound for one close to it counts half) still come to one, and are let by.
+TWO_WRONG_SOUNDS = 1.8
+
 
 def _prepare() -> None:
     """What OpenPronounce reads from the environment, said before it is imported."""
@@ -33,9 +41,19 @@ def hear(recording: Path, text: str, lang: str = "en"):
     """The recording as a waveform, and the sounds heard in it against those `text` expects."""
     _prepare()
     # Imported here: it loads PyTorch, which the rest of this package and its tests do not need.
-    from openpronounce import compare_phones, load_audio, recognize_phones
+    from openpronounce import load_audio
 
     waveform = load_audio(str(recording))
+    return waveform, listen(waveform, text, lang)
+
+
+def listen(waveform, text: str, lang: str = "en") -> Heard:
+    """The sounds heard in a waveform (one channel, at `RATE`) against those `text` expects."""
+    _prepare()
+    from openpronounce import compare_phones, recognize_phones
+    from openpronounce import phones as library
+
+    library.PHONE_ERROR_MIN_EDITS = TWO_WRONG_SOUNDS
     recognition = recognize_phones(waveform, lang=lang)
     frames = max(1, len(recognition.log_posteriors))
     frame_seconds = len(waveform) / RATE / frames
@@ -51,12 +69,12 @@ def hear(recording: Path, text: str, lang: str = "en"):
     comparison = compare_phones(recognition, text, lang)
     groups = comparison["expected_phones"]
     if not any(groups):
-        return waveform, Heard(sounds)
+        return Heard(sounds)
 
     differences = [
-        Difference(phone["expected"], phone["heard"], phone["confidence"])
+        Difference(phone["expected"], phone["heard"], phone["confidence"], str(error.get("word", "")))
         for error in comparison["errors"]
         for phone in error["phones"]
         if phone["confidence"] > 0
     ]
-    return waveform, Heard(sounds, [phone for group in groups for phone in group], differences)
+    return Heard(sounds, [phone for group in groups for phone in group], differences)

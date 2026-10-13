@@ -25,7 +25,10 @@ export class ApiError extends Error {
 type RequestOptions<TSchema extends z.ZodType> = Omit<RequestInit, 'body'> & {
   /** Every response is validated at the boundary. */
   schema: TSchema
+  /** Sent as JSON. */
   body?: unknown
+  /** Sent as it is, under the type it says it is: a recording, which is not JSON. */
+  blob?: Blob
 }
 
 /**
@@ -34,16 +37,17 @@ type RequestOptions<TSchema extends z.ZodType> = Omit<RequestInit, 'body'> & {
  */
 export async function apiRequest<TSchema extends z.ZodType>(
   path: string,
-  { schema, body, headers, ...init }: RequestOptions<TSchema>,
+  { schema, body, blob, headers, ...init }: RequestOptions<TSchema>,
 ): Promise<z.infer<TSchema>> {
   const response = await fetch(`${env.VITE_API_BASE_URL}${path}`, {
     ...init,
     headers: {
       Accept: 'application/json',
       ...(body !== undefined && { 'Content-Type': 'application/json' }),
+      ...(blob && { 'Content-Type': blob.type }),
       ...headers,
     },
-    body: body === undefined ? undefined : JSON.stringify(body),
+    body: blob ?? (body === undefined ? undefined : JSON.stringify(body)),
   })
 
   const data: unknown = response.status === 204 ? null : await response.json().catch(() => null)

@@ -7,6 +7,7 @@ import {
   useRouteError,
 } from 'react-router'
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
+import { ApiError } from '@/shared/lib/api/client'
 import { settingsRepository } from '@/shared/lib/appConfig/settingsRepository'
 import type * as Microphone from '@/shared/lib/audio/microphone'
 import { MicrophoneError, microphoneAllowed } from '@/shared/lib/audio/microphone'
@@ -23,6 +24,7 @@ import {
   listenForVoice,
   type VoiceReading,
 } from '@/shared/lib/audio/voiceActivity'
+import { canMakeWav, recordingToWav } from '@/shared/lib/audio/wav'
 import { WEEK_CHALLENGES_CONFIG_NAME } from '@/shared/lib/curriculum/weekChallenges'
 import { WEEK_DIALOGUES_CONFIG_NAME } from '@/shared/lib/curriculum/weekDialogues'
 import { WEEK_PICTURES_CONFIG_NAME } from '@/shared/lib/curriculum/weekPictures'
@@ -37,7 +39,11 @@ import { WEEK_SENTENCES_CONFIG_NAME } from '@/shared/lib/curriculum/weekSentence
 import { WEEK_VOCABULARY_CONFIG_NAME } from '@/shared/lib/curriculum/weekVocabulary'
 import { AppLanguageProvider, useLanguageStore } from '@/shared/lib/i18n'
 import { useLessonProgressStore } from '@/shared/lib/learner/lessonProgress'
+import { useProfilePhotoStore } from '@/shared/lib/learner/profilePhoto'
+import { useTutorAvatarStore } from '@/shared/lib/learner/tutorAvatar'
 import { paths } from '@/shared/lib/paths'
+import { checkPronunciation } from '../api/pronunciation'
+import { checkReply } from '../api/reply'
 import { lessonDayRoutes } from '../index'
 
 // jsdom has no speech synthesis, microphone or audio playback; their own tests cover them.
@@ -45,12 +51,18 @@ vi.mock('@/shared/lib/audio/speech', () => ({
   isSpeechSupported: vi.fn(),
   hasVoiceFor: vi.fn(),
   onVoicesChanged: () => () => {},
+  // What a drawn face moves its lips by: here nothing is ever being said.
+  onSpeechActivity: () => () => {},
   primeVoices: vi.fn(),
   cancelSpeech: vi.fn(),
   speak: vi.fn(),
   speakAll: vi.fn(),
 }))
 vi.mock('@/shared/lib/audio/recorder', () => ({ startRecording: vi.fn() }))
+// Nor a way to read a recording back as a WAV, or a server to check one.
+vi.mock('@/shared/lib/audio/wav', () => ({ canMakeWav: vi.fn(), recordingToWav: vi.fn() }))
+vi.mock('../api/pronunciation', () => ({ checkPronunciation: vi.fn() }))
+vi.mock('../api/reply', () => ({ checkReply: vi.fn() }))
 // Nor a way to measure sound, or a browser that remembers allowing the microphone.
 vi.mock('@/shared/lib/audio/voiceActivity', () => ({
   prepareListening: vi.fn(),
@@ -94,6 +106,9 @@ const speakToTheEnd: typeof speakAll = async (parts, options) => {
   return 'ended'
 }
 
+/** The learner's recording, as it is sent to be checked. */
+const wav = new Blob(['wav'], { type: 'audio/wav' })
+
 /** A microphone that records until stopped. */
 const recordUntilStopped: typeof startRecording = async () => {
   let end: (recording: { blob: Blob; durationMs: number; mimeType: string }) => void = () => {}
@@ -133,6 +148,14 @@ beforeEach(() => {
   vi.mocked(microphoneAllowed).mockReset().mockReturnValue(false)
   vi.mocked(canListenForVoice).mockReset().mockReturnValue(false)
   vi.mocked(listenForVoice).mockReset().mockReturnValue(null)
+  // Like jsdom itself, which cannot read a recording back: nothing is offered to be checked.
+  // A learner who has chosen no tutor (so it is the man) and has no picture of their own.
+  useTutorAvatarStore.setState({ avatar: null })
+  useProfilePhotoStore.setState({ photo: null })
+  vi.mocked(canMakeWav).mockReset().mockReturnValue(false)
+  vi.mocked(recordingToWav).mockReset().mockResolvedValue(wav)
+  vi.mocked(checkPronunciation).mockReset()
+  vi.mocked(checkReply).mockReset()
 })
 
 describe('Day 1: Watch and listen', () => {
@@ -715,6 +738,260 @@ describe('Day 2: Learn useful words', () => {
       for (const word of allWords) await userEvent.click(card(word))
       expect(next()).toBeEnabled()
     })
+
+    describe('having the recording checked', () => {
+      const checkButton = () => screen.queryByRole('button', { name: 'Check how I said it' })
+      const askToCheck = () =>
+        userEvent.click(screen.getByRole('button', { name: 'Check how I said it' }))
+      const found = () => screen.findByRole('region', { name: 'How it sounded' })
+      const record = async () => {
+        await userEvent.click(mic('Tap to speak'))
+        await screen.findByText(/^Recording…/)
+        await userEvent.click(mic('Stop recording'))
+        await screen.findByText('Recorded. Listen, or try again.')
+      }
+
+      beforeEach(() => {
+        vi.mocked(canMakeWav).mockReturnValue(true)
+        // The take is kept by an address in the page's memory; these are its bytes.
+        vi.stubGlobal(
+          'fetch',
+          vi.fn(async () => new Response('voice')),
+        )
+      })
+      afterEach(() => vi.unstubAllGlobals())
+
+      it('is not offered on a device that cannot send its recording', async () => {
+        vi.mocked(canMakeWav).mockReturnValue(false)
+        renderDay(day2)
+        await step()
+        await record()
+
+        expect(checkButton()).toBeNull()
+        expect(screen.getByRole('button', { name: 'Listen to yourself' })).toBeVisible()
+      })
+
+      it('sends nothing until the learner asks, and says beside the button what asking does', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'ok', confidence: 1 }],
+        })
+        renderDay(day2)
+        await step()
+        expect(checkButton()).toBeNull()
+
+        await record()
+        expect(checkButton()).toBeVisible()
+        expect(
+          screen.getByText('Sends this recording to our server to be checked. It is not kept.'),
+        ).toBeVisible()
+        expect(checkPronunciation).not.toHaveBeenCalled()
+
+        await askToCheck()
+        const region = await found()
+        // As a WAV, with the word, its parts and its strong part as the lesson has them.
+        expect(recordingToWav).toHaveBeenCalledOnce()
+        expect(checkPronunciation).toHaveBeenCalledExactlyOnceWith(wav, {
+          word: 'hello',
+          syllables: ['hel', 'lo'],
+          stress: 2,
+        })
+        expect(region).toHaveTextContent('That sounded right. Well done!')
+        // Every time: nothing has measured it on learners yet.
+        expect(region).toHaveTextContent('This check is new and can be wrong.')
+        // That take has been checked; another one brings the button back.
+        expect(checkButton()).toBeNull()
+        // Never a condition of the day.
+        expect(next()).toBeDisabled()
+      })
+
+      it('says what to try, by the word’s own parts', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [
+            { code: 'extraSyllable', confidence: 0.6, expected: 2, heard: 3 },
+            { code: 'stressMoved', confidence: 0.8, expected: 2, heard: 1 },
+            { code: 'soundDiffers', confidence: 0.9 },
+          ],
+        })
+        renderDay(day2)
+        await step()
+        await record()
+        await askToCheck()
+
+        const region = await found()
+        const list = within(region).getByRole('list', { name: 'Something to try' })
+        // The findings themselves: a drawing under one has parts of its own.
+        const said = [...list.children] as HTMLElement[]
+        expect(said).toHaveLength(3)
+        expect(said[0]).toHaveTextContent(
+          'It sounded like there was an extra part. Parts in this word: 2. Parts heard: 3.',
+        )
+        expect(said[1]).toHaveTextContent(
+          'Another part sounded like the strong one. Make “lo” the strong part.',
+        )
+        expect(said[2]).toHaveTextContent('One or more sounds were a little different.')
+        expect(region).not.toHaveTextContent('That sounded right')
+      })
+
+      it('shows what was done beside what to do: the parts as beats, and where the stress fell', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [
+            { code: 'extraSyllable', confidence: 0.6, expected: 2, heard: 3 },
+            { code: 'stressMoved', confidence: 0.8, expected: 2, heard: 1 },
+            { code: 'soundDiffers', confidence: 0.9 },
+          ],
+        })
+        renderDay(day2)
+        await step()
+        await record()
+        await askToCheck()
+
+        const region = await found()
+        const said = [...within(region).getByRole('list', { name: 'Something to try' }).children]
+        /** One finding, by its place among them: its sentence and whatever is drawn under it. */
+        const finding = (place: number) => {
+          const line = said[place]
+          if (!(line instanceof HTMLElement)) throw new Error(`There is no finding at ${place}`)
+          return within(line)
+        }
+
+        // A beat for each part: two in the word, three heard. No part of the word is marked,
+        // because which one was the extra is not known.
+        expect(finding(0).getByRole('img', { name: 'The word: 2' })).toBeVisible()
+        expect(finding(0).getByRole('img', { name: 'You: 3' })).toBeVisible()
+
+        // The word's own parts twice: the strong one where it belongs, and where it was put.
+        const strong = (row: string) =>
+          within(finding(1).getByRole('list', { name: row }))
+            .getAllByRole('listitem')
+            .map((part) => part.textContent)
+        expect(strong('The word')).toEqual(['hel', 'loStrong'])
+        expect(strong('You')).toEqual(['helStrong', 'lo'])
+
+        // Nothing is drawn for a sound that differed: which one is not told.
+        expect(finding(2).queryByRole('img')).toBeNull()
+        expect(finding(2).queryByRole('list')).toBeNull()
+      })
+
+      it('puts the word and the learner’s own recording side by side, to compare by ear', async () => {
+        const play = vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue()
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'stressMoved', confidence: 0.8, expected: 2, heard: 1 }],
+        })
+        renderDay(day2)
+        await step()
+        await record()
+        await askToCheck()
+        const region = await found()
+
+        await userEvent.click(within(region).getByRole('button', { name: 'Hear the word' }))
+        expect(speak).toHaveBeenLastCalledWith('hello', { rate: 1 })
+        // Hearing it there is hearing it: the word is ticked like any other.
+        expect(card('hello')).toHaveAccessibleName('hello Heard')
+        // And what was found is still there, with the recording it was found in.
+        expect(region).toBeVisible()
+
+        await userEvent.click(within(region).getByRole('button', { name: 'Hear yourself' }))
+        expect(play).toHaveBeenCalledOnce()
+        play.mockRestore()
+      })
+
+      it('offers nothing to compare when there is nothing to try, and only the recording when the app cannot speak', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'ok', confidence: 1 }],
+        })
+        renderDay(day2)
+        await step()
+        await record()
+        await askToCheck()
+        const right = await found()
+        expect(within(right).queryByRole('button')).toBeNull()
+        expect(within(right).queryByRole('img')).toBeNull()
+
+        vi.mocked(isSpeechSupported).mockReturnValue(false)
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'soundDiffers', confidence: 0.9 }],
+        })
+        await userEvent.click(mic('Tap to speak'))
+        await screen.findByText(/^Recording…/)
+        await userEvent.click(mic('Stop recording'))
+        await screen.findByText('Recorded. Listen, or try again.')
+        await askToCheck()
+
+        const toTry = await found()
+        expect(within(toTry).queryByRole('button', { name: 'Hear the word' })).toBeNull()
+        expect(within(toTry).getByRole('button', { name: 'Hear yourself' })).toBeVisible()
+      })
+
+      it('says when nothing was heard', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'nothingHeard', confidence: 1 }],
+        })
+        renderDay(day2)
+        await step()
+        await record()
+        await askToCheck()
+
+        expect(await found()).toHaveTextContent('We could not hear a word.')
+      })
+
+      it.each([
+        ['the server cannot check it', 503, 'unavailable', 'This cannot be checked right now.'],
+        [
+          'the recording is refused',
+          400,
+          'validation_failed',
+          'This recording could not be checked.',
+        ],
+        ['too many were asked for', 429, 'rate_limited', 'That is a lot of checks.'],
+      ])('says so when %s, and can be asked again', async (_, status, code, message) => {
+        vi.mocked(checkPronunciation).mockRejectedValue(
+          new ApiError(status, 'refused', { error: { code, message: 'for the log' } }),
+        )
+        renderDay(day2)
+        await step()
+        await record()
+        await askToCheck()
+
+        expect(await screen.findByRole('alert')).toHaveTextContent(message)
+        expect(screen.getByRole('alert')).not.toHaveTextContent('for the log')
+        expect(checkButton()).toBeEnabled()
+        expect(screen.getByRole('button', { name: 'Listen to yourself' })).toBeVisible()
+      })
+
+      it('says the recording could not be checked when this browser cannot read it back', async () => {
+        vi.mocked(recordingToWav).mockRejectedValue(new Error('cannot decode'))
+        renderDay(day2)
+        await step()
+        await record()
+        await askToCheck()
+
+        expect(await screen.findByRole('alert')).toHaveTextContent(
+          'This recording could not be checked. Record the word again.',
+        )
+        expect(checkPronunciation).not.toHaveBeenCalled()
+      })
+
+      it('forgets what was found when the word is said again, or another word is chosen', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'ok', confidence: 1 }],
+        })
+        renderDay(day2)
+        await step()
+        await record()
+        await askToCheck()
+        await found()
+
+        await userEvent.click(mic('Tap to speak'))
+        await screen.findByText(/^Recording…/)
+        expect(screen.queryByRole('region', { name: 'How it sounded' })).toBeNull()
+
+        await userEvent.click(mic('Stop recording'))
+        await screen.findByText('Recorded. Listen, or try again.')
+        expect(checkButton()).toBeVisible()
+        await userEvent.click(card('name'))
+        expect(checkButton()).toBeNull()
+      })
+    })
   })
 
   describe('with what an admin set', () => {
@@ -977,6 +1254,128 @@ describe('Day 3: Translate and speak', () => {
       await userEvent.click(button(bn.showAnswer))
       expect(button(bn.next)).toBeEnabled()
     })
+
+    describe('having the recording checked', () => {
+      const record = async (start = 'Tap to speak', stop = 'Stop recording') => {
+        await userEvent.click(button(start))
+        await userEvent.click(await screen.findByRole('button', { name: stop }))
+        await screen.findByRole('button', { name: /Listen to yourself|নিজের কণ্ঠ শুনুন/ })
+      }
+      const found = () => screen.findByRole('region', { name: 'How it sounded' })
+
+      beforeEach(() => {
+        vi.mocked(canMakeWav).mockReturnValue(true)
+        vi.stubGlobal(
+          'fetch',
+          vi.fn(async () => new Response('voice')),
+        )
+      })
+      afterEach(() => vi.unstubAllGlobals())
+
+      it('checks the sentence on show, and names the words that sounded different', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'soundDiffers', confidence: 0.8, words: ['Good', 'morning'] }],
+        })
+        renderDay(day3)
+        await step()
+        await record()
+
+        await userEvent.click(button('Check how I said it'))
+        const region = await found()
+
+        // The sentence as it is written, whole: its parts are not a lesson's to write.
+        expect(checkPronunciation).toHaveBeenCalledExactlyOnceWith(wav, {
+          word: 'Hello! Good morning.',
+          syllables: [],
+          stress: null,
+        })
+        expect(region).toHaveTextContent(
+          'These words sounded a little different: Good, morning. Listen again and compare.',
+        )
+        expect(within(region).getByText('morning')).toHaveAttribute('lang', 'en')
+        expect(region).toHaveTextContent('This check is new and can be wrong.')
+        // Nothing is drawn of a sentence: it has no parts to draw.
+        expect(within(region).queryByRole('img')).toBeNull()
+
+        // A sentence is not "the word".
+        expect(within(region).queryByRole('button', { name: 'Hear the word' })).toBeNull()
+        await userEvent.click(within(region).getByRole('button', { name: 'Hear the sentence' }))
+        expect(speak).toHaveBeenLastCalledWith('Hello! Good morning.', { rate: 1 })
+        expect(within(region).getByRole('button', { name: 'Hear yourself' })).toBeVisible()
+      })
+
+      it('says a sentence sounded different when no word of it can be named, and when it was right', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'soundDiffers', confidence: 0.8 }],
+        })
+        renderDay(day3)
+        await step()
+        await record()
+        await userEvent.click(button('Check how I said it'))
+        expect(await found()).toHaveTextContent(
+          'Some of it sounded a little different. Listen to the sentence again and compare.',
+        )
+
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'ok', confidence: 1 }],
+        })
+        await record()
+        await userEvent.click(button('Check how I said it'))
+        await waitFor(async () =>
+          expect(await found()).toHaveTextContent('That sounded right. Well done!'),
+        )
+      })
+
+      it('says the sentence, not the word, is to be recorded again when it could not be read', async () => {
+        vi.mocked(recordingToWav).mockRejectedValue(new Error('cannot decode'))
+        renderDay(day3)
+        await step()
+        await record()
+        await userEvent.click(button('Check how I said it'))
+
+        expect(await screen.findByRole('alert')).toHaveTextContent(
+          'This recording could not be checked. Record the sentence again.',
+        )
+      })
+
+      it('checks only what was said with the English on show: before that it may be another sentence', async () => {
+        const check = 'আমি কেমন বললাম দেখুন'
+        const sayAgain = 'পরীক্ষা করাতে চাইলে, বাক্যটি এখন দেখে আরেকবার বলুন।'
+        await openInBengali()
+
+        // Translating in their head, they say something: perhaps "Hi! Good morning.", which is right.
+        await record('বলতে ট্যাপ করুন', 'রেকর্ডিং থামান')
+        expect(screen.queryByRole('button', { name: check })).toBeNull()
+        expect(screen.queryByText(sayAgain)).toBeNull()
+
+        // The answer comes on show. That recording is still not held against it.
+        await userEvent.click(button(bn.showAnswer))
+        expect(screen.queryByRole('button', { name: check })).toBeNull()
+        expect(screen.getByText(sayAgain)).toBeVisible()
+
+        // Said again, seeing it: now it can be checked.
+        await record('বলতে ট্যাপ করুন', 'রেকর্ডিং থামান')
+        expect(button(check)).toBeVisible()
+        expect(screen.queryByText(sayAgain)).toBeNull()
+        expect(checkPronunciation).not.toHaveBeenCalled()
+      })
+
+      it('forgets what was found with the sentence it was found in', async () => {
+        vi.mocked(checkPronunciation).mockResolvedValue({
+          findings: [{ code: 'ok', confidence: 1 }],
+        })
+        renderDay(day3)
+        await step()
+        await record()
+        await userEvent.click(button('Check how I said it'))
+        await found()
+
+        await userEvent.click(next())
+        expect(screen.getByText('Sentence 2 of 5')).toBeVisible()
+        expect(screen.queryByRole('region', { name: 'How it sounded' })).toBeNull()
+        expect(screen.queryByRole('button', { name: 'Check how I said it' })).toBeNull()
+      })
+    })
   })
 
   describe('with what an admin set', () => {
@@ -1071,6 +1470,74 @@ describe('Day 4: a role-play', () => {
     expect(screen.queryByRole('button', { name: 'Next' })).toBeNull()
     expect(speak).not.toHaveBeenCalled()
     expect(startRecording).not.toHaveBeenCalled()
+  })
+
+  it('has the learner’s own tutor play the partner, whose voice it is that speaks', async () => {
+    renderDay(day4)
+    await step()
+
+    // A drawn face, smiling until it speaks: the one chosen in Profile, not a stand-in figure.
+    const face = document.querySelector('[data-mood]')
+    expect(face).toHaveAttribute('data-mood', 'smile')
+    expect(face).toHaveAttribute('data-mouth', 'rest')
+    // Decoration: the heading names who is being talked to.
+    expect(face?.querySelector('[role="img"]')).toBeNull()
+  })
+
+  it('keeps the partner’s face, the way back and the day’s place in the week in view, above what scrolls', async () => {
+    const face = () => document.querySelector('[data-mood]')
+    const scrolls = () => screen.getByRole('main')
+    const stays = (element: Element | null) => element !== null && !scrolls().contains(element)
+    renderDay(day4)
+    await step()
+
+    // Before the conversation starts, and from then on: the face does not move between them.
+    for (const begun of [false, true]) {
+      if (begun) await userEvent.click(button('Start the conversation'))
+      expect(stays(face())).toBe(true)
+      expect(stays(screen.getByRole('link', { name: 'Back to the week' }))).toBe(true)
+      expect(stays(screen.getByRole('progressbar', { name: 'Days of this week' }))).toBe(true)
+      expect(stays(screen.getByRole('link', { name: 'Go back to Day 3' }))).toBe(true)
+      expect(stays(screen.getByText('4/7'))).toBe(true)
+      // Under it, and scrolling: who is being talked to, and the conversation.
+      expect(scrolls()).toContainElement(screen.getByRole('heading', { level: 1 }))
+    }
+    expect(scrolls()).toContainElement(screen.getByRole('list', { name: 'Conversation' }))
+  })
+
+  it('calls the partner what fits the tutor who plays them: Ravi from a man, Asha from a woman', async () => {
+    useTutorAvatarStore.setState({ avatar: 'female' })
+    renderDay(day4)
+    expect(await screen.findByRole('heading', { level: 1, name: 'Talk to Asha' })).toBeVisible()
+    expect(screen.queryByText(/Ravi/)).toBeNull()
+
+    await userEvent.click(button('Start the conversation'))
+    expect(said()).toEqual(['AshaHello! Good morning.'])
+    await userEvent.click(button('Skip this turn'))
+    await userEvent.click(button('Skip this turn'))
+
+    // A woman's voice does not introduce itself by a man's name: the line says hers.
+    expect(speak).toHaveBeenLastCalledWith('I’m good, thanks. My name is Asha. What’s your name?', {
+      rate: 1,
+    })
+    expect(screen.getByText('I’m good, thanks. My name is Asha. What’s your name?')).toBeVisible()
+    expect(screen.queryByText(/Ravi/)).toBeNull()
+  })
+
+  it('shows the learner’s own picture on their side of the conversation, still, or a plain figure', async () => {
+    // The only picture a conversation can hold: the partner's lines have none beside them.
+    const mine = () => screen.getByRole('list', { name: 'Conversation' }).querySelector('img')
+    await start()
+    await userEvent.click(button('Skip this turn'))
+
+    // No picture of their own: a figure, and nothing asked of the network.
+    expect(said()[1]).toBe('You could sayGood morning!')
+    expect(mine()).toBeNull()
+
+    act(() => useProfilePhotoStore.setState({ photo: 'data:image/png;base64,AAAA' }))
+    expect(mine()).toHaveAttribute('src', 'data:image/png;base64,AAAA')
+    // Decoration: the line beside it says whose turn it was.
+    expect(mine()).toHaveAttribute('alt', '')
   })
 
   it('opens with the partner’s first line, said aloud and written out, then it is the learner’s turn', async () => {
@@ -1288,6 +1755,192 @@ describe('Day 4: a role-play', () => {
       expect(screen.getByText('Your turn. Tap to speak.')).toBeVisible()
       expect(said()).toHaveLength(1)
     })
+
+    it('closes the microphone that opened for the next turn when the learner turns to what they said', async () => {
+      vi.mocked(canMakeWav).mockReturnValue(true)
+      vi.stubGlobal(
+        'fetch',
+        vi.fn(async () => new Response('voice')),
+      )
+      vi.mocked(checkReply).mockResolvedValue({ heard: 'Good morning.', fits: true, better: null })
+      allowed()
+      await start()
+      await screen.findByText('Start speaking now')
+      speaking()
+      await screen.findByText(/^Recording…/)
+      later(3100)
+      // The second turn's microphone opens by itself.
+      await waitFor(() => expect(startRecording).toHaveBeenCalledTimes(2))
+
+      await userEvent.click(await screen.findByRole('button', { name: 'Check my reply' }))
+
+      // They are reading about their last answer, not giving the next one: it waits for a tap.
+      expect(await screen.findByRole('region', { name: 'About your reply' })).toBeVisible()
+      expect(screen.getByText('Your turn. Tap to speak.')).toBeVisible()
+      expect(said()).toHaveLength(3)
+      vi.unstubAllGlobals()
+    })
+  })
+
+  describe('having a reply checked', () => {
+    const checkButton = () => screen.queryByRole('button', { name: 'Check my reply' })
+    const askToCheck = async () =>
+      userEvent.click(await screen.findByRole('button', { name: 'Check my reply' }))
+    const found = () => screen.findByRole('region', { name: 'About your reply' })
+
+    beforeEach(() => {
+      vi.mocked(canMakeWav).mockReturnValue(true)
+      // The take is kept by an address in the page's memory; these are its bytes.
+      vi.stubGlobal(
+        'fetch',
+        vi.fn(async () => new Response('voice')),
+      )
+    })
+    afterEach(() => vi.unstubAllGlobals())
+
+    it('is not offered on a device that cannot send its recording', async () => {
+      vi.mocked(canMakeWav).mockReturnValue(false)
+      await start()
+      await answer()
+
+      expect(await screen.findByRole('button', { name: 'Listen to yourself' })).toBeVisible()
+      expect(checkButton()).toBeNull()
+    })
+
+    it('is not offered for a turn that was skipped: there is nothing to send', async () => {
+      await start()
+      await userEvent.click(button('Skip this turn'))
+
+      expect(said()).toHaveLength(3)
+      expect(checkButton()).toBeNull()
+    })
+
+    it('sends nothing until the learner asks, then says what was heard and that nothing was found', async () => {
+      vi.mocked(checkReply).mockResolvedValue({ heard: 'Good morning.', fits: true, better: null })
+      await start()
+      await answer()
+
+      expect(await screen.findByRole('button', { name: 'Check my reply' })).toBeVisible()
+      expect(
+        screen.getByText('Sends this recording to our server to be checked. It is not kept.'),
+      ).toBeVisible()
+      expect(checkReply).not.toHaveBeenCalled()
+
+      await askToCheck()
+      const region = await found()
+      // As a WAV, with the line it answers and the reply the lesson suggests.
+      expect(recordingToWav).toHaveBeenCalledOnce()
+      expect(checkReply).toHaveBeenCalledExactlyOnceWith(wav, {
+        partner: 'Hello! Good morning.',
+        suggested: 'Good morning!',
+      })
+      expect(region).toHaveTextContent('We heard')
+      expect(within(region).getByText('Good morning.')).toHaveAttribute('lang', 'en')
+      expect(region).toHaveTextContent('We found nothing to change.')
+      // Every time: nothing has measured it on learners yet.
+      expect(region).toHaveTextContent('This check is new and can be wrong.')
+      // That reply has been checked.
+      expect(checkButton()).toBeNull()
+      // The conversation went on meanwhile, whatever was found.
+      expect(speak).toHaveBeenLastCalledWith('How are you?', { rate: 1 })
+    })
+
+    it('offers a better way to say it, and calls nothing wrong', async () => {
+      vi.mocked(checkReply).mockResolvedValue({
+        heard: 'Morning good.',
+        fits: true,
+        better: 'Good morning.',
+      })
+      await start()
+      await answer()
+      await askToCheck()
+
+      const region = await found()
+      expect(region).toHaveTextContent('We heardMorning good.')
+      // A model's yes is not praise: nothing is said of whether it answers unless there is a doubt.
+      expect(region).not.toHaveTextContent('Ravi')
+      expect(region).not.toHaveTextContent('We found nothing to change.')
+      expect(region).toHaveTextContent('You could say it like thisGood morning.')
+      expect(region).not.toHaveTextContent(/mistake|incorrect|not quite/i)
+    })
+
+    it('says, as a doubt, when a reply may not answer the partner', async () => {
+      vi.mocked(checkReply).mockResolvedValue({ heard: 'I am fine.', fits: false, better: null })
+      await start()
+      await answer()
+      await askToCheck()
+
+      const region = await found()
+      expect(region).toHaveTextContent(
+        'This may not answer what Ravi said. Compare it with the reply above.',
+      )
+      expect(region).not.toHaveTextContent('We found nothing to change.')
+    })
+
+    it('says when no words could be made out', async () => {
+      vi.mocked(checkReply).mockResolvedValue({ heard: null, fits: null, better: null })
+      await start()
+      await answer()
+      await askToCheck()
+
+      const region = await found()
+      expect(region).toHaveTextContent('We could not make out the words.')
+      expect(region).not.toHaveTextContent('We heard')
+    })
+
+    it('keeps what was found with its turn after the recording has gone to the next answer', async () => {
+      vi.mocked(checkReply).mockResolvedValue({ heard: 'Good morning.', fits: true, better: null })
+      await start()
+      await answer()
+      await askToCheck()
+      await found()
+
+      await answer()
+
+      // The second answer can be checked now; the first one's result is still under it.
+      expect(await screen.findByRole('button', { name: 'Check my reply' })).toBeVisible()
+      const regions = screen.getAllByRole('region', { name: 'About your reply' })
+      expect(regions).toHaveLength(1)
+      expect(said()[1]).toContain('We found nothing to change.')
+
+      await askToCheck()
+      await waitFor(() =>
+        expect(screen.getAllByRole('region', { name: 'About your reply' })).toHaveLength(2),
+      )
+      expect(checkReply).toHaveBeenLastCalledWith(wav, {
+        partner: 'How are you?',
+        suggested: 'I’m fine, thank you. And you?',
+      })
+    })
+
+    it('says so when it cannot be checked right now, and can be asked again', async () => {
+      vi.mocked(checkReply).mockRejectedValueOnce(new Error('offline'))
+      vi.mocked(checkReply).mockResolvedValue({ heard: 'Good morning.', fits: true, better: null })
+      await start()
+      await answer()
+      await askToCheck()
+
+      expect(await screen.findByRole('alert')).toHaveTextContent(
+        'Your reply cannot be checked right now. You can still listen to yourself.',
+      )
+      await askToCheck()
+      expect(await found()).toHaveTextContent('We found nothing to change.')
+      expect(screen.queryByRole('alert')).toBeNull()
+    })
+
+    it('starts again without what was found the time before', async () => {
+      vi.mocked(checkReply).mockResolvedValue({ heard: 'Good morning.', fits: true, better: null })
+      await start()
+      await answer()
+      await askToCheck()
+      await found()
+      for (let turn = 0; turn < 4; turn += 1) await userEvent.click(button('Skip this turn'))
+
+      await userEvent.click(button('Practise again'))
+
+      expect(screen.queryByRole('region', { name: 'About your reply' })).toBeNull()
+      expect(said()).toHaveLength(1)
+    })
   })
 
   it('lets a turn be skipped, so speaking is never a condition', async () => {
@@ -1463,12 +2116,17 @@ describe('Day 4: a role-play', () => {
       expect(
         await screen.findByRole('heading', { level: 1, name: 'Talk to the barista' }),
       ).toBeVisible()
-      const picture = document.querySelector('main img') as HTMLImageElement
+      // In the band that stays, where the tutor would be: not in what scrolls.
+      const picture = document.querySelector('img') as HTMLImageElement
       expect(picture).toHaveAttribute('src', '/people/barista.webp')
+      expect(screen.getByRole('main')).not.toContainElement(picture)
 
-      // A picture that fails to load gives way to the drawn figure.
+      // A picture that fails to load gives way to the learner's tutor, in the same place.
       fireEvent.error(picture)
-      expect(document.querySelector('main img')).toBeNull()
+      expect(document.querySelector('img')).toBeNull()
+      const face = document.querySelector<HTMLElement>('[data-mood]')
+      expect(face).not.toBeNull()
+      expect(screen.getByRole('main')).not.toContainElement(face)
 
       await userEvent.click(button('Start the conversation'))
       expect(said()).toEqual(['the baristaHi! Welcome!'])
@@ -1744,8 +2402,21 @@ describe('Day 5: the week’s challenge', () => {
 })
 
 describe('Day 6: the week’s review', () => {
+  // Its role-play's partner was written as a woman, Meera: with a woman as the learner's
+  // tutor, who plays her, she keeps that name.
+  beforeEach(() => useTutorAvatarStore.setState({ avatar: 'female' }))
+
   const day6 = '/lessons/weeks/1/days/6'
   const list = () => screen.findByRole('heading', { level: 1, name: 'Weekly review' })
+
+  it('names the role-play’s partner in its list as the role-play will: Mohan, from a man', async () => {
+    useTutorAvatarStore.setState({ avatar: 'male' })
+    renderDay(day6)
+    await list()
+
+    expect(screen.getByText('Talk to Mohan')).toBeVisible()
+    expect(screen.queryByText('Talk to Meera')).toBeNull()
+  })
   const button = (name: string | RegExp) => screen.getByRole('button', { name })
   const link = (name: string | RegExp) => screen.getByRole('link', { name })
   const activities = () =>
@@ -2280,6 +2951,10 @@ describe('Day 6: the week’s review', () => {
 })
 
 describe('Day 7: the real-world challenge', () => {
+  // Priya and Anita were written as women: with a woman as the learner's tutor, who plays
+  // them, they keep those names.
+  beforeEach(() => useTutorAvatarStore.setState({ avatar: 'female' }))
+
   const day7 = '/lessons/weeks/1/days/7'
   const picker = () => screen.findByRole('heading', { level: 1, name: 'Real-world challenge' })
   const button = (name: string | RegExp) => screen.getByRole('button', { name })

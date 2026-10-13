@@ -63,6 +63,14 @@ const envSchema = z.object({
   SPEECH_URL: z.url().default('http://127.0.0.1:8788'),
   /** Where sounds already made are kept. Left out, a folder beside the server's code. */
   SPEECH_CACHE_DIR: z.string().min(1).optional(),
+
+  /** Where the scoring service (`speech/assess`, `npm run dev:scorer`) listens, on this machine. */
+  SCORER_URL: z.url().default('http://127.0.0.1:8789'),
+
+  /** Where Ollama listens, on this machine: it runs the model that reads a learner's reply. */
+  GRADER_URL: z.url().default('http://127.0.0.1:11434'),
+  /** That model, by the name Ollama has it under. Another one has to be measured before it is used. */
+  GRADER_MODEL: z.string().min(1).default('qwen2.5:1.5b'),
 })
 
 /** What a server that real people use cannot do without; development has stand-ins for them. */

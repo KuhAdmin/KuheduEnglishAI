@@ -1,5 +1,6 @@
 import type { RouteObject } from 'react-router'
 import { isSectionNumber, isWeekNumber } from '@/shared/lib/curriculum/curriculum'
+import { ensureWeekContent } from '@/shared/lib/curriculum/weekContentRemote'
 import { paths } from '@/shared/lib/paths'
 
 export { useJourneyProgress } from './lib/journeyProgress'
@@ -24,8 +25,10 @@ export const homeRoutes: RouteObject[] = [
 export const weekRoutes: RouteObject[] = [
   {
     path: paths.homeWeek,
-    loader: ({ params }) => {
+    loader: async ({ params }) => {
       if (!isWeekNumber(Number(params.week))) throw new Response(null, { status: 404 })
+      // The week's picture, and its days' content for when they are opened, as the server has it.
+      await ensureWeekContent(Number(params.week))
       return null
     },
     lazy: async () => ({ Component: (await import('./pages/WeekPage')).WeekPage }),

@@ -13,12 +13,15 @@ import {
 } from '@/shared/lib/curriculum/weekSentences'
 import { fillText, formatNumber, isEnglish, useLanguage, useT } from '@/shared/lib/i18n'
 import { StepScreen } from '@/shared/ui/StepScreen'
+import { usePronunciationCheck } from '../hooks/usePronunciationCheck'
 import { useSpokenPractice } from '../hooks/useSpokenPractice'
 import { revealOnMount } from '../lib/revealOnMount'
 import { matchesAnswer } from '../lib/matchAnswer'
 import { EnglishAnswer } from './EnglishAnswer'
 import { LessonNextButton } from './LessonNextButton'
 import { LessonTopBar } from './LessonTopBar'
+import { PronunciationCheckAction } from './PronunciationCheckAction'
+import { PronunciationFeedback } from './PronunciationFeedback'
 import { PronunciationPractice } from './PronunciationPractice'
 import { SentenceCard } from './SentenceCard'
 import { TipsCard } from './TipsCard'
@@ -37,11 +40,18 @@ export type TranslateAndSpeakStepProps = {
   onNext: () => void
 }
 
+/** A sentence is said whole: its parts are not written, and none of them is the strong one. */
+const NO_PARTS: readonly string[] = []
+
 /**
  * Day 3, "Translate and speak": one sentence at a time, from the learner's language into
  * English, then said aloud. "Next" opens once the English is on show — typed right, or asked
- * for. Speaking is never required, and nothing said is rated. A learner with no mother tongue
- * to translate from (or a sentence not written in theirs) gets the English to listen to and say.
+ * for. Speaking is never required. A learner with no mother tongue to translate from (or a
+ * sentence not written in theirs) gets the English to listen to and say.
+ *
+ * A recording can be checked by the server, when the learner asks, as on Day 2: a first version,
+ * which says so. **Only a recording made with the English on show**: before that the learner may
+ * have said another sentence, and a right one, and it is the shown one it would be held against.
  */
 export function TranslateAndSpeakStep({
   sentences,
@@ -65,6 +75,13 @@ export function TranslateAndSpeakStep({
   const [typed, setTyped] = useState('')
   const [answerShown, setAnswerShown] = useState(false)
   const [matched, setMatched] = useState(false)
+  // How many recordings had been made when the English came on show; `null` until it does.
+  const [takesBeforeAnswer, setTakesBeforeAnswer] = useState<number | null>(null)
+  const pronunciation = usePronunciationCheck(recording.take, {
+    word: sentence?.english ?? '',
+    syllables: NO_PARTS,
+    stress: null,
+  })
 
   // The screen stays while the sentence changes; moving focus to the heading announces it.
   const heading = useRef<HTMLHeadingElement>(null)
@@ -87,11 +104,18 @@ export function TranslateAndSpeakStep({
   }
   const sayEnglish = isSpeechSupported() ? () => say(sentence.english) : undefined
 
+  // Said with the English in front of them: always, where there was nothing to translate.
+  const saidKnowing =
+    source === undefined || (takesBeforeAnswer !== null && recording.attempts > takesBeforeAnswer)
+  const canBeChecked = recording.take !== null && pronunciation.supported
+  const checked = pronunciation.check.status === 'done' || pronunciation.check.status === 'failed'
+
   const handleCheck = () => {
     const right = matchesAnswer(typed, acceptedAnswers(sentence))
     if (right) haptic('success')
     setMatched(right)
     setAnswerShown(true)
+    setTakesBeforeAnswer((before) => before ?? recording.attempts)
   }
 
   const handleNext = () => {
@@ -102,6 +126,7 @@ export function TranslateAndSpeakStep({
     setTyped('')
     setAnswerShown(false)
     setMatched(false)
+    setTakesBeforeAnswer(null)
     setPosition(index + 1)
   }
 
@@ -185,6 +210,32 @@ export function TranslateAndSpeakStep({
           onStop={stopSpeaking}
           onListen={recording.playTake}
         />
+        {/* Until this take has been checked; a new take brings it back. */}
+        {canBeChecked && saidKnowing && pronunciation.check.status !== 'done' && (
+          <PronunciationCheckAction
+            checking={pronunciation.check.status === 'checking'}
+            onCheck={() => void pronunciation.start()}
+          />
+        )}
+        {canBeChecked && !saidKnowing && answerShown && (
+          <p className="text-center text-sm text-fg-muted">{t('lessonDay.feedback.afterAnswer')}</p>
+        )}
+        {checked && (
+          <div ref={revealOnMount}>
+            <PronunciationFeedback
+              kind="sentence"
+              check={pronunciation.check}
+              onPlayWord={sayEnglish}
+              onPlayTake={() => {
+                // One voice at a time: the sentence must not talk over the recording.
+                playback.stop()
+                recording.playTake()
+              }}
+              playingWord={playback.status === 'playing'}
+              playingTake={recording.playing}
+            />
+          </div>
+        )}
         {recording.problem && (
           <div ref={revealOnMount}>
             <MicrophoneHelp problem={recording.problem} />

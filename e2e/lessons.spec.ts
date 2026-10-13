@@ -331,6 +331,10 @@ test('Week 1, Day 4: a role-play taken turn by turn, with a hint, to its end', a
   await expect(talk(page).last()).toHaveText('You could sayGoodbye! Have a nice day.')
   await expect(page.getByRole('button', { name: 'Practise again' })).toBeVisible()
   await expect(next(page)).toBeInViewport({ ratio: 1 })
+  // The partner and the way back stay where they were, however long the conversation has grown.
+  await expect(page.locator('[data-mood]')).toBeInViewport({ ratio: 1 })
+  await expect(page.getByRole('link', { name: 'Back to the week' })).toBeInViewport({ ratio: 1 })
+  await expect(talk(page).last()).toBeInViewport({ ratio: 1 })
   await expectNoHorizontalScroll(page)
 
   await next(page).click()
@@ -640,7 +644,8 @@ test('Week 1, Day 7: choose a scenario and a level, take the challenge, and Next
   await page.getByText('Harder', { exact: true }).click()
   await start.click()
   await expect(page).toHaveURL(/\/days\/7\?scenario=3&level=harder$/)
-  await expect(heading(page)).toHaveText('Talk to Anita')
+  // The learner's tutor plays the caller, and no tutor chosen is the man: Anita is Anil.
+  await expect(heading(page)).toHaveText('Talk to Anil')
   await expect(page.getByText('A phone call · Harder')).toBeVisible()
 
   // Harder: no hint to ask for, and the microphone stays in the middle.
@@ -907,9 +912,10 @@ test.describe('answering in the role-play', () => {
 
     // Tapping still ends the turn at once, without waiting for a pause.
     await stop.click()
+    // The answered turn may carry "Check my reply" under it, where a recording was made.
     await expect(talk(page)).toHaveText([
       'RaviHello! Good morning.',
-      'You could sayGood morning!',
+      /^You could sayGood morning!/,
       'RaviHow are you?',
     ])
   })
@@ -1183,8 +1189,11 @@ test('a role-play written by the admin opens that week’s Day 4, partner’s pi
 
   // The learner's open tab turns into the day, with the admin's partner.
   await expect(heading(learnerTab)).toHaveText('Talk to the barista')
-  const picture = learnerTab.locator('main img')
+  // The only picture before the conversation starts, and in the band that stays: not in `main`.
+  const picture = learnerTab.locator('img')
   await expect(picture).toHaveAttribute('src', /^data:image\/(webp|png|jpeg);base64,/)
+  await expect(learnerTab.locator('main img')).toHaveCount(0)
+  await expect(picture).toBeInViewport({ ratio: 1 })
   expect(await picture.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(0)
   await learnerTab.getByRole('button', { name: 'Start the conversation' }).click()
   await expect(talk(learnerTab)).toHaveText(['the baristaHi! Welcome! What would you like today?'])

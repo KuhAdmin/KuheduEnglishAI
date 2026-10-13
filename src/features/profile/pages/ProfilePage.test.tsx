@@ -170,14 +170,18 @@ describe('ProfilePage', () => {
         maxWidth: 512,
         maxHeight: 512,
       })
-      expect(card().getByText('This photo is kept on this device only.')).toBeVisible()
+      expect(
+        card().getByText('This photo is saved with your account. Only you see it.'),
+      ).toBeVisible()
       expect(useProfilePhotoStore.getState().photo).toBe(PHOTO)
       expect(localStorage.getItem('kuhedu-profile-photo')).toContain(PHOTO)
 
       // Taken away again, Google's picture is back.
       await userEvent.click(card().getByRole('button', { name: 'Remove photo' }))
       expect(picture()).toHaveAttribute('src', GOOGLE_PICTURE)
-      expect(card().queryByText('This photo is kept on this device only.')).toBeNull()
+      expect(
+        card().queryByText('This photo is saved with your account. Only you see it.'),
+      ).toBeNull()
       expect(useProfilePhotoStore.getState().photo).toBeNull()
     })
 

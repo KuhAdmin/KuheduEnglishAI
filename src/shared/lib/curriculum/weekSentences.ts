@@ -1,74 +1,43 @@
+import {
+  parseByWeek,
+  parseWeekSentences,
+  type PracticeSentence,
+  type WeekSentences,
+} from '@kuhedu/contracts'
 import { useMemo } from 'react'
 import { z } from 'zod'
 import { useAppConfig } from '../appConfig/useAppConfig'
 import { primarySubtag } from '../i18n'
-import { isRecord, tidy, tidyByLanguage, tidyList, tidyListByLanguage, tipsIn } from './contentText'
-import { isWeekNumber } from './curriculum'
+import { tipsIn } from './contentText'
 import { week1Sentences } from './sentences/week1'
 
-/** One sentence to put into English and then say. */
-export type PracticeSentence = {
-  /** The sentence in English: the answer, shown once the learner has tried or asked for it. */
-  english: string
-  /** Other English sentences that are just as right ("Hi! Good morning."). May be empty. */
-  alsoAccepted: string[]
-  /** The sentence in learners' languages, by language tag: what they translate from. */
-  translations: Record<string, string>
-  /** Short tips for getting to the English, by language tag. English is what others fall back to. */
-  tips: Record<string, string[]>
-}
-
-/** The sentences a week practises (Day 3, "Translate and speak"). */
-export type WeekSentences = {
-  /** In the order they are shown, one at a time. Never empty. */
-  sentences: PracticeSentence[]
-}
+// What a sentence is, how long it may be and how a week's sentences are read back are written
+// once, in `@kuhedu/contracts`: the server checks what an admin saves with the same rules.
+export {
+  MAX_ALSO_ACCEPTED,
+  MAX_SENTENCE_LENGTH,
+  MAX_SENTENCE_TRANSLATION_LENGTH,
+  MAX_SENTENCES,
+  MAX_TIP_LENGTH,
+  MAX_TIPS,
+  type PracticeSentence,
+  type WeekSentences,
+} from '@kuhedu/contracts'
 
 /** Sentences by week number. */
 export type WeekSentencesByWeek = Partial<Record<number, WeekSentences>>
 
-export const MAX_SENTENCES = 6
-export const MAX_ALSO_ACCEPTED = 4
-export const MAX_TIPS = 3
-export const MAX_SENTENCE_LENGTH = 120
-export const MAX_SENTENCE_TRANSLATION_LENGTH = 200
-export const MAX_TIP_LENGTH = 160
-
 /** The sentences that ship with the app. TODO(content): weeks 2 to 50. */
 export const builtInWeekSentences: WeekSentencesByWeek = { 1: week1Sentences }
-
-function parseSentence(value: unknown): PracticeSentence | null {
-  if (!isRecord(value)) return null
-  const english = tidy(value.english, MAX_SENTENCE_LENGTH)
-  if (!english) return null
-
-  return {
-    english,
-    alsoAccepted: tidyList(value.alsoAccepted, MAX_SENTENCE_LENGTH, MAX_ALSO_ACCEPTED),
-    translations: tidyByLanguage(value.translations, MAX_SENTENCE_TRANSLATION_LENGTH),
-    tips: tidyListByLanguage(value.tips, MAX_TIP_LENGTH, MAX_TIPS),
-  }
-}
 
 /**
  * Sentences an admin wrote or changed, by week; edited in Admin › Lessons. Keeps the entries
  * that have an English sentence, and the weeks that have at least one; drops everything else
  * instead of failing.
  */
-export const weekSentencesSchema = z.unknown().transform((value): WeekSentencesByWeek => {
-  if (!isRecord(value)) return {}
-
-  const byWeek: WeekSentencesByWeek = {}
-  for (const [week, entry] of Object.entries(value)) {
-    if (!isWeekNumber(Number(week)) || String(Number(week)) !== week || !isRecord(entry)) continue
-    const sentences = (Array.isArray(entry.sentences) ? entry.sentences : [])
-      .map(parseSentence)
-      .filter((sentence) => sentence !== null)
-      .slice(0, MAX_SENTENCES)
-    if (sentences.length > 0) byWeek[Number(week)] = { sentences }
-  }
-  return byWeek
-})
+export const weekSentencesSchema = z
+  .unknown()
+  .transform((value): WeekSentencesByWeek => parseByWeek(value, parseWeekSentences))
 
 export const defaultWeekSentences: WeekSentencesByWeek = {}
 

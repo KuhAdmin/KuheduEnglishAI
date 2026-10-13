@@ -44,6 +44,8 @@ class Difference:
     expected: str
     heard: str
     confidence: float
+    # The word of what was to be said that the sound belongs to; empty when that is not known.
+    word: str = ""
 
 
 @dataclass(frozen=True)
@@ -165,12 +167,10 @@ def judge(
             continue
         if surplus > 0 and difference.heard.startswith(difference.expected):
             continue
-        findings.append(
-            Finding(
-                SOUND_DIFFERS,
-                difference.confidence,
-                {"expected": difference.expected, "heard": difference.heard},
-            )
-        )
+        detail = {"expected": difference.expected, "heard": difference.heard}
+        # In a sentence, which word it was is the part a learner can use.
+        if difference.word:
+            detail["word"] = difference.word
+        findings.append(Finding(SOUND_DIFFERS, difference.confidence, detail))
 
     return assessment(findings)

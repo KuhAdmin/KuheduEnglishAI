@@ -29,8 +29,9 @@ export type PronunciationPracticeProps = {
 }
 
 /**
- * Say the word (or the sentence) and hear yourself. Nothing is rated — that needs a server (TODO(backend)) — so
- * the learner compares their own recording with the device's voice by ear.
+ * Say the word (or the sentence) and hear yourself. This panel rates nothing: the learner
+ * compares their own recording with the app's voice by ear. On Day 2 a recording of a word can
+ * also be sent to the server to be checked (`PronunciationCheckAction`, beside this).
  */
 export function PronunciationPractice({
   title,

@@ -1,6 +1,8 @@
 import type { RouteObject } from 'react-router'
 import { paths } from '@/shared/lib/paths'
 import { isUnderWay } from './lib/isUnderWay'
+// Has the test kept with the learner's account: it takes part from beside its own store.
+import './store/placementSync'
 import { usePlacementStore } from './store/usePlacementStore'
 
 export { levelLabel } from './lib/levelText'

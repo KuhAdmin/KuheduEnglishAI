@@ -39,7 +39,7 @@ function readChoices(saved: unknown): Record<string, ChosenVoices> {
 
 // A choice made while the app spoke with the device's own voices names a voice the server does
 // not have; it is passed over when a voice is picked (`voiceForFace`), not cleaned up here.
-// TODO(backend): keep these with the learner's account, now that the voices are the same everywhere.
+// For someone signed in they are kept with their account too (`shared/lib/learnerData`).
 export const useVoiceStore = create<VoiceState>()(
   persist(
     (set) => ({

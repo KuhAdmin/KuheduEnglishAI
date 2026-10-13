@@ -14,8 +14,9 @@ export type PhoneFrameProps = {
  */
 export function PhoneFrame({ children }: PhoneFrameProps) {
   return (
-    // The display around the phone; on a phone, nothing.
-    <div className="framed:flex framed:min-h-dvh framed:items-center framed:justify-center framed:bg-surface-sunken">
+    // The display around the phone; on a phone, nothing. A colour of its own (`bg-display`), plainly
+    // not the phone's screen's: the phone must read as a thing standing on something.
+    <div className="framed:flex framed:min-h-dvh framed:items-center framed:justify-center framed:bg-display">
       <div
         className={cn(
           'mx-auto w-full max-w-lg bg-bg',

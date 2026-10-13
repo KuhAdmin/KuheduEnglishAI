@@ -1,0 +1,722 @@
+{
+  "week": 1,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Asha",
+          "text": "Hello! Good morning.",
+          "translations": {
+            "bn": "হ্যালো! সুপ্রভাত।",
+            "hi": "नमस्ते! सुप्रभात।"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "Good morning! How are you?",
+          "translations": {
+            "bn": "সুপ্রভাত! আপনি কেমন আছেন?",
+            "hi": "सुप्रभात! आप कैसी हैं?"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "I’m fine, thank you. And you?",
+          "translations": {
+            "bn": "আমি ভালো আছি, ধন্যবাদ। আর আপনি?",
+            "hi": "मैं ठीक हूँ, धन्यवाद। और आप?"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "I’m good, thanks.",
+          "translations": {
+            "bn": "আমিও ভালো আছি, ধন্যবাদ।",
+            "hi": "मैं भी ठीक हूँ, धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "My name is Asha. What’s your name?",
+          "translations": {
+            "bn": "আমার নাম আশা। আপনার নাম কী?",
+            "hi": "मेरा नाम आशा है। आपका नाम क्या है?"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "I’m Ravi. Nice to meet you, Asha.",
+          "translations": {
+            "bn": "আমি রবি। আপনার সঙ্গে পরিচিত হয়ে ভালো লাগল, আশা।",
+            "hi": "मैं रवि हूँ। आपसे मिलकर अच्छा लगा, आशा।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Nice to meet you too, Ravi.",
+          "translations": {
+            "bn": "আমারও আপনার সঙ্গে পরিচিত হয়ে ভালো লাগল, রবি।",
+            "hi": "मुझे भी आपसे मिलकर अच्छा लगा, रवि।"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "See you later. Goodbye!",
+          "translations": {
+            "bn": "পরে দেখা হবে। বিদায়!",
+            "hi": "फिर मिलेंगे। अलविदा!"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Goodbye! Have a nice day.",
+          "translations": {
+            "bn": "বিদায়! আপনার দিনটি ভালো কাটুক।",
+            "hi": "अलविदा! आपका दिन शुभ हो।"
+          }
+        }
+      ],
+      "voices": {
+        "Asha": "female",
+        "Ravi": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "hello",
+          "phonetic": "/həˈləʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হ্যালো",
+            "hi": "नमस्ते"
+          },
+          "syllables": ["hel", "lo"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি একটু লম্বা করে, জোর দিয়ে বলুন।",
+              "প্রথম অংশটি ছোট ও হালকা রাখুন।"
+            ],
+            "en": ["Say the second part longer and louder.", "Keep the first part short and soft."],
+            "hi": ["दूसरा हिस्सा थोड़ा लंबा और ज़ोर से बोलें।", "पहला हिस्सा छोटा और हल्का रखें।"]
+          }
+        },
+        {
+          "word": "good morning",
+          "phonetic": "/ɡʊd ˈmɔːnɪŋ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সুপ্রভাত",
+            "hi": "सुप्रभात"
+          },
+          "syllables": ["good", "mor", "ning"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দুটি শব্দ না থেমে একসঙ্গে বলুন।", "“good” তাড়াতাড়ি বলুন: এর “oo” ছোট।"],
+            "en": [
+              "Say the two words together, without stopping.",
+              "Say “good” quickly: its “oo” is short."
+            ],
+            "hi": ["दोनों शब्द बिना रुके एक साथ बोलें।", "“good” जल्दी बोलें: इसका “oo” छोटा है।"]
+          }
+        },
+        {
+          "word": "name",
+          "phonetic": "/neɪm/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "নাম",
+            "hi": "नाम"
+          },
+          "syllables": ["nam(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["“a”-এর উচ্চারণ “এই”-এর মতো।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["The “a” sounds like “ay”.", "The last “e” is not said."],
+            "hi": ["“a” की आवाज़ “एइ” जैसी है।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "thank you",
+          "phonetic": "/ˈθæŋk juː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধন্যবাদ",
+            "hi": "धन्यवाद"
+          },
+          "syllables": ["thank", "you"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“th” বলতে জিভের ডগা দাঁতের ফাঁকে রাখুন।", "দুটি শব্দ একসঙ্গে বলুন।"],
+            "en": [
+              "For “th”, put the tip of your tongue between your teeth.",
+              "Say the two words together."
+            ],
+            "hi": ["“th” के लिए जीभ की नोक दाँतों के बीच रखें।", "दोनों शब्द एक साथ बोलें।"]
+          }
+        },
+        {
+          "word": "nice to meet you",
+          "phonetic": "/naɪs tə ˈmiːt juː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "পরিচিত হয়ে ভালো লাগল",
+            "hi": "आपसे मिलकर अच्छा लगा"
+          },
+          "syllables": ["nic(e)", "to", "meet", "you"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“to” ছোট ও হালকা করে বলুন।", "“meet”-এর “ee” লম্বা।"],
+            "en": ["Say “to” short and soft.", "The “ee” in “meet” is long."],
+            "hi": ["“to” छोटा और हल्का बोलें।", "“meet” का “ee” लंबा है।"]
+          }
+        },
+        {
+          "word": "goodbye",
+          "phonetic": "/ɡʊdˈbaɪ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বিদায়",
+            "hi": "अलविदा"
+          },
+          "syllables": ["good", "by(e)"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“bye” একটু লম্বা করে, জোর দিয়ে বলুন।", "“bye”-এর উচ্চারণ “my”-এর মতো।"],
+            "en": ["Say “bye” longer and louder.", "“bye” sounds like “my”."],
+            "hi": ["“bye” थोड़ा लंबा और ज़ोर से बोलें।", "“bye” की आवाज़ “my” जैसी है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Hello! Good morning.",
+          "alsoAccepted": ["Hi! Good morning."],
+          "translations": {
+            "bn": "হ্যালো! সুপ্রভাত।",
+            "hi": "नमस्ते! सुप्रभात।"
+          },
+          "tips": {
+            "bn": ["দুপুরের আগে “Good morning” বলুন।", "“Hello” দিনের যেকোনো সময় বলা যায়।"],
+            "en": ["Say “Good morning” before noon.", "“Hello” works at any time of day."],
+            "hi": ["दोपहर से पहले “Good morning” कहें।", "“Hello” दिन में किसी भी समय कह सकते हैं।"]
+          }
+        },
+        {
+          "english": "How are you?",
+          "alsoAccepted": [],
+          "translations": {
+            "bn": "আপনি কেমন আছেন?",
+            "hi": "आप कैसे हैं?"
+          },
+          "tips": {
+            "bn": [
+              "কাউকে শুভেচ্ছা জানানোর পর এটি জিজ্ঞেস করুন।",
+              "উত্তরে প্রায়ই বলা হয় “I’m fine, thank you.”"
+            ],
+            "en": [
+              "Ask this after you greet someone.",
+              "The answer is often “I’m fine, thank you.”"
+            ],
+            "hi": [
+              "किसी का अभिवादन करने के बाद यह पूछें।",
+              "जवाब में अक्सर “I’m fine, thank you.” कहा जाता है।"
+            ]
+          }
+        },
+        {
+          "english": "I’m fine, thank you.",
+          "alsoAccepted": ["I’m fine, thanks.", "I’m good, thank you.", "I’m good, thanks."],
+          "translations": {
+            "bn": "আমি ভালো আছি, ধন্যবাদ।",
+            "hi": "मैं ठीक हूँ, धन्यवाद।"
+          },
+          "tips": {
+            "bn": ["“I’m” (I am) দিয়ে শুরু করুন।", "ভদ্রতার জন্য শেষে “thank you” বলুন।"],
+            "en": ["Start with “I’m” (I am).", "End with “thank you” to be polite."],
+            "hi": ["“I’m” (I am) से शुरू करें।", "विनम्रता के लिए अंत में “thank you” कहें।"]
+          }
+        },
+        {
+          "english": "What’s your name?",
+          "alsoAccepted": [],
+          "translations": {
+            "bn": "আপনার নাম কী?",
+            "hi": "आपका नाम क्या है?"
+          },
+          "tips": {
+            "bn": [
+              "“What’s” হলো “What is”-এর সংক্ষিপ্ত রূপ।",
+              "উত্তরে বলুন “My name is …” অথবা “I’m …”।"
+            ],
+            "en": ["“What’s” is short for “What is”.", "Answer with “My name is …” or “I’m …”."],
+            "hi": [
+              "“What’s”, “What is” का छोटा रूप है।",
+              "जवाब में “My name is …” या “I’m …” कहें।"
+            ]
+          }
+        },
+        {
+          "english": "Nice to meet you.",
+          "alsoAccepted": ["It’s nice to meet you.", "Pleased to meet you.", "Glad to meet you."],
+          "translations": {
+            "bn": "আপনার সঙ্গে পরিচিত হয়ে ভালো লাগল।",
+            "hi": "आपसे मिलकर अच्छा लगा।"
+          },
+          "tips": {
+            "bn": [
+              "কারও সঙ্গে প্রথমবার দেখা হলে এটি বলুন।",
+              "উত্তরে বলা হয় “Nice to meet you too.”"
+            ],
+            "en": [
+              "Say this when you meet someone for the first time.",
+              "The reply is “Nice to meet you too.”"
+            ],
+            "hi": [
+              "किसी से पहली बार मिलने पर यह कहें।",
+              "जवाब में “Nice to meet you too.” कहा जाता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Ravi",
+      "asWoman": "Asha",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! Good morning.",
+          "reply": "Good morning!",
+          "cues": {
+            "bn": "তাঁকে সুপ্রভাত জানান।",
+            "hi": "उन्हें सुप्रभात कहें।"
+          }
+        },
+        {
+          "partner": "How are you?",
+          "reply": "I’m fine, thank you. And you?",
+          "cues": {
+            "bn": "বলুন আপনি ভালো আছেন, ধন্যবাদ দিন, আর তাঁর খবর জিজ্ঞেস করুন।",
+            "hi": "कहें कि आप ठीक हैं, धन्यवाद दें, और उनका हाल पूछें।"
+          }
+        },
+        {
+          "partner": "I’m good, thanks. My name is Ravi. What’s your name?",
+          "reply": "My name is …",
+          "cues": {
+            "bn": "নিজের নাম বলুন।",
+            "hi": "अपना नाम बताएँ।"
+          }
+        },
+        {
+          "partner": "Nice to meet you.",
+          "reply": "Nice to meet you too.",
+          "cues": {
+            "bn": "বলুন, আপনারও তাঁর সঙ্গে পরিচিত হয়ে ভালো লাগল।",
+            "hi": "कहें कि आपको भी उनसे मिलकर अच्छा लगा।"
+          }
+        },
+        {
+          "partner": "See you later. Goodbye!",
+          "reply": "Goodbye! Have a nice day.",
+          "cues": {
+            "bn": "বিদায় জানান, আর বলুন তাঁর দিনটি ভালো কাটুক।",
+            "hi": "विदा लें, और कहें कि उनका दिन अच्छा बीते।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "First meeting challenge",
+        "translations": {
+          "bn": "প্রথম পরিচয়ের চ্যালেঞ্জ",
+          "hi": "पहली मुलाक़ात की चुनौती"
+        }
+      },
+      "instruction": {
+        "text": "Meet someone new, from hello to goodbye. Try it on your own.",
+        "translations": {
+          "bn": "নতুন কারও সঙ্গে পরিচিত হন, হ্যালো থেকে বিদায় পর্যন্ত। নিজে নিজে চেষ্টা করুন।",
+          "hi": "किसी नए व्यक्ति से मिलें, हैलो से अलविदा तक। ख़ुद कोशिश करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Greet the person",
+          "translations": {
+            "bn": "শুভেচ্ছা জানান",
+            "hi": "अभिवादन करें"
+          }
+        },
+        {
+          "text": "Ask how they are",
+          "translations": {
+            "bn": "তিনি কেমন আছেন জিজ্ঞেস করুন",
+            "hi": "उनका हाल पूछें"
+          }
+        },
+        {
+          "text": "Say your name",
+          "translations": {
+            "bn": "নিজের নাম বলুন",
+            "hi": "अपना नाम बताएँ"
+          }
+        },
+        {
+          "text": "Ask their name",
+          "translations": {
+            "bn": "তাঁর নাম জিজ্ঞেস করুন",
+            "hi": "उनका नाम पूछें"
+          }
+        },
+        {
+          "text": "Say goodbye",
+          "translations": {
+            "bn": "বিদায় জানান",
+            "hi": "विदा लें"
+          }
+        }
+      ],
+      "phrases": [
+        "Hello! Good morning.",
+        "How are you?",
+        "My name is …",
+        "What’s your name?",
+        "Nice to meet you.",
+        "Goodbye! Have a nice day."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "It is morning. How do you greet someone?",
+            "translations": {
+              "bn": "এখন সকাল। কাউকে কীভাবে শুভেচ্ছা জানাবেন?",
+              "hi": "अभी सुबह है। किसी का अभिवादन कैसे करें?"
+            }
+          },
+          "answer": "Good morning.",
+          "others": ["Goodbye.", "Thank you."]
+        },
+        {
+          "question": {
+            "text": "Someone asks, “How are you?” What do you say?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “How are you?” আপনি কী বলবেন?",
+              "hi": "कोई पूछे, “How are you?” तो क्या कहें?"
+            }
+          },
+          "answer": "I’m fine, thank you.",
+          "others": ["My name is Asha.", "Nice to meet you."]
+        },
+        {
+          "question": {
+            "text": "How do you ask someone’s name?",
+            "translations": {
+              "bn": "কারও নাম কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी का नाम कैसे पूछें?"
+            }
+          },
+          "answer": "What’s your name?",
+          "others": ["How are you?", "See you later."]
+        },
+        {
+          "question": {
+            "text": "You meet someone for the first time. What do you say?",
+            "translations": {
+              "bn": "কারও সঙ্গে প্রথমবার দেখা হলে কী বলবেন?",
+              "hi": "किसी से पहली बार मिलने पर क्या कहें?"
+            }
+          },
+          "answer": "Nice to meet you.",
+          "others": ["See you later.", "Have a nice day."]
+        },
+        {
+          "question": {
+            "text": "You are leaving. What do you say?",
+            "translations": {
+              "bn": "চলে যাওয়ার সময় কী বলবেন?",
+              "hi": "जाते समय क्या कहें?"
+            }
+          },
+          "answer": "Goodbye! Have a nice day.",
+          "others": ["Hello! Good morning.", "What’s your name?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Meera",
+          "text": "Hi! Good afternoon.",
+          "translations": {
+            "bn": "হাই! শুভ অপরাহ্ন।",
+            "hi": "हाय! शुभ दोपहर।"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "Good afternoon! How are you?",
+          "translations": {
+            "bn": "শুভ অপরাহ্ন! আপনি কেমন আছেন?",
+            "hi": "शुभ दोपहर! आप कैसी हैं?"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "I’m very well, thank you. And you?",
+          "translations": {
+            "bn": "আমি খুব ভালো আছি, ধন্যবাদ। আর আপনি?",
+            "hi": "मैं बहुत अच्छी हूँ, धन्यवाद। और आप?"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "I’m fine, thanks.",
+          "translations": {
+            "bn": "আমি ভালো আছি, ধন্যবাদ।",
+            "hi": "मैं ठीक हूँ, धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "I’m Meera. What’s your name?",
+          "translations": {
+            "bn": "আমি মীরা। আপনার নাম কী?",
+            "hi": "मैं मीरा हूँ। आपका नाम क्या है?"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "My name is Arjun. Nice to meet you, Meera.",
+          "translations": {
+            "bn": "আমার নাম অর্জুন। আপনার সঙ্গে পরিচিত হয়ে ভালো লাগল, মীরা।",
+            "hi": "मेरा नाम अर्जुन है। आपसे मिलकर अच्छा लगा, मीरा।"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "Nice to meet you too, Arjun.",
+          "translations": {
+            "bn": "আমারও আপনার সঙ্গে পরিচিত হয়ে ভালো লাগল, অর্জুন।",
+            "hi": "मुझे भी आपसे मिलकर अच्छा लगा, अर्जुन।"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "Have a nice day. Goodbye!",
+          "translations": {
+            "bn": "আপনার দিনটি ভালো কাটুক। বিদায়!",
+            "hi": "आपका दिन शुभ हो। अलविदा!"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "Goodbye! See you later.",
+          "translations": {
+            "bn": "বিদায়! পরে দেখা হবে।",
+            "hi": "अलविदा! फिर मिलेंगे।"
+          }
+        }
+      ],
+      "voices": {
+        "Meera": "female",
+        "Arjun": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Meera",
+      "asMan": "Mohan",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! Good afternoon.",
+          "reply": "Good afternoon!",
+          "cues": {
+            "bn": "তাঁকে শুভ অপরাহ্ন জানান।",
+            "hi": "उन्हें शुभ दोपहर कहें।"
+          }
+        },
+        {
+          "partner": "I’m Meera. What’s your name?",
+          "reply": "My name is …",
+          "cues": {
+            "bn": "নিজের নাম বলুন।",
+            "hi": "अपना नाम बताएँ।"
+          }
+        },
+        {
+          "partner": "Nice to meet you. How are you?",
+          "reply": "Nice to meet you too. I’m fine, thank you.",
+          "cues": {
+            "bn": "বলুন, আপনারও পরিচিত হয়ে ভালো লাগল, আর আপনি ভালো আছেন।",
+            "hi": "कहें कि आपको भी मिलकर अच्छा लगा, और आप ठीक हैं।"
+          }
+        },
+        {
+          "partner": "Have a nice day. Goodbye!",
+          "reply": "Goodbye! See you later.",
+          "cues": {
+            "bn": "বিদায় জানান, আর বলুন পরে দেখা হবে।",
+            "hi": "विदा लें, और कहें कि फिर मिलेंगे।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A new neighbour",
+            "translations": {
+              "bn": "নতুন প্রতিবেশী",
+              "hi": "नए पड़ोसी"
+            }
+          },
+          "roleplay": {
+            "partner": "Priya",
+            "asMan": "Rahul",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! Good evening.",
+                "reply": "Good evening!",
+                "cues": {
+                  "bn": "তাঁকে শুভ সন্ধ্যা জানান।",
+                  "hi": "उन्हें शुभ संध्या कहें।"
+                }
+              },
+              {
+                "partner": "I’m your new neighbour. My name is Priya. What’s your name?",
+                "reply": "My name is …",
+                "cues": {
+                  "bn": "নিজের নাম বলুন।",
+                  "hi": "अपना नाम बताएँ।"
+                }
+              },
+              {
+                "partner": "Nice to meet you. How are you?",
+                "reply": "Nice to meet you too. I’m fine, thank you.",
+                "cues": {
+                  "bn": "বলুন, আপনারও পরিচিত হয়ে ভালো লাগল, আর আপনি ভালো আছেন।",
+                  "hi": "कहें कि आपको भी मिलकर अच्छा लगा, और आपका हाल ठीक है।"
+                }
+              },
+              {
+                "partner": "Good. See you later!",
+                "reply": "See you later. Goodbye!",
+                "cues": {
+                  "bn": "বলুন পরে দেখা হবে, আর বিদায় জানান।",
+                  "hi": "कहें कि फिर मिलेंगे, और विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "First day at work",
+            "translations": {
+              "bn": "কাজের প্রথম দিন",
+              "hi": "काम का पहला दिन"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning! Welcome.",
+                "reply": "Good morning! Thank you.",
+                "cues": {
+                  "bn": "সুপ্রভাত জানান, আর ধন্যবাদ দিন।",
+                  "hi": "सुप्रभात कहें, और धन्यवाद दें।"
+                }
+              },
+              {
+                "partner": "I’m Sam. What’s your name?",
+                "reply": "My name is … Nice to meet you.",
+                "cues": {
+                  "bn": "নিজের নাম বলুন, আর বলুন পরিচিত হয়ে ভালো লাগল।",
+                  "hi": "अपना नाम बताएँ, और कहें कि मिलकर अच्छा लगा।"
+                }
+              },
+              {
+                "partner": "Nice to meet you too. How are you today?",
+                "reply": "I’m very well, thank you. And you?",
+                "cues": {
+                  "bn": "বলুন আপনি খুব ভালো আছেন, ধন্যবাদ দিন, আর তাঁর খবর জিজ্ঞেস করুন।",
+                  "hi": "कहें कि आपका हाल बहुत अच्छा है, धन्यवाद दें, और उनका हाल पूछें।"
+                }
+              },
+              {
+                "partner": "I’m good, thanks. Have a nice day!",
+                "reply": "Thank you. You too!",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর তাঁকেও একই শুভেচ্ছা জানান।",
+                  "hi": "धन्यवाद दें, और उन्हें भी यही शुभकामना दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A phone call",
+            "translations": {
+              "bn": "ফোনে কথা",
+              "hi": "फ़ोन पर बात"
+            }
+          },
+          "roleplay": {
+            "partner": "Anita",
+            "asMan": "Anil",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello?",
+                "reply": "Hello! Good afternoon.",
+                "cues": {
+                  "bn": "হ্যালো বলুন, আর শুভ অপরাহ্ন জানান।",
+                  "hi": "हैलो कहें, और शुभ दोपहर कहें।"
+                }
+              },
+              {
+                "partner": "Good afternoon! What’s your name, please?",
+                "reply": "My name is …",
+                "cues": {
+                  "bn": "নিজের নাম বলুন।",
+                  "hi": "अपना नाम बताएँ।"
+                }
+              },
+              {
+                "partner": "Hello! I’m Anita. How are you?",
+                "reply": "I’m fine, thank you. And you?",
+                "cues": {
+                  "bn": "বলুন আপনি ভালো আছেন, ধন্যবাদ দিন, আর তাঁর খবর জিজ্ঞেস করুন।",
+                  "hi": "कहें कि आपका हाल ठीक है, धन्यवाद दें, और उनका हाल पूछें।"
+                }
+              },
+              {
+                "partner": "I’m good, thanks. Goodbye!",
+                "reply": "Goodbye! Have a nice day.",
+                "cues": {
+                  "bn": "বিদায় জানান, আর বলুন তাঁর দিনটি ভালো কাটুক।",
+                  "hi": "विदा लें, और कहें कि उनका दिन अच्छा बीते।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

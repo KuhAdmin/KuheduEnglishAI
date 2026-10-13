@@ -33,6 +33,11 @@ export const adminText = {
     unsaved: 'You have unsaved changes.',
     storageFull:
       'Could not save: this browser’s storage is full. Remove or replace some uploaded images and try again.',
+    saving: 'Saving…',
+    saveFailed:
+      'Could not save: the server did not take it. Your changes are still here. Check the connection and save again.',
+    saveConflict:
+      'Could not save: someone else changed this since you opened it. Your changes are still here. Reload the page to see theirs.',
   },
 
   image: {
@@ -140,6 +145,8 @@ export const adminText = {
     remove: 'Remove line',
     useBuiltIn: 'Use built-in',
     removeContent: 'Remove',
+    resetAllOnServerConfirm:
+      'Remove everything saved for the lessons, for all 50 weeks, from the server? Every learner then sees the built-in content, or nothing where there is none. To drop one day of one week, use “Use built-in” or “Remove” beside it instead.',
     voices: 'Voices',
     voicesIntro:
       'Say who is a woman and who is a man, and each is read in the default female or male voice. A speaker left on “By turn” takes the two tutors’ voices in the order of speaking, so a woman may be read in a man’s voice. A video is not read at all.',
@@ -221,9 +228,13 @@ export const adminText = {
       'Who the learner talks to. There is no AI yet: the partner says the lines written below, in order, whatever the learner answers, and the screen does not call it AI.',
     partnerName: 'Name or role',
     partnerNameHint: 'As it reads after “Talk to”, for example: Ravi, or: the barista.',
+    partnerAsWoman: 'Name when the tutor is a woman',
+    partnerAsMan: 'Name when the tutor is a man',
+    partnerAsHint:
+      'The learner’s tutor plays the partner, in the tutor’s own voice. Give a name here if the name above would not fit that tutor (Ravi: Asha). It is used after “Talk to” and wherever a line says the name above. Leave empty to keep the name above.',
     partnerPicture: 'Picture of the partner',
     partnerPictureHint:
-      'Square image, ideally 320 × 320; shown in a circle. Without one, a drawn figure is shown.',
+      'Square image, ideally 320 × 320; shown in a circle. Without one, the learner’s own tutor is shown.',
     turns: 'Turns',
     turnsIntro:
       'One turn is a line of the partner and the learner’s answer to it. Up to 8. The phone’s own voice says the partner’s lines. What the learner says is recorded for them to hear, not recognised or rated; they can also skip a turn. The suggested reply is the last hint, and is shown once the turn is over.',

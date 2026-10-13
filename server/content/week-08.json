@@ -1,0 +1,665 @@
+{
+  "week": 8,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Sunita",
+          "text": "Welcome to my home, Karan! Please come in.",
+          "translations": {
+            "bn": "আমার বাড়িতে স্বাগত, করণ! ভেতরে আসুন।",
+            "hi": "करण, मेरे घर में आपका स्वागत है! अंदर आइए।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "Thank you. What a nice house!",
+          "translations": { "bn": "ধন্যবাদ। কী সুন্দর বাড়ি!", "hi": "धन्यवाद। कितना सुंदर घर है!" }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "This is the living room. There is a sofa and a TV.",
+          "translations": {
+            "bn": "এটি বসার ঘর। এখানে একটি সোফা আর একটি টিভি আছে।",
+            "hi": "यह बैठक है। यहाँ एक सोफ़ा और एक टीवी है।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "And what is in that room?",
+          "translations": { "bn": "আর ওই ঘরে কী আছে?", "hi": "और उस कमरे में क्या है?" }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "That is my bedroom. There is a bed, a cupboard and a small table.",
+          "translations": {
+            "bn": "ওটা আমার শোবার ঘর। সেখানে একটি খাট, একটি আলমারি আর একটি ছোট টেবিল আছে।",
+            "hi": "वह मेरा शयनकक्ष है। वहाँ एक पलंग, एक अलमारी और एक छोटी मेज़ है।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "Is there a kitchen?",
+          "translations": { "bn": "রান্নাঘর আছে কি?", "hi": "क्या रसोई है?" }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "Yes, it is next to the dining area. Come, I will show you.",
+          "translations": {
+            "bn": "হ্যাঁ, খাওয়ার জায়গার পাশে। আসুন, আমি দেখাচ্ছি।",
+            "hi": "हाँ, वह भोजन-क्षेत्र के बगल में है। आइए, मैं दिखाती हूँ।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "Where is the bathroom?",
+          "translations": { "bn": "বাথরুম কোথায়?", "hi": "स्नानघर कहाँ है?" }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "Go straight, then turn left. It is on the right.",
+          "translations": {
+            "bn": "সোজা যান, তারপর বাঁয়ে ঘুরুন। এটি ডান দিকে।",
+            "hi": "सीधे जाइए, फिर बाएँ मुड़िए। वह दाईं ओर है।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "Do you have a garden?",
+          "translations": { "bn": "আপনার কি বাগান আছে?", "hi": "क्या आपके यहाँ बग़ीचा है?" }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "A small one, behind the house. There is a market near here too.",
+          "translations": {
+            "bn": "একটি ছোট বাগান আছে, বাড়ির পেছনে। কাছেই একটি বাজারও আছে।",
+            "hi": "एक छोटा-सा है, घर के पीछे। पास में एक बाज़ार भी है।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "It is a lovely place to live.",
+          "translations": {
+            "bn": "থাকার জন্য চমৎকার জায়গা।",
+            "hi": "रहने के लिए यह बहुत अच्छी जगह है।"
+          }
+        }
+      ],
+      "voices": { "Sunita": "female", "Karan": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "bed",
+          "phonetic": "/bed/",
+          "imageUrl": null,
+          "meanings": { "bn": "খাট, বিছানা", "hi": "पलंग, बिस्तर" },
+          "syllables": ["bed"],
+          "stress": null,
+          "tips": {
+            "bn": ["“e” ছোট, “ডে” নয়।", "শেষে “d” স্পষ্ট বলুন।"],
+            "en": ["The “e” is short.", "End with a clear “d”."],
+            "hi": ["“e” छोटा है।", "अंत में “d” साफ़ बोलें।"]
+          }
+        },
+        {
+          "word": "table",
+          "phonetic": "/ˈteɪbl/",
+          "imageUrl": null,
+          "meanings": { "bn": "টেবিল", "hi": "मेज़" },
+          "syllables": ["ta", "ble"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“a”-এর উচ্চারণ “এই”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “a” sounds like “ay”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“a” की आवाज़ “एइ” जैसी है।"]
+          }
+        },
+        {
+          "word": "chair",
+          "phonetic": "/tʃeə/",
+          "imageUrl": null,
+          "meanings": { "bn": "চেয়ার", "hi": "कुर्सी" },
+          "syllables": ["chair"],
+          "stress": null,
+          "tips": {
+            "bn": ["শুরুতে “ch” বলুন, “চ”-এর মতো।", "এটি “hair”-এর সঙ্গে মেলে।"],
+            "en": ["Start with “ch”, as in “chop”.", "It rhymes with “hair”."],
+            "hi": ["शुरू में “ch” बोलें, “च” जैसा।", "इसकी तुक “hair” से मिलती है।"]
+          }
+        },
+        {
+          "word": "window",
+          "phonetic": "/ˈwɪndəʊ/",
+          "imageUrl": null,
+          "meanings": { "bn": "জানালা", "hi": "खिड़की" },
+          "syllables": ["win", "dow"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "শেষ অংশের উচ্চারণ “ডো”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The last part sounds like “doh”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "आख़िरी हिस्से की आवाज़ “डो” जैसी है।"]
+          }
+        },
+        {
+          "word": "door",
+          "phonetic": "/dɔː/",
+          "imageUrl": null,
+          "meanings": { "bn": "দরজা", "hi": "दरवाज़ा" },
+          "syllables": ["door"],
+          "stress": null,
+          "tips": {
+            "bn": ["“oo” এখানে লম্বা “অ”-এর মতো।", "শেষের “r” প্রায় শোনা যায় না।"],
+            "en": ["The “oo” sounds like a long “aw”.", "The final “r” is hardly heard."],
+            "hi": ["“oo” यहाँ लंबे “ऑ” जैसा है।", "आख़िरी “r” लगभग सुनाई नहीं देता।"]
+          }
+        },
+        {
+          "word": "cupboard",
+          "phonetic": "/ˈkʌbəd/",
+          "imageUrl": null,
+          "meanings": { "bn": "আলমারি", "hi": "अलमारी" },
+          "syllables": ["cu(p)", "board"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“p” উচ্চারণ হয় না: শব্দটি “কাবার্ড”-এর মতো।", "প্রথম অংশটি জোর দিয়ে বলুন।"],
+            "en": [
+              "The “p” is not said: it sounds like “cub-erd”.",
+              "Say the first part stronger."
+            ],
+            "hi": ["“p” बोला नहीं जाता: शब्द “कबर्ड” जैसा लगता है।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        },
+        {
+          "word": "kitchen",
+          "phonetic": "/ˈkɪtʃɪn/",
+          "imageUrl": null,
+          "meanings": { "bn": "রান্নাঘর", "hi": "रसोई" },
+          "syllables": ["kit", "chen"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“tch” একটিই “চ” ধ্বনি।"],
+            "en": ["Say the first part stronger.", "“tch” is one “ch” sound."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“tch” एक ही “च” आवाज़ है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "There is a market near my house.",
+          "alsoAccepted": [
+            "There is a market near my home.",
+            "There is a market close to my house."
+          ],
+          "translations": {
+            "bn": "আমার বাড়ির কাছে একটি বাজার আছে।",
+            "hi": "मेरे घर के पास एक बाज़ार है।"
+          },
+          "tips": {
+            "bn": ["কিছু আছে বোঝাতে “There is” বলুন।", "একাধিক হলে “There are” বলুন।"],
+            "en": ["Use “There is” to say something exists.", "Use “There are” for more than one."],
+            "hi": [
+              "कुछ मौजूद है यह बताने के लिए “There is” कहें।",
+              "एक से ज़्यादा हों तो “There are” कहें।"
+            ]
+          }
+        },
+        {
+          "english": "The park is behind the school.",
+          "alsoAccepted": [],
+          "translations": { "bn": "পার্কটি স্কুলের পেছনে।", "hi": "पार्क स्कूल के पीछे है।" },
+          "tips": {
+            "bn": ["পেছনে বোঝাতে “behind” বলুন।", "সামনে বোঝাতে “in front of” বলুন।"],
+            "en": ["Use “behind” for at the back of.", "Use “in front of” for the opposite."],
+            "hi": ["पीछे के लिए “behind” कहें।", "सामने के लिए “in front of” कहें।"]
+          }
+        },
+        {
+          "english": "The hospital is opposite the bus stop.",
+          "alsoAccepted": ["The hospital is across from the bus stop."],
+          "translations": {
+            "bn": "হাসপাতালটি বাস স্টপের উল্টো দিকে।",
+            "hi": "अस्पताल बस स्टॉप के सामने है।"
+          },
+          "tips": {
+            "bn": ["রাস্তার ওপারে বোঝাতে “opposite” বলুন।", "“opposite”-এ প্রথম অংশে জোর দিন।"],
+            "en": [
+              "Use “opposite” for across the road.",
+              "In “opposite”, the first part is stronger."
+            ],
+            "hi": [
+              "सड़क के उस पार के लिए “opposite” कहें।",
+              "“opposite” में पहले हिस्से पर ज़ोर दें।"
+            ]
+          }
+        },
+        {
+          "english": "There are two shops on my street.",
+          "alsoAccepted": ["There are two shops in my street."],
+          "translations": {
+            "bn": "আমার রাস্তায় দুটি দোকান আছে।",
+            "hi": "मेरी गली में दो दुकानें हैं।"
+          },
+          "tips": {
+            "bn": ["সংখ্যার পরে বহুবচন বলুন: two shops।", "“There are” দিয়ে শুরু করুন।"],
+            "en": ["After a number, use the plural: two shops.", "Start with “There are”."],
+            "hi": ["संख्या के बाद बहुवचन लगाएँ: two shops।", "“There are” से शुरू करें।"]
+          }
+        },
+        {
+          "english": "It is a quiet and clean neighbourhood.",
+          "alsoAccepted": [
+            "It is a quiet, clean neighbourhood.",
+            "It’s a quiet and clean neighbourhood."
+          ],
+          "translations": {
+            "bn": "এটি একটি শান্ত আর পরিষ্কার পাড়া।",
+            "hi": "यह एक शांत और साफ़ मोहल्ला है।"
+          },
+          "tips": {
+            "bn": ["“a” বসান “quiet” শব্দের আগে।", "দুটি বিশেষণ “and” দিয়ে জোড়া যায়।"],
+            "en": ["Use “a” before “quiet”.", "Join two describing words with “and”."],
+            "hi": ["“quiet” से पहले “a” लगाएँ।", "दो विशेषणों को “and” से जोड़ा जा सकता है।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Vijay",
+      "asWoman": "Vijaya",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Excuse me! I am new here. Is there a bank near here?",
+          "reply": "Yes, there is a bank near here.",
+          "cues": {
+            "bn": "বলুন হ্যাঁ, কাছেই একটি ব্যাংক আছে।",
+            "hi": "कहें कि हाँ, पास में एक बैंक है।"
+          }
+        },
+        {
+          "partner": "Great. How do I get there?",
+          "reply": "Go straight, then turn left.",
+          "cues": {
+            "bn": "সোজা যেতে বলুন, তারপর বাঁয়ে ঘুরতে।",
+            "hi": "सीधे जाने को कहें, फिर बाएँ मुड़ने को।"
+          }
+        },
+        {
+          "partner": "Straight, then left. And then?",
+          "reply": "The bank is on the right, next to the school.",
+          "cues": {
+            "bn": "বলুন ব্যাংকটি ডান দিকে, স্কুলের পাশে।",
+            "hi": "कहें कि बैंक दाईं ओर, स्कूल के बगल में है।"
+          }
+        },
+        {
+          "partner": "Is it far from here?",
+          "reply": "No, it is five minutes on foot.",
+          "cues": {
+            "bn": "বলুন দূরে নয়, হেঁটে পাঁচ মিনিট।",
+            "hi": "कहें कि दूर नहीं है, पैदल पाँच मिनट।"
+          }
+        },
+        {
+          "partner": "Thank you so much for your help!",
+          "reply": "You are welcome. Have a nice day!",
+          "cues": {
+            "bn": "বলুন স্বাগত, আর তাঁর দিনটি ভালো কাটুক।",
+            "hi": "कहें कि कोई बात नहीं, और उनका दिन शुभ हो।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "A tour of my home or street",
+        "translations": {
+          "bn": "আমার বাড়ি বা পাড়ার ঘুরে দেখানো",
+          "hi": "मेरे घर या मोहल्ले की सैर"
+        }
+      },
+      "instruction": {
+        "text": "Show a guest around your home or neighbourhood. Speak for about one minute.",
+        "translations": {
+          "bn": "অতিথিকে আপনার বাড়ি বা পাড়া ঘুরিয়ে দেখান। প্রায় এক মিনিট বলুন।",
+          "hi": "मेहमान को अपना घर या मोहल्ला घुमाएँ। लगभग एक मिनट बोलें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Welcome your guest",
+          "translations": { "bn": "অতিথিকে স্বাগত জানান", "hi": "मेहमान का स्वागत करें" }
+        },
+        {
+          "text": "Name three rooms or places",
+          "translations": {
+            "bn": "তিনটি ঘর বা জায়গার নাম বলুন",
+            "hi": "तीन कमरों या जगहों के नाम बताएँ"
+          }
+        },
+        {
+          "text": "Say what is in one of them",
+          "translations": { "bn": "একটিতে কী আছে, বলুন", "hi": "उनमें से एक में क्या है, बताएँ" }
+        },
+        {
+          "text": "Say where something is",
+          "translations": { "bn": "কিছু কোথায় আছে, বলুন", "hi": "बताएँ कि कोई चीज़ कहाँ है" }
+        },
+        {
+          "text": "Give simple directions to one place",
+          "translations": {
+            "bn": "একটি জায়গার সহজ পথনির্দেশ দিন",
+            "hi": "एक जगह का आसान रास्ता बताएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "Welcome to my home!",
+        "This is the kitchen.",
+        "There is a … in the room.",
+        "The … is next to the …",
+        "Go straight, then turn left.",
+        "It is on the right."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you ask if a place exists nearby?",
+            "translations": {
+              "bn": "কাছে কোনো জায়গা আছে কি না, কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "पास में कोई जगह है या नहीं, यह कैसे पूछें?"
+            }
+          },
+          "answer": "Is there a bank near here?",
+          "others": ["Where you are from?", "What is a bank?"]
+        },
+        {
+          "question": {
+            "text": "Which sentence gives a direction?",
+            "translations": {
+              "bn": "কোন বাক্যটি পথের নির্দেশ দেয়?",
+              "hi": "कौन-सा वाक्य रास्ता बताता है?"
+            }
+          },
+          "answer": "Go straight, then turn left.",
+          "others": ["It is a big house.", "I live near the market."]
+        },
+        {
+          "question": {
+            "text": "Which room do you cook in?",
+            "translations": { "bn": "কোন ঘরে রান্না করা হয়?", "hi": "किस कमरे में खाना बनता है?" }
+          },
+          "answer": "kitchen",
+          "others": ["bedroom", "bathroom"]
+        },
+        {
+          "question": {
+            "text": "There are three chairs. Which sentence is right?",
+            "translations": {
+              "bn": "তিনটি চেয়ার আছে। কোন বাক্যটি ঠিক?",
+              "hi": "तीन कुर्सियाँ हैं। कौन-सा वाक्य सही है?"
+            }
+          },
+          "answer": "There are three chairs.",
+          "others": ["There is three chairs.", "There are three chair."]
+        },
+        {
+          "question": {
+            "text": "The park is across the road from the school. Which word fits?",
+            "translations": {
+              "bn": "পার্কটি স্কুলের রাস্তার ওপারে। কোন শব্দটি বসবে?",
+              "hi": "पार्क स्कूल से सड़क के उस पार है। कौन-सा शब्द सही है?"
+            }
+          },
+          "answer": "opposite",
+          "others": ["under", "behind"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Visitor",
+          "text": "Excuse me, madam. I am looking for the post office.",
+          "translations": {
+            "bn": "ক্ষমা করবেন, ম্যাডাম। আমি ডাকঘর খুঁজছি।",
+            "hi": "माफ़ कीजिए मैडम। मैं डाकघर ढूँढ रहा हूँ।"
+          }
+        },
+        {
+          "speaker": "Lakshmi",
+          "text": "It is not far. Do you know the big temple?",
+          "translations": {
+            "bn": "বেশি দূরে নয়। আপনি কি বড় মন্দিরটি চেনেন?",
+            "hi": "ज़्यादा दूर नहीं है। क्या आप बड़े मंदिर को जानते हैं?"
+          }
+        },
+        {
+          "speaker": "Visitor",
+          "text": "Yes, I passed it just now.",
+          "translations": {
+            "bn": "হ্যাঁ, এইমাত্র ওটার পাশ দিয়ে এলাম।",
+            "hi": "जी हाँ, मैं अभी उसके पास से गुज़रा।"
+          }
+        },
+        {
+          "speaker": "Lakshmi",
+          "text": "Good. Go back to the temple and turn right.",
+          "translations": {
+            "bn": "ভালো। মন্দিরে ফিরে গিয়ে ডানে ঘুরুন।",
+            "hi": "अच्छा। मंदिर तक वापस जाइए और दाएँ मुड़िए।"
+          }
+        },
+        {
+          "speaker": "Visitor",
+          "text": "Turn right at the temple. And then?",
+          "translations": {
+            "bn": "মন্দিরের কাছে ডানে ঘুরব। তারপর?",
+            "hi": "मंदिर पर दाएँ मुड़ना है। फिर?"
+          }
+        },
+        {
+          "speaker": "Lakshmi",
+          "text": "Walk straight for two minutes. You will see a school.",
+          "translations": {
+            "bn": "দুই মিনিট সোজা হাঁটুন। একটি স্কুল দেখতে পাবেন।",
+            "hi": "दो मिनट सीधे चलिए। आपको एक स्कूल दिखेगा।"
+          }
+        },
+        {
+          "speaker": "Visitor",
+          "text": "A school. Is the post office near it?",
+          "translations": {
+            "bn": "একটি স্কুল। ডাকঘরটি কি তার কাছে?",
+            "hi": "एक स्कूल। क्या डाकघर उसके पास है?"
+          }
+        },
+        {
+          "speaker": "Lakshmi",
+          "text": "Yes. It is next to the school, opposite the bank.",
+          "translations": {
+            "bn": "হ্যাঁ। স্কুলের পাশে, ব্যাংকের উল্টো দিকে।",
+            "hi": "हाँ। स्कूल के बगल में, बैंक के सामने।"
+          }
+        },
+        {
+          "speaker": "Visitor",
+          "text": "That is easy. Thank you very much!",
+          "translations": { "bn": "সহজ তো। অনেক ধন্যবাদ!", "hi": "यह तो आसान है। बहुत धन्यवाद!" }
+        },
+        {
+          "speaker": "Lakshmi",
+          "text": "You are welcome. Have a nice day.",
+          "translations": {
+            "bn": "আপনাকেও স্বাগত। আপনার দিনটি ভালো কাটুক।",
+            "hi": "कोई बात नहीं। आपका दिन शुभ हो।"
+          }
+        }
+      ],
+      "voices": { "Visitor": "male", "Lakshmi": "female" }
+    },
+    "review_roleplay": {
+      "partner": "Lakshmi",
+      "asMan": "Lakshman",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello. Can I help you?",
+          "reply": "Yes, please. Is there a chemist near here?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন কাছে ওষুধের দোকান আছে কি না।",
+            "hi": "पूछें कि क्या पास में दवा की दुकान है।"
+          }
+        },
+        {
+          "partner": "Yes. Go straight and turn left at the corner.",
+          "reply": "Straight, then left. Is it far?",
+          "cues": {
+            "bn": "পথটি আবার বলুন, আর জিজ্ঞেস করুন দূরে কি না।",
+            "hi": "रास्ता दोहराएँ, और पूछें कि क्या दूर है।"
+          }
+        },
+        {
+          "partner": "No. It is next to the bank.",
+          "reply": "Thank you very much!",
+          "cues": { "bn": "অনেক ধন্যবাদ দিন।", "hi": "बहुत धन्यवाद दें।" }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A new flat",
+            "translations": { "bn": "নতুন ফ্ল্যাট", "hi": "नया फ़्लैट" }
+          },
+          "roleplay": {
+            "partner": "the agent",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Welcome! This is the flat. Please come in.",
+                "reply": "Thank you. What a nice place!",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর বলুন জায়গাটি সুন্দর।",
+                  "hi": "धन्यवाद दें, और कहें कि जगह सुंदर है।"
+                }
+              },
+              {
+                "partner": "There are two bedrooms and one kitchen. Do you have a question?",
+                "reply": "Is there a balcony?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন বারান্দা আছে কি না।",
+                  "hi": "पूछें कि क्या बालकनी है।"
+                }
+              },
+              {
+                "partner": "Yes, it is next to the living room. The market is near here too.",
+                "reply": "Is the neighbourhood quiet?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন পাড়াটি শান্ত কি না।",
+                  "hi": "पूछें कि क्या मोहल्ला शांत है।"
+                }
+              },
+              {
+                "partner": "Yes, it is very quiet and safe.",
+                "reply": "That is good. I like it.",
+                "cues": {
+                  "bn": "বলুন ভালো, আপনার পছন্দ হয়েছে।",
+                  "hi": "कहें कि अच्छा है, आपको पसंद आया।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Asking the way",
+            "translations": { "bn": "পথ জিজ্ঞেস করা", "hi": "रास्ता पूछना" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! I am lost. Where is the railway station?",
+                "reply": "It is not far. Go straight.",
+                "cues": {
+                  "bn": "বলুন দূরে নয়, সোজা যেতে।",
+                  "hi": "कहें कि दूर नहीं है, सीधे जाएँ।"
+                }
+              },
+              {
+                "partner": "Straight. And then?",
+                "reply": "Turn left at the market.",
+                "cues": {
+                  "bn": "বাজারে বাঁয়ে ঘুরতে বলুন।",
+                  "hi": "बाज़ार पर बाएँ मुड़ने को कहें।"
+                }
+              },
+              {
+                "partner": "Left at the market. How far is it?",
+                "reply": "It is about ten minutes on foot.",
+                "cues": { "bn": "বলুন হেঁটে প্রায় দশ মিনিট।", "hi": "कहें कि पैदल लगभग दस मिनट।" }
+              },
+              {
+                "partner": "Great. Thank you!",
+                "reply": "You are welcome. Goodbye!",
+                "cues": {
+                  "bn": "বলুন স্বাগত, আর বিদায় জানান।",
+                  "hi": "कहें कि कोई बात नहीं, और विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Showing my room",
+            "translations": { "bn": "আমার ঘর দেখানো", "hi": "अपना कमरा दिखाना" }
+          },
+          "roleplay": {
+            "partner": "Aman",
+            "asWoman": "Amna",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! Thank you for inviting me. Is this your room?",
+                "reply": "Yes, it is. Please come in.",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, আর ভেতরে আসতে বলুন।",
+                  "hi": "कहें कि हाँ, और अंदर आने को कहें।"
+                }
+              },
+              {
+                "partner": "It is nice. What is in the room?",
+                "reply": "There is a bed, a table and a chair.",
+                "cues": { "bn": "ঘরে কী কী আছে, বলুন।", "hi": "बताएँ कि कमरे में क्या-क्या है।" }
+              },
+              {
+                "partner": "And where is the cupboard?",
+                "reply": "It is next to the window.",
+                "cues": {
+                  "bn": "বলুন আলমারি জানালার পাশে।",
+                  "hi": "कहें कि अलमारी खिड़की के बगल में है।"
+                }
+              },
+              {
+                "partner": "Very nice. I like your room.",
+                "reply": "Thank you!",
+                "cues": { "bn": "ধন্যবাদ দিন।", "hi": "धन्यवाद दें।" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

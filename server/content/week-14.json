@@ -1,0 +1,671 @@
+{
+  "week": 14,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Kavya",
+          "text": "Hi Dinesh. We need one more person for the school fair. What can you do?",
+          "translations": {
+            "bn": "হাই দীনেশ। স্কুল মেলার জন্য আমাদের আরও একজন লাগবে। আপনি কী পারেন?",
+            "hi": "हाय दिनेश। स्कूल मेले के लिए हमें एक और व्यक्ति चाहिए। आप क्या कर सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Dinesh",
+          "text": "I can sing and I can cook. I can also drive a car.",
+          "translations": {
+            "bn": "আমি গান গাইতে পারি, রান্না করতে পারি। গাড়িও চালাতে পারি।",
+            "hi": "मैं गा सकता हूँ और खाना बना सकता हूँ। मैं गाड़ी भी चला सकता हूँ।"
+          }
+        },
+        {
+          "speaker": "Kavya",
+          "text": "Wonderful! Can you play any instrument?",
+          "translations": {
+            "bn": "দারুণ! আপনি কি কোনো বাদ্যযন্ত্র বাজাতে পারেন?",
+            "hi": "बहुत बढ़िया! क्या आप कोई वाद्य बजा सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Dinesh",
+          "text": "No, I can’t play any instrument yet. I am learning the guitar.",
+          "translations": {
+            "bn": "না, আমি এখনও কোনো বাদ্যযন্ত্র বাজাতে পারি না। আমি গিটার শিখছি।",
+            "hi": "नहीं, मुझे अभी कोई वाद्य बजाना नहीं आता। मैं गिटार सीख रहा हूँ।"
+          }
+        },
+        {
+          "speaker": "Kavya",
+          "text": "That is fine. Can you speak English well?",
+          "translations": {
+            "bn": "ঠিক আছে। আপনি কি ভালো ইংরেজি বলতে পারেন?",
+            "hi": "कोई बात नहीं। क्या आप अच्छी अंग्रेज़ी बोल सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Dinesh",
+          "text": "I can speak a little. I can’t write long letters yet.",
+          "translations": {
+            "bn": "আমি একটু বলতে পারি। এখনও লম্বা চিঠি লিখতে পারি না।",
+            "hi": "मैं थोड़ी बोल सकता हूँ। मुझे अभी लंबे पत्र लिखना नहीं आता।"
+          }
+        },
+        {
+          "speaker": "Kavya",
+          "text": "Good. Is it possible for you to come on Saturday?",
+          "translations": {
+            "bn": "ভালো। শনিবার আসা কি আপনার পক্ষে সম্ভব?",
+            "hi": "अच्छा। क्या शनिवार को आना आपके लिए संभव है?"
+          }
+        },
+        {
+          "speaker": "Dinesh",
+          "text": "Yes, it is possible. May I bring my sister too?",
+          "translations": {
+            "bn": "হ্যাঁ, সম্ভব। আমি কি আমার বোনকেও আনতে পারি?",
+            "hi": "हाँ, संभव है। क्या मैं अपनी बहन को भी ला सकता हूँ?"
+          }
+        },
+        {
+          "speaker": "Kavya",
+          "text": "Of course. Can she help with the decorations?",
+          "translations": {
+            "bn": "অবশ্যই। সে কি সাজসজ্জায় সাহায্য করতে পারবে?",
+            "hi": "बिल्कुल। क्या वह सजावट में मदद कर सकती है?"
+          }
+        },
+        {
+          "speaker": "Dinesh",
+          "text": "She can paint very well. She can’t sing, though!",
+          "translations": {
+            "bn": "সে খুব ভালো ছবি আঁকতে পারে। তবে গান গাইতে পারে না!",
+            "hi": "वह बहुत अच्छा चित्र बना सकती है। पर वह गा नहीं सकती!"
+          }
+        },
+        {
+          "speaker": "Kavya",
+          "text": "Perfect. Together we can make a great fair.",
+          "translations": {
+            "bn": "চমৎকার। একসঙ্গে আমরা দারুণ একটি মেলা করতে পারব।",
+            "hi": "बढ़िया। साथ मिलकर हम एक शानदार मेला कर सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Dinesh",
+          "text": "I am excited. Can I ask one more thing? Can I leave early on Saturday?",
+          "translations": {
+            "bn": "আমি উচ্ছ্বসিত। আরও একটি কথা জিজ্ঞেস করতে পারি? শনিবার কি আমি আগে বেরিয়ে যেতে পারি?",
+            "hi": "मैं उत्साहित हूँ। क्या मैं एक बात और पूछ सकता हूँ? क्या मैं शनिवार को जल्दी निकल सकता हूँ?"
+          }
+        }
+      ],
+      "voices": { "Kavya": "female", "Dinesh": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "swim",
+          "phonetic": "/swɪm/",
+          "imageUrl": null,
+          "meanings": { "bn": "সাঁতার কাটা", "hi": "तैरना" },
+          "syllables": ["swim"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i” ছোট, “sit”-এর মতো।", "শুরুতে “s” আর “w” একসঙ্গে বলুন।"],
+            "en": ["The “i” is short, as in “sit”.", "Say “s” and “w” together at the start."],
+            "hi": ["“i” छोटा है, “sit” जैसा।", "शुरू में “s” और “w” एक साथ बोलें।"]
+          }
+        },
+        {
+          "word": "drive",
+          "phonetic": "/draɪv/",
+          "imageUrl": null,
+          "meanings": { "bn": "গাড়ি চালানো", "hi": "गाड़ी चलाना" },
+          "syllables": ["driv(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i”-এর উচ্চারণ “eye”-এর মতো।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["The “i” sounds like “eye”.", "The last “e” is not said."],
+            "hi": ["“i” की आवाज़ “eye” जैसी है।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "cook",
+          "phonetic": "/kʊk/",
+          "imageUrl": null,
+          "meanings": { "bn": "রান্না করা", "hi": "खाना बनाना" },
+          "syllables": ["cook"],
+          "stress": null,
+          "tips": {
+            "bn": ["“oo” ছোট, “book”-এর মতো।", "শেষে “k” স্পষ্ট বলুন।"],
+            "en": ["The “oo” is short, as in “book”.", "End with a clear “k”."],
+            "hi": ["“oo” छोटा है, “book” जैसा।", "अंत में “k” साफ़ बोलें।"]
+          }
+        },
+        {
+          "word": "sing",
+          "phonetic": "/sɪŋ/",
+          "imageUrl": null,
+          "meanings": { "bn": "গান গাওয়া", "hi": "गाना" },
+          "syllables": ["sing"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ng” একটিই নাক-ধ্বনি, “g” আলাদা করে বলবেন না।", "“i” ছোট, “sit”-এর মতো।"],
+            "en": [
+              "“ng” is one nose sound. Do not say a separate “g”.",
+              "The “i” is short, as in “sit”."
+            ],
+            "hi": ["“ng” एक ही नाक की आवाज़ है, अलग “g” न बोलें।", "“i” छोटा है, “sit” जैसा।"]
+          }
+        },
+        {
+          "word": "dance",
+          "phonetic": "/dɑːns/",
+          "imageUrl": null,
+          "meanings": { "bn": "নাচা", "hi": "नाचना" },
+          "syllables": ["danc(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["“a” লম্বা, “আ”-এর মতো।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["The “a” is long, like “aa”.", "The last “e” is not said."],
+            "hi": ["“a” लंबा है, “आ” जैसा।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "speak",
+          "phonetic": "/spiːk/",
+          "imageUrl": null,
+          "meanings": { "bn": "কথা বলা", "hi": "बोलना" },
+          "syllables": ["speak"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ea” লম্বা, “ee”-এর মতো।", "শুরুতে “s” আর “p” একসঙ্গে বলুন।"],
+            "en": ["The “ea” is long, like “ee”.", "Say “s” and “p” together at the start."],
+            "hi": ["“ea” लंबा है, “ee” जैसा।", "शुरू में “s” और “p” एक साथ बोलें।"]
+          }
+        },
+        {
+          "word": "yet",
+          "phonetic": "/jet/",
+          "imageUrl": null,
+          "meanings": { "bn": "এখনও (না)", "hi": "अभी तक" },
+          "syllables": ["yet"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“I can’t … yet” মানে এখনও পারি না, কিন্তু শিখছি।",
+              "“y” আর “e” মিলিয়ে বলুন: “ইয়েট”।"
+            ],
+            "en": ["“I can’t … yet” means not now, but maybe later.", "Say “y” and “e” together."],
+            "hi": [
+              "“I can’t … yet” का मतलब है अभी नहीं, पर आगे चलकर आएगा।",
+              "“y” और “e” मिलाकर बोलें।"
+            ]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Can I open the window?",
+          "alsoAccepted": ["May I open the window?", "Could I open the window?"],
+          "translations": { "bn": "আমি কি জানালাটি খুলতে পারি?", "hi": "क्या मैं खिड़की खोल दूँ?" },
+          "tips": {
+            "bn": ["অনুমতি চাইতে “Can I” বা “May I” বলুন।", "“May I” আরও ভদ্র।"],
+            "en": ["Use “Can I” or “May I” to ask permission.", "“May I” is more polite."],
+            "hi": ["अनुमति माँगने के लिए “Can I” या “May I” कहें।", "“May I” ज़्यादा विनम्र है।"]
+          }
+        },
+        {
+          "english": "May I come in?",
+          "alsoAccepted": ["Can I come in?", "Could I come in?"],
+          "translations": { "bn": "আমি কি ভেতরে আসতে পারি?", "hi": "क्या मैं अंदर आ जाऊँ?" },
+          "tips": {
+            "bn": ["দরজায় দাঁড়িয়ে এটি বলুন।", "উত্তরে বলা হয় “Yes, please do.”"],
+            "en": ["Say this at a door.", "A common answer is “Yes, please do.”"],
+            "hi": ["दरवाज़े पर खड़े होकर यह कहें।", "आम जवाब है “Yes, please do.”"]
+          }
+        },
+        {
+          "english": "She can swim, but she can’t drive yet.",
+          "alsoAccepted": ["She can swim but she can’t drive yet."],
+          "translations": {
+            "bn": "সে সাঁতার কাটতে পারে, কিন্তু এখনও গাড়ি চালাতে পারে না।",
+            "hi": "वह तैर सकती है, पर अभी गाड़ी नहीं चला सकती।"
+          },
+          "tips": {
+            "bn": [
+              "“can” আর “can’t”-এর পরে ক্রিয়ায় কোনো “s” বা “-ing” নেই।",
+              "“yet” বাক্যের শেষে বসে।"
+            ],
+            "en": ["After “can” and “can’t”, use the plain verb.", "“yet” goes at the end."],
+            "hi": [
+              "“can” और “can’t” के बाद क्रिया का सादा रूप लगाएँ।",
+              "“yet” वाक्य के अंत में आता है।"
+            ]
+          }
+        },
+        {
+          "english": "Is it possible to change my ticket?",
+          "alsoAccepted": ["Is it possible to change the ticket?"],
+          "translations": {
+            "bn": "আমার টিকিট বদলানো কি সম্ভব?",
+            "hi": "क्या मेरा टिकट बदलना संभव है?"
+          },
+          "tips": {
+            "bn": ["সম্ভাবনা জানতে “Is it possible” বলুন।", "এরপর “to” আর ক্রিয়া বসান।"],
+            "en": [
+              "Use “Is it possible” to ask if something can be done.",
+              "Then add “to” and a verb."
+            ],
+            "hi": [
+              "कोई काम हो सकता है या नहीं, पूछने के लिए “Is it possible” कहें।",
+              "फिर “to” और क्रिया लगाएँ।"
+            ]
+          }
+        },
+        {
+          "english": "We can’t go today, but we can go tomorrow.",
+          "alsoAccepted": ["We cannot go today, but we can go tomorrow."],
+          "translations": {
+            "bn": "আজ আমরা যেতে পারব না, কিন্তু কাল যেতে পারব।",
+            "hi": "आज हम नहीं जा सकते, पर कल जा सकते हैं।"
+          },
+          "tips": {
+            "bn": ["“can’t” মানে “cannot”।", "“but” দিয়ে বিপরীত কথা জোড়া যায়।"],
+            "en": ["“can’t” is short for “cannot”.", "Use “but” to join opposite ideas."],
+            "hi": ["“can’t”, “cannot” का छोटा रूप है।", "विपरीत बातों को “but” से जोड़ें।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the clerk",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good morning. How can I help you?",
+          "reply": "Is it possible to change my train ticket?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন আপনার ট্রেনের টিকিট বদলানো সম্ভব কি না।",
+            "hi": "पूछें कि क्या आपका रेल टिकट बदलना संभव है।"
+          }
+        },
+        {
+          "partner": "Yes, it is possible. But you can’t change it on the same day. When do you want to travel?",
+          "reply": "I would like to travel on Friday.",
+          "cues": {
+            "bn": "বলুন শুক্রবার যেতে চান।",
+            "hi": "कहें कि आप शुक्रवार को जाना चाहते हैं।"
+          }
+        },
+        {
+          "partner": "Friday is possible. Can I see your old ticket, please?",
+          "reply": "Yes, here it is.",
+          "cues": { "bn": "টিকিটটি দিন।", "hi": "टिकट दें।" }
+        },
+        {
+          "partner": "Thank you. There is a small extra charge. Is that OK?",
+          "reply": "Yes, that is OK. May I pay by card?",
+          "cues": {
+            "bn": "রাজি হোন, আর জিজ্ঞেস করুন কার্ডে দেওয়া যাবে কি না।",
+            "hi": "सहमत हों, और पूछें कि क्या कार्ड से भुगतान हो सकता है।"
+          }
+        },
+        {
+          "partner": "Yes, you can. Here is your new ticket.",
+          "reply": "Thank you very much.",
+          "cues": { "bn": "অনেক ধন্যবাদ দিন।", "hi": "बहुत धन्यवाद दें।" }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "What can we do together?",
+        "translations": {
+          "bn": "আমরা একসঙ্গে কী করতে পারি?",
+          "hi": "हम साथ मिलकर क्या कर सकते हैं?"
+        }
+      },
+      "instruction": {
+        "text": "Talk with a friend about what each of you can do, and plan something to do together.",
+        "translations": {
+          "bn": "বন্ধুর সঙ্গে কথা বলুন: প্রত্যেকে কী পারেন, আর একসঙ্গে কী করা যায়।",
+          "hi": "दोस्त से बात करें कि हर कोई क्या कर सकता है, और साथ में कुछ करने की योजना बनाएँ।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say two things you can do",
+          "translations": {
+            "bn": "আপনি যা পারেন, তার দুটি বলুন",
+            "hi": "जो आप कर सकते हैं, उनमें से दो बताएँ"
+          }
+        },
+        {
+          "text": "Say one thing you can’t do yet",
+          "translations": {
+            "bn": "যা এখনও পারেন না, তার একটি বলুন",
+            "hi": "जो आप अभी नहीं कर सकते, उनमें से एक बताएँ"
+          }
+        },
+        {
+          "text": "Ask what your friend can do",
+          "translations": {
+            "bn": "বন্ধু কী পারে, জিজ্ঞেস করুন",
+            "hi": "पूछें कि दोस्त क्या कर सकता है"
+          }
+        },
+        {
+          "text": "Ask for permission once",
+          "translations": { "bn": "একবার অনুমতি চান", "hi": "एक बार अनुमति माँगें" }
+        },
+        {
+          "text": "Plan one thing you can do together",
+          "translations": {
+            "bn": "একসঙ্গে করার একটি কাজ ঠিক করুন",
+            "hi": "साथ में करने की एक योजना बनाएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "I can … and I can …",
+        "I can’t … yet.",
+        "What can you do?",
+        "May I …?",
+        "Is it possible to …?",
+        "We can … together."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you politely ask for permission to sit?",
+            "translations": {
+              "bn": "বসার অনুমতি ভদ্রভাবে কীভাবে চাইবেন?",
+              "hi": "बैठने की अनुमति विनम्रता से कैसे माँगें?"
+            }
+          },
+          "answer": "May I sit here?",
+          "others": ["I sit here.", "Do you sit here?"]
+        },
+        {
+          "question": {
+            "text": "Which sentence is right?",
+            "translations": { "bn": "কোন বাক্যটি ঠিক?", "hi": "कौन-सा वाक्य सही है?" }
+          },
+          "answer": "He can swim.",
+          "others": ["He can swims.", "He can to swim."]
+        },
+        {
+          "question": {
+            "text": "You cannot swim now, but you are learning. What do you say?",
+            "translations": {
+              "bn": "আপনি এখন সাঁতার জানেন না, কিন্তু শিখছেন। কী বলবেন?",
+              "hi": "आप अभी तैरना नहीं जानते, पर सीख रहे हैं। क्या कहेंगे?"
+            }
+          },
+          "answer": "I can’t swim yet.",
+          "others": ["I can swim.", "I don’t swim never."]
+        },
+        {
+          "question": {
+            "text": "How do you ask if something can be done?",
+            "translations": {
+              "bn": "কিছু করা সম্ভব কি না, কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "कोई काम हो सकता है या नहीं, यह कैसे पूछें?"
+            }
+          },
+          "answer": "Is it possible?",
+          "others": ["Is it a possible?", "What possible?"]
+        },
+        {
+          "question": {
+            "text": "Which word means the opposite of “can”?",
+            "translations": {
+              "bn": "“can”-এর বিপরীত কোন শব্দ?",
+              "hi": "“can” का विपरीत कौन-सा शब्द है?"
+            }
+          },
+          "answer": "can’t",
+          "others": ["could", "may"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Receptionist",
+          "text": "Good evening. Welcome to the hotel.",
+          "translations": {
+            "bn": "শুভ সন্ধ্যা। হোটেলে স্বাগত।",
+            "hi": "नमस्ते। होटल में आपका स्वागत है।"
+          }
+        },
+        {
+          "speaker": "Priti",
+          "text": "Hello. I have a booking for two nights.",
+          "translations": {
+            "bn": "হ্যালো। আমার দুই রাতের বুকিং আছে।",
+            "hi": "नमस्ते। मेरी दो रात की बुकिंग है।"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Yes, I can see it. Here is your key.",
+          "translations": {
+            "bn": "হ্যাঁ, দেখতে পাচ্ছি। এই নিন আপনার চাবি।",
+            "hi": "हाँ, दिख रही है। यह लीजिए आपकी चाबी।"
+          }
+        },
+        {
+          "speaker": "Priti",
+          "text": "Thank you. Can I have a room on a low floor, please?",
+          "translations": {
+            "bn": "ধন্যবাদ। আমি কি নিচের তলায় একটি ঘর পেতে পারি?",
+            "hi": "धन्यवाद। क्या मुझे निचली मंज़िल पर कमरा मिल सकता है?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "I am sorry. That is not possible tonight. But I can give you a room with a nice view.",
+          "translations": {
+            "bn": "দুঃখিত। আজ রাতে সেটা সম্ভব নয়। তবে সুন্দর দৃশ্যের একটি ঘর দিতে পারি।",
+            "hi": "क्षमा कीजिए। आज रात यह संभव नहीं है। पर मैं आपको सुंदर नज़ारे वाला कमरा दे सकता हूँ।"
+          }
+        },
+        {
+          "speaker": "Priti",
+          "text": "That is fine. May I have breakfast in my room?",
+          "translations": {
+            "bn": "ঠিক আছে। আমি কি আমার ঘরে সকালের খাবার পেতে পারি?",
+            "hi": "ठीक है। क्या मैं अपने कमरे में नाश्ता कर सकती हूँ?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Yes, you can. What time would you like it?",
+          "translations": {
+            "bn": "হ্যাঁ, পারেন। কখন চান?",
+            "hi": "हाँ, कर सकती हैं। आप कितने बजे चाहेंगी?"
+          }
+        },
+        {
+          "speaker": "Priti",
+          "text": "At eight, please. Can I use the swimming pool too?",
+          "translations": {
+            "bn": "আটটায়, দয়া করে। আমি কি সুইমিং পুলও ব্যবহার করতে পারি?",
+            "hi": "आठ बजे, कृपया। क्या मैं तैराकी का तालाब भी इस्तेमाल कर सकती हूँ?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Of course. It is open until ten at night.",
+          "translations": {
+            "bn": "অবশ্যই। এটি রাত দশটা পর্যন্ত খোলা।",
+            "hi": "बिल्कुल। वह रात दस बजे तक खुला है।"
+          }
+        },
+        {
+          "speaker": "Priti",
+          "text": "Thank you. You have been very helpful.",
+          "translations": {
+            "bn": "ধন্যবাদ। আপনি খুব সাহায্য করলেন।",
+            "hi": "धन्यवाद। आपने बहुत मदद की।"
+          }
+        }
+      ],
+      "voices": { "Receptionist": "male", "Priti": "female" }
+    },
+    "review_roleplay": {
+      "partner": "the receptionist",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good evening. How can I help you?",
+          "reply": "May I have a room for two nights, please?",
+          "cues": { "bn": "দুই রাতের জন্য একটি ঘর চান।", "hi": "दो रात के लिए एक कमरा माँगें।" }
+        },
+        {
+          "partner": "Yes, that is possible. Would you like a quiet room?",
+          "reply": "Yes, please. Can I have breakfast in my room?",
+          "cues": {
+            "bn": "বলুন হ্যাঁ, আর জিজ্ঞেস করুন ঘরে সকালের খাবার পাওয়া যাবে কি না।",
+            "hi": "हाँ कहें, और पूछें कि क्या कमरे में नाश्ता मिल सकता है।"
+          }
+        },
+        {
+          "partner": "Of course. Is there anything else?",
+          "reply": "Is it possible to stay one more night?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন আরও এক রাত থাকা সম্ভব কি না।",
+            "hi": "पूछें कि क्या एक रात और रुकना संभव है।"
+          }
+        },
+        {
+          "partner": "Yes, we can do that. Enjoy your stay!",
+          "reply": "Thank you!",
+          "cues": { "bn": "ধন্যবাদ দিন।", "hi": "धन्यवाद दें।" }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A school club",
+            "translations": { "bn": "স্কুলের ক্লাব", "hi": "स्कूल का क्लब" }
+          },
+          "roleplay": {
+            "partner": "Rishi",
+            "asWoman": "Rishika",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Welcome to the school club! What can you do?",
+                "reply": "I can … and I can …",
+                "cues": {
+                  "bn": "আপনি যা পারেন, তার দুটি বলুন।",
+                  "hi": "जो आप कर सकते हैं, उनमें से दो बताएँ।"
+                }
+              },
+              {
+                "partner": "Great. Can you play football?",
+                "reply": "No, I can’t play football yet.",
+                "cues": { "bn": "বলুন, এখনও পারেন না।", "hi": "कहें कि अभी नहीं आता।" }
+              },
+              {
+                "partner": "No problem. We can teach you. May I take your name?",
+                "reply": "Yes, my name is …",
+                "cues": { "bn": "নিজের নাম বলুন।", "hi": "अपना नाम बताएँ।" }
+              },
+              {
+                "partner": "Welcome to the team!",
+                "reply": "Thank you!",
+                "cues": { "bn": "ধন্যবাদ দিন।", "hi": "धन्यवाद दें।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Booking a taxi",
+            "translations": { "bn": "ট্যাক্সি বুক করা", "hi": "टैक्सी बुक करना" }
+          },
+          "roleplay": {
+            "partner": "the operator",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Taxi service. How can I help?",
+                "reply": "Can I book a taxi for tomorrow morning?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন কাল সকালের জন্য ট্যাক্সি বুক করা যাবে কি না।",
+                  "hi": "पूछें कि क्या कल सुबह के लिए टैक्सी बुक हो सकती है।"
+                }
+              },
+              {
+                "partner": "Yes, that is possible. What time?",
+                "reply": "At seven, please.",
+                "cues": { "bn": "সাতটায়, দয়া করে।", "hi": "सात बजे, कृपया।" }
+              },
+              {
+                "partner": "Can you give me your address?",
+                "reply": "Yes. It is …",
+                "cues": { "bn": "আপনার ঠিকানা বলুন।", "hi": "अपना पता बताएँ।" }
+              },
+              {
+                "partner": "Thank you. The taxi will come at seven.",
+                "reply": "Thank you very much.",
+                "cues": { "bn": "অনেক ধন্যবাদ দিন।", "hi": "बहुत धन्यवाद दें।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Planning a trip",
+            "translations": { "bn": "ভ্রমণের পরিকল্পনা", "hi": "यात्रा की योजना" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Let’s plan a trip together. What can you do to help?",
+                "reply": "I can … I can’t … yet.",
+                "cues": {
+                  "bn": "বলুন আপনি কী পারেন, আর এখনও কী পারেন না।",
+                  "hi": "बताएँ कि आप क्या कर सकते हैं, और अभी क्या नहीं।"
+                }
+              },
+              {
+                "partner": "I can drive, but I can’t read maps well. Is it possible for you to do that?",
+                "reply": "Yes, it is possible.",
+                "cues": { "bn": "বলুন হ্যাঁ, সম্ভব।", "hi": "कहें कि हाँ, संभव है।" }
+              },
+              {
+                "partner": "Great. May I ask one more thing? Can you cook?",
+                "reply": "Yes, I can cook simple food.",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, সহজ রান্না পারেন।",
+                  "hi": "कहें कि हाँ, आप सादा खाना बना सकते हैं।"
+                }
+              },
+              {
+                "partner": "Then we can do this together!",
+                "reply": "Yes, we can!",
+                "cues": { "bn": "রাজি হোন।", "hi": "सहमति जताएँ।" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

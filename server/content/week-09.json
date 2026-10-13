@@ -1,0 +1,724 @@
+{
+  "week": 9,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Pooja",
+          "text": "You look tired this morning, Nikhil.",
+          "translations": {
+            "bn": "আজ সকালে আপনাকে ক্লান্ত দেখাচ্ছে, নিখিল।",
+            "hi": "निखिल, आज सुबह आप थके हुए लग रहे हैं।"
+          }
+        },
+        {
+          "speaker": "Nikhil",
+          "text": "Yes. I get up at five every day.",
+          "translations": {
+            "bn": "হ্যাঁ। আমি রোজ পাঁচটায় উঠি।",
+            "hi": "हाँ। मैं रोज़ पाँच बजे उठता हूँ।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "Five! What do you do in the morning?",
+          "translations": {
+            "bn": "পাঁচটায়! সকালে আপনি কী করেন?",
+            "hi": "पाँच बजे! आप सुबह क्या करते हैं?"
+          }
+        },
+        {
+          "speaker": "Nikhil",
+          "text": "I brush my teeth, take a bath and have breakfast.",
+          "translations": {
+            "bn": "আমি দাঁত মাজি, স্নান করি আর সকালের খাবার খাই।",
+            "hi": "मैं ब्रश करता हूँ, नहाता हूँ और नाश्ता करता हूँ।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "How do you go to work?",
+          "translations": { "bn": "আপনি কীভাবে কাজে যান?", "hi": "आप काम पर कैसे जाते हैं?" }
+        },
+        {
+          "speaker": "Nikhil",
+          "text": "I usually go by bus. Sometimes I walk.",
+          "translations": {
+            "bn": "আমি সাধারণত বাসে যাই। কখনো কখনো হেঁটে যাই।",
+            "hi": "मैं आमतौर पर बस से जाता हूँ। कभी-कभी पैदल जाता हूँ।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "How often do you eat lunch at home?",
+          "translations": {
+            "bn": "আপনি কত ঘন ঘন বাড়িতে দুপুরের খাবার খান?",
+            "hi": "आप कितनी बार घर पर दोपहर का खाना खाते हैं?"
+          }
+        },
+        {
+          "speaker": "Nikhil",
+          "text": "Never. I always eat at the office.",
+          "translations": {
+            "bn": "কখনোই না। আমি সবসময় অফিসে খাই।",
+            "hi": "कभी नहीं। मैं हमेशा दफ़्तर में खाता हूँ।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "And what is your weekend like?",
+          "translations": {
+            "bn": "আর আপনার সপ্তাহান্ত কেমন কাটে?",
+            "hi": "और आपका सप्ताहांत कैसा होता है?"
+          }
+        },
+        {
+          "speaker": "Nikhil",
+          "text": "On weekdays I am busy. On Sundays I sleep late and relax.",
+          "translations": {
+            "bn": "কাজের দিনে আমি ব্যস্ত থাকি। রবিবারে দেরিতে ঘুমোই আর বিশ্রাম নিই।",
+            "hi": "कामकाज के दिनों में मैं व्यस्त रहता हूँ। रविवार को देर तक सोता हूँ और आराम करता हूँ।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "That sounds nice. I wake up late on Sundays too.",
+          "translations": {
+            "bn": "শুনতে ভালো। আমিও রবিবারে দেরিতে উঠি।",
+            "hi": "सुनने में अच्छा लगता है। मैं भी रविवार को देर से उठती हूँ।"
+          }
+        },
+        {
+          "speaker": "Nikhil",
+          "text": "Then let’s have a late breakfast together this Sunday.",
+          "translations": {
+            "bn": "তাহলে এই রবিবারে একসঙ্গে দেরিতে সকালের খাবার খাই।",
+            "hi": "तो इस रविवार को साथ में देर से नाश्ता करें।"
+          }
+        }
+      ],
+      "voices": { "Pooja": "female", "Nikhil": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "wake up",
+          "phonetic": "/weɪk ʌp/",
+          "imageUrl": null,
+          "meanings": { "bn": "ঘুম থেকে ওঠা", "hi": "जागना, उठना" },
+          "syllables": ["wak(e)", "up"],
+          "stress": null,
+          "tips": {
+            "bn": ["“a”-এর উচ্চারণ “এই”-এর মতো।", "দুটি শব্দ একসঙ্গে বলুন।"],
+            "en": ["The “a” sounds like “ay”.", "Say the two words together."],
+            "hi": ["“a” की आवाज़ “एइ” जैसी है।", "दोनों शब्द एक साथ बोलें।"]
+          }
+        },
+        {
+          "word": "breakfast",
+          "phonetic": "/ˈbrekfəst/",
+          "imageUrl": null,
+          "meanings": { "bn": "সকালের খাবার", "hi": "नाश्ता" },
+          "syllables": ["break", "fast"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“ea”-এর উচ্চারণ ছোট “e”-এর মতো।", "প্রথম অংশটি জোর দিয়ে বলুন।"],
+            "en": ["The “ea” sounds like a short “e”.", "Say the first part stronger."],
+            "hi": ["“ea” की आवाज़ छोटे “e” जैसी है।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        },
+        {
+          "word": "lunch",
+          "phonetic": "/lʌntʃ/",
+          "imageUrl": null,
+          "meanings": { "bn": "দুপুরের খাবার", "hi": "दोपहर का खाना" },
+          "syllables": ["lunch"],
+          "stress": null,
+          "tips": {
+            "bn": ["“u”-এর উচ্চারণ “cup”-এর “u”-এর মতো।", "শেষে “ch” বলুন, “চ”-এর মতো।"],
+            "en": ["The “u” sounds like the “u” in “cup”.", "End with “ch”, as in “chop”."],
+            "hi": ["“u” की आवाज़ “cup” के “u” जैसी है।", "अंत में “ch” बोलें, “च” जैसा।"]
+          }
+        },
+        {
+          "word": "dinner",
+          "phonetic": "/ˈdɪnə/",
+          "imageUrl": null,
+          "meanings": { "bn": "রাতের খাবার", "hi": "रात का खाना" },
+          "syllables": ["din", "ner"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“i” ছোট, “sit”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “i” is short, as in “sit”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“i” छोटा है, “sit” जैसा।"]
+          }
+        },
+        {
+          "word": "sleep",
+          "phonetic": "/sliːp/",
+          "imageUrl": null,
+          "meanings": { "bn": "ঘুমানো", "hi": "सोना" },
+          "syllables": ["sleep"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ee” লম্বা।", "শুরুতে “s” আর “l” একসঙ্গে বলুন।"],
+            "en": ["The “ee” is long.", "Say “s” and “l” together at the start."],
+            "hi": ["“ee” लंबा है।", "शुरू में “s” और “l” एक साथ बोलें।"]
+          }
+        },
+        {
+          "word": "always",
+          "phonetic": "/ˈɔːlweɪz/",
+          "imageUrl": null,
+          "meanings": { "bn": "সবসময়", "hi": "हमेशा" },
+          "syllables": ["al", "ways"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “অল”-এর মতো।", "শেষে “z” ধ্বনি, “s” নয়।"],
+            "en": [
+              "Say the first part stronger: it sounds like “all”.",
+              "The ending is a “z” sound, not “s”."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “ऑल” जैसा।", "अंत में “z” की आवाज़ है, “s” की नहीं।"]
+          }
+        },
+        {
+          "word": "never",
+          "phonetic": "/ˈnevə/",
+          "imageUrl": null,
+          "meanings": { "bn": "কখনো না", "hi": "कभी नहीं" },
+          "syllables": ["nev", "er"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“e” ছোট।"],
+            "en": ["Say the first part stronger.", "The “e” is short."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“e” छोटा है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "How often do you go to the market?",
+          "alsoAccepted": [],
+          "translations": {
+            "bn": "আপনি কত ঘন ঘন বাজারে যান?",
+            "hi": "आप कितनी बार बाज़ार जाते हैं?"
+          },
+          "tips": {
+            "bn": ["কত ঘন ঘন জানতে “How often” বলুন।", "উত্তরে বলুন “every day” বা “once a week”।"],
+            "en": [
+              "Use “How often” to ask how many times.",
+              "Answer with “every day” or “once a week”."
+            ],
+            "hi": [
+              "कितनी बार पूछने के लिए “How often” कहें।",
+              "जवाब में “every day” या “once a week” कहें।"
+            ]
+          }
+        },
+        {
+          "english": "My father always drinks tea in the morning.",
+          "alsoAccepted": [
+            "My father always has tea in the morning.",
+            "In the morning, my father always drinks tea."
+          ],
+          "translations": {
+            "bn": "আমার বাবা সবসময় সকালে চা খান।",
+            "hi": "मेरे पिता हमेशा सुबह चाय पीते हैं।"
+          },
+          "tips": {
+            "bn": [
+              "“always” বসে বিষয় আর ক্রিয়ার মাঝখানে।",
+              "“father”-এর সঙ্গে ক্রিয়ায় “s” যোগ করুন: drinks।"
+            ],
+            "en": [
+              "“always” goes between the subject and the verb.",
+              "With “father”, add “s” to the verb: drinks."
+            ],
+            "hi": [
+              "“always” कर्ता और क्रिया के बीच आता है।",
+              "“father” के साथ क्रिया में “s” जोड़ें: drinks।"
+            ]
+          }
+        },
+        {
+          "english": "She usually walks to school.",
+          "alsoAccepted": ["She usually goes to school on foot."],
+          "translations": {
+            "bn": "সে সাধারণত হেঁটে স্কুলে যায়।",
+            "hi": "वह आमतौर पर पैदल स्कूल जाती है।"
+          },
+          "tips": {
+            "bn": [
+              "“she”-এর সঙ্গে ক্রিয়ায় “s” যোগ করুন: walks।",
+              "“usually” বসে “she” আর ক্রিয়ার মাঝখানে।"
+            ],
+            "en": [
+              "With “she”, add “s” to the verb: walks.",
+              "“usually” goes between “she” and the verb."
+            ],
+            "hi": [
+              "“she” के साथ क्रिया में “s” जोड़ें: walks।",
+              "“usually” “she” और क्रिया के बीच आता है।"
+            ]
+          }
+        },
+        {
+          "english": "We never eat out on weekdays.",
+          "alsoAccepted": ["We never eat out on weekdays."],
+          "translations": {
+            "bn": "কাজের দিনে আমরা কখনো বাইরে খাই না।",
+            "hi": "कामकाज के दिनों में हम कभी बाहर खाना नहीं खाते।"
+          },
+          "tips": {
+            "bn": [
+              "“never”-এর সঙ্গে আলাদা “not” লাগে না।",
+              "“weekdays” মানে সোমবার থেকে শুক্রবার।"
+            ],
+            "en": ["Do not add “not” after “never”.", "“weekdays” means Monday to Friday."],
+            "hi": [
+              "“never” के साथ अलग से “not” नहीं लगता।",
+              "“weekdays” का मतलब है सोमवार से शुक्रवार।"
+            ]
+          }
+        },
+        {
+          "english": "On Sundays, my brother sometimes visits our grandmother.",
+          "alsoAccepted": ["My brother sometimes visits our grandmother on Sundays."],
+          "translations": {
+            "bn": "রবিবারে আমার ভাই কখনো কখনো আমাদের ঠাকুমার কাছে যায়।",
+            "hi": "रविवार को मेरा भाई कभी-कभी हमारी दादी से मिलने जाता है।"
+          },
+          "tips": {
+            "bn": ["“sometimes” মানে কখনো কখনো।", "দিনের নাম দিয়ে শুরু করলে পরে কমা দিন।"],
+            "en": [
+              "“sometimes” means not always, not never.",
+              "If you start with a day, add a comma after it."
+            ],
+            "hi": [
+              "“sometimes” का मतलब है कभी-कभी।",
+              "दिन के नाम से शुरू करें तो उसके बाद अल्पविराम लगाएँ।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Rakesh",
+      "asWoman": "Rakhi",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! I want to compare our weeks. What time do you wake up on weekdays?",
+          "reply": "I wake up at … on weekdays.",
+          "cues": {
+            "bn": "কাজের দিনে কখন ওঠেন, বলুন।",
+            "hi": "बताएँ कि कामकाज के दिनों में आप कब उठते हैं।"
+          }
+        },
+        {
+          "partner": "I wake up at six. And what about weekends?",
+          "reply": "On weekends, I wake up at …",
+          "cues": {
+            "bn": "সপ্তাহান্তে কখন ওঠেন, বলুন।",
+            "hi": "बताएँ कि सप्ताहांत में आप कब उठते हैं।"
+          }
+        },
+        {
+          "partner": "Interesting! What do you do on weekdays after work?",
+          "reply": "I usually … after work.",
+          "cues": {
+            "bn": "কাজের পরে সাধারণত কী করেন, বলুন।",
+            "hi": "बताएँ कि काम के बाद आप आमतौर पर क्या करते हैं।"
+          }
+        },
+        {
+          "partner": "And on weekends?",
+          "reply": "On weekends, I …",
+          "cues": {
+            "bn": "সপ্তাহান্তে কী করেন, বলুন।",
+            "hi": "बताएँ कि सप्ताहांत में आप क्या करते हैं।"
+          }
+        },
+        {
+          "partner": "How often do you cook at home?",
+          "reply": "I cook … times a week.",
+          "cues": {
+            "bn": "সপ্তাহে ক’বার রান্না করেন, বলুন।",
+            "hi": "बताएँ कि हफ़्ते में कितनी बार खाना बनाते हैं।"
+          }
+        },
+        {
+          "partner": "Nice. Our weeks are a little different. Thanks for sharing!",
+          "reply": "Thank you. It was nice talking to you.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন, আর বলুন কথা বলে ভালো লাগল।",
+            "hi": "धन्यवाद दें, और कहें कि बात करके अच्छा लगा।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "A day in my life",
+        "translations": { "bn": "আমার একটি দিন", "hi": "मेरे जीवन का एक दिन" }
+      },
+      "instruction": {
+        "text": "Describe a typical day, from morning to night, in the right order.",
+        "translations": {
+          "bn": "সকাল থেকে রাত পর্যন্ত একটি সাধারণ দিনের কথা ক্রমানুসারে বলুন।",
+          "hi": "सुबह से रात तक एक सामान्य दिन का वर्णन क्रम से करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what time you wake up",
+          "translations": { "bn": "কখন ওঠেন, বলুন", "hi": "बताएँ कि आप कब उठते हैं" }
+        },
+        {
+          "text": "Say what you do in the morning",
+          "translations": { "bn": "সকালে কী করেন, বলুন", "hi": "बताएँ कि सुबह आप क्या करते हैं" }
+        },
+        {
+          "text": "Say what you do in the afternoon",
+          "translations": {
+            "bn": "দুপুর-বিকেলে কী করেন, বলুন",
+            "hi": "बताएँ कि दोपहर में आप क्या करते हैं"
+          }
+        },
+        {
+          "text": "Say what you do in the evening",
+          "translations": {
+            "bn": "সন্ধ্যায় কী করেন, বলুন",
+            "hi": "बताएँ कि शाम को आप क्या करते हैं"
+          }
+        },
+        {
+          "text": "Use “always”, “usually” or “sometimes” once",
+          "translations": {
+            "bn": "একবার “always”, “usually” বা “sometimes” ব্যবহার করুন",
+            "hi": "एक बार “always”, “usually” या “sometimes” का प्रयोग करें"
+          }
+        },
+        {
+          "text": "Use “first”, “then” and “after that”",
+          "translations": {
+            "bn": "“first”, “then” আর “after that” ব্যবহার করুন",
+            "hi": "“first”, “then” और “after that” का प्रयोग करें"
+          }
+        }
+      ],
+      "phrases": [
+        "I wake up at … every day.",
+        "First, I … Then, I …",
+        "After that, I …",
+        "I usually … in the afternoon.",
+        "In the evening, I …",
+        "I go to bed at …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you ask about frequency?",
+            "translations": {
+              "bn": "কত ঘন ঘন, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "कितनी बार, यह कैसे पूछें?"
+            }
+          },
+          "answer": "How often do you cook?",
+          "others": ["What do you cook?", "Where do you cook?"]
+        },
+        {
+          "question": {
+            "text": "Put in order, from most to least often: always, sometimes, never.",
+            "translations": {
+              "bn": "বেশি থেকে কম ঘন ঘন সাজান: always, sometimes, never।",
+              "hi": "ज़्यादा से कम बार के क्रम में रखें: always, sometimes, never।"
+            }
+          },
+          "answer": "always, sometimes, never",
+          "others": ["never, always, sometimes", "sometimes, never, always"]
+        },
+        {
+          "question": {
+            "text": "Which sentence is right?",
+            "translations": { "bn": "কোন বাক্যটি ঠিক?", "hi": "कौन-सा वाक्य सही है?" }
+          },
+          "answer": "He usually walks to work.",
+          "others": ["He walk usually to work.", "He usually walk to work."]
+        },
+        {
+          "question": {
+            "text": "Which word shows the order of actions?",
+            "translations": {
+              "bn": "কোন শব্দটি কাজের ক্রম বোঝায়?",
+              "hi": "कौन-सा शब्द कामों का क्रम बताता है?"
+            }
+          },
+          "answer": "then",
+          "others": ["very", "near"]
+        },
+        {
+          "question": {
+            "text": "You eat dinner at home every evening. What do you say?",
+            "translations": {
+              "bn": "আপনি রোজ সন্ধ্যায় বাড়িতে রাতের খাবার খান। কী বলবেন?",
+              "hi": "आप रोज़ शाम को घर पर रात का खाना खाते हैं। क्या कहेंगे?"
+            }
+          },
+          "answer": "I always eat dinner at home.",
+          "others": ["I never eat dinner at home.", "I sometimes eat dinner at home."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Lina",
+          "text": "Hi Omar. Are you free on Saturday?",
+          "translations": {
+            "bn": "হাই ওমর। শনিবারে কি আপনি ফাঁকা?",
+            "hi": "हाय उमर। क्या आप शनिवार को ख़ाली हैं?"
+          }
+        },
+        {
+          "speaker": "Omar",
+          "text": "I am busy in the morning. I always go to the gym.",
+          "translations": {
+            "bn": "সকালে আমি ব্যস্ত থাকি। আমি সবসময় জিমে যাই।",
+            "hi": "सुबह मैं व्यस्त रहता हूँ। मैं हमेशा जिम जाता हूँ।"
+          }
+        },
+        {
+          "speaker": "Lina",
+          "text": "How often do you go to the gym?",
+          "translations": { "bn": "আপনি কত ঘন ঘন জিমে যান?", "hi": "आप कितनी बार जिम जाते हैं?" }
+        },
+        {
+          "speaker": "Omar",
+          "text": "Four times a week. And you?",
+          "translations": { "bn": "সপ্তাহে চারবার। আর আপনি?", "hi": "हफ़्ते में चार बार। और आप?" }
+        },
+        {
+          "speaker": "Lina",
+          "text": "Never! I prefer yoga, once a week.",
+          "translations": {
+            "bn": "কখনোই না! আমার যোগব্যায়াম বেশি পছন্দ, সপ্তাহে একবার।",
+            "hi": "कभी नहीं! मुझे योग ज़्यादा पसंद है, हफ़्ते में एक बार।"
+          }
+        },
+        {
+          "speaker": "Omar",
+          "text": "What do you do on Saturday afternoons?",
+          "translations": {
+            "bn": "শনিবার দুপুরে আপনি কী করেন?",
+            "hi": "आप शनिवार की दोपहर को क्या करती हैं?"
+          }
+        },
+        {
+          "speaker": "Lina",
+          "text": "I usually cook lunch, then I rest.",
+          "translations": {
+            "bn": "আমি সাধারণত দুপুরের রান্না করি, তারপর বিশ্রাম নিই।",
+            "hi": "मैं आमतौर पर दोपहर का खाना बनाती हूँ, फिर आराम करती हूँ।"
+          }
+        },
+        {
+          "speaker": "Omar",
+          "text": "Sometimes I meet my friends in the evening.",
+          "translations": {
+            "bn": "কখনো কখনো সন্ধ্যায় আমি বন্ধুদের সঙ্গে দেখা করি।",
+            "hi": "कभी-कभी मैं शाम को दोस्तों से मिलता हूँ।"
+          }
+        },
+        {
+          "speaker": "Lina",
+          "text": "Let’s meet on Saturday evening, then.",
+          "translations": {
+            "bn": "তাহলে শনিবার সন্ধ্যায় দেখা করি।",
+            "hi": "तो शनिवार शाम को मिलते हैं।"
+          }
+        },
+        {
+          "speaker": "Omar",
+          "text": "Good idea. See you at six.",
+          "translations": {
+            "bn": "ভালো কথা। ছ’টায় দেখা হবে।",
+            "hi": "अच्छा विचार है। छह बजे मिलते हैं।"
+          }
+        }
+      ],
+      "voices": { "Lina": "female", "Omar": "male" }
+    },
+    "review_roleplay": {
+      "partner": "Lina",
+      "asMan": "Leon",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! Are you free on Saturday?",
+          "reply": "I am busy in the morning, but free in the evening.",
+          "cues": {
+            "bn": "বলুন সকালে ব্যস্ত, সন্ধ্যায় ফাঁকা।",
+            "hi": "कहें कि सुबह व्यस्त हैं, शाम को ख़ाली हैं।"
+          }
+        },
+        {
+          "partner": "What do you usually do on Saturday mornings?",
+          "reply": "I usually …",
+          "cues": {
+            "bn": "শনিবার সকালে সাধারণত কী করেন, বলুন।",
+            "hi": "बताएँ कि शनिवार की सुबह आप आमतौर पर क्या करते हैं।"
+          }
+        },
+        {
+          "partner": "How often do you do that?",
+          "reply": "I do it … times a week.",
+          "cues": {
+            "bn": "সপ্তাহে ক’বার করেন, বলুন।",
+            "hi": "बताएँ कि हफ़्ते में कितनी बार करते हैं।"
+          }
+        },
+        {
+          "partner": "Great. Let’s meet at six!",
+          "reply": "Good idea. See you at six.",
+          "cues": {
+            "bn": "রাজি হোন, আর বলুন ছ’টায় দেখা হবে।",
+            "hi": "सहमत हों, और कहें कि छह बजे मिलेंगे।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A new flatmate",
+            "translations": { "bn": "নতুন সহবাসী", "hi": "नया साथ रहने वाला" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! I am your new flatmate. What time do you wake up?",
+                "reply": "I wake up at … every day.",
+                "cues": { "bn": "রোজ কখন ওঠেন, বলুন।", "hi": "बताएँ कि आप रोज़ कब उठते हैं।" }
+              },
+              {
+                "partner": "I wake up late. When do you use the bathroom?",
+                "reply": "I usually use it in the morning.",
+                "cues": {
+                  "bn": "বলুন সাধারণত সকালে ব্যবহার করেন।",
+                  "hi": "कहें कि आप आमतौर पर सुबह इस्तेमाल करते हैं।"
+                }
+              },
+              {
+                "partner": "Do you cook at home?",
+                "reply": "Sometimes. I always eat breakfast at home.",
+                "cues": {
+                  "bn": "বলুন কখনো কখনো; সকালের খাবার সবসময় বাড়িতে।",
+                  "hi": "कहें कि कभी-कभी; नाश्ता हमेशा घर पर।"
+                }
+              },
+              {
+                "partner": "Good. I think we can share the kitchen!",
+                "reply": "Yes, that sounds fine.",
+                "cues": { "bn": "রাজি হয়ে বলুন ঠিক আছে।", "hi": "सहमत हों और कहें कि ठीक है।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At the doctor",
+            "translations": { "bn": "ডাক্তারের কাছে", "hi": "डॉक्टर के पास" }
+          },
+          "roleplay": {
+            "partner": "the doctor",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning. Tell me about your day. What time do you sleep?",
+                "reply": "I usually sleep at …",
+                "cues": {
+                  "bn": "সাধারণত কখন ঘুমান, বলুন।",
+                  "hi": "बताएँ कि आप आमतौर पर कब सोते हैं।"
+                }
+              },
+              {
+                "partner": "And what time do you wake up?",
+                "reply": "I wake up at …",
+                "cues": { "bn": "কখন ওঠেন, বলুন।", "hi": "बताएँ कि आप कब उठते हैं।" }
+              },
+              {
+                "partner": "How often do you eat breakfast?",
+                "reply": "I always eat breakfast.",
+                "cues": {
+                  "bn": "বলুন সবসময় সকালের খাবার খান।",
+                  "hi": "कहें कि आप हमेशा नाश्ता करते हैं।"
+                }
+              },
+              {
+                "partner": "Good. Please sleep a little more. Thank you.",
+                "reply": "Thank you, doctor.",
+                "cues": { "bn": "ধন্যবাদ দিন।", "hi": "धन्यवाद दें।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A pen friend",
+            "translations": { "bn": "চিঠির বন্ধু", "hi": "पत्र-मित्र" }
+          },
+          "roleplay": {
+            "partner": "Anil",
+            "asWoman": "Anila",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! I am your new pen friend. What is a day in your life like?",
+                "reply": "I wake up at … and then I …",
+                "cues": {
+                  "bn": "কখন ওঠেন আর তারপর কী করেন, বলুন।",
+                  "hi": "बताएँ कि कब उठते हैं और फिर क्या करते हैं।"
+                }
+              },
+              {
+                "partner": "What do you do in the afternoon?",
+                "reply": "In the afternoon, I …",
+                "cues": {
+                  "bn": "দুপুর-বিকেলে কী করেন, বলুন।",
+                  "hi": "बताएँ कि दोपहर में आप क्या करते हैं।"
+                }
+              },
+              {
+                "partner": "And in the evening?",
+                "reply": "In the evening, I usually …",
+                "cues": {
+                  "bn": "সন্ধ্যায় সাধারণত কী করেন, বলুন।",
+                  "hi": "बताएँ कि शाम को आप आमतौर पर क्या करते हैं।"
+                }
+              },
+              {
+                "partner": "Thank you for telling me. Write soon!",
+                "reply": "I will. Goodbye!",
+                "cues": {
+                  "bn": "বলুন লিখবেন, আর বিদায় জানান।",
+                  "hi": "कहें कि लिखेंगे, और विदा लें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

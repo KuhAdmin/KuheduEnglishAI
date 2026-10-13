@@ -1,4 +1,4 @@
-# speech: the app's voice, and assessing a spoken word
+# speech: the app's voice, and what is heard of a learner's
 
 Two things live here, both run on our own machine with open-source libraries. No paid speech
 service is called, and once the models are downloaded nothing leaves the machine.
@@ -6,7 +6,10 @@ service is called, and once the models are downloaded nothing leaves the machine
 | Folder | What it does | Used by the app? |
 | --- | --- | --- |
 | `tts/` | **Speaks.** A text said in a voice, as MP3: Kokoro's for English and Hindi, Indic-TTS's for Bengali. | Yes: everything the app says aloud. |
-| `assess/` | **Listens.** Says what it heard in a recording of one word, as codes with a confidence. | Not yet: a measuring tool. |
+| `assess/` | **Listens.** Says what it heard in a recording of one word, as codes with a confidence; and writes down the words of a reply in a conversation. | Yes: "Check how I said it" on Days 2 and 3, and "Check my reply" in the role-plays, each marked as a first version. |
+
+A third program runs beside them and is not Python: **Ollama**, with a small language model that
+reads a learner's reply as a teacher would. See "Replies" below.
 
 ## Set up
 
@@ -137,8 +140,33 @@ word.
 
 ## Listening (`assess/`)
 
-**No learner sees any of this yet.** Its job is to tell us how often it is right on recordings of
-our own learners. Only what clears the bar below goes on a screen.
+**The app uses this on Day 2**, when a learner asks to have a recorded word checked, and shows
+what was found marked as a first version that can be wrong. It has **not** been measured on
+recordings of our own learners: the bar below is unmet, and the thresholds are guesses.
+
+```bash
+npm run dev:scorer            # from the repo's root; or, in speech/: .venv-assess/Scripts/python -m assess.service
+```
+
+- It listens on `127.0.0.1:8789` (`SCORER_PORT`) and is called by the Node server only
+  (`SCORER_URL` there), which decides who may ask and which findings are sure enough to show.
+- `POST /assess?word=&parts=&stress=` with a WAV as its body (one channel or more, **16 kHz**, up
+  to 15 seconds) answers with findings as codes; `GET /health`.
+- **A recording is held in memory while it is judged, and then let go.** Nothing writes it down
+  and nothing about it is logged.
+- **It judges a word before it listens, and asks itself one once it does** (`assess/warm.wav`: the
+  app's own voice saying "hello", a machine's). A word warms what quiet does not; and the first
+  request a fresh service answers is slow whatever the model's state. Without the two, a first
+  check took 13 seconds; with them, about one.
+- One word at a time: about half a second each on the 2-core laptop.
+- **`word` may be a sentence** (up to 200 characters; Day 3 sends one). A sound that differed
+  then comes with the `word` of the sentence it was in, which is what the app shows.
+- **One of OpenPronounce's own thresholds is set in `assess/sounds.py`** (`TWO_WRONG_SOUNDS`,
+  1.8). The library reports a word when its wrong sounds add up to two, but never counts a wrong
+  sound as quite a whole one, so two plainly wrong sounds came to 1.99 and were not enough: the
+  app's own voice saying "Good morning", judged against "Good evening", was passed as right.
+  With it set, that is caught and the three clips in `recordings/synthetic` come out as before.
+  Untuned, like every number here.
 
 | Library | For | Licence |
 | --- | --- | --- |
@@ -156,13 +184,13 @@ or later, and it wants `phonemizer` where Kokoro has a fork under the same name.
 cd speech
 python -m venv .venv-assess
 .venv-assess/Scripts/python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
-.venv-assess/Scripts/python -m pip install "openpronounce==0.3.0" "transformers<5" praat-parselmouth espeakng-loader psutil
+.venv-assess/Scripts/python -m pip install "openpronounce==0.3.0" "transformers<5" praat-parselmouth espeakng-loader psutil fastapi uvicorn
 .venv-assess/Scripts/python -m assess recordings/synthetic/wednesday-right.wav "Wednesday" --parts "We(d)n(e)s-day" --stress 1
 ```
 
 - **Nothing is installed on the system.** espeak-ng comes from `espeakng-loader`, as the voices'
   does (`assess/sounds.py` says where it is), and a WAV is read without `ffmpeg`. A browser's
-  recording (webm, mp4) is not: that still needs `ffmpeg`, or the app sending WAV.
+  own recording (webm, mp4) would need it, so the app sends a WAV it makes itself.
 - The first run fetches the model into `speech/.models`. Only the one model comes.
 
 ### What it costs (measured 2026-10-13)
@@ -227,12 +255,93 @@ ravi-name-2.wav,name,nam(e),,extraSyllable
 `evaluate.py` prints, per code and at several confidence thresholds: right, wrong, missed,
 precision and recall, then seconds a word and peak memory.
 
-A code is shown to learners only if, at some threshold, **it is right at least 8 times in 10 when
-it speaks** (precision 0.8 or more) on our recordings, and a word takes under about 3 seconds on
+The bar for a code is that, at some threshold, **it is right at least 8 times in 10 when it
+speaks** (precision 0.8 or more) on our recordings, and a word takes under about 3 seconds on
 the server. Missing a mistake is cheap; a wrong correction is not.
+
+**The codes are shown to learners without having met it** (decided 2026-10-13: as a first
+version, said to be one every time it speaks). The speed is met; the rightness is unmeasured.
+Until it is measured, the note stays, the findings stay on Day 2, and nothing is built that
+counts on them. What a learner is shown is cut at 0.5 by the Node server
+(`PRONUNCIATION_SHOWN_FROM`), which is a guess of the same kind.
 
 Every number in `assess/stress.py` and `MISSING_UNSURE` in `assess/result.py` is a guess until
 then.
+
+## Replies (`assess/words.py`, and Ollama)
+
+In a role-play a learner answers in words of their own, so there is no text to hold the
+recording against. It is checked in two steps, each by a model of its own:
+
+1. **Whisper writes down what was said** (`assess/words.py`, the scoring service's
+   `POST /transcribe`: a WAV in, `{ "text", "confidence" }` out). OpenAI's `whisper-base.en`,
+   MIT licence, run by the `transformers` the scorer's environment already has: nothing more to
+   install. It is fetched into `speech/.models` the first time the service starts (0.3 GB), and
+   read from the disk after that without asking the model hub. `WORDS_MODEL` names another one
+   (`openai/whisper-small.en` hears better and holds about 1 GB; not measured here).
+2. **Qwen reads those words** (Qwen2.5-1.5B-Instruct, Apache 2.0, run by Ollama; the Node server
+   asks it, `server/src/modules/conversation/grader.ts`). It is asked two small things: to write
+   the sentence as correct English (a slip is a rewrite that differs), and whether the sentence
+   answers what the partner said.
+
+### Setting up Ollama
+
+Install Ollama (ollama.com), then fetch the model once: `ollama pull qwen2.5:1.5b` (1.1 GB).
+`npm run dev:grader` starts it, on this machine only, with one model kept in memory.
+
+Where Ollama's own store cannot be reached (the development laptop's network could not), the
+same model comes from Qwen's own page instead: download `qwen2.5-1.5b-instruct-q4_k_m.gguf` from
+`huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF`, check its sha256 against the page's, write a
+file holding the one line `FROM <path to the .gguf>`, and `ollama create qwen2.5:1.5b -f <that file>`.
+
+On a machine whose system drive is full, Ollama need not be installed there: unpack its zip
+anywhere and say where in `server/.env` (`OLLAMA_BIN`, `OLLAMA_MODELS`, `OLLAMA_TMPDIR`), which
+`npm run dev:grader` reads. Nothing else of that file is passed to Ollama.
+
+### What it costs, and how right it is (measured 2026-10-13)
+
+On the development laptop (2 cores, 8 GB):
+
+| | Whisper `base.en` | Qwen 2.5, 1.5 billion |
+| --- | --- | --- |
+| On disk | 0.3 GB | 1.1 GB |
+| Memory | about 0.35 GB more in the scoring service | 1.1 GB held, 1.35 GB committed |
+| Seconds a reply | 1.0 to 1.7 | 1.5 to 3 for both questions |
+| The first after loading | 3 s | 20 to 28 s, while Ollama loads the model |
+
+So a reply is checked in about 3 to 4.5 seconds, one at a time.
+
+**How right Qwen is, on 101 written replies** (to the turns of Week 1's role-play and its three
+scenarios; the replies and their labels were written by the assistant, not said by learners):
+
+| | Right | Wrongly corrected | Missed |
+| --- | --- | --- | --- |
+| Does the reply answer the partner | 92 of 101 | 0 of 78 that did | 9 of 23 that did not |
+| Is there a grammar slip | 95 of 101 | 2 of 81 without one | 4 of 20 with one |
+
+One of the two wrong corrections was "Ok" rewritten as "Okay", which the server has since been
+told is the same word; the other changed the meaning ("Thanks, have a nice day" to "Thanks for
+a nice day").
+
+- **Asked "is this right?" it says yes to everything** (the first way it was asked: 37 of 37).
+  Asked to rewrite, and to give a reason before a yes or no, it can tell.
+- **Its "yes, it fits" is weak, and no learner is told it.** It was set to err on that side,
+  because telling a learner their good answer did not fit is the costly mistake. On live sound
+  it passed a sentence in Hindi, and "My brother is a teacher" as an answer to "Good morning".
+  Only a doubt is shown (see `ReplyFeedback` in the app).
+- **A rewrite is shown only if it is still the learner's sentence** (`stillTheirs` in the
+  server's `conversation/words.ts`): the model sometimes answers a sentence instead of
+  correcting it, or "corrects" a name it does not know ("Asha" to "ash").
+- **A 4-billion Qwen (Qwen3-4B, 3.2 GB of memory, 7 seconds a reply here) was no better** at
+  whether a reply fits, and worse at keeping grammar out of that question. Size is not what
+  this needs.
+
+**What this does not say:** how Whisper hears our learners. The only sound it has been given is
+the app's own voice, which it wrote down correctly. Known from that alone: **a reply said in
+Bengali or Hindi is written as nonsense in English letters**, or as nothing (an English-only
+model); and it writes what it takes a speaker to mean, so it may tidy a slip away before Qwen
+sees it. `QUIET` and `UNSURE` in `words.py`, which keep a likely phrase from being made of a
+silent room, are untuned guesses.
 
 ## Tests
 

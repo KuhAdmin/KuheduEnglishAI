@@ -1,0 +1,719 @@
+{
+  "week": 3,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Anjali",
+          "text": "Look, Rohit. This is my family.",
+          "translations": {
+            "bn": "দেখুন, রোহিত। এটি আমার পরিবার।",
+            "hi": "देखिए, रोहित। यह मेरा परिवार है।"
+          }
+        },
+        {
+          "speaker": "Rohit",
+          "text": "Nice photo! Who is he?",
+          "translations": { "bn": "সুন্দর ছবি! উনি কে?", "hi": "अच्छी तस्वीर है! ये कौन हैं?" }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "He is my father. His name is Suresh.",
+          "translations": {
+            "bn": "উনি আমার বাবা। তাঁর নাম সুরেশ।",
+            "hi": "ये मेरे पिता हैं। इनका नाम सुरेश है।"
+          }
+        },
+        {
+          "speaker": "Rohit",
+          "text": "And who is she?",
+          "translations": { "bn": "আর উনি কে?", "hi": "और ये कौन हैं?" }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "She is my mother. She is a nurse.",
+          "translations": {
+            "bn": "উনি আমার মা। তিনি একজন নার্স।",
+            "hi": "ये मेरी माँ हैं। वे नर्स हैं।"
+          }
+        },
+        {
+          "speaker": "Rohit",
+          "text": "Is this your brother?",
+          "translations": { "bn": "এ কি আপনার ভাই?", "hi": "क्या यह आपका भाई है?" }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "Yes, he is my brother, Vivek. He is ten years old.",
+          "translations": {
+            "bn": "হ্যাঁ, ও আমার ভাই, বিবেক। ওর বয়স দশ বছর।",
+            "hi": "जी हाँ, यह मेरा भाई विवेक है। वह दस साल का है।"
+          }
+        },
+        {
+          "speaker": "Rohit",
+          "text": "Do you have a sister?",
+          "translations": { "bn": "আপনার কি কোনো বোন আছে?", "hi": "क्या आपकी कोई बहन है?" }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "No, I don’t. How many people are in your family?",
+          "translations": {
+            "bn": "না, নেই। আপনার পরিবারে কতজন আছেন?",
+            "hi": "जी नहीं, नहीं है। आपके परिवार में कितने लोग हैं?"
+          }
+        },
+        {
+          "speaker": "Rohit",
+          "text": "There are five people in my family.",
+          "translations": {
+            "bn": "আমার পরিবারে পাঁচজন আছেন।",
+            "hi": "मेरे परिवार में पाँच लोग हैं।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "Five! Who are they?",
+          "translations": { "bn": "পাঁচজন! তাঁরা কে কে?", "hi": "पाँच! वे कौन-कौन हैं?" }
+        },
+        {
+          "speaker": "Rohit",
+          "text": "My parents, my grandmother, my sister and me.",
+          "translations": {
+            "bn": "আমার বাবা-মা, আমার ঠাকুমা, আমার বোন আর আমি।",
+            "hi": "मेरे माता-पिता, मेरी दादी, मेरी बहन और मैं।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "That’s a lovely family.",
+          "translations": { "bn": "খুব সুন্দর পরিবার।", "hi": "बहुत प्यारा परिवार है।" }
+        },
+        {
+          "speaker": "Rohit",
+          "text": "Thank you. I love my family.",
+          "translations": {
+            "bn": "ধন্যবাদ। আমি আমার পরিবারকে ভালোবাসি।",
+            "hi": "धन्यवाद। मुझे अपने परिवार से प्यार है।"
+          }
+        }
+      ],
+      "voices": { "Anjali": "female", "Rohit": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "family",
+          "phonetic": "/ˈfæməli/",
+          "imageUrl": null,
+          "meanings": { "bn": "পরিবার", "hi": "परिवार" },
+          "syllables": ["fam", "i", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "মাঝের অংশটি খুব ছোট ও হালকা।"],
+            "en": ["Say the first part stronger.", "The middle part is very short and soft."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "बीच का हिस्सा बहुत छोटा और हल्का है।"]
+          }
+        },
+        {
+          "word": "father",
+          "phonetic": "/ˈfɑːðə/",
+          "imageUrl": null,
+          "meanings": { "bn": "বাবা", "hi": "पिता" },
+          "syllables": ["fa", "ther"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "“a” লম্বা, “আ”-এর মতো।",
+              "“th” বলতে জিভের ডগা দাঁতের ফাঁকে রেখে গলার স্বর দিন।"
+            ],
+            "en": [
+              "The “a” is long, like “aa”.",
+              "For “th”, put the tip of your tongue between your teeth and use your voice."
+            ],
+            "hi": [
+              "“a” लंबा है, “आ” जैसा।",
+              "“th” के लिए जीभ की नोक दाँतों के बीच रखें और आवाज़ के साथ बोलें।"
+            ]
+          }
+        },
+        {
+          "word": "mother",
+          "phonetic": "/ˈmʌðə/",
+          "imageUrl": null,
+          "meanings": { "bn": "মা", "hi": "माँ" },
+          "syllables": ["moth", "er"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“o”-এর উচ্চারণ “cup”-এর “u”-এর মতো।", "“th”-এর উচ্চারণ “father”-এর মতোই।"],
+            "en": ["The “o” sounds like the “u” in “cup”.", "The “th” is the same as in “father”."],
+            "hi": ["“o” की आवाज़ “cup” के “u” जैसी है।", "“th” वैसा ही है जैसा “father” में।"]
+          }
+        },
+        {
+          "word": "brother",
+          "phonetic": "/ˈbrʌðə/",
+          "imageUrl": null,
+          "meanings": { "bn": "ভাই", "hi": "भाई" },
+          "syllables": ["broth", "er"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“o”-এর উচ্চারণ “cup”-এর “u”-এর মতো।", "প্রথম অংশটি জোর দিয়ে বলুন।"],
+            "en": ["The “o” sounds like the “u” in “cup”.", "Say the first part stronger."],
+            "hi": ["“o” की आवाज़ “cup” के “u” जैसी है।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        },
+        {
+          "word": "sister",
+          "phonetic": "/ˈsɪstə/",
+          "imageUrl": null,
+          "meanings": { "bn": "বোন", "hi": "बहन" },
+          "syllables": ["sis", "ter"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“i” ছোট, “sit”-এর মতো।", "শেষ অংশটি ছোট ও হালকা রাখুন।"],
+            "en": ["The “i” is short, as in “sit”.", "Keep the last part short and soft."],
+            "hi": ["“i” छोटा है, “sit” जैसा।", "आख़िरी हिस्सा छोटा और हल्का रखें।"]
+          }
+        },
+        {
+          "word": "he",
+          "phonetic": "/hiː/",
+          "imageUrl": null,
+          "meanings": { "bn": "সে / তিনি (পুরুষ)", "hi": "वह / वे (पुरुष)" },
+          "syllables": ["he"],
+          "stress": null,
+          "tips": {
+            "bn": ["পুরুষ বা ছেলের জন্য “he” বলুন।", "“e” লম্বা, “ee”-এর মতো।"],
+            "en": ["Use “he” for a man or a boy.", "The “e” is long, like “ee”."],
+            "hi": ["पुरुष या लड़के के लिए “he” कहें।", "“e” लंबा है, “ee” जैसा।"]
+          }
+        },
+        {
+          "word": "she",
+          "phonetic": "/ʃiː/",
+          "imageUrl": null,
+          "meanings": { "bn": "সে / তিনি (নারী)", "hi": "वह / वे (महिला)" },
+          "syllables": ["she"],
+          "stress": null,
+          "tips": {
+            "bn": ["নারী বা মেয়ের জন্য “she” বলুন।", "“sh” একটিই নরম ধ্বনি, “shop”-এর মতো।"],
+            "en": ["Use “she” for a woman or a girl.", "“sh” is one soft sound, as in “shop”."],
+            "hi": ["महिला या लड़की के लिए “she” कहें।", "“sh” एक ही नरम आवाज़ है, “shop” जैसी।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "This is my father.",
+          "alsoAccepted": ["This is my dad."],
+          "translations": { "bn": "ইনি আমার বাবা।", "hi": "ये मेरे पिता हैं।" },
+          "tips": {
+            "bn": ["কারও পরিচয় দিতে “This is …” বলুন।", "পরিবারের সদস্যের নামের আগে “my” বলুন।"],
+            "en": ["Use “This is …” to introduce a person.", "Say “my” before the family word."],
+            "hi": [
+              "किसी का परिचय देने के लिए “This is …” कहें।",
+              "परिवार के सदस्य के नाम से पहले “my” कहें।"
+            ]
+          }
+        },
+        {
+          "english": "His name is Suresh.",
+          "alsoAccepted": [],
+          "translations": { "bn": "তাঁর নাম সুরেশ।", "hi": "उनका नाम सुरेश है।" },
+          "tips": {
+            "bn": [
+              "পুরুষ বা ছেলের জন্য “his”, নারী বা মেয়ের জন্য “her” বলুন।",
+              "বাংলায় দুটিই “তাঁর”, কিন্তু ইংরেজিতে আলাদা।"
+            ],
+            "en": [
+              "Use “his” for a man or a boy, and “her” for a woman or a girl.",
+              "Your language may use one word for both. English uses two."
+            ],
+            "hi": [
+              "पुरुष या लड़के के लिए “his”, महिला या लड़की के लिए “her” कहें।",
+              "हिंदी में दोनों के लिए “उनका” है, पर अंग्रेज़ी में अलग-अलग।"
+            ]
+          }
+        },
+        {
+          "english": "My mother is a nurse.",
+          "alsoAccepted": ["My mum is a nurse.", "My mom is a nurse."],
+          "translations": { "bn": "আমার মা একজন নার্স।", "hi": "मेरी माँ नर्स हैं।" },
+          "tips": {
+            "bn": ["পেশার নামের আগে “a” বসান।", "একজনের কথা বলতে “is” ব্যবহার করুন।"],
+            "en": ["Use “a” before the name of a job.", "Use “is” when you talk about one person."],
+            "hi": ["पेशे के नाम से पहले “a” लगाएँ।", "एक व्यक्ति के बारे में बताते समय “is” लगाएँ।"]
+          }
+        },
+        {
+          "english": "She is my sister.",
+          "alsoAccepted": [],
+          "translations": { "bn": "ও আমার বোন।", "hi": "वह मेरी बहन है।" },
+          "tips": {
+            "bn": [
+              "নারী বা মেয়ের জন্য “she” বলুন।",
+              "পুরুষ বা ছেলের জন্য “he” বলুন: “He is my brother.”"
+            ],
+            "en": [
+              "Use “she” for a woman or a girl.",
+              "Use “he” for a man or a boy: “He is my brother.”"
+            ],
+            "hi": [
+              "महिला या लड़की के लिए “she” कहें।",
+              "पुरुष या लड़के के लिए “he” कहें: “He is my brother.”"
+            ]
+          }
+        },
+        {
+          "english": "My brother is ten years old.",
+          "alsoAccepted": ["My brother is ten.", "My brother is 10 years old."],
+          "translations": { "bn": "আমার ভাইয়ের বয়স দশ বছর।", "hi": "मेरा भाई दस साल का है।" },
+          "tips": {
+            "bn": [
+              "আগে বয়সের সংখ্যা, তারপর “years old” বলুন।",
+              "শুধু সংখ্যাটিও বলা যায়: “He is ten.”"
+            ],
+            "en": [
+              "Say the age, then “years old”.",
+              "You can also say only the number: “He is ten.”"
+            ],
+            "hi": [
+              "पहले उम्र की संख्या, फिर “years old” कहें।",
+              "सिर्फ़ संख्या भी कह सकते हैं: “He is ten.”"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Rohit",
+      "asWoman": "Anjali",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! I’m Rohit. Tell me about your family. How many people are in your family?",
+          "reply": "There are … people in my family.",
+          "cues": {
+            "bn": "বলুন আপনার পরিবারে কতজন আছেন।",
+            "hi": "बताएँ कि आपके परिवार में कितने लोग हैं।"
+          }
+        },
+        {
+          "partner": "Who are they?",
+          "reply": "My …, my … and me.",
+          "cues": {
+            "bn": "পরিবারে কে কে আছেন বলুন, শেষে নিজের কথা।",
+            "hi": "बताएँ कि परिवार में कौन-कौन हैं, अंत में अपना नाम लें।"
+          }
+        },
+        {
+          "partner": "Do you have a brother or a sister?",
+          "reply": "I have …",
+          "cues": {
+            "bn": "ক’জন ভাই-বোন আছে বলুন, বা বলুন নেই।",
+            "hi": "बताएँ कि कितने भाई-बहन हैं, या कहें कि नहीं हैं।"
+          }
+        },
+        {
+          "partner": "I have one sister. Now ask me about my family.",
+          "reply": "How many people are in your family?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন তাঁর পরিবারে কতজন আছেন।",
+            "hi": "पूछें कि उनके परिवार में कितने लोग हैं।"
+          }
+        },
+        {
+          "partner": "There are four people in my family. I love my family.",
+          "reply": "That’s lovely. I love my family too.",
+          "cues": {
+            "bn": "বলুন বেশ সুন্দর, আর বলুন আপনিও আপনার পরিবারকে ভালোবাসেন।",
+            "hi": "कहें कि यह बहुत अच्छा है, और कहें कि आपको भी अपने परिवार से प्यार है।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Let me tell you about my family",
+        "translations": { "bn": "আমার পরিবারের কথা বলি", "hi": "मेरे परिवार के बारे में सुनिए" }
+      },
+      "instruction": {
+        "text": "Tell someone about your family. Speak for about half a minute.",
+        "translations": {
+          "bn": "কাউকে আপনার পরিবারের কথা বলুন। প্রায় আধ মিনিট বলুন।",
+          "hi": "किसी को अपने परिवार के बारे में बताएँ। लगभग आधा मिनट बोलें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say how many people are in your family",
+          "translations": {
+            "bn": "পরিবারে কতজন আছেন বলুন",
+            "hi": "बताएँ कि परिवार में कितने लोग हैं"
+          }
+        },
+        {
+          "text": "Say who they are",
+          "translations": { "bn": "কে কে আছেন বলুন", "hi": "बताएँ कि कौन-कौन हैं" }
+        },
+        {
+          "text": "Say one thing about one person",
+          "translations": {
+            "bn": "একজনের সম্পর্কে একটি কথা বলুন",
+            "hi": "किसी एक के बारे में एक बात बताएँ"
+          }
+        },
+        {
+          "text": "Use “he” or “she” once",
+          "translations": {
+            "bn": "একবার “he” বা “she” ব্যবহার করুন",
+            "hi": "एक बार “he” या “she” का प्रयोग करें"
+          }
+        },
+        {
+          "text": "Say that you love your family",
+          "translations": {
+            "bn": "বলুন আপনি আপনার পরিবারকে ভালোবাসেন",
+            "hi": "कहें कि आपको अपने परिवार से प्यार है"
+          }
+        }
+      ],
+      "phrases": [
+        "There are … people in my family.",
+        "This is my …",
+        "He is my …",
+        "She is my …",
+        "My … is a …",
+        "I love my family."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which word do you use for a man or a boy?",
+            "translations": {
+              "bn": "পুরুষ বা ছেলের জন্য কোন শব্দটি ব্যবহার করবেন?",
+              "hi": "पुरुष या लड़के के लिए कौन-सा शब्द इस्तेमाल करें?"
+            }
+          },
+          "answer": "he",
+          "others": ["she", "my"]
+        },
+        {
+          "question": {
+            "text": "You show a photo of your mother. What do you say?",
+            "translations": {
+              "bn": "মায়ের ছবি দেখানোর সময় কী বলবেন?",
+              "hi": "माँ की तस्वीर दिखाते समय क्या कहें?"
+            }
+          },
+          "answer": "This is my mother.",
+          "others": ["He is my brother.", "Who is she?"]
+        },
+        {
+          "question": {
+            "text": "How do you ask about the size of someone’s family?",
+            "translations": {
+              "bn": "কারও পরিবারে কতজন, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी के परिवार में कितने लोग हैं, यह कैसे पूछें?"
+            }
+          },
+          "answer": "How many people are in your family?",
+          "others": ["Who is she?", "Do you have a sister?"]
+        },
+        {
+          "question": {
+            "text": "Someone points to a girl and asks, “Who is she?” What do you say?",
+            "translations": {
+              "bn": "কেউ একটি মেয়েকে দেখিয়ে জিজ্ঞেস করলেন, “Who is she?” কী বলবেন?",
+              "hi": "कोई एक लड़की की ओर इशारा करके पूछे, “Who is she?” तो क्या कहें?"
+            }
+          },
+          "answer": "She is my sister.",
+          "others": ["He is my father.", "There are four people."]
+        },
+        {
+          "question": {
+            "text": "Your mother’s mother is your …",
+            "translations": {
+              "bn": "আপনার মায়ের মা হলেন আপনার …",
+              "hi": "आपकी माँ की माँ आपकी … हैं"
+            }
+          },
+          "answer": "grandmother",
+          "others": ["sister", "mother"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Dev",
+          "text": "Welcome, Sana! Please meet my family.",
+          "translations": {
+            "bn": "স্বাগত, সানা! আমার পরিবারের সঙ্গে পরিচিত হোন।",
+            "hi": "स्वागत है, सना! मेरे परिवार से मिलिए।"
+          }
+        },
+        {
+          "speaker": "Sana",
+          "text": "Thank you, Dev. Good evening, everyone!",
+          "translations": {
+            "bn": "ধন্যবাদ, দেব। সবাইকে শুভ সন্ধ্যা!",
+            "hi": "धन्यवाद, देव। सबको शुभ संध्या!"
+          }
+        },
+        {
+          "speaker": "Dev",
+          "text": "This is my mother. She is a teacher.",
+          "translations": {
+            "bn": "ইনি আমার মা। তিনি একজন শিক্ষিকা।",
+            "hi": "ये मेरी माँ हैं। वे शिक्षिका हैं।"
+          }
+        },
+        {
+          "speaker": "Sana",
+          "text": "Nice to meet you. And who is he?",
+          "translations": {
+            "bn": "আপনার সঙ্গে পরিচিত হয়ে ভালো লাগল। আর উনি কে?",
+            "hi": "आपसे मिलकर अच्छा लगा। और ये कौन हैं?"
+          }
+        },
+        {
+          "speaker": "Dev",
+          "text": "He is my grandfather. He is seventy years old.",
+          "translations": {
+            "bn": "উনি আমার ঠাকুরদা। তাঁর বয়স সত্তর বছর।",
+            "hi": "ये मेरे दादाजी हैं। वे सत्तर साल के हैं।"
+          }
+        },
+        {
+          "speaker": "Sana",
+          "text": "And the little girl? Who is she?",
+          "translations": { "bn": "আর ছোট মেয়েটি? ও কে?", "hi": "और वह छोटी बच्ची? वह कौन है?" }
+        },
+        {
+          "speaker": "Dev",
+          "text": "She is my sister, Tara. She is six.",
+          "translations": {
+            "bn": "ও আমার বোন, তারা। ওর বয়স ছয়।",
+            "hi": "वह मेरी बहन तारा है। वह छह साल की है।"
+          }
+        },
+        {
+          "speaker": "Sana",
+          "text": "Hello, Tara! How many people are in your family, Dev?",
+          "translations": {
+            "bn": "হ্যালো, তারা! আপনার পরিবারে কতজন আছেন, দেব?",
+            "hi": "हैलो, तारा! आपके परिवार में कितने लोग हैं, देव?"
+          }
+        },
+        {
+          "speaker": "Dev",
+          "text": "There are six people in my family.",
+          "translations": { "bn": "আমার পরিবারে ছয়জন আছেন।", "hi": "मेरे परिवार में छह लोग हैं।" }
+        },
+        {
+          "speaker": "Sana",
+          "text": "I have a small family. There are three people.",
+          "translations": {
+            "bn": "আমার পরিবার ছোট। আমরা তিনজন।",
+            "hi": "मेरा परिवार छोटा है। हम तीन लोग हैं।"
+          }
+        },
+        {
+          "speaker": "Dev",
+          "text": "Who are they?",
+          "translations": { "bn": "তাঁরা কে কে?", "hi": "वे कौन-कौन हैं?" }
+        },
+        {
+          "speaker": "Sana",
+          "text": "My father, my mother and me.",
+          "translations": {
+            "bn": "আমার বাবা, আমার মা আর আমি।",
+            "hi": "मेरे पिता, मेरी माँ और मैं।"
+          }
+        }
+      ],
+      "voices": { "Dev": "male", "Sana": "female" }
+    },
+    "review_roleplay": {
+      "partner": "Sana",
+      "asMan": "Dev",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! I’m Sana. Is this a photo of your family?",
+          "reply": "Yes. This is my family.",
+          "cues": {
+            "bn": "হ্যাঁ বলুন, আর বলুন এটি আপনার পরিবার।",
+            "hi": "हाँ कहें, और कहें कि यह आपका परिवार है।"
+          }
+        },
+        {
+          "partner": "How many people are in your family?",
+          "reply": "There are … people in my family.",
+          "cues": {
+            "bn": "বলুন আপনার পরিবারে কতজন আছেন।",
+            "hi": "बताएँ कि आपके परिवार में कितने लोग हैं।"
+          }
+        },
+        {
+          "partner": "Tell me about one person in the photo.",
+          "reply": "This is my …",
+          "cues": { "bn": "ছবির একজনের পরিচয় দিন।", "hi": "तस्वीर में किसी एक का परिचय दें।" }
+        },
+        {
+          "partner": "You have a lovely family!",
+          "reply": "Thank you. I love my family.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন, আর বলুন আপনি আপনার পরিবারকে ভালোবাসেন।",
+            "hi": "धन्यवाद दें, और कहें कि आपको अपने परिवार से प्यार है।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A family photo",
+            "translations": { "bn": "পরিবারের ছবি", "hi": "परिवार की तस्वीर" }
+          },
+          "roleplay": {
+            "partner": "Divya",
+            "asMan": "Deepak",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "What a nice photo! Is this your family?",
+                "reply": "Yes, this is my family.",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, এটি আপনার পরিবার।",
+                  "hi": "कहें कि हाँ, यह आपका परिवार है।"
+                }
+              },
+              {
+                "partner": "Who is she?",
+                "reply": "She is my …",
+                "cues": {
+                  "bn": "ছবির একজন নারীর পরিচয় দিন: তিনি আপনার কে হন।",
+                  "hi": "तस्वीर की एक महिला का परिचय दें: वे आपकी कौन हैं।"
+                }
+              },
+              {
+                "partner": "And who is he?",
+                "reply": "He is my …",
+                "cues": {
+                  "bn": "ছবির একজন পুরুষের পরিচয় দিন: তিনি আপনার কে হন।",
+                  "hi": "तस्वीर के एक पुरुष का परिचय दें: वे आपके कौन हैं।"
+                }
+              },
+              {
+                "partner": "How many people are in your family?",
+                "reply": "There are … people in my family.",
+                "cues": {
+                  "bn": "বলুন আপনার পরিবারে কতজন আছেন।",
+                  "hi": "बताएँ कि आपके परिवार में कितने लोग हैं।"
+                }
+              },
+              {
+                "partner": "You have a lovely family.",
+                "reply": "Thank you!",
+                "cues": { "bn": "ধন্যবাদ দিন।", "hi": "धन्यवाद दें।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A guest at home",
+            "translations": { "bn": "বাড়িতে অতিথি", "hi": "घर पर मेहमान" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! Thank you for inviting me.",
+                "reply": "Welcome! Please meet my family.",
+                "cues": {
+                  "bn": "তাঁকে স্বাগত জানান, আর আপনার পরিবারের সঙ্গে পরিচিত হতে বলুন।",
+                  "hi": "उनका स्वागत करें, और अपने परिवार से मिलने को कहें।"
+                }
+              },
+              {
+                "partner": "Good evening, everyone! Who is this?",
+                "reply": "This is my …",
+                "cues": {
+                  "bn": "পরিবারের একজনের পরিচয় দিন।",
+                  "hi": "परिवार के किसी एक का परिचय दें।"
+                }
+              },
+              {
+                "partner": "Nice to meet you all. Do you have a brother or a sister?",
+                "reply": "I have …",
+                "cues": {
+                  "bn": "ক’জন ভাই-বোন আছে বলুন, বা বলুন নেই।",
+                  "hi": "बताएँ कि कितने भाई-बहन हैं, या कहें कि नहीं हैं।"
+                }
+              },
+              {
+                "partner": "You have a lovely family.",
+                "reply": "Thank you. I love my family.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর বলুন আপনি আপনার পরিবারকে ভালোবাসেন।",
+                  "hi": "धन्यवाद दें, और कहें कि आपको अपने परिवार से प्यार है।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At the school office",
+            "translations": { "bn": "স্কুলের অফিসে", "hi": "स्कूल के दफ़्तर में" }
+          },
+          "roleplay": {
+            "partner": "the clerk",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning. I need some information about your family.",
+                "reply": "Good morning. Sure.",
+                "cues": {
+                  "bn": "সুপ্রভাত জানান, আর বলুন নিশ্চয়ই।",
+                  "hi": "सुप्रभात कहें, और कहें कि ज़रूर।"
+                }
+              },
+              {
+                "partner": "How many people are in your family?",
+                "reply": "There are … people in my family.",
+                "cues": {
+                  "bn": "বলুন আপনার পরিবারে কতজন আছেন।",
+                  "hi": "बताएँ कि आपके परिवार में कितने लोग हैं।"
+                }
+              },
+              {
+                "partner": "Please tell me your mother’s name or your father’s name.",
+                "reply": "My mother’s name is …",
+                "cues": { "bn": "মা বা বাবার নাম বলুন।", "hi": "माँ या पिता का नाम बताएँ।" }
+              },
+              {
+                "partner": "Thank you. That is all.",
+                "reply": "Thank you. Goodbye!",
+                "cues": { "bn": "ধন্যবাদ দিন, আর বিদায় জানান।", "hi": "धन्यवाद दें, और विदा लें।" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

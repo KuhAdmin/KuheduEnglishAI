@@ -16,49 +16,55 @@ import { TabsLayout } from './layouts/TabsLayout'
 import { RouteError } from './routes/RouteError'
 import { openWhereTheyLeftOff } from './routes/whereTheyLeftOff'
 
-export const router = createBrowserRouter([
-  {
-    path: '/',
-    Component: RootLayout,
-    ErrorBoundary: RouteError,
-    // Shown while the first lazy route loads; the HTML background already matches the theme.
-    HydrateFallback: () => null,
-    children: [
-      // Learner app: phone-width column
-      {
-        Component: PhoneLayout,
-        children: [
-          // What a visitor without an account can open: the landing page (for a first visit;
-          // anyone signed in goes on from where they were) and the ways of getting an account.
-          { loader: openWhereTheyLeftOff, children: landingRoutes },
-          ...authStepRoutes,
-          { Component: ScreenLayout, children: authRoutes },
-          // Everything else is a learner's, and there are no guests: only with an account.
-          {
-            loader: requireAccount,
-            // Asked on the way in, not again at every step taken inside (a part of a review
-            // opened, a scenario picked): on a poor connection each would wait for the server.
-            shouldRevalidate: () => false,
-            children: [
-              // Full-bleed screens
-              ...onboardingRoutes,
-              ...placementRoutes,
-              ...weekRoutes,
-              ...lessonDayRoutes,
-              ...profileSettingsRoutes,
-              // Padded screens outside the main tabs
-              { Component: ScreenLayout, children: conversationRoutes },
-              // The main tabs, with the bottom navigation
-              {
-                Component: TabsLayout,
-                children: [...homeRoutes, ...lessonsRoutes, ...progressRoutes, ...profileRoutes],
-              },
-            ],
-          },
-        ],
-      },
-      // Admin area: wider layout, signed-in admins only
-      { loader: requireAdmin, children: adminRoutes },
-    ],
-  },
-])
+/**
+ * The app's routes. A router runs the first screen's loaders the moment it is made, so it is
+ * made by the app shell, after what those loaders count on has been started, and not here as
+ * this file is read.
+ */
+export const createAppRouter = () =>
+  createBrowserRouter([
+    {
+      path: '/',
+      Component: RootLayout,
+      ErrorBoundary: RouteError,
+      // Shown while the first lazy route loads; the HTML background already matches the theme.
+      HydrateFallback: () => null,
+      children: [
+        // Learner app: phone-width column
+        {
+          Component: PhoneLayout,
+          children: [
+            // What a visitor without an account can open: the landing page (for a first visit;
+            // anyone signed in goes on from where they were) and the ways of getting an account.
+            { loader: openWhereTheyLeftOff, children: landingRoutes },
+            ...authStepRoutes,
+            { Component: ScreenLayout, children: authRoutes },
+            // Everything else is a learner's, and there are no guests: only with an account.
+            {
+              loader: requireAccount,
+              // Asked on the way in, not again at every step taken inside (a part of a review
+              // opened, a scenario picked): on a poor connection each would wait for the server.
+              shouldRevalidate: () => false,
+              children: [
+                // Full-bleed screens
+                ...onboardingRoutes,
+                ...placementRoutes,
+                ...weekRoutes,
+                ...lessonDayRoutes,
+                ...profileSettingsRoutes,
+                // Padded screens outside the main tabs
+                { Component: ScreenLayout, children: conversationRoutes },
+                // The main tabs, with the bottom navigation
+                {
+                  Component: TabsLayout,
+                  children: [...homeRoutes, ...lessonsRoutes, ...progressRoutes, ...profileRoutes],
+                },
+              ],
+            },
+          ],
+        },
+        // Admin area: wider layout, signed-in admins only
+        { loader: requireAdmin, children: adminRoutes },
+      ],
+    },
+  ])

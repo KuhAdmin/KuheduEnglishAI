@@ -87,7 +87,7 @@ const persistedSchema = z.object({
 })
 
 /** A saved test can only be continued on the questions it was started with. */
-function usableSession(session: PlacementSession | null): PlacementSession | null {
+export function usableSession(session: PlacementSession | null): PlacementSession | null {
   if (!session || isFinished(session)) return session
   const known = (id: string) => findItem(id) !== undefined
   const intact =
@@ -99,8 +99,9 @@ function usableSession(session: PlacementSession | null): PlacementSession | nul
 
 /**
  * The placement test's state, saved in this browser after every change so a closed app, a
- * refresh or a lost connection never costs the learner their answers.
- * TODO(backend): keep sessions and results on the server. TODO(auth): tie them to the learner.
+ * refresh or a lost connection never costs the learner their answers. For someone signed in
+ * the test and its result are kept with their account too (`placementSync.ts`); the event log
+ * is this browser's only.
  */
 export const usePlacementStore = create<PlacementState>()(
   persist(

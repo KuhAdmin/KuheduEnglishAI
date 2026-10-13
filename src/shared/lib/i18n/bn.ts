@@ -240,6 +240,40 @@ export const bn: TextCatalog = {
   'lessonDay.practice.listen': 'নিজের কণ্ঠ শুনুন',
   'lessonDay.practice.micNote':
     'আমরা আপনার মাইক্রোফোন ব্যবহারের অনুমতি চাইব। আপনার রেকর্ডিং সংরক্ষণ করা হয় না।',
+  'lessonDay.feedback.check': 'আমি কেমন বললাম দেখুন',
+  'lessonDay.feedback.checking': 'আপনার রেকর্ডিং শোনা হচ্ছে…',
+  'lessonDay.feedback.sends':
+    'পরীক্ষার জন্য এই রেকর্ডিং আমাদের সার্ভারে পাঠানো হয়। এটি রেখে দেওয়া হয় না।',
+  'lessonDay.feedback.title': 'কেমন শোনাল',
+  'lessonDay.feedback.firstVersion':
+    'এই পরীক্ষাটি নতুন, ভুলও হতে পারে। এর চেয়ে নিজের কান আর শিক্ষকের কথায় বেশি ভরসা রাখুন।',
+  'lessonDay.feedback.ok': 'ঠিক শোনাল। খুব ভালো!',
+  'lessonDay.feedback.nothingHeard':
+    'কোনো শব্দ শোনা যায়নি। মাইক্রোফোনের আরেকটু কাছে এসে আবার চেষ্টা করুন।',
+  'lessonDay.feedback.toTry': 'একবার চেষ্টা করে দেখুন',
+  'lessonDay.feedback.extraSyllable': 'মনে হলো একটি ভাগ বেশি বলা হয়েছে।',
+  'lessonDay.feedback.missingSyllable': 'মনে হলো একটি ভাগ বাদ পড়েছে।',
+  'lessonDay.feedback.counts': 'এই শব্দে ভাগ: {expected}টি। শোনা গেছে: {heard}টি।',
+  'lessonDay.feedback.stressMoved': 'মনে হলো অন্য একটি ভাগে জোর পড়েছে।',
+  'lessonDay.feedback.strongPart': '“{part}” ভাগে জোর দিন।',
+  'lessonDay.feedback.soundDiffers':
+    'এক বা একাধিক ধ্বনি একটু অন্যরকম শোনাল। শব্দটি আবার শুনে মিলিয়ে নিন।',
+  'lessonDay.feedback.theWord': 'শব্দটি',
+  'lessonDay.feedback.you': 'আপনি',
+  'lessonDay.feedback.hearWord': 'শব্দটি শুনুন',
+  'lessonDay.feedback.hearYou': 'নিজেকে শুনুন',
+  'lessonDay.feedback.wordsDiffer':
+    'এই শব্দগুলো একটু অন্যরকম শোনাল: {words}। আবার শুনে মিলিয়ে নিন।',
+  'lessonDay.feedback.sentenceDiffers':
+    'কিছু জায়গা একটু অন্যরকম শোনাল। বাক্যটি আবার শুনে মিলিয়ে নিন।',
+  'lessonDay.feedback.hearSentence': 'বাক্যটি শুনুন',
+  'lessonDay.feedback.unreadableSentence':
+    'এই রেকর্ডিংটি পরীক্ষা করা যায়নি। বাক্যটি আবার রেকর্ড করুন।',
+  'lessonDay.feedback.afterAnswer': 'পরীক্ষা করাতে চাইলে, বাক্যটি এখন দেখে আরেকবার বলুন।',
+  'lessonDay.feedback.unavailable': 'এখন এটি পরীক্ষা করা যাচ্ছে না। আপনি নিজের কণ্ঠ শুনতে পারেন।',
+  'lessonDay.feedback.unreadable': 'এই রেকর্ডিংটি পরীক্ষা করা যায়নি। শব্দটি আবার রেকর্ড করুন।',
+  'lessonDay.feedback.tooMany':
+    'অনেকবার পরীক্ষা করা হয়েছে। এক মিনিট অপেক্ষা করে আবার চেষ্টা করুন।',
   'lessonDay.translate.title': 'অনুবাদ করুন ও বলুন',
   'lessonDay.translate.subtitle': 'বাক্যটি অনুবাদ করুন, তারপর বলুন।',
   'lessonDay.translate.listenSubtitle': 'বাক্যটি শুনুন, তারপর বলুন।',
@@ -282,6 +316,19 @@ export const bn: TextCatalog = {
   'lessonDay.talk.done': 'খুব ভালো! আপনি কথোপকথনটি শেষ করেছেন।',
   'lessonDay.talk.again': 'আবার অনুশীলন করুন',
   'lessonDay.talk.audioFailed': 'লাইনগুলো এখন পড়ে শোনানো যাচ্ছে না। পড়ে নিয়ে উত্তর দিন।',
+  'lessonDay.reply.check': 'আমার উত্তর পরীক্ষা করুন',
+  'lessonDay.reply.checking': 'আপনার উত্তর দেখা হচ্ছে…',
+  'lessonDay.reply.title': 'আপনার উত্তর সম্পর্কে',
+  'lessonDay.reply.heard': 'আমরা শুনেছি',
+  'lessonDay.reply.nothingToChange': 'আমরা বদলানোর মতো কিছু পাইনি।',
+  'lessonDay.reply.offTopic':
+    '{name} যা বললেন, এটি হয়তো তার উত্তর নয়। উপরের উত্তরটির সঙ্গে মিলিয়ে দেখুন।',
+  'lessonDay.reply.better': 'এভাবে বলতে পারেন',
+  'lessonDay.reply.nothingHeard':
+    'কথাগুলো বোঝা যায়নি। পরের বার মাইক্রোফোনের আরেকটু কাছে এসে বলুন।',
+  'lessonDay.reply.unavailable':
+    'এখন আপনার উত্তর পরীক্ষা করা যাচ্ছে না। আপনি নিজের কণ্ঠ শুনতে পারেন।',
+  'lessonDay.reply.unreadable': 'এই রেকর্ডিংটি পরীক্ষা করা যায়নি।',
   'lessonDay.perform.tasks': 'যা করতে হবে',
   'lessonDay.perform.record': 'আপনার চেষ্টা রেকর্ড করুন',
   'lessonDay.perform.selfCheck': 'নিজের রেকর্ডিং শুনুন, আর যা যা পেরেছেন তাতে টিক দিন।',
@@ -369,7 +416,8 @@ export const bn: TextCatalog = {
   'profile.photo.alt': 'আপনার ছবি',
   'profile.photo.change': 'আপনার ছবি বদলান',
   'profile.photo.remove': 'ছবি সরিয়ে দিন',
-  'profile.photo.onThisDevice': 'এই ছবিটি শুধু এই ডিভাইসেই রাখা আছে।',
+  'profile.photo.withAccount':
+    'এই ছবিটি আপনার অ্যাকাউন্টের সঙ্গে রাখা আছে। শুধু আপনিই এটি দেখতে পান।',
   'profile.photo.unreadable': 'ফাইলটি ছবি হিসেবে পড়া যায়নি। অন্য একটি বেছে নিন।',
   'profile.photo.notKept': 'ছবিটি রাখা যায়নি। আরও ছোট একটি ছবি দিয়ে চেষ্টা করুন।',
   'voice.title': 'ভয়েস সেটিংস',

@@ -1,7 +1,9 @@
 import { Headphones, Layers, ListChecks, MessagesSquare, Mic, type LucideIcon } from 'lucide-react'
 import type { To } from 'react-router'
 import type { ReviewPart, WeekReview } from '@/shared/lib/curriculum/weekReviews'
+import { partnerNameFor } from '@/shared/lib/curriculum/weekRoleplays'
 import { fillText, formatNumber, useLanguage, useT, type TranslationKey } from '@/shared/lib/i18n'
+import { useTutorVoiceKind } from '@/shared/lib/learner/tutorAvatar'
 import { StepScreen } from '@/shared/ui/StepScreen'
 import { LessonTopBar } from './LessonTopBar'
 import { OptionalDayActions } from './OptionalDayActions'
@@ -57,6 +59,7 @@ export function ReviewMenu({
 }: ReviewMenuProps) {
   const t = useT()
   const language = useLanguage()
+  const tutor = useTutorVoiceKind()
 
   const about: Record<ReviewPart, string> = {
     quiz: t('lessonDay.review.quizAbout'),
@@ -65,7 +68,10 @@ export function ReviewMenu({
     flashcards: fillText(t('lessonDay.review.flashcardsAbout'), {
       count: formatNumber(language, review.flashcards?.words.length ?? 0),
     }),
-    roleplay: fillText(t('lessonDay.talk.title'), { name: review.roleplay?.partner ?? '' }),
+    // Named as the role-play itself will name them: the learner's tutor plays the part.
+    roleplay: fillText(t('lessonDay.talk.title'), {
+      name: review.roleplay ? partnerNameFor(review.roleplay, tutor) : '',
+    }),
   }
 
   const nextPart = parts.find((part) => !done.includes(part))

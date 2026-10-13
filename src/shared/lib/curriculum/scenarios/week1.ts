@@ -8,7 +8,8 @@ import type { WeekScenarios } from '../weekScenarios'
  * Written by the assistant, with the Bengali and Hindi names and cues. The cues speak of the
  * partner in forms that do not depend on gender ("তাঁকে", "उन्हें"), and of the learner too
  * ("आपका हाल … है" rather than "आप अच्छे / अच्छी हैं"). "My name is …" is left open for the
- * learner's own name.
+ * learner's own name. The learner's tutor plays each partner: Priya and Anita are Rahul and Anil
+ * when a man plays them, and Sam is Sam either way.
  * TODO(content): expert review of the English, native review of the names and cues.
  */
 export const week1Scenarios: WeekScenarios = {
@@ -20,6 +21,7 @@ export const week1Scenarios: WeekScenarios = {
       },
       roleplay: {
         partner: 'Priya',
+        asMan: 'Rahul',
         imageUrl: null,
         turns: [
           {
@@ -102,6 +104,7 @@ export const week1Scenarios: WeekScenarios = {
       },
       roleplay: {
         partner: 'Anita',
+        asMan: 'Anil',
         imageUrl: null,
         turns: [
           {

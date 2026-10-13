@@ -26,6 +26,10 @@
   --color-surface: #ffffff;
   --color-surface-raised: #ffffff;
   --color-surface-sunken: #eeeef8;
+  /* What is behind the app where it does not fill the display: around the phone it is drawn
+     in on a tablet or wider. Told apart from `bg` at a glance, in every theme, or the phone's
+     screen and the display around it read as one surface. Nothing is written on it. */
+  --color-display: #d6dbf7;
   --color-scrim: rgb(20 18 50 / 0.48);
 
   /* Text */
@@ -290,6 +294,7 @@
   --color-surface: #ffffff;
   --color-surface-raised: #ffffff;
   --color-surface-sunken: #eeeef8;
+  --color-display: #d6dbf7;
   --color-scrim: rgb(20 18 50 / 0.48);
   --color-fg: #1a1a2e;
   --color-fg-muted: #4c4f6b;
@@ -324,6 +329,7 @@
   --color-surface: #ffffff;
   --color-surface-raised: #ffffff;
   --color-surface-sunken: #fbeee5;
+  --color-display: #f6dccb;
   --color-scrim: rgb(60 25 10 / 0.48);
   --color-fg: #2b1d16;
   --color-fg-muted: #6b5145;
@@ -358,6 +364,7 @@
   --color-surface: #1b2320;
   --color-surface-raised: #232d29;
   --color-surface-sunken: #0e1311;
+  --color-display: #27332d;
   --color-scrim: rgb(0 0 0 / 0.6);
   --color-fg: #e9efeb;
   --color-fg-muted: #a8b5ad;
@@ -392,6 +399,7 @@
   --color-surface: #17182b;
   --color-surface-raised: #1f2037;
   --color-surface-sunken: #0a0b17;
+  --color-display: #232544;
   --color-scrim: rgb(0 0 0 / 0.6);
   --color-fg: #ecedf8;
   --color-fg-muted: #a9abc8;

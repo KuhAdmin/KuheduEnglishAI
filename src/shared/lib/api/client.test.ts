@@ -48,6 +48,30 @@ describe('apiRequest', () => {
     })
   })
 
+  it('sends a recording as it is, under its own type, and JSON as JSON', async () => {
+    mockFetch(200, { id: 'abc' })
+    const recording = new Blob(['wav'], { type: 'audio/wav' })
+
+    await apiRequest('/x', { method: 'POST', schema, blob: recording })
+    expect(fetch).toHaveBeenLastCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        body: recording,
+        headers: expect.objectContaining({ 'Content-Type': 'audio/wav' }),
+      }),
+    )
+
+    mockFetch(200, { id: 'abc' })
+    await apiRequest('/x', { method: 'POST', schema, body: { a: 1 } })
+    expect(fetch).toHaveBeenLastCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        body: '{"a":1}',
+        headers: expect.objectContaining({ 'Content-Type': 'application/json' }),
+      }),
+    )
+  })
+
   it('rejects responses that do not match the schema', async () => {
     mockFetch(200, { id: 42 })
     await expect(apiRequest('/x', { schema })).rejects.toThrow()

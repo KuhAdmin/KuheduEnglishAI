@@ -1,0 +1,644 @@
+{
+  "week": 10,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Asha",
+          "text": "Hello, Ravi! Are you busy now?",
+          "translations": {
+            "bn": "হ্যালো, রবি! আপনি কি এখন ব্যস্ত?",
+            "hi": "नमस्ते रवि! क्या आप अभी व्यस्त हैं?"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "A little. I am cooking dinner right now.",
+          "translations": {
+            "bn": "একটু। আমি এখন রাতের খাবার রান্না করছি।",
+            "hi": "थोड़ा। मैं अभी रात का खाना बना रहा हूँ।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "What are you cooking?",
+          "translations": { "bn": "কী রান্না করছেন?", "hi": "आप क्या बना रहे हैं?" }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "Rice and vegetables. My sister is helping me.",
+          "translations": {
+            "bn": "ভাত আর সবজি। আমার বোন আমাকে সাহায্য করছে।",
+            "hi": "चावल और सब्ज़ी। मेरी बहन मेरी मदद कर रही है।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "What is she doing?",
+          "translations": { "bn": "সে কী করছে?", "hi": "वह क्या कर रही है?" }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "She is cutting onions. She is crying!",
+          "translations": {
+            "bn": "সে পেঁয়াজ কাটছে। সে কাঁদছে!",
+            "hi": "वह प्याज़ काट रही है। वह रो रही है!"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Ha ha! And what are your parents doing?",
+          "translations": {
+            "bn": "হা হা! আর আপনার বাবা-মা কী করছেন?",
+            "hi": "हा हा! और आपके माता-पिता क्या कर रहे हैं?"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "My father is reading the newspaper. My mother is watching TV.",
+          "translations": {
+            "bn": "আমার বাবা খবরের কাগজ পড়ছেন। আমার মা টিভি দেখছেন।",
+            "hi": "मेरे पिता अख़बार पढ़ रहे हैं। मेरी माँ टीवी देख रही हैं।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Is it raining there?",
+          "translations": { "bn": "ওখানে কি বৃষ্টি হচ্ছে?", "hi": "क्या वहाँ बारिश हो रही है?" }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "Yes, it is raining. The children are playing inside.",
+          "translations": {
+            "bn": "হ্যাঁ, বৃষ্টি হচ্ছে। বাচ্চারা ভেতরে খেলছে।",
+            "hi": "हाँ, बारिश हो रही है। बच्चे अंदर खेल रहे हैं।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "It sounds like a busy evening. What am I doing? I am waiting for your dinner!",
+          "translations": {
+            "bn": "ব্যস্ত সন্ধ্যা মনে হচ্ছে। আর আমি কী করছি? আমি আপনার রান্নার অপেক্ষা করছি!",
+            "hi": "व्यस्त शाम लग रही है। और मैं क्या कर रही हूँ? मैं आपके खाने का इंतज़ार कर रही हूँ!"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "Ha ha! Come at eight. It will be ready.",
+          "translations": {
+            "bn": "হা হা! আটটায় আসুন। তৈরি থাকবে।",
+            "hi": "हा हा! आठ बजे आइए। तैयार रहेगा।"
+          }
+        }
+      ],
+      "voices": { "Asha": "female", "Ravi": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "now",
+          "phonetic": "/naʊ/",
+          "imageUrl": null,
+          "meanings": { "bn": "এখন", "hi": "अभी, अब" },
+          "syllables": ["now"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ow”-এর উচ্চারণ “আউ”-এর মতো।", "“right now” মানে ঠিক এই মুহূর্তে।"],
+            "en": ["The “ow” sounds like “ow!”", "“right now” means at this very moment."],
+            "hi": ["“ow” की आवाज़ “आउ” जैसी है।", "“right now” का मतलब है ठीक इसी पल।"]
+          }
+        },
+        {
+          "word": "cooking",
+          "phonetic": "/ˈkʊkɪŋ/",
+          "imageUrl": null,
+          "meanings": { "bn": "রান্না করছে", "hi": "खाना बना रहा है" },
+          "syllables": ["cook", "ing"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“oo” ছোট, “book”-এর মতো।", "প্রথম অংশটি জোর দিয়ে বলুন।"],
+            "en": ["The “oo” is short, as in “book”.", "Say the first part stronger."],
+            "hi": ["“oo” छोटा है, “book” जैसा।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        },
+        {
+          "word": "reading",
+          "phonetic": "/ˈriːdɪŋ/",
+          "imageUrl": null,
+          "meanings": { "bn": "পড়ছে", "hi": "पढ़ रहा है" },
+          "syllables": ["read", "ing"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“ea” লম্বা, “ee”-এর মতো।", "শেষের “ing” ছোট ও হালকা।"],
+            "en": ["The “ea” is long, like “ee”.", "Keep the ending “ing” short and soft."],
+            "hi": ["“ea” लंबा है, “ee” जैसा।", "अंत का “ing” छोटा और हल्का रखें।"]
+          }
+        },
+        {
+          "word": "writing",
+          "phonetic": "/ˈraɪtɪŋ/",
+          "imageUrl": null,
+          "meanings": { "bn": "লিখছে", "hi": "लिख रहा है" },
+          "syllables": ["(w)rit", "ing"],
+          "stress": 1,
+          "tips": {
+            "bn": ["শুরুর “w” উচ্চারণ হয় না।", "“i”-এর উচ্চারণ “eye”-এর মতো।"],
+            "en": ["The first “w” is not said.", "The “i” sounds like “eye”."],
+            "hi": ["शुरू का “w” बोला नहीं जाता।", "“i” की आवाज़ “eye” जैसी है।"]
+          }
+        },
+        {
+          "word": "running",
+          "phonetic": "/ˈrʌnɪŋ/",
+          "imageUrl": null,
+          "meanings": { "bn": "দৌড়াচ্ছে", "hi": "दौड़ रहा है" },
+          "syllables": ["run", "ning"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“n” দ্বিগুণ লেখা হয়, কিন্তু একবারই বলা হয়।"],
+            "en": ["Say the first part stronger.", "The “n” is written twice, but said once."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“n” दो बार लिखा जाता है, पर एक बार बोला जाता है।"]
+          }
+        },
+        {
+          "word": "listening",
+          "phonetic": "/ˈlɪsnɪŋ/",
+          "imageUrl": null,
+          "meanings": { "bn": "শুনছে", "hi": "सुन रहा है" },
+          "syllables": ["lis", "(t)en", "ing"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“t” উচ্চারণ হয় না।", "প্রথম অংশটি জোর দিয়ে বলুন।"],
+            "en": ["The “t” is not said.", "Say the first part stronger."],
+            "hi": ["“t” बोला नहीं जाता।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        },
+        {
+          "word": "talking",
+          "phonetic": "/ˈtɔːkɪŋ/",
+          "imageUrl": null,
+          "meanings": { "bn": "কথা বলছে", "hi": "बात कर रहा है" },
+          "syllables": ["tal(k)", "ing"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "“l” আর “k” দুটিই লেখা হয়, কিন্তু “l” প্রায় শোনা যায় না।",
+              "প্রথম অংশটি জোর দিয়ে বলুন।"
+            ],
+            "en": ["The “l” is nearly silent.", "Say the first part stronger."],
+            "hi": ["“l” लगभग सुनाई नहीं देता।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "What is she doing?",
+          "alsoAccepted": ["What is she doing now?", "What’s she doing?"],
+          "translations": { "bn": "সে কী করছে?", "hi": "वह क्या कर रही है?" },
+          "tips": {
+            "bn": ["এখন যা ঘটছে, তা জানতে “What is … doing” বলুন।", "উত্তরে বলুন “She is …ing.”"],
+            "en": [
+              "Use “What is … doing” to ask about something happening now.",
+              "The answer is “She is …ing.”"
+            ],
+            "hi": [
+              "अभी जो हो रहा है, उसे पूछने के लिए “What is … doing” कहें।",
+              "जवाब में “She is …ing.” कहें।"
+            ]
+          }
+        },
+        {
+          "english": "She is cooking dinner.",
+          "alsoAccepted": ["She’s cooking dinner.", "She is making dinner."],
+          "translations": {
+            "bn": "সে রাতের খাবার রান্না করছে।",
+            "hi": "वह रात का खाना बना रही है।"
+          },
+          "tips": {
+            "bn": ["“is” আর ক্রিয়ার শেষে “-ing” বসান।", "“She is” সংক্ষেপে “She’s” হয়।"],
+            "en": ["Use “is” and the verb with “-ing”.", "“She is” can be short: “She’s”."],
+            "hi": ["“is” और अंत में “-ing” वाली क्रिया लगाएँ।", "“She is” का छोटा रूप “She’s” है।"]
+          }
+        },
+        {
+          "english": "The children are playing outside.",
+          "alsoAccepted": ["The kids are playing outside."],
+          "translations": { "bn": "বাচ্চারা বাইরে খেলছে।", "hi": "बच्चे बाहर खेल रहे हैं।" },
+          "tips": {
+            "bn": ["একাধিকের জন্য “are” বলুন।", "“outside” মানে বাইরে।"],
+            "en": ["Use “are” for more than one person.", "“outside” means not inside."],
+            "hi": ["एक से ज़्यादा लोगों के लिए “are” कहें।", "“outside” का मतलब है बाहर।"]
+          }
+        },
+        {
+          "english": "Is he listening to music?",
+          "alsoAccepted": ["Is he listening to the music?"],
+          "translations": { "bn": "সে কি গান শুনছে?", "hi": "क्या वह संगीत सुन रहा है?" },
+          "tips": {
+            "bn": ["প্রশ্নে “Is” আগে বসে।", "“listen”-এর পরে “to” লাগে।"],
+            "en": ["In a question, “Is” comes first.", "After “listen”, use “to”."],
+            "hi": ["सवाल में “Is” पहले आता है।", "“listen” के बाद “to” लगता है।"]
+          }
+        },
+        {
+          "english": "No, he is not. He is reading a book.",
+          "alsoAccepted": [
+            "No, he isn’t. He is reading a book.",
+            "No, he’s not. He’s reading a book."
+          ],
+          "translations": {
+            "bn": "না, শুনছে না। সে একটি বই পড়ছে।",
+            "hi": "नहीं, वह नहीं सुन रहा। वह एक किताब पढ़ रहा है।"
+          },
+          "tips": {
+            "bn": ["ছোট উত্তরে “No, he is not.” বলুন।", "তারপর সত্যিকারের কাজটি বলুন।"],
+            "en": ["The short answer is “No, he is not.”", "Then say what is really happening."],
+            "hi": ["छोटा जवाब है “No, he is not.”", "फिर बताएँ कि असल में क्या हो रहा है।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Rohini",
+      "asMan": "Rohan",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! I am calling from the park. What are you doing right now?",
+          "reply": "I am … right now.",
+          "cues": { "bn": "এখন ঠিক কী করছেন, বলুন।", "hi": "बताएँ कि आप अभी क्या कर रहे हैं।" }
+        },
+        {
+          "partner": "I see. I am watching some children. They are playing cricket. What are you wearing?",
+          "reply": "I am wearing …",
+          "cues": { "bn": "কী পরে আছেন, বলুন।", "hi": "बताएँ कि आपने क्या पहना है।" }
+        },
+        {
+          "partner": "Nice. Look, a man is running with a dog. What is he doing?",
+          "reply": "He is running with a dog.",
+          "cues": {
+            "bn": "বলুন সে কুকুর নিয়ে দৌড়াচ্ছে।",
+            "hi": "कहें कि वह कुत्ते के साथ दौड़ रहा है।"
+          }
+        },
+        {
+          "partner": "And two women are sitting on a bench. What are they doing?",
+          "reply": "They are talking.",
+          "cues": { "bn": "বলুন তাঁরা কথা বলছেন।", "hi": "कहें कि वे बात कर रही हैं।" }
+        },
+        {
+          "partner": "Yes! Now ask me a question about what is happening.",
+          "reply": "What are the children doing?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন বাচ্চারা কী করছে।",
+            "hi": "पूछें कि बच्चे क्या कर रहे हैं।"
+          }
+        },
+        {
+          "partner": "They are playing cricket. Thank you for talking. Bye!",
+          "reply": "Bye! Talk to you soon.",
+          "cues": {
+            "bn": "বিদায় জানান, আর বলুন আবার কথা হবে।",
+            "hi": "विदा लें, और कहें कि फिर बात होगी।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "What is happening around me?",
+        "translations": { "bn": "আমার চারপাশে কী ঘটছে?", "hi": "मेरे आस-पास क्या हो रहा है?" }
+      },
+      "instruction": {
+        "text": "Look around you now. Describe what you see and hear, in your own words.",
+        "translations": {
+          "bn": "এখন চারপাশে তাকান। যা দেখছেন ও শুনছেন, নিজের ভাষায় বলুন।",
+          "hi": "अभी अपने आस-पास देखें। जो दिख और सुन रहा है, उसे अपने शब्दों में बताएँ।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say where you are now",
+          "translations": { "bn": "এখন কোথায় আছেন, বলুন", "hi": "बताएँ कि आप अभी कहाँ हैं" }
+        },
+        {
+          "text": "Say what you are doing",
+          "translations": { "bn": "আপনি কী করছেন, বলুন", "hi": "बताएँ कि आप क्या कर रहे हैं" }
+        },
+        {
+          "text": "Say what two other people are doing",
+          "translations": {
+            "bn": "আরও দুজন কী করছেন, বলুন",
+            "hi": "बताएँ कि दो और लोग क्या कर रहे हैं"
+          }
+        },
+        {
+          "text": "Say what you can hear",
+          "translations": {
+            "bn": "কী শুনতে পাচ্ছেন, বলুন",
+            "hi": "बताएँ कि आपको क्या सुनाई दे रहा है"
+          }
+        },
+        {
+          "text": "Say what the weather is like now",
+          "translations": { "bn": "এখন আবহাওয়া কেমন, বলুন", "hi": "बताएँ कि अभी मौसम कैसा है" }
+        }
+      ],
+      "phrases": [
+        "I am sitting in …",
+        "Someone is …ing.",
+        "Two people are …ing.",
+        "I can hear …",
+        "It is raining.",
+        "The sun is shining."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you ask what someone is doing now?",
+            "translations": {
+              "bn": "কেউ এখন কী করছে, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "कोई अभी क्या कर रहा है, यह कैसे पूछें?"
+            }
+          },
+          "answer": "What are you doing?",
+          "others": ["What do you do?", "What did you do?"]
+        },
+        {
+          "question": {
+            "text": "Which sentence is happening now?",
+            "translations": {
+              "bn": "কোন বাক্যটি এখন ঘটছে এমন কিছু বোঝায়?",
+              "hi": "कौन-सा वाक्य अभी हो रही बात बताता है?"
+            }
+          },
+          "answer": "He is eating lunch.",
+          "others": ["He eats lunch at one.", "He always eats lunch."]
+        },
+        {
+          "question": {
+            "text": "Complete: The children ___ playing.",
+            "translations": {
+              "bn": "পূরণ করুন: The children ___ playing.",
+              "hi": "पूरा करें: The children ___ playing."
+            }
+          },
+          "answer": "are",
+          "others": ["is", "am"]
+        },
+        {
+          "question": {
+            "text": "Someone asks, “Are you reading?” You are not. What do you say?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “Are you reading?” আপনি পড়ছেন না। কী বলবেন?",
+              "hi": "कोई पूछे, “Are you reading?” आप पढ़ नहीं रहे। क्या कहेंगे?"
+            }
+          },
+          "answer": "No, I am not.",
+          "others": ["No, I don’t.", "Yes, I do."]
+        },
+        {
+          "question": {
+            "text": "Which word shows that something is happening at this moment?",
+            "translations": {
+              "bn": "কোন শব্দটি বোঝায় কিছু এই মুহূর্তে ঘটছে?",
+              "hi": "कौन-सा शब्द बताता है कि कुछ इसी पल हो रहा है?"
+            }
+          },
+          "answer": "right now",
+          "others": ["every day", "never"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Reporter",
+          "text": "Good evening. I am standing at the busy market.",
+          "translations": {
+            "bn": "শুভ সন্ধ্যা। আমি এখন ব্যস্ত বাজারে দাঁড়িয়ে আছি।",
+            "hi": "नमस्ते। मैं इस समय व्यस्त बाज़ार में खड़ा हूँ।"
+          }
+        },
+        {
+          "speaker": "Reporter",
+          "text": "A woman is buying vegetables. A man is selling fruit.",
+          "translations": {
+            "bn": "একজন নারী সবজি কিনছেন। একজন পুরুষ ফল বিক্রি করছেন।",
+            "hi": "एक महिला सब्ज़ियाँ ख़रीद रही है। एक आदमी फल बेच रहा है।"
+          }
+        },
+        {
+          "speaker": "Studio",
+          "text": "What are the children doing there?",
+          "translations": { "bn": "ওখানে বাচ্চারা কী করছে?", "hi": "वहाँ बच्चे क्या कर रहे हैं?" }
+        },
+        {
+          "speaker": "Reporter",
+          "text": "They are eating ice cream and laughing.",
+          "translations": {
+            "bn": "তারা আইসক্রিম খাচ্ছে আর হাসছে।",
+            "hi": "वे आइसक्रीम खा रहे हैं और हँस रहे हैं।"
+          }
+        },
+        {
+          "speaker": "Studio",
+          "text": "Is it raining?",
+          "translations": { "bn": "বৃষ্টি হচ্ছে কি?", "hi": "क्या बारिश हो रही है?" }
+        },
+        {
+          "speaker": "Reporter",
+          "text": "No, it is not raining. The sun is shining.",
+          "translations": {
+            "bn": "না, বৃষ্টি হচ্ছে না। রোদ উঠেছে।",
+            "hi": "नहीं, बारिश नहीं हो रही। धूप खिली है।"
+          }
+        },
+        {
+          "speaker": "Studio",
+          "text": "What are people carrying?",
+          "translations": { "bn": "লোকজন কী বহন করছে?", "hi": "लोग क्या उठाए हुए हैं?" }
+        },
+        {
+          "speaker": "Reporter",
+          "text": "Many people are carrying big bags.",
+          "translations": {
+            "bn": "অনেকে বড় ব্যাগ বইছে।",
+            "hi": "बहुत से लोग बड़े थैले उठाए हुए हैं।"
+          }
+        },
+        {
+          "speaker": "Studio",
+          "text": "It looks like a lovely evening.",
+          "translations": { "bn": "চমৎকার সন্ধ্যা মনে হচ্ছে।", "hi": "बहुत सुंदर शाम लग रही है।" }
+        },
+        {
+          "speaker": "Reporter",
+          "text": "It is! Back to the studio. Thank you for listening.",
+          "translations": {
+            "bn": "সত্যিই তাই! এবার স্টুডিওতে ফিরছি। শোনার জন্য ধন্যবাদ।",
+            "hi": "बिल्कुल है! अब स्टूडियो की ओर वापस चलते हैं। सुनने के लिए धन्यवाद।"
+          }
+        }
+      ],
+      "voices": { "Reporter": "male", "Studio": "female" }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! I am on a video call. Can you see the street from your window?",
+          "reply": "Yes, I can see it.",
+          "cues": { "bn": "বলুন হ্যাঁ, দেখতে পাচ্ছেন।", "hi": "कहें कि हाँ, दिख रही है।" }
+        },
+        {
+          "partner": "What is happening outside?",
+          "reply": "A man is walking with a dog.",
+          "cues": { "bn": "বাইরে কী ঘটছে, বলুন।", "hi": "बताएँ कि बाहर क्या हो रहा है।" }
+        },
+        {
+          "partner": "And what are the children doing?",
+          "reply": "They are playing.",
+          "cues": { "bn": "বলুন বাচ্চারা খেলছে।", "hi": "कहें कि बच्चे खेल रहे हैं।" }
+        },
+        {
+          "partner": "Great. Thanks for telling me!",
+          "reply": "You are welcome.",
+          "cues": { "bn": "বলুন, আপনাকেও স্বাগত।", "hi": "कहें कि कोई बात नहीं।" }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A phone call home",
+            "translations": { "bn": "বাড়িতে ফোন", "hi": "घर पर फ़ोन" }
+          },
+          "roleplay": {
+            "partner": "Dipak",
+            "asWoman": "Dipika",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! Where are you now?",
+                "reply": "I am at …",
+                "cues": { "bn": "এখন কোথায় আছেন, বলুন।", "hi": "बताएँ कि आप अभी कहाँ हैं।" }
+              },
+              {
+                "partner": "What are you doing?",
+                "reply": "I am … right now.",
+                "cues": { "bn": "এখন কী করছেন, বলুন।", "hi": "बताएँ कि आप अभी क्या कर रहे हैं।" }
+              },
+              {
+                "partner": "We are having dinner. Grandma is cooking rice. What are you eating?",
+                "reply": "I am eating …",
+                "cues": { "bn": "কী খাচ্ছেন, বলুন।", "hi": "बताएँ कि आप क्या खा रहे हैं।" }
+              },
+              {
+                "partner": "Nice! We miss you. Talk to you soon!",
+                "reply": "I miss you too. Goodbye!",
+                "cues": {
+                  "bn": "বলুন আপনিও তাঁদের মনে করছেন, আর বিদায় জানান।",
+                  "hi": "कहें कि आप भी उन्हें याद करते हैं, और विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Watching a match",
+            "translations": { "bn": "খেলা দেখা", "hi": "मैच देखना" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Look at the match! What is the batsman doing?",
+                "reply": "He is hitting the ball.",
+                "cues": {
+                  "bn": "বলুন ব্যাটসম্যান বলে মারছে।",
+                  "hi": "कहें कि बल्लेबाज़ गेंद को मार रहा है।"
+                }
+              },
+              {
+                "partner": "And what is the bowler doing?",
+                "reply": "He is running to bowl.",
+                "cues": {
+                  "bn": "বলুন বোলার বল করতে দৌড়াচ্ছে।",
+                  "hi": "कहें कि गेंदबाज़ गेंद डालने के लिए दौड़ रहा है।"
+                }
+              },
+              {
+                "partner": "What are the people in the crowd doing?",
+                "reply": "They are shouting and clapping.",
+                "cues": {
+                  "bn": "বলুন তাঁরা চিৎকার করছে আর হাততালি দিচ্ছে।",
+                  "hi": "कहें कि वे चिल्ला रहे हैं और ताली बजा रहे हैं।"
+                }
+              },
+              {
+                "partner": "Great! What a fun game!",
+                "reply": "Yes, I am enjoying it.",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, আপনার ভালো লাগছে।",
+                  "hi": "कहें कि हाँ, आपको मज़ा आ रहा है।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Describing a picture",
+            "translations": { "bn": "ছবির বর্ণনা", "hi": "तस्वीर का वर्णन" }
+          },
+          "roleplay": {
+            "partner": "the teacher",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Look at this picture of a park. What can you see?",
+                "reply": "I can see a park with many people.",
+                "cues": {
+                  "bn": "বলুন আপনি অনেক মানুষসহ একটি পার্ক দেখছেন।",
+                  "hi": "कहें कि आपको कई लोगों के साथ एक पार्क दिख रहा है।"
+                }
+              },
+              {
+                "partner": "What is the girl doing?",
+                "reply": "She is riding a bicycle.",
+                "cues": {
+                  "bn": "বলুন মেয়েটি সাইকেল চালাচ্ছে।",
+                  "hi": "कहें कि लड़की साइकिल चला रही है।"
+                }
+              },
+              {
+                "partner": "And the old man on the bench?",
+                "reply": "He is reading a newspaper.",
+                "cues": {
+                  "bn": "বলুন তিনি খবরের কাগজ পড়ছেন।",
+                  "hi": "कहें कि वे अख़बार पढ़ रहे हैं।"
+                }
+              },
+              {
+                "partner": "Very good. Is it raining in the picture?",
+                "reply": "No, it isn’t. It is sunny.",
+                "cues": { "bn": "বলুন না, রোদ উঠেছে।", "hi": "कहें कि नहीं, धूप खिली है।" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

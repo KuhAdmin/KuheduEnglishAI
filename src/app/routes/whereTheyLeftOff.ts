@@ -3,7 +3,15 @@ import { hasAnsweredAboutThemselves } from '@/features/onboarding'
 import { placementProgress } from '@/features/placement'
 import { accountStanding } from '@/shared/lib/account'
 import { hasLessonProgress } from '@/shared/lib/learner/lessonProgress'
+import { learnerDataSettled } from '@/shared/lib/learnerData/learnerSync'
 import { paths } from '@/shared/lib/paths'
+
+/**
+ * How long the front door waits for a learner's account to say how far they got, before it goes
+ * by what this browser holds. Longer than for who is signed in: on a new phone the browser holds
+ * nothing, and deciding too soon sends someone who is weeks in back through onboarding.
+ */
+const LEARNER_WAIT_MS = 4000
 
 /** What this browser already holds of a learner. All of it empty: nobody has begun here. */
 export type Footprint = {
@@ -41,10 +49,10 @@ export function leftOffAt({
  * There are no guests, so who is signed in decides, and the server says who (it was asked as
  * the app started; `accountStanding` does not wait long for it, and offline goes by this browser
  * having been signed in). Nobody: the page. A sign-up whose code was never entered: the code
- * step, the only way on. An account: on from where they left off in this browser, or into
- * onboarding with nothing of theirs here (a new account, or their account on a new phone),
- * since nothing of it is kept on the server yet. `TODO(learner)`: once it is, where their
- * account says.
+ * step, the only way on. An account: on from where they left off, or into onboarding when they
+ * have not begun. How far they got is kept with their account and is in this browser's stores
+ * once it has been fetched, which this waits for (`learnerDataSettled`), so their account on a
+ * new phone opens where they were. With the server unreachable it is what this browser holds.
  *
  * An admin who has not used the app as a learner here is let through to the page: it is theirs
  * to edit, and they need to see it.
@@ -53,6 +61,8 @@ export async function openWhereTheyLeftOff() {
   const standing = await accountStanding()
   if (standing.account === 'none') return null
   if (standing.account === 'unverified') throw redirect(paths.verifyEmail)
+  // Only when the server said who it is: offline there is nothing to wait for.
+  if (standing.user) await learnerDataSettled(LEARNER_WAIT_MS)
 
   const place = leftOffAt({
     lessonsBegun: hasLessonProgress(),

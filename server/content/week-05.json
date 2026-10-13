@@ -1,0 +1,781 @@
+{
+  "week": 5,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Manoj",
+          "text": "Hello, Shreya. Please tell me about yourself.",
+          "translations": {
+            "bn": "হ্যালো, শ্রেয়া। আপনার নিজের সম্পর্কে কিছু বলুন।",
+            "hi": "नमस्ते, श्रेया। कृपया अपने बारे में बताइए।"
+          }
+        },
+        {
+          "speaker": "Shreya",
+          "text": "Sure. I’m Shreya. I’m from Nagpur.",
+          "translations": {
+            "bn": "নিশ্চয়ই। আমি শ্রেয়া। আমি নাগপুর থেকে এসেছি।",
+            "hi": "ज़रूर। मैं श्रेया हूँ। मैं नागपुर से हूँ।"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Where did you study?",
+          "translations": { "bn": "আপনি কোথায় পড়াশোনা করেছেন?", "hi": "आपने कहाँ पढ़ाई की?" }
+        },
+        {
+          "speaker": "Shreya",
+          "text": "I studied at City College. I have a degree in commerce.",
+          "translations": {
+            "bn": "আমি সিটি কলেজে পড়েছি। আমার বাণিজ্যে ডিগ্রি আছে।",
+            "hi": "मैंने सिटी कॉलेज में पढ़ाई की। मेरे पास कॉमर्स की डिग्री है।"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Good. What do you do now?",
+          "translations": { "bn": "বেশ। আপনি এখন কী করেন?", "hi": "अच्छा। आप अभी क्या करती हैं?" }
+        },
+        {
+          "speaker": "Shreya",
+          "text": "I work in a bank. I help customers.",
+          "translations": {
+            "bn": "আমি একটি ব্যাংকে কাজ করি। আমি গ্রাহকদের সাহায্য করি।",
+            "hi": "मैं एक बैंक में काम करती हूँ। मैं ग्राहकों की मदद करती हूँ।"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Do you like your work?",
+          "translations": {
+            "bn": "আপনার কাজ কি আপনার ভালো লাগে?",
+            "hi": "क्या आपको अपना काम पसंद है?"
+          }
+        },
+        {
+          "speaker": "Shreya",
+          "text": "Yes, I do. I like meeting people.",
+          "translations": {
+            "bn": "হ্যাঁ, লাগে। মানুষের সঙ্গে দেখা করতে আমার ভালো লাগে।",
+            "hi": "जी हाँ, पसंद है। मुझे लोगों से मिलना अच्छा लगता है।"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "What are your hobbies?",
+          "translations": { "bn": "আপনার শখ কী কী?", "hi": "आपके शौक़ क्या हैं?" }
+        },
+        {
+          "speaker": "Shreya",
+          "text": "I like painting and reading. On Sundays, I paint.",
+          "translations": {
+            "bn": "আমার ছবি আঁকতে আর বই পড়তে ভালো লাগে। রবিবারে আমি ছবি আঁকি।",
+            "hi": "मुझे चित्र बनाना और पढ़ना पसंद है। रविवार को मैं चित्र बनाती हूँ।"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Really? What do you paint?",
+          "translations": { "bn": "তাই নাকি? আপনি কী আঁকেন?", "hi": "सच में? आप क्या बनाती हैं?" }
+        },
+        {
+          "speaker": "Shreya",
+          "text": "I paint flowers and birds.",
+          "translations": { "bn": "আমি ফুল আর পাখি আঁকি।", "hi": "मैं फूल और पक्षी बनाती हूँ।" }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "That’s wonderful. Thank you, Shreya.",
+          "translations": {
+            "bn": "চমৎকার। ধন্যবাদ, শ্রেয়া।",
+            "hi": "बहुत बढ़िया। धन्यवाद, श्रेया।"
+          }
+        },
+        {
+          "speaker": "Shreya",
+          "text": "Thank you. Now, please tell me about you!",
+          "translations": {
+            "bn": "ধন্যবাদ। এবার আপনার নিজের কথা বলুন!",
+            "hi": "धन्यवाद। अब आप अपने बारे में बताइए!"
+          }
+        }
+      ],
+      "voices": { "Manoj": "male", "Shreya": "female" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "work",
+          "phonetic": "/wɜːk/",
+          "imageUrl": null,
+          "meanings": { "bn": "কাজ, কাজ করা", "hi": "काम, काम करना" },
+          "syllables": ["work"],
+          "stress": null,
+          "tips": {
+            "bn": ["“or”-এর উচ্চারণ “bird”-এর “ir”-এর মতো।", "এটি “fork”-এর সঙ্গে মেলে না।"],
+            "en": ["The “or” sounds like the “ir” in “bird”.", "It does not rhyme with “fork”."],
+            "hi": ["“or” की आवाज़ “bird” के “ir” जैसी है।", "इसकी तुक “fork” से नहीं मिलती।"]
+          }
+        },
+        {
+          "word": "job",
+          "phonetic": "/dʒɒb/",
+          "imageUrl": null,
+          "meanings": { "bn": "চাকরি", "hi": "नौकरी" },
+          "syllables": ["job"],
+          "stress": null,
+          "tips": {
+            "bn": ["“o” ছোট, “hot”-এর মতো।", "শেষে “b” স্পষ্ট করে বলুন।"],
+            "en": ["The “o” is short, as in “hot”.", "End with a clear “b”."],
+            "hi": ["“o” छोटा है, “hot” जैसा।", "अंत में “b” साफ़ बोलें।"]
+          }
+        },
+        {
+          "word": "office",
+          "phonetic": "/ˈɒfɪs/",
+          "imageUrl": null,
+          "meanings": { "bn": "অফিস, দপ্তর", "hi": "दफ़्तर" },
+          "syllables": ["of", "fic(e)"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "প্রথম অংশটি জোর দিয়ে বলুন।",
+              "শেষের “e” উচ্চারণ হয় না: শেষ অংশটি “ইস”-এর মতো।"
+            ],
+            "en": [
+              "Say the first part stronger.",
+              "The last “e” is not said: the ending sounds like “iss”."
+            ],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "आख़िरी “e” बोला नहीं जाता: अंत की आवाज़ “इस” जैसी है।"
+            ]
+          }
+        },
+        {
+          "word": "customer",
+          "phonetic": "/ˈkʌstəmə/",
+          "imageUrl": null,
+          "meanings": { "bn": "গ্রাহক, খদ্দের", "hi": "ग्राहक" },
+          "syllables": ["cus", "tom", "er"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "প্রথম অংশটি জোর দিয়ে বলুন: এর উচ্চারণ “কাস”-এর মতো।",
+              "বাকি দুটি অংশ ছোট ও হালকা রাখুন।"
+            ],
+            "en": [
+              "Say the first part stronger: it sounds like “kus”.",
+              "Keep the other two parts short and soft."
+            ],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें: इसकी आवाज़ “कस” जैसी है।",
+              "बाक़ी दोनों हिस्से छोटे और हल्के रखें।"
+            ]
+          }
+        },
+        {
+          "word": "help",
+          "phonetic": "/help/",
+          "imageUrl": null,
+          "meanings": { "bn": "সাহায্য করা", "hi": "मदद करना" },
+          "syllables": ["help"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“l” আর “p” একসঙ্গে বলুন, মাঝখানে কোনো স্বরধ্বনি নয়।",
+              "শেষে “p” স্পষ্ট করে বলুন।"
+            ],
+            "en": [
+              "Say the “l” and the “p” together, with no vowel between them.",
+              "End with a clear “p”."
+            ],
+            "hi": ["“l” और “p” एक साथ बोलें, बीच में कोई स्वर नहीं।", "अंत में “p” साफ़ बोलें।"]
+          }
+        },
+        {
+          "word": "degree",
+          "phonetic": "/dɪˈɡriː/",
+          "imageUrl": null,
+          "meanings": { "bn": "ডিগ্রি", "hi": "डिग्री" },
+          "syllables": ["de", "gree"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে, একটু লম্বা করে বলুন।", "প্রথম অংশটি ছোট রাখুন।"],
+            "en": ["Say the second part stronger and longer.", "Keep the first part short."],
+            "hi": ["दूसरा हिस्सा ज़ोर से और थोड़ा लंबा बोलें।", "पहला हिस्सा छोटा रखें।"]
+          }
+        },
+        {
+          "word": "hobby",
+          "phonetic": "/ˈhɒbi/",
+          "imageUrl": null,
+          "meanings": { "bn": "শখ", "hi": "शौक़" },
+          "syllables": ["hob", "by"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“o” ছোট, “hot”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “o” is short, as in “hot”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“o” छोटा है, “hot” जैसा।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "What are your hobbies?",
+          "alsoAccepted": ["What is your hobby?", "What hobbies do you have?"],
+          "translations": { "bn": "আপনার শখ কী কী?", "hi": "आपके शौक़ क्या हैं?" },
+          "tips": {
+            "bn": [
+              "কারও আগ্রহের কথা জানতে এটি জিজ্ঞেস করুন।",
+              "একটির বেশি শখ বোঝাতে “hobbies” বলা হয়।"
+            ],
+            "en": [
+              "Ask this to learn about someone’s interests.",
+              "“hobbies” is the word for more than one hobby."
+            ],
+            "hi": [
+              "किसी की रुचियाँ जानने के लिए यह पूछें।",
+              "एक से ज़्यादा शौक़ के लिए “hobbies” कहा जाता है।"
+            ]
+          }
+        },
+        {
+          "english": "My hobby is painting.",
+          "alsoAccepted": ["Painting is my hobby."],
+          "translations": { "bn": "আমার শখ ছবি আঁকা।", "hi": "मेरा शौक़ चित्र बनाना है।" },
+          "tips": {
+            "bn": [
+              "আগে “My hobby is” বলুন, তারপর কাজটির নাম।",
+              "কাজের নামের শেষে “-ing” থাকে: painting, reading, cooking।"
+            ],
+            "en": [
+              "Say “My hobby is” and then the activity.",
+              "The activity ends in “-ing”: painting, reading, cooking."
+            ],
+            "hi": [
+              "पहले “My hobby is” कहें, फिर काम का नाम।",
+              "काम के नाम के अंत में “-ing” होता है: painting, reading, cooking।"
+            ]
+          }
+        },
+        {
+          "english": "I like reading books.",
+          "alsoAccepted": ["I like to read books.", "I enjoy reading books."],
+          "translations": { "bn": "আমার বই পড়তে ভালো লাগে।", "hi": "मुझे किताबें पढ़ना पसंद है।" },
+          "tips": {
+            "bn": ["“like”-এর পরে “-ing” রূপ বসান: “I like reading.”", "“I like to read.”-ও ঠিক।"],
+            "en": [
+              "After “like”, use the “-ing” form: “I like reading.”",
+              "“I like to read.” is right too."
+            ],
+            "hi": [
+              "“like” के बाद “-ing” वाला रूप लगाएँ: “I like reading.”",
+              "“I like to read.” भी सही है।"
+            ]
+          }
+        },
+        {
+          "english": "I like playing cricket on Sundays.",
+          "alsoAccepted": [
+            "I like to play cricket on Sundays.",
+            "On Sundays, I like playing cricket.",
+            "On Sundays, I like to play cricket."
+          ],
+          "translations": {
+            "bn": "রবিবারে ক্রিকেট খেলতে আমার ভালো লাগে।",
+            "hi": "मुझे रविवार को क्रिकेट खेलना पसंद है।"
+          },
+          "tips": {
+            "bn": [
+              "দিনের নামের আগে “on” বসান: on Sundays।",
+              "“s” যোগ করে “Sundays” বললে প্রতি রবিবার বোঝায়।"
+            ],
+            "en": [
+              "Use “on” before a day: on Sundays.",
+              "“Sundays” with an “s” means every Sunday."
+            ],
+            "hi": [
+              "दिन के नाम से पहले “on” लगाएँ: on Sundays।",
+              "“s” लगाकर “Sundays” कहने का मतलब है हर रविवार।"
+            ]
+          }
+        },
+        {
+          "english": "I like music because it makes me happy.",
+          "alsoAccepted": ["I like music because it makes me feel happy."],
+          "translations": {
+            "bn": "আমার সংগীত ভালো লাগে, কারণ এতে আমি আনন্দ পাই।",
+            "hi": "मुझे संगीत पसंद है क्योंकि इससे मुझे ख़ुशी मिलती है।"
+          },
+          "tips": {
+            "bn": ["কারণ বলতে “because” ব্যবহার করুন।", "কারণটি ছোট ও সহজ রাখুন।"],
+            "en": ["Use “because” to give a reason.", "Keep the reason short and simple."],
+            "hi": ["कारण बताने के लिए “because” लगाएँ।", "कारण छोटा और आसान रखें।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Manoj",
+      "asWoman": "Shreya",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! I’m Manoj. I’m a teacher.",
+          "reply": "Nice to meet you. Where do you teach?",
+          "cues": {
+            "bn": "বলুন পরিচিত হয়ে ভালো লাগল, আর জিজ্ঞেস করুন তিনি কোথায় পড়ান।",
+            "hi": "कहें कि मिलकर अच्छा लगा, और उनसे पढ़ाने की जगह पूछें।"
+          }
+        },
+        {
+          "partner": "I teach at a school near the station. What do you do?",
+          "reply": "I’m a …",
+          "cues": {
+            "bn": "নিজের কাজ বা পড়াশোনার কথা বলুন।",
+            "hi": "अपने काम या पढ़ाई के बारे में बताएँ।"
+          }
+        },
+        {
+          "partner": "That’s interesting. I have a hobby too. I like gardening.",
+          "reply": "Really? What do you grow?",
+          "cues": {
+            "bn": "“Really?” বলে আগ্রহ দেখান, আর জিজ্ঞেস করুন তাঁর বাগানে কী কী হয়।",
+            "hi": "“Really?” कहकर रुचि दिखाएँ, और पूछें कि उनके बग़ीचे में क्या-क्या उगता है।"
+          }
+        },
+        {
+          "partner": "I grow tomatoes and roses. What are your hobbies?",
+          "reply": "I like …",
+          "cues": { "bn": "নিজের শখের কথা বলুন।", "hi": "अपने शौक़ बताएँ।" }
+        },
+        {
+          "partner": "How nice! When do you do it?",
+          "reply": "On …",
+          "cues": { "bn": "বলুন কোন দিন বা কখন করেন।", "hi": "बताएँ कि किस दिन या कब।" }
+        },
+        {
+          "partner": "Lovely. It was nice talking to you!",
+          "reply": "Nice talking to you too. Goodbye!",
+          "cues": {
+            "bn": "বলুন আপনারও কথা বলে ভালো লাগল, আর বিদায় জানান।",
+            "hi": "कहें कि आपको भी बात करके अच्छा लगा, और विदा लें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "My one-minute introduction",
+        "translations": { "bn": "এক মিনিটে আমার পরিচয়", "hi": "एक मिनट में मेरा परिचय" }
+      },
+      "instruction": {
+        "text": "Introduce yourself for about one minute. Do not read: look up and speak.",
+        "translations": {
+          "bn": "প্রায় এক মিনিট নিজের পরিচয় দিন। দেখে পড়বেন না: মুখ তুলে বলুন।",
+          "hi": "लगभग एक मिनट अपना परिचय दें। पढ़ें नहीं: नज़र उठाकर बोलें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say your name and where you are from",
+          "translations": {
+            "bn": "নিজের নাম আর কোথা থেকে এসেছেন বলুন",
+            "hi": "अपना नाम और आप कहाँ से हैं, बताएँ"
+          }
+        },
+        {
+          "text": "Say something about your family",
+          "translations": {
+            "bn": "পরিবারের কথা কিছু বলুন",
+            "hi": "अपने परिवार के बारे में कुछ बताएँ"
+          }
+        },
+        {
+          "text": "Say where you studied",
+          "translations": {
+            "bn": "কোথায় পড়াশোনা করেছেন বলুন",
+            "hi": "बताएँ कि आपने कहाँ पढ़ाई की"
+          }
+        },
+        {
+          "text": "Say what you do now",
+          "translations": {
+            "bn": "এখন কী করেন বলুন",
+            "hi": "बताएँ कि अभी आपका काम या पढ़ाई क्या है"
+          }
+        },
+        {
+          "text": "Say what you like and your hobbies",
+          "translations": { "bn": "আপনার পছন্দ আর শখের কথা বলুন", "hi": "अपनी पसंद और शौक़ बताएँ" }
+        },
+        {
+          "text": "End with a question for the listener",
+          "translations": {
+            "bn": "শেষে শ্রোতাকে একটি প্রশ্ন করুন",
+            "hi": "अंत में सुनने वाले से एक सवाल पूछें"
+          }
+        }
+      ],
+      "phrases": [
+        "My name is … I’m from …",
+        "There are … people in my family.",
+        "I studied at …",
+        "I’m a …",
+        "My hobby is …",
+        "What about you?"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you ask about someone’s education?",
+            "translations": {
+              "bn": "কারও পড়াশোনার কথা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी की पढ़ाई के बारे में कैसे पूछें?"
+            }
+          },
+          "answer": "Where did you study?",
+          "others": ["Where do you live?", "What do you like?"]
+        },
+        {
+          "question": {
+            "text": "Someone says, “I like gardening.” Which is a good follow-up question?",
+            "translations": {
+              "bn": "কেউ বললেন, “I like gardening.” এর পরে কোন প্রশ্নটি করা ভালো?",
+              "hi": "कोई कहे, “I like gardening.” तो आगे कौन-सा सवाल पूछना अच्छा है?"
+            }
+          },
+          "answer": "What do you grow?",
+          "others": ["What’s your name?", "I like tea."]
+        },
+        {
+          "question": {
+            "text": "Someone asks, “What do you do?” What do you say?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “What do you do?” আপনি কী বলবেন?",
+              "hi": "कोई पूछे, “What do you do?” तो क्या कहें?"
+            }
+          },
+          "answer": "I work in a bank.",
+          "others": ["I studied at City College.", "My hobby is painting."]
+        },
+        {
+          "question": {
+            "text": "Which sentence is about a hobby?",
+            "translations": {
+              "bn": "কোন বাক্যটি শখের কথা বলে?",
+              "hi": "कौन-सा वाक्य शौक़ के बारे में है?"
+            }
+          },
+          "answer": "I like painting on Sundays.",
+          "others": ["I have a degree in commerce.", "I help customers."]
+        },
+        {
+          "question": {
+            "text": "Which word shows that you are interested in what someone says?",
+            "translations": {
+              "bn": "কারও কথায় আগ্রহ দেখাতে কোন শব্দটি বলা হয়?",
+              "hi": "किसी की बात में रुचि दिखाने के लिए कौन-सा शब्द कहा जाता है?"
+            }
+          },
+          "answer": "Really?",
+          "others": ["Goodbye.", "Sorry."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Geeta",
+          "text": "Hi! I’m Geeta. Tell me about yourself.",
+          "translations": {
+            "bn": "হাই! আমি গীতা। আপনার নিজের সম্পর্কে কিছু বলুন।",
+            "hi": "हाय! मैं गीता हूँ। अपने बारे में बताइए।"
+          }
+        },
+        {
+          "speaker": "Nitin",
+          "text": "I’m Nitin. I’m from Bhopal. I studied at a government school.",
+          "translations": {
+            "bn": "আমি নিতিন। আমি ভোপাল থেকে এসেছি। আমি একটি সরকারি স্কুলে পড়েছি।",
+            "hi": "मैं नितिन हूँ। मैं भोपाल से हूँ। मैंने एक सरकारी स्कूल में पढ़ाई की।"
+          }
+        },
+        {
+          "speaker": "Geeta",
+          "text": "What do you do now?",
+          "translations": { "bn": "আপনি এখন কী করেন?", "hi": "आप अभी क्या करते हैं?" }
+        },
+        {
+          "speaker": "Nitin",
+          "text": "I work in a shop. I sell mobile phones.",
+          "translations": {
+            "bn": "আমি একটি দোকানে কাজ করি। আমি মোবাইল ফোন বিক্রি করি।",
+            "hi": "मैं एक दुकान में काम करता हूँ। मैं मोबाइल फ़ोन बेचता हूँ।"
+          }
+        },
+        {
+          "speaker": "Geeta",
+          "text": "Really? Do you like your job?",
+          "translations": {
+            "bn": "তাই নাকি? আপনার চাকরি কি আপনার ভালো লাগে?",
+            "hi": "सच में? क्या आपको अपनी नौकरी पसंद है?"
+          }
+        },
+        {
+          "speaker": "Nitin",
+          "text": "Yes, I do. I like helping customers. And you?",
+          "translations": {
+            "bn": "হ্যাঁ, লাগে। গ্রাহকদের সাহায্য করতে আমার ভালো লাগে। আর আপনি?",
+            "hi": "जी हाँ, पसंद है। मुझे ग्राहकों की मदद करना अच्छा लगता है। और आप?"
+          }
+        },
+        {
+          "speaker": "Geeta",
+          "text": "I’m a nurse. I work in a hospital.",
+          "translations": {
+            "bn": "আমি একজন নার্স। আমি একটি হাসপাতালে কাজ করি।",
+            "hi": "मैं नर्स हूँ। मैं एक अस्पताल में काम करती हूँ।"
+          }
+        },
+        {
+          "speaker": "Nitin",
+          "text": "That is good work. What are your hobbies?",
+          "translations": {
+            "bn": "খুব ভালো কাজ। আপনার শখ কী কী?",
+            "hi": "यह अच्छा काम है। आपके शौक़ क्या हैं?"
+          }
+        },
+        {
+          "speaker": "Geeta",
+          "text": "I like cooking and singing.",
+          "translations": {
+            "bn": "আমার রান্না করতে আর গান গাইতে ভালো লাগে।",
+            "hi": "मुझे खाना बनाना और गाना पसंद है।"
+          }
+        },
+        {
+          "speaker": "Nitin",
+          "text": "What do you like to cook?",
+          "translations": {
+            "bn": "আপনি কী রান্না করতে ভালোবাসেন?",
+            "hi": "आपको क्या बनाना पसंद है?"
+          }
+        },
+        {
+          "speaker": "Geeta",
+          "text": "I like to cook biryani. My family loves it.",
+          "translations": {
+            "bn": "আমার বিরিয়ানি রান্না করতে ভালো লাগে। আমার পরিবারের সবাই এটি খুব পছন্দ করে।",
+            "hi": "मुझे बिरयानी बनाना पसंद है। मेरे परिवार को यह बहुत पसंद है।"
+          }
+        },
+        {
+          "speaker": "Nitin",
+          "text": "Wonderful! Nice talking to you, Geeta.",
+          "translations": {
+            "bn": "চমৎকার! আপনার সঙ্গে কথা বলে ভালো লাগল, গীতা।",
+            "hi": "बहुत बढ़िया! आपसे बात करके अच्छा लगा, गीता।"
+          }
+        }
+      ],
+      "voices": { "Geeta": "female", "Nitin": "male" }
+    },
+    "review_roleplay": {
+      "partner": "Geeta",
+      "asMan": "Nitin",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! I’m Geeta. Tell me about yourself.",
+          "reply": "I’m … I’m from …",
+          "cues": {
+            "bn": "নিজের নাম আর কোথা থেকে এসেছেন বলুন।",
+            "hi": "अपना नाम और आप कहाँ से हैं, बताएँ।"
+          }
+        },
+        {
+          "partner": "Where did you study?",
+          "reply": "I studied at …",
+          "cues": { "bn": "কোথায় পড়াশোনা করেছেন বলুন।", "hi": "बताएँ कि आपने कहाँ पढ़ाई की।" }
+        },
+        {
+          "partner": "I’m a nurse. I like cooking.",
+          "reply": "Really? What do you like to cook?",
+          "cues": {
+            "bn": "“Really?” বলে আগ্রহ দেখান, আর জিজ্ঞেস করুন তিনি কী রান্না করতে ভালোবাসেন।",
+            "hi": "“Really?” कहकर रुचि दिखाएँ, और पूछें कि उन्हें क्या बनाना पसंद है।"
+          }
+        },
+        {
+          "partner": "I like to cook biryani. Nice talking to you!",
+          "reply": "Nice talking to you too. Goodbye!",
+          "cues": {
+            "bn": "বলুন আপনারও কথা বলে ভালো লাগল, আর বিদায় জানান।",
+            "hi": "कहें कि आपको भी बात करके अच्छा लगा, और विदा लें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A job interview",
+            "translations": { "bn": "চাকরির ইন্টারভিউ", "hi": "नौकरी का इंटरव्यू" }
+          },
+          "roleplay": {
+            "partner": "the manager",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning. Please sit down. Tell me about yourself.",
+                "reply": "Good morning. My name is … I’m from …",
+                "cues": {
+                  "bn": "সুপ্রভাত জানান, তারপর নিজের নাম আর কোথা থেকে এসেছেন বলুন।",
+                  "hi": "सुप्रभात कहें, फिर अपना नाम और आप कहाँ से हैं, बताएँ।"
+                }
+              },
+              {
+                "partner": "Where did you study?",
+                "reply": "I studied at …",
+                "cues": {
+                  "bn": "কোথায় পড়াশোনা করেছেন বলুন।",
+                  "hi": "बताएँ कि आपने कहाँ पढ़ाई की।"
+                }
+              },
+              {
+                "partner": "What do you do now?",
+                "reply": "I work in …",
+                "cues": {
+                  "bn": "এখন কোথায় কাজ করেন বা কী পড়েন বলুন।",
+                  "hi": "बताएँ कि अभी आपका काम या पढ़ाई क्या है।"
+                }
+              },
+              {
+                "partner": "What are your hobbies?",
+                "reply": "My hobby is …",
+                "cues": { "bn": "নিজের শখের কথা বলুন।", "hi": "अपना शौक़ बताएँ।" }
+              },
+              {
+                "partner": "Thank you. We will call you.",
+                "reply": "Thank you very much. Goodbye!",
+                "cues": {
+                  "bn": "অনেক ধন্যবাদ দিন, আর বিদায় জানান।",
+                  "hi": "बहुत धन्यवाद दें, और विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A new English class",
+            "translations": { "bn": "নতুন ইংরেজি ক্লাস", "hi": "नई अंग्रेज़ी कक्षा" }
+          },
+          "roleplay": {
+            "partner": "the teacher",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Welcome to the class! Please introduce yourself.",
+                "reply": "Hello, everyone. My name is …",
+                "cues": {
+                  "bn": "সবাইকে হ্যালো বলুন, আর নিজের নাম বলুন।",
+                  "hi": "सबको हैलो कहें, और अपना नाम बताएँ।"
+                }
+              },
+              {
+                "partner": "Thank you. What do you do?",
+                "reply": "I’m a …",
+                "cues": {
+                  "bn": "নিজের কাজ বা পড়াশোনার কথা বলুন।",
+                  "hi": "अपने काम या पढ़ाई के बारे में बताएँ।"
+                }
+              },
+              {
+                "partner": "Good. Tell us about your hobbies.",
+                "reply": "I like …",
+                "cues": { "bn": "নিজের শখের কথা বলুন।", "hi": "अपने शौक़ बताएँ।" }
+              },
+              {
+                "partner": "Very good! Now ask me one question.",
+                "reply": "Where are you from?",
+                "cues": {
+                  "bn": "শিক্ষককে জিজ্ঞেস করুন তিনি কোথা থেকে এসেছেন।",
+                  "hi": "शिक्षक से पूछें कि वे कहाँ से हैं।"
+                }
+              },
+              {
+                "partner": "I’m from Chennai. Well done! Please sit down.",
+                "reply": "Thank you!",
+                "cues": { "bn": "ধন্যবাদ দিন।", "hi": "धन्यवाद दें।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "On a train journey",
+            "translations": { "bn": "ট্রেন যাত্রায়", "hi": "रेल यात्रा में" }
+          },
+          "roleplay": {
+            "partner": "Sunil",
+            "asWoman": "Sunita",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! I’m Sunil. I’m going to Delhi. And you?",
+                "reply": "Hello! I’m … I’m going to …",
+                "cues": {
+                  "bn": "হ্যালো বলুন, নিজের নাম বলুন, আর বলুন কোথায় যাচ্ছেন।",
+                  "hi": "हैलो कहें, अपना नाम बताएँ, और बताएँ कि आपकी यात्रा कहाँ तक है।"
+                }
+              },
+              {
+                "partner": "I work in Delhi. I’m an engineer.",
+                "reply": "Really? Where do you work?",
+                "cues": {
+                  "bn": "“Really?” বলে আগ্রহ দেখান, আর জিজ্ঞেস করুন তিনি কোথায় কাজ করেন।",
+                  "hi": "“Really?” कहकर रुचि दिखाएँ, और उनके काम की जगह पूछें।"
+                }
+              },
+              {
+                "partner": "I work in a big office. What do you do?",
+                "reply": "I’m a …",
+                "cues": {
+                  "bn": "নিজের কাজ বা পড়াশোনার কথা বলুন।",
+                  "hi": "अपने काम या पढ़ाई के बारे में बताएँ।"
+                }
+              },
+              {
+                "partner": "Nice. What are your hobbies?",
+                "reply": "I like … What are your hobbies?",
+                "cues": {
+                  "bn": "নিজের শখের কথা বলুন, আর তাঁর শখের কথা জিজ্ঞেস করুন।",
+                  "hi": "अपने शौक़ बताएँ, और उनके शौक़ पूछें।"
+                }
+              },
+              {
+                "partner": "I like reading. It was nice talking to you. Have a good journey!",
+                "reply": "Thank you. You too!",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর তাঁকেও একই শুভেচ্ছা জানান।",
+                  "hi": "धन्यवाद दें, और उन्हें भी यही शुभकामना दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

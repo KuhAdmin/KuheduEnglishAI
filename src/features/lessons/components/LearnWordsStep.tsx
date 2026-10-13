@@ -7,10 +7,13 @@ import { isEnglish, useLanguage, useT } from '@/shared/lib/i18n'
 import { SegmentedControl } from '@/shared/ui/SegmentedControl'
 import { StepScreen } from '@/shared/ui/StepScreen'
 import { SLOW_RATE } from '../hooks/useConversationPlayback'
+import { usePronunciationCheck } from '../hooks/usePronunciationCheck'
 import { useSpokenPractice } from '../hooks/useSpokenPractice'
 import { revealOnMount } from '../lib/revealOnMount'
 import { LessonNextButton } from './LessonNextButton'
 import { LessonTopBar } from './LessonTopBar'
+import { PronunciationCheckAction } from './PronunciationCheckAction'
+import { PronunciationFeedback } from './PronunciationFeedback'
 import { PronunciationPractice } from './PronunciationPractice'
 import { TipsCard } from './TipsCard'
 import { WordCard } from './WordCard'
@@ -32,8 +35,10 @@ export type LearnWordsStepProps = {
 /**
  * Day 2, "Learn useful words": tap a word to hear it (slowly, if asked), see how it is said — its
  * parts, the strong one, the letters that are not said, a tip or two — then say it and listen
- * to yourself. Nothing said is judged. "Next" opens once every word has been heard. Speaking is never required — a learner whose
- * microphone is blocked must not be stuck — and neither is listening on a device with no voice.
+ * to yourself. A recording can then be checked by the server, when the learner asks: a first
+ * version, which says so. "Next" opens once every word has been heard. Speaking is never
+ * required — a learner whose microphone is blocked must not be stuck — and neither is checking,
+ * nor listening on a device with no voice.
  */
 export function LearnWordsStep({
   vocabulary,
@@ -55,6 +60,15 @@ export function LearnWordsStep({
   const [heard, setHeard] = useState<ReadonlySet<string>>(new Set())
   const [saying, setSaying] = useState<string | null>(null)
   const [speed, setSpeed] = useState<Speed>('normal')
+
+  const syllables = selected?.syllables ?? []
+  const stress = selected?.stress ?? null
+  const pronunciation = usePronunciationCheck(recording.take, {
+    word: selected?.word ?? '',
+    syllables,
+    stress,
+  })
+  const checked = pronunciation.check.status === 'done' || pronunciation.check.status === 'failed'
 
   const cannotPlay = playback.status === 'failed' || !isSpeechSupported()
   const allHeard = words.every((entry) => heard.has(entry.word))
@@ -92,6 +106,13 @@ export function LearnWordsStep({
               onStart={startSpeaking}
               onStop={stopSpeaking}
               onListen={recording.playTake}
+            />
+          )}
+          {/* Until this take has been checked; a new take brings it back. */}
+          {recording.take && pronunciation.supported && pronunciation.check.status !== 'done' && (
+            <PronunciationCheckAction
+              checking={pronunciation.check.status === 'checking'}
+              onCheck={() => void pronunciation.start()}
             />
           )}
           <LessonNextButton
@@ -143,6 +164,27 @@ export function LearnWordsStep({
 
         {tips && tips.tips.length > 0 && (
           <TipsCard title={t('lessonDay.words.tips')} tips={tips.tips} lang={tips.lang} />
+        )}
+
+        {checked && (
+          // Brought into view when it comes: the button that asked for it is pinned below the list.
+          <div ref={revealOnMount}>
+            <PronunciationFeedback
+              check={pronunciation.check}
+              syllables={syllables}
+              // The word as its card says it: at the speed chosen, and heard once it has been.
+              onPlayWord={
+                cannotPlay || !selected ? undefined : () => void handleSelect(selected.word)
+              }
+              onPlayTake={() => {
+                // One voice at a time: the word must not talk over the recording.
+                playback.stop()
+                recording.playTake()
+              }}
+              playingWord={playback.status === 'playing'}
+              playingTake={recording.playing}
+            />
+          </div>
         )}
 
         {recording.problem && (

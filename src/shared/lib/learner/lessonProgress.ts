@@ -4,7 +4,7 @@ import { DAYS_PER_WEEK, isDayNumber, isWeekNumber } from '../curriculum/curricul
 import { isReviewPart, REVIEW_PARTS, type ReviewPart } from '../curriculum/weekReviews'
 import { MAX_SCENARIOS } from '../curriculum/weekScenarios'
 
-type LessonProgress = {
+export type LessonProgress = {
   /** Weeks whose opening conversation (Day 1) the learner has heard through once. */
   heardWeeks: number[]
   /** The days the learner has finished, by week number. */
@@ -86,19 +86,66 @@ function validScenariosDone(saved: unknown): LessonProgress['scenariosDone'] {
   return scenariosDone
 }
 
+/** Nothing heard and nothing done: a learner who has not begun, or a browser that is nobody's. */
+export const NO_LESSON_PROGRESS: LessonProgress = {
+  heardWeeks: [],
+  doneDays: {},
+  reviewParts: {},
+  scenariosDone: {},
+}
+
 /**
- * What the learner has done in the lessons, kept in this browser. Shared because the journey
- * (which day a week opens next) and the lessons (what to unlock) both read it.
+ * Progress from somewhere it cannot be trusted as it is (this browser's storage at some earlier
+ * time, the account as another build left it): only what is still a week, a day, a part of the
+ * review and a place in the list of scenarios is kept.
+ */
+export function readLessonProgress(saved: unknown): LessonProgress {
+  const from = (saved ?? {}) as Partial<Record<keyof LessonProgress, unknown>>
+  return {
+    heardWeeks: Array.isArray(from.heardWeeks)
+      ? [...new Set(from.heardWeeks.filter(isWeekNumber))]
+      : [],
+    doneDays: validDoneDays(from.doneDays),
+    reviewParts: validReviewParts(from.reviewParts),
+    scenariosDone: validScenariosDone(from.scenariosDone),
+  }
+}
+
+const together = (
+  one: Partial<Record<number, unknown[]>>,
+  other: Partial<Record<number, unknown[]>>,
+) =>
+  Object.fromEntries(
+    [...new Set([...Object.keys(one), ...Object.keys(other)])].map((week) => [
+      week,
+      [...(one[Number(week)] ?? []), ...(other[Number(week)] ?? [])],
+    ]),
+  )
+
+/**
+ * Everything done according to either of two records of it. Progress is only ever added to, so
+ * what a phone did and what the account already holds are simply both true.
+ */
+export function joinLessonProgress(one: LessonProgress, other: unknown): LessonProgress {
+  const more = readLessonProgress(other)
+  return readLessonProgress({
+    heardWeeks: [...one.heardWeeks, ...more.heardWeeks],
+    doneDays: together(one.doneDays, more.doneDays),
+    reviewParts: together(one.reviewParts, more.reviewParts),
+    scenariosDone: together(one.scenariosDone, more.scenariosDone),
+  })
+}
+
+/**
+ * What the learner has done in the lessons, kept in this browser and, for someone signed in,
+ * with their account (`shared/lib/learnerData`). Shared because the journey (which day a week
+ * opens next) and the lessons (what to unlock) both read it.
  * TODO(lessons): feed the journey's current week from this.
- * TODO(auth): sync it to the learner's account once sign-in exists.
  */
 export const useLessonProgressStore = create<LessonProgressState>()(
   persist(
     (set) => ({
-      heardWeeks: [],
-      doneDays: {},
-      reviewParts: {},
-      scenariosDone: {},
+      ...NO_LESSON_PROGRESS,
       markHeard: (week) =>
         set(({ heardWeeks }) =>
           heardWeeks.includes(week) ? { heardWeeks } : { heardWeeks: [...heardWeeks, week] },
@@ -134,21 +181,8 @@ export const useLessonProgressStore = create<LessonProgressState>()(
         reviewParts,
         scenariosDone,
       }),
-      // Saved by this browser at some earlier time; keep only what is still a week, a day, a
-      // part of the review and a place in the list of scenarios.
-      merge: (persisted, current) => {
-        const saved = (persisted ?? {}) as Partial<Record<keyof LessonProgress, unknown>>
-        const heardWeeks = Array.isArray(saved.heardWeeks)
-          ? [...new Set(saved.heardWeeks.filter(isWeekNumber))]
-          : []
-        return {
-          ...current,
-          heardWeeks,
-          doneDays: validDoneDays(saved.doneDays),
-          reviewParts: validReviewParts(saved.reviewParts),
-          scenariosDone: validScenariosDone(saved.scenariosDone),
-        }
-      },
+      // Saved by this browser at some earlier time.
+      merge: (persisted, current) => ({ ...current, ...readLessonProgress(persisted) }),
     },
   ),
 )

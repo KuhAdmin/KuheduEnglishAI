@@ -11,6 +11,7 @@ import { turnCue, type WeekRoleplay } from '@/shared/lib/curriculum/weekRoleplay
 import { isEnglish, useLanguage } from '@/shared/lib/i18n'
 import type { TurnHint } from '../components/TalkTranscript'
 import { MAX_TURN_MS, turnTiming } from '../lib/turnTiming'
+import { useReplyChecks } from './useReplyChecks'
 import { useSpokenPractice } from './useSpokenPractice'
 
 /** Before the first line, while turns are being taken, and after the last one. */
@@ -28,8 +29,9 @@ const RECORDER_MARGIN_MS = 2_000
 
 /**
  * A scripted conversation as the learner goes through it: the partner says a line with the
- * device's voice, the learner answers into the microphone (or skips), and the next line follows.
- * Nothing the learner says is recognised or rated, and the recording is only theirs to hear.
+ * device's voice, the learner answers into the microphone (or skips), and the next line follows
+ * whatever they said. The recording is only theirs to hear, unless they ask to have that reply
+ * checked (`checkReply`): then it is sent to the server, on that tap and never by itself.
  *
  * Turns are taken without tapping where the device allows it: the microphone opens when the
  * partner's line ends (once the browser has been given the microphone, never to ask for it),
@@ -54,6 +56,7 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
     },
   )
   const { turns } = roleplay
+  const replies = useReplyChecks()
 
   const [stage, setStage] = useState<RolePlayStage>('intro')
   const [position, setPosition] = useState(0)
@@ -113,6 +116,7 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
     prepareListening()
     primeMicrophonePermission()
     recording.reset()
+    replies.clear()
     setTakeFor(null)
     setHeld(false)
     setAskedLevel(0)
@@ -147,6 +151,10 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
       ? { cue, reply: hintLevel === 2 ? turn.reply : undefined }
       : null
 
+  /** The turn whose recording is still kept; a take is dropped when another replaces it. */
+  const takeTurn =
+    takeFor && recording.take && recording.attempts > takeFor.after ? takeFor.turn : null
+
   return {
     stage,
     /** How many of the partner's lines have been said, and how many the learner has answered. */
@@ -157,8 +165,12 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
     moreHelpLeft: hintLevel === 1,
     noHelpLeft: hintLevel === 2,
     speakingTurn: playback.status === 'playing' ? partnerSaying : null,
-    /** The turn whose recording can be played back; a take is dropped when another replaces it. */
-    takeTurn: takeFor && recording.take && recording.attempts > takeFor.after ? takeFor.turn : null,
+    /** The turn whose recording can be played back, and checked. */
+    takeTurn,
+    /** What checking a reply came to, by the number of its turn. */
+    replyChecks: replies.checks,
+    /** Whether a reply can be sent to be checked from this browser at all. */
+    canCheckReply: replies.supported,
     /** Seconds on show while the microphone is open: to begin, or to the end of the turn. */
     countdown:
       recording.phase === 'recording'
@@ -185,6 +197,20 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
       lineRequest.current += 1
       if (micOpen) recording.cancel()
       recording.playTake()
+    },
+    /**
+     * Send the reply that is still kept to be checked. They have turned to what they said, as
+     * when they listen to it: the microphone then waits for a tap, and the answer can be read.
+     */
+    checkReply: () => {
+      const answered = takeTurn === null ? undefined : turns[takeTurn]
+      if (takeTurn === null || !answered || !recording.take) return
+      lineRequest.current += 1
+      if (micOpen) recording.cancel()
+      void replies.check(takeTurn, recording.take, {
+        partner: answered.partner,
+        suggested: answered.reply,
+      })
     },
     startTurn: () => {
       prepareListening()

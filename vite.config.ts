@@ -70,10 +70,14 @@ export default defineConfig({
             options: { cacheName: 'app-config', expiration: { maxEntries: 20 } },
           },
           {
+            // A week's lesson content: the server's answer while it can be had, so that an
+            // admin's change reaches a learner at their next look, and the last one kept when
+            // it cannot (the app keeps its own copy as well, for its screens).
             urlPattern: ({ url }) => url.pathname.startsWith('/api/lessons'),
-            handler: 'StaleWhileRevalidate',
+            handler: 'NetworkFirst',
             options: {
               cacheName: 'lessons',
+              networkTimeoutSeconds: 3,
               expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 30 },
             },
           },

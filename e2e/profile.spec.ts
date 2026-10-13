@@ -29,7 +29,9 @@ test('the profile shows the Google account’s picture, and the camera changes i
   const [chooser] = await Promise.all([page.waitForEvent('filechooser'), camera.click()])
   await chooser.setFiles({ name: 'me.png', mimeType: 'image/png', buffer: PIXEL_PNG })
   await expect(photo).toHaveAttribute('src', /^data:image\/(webp|jpeg);base64,/)
-  await expect(card.getByText('This photo is kept on this device only.')).toBeVisible()
+  await expect(
+    card.getByText('This photo is saved with your account. Only you see it.'),
+  ).toBeVisible()
   await expectNoHorizontalScroll(page)
 
   // Kept in this browser: it is still their picture after a reload.
@@ -41,7 +43,9 @@ test('the profile shows the Google account’s picture, and the camera changes i
   expect(Math.round((await remove.boundingBox())?.height ?? 0)).toBeGreaterThanOrEqual(44)
   await remove.click()
   await expect(photo).toHaveAttribute('src', GOOGLE_PICTURE)
-  await expect(card.getByText('This photo is kept on this device only.')).toHaveCount(0)
+  await expect(
+    card.getByText('This photo is saved with your account. Only you see it.'),
+  ).toHaveCount(0)
 })
 
 test('an account without a picture has the stand-in, and a file that is no picture is refused', async ({

@@ -1,0 +1,666 @@
+{
+  "week": 15,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Gita",
+          "text": "Arun, why do you like this old radio?",
+          "translations": {
+            "bn": "অরুণ, আপনি এই পুরোনো রেডিওটি কেন ভালোবাসেন?",
+            "hi": "अरुण, आपको यह पुराना रेडियो क्यों पसंद है?"
+          }
+        },
+        {
+          "speaker": "Arun",
+          "text": "Because it was my grandfather’s. It is old, but it works well.",
+          "translations": {
+            "bn": "কারণ এটি আমার ঠাকুরদার ছিল। এটি পুরোনো, কিন্তু ভালো চলে।",
+            "hi": "क्योंकि यह मेरे दादाजी का था। यह पुराना है, पर अच्छा चलता है।"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "How does it work? Is it difficult to use?",
+          "translations": {
+            "bn": "এটি কীভাবে চলে? ব্যবহার করা কি কঠিন?",
+            "hi": "यह कैसे काम करता है? क्या इसे चलाना मुश्किल है?"
+          }
+        },
+        {
+          "speaker": "Arun",
+          "text": "No, it is easy. First, you plug it in. Then you turn the knob.",
+          "translations": {
+            "bn": "না, সহজ। প্রথমে প্লাগ লাগান। তারপর নবটি ঘোরান।",
+            "hi": "नहीं, आसान है। पहले इसे प्लग में लगाइए। फिर घुंडी घुमाइए।"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "And how do you find a station?",
+          "translations": { "bn": "আর স্টেশন কীভাবে পান?", "hi": "और स्टेशन कैसे मिलता है?" }
+        },
+        {
+          "speaker": "Arun",
+          "text": "You turn the knob slowly. After that, you listen for the music.",
+          "translations": {
+            "bn": "আপনি ধীরে ধীরে নব ঘোরান। এরপর গান শোনার চেষ্টা করুন।",
+            "hi": "आप घुंडी धीरे-धीरे घुमाते हैं। उसके बाद संगीत सुनने की कोशिश करते हैं।"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "I like it, but I think a phone is better. It has more stations.",
+          "translations": {
+            "bn": "আমার ভালো লেগেছে, কিন্তু আমার মনে হয় ফোন ভালো। এতে আরও স্টেশন আছে।",
+            "hi": "मुझे यह अच्छा लगा, पर मुझे लगता है फ़ोन बेहतर है। उसमें ज़्यादा स्टेशन होते हैं।"
+          }
+        },
+        {
+          "speaker": "Arun",
+          "text": "That is true, so I use both. For example, I use the radio at night and the phone in the day.",
+          "translations": {
+            "bn": "ঠিক কথা, তাই আমি দুটোই ব্যবহার করি। যেমন, রাতে রেডিও আর দিনে ফোন।",
+            "hi": "सही बात है, इसलिए मैं दोनों इस्तेमाल करता हूँ। उदाहरण के लिए, रात में रेडियो और दिन में फ़ोन।"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "Why do you use the radio at night?",
+          "translations": {
+            "bn": "রাতে রেডিও কেন ব্যবহার করেন?",
+            "hi": "रात में रेडियो क्यों इस्तेमाल करते हैं?"
+          }
+        },
+        {
+          "speaker": "Arun",
+          "text": "Because the screen is bright and I want to sleep. The radio is quiet and soft.",
+          "translations": {
+            "bn": "কারণ স্ক্রিন উজ্জ্বল, আর আমি ঘুমোতে চাই। রেডিও শান্ত আর নরম।",
+            "hi": "क्योंकि स्क्रीन चमकीली होती है और मुझे सोना होता है। रेडियो शांत और कोमल है।"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "That is a good reason. I want to try it.",
+          "translations": {
+            "bn": "ভালো কারণ। আমিও চেষ্টা করতে চাই।",
+            "hi": "यह अच्छा कारण है। मैं इसे आज़माना चाहती हूँ।"
+          }
+        },
+        {
+          "speaker": "Arun",
+          "text": "Come tomorrow, and I will show you how it works.",
+          "translations": {
+            "bn": "কাল আসুন, কীভাবে চলে আমি দেখিয়ে দেব।",
+            "hi": "कल आइए, मैं आपको दिखा दूँगा कि यह कैसे चलता है।"
+          }
+        }
+      ],
+      "voices": { "Gita": "female", "Arun": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "because",
+          "phonetic": "/bɪˈkɒz/",
+          "imageUrl": null,
+          "meanings": { "bn": "কারণ, কেননা", "hi": "क्योंकि" },
+          "syllables": ["be", "cause"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "শেষে “z” ধ্বনি, “s” নয়।"],
+            "en": ["Say the second part stronger.", "The ending is a “z” sound, not “s”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "अंत में “z” की आवाज़ है, “s” की नहीं।"]
+          }
+        },
+        {
+          "word": "reason",
+          "phonetic": "/ˈriːzn/",
+          "imageUrl": null,
+          "meanings": { "bn": "কারণ", "hi": "कारण" },
+          "syllables": ["rea", "son"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “রি”।", "মাঝে “s” ধ্বনি “z”-এর মতো।"],
+            "en": [
+              "Say the first part stronger: it sounds like “ree”.",
+              "The “s” in the middle sounds like “z”."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “री” जैसा।", "बीच का “s” “z” जैसा बोला जाता है।"]
+          }
+        },
+        {
+          "word": "so",
+          "phonetic": "/səʊ/",
+          "imageUrl": null,
+          "meanings": { "bn": "তাই", "hi": "इसलिए" },
+          "syllables": ["so"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“o”-এর উচ্চারণ “ওউ”-এর মতো।",
+              "ফল বোঝাতে “so” বলুন: “It rained, so we stayed home.”"
+            ],
+            "en": [
+              "The “o” sounds like “oh”.",
+              "Use “so” for a result: “It rained, so we stayed home.”"
+            ],
+            "hi": [
+              "“o” की आवाज़ “ओउ” जैसी है।",
+              "नतीजा बताने के लिए “so” कहें: “It rained, so we stayed home.”"
+            ]
+          }
+        },
+        {
+          "word": "but",
+          "phonetic": "/bʌt/",
+          "imageUrl": null,
+          "meanings": { "bn": "কিন্তু", "hi": "लेकिन" },
+          "syllables": ["but"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“u”-এর উচ্চারণ “cup”-এর “u”-এর মতো।",
+              "বিপরীত কথা জোড়ার সময় “but” ব্যবহার করুন।"
+            ],
+            "en": ["The “u” sounds like the “u” in “cup”.", "Use “but” to join opposite ideas."],
+            "hi": [
+              "“u” की आवाज़ “cup” के “u” जैसी है।",
+              "विपरीत बातों को जोड़ने के लिए “but” लगाएँ।"
+            ]
+          }
+        },
+        {
+          "word": "example",
+          "phonetic": "/ɪɡˈzɑːmpl/",
+          "imageUrl": null,
+          "meanings": { "bn": "উদাহরণ", "hi": "उदाहरण" },
+          "syllables": ["ex", "am", "ple"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "প্রথম অংশে “x” ধ্বনি “gz”-এর মতো।"],
+            "en": ["Say the second part stronger.", "The “x” sounds like “gz”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“x” की आवाज़ “ग्ज़” जैसी है।"]
+          }
+        },
+        {
+          "word": "also",
+          "phonetic": "/ˈɔːlsəʊ/",
+          "imageUrl": null,
+          "meanings": { "bn": "এছাড়াও", "hi": "भी, इसके अलावा" },
+          "syllables": ["al", "so"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “অল”।", "শেষ অংশের উচ্চারণ “সো”-এর মতো।"],
+            "en": [
+              "Say the first part stronger: it sounds like “all”.",
+              "The last part sounds like “so”."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “ऑल” जैसा।", "आख़िरी हिस्से की आवाज़ “सो” जैसी है।"]
+          }
+        },
+        {
+          "word": "instead",
+          "phonetic": "/ɪnˈsted/",
+          "imageUrl": null,
+          "meanings": { "bn": "বদলে", "hi": "इसके बजाय" },
+          "syllables": ["in", "stead"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“ea” ছোট “e”-এর মতো।"],
+            "en": ["Say the second part stronger.", "The “ea” sounds like a short “e”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“ea” छोटे “e” जैसा है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "First, boil the water.",
+          "alsoAccepted": ["First, heat the water."],
+          "translations": { "bn": "প্রথমে জল ফোটান।", "hi": "पहले पानी उबालिए।" },
+          "tips": {
+            "bn": ["ধাপ বোঝাতে “First” দিয়ে শুরু করুন।", "আদেশ বা নির্দেশে ক্রিয়া সরাসরি বসে।"],
+            "en": [
+              "Start with “First” to begin a process.",
+              "In an instruction, start with the verb."
+            ],
+            "hi": ["प्रक्रिया शुरू करने के लिए “First” कहें।", "निर्देश में क्रिया सीधे आती है।"]
+          }
+        },
+        {
+          "english": "Then add the tea leaves.",
+          "alsoAccepted": ["Then put in the tea leaves."],
+          "translations": { "bn": "তারপর চা-পাতা দিন।", "hi": "फिर चायपत्ती डालिए।" },
+          "tips": {
+            "bn": ["পরের ধাপ বোঝাতে “Then” বলুন।", "“add” মানে যোগ করা।"],
+            "en": ["Use “Then” for the next step.", "“add” means put in."],
+            "hi": ["अगले चरण के लिए “Then” कहें।", "“add” का मतलब है डालना।"]
+          }
+        },
+        {
+          "english": "I like this shop because the food is fresh.",
+          "alsoAccepted": ["I like this shop because the food is always fresh."],
+          "translations": {
+            "bn": "আমার এই দোকান ভালো লাগে, কারণ এখানকার খাবার তাজা।",
+            "hi": "मुझे यह दुकान पसंद है क्योंकि यहाँ का खाना ताज़ा है।"
+          },
+          "tips": {
+            "bn": ["“because” দিয়ে কারণ বলুন।", "প্রথমে মতামত, তারপর কারণ।"],
+            "en": ["Use “because” to give the reason.", "First say what you like, then why."],
+            "hi": ["“because” से कारण बताएँ।", "पहले पसंद बताएँ, फिर कारण।"]
+          }
+        },
+        {
+          "english": "It is cheap, so many people go there.",
+          "alsoAccepted": ["It is cheap, so a lot of people go there."],
+          "translations": {
+            "bn": "এটি সস্তা, তাই অনেকে সেখানে যায়।",
+            "hi": "वह सस्ता है, इसलिए बहुत से लोग वहाँ जाते हैं।"
+          },
+          "tips": {
+            "bn": ["“so” দিয়ে ফল বলুন।", "“so”-এর আগে কমা দিন।"],
+            "en": ["Use “so” for the result.", "Put a comma before “so”."],
+            "hi": ["नतीजा बताने के लिए “so” लगाएँ।", "“so” से पहले अल्पविराम लगाएँ।"]
+          }
+        },
+        {
+          "english": "I like fruit, for example mangoes and bananas.",
+          "alsoAccepted": [
+            "I like fruit, for example, mangoes and bananas.",
+            "I like fruit such as mangoes and bananas."
+          ],
+          "translations": {
+            "bn": "আমার ফল ভালো লাগে, যেমন আম আর কলা।",
+            "hi": "मुझे फल पसंद हैं, जैसे आम और केले।"
+          },
+          "tips": {
+            "bn": ["উদাহরণ দিতে “for example” বলুন।", "“such as”-ও একই কাজ করে।"],
+            "en": ["Use “for example” to give an example.", "“such as” does the same job."],
+            "hi": ["उदाहरण देने के लिए “for example” कहें।", "“such as” भी यही काम करता है।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Jeet",
+      "asWoman": "Jeeta",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! I want to learn something. How do you make tea?",
+          "reply": "First, I boil the water.",
+          "cues": { "bn": "প্রথম ধাপটি বলুন: জল ফোটানো।", "hi": "पहला चरण बताएँ: पानी उबालना।" }
+        },
+        {
+          "partner": "OK. And then?",
+          "reply": "Then I add the tea leaves and sugar.",
+          "cues": {
+            "bn": "পরের ধাপ বলুন: চা-পাতা আর চিনি দেওয়া।",
+            "hi": "अगला चरण बताएँ: चायपत्ती और चीनी डालना।"
+          }
+        },
+        {
+          "partner": "Why do you add sugar?",
+          "reply": "Because I like sweet tea.",
+          "cues": { "bn": "“because” দিয়ে কারণ বলুন।", "hi": "“because” से कारण बताएँ।" }
+        },
+        {
+          "partner": "I see. And after that?",
+          "reply": "After that, I add milk and wait two minutes.",
+          "cues": { "bn": "শেষ ধাপগুলো বলুন।", "hi": "आख़िरी चरण बताएँ।" }
+        },
+        {
+          "partner": "Can you give an example of other drinks?",
+          "reply": "For example, coffee or lemon tea.",
+          "cues": {
+            "bn": "“for example” দিয়ে অন্য পানীয়ের নাম বলুন।",
+            "hi": "“for example” से दूसरे पेयों के नाम बताएँ।"
+          }
+        },
+        {
+          "partner": "Thank you. I understand now!",
+          "reply": "You are welcome.",
+          "cues": { "bn": "বলুন, আপনাকেও স্বাগত।", "hi": "कहें कि कोई बात नहीं।" }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Explain something you know",
+        "translations": { "bn": "আপনার জানা কিছু বুঝিয়ে বলুন", "hi": "जो आप जानते हैं, समझाएँ" }
+      },
+      "instruction": {
+        "text": "Choose something you know well. Explain it in about one minute, with reasons and an example.",
+        "translations": {
+          "bn": "আপনার ভালো জানা কিছু বেছে নিন। প্রায় এক মিনিটে কারণ আর উদাহরণসহ বুঝিয়ে বলুন।",
+          "hi": "जिसे आप अच्छी तरह जानते हैं, वह चुनें। लगभग एक मिनट में कारण और उदाहरण के साथ समझाएँ।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what you will explain",
+          "translations": { "bn": "কী বোঝাবেন, বলুন", "hi": "बताएँ कि आप क्या समझाएँगे" }
+        },
+        {
+          "text": "Say why you know it or like it",
+          "translations": {
+            "bn": "কেন জানেন বা ভালোবাসেন, বলুন",
+            "hi": "बताएँ कि आप इसे क्यों जानते या पसंद करते हैं"
+          }
+        },
+        {
+          "text": "Explain it in steps: first, then, after that",
+          "translations": {
+            "bn": "ধাপে ধাপে বলুন: first, then, after that",
+            "hi": "चरणों में समझाएँ: first, then, after that"
+          }
+        },
+        {
+          "text": "Give one example",
+          "translations": { "bn": "একটি উদাহরণ দিন", "hi": "एक उदाहरण दें" }
+        },
+        {
+          "text": "Use “because”, “so” or “but” once",
+          "translations": {
+            "bn": "একবার “because”, “so” বা “but” ব্যবহার করুন",
+            "hi": "एक बार “because”, “so” या “but” का प्रयोग करें"
+          }
+        }
+      ],
+      "phrases": [
+        "I will explain how to …",
+        "I like it because …",
+        "First, … Then, … After that, …",
+        "For example, …",
+        "It is easy, but …",
+        "That is why I like it."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Complete: I like this park ___ it is quiet.",
+            "translations": {
+              "bn": "পূরণ করুন: I like this park ___ it is quiet.",
+              "hi": "पूरा करें: I like this park ___ it is quiet."
+            }
+          },
+          "answer": "because",
+          "others": ["but", "so"]
+        },
+        {
+          "question": {
+            "text": "Complete: It was raining, ___ we stayed at home.",
+            "translations": {
+              "bn": "পূরণ করুন: It was raining, ___ we stayed at home.",
+              "hi": "पूरा करें: It was raining, ___ we stayed at home."
+            }
+          },
+          "answer": "so",
+          "others": ["because", "but"]
+        },
+        {
+          "question": {
+            "text": "Complete: The phone is cheap, ___ the battery is weak.",
+            "translations": {
+              "bn": "পূরণ করুন: The phone is cheap, ___ the battery is weak.",
+              "hi": "पूरा करें: The phone is cheap, ___ the battery is weak."
+            }
+          },
+          "answer": "but",
+          "others": ["so", "because"]
+        },
+        {
+          "question": {
+            "text": "Put the steps in order: ___ wash the rice. ___ cook it. ___ serve it.",
+            "translations": {
+              "bn": "ধাপগুলো সাজান: ___ wash the rice. ___ cook it. ___ serve it.",
+              "hi": "चरणों को क्रम में रखें: ___ wash the rice. ___ cook it. ___ serve it."
+            }
+          },
+          "answer": "First, then, finally",
+          "others": ["Finally, first, then", "Then, finally, first"]
+        },
+        {
+          "question": {
+            "text": "Which phrase introduces an example?",
+            "translations": {
+              "bn": "কোন বাক্যাংশ উদাহরণ শুরু করে?",
+              "hi": "कौन-सा वाक्यांश उदाहरण शुरू करता है?"
+            }
+          },
+          "answer": "for example",
+          "others": ["in the end", "by the way"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Teacher",
+          "text": "Today, let’s talk about why we recycle.",
+          "translations": {
+            "bn": "আজ আমরা আলোচনা করব কেন পুনর্ব্যবহার করি।",
+            "hi": "आज हम बात करेंगे कि हम पुनर्चक्रण क्यों करते हैं।"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "Because it helps the earth. It makes less waste.",
+          "translations": {
+            "bn": "কারণ এটি পৃথিবীর উপকার করে। এতে আবর্জনা কম হয়।",
+            "hi": "क्योंकि इससे धरती की मदद होती है। कचरा कम होता है।"
+          }
+        },
+        {
+          "speaker": "Teacher",
+          "text": "Good. Can you give an example?",
+          "translations": {
+            "bn": "ভালো। একটি উদাহরণ দিতে পারবে?",
+            "hi": "अच्छा। क्या तुम एक उदाहरण दे सकती हो?"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "For example, we can use paper bags instead of plastic bags.",
+          "translations": {
+            "bn": "যেমন, আমরা প্লাস্টিকের ব্যাগের বদলে কাগজের ব্যাগ ব্যবহার করতে পারি।",
+            "hi": "उदाहरण के लिए, हम प्लास्टिक की थैलियों के बजाय काग़ज़ की थैलियाँ इस्तेमाल कर सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Teacher",
+          "text": "Very good. How do we recycle paper?",
+          "translations": {
+            "bn": "খুব ভালো। কাগজ কীভাবে পুনর্ব্যবহার করি?",
+            "hi": "बहुत अच्छा। हम काग़ज़ का पुनर्चक्रण कैसे करते हैं?"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "First, we collect old paper. Then a factory makes new paper from it.",
+          "translations": {
+            "bn": "প্রথমে আমরা পুরোনো কাগজ জমাই। তারপর কারখানা সেটি থেকে নতুন কাগজ বানায়।",
+            "hi": "पहले हम पुराना काग़ज़ इकट्ठा करते हैं। फिर एक कारख़ाना उससे नया काग़ज़ बनाता है।"
+          }
+        },
+        {
+          "speaker": "Teacher",
+          "text": "And is it easy to do at home?",
+          "translations": {
+            "bn": "আর বাড়িতে এটি করা কি সহজ?",
+            "hi": "और क्या घर पर यह करना आसान है?"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "Yes, it is easy, but many people forget.",
+          "translations": {
+            "bn": "হ্যাঁ, সহজ, কিন্তু অনেকে ভুলে যায়।",
+            "hi": "हाँ, आसान है, पर बहुत से लोग भूल जाते हैं।"
+          }
+        },
+        {
+          "speaker": "Teacher",
+          "text": "That is why we have two bins at school.",
+          "translations": {
+            "bn": "সেই জন্যই আমাদের স্কুলে দুটি ডাস্টবিন আছে।",
+            "hi": "इसीलिए हमारे स्कूल में दो कूड़ेदान हैं।"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "I think that is a great idea.",
+          "translations": {
+            "bn": "আমার মনে হয় এটি দারুণ ধারণা।",
+            "hi": "मुझे लगता है यह बहुत अच्छा विचार है।"
+          }
+        }
+      ],
+      "voices": { "Teacher": "male", "Zoya": "female" }
+    },
+    "review_roleplay": {
+      "partner": "the teacher",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good morning. Please tell us about something you know well.",
+          "reply": "I will explain how to …",
+          "cues": { "bn": "বলুন কী বোঝাবেন।", "hi": "बताएँ कि आप क्या समझाएँगे।" }
+        },
+        {
+          "partner": "Interesting. How does it work?",
+          "reply": "First, … Then, …",
+          "cues": { "bn": "ধাপে ধাপে বলুন।", "hi": "चरणों में बताएँ।" }
+        },
+        {
+          "partner": "Why do you like it?",
+          "reply": "Because …",
+          "cues": { "bn": "“because” দিয়ে কারণ বলুন।", "hi": "“because” से कारण बताएँ।" }
+        },
+        {
+          "partner": "Can you give one example?",
+          "reply": "For example, …",
+          "cues": { "bn": "একটি উদাহরণ দিন।", "hi": "एक उदाहरण दें।" }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Explaining a recipe",
+            "translations": { "bn": "রান্নার নিয়ম বোঝানো", "hi": "विधि समझाना" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I want to cook your favourite dish. Which dish is it?",
+                "reply": "My favourite dish is …",
+                "cues": {
+                  "bn": "আপনার প্রিয় পদের নাম বলুন।",
+                  "hi": "अपने पसंदीदा व्यंजन का नाम बताएँ।"
+                }
+              },
+              {
+                "partner": "Why do you like it?",
+                "reply": "Because it is …",
+                "cues": { "bn": "“because” দিয়ে কারণ বলুন।", "hi": "“because” से कारण बताएँ।" }
+              },
+              {
+                "partner": "How do I make it?",
+                "reply": "First, … Then, … After that, …",
+                "cues": { "bn": "ধাপে ধাপে নিয়মটি বলুন।", "hi": "चरणों में विधि बताएँ।" }
+              },
+              {
+                "partner": "That sounds easy. Thank you!",
+                "reply": "You are welcome.",
+                "cues": { "bn": "বলুন, আপনাকেও স্বাগত।", "hi": "कहें कि कोई बात नहीं।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Using a new machine",
+            "translations": { "bn": "নতুন যন্ত্র ব্যবহার", "hi": "नई मशीन चलाना" }
+          },
+          "roleplay": {
+            "partner": "Dev",
+            "asWoman": "Devi",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "We have a new coffee machine. How does it work?",
+                "reply": "First, you put in the water.",
+                "cues": { "bn": "প্রথম ধাপ বলুন: জল ভরা।", "hi": "पहला चरण बताएँ: पानी भरना।" }
+              },
+              {
+                "partner": "OK. Then?",
+                "reply": "Then you press the green button.",
+                "cues": { "bn": "বলুন সবুজ বোতাম টিপতে হবে।", "hi": "कहें कि हरा बटन दबाना है।" }
+              },
+              {
+                "partner": "And if the light is red?",
+                "reply": "Then wait, because it is hot.",
+                "cues": { "bn": "“because” দিয়ে কারণ বলুন।", "hi": "“because” से कारण बताएँ।" }
+              },
+              {
+                "partner": "Thanks! Easy, isn’t it?",
+                "reply": "Yes, it is easy.",
+                "cues": { "bn": "রাজি হোন।", "hi": "सहमति जताएँ।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Why I love my city",
+            "translations": { "bn": "আমার শহর কেন ভালো লাগে", "hi": "मुझे अपना शहर क्यों पसंद" }
+          },
+          "roleplay": {
+            "partner": "Mina",
+            "asMan": "Mohan",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I am a visitor. Do you like your city?",
+                "reply": "Yes, I like it very much.",
+                "cues": { "bn": "বলুন হ্যাঁ, খুব ভালো লাগে।", "hi": "कहें कि हाँ, बहुत पसंद है।" }
+              },
+              {
+                "partner": "Why do you like it?",
+                "reply": "Because …",
+                "cues": { "bn": "“because” দিয়ে কারণ বলুন।", "hi": "“because” से कारण बताएँ।" }
+              },
+              {
+                "partner": "Can you give me an example of a place to visit?",
+                "reply": "For example, …",
+                "cues": {
+                  "bn": "একটি দর্শনীয় জায়গার উদাহরণ দিন।",
+                  "hi": "घूमने की एक जगह का उदाहरण दें।"
+                }
+              },
+              {
+                "partner": "Thank you. I will go there tomorrow.",
+                "reply": "I hope you like it.",
+                "cues": {
+                  "bn": "বলুন আপনি আশা করেন তাঁর ভালো লাগবে।",
+                  "hi": "कहें कि आपको उम्मीद है उन्हें पसंद आएगा।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,664 @@
+{
+  "week": 11,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Divya",
+          "text": "Hari, what do you like to eat?",
+          "translations": {
+            "bn": "হরি, আপনি কী খেতে ভালোবাসেন?",
+            "hi": "हरि, आपको क्या खाना पसंद है?"
+          }
+        },
+        {
+          "speaker": "Hari",
+          "text": "I like spicy food. My favourite is chicken curry.",
+          "translations": {
+            "bn": "আমার ঝাল খাবার ভালো লাগে। আমার প্রিয় মুরগির ঝোল।",
+            "hi": "मुझे तीखा खाना पसंद है। मेरा पसंदीदा चिकन करी है।"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "Really? I don’t like very spicy food. I like sweet things.",
+          "translations": {
+            "bn": "তাই নাকি? আমার খুব ঝাল ভালো লাগে না। আমার মিষ্টি জিনিস ভালো লাগে।",
+            "hi": "सच में? मुझे बहुत तीखा खाना पसंद नहीं है। मुझे मीठी चीज़ें पसंद हैं।"
+          }
+        },
+        {
+          "speaker": "Hari",
+          "text": "Let’s plan lunch together. What would you like to eat?",
+          "translations": {
+            "bn": "চলুন একসঙ্গে দুপুরের খাবারের পরিকল্পনা করি। আপনি কী খেতে চান?",
+            "hi": "चलिए साथ में दोपहर के खाने की योजना बनाएँ। आप क्या खाना चाहेंगी?"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "I would like paneer and rice. The paneer there is soft and fresh.",
+          "translations": {
+            "bn": "আমি পনির আর ভাত খেতে চাই। সেখানকার পনির নরম আর তাজা।",
+            "hi": "मैं पनीर और चावल खाना चाहूँगी। वहाँ का पनीर नरम और ताज़ा होता है।"
+          }
+        },
+        {
+          "speaker": "Hari",
+          "text": "Good. Then I will have the curry. Let’s go to the restaurant.",
+          "translations": {
+            "bn": "ভালো। তাহলে আমি ঝোলটা নেব। চলুন রেস্তোরাঁয় যাই।",
+            "hi": "अच्छा। तो मैं करी लूँगा। चलिए रेस्तराँ चलें।"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "Good afternoon. Are you ready to order?",
+          "translations": {
+            "bn": "শুভ অপরাহ্ন। আপনারা কি অর্ডার দিতে প্রস্তুত?",
+            "hi": "नमस्ते। क्या आप ऑर्डर देने के लिए तैयार हैं?"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "Yes. I would like paneer and rice, please.",
+          "translations": {
+            "bn": "হ্যাঁ। আমি পনির আর ভাত চাই, দয়া করে।",
+            "hi": "जी हाँ। मुझे पनीर और चावल चाहिए, कृपया।"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "And what would you like to drink?",
+          "translations": { "bn": "আর পান করার জন্য কী নেবেন?", "hi": "और पीने के लिए क्या लेंगी?" }
+        },
+        {
+          "speaker": "Divya",
+          "text": "A glass of water, please. And can I have some salad?",
+          "translations": {
+            "bn": "এক গ্লাস জল, দয়া করে। আর কিছু সালাদ পেতে পারি কি?",
+            "hi": "एक गिलास पानी, कृपया। और क्या थोड़ा सलाद मिल सकता है?"
+          }
+        },
+        {
+          "speaker": "Hari",
+          "text": "I will have the chicken curry and a cold lemon soda.",
+          "translations": {
+            "bn": "আমি মুরগির ঝোল আর একটি ঠান্ডা লেবুর সোডা নেব।",
+            "hi": "मैं चिकन करी और एक ठंडा नींबू सोडा लूँगा।"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "Of course. It will be ready soon.",
+          "translations": {
+            "bn": "অবশ্যই। শীঘ্রই তৈরি হয়ে যাবে।",
+            "hi": "बिल्कुल। यह जल्दी तैयार हो जाएगा।"
+          }
+        },
+        {
+          "speaker": "Hari",
+          "text": "It smells delicious!",
+          "translations": { "bn": "কী সুন্দর গন্ধ! দারুণ লাগছে!", "hi": "कितनी अच्छी ख़ुशबू है!" }
+        }
+      ],
+      "voices": { "Divya": "female", "Hari": "male", "Waiter": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "sweet",
+          "phonetic": "/swiːt/",
+          "imageUrl": null,
+          "meanings": { "bn": "মিষ্টি", "hi": "मीठा" },
+          "syllables": ["sweet"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ee” লম্বা।", "শুরুতে “s” আর “w” একসঙ্গে বলুন।"],
+            "en": ["The “ee” is long.", "Say “s” and “w” together at the start."],
+            "hi": ["“ee” लंबा है।", "शुरू में “s” और “w” एक साथ बोलें।"]
+          }
+        },
+        {
+          "word": "spicy",
+          "phonetic": "/ˈspaɪsi/",
+          "imageUrl": null,
+          "meanings": { "bn": "ঝাল", "hi": "तीखा" },
+          "syllables": ["spi", "cy"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“i”-এর উচ্চারণ “eye”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “i” sounds like “eye”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“i” की आवाज़ “eye” जैसी है।"]
+          }
+        },
+        {
+          "word": "sour",
+          "phonetic": "/saʊə/",
+          "imageUrl": null,
+          "meanings": { "bn": "টক", "hi": "खट्टा" },
+          "syllables": ["sour"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ou”-এর উচ্চারণ “আউ”-এর মতো।", "এটি “flower”-এর সঙ্গে মেলে।"],
+            "en": ["The “ou” sounds like “ow”.", "It rhymes with “flower”."],
+            "hi": ["“ou” की आवाज़ “आउ” जैसी है।", "इसकी तुक “flower” से मिलती है।"]
+          }
+        },
+        {
+          "word": "salty",
+          "phonetic": "/ˈsɔːlti/",
+          "imageUrl": null,
+          "meanings": { "bn": "নোনতা", "hi": "नमकीन" },
+          "syllables": ["sal", "ty"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “সল”।", "শেষ অংশ ছোট ও হালকা।"],
+            "en": [
+              "Say the first part stronger: it sounds like “sawl”.",
+              "Keep the last part short and soft."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “सॉल” जैसा।", "आख़िरी हिस्सा छोटा और हल्का रखें।"]
+          }
+        },
+        {
+          "word": "crunchy",
+          "phonetic": "/ˈkrʌntʃi/",
+          "imageUrl": null,
+          "meanings": { "bn": "মচমচে", "hi": "कुरकुरा" },
+          "syllables": ["crunch", "y"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“u”-এর উচ্চারণ “cup”-এর “u”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “u” sounds like the “u” in “cup”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“u” की आवाज़ “cup” के “u” जैसी है।"]
+          }
+        },
+        {
+          "word": "fresh",
+          "phonetic": "/freʃ/",
+          "imageUrl": null,
+          "meanings": { "bn": "তাজা", "hi": "ताज़ा" },
+          "syllables": ["fresh"],
+          "stress": null,
+          "tips": {
+            "bn": ["“e” ছোট।", "শেষে “sh” নরম করে বলুন।"],
+            "en": ["The “e” is short.", "End with a soft “sh”."],
+            "hi": ["“e” छोटा है।", "अंत में “sh” नरमी से बोलें।"]
+          }
+        },
+        {
+          "word": "delicious",
+          "phonetic": "/dɪˈlɪʃəs/",
+          "imageUrl": null,
+          "meanings": { "bn": "সুস্বাদু", "hi": "स्वादिष्ट" },
+          "syllables": ["de", "li", "cious"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“cious” শুনতে “শাস”-এর মতো।"],
+            "en": ["Say the second part stronger.", "“cious” sounds like “shus”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“cious” की आवाज़ “शस” जैसी है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "What would you like to eat?",
+          "alsoAccepted": ["What would you like to have?"],
+          "translations": { "bn": "আপনি কী খেতে চান?", "hi": "आप क्या खाना चाहेंगे?" },
+          "tips": {
+            "bn": [
+              "ইচ্ছা জানতে “What would you like” বলুন।",
+              "এটি “What do you want?”-এর চেয়ে ভদ্র।"
+            ],
+            "en": [
+              "Use “What would you like” to ask what someone wants.",
+              "It is more polite than “What do you want?”"
+            ],
+            "hi": [
+              "चाह जानने के लिए “What would you like” कहें।",
+              "यह “What do you want?” से ज़्यादा विनम्र है।"
+            ]
+          }
+        },
+        {
+          "english": "I would like a cup of tea, please.",
+          "alsoAccepted": [
+            "I’d like a cup of tea, please.",
+            "I would like a cup of tea.",
+            "Could I have a cup of tea, please?"
+          ],
+          "translations": {
+            "bn": "আমি এক কাপ চা চাই, দয়া করে।",
+            "hi": "मुझे एक कप चाय चाहिए, कृपया।"
+          },
+          "tips": {
+            "bn": ["“I would like” সংক্ষেপে “I’d like”।", "শেষে “please” বললে আরও ভদ্র শোনায়।"],
+            "en": [
+              "“I would like” can be short: “I’d like”.",
+              "End with “please” to sound polite."
+            ],
+            "hi": [
+              "“I would like” का छोटा रूप “I’d like” है।",
+              "अंत में “please” कहने से बात विनम्र लगती है।"
+            ]
+          }
+        },
+        {
+          "english": "The soup is too hot.",
+          "alsoAccepted": ["The soup is very hot."],
+          "translations": { "bn": "স্যুপটি খুব গরম।", "hi": "सूप बहुत गरम है।" },
+          "tips": {
+            "bn": ["“too” মানে প্রয়োজনের চেয়ে বেশি।", "“too” আর “two” একই রকম শোনায়।"],
+            "en": ["“too” means more than is good.", "“too” and “two” sound the same."],
+            "hi": ["“too” का मतलब है ज़रूरत से ज़्यादा।", "“too” और “two” एक जैसे सुनाई देते हैं।"]
+          }
+        },
+        {
+          "english": "Can I have some more water?",
+          "alsoAccepted": ["Could I have some more water?", "May I have some more water?"],
+          "translations": {
+            "bn": "আমি কি আরও একটু জল পেতে পারি?",
+            "hi": "क्या मुझे थोड़ा और पानी मिल सकता है?"
+          },
+          "tips": {
+            "bn": ["কিছু চাইতে “Can I have” বলুন।", "“some” দিয়ে অল্প পরিমাণ বোঝায়।"],
+            "en": ["Use “Can I have” to ask for something.", "“some” means a small amount."],
+            "hi": ["कुछ माँगने के लिए “Can I have” कहें।", "“some” थोड़ी मात्रा बताता है।"]
+          }
+        },
+        {
+          "english": "The mango is sweet and fresh.",
+          "alsoAccepted": ["The mango is fresh and sweet."],
+          "translations": { "bn": "আমটি মিষ্টি আর তাজা।", "hi": "आम मीठा और ताज़ा है।" },
+          "tips": {
+            "bn": ["স্বাদ বোঝাতে “is” এর পরে বিশেষণ বসান।", "দুটি বিশেষণ “and” দিয়ে জোড়া যায়।"],
+            "en": ["After “is”, say how it tastes.", "Join two describing words with “and”."],
+            "hi": [
+              "“is” के बाद बताएँ कि स्वाद कैसा है।",
+              "दो विशेषणों को “and” से जोड़ा जा सकता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the waiter",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good evening. Welcome! Are you ready to order?",
+          "reply": "Yes, I am ready.",
+          "cues": { "bn": "বলুন হ্যাঁ, আপনি প্রস্তুত।", "hi": "कहें कि हाँ, आप तैयार हैं।" }
+        },
+        {
+          "partner": "What would you like to eat?",
+          "reply": "I would like … please.",
+          "cues": {
+            "bn": "আপনি কী খেতে চান, বলুন। শেষে “please” বলুন।",
+            "hi": "बताएँ कि आप क्या खाना चाहेंगे। अंत में “please” कहें।"
+          }
+        },
+        {
+          "partner": "Good choice. And what would you like to drink?",
+          "reply": "I would like … please.",
+          "cues": { "bn": "কী পান করতে চান, বলুন।", "hi": "बताएँ कि आप क्या पीना चाहेंगे।" }
+        },
+        {
+          "partner": "Is it OK if the food is spicy?",
+          "reply": "Not too spicy, please.",
+          "cues": {
+            "bn": "ভদ্রভাবে বলুন, খুব ঝাল নয়।",
+            "hi": "विनम्रता से कहें कि ज़्यादा तीखा नहीं।"
+          }
+        },
+        {
+          "partner": "Of course. Anything else?",
+          "reply": "Can I have some water, please?",
+          "cues": { "bn": "একটু জল চান।", "hi": "थोड़ा पानी माँगें।" }
+        },
+        {
+          "partner": "Certainly. Your food will be ready soon. Enjoy your meal!",
+          "reply": "Thank you very much.",
+          "cues": { "bn": "অনেক ধন্যবাদ দিন।", "hi": "बहुत धन्यवाद दें।" }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Let’s plan a meal",
+        "translations": { "bn": "চলুন একটি ভোজের পরিকল্পনা করি", "hi": "आइए, खाने की योजना बनाएँ" }
+      },
+      "instruction": {
+        "text": "Plan a meal with a friend. Say what you like, what you would like, and agree on a menu.",
+        "translations": {
+          "bn": "বন্ধুর সঙ্গে একটি ভোজের পরিকল্পনা করুন। কী ভালো লাগে, কী খেতে চান বলুন, আর একটি মেনুতে একমত হোন।",
+          "hi": "दोस्त के साथ खाने की योजना बनाएँ। बताएँ कि क्या पसंद है, क्या खाना चाहेंगे, और एक मेनू पर सहमत हों।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say two foods you like",
+          "translations": {
+            "bn": "আপনার পছন্দের দুটি খাবার বলুন",
+            "hi": "अपने पसंद के दो खाने बताएँ"
+          }
+        },
+        {
+          "text": "Say one food you don’t like, politely",
+          "translations": {
+            "bn": "অপছন্দের একটি খাবার ভদ্রভাবে বলুন",
+            "hi": "नापसंद का एक खाना विनम्रता से बताएँ"
+          }
+        },
+        {
+          "text": "Ask what your friend would like",
+          "translations": {
+            "bn": "বন্ধু কী খেতে চায়, জিজ্ঞেস করুন",
+            "hi": "पूछें कि दोस्त क्या खाना चाहेगा"
+          }
+        },
+        {
+          "text": "Describe one dish with a taste word",
+          "translations": {
+            "bn": "স্বাদের একটি শব্দ দিয়ে একটি পদের বর্ণনা দিন",
+            "hi": "स्वाद के एक शब्द से एक व्यंजन का वर्णन करें"
+          }
+        },
+        {
+          "text": "Agree on one meal together",
+          "translations": {
+            "bn": "একসঙ্গে একটি ভোজে একমত হোন",
+            "hi": "साथ में एक खाने पर सहमत हों"
+          }
+        }
+      ],
+      "phrases": [
+        "I like … I don’t like … very much.",
+        "What would you like to eat?",
+        "I would like …",
+        "It is sweet and fresh.",
+        "Let’s have …",
+        "That sounds good!"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you politely ask what someone wants to eat?",
+            "translations": {
+              "bn": "কেউ কী খেতে চায়, তা ভদ্রভাবে কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी से विनम्रता से कैसे पूछें कि वह क्या खाना चाहता है?"
+            }
+          },
+          "answer": "What would you like to eat?",
+          "others": ["What do you eat?", "Where do you eat?"]
+        },
+        {
+          "question": {
+            "text": "You want a cup of tea in a café. What do you say?",
+            "translations": {
+              "bn": "আপনি ক্যাফেতে এক কাপ চা চান। কী বলবেন?",
+              "hi": "आप कैफ़े में एक कप चाय चाहते हैं। क्या कहेंगे?"
+            }
+          },
+          "answer": "I would like a cup of tea, please.",
+          "others": ["Give me tea.", "Tea is hot."]
+        },
+        {
+          "question": {
+            "text": "Which word describes the taste of a lemon?",
+            "translations": {
+              "bn": "লেবুর স্বাদ কোন শব্দে বোঝায়?",
+              "hi": "नींबू के स्वाद को कौन-सा शब्द बताता है?"
+            }
+          },
+          "answer": "sour",
+          "others": ["sweet", "crunchy"]
+        },
+        {
+          "question": {
+            "text": "The food is too hot to eat. Which sentence is right?",
+            "translations": {
+              "bn": "খাবারটি এত গরম যে খাওয়া যায় না। কোন বাক্যটি ঠিক?",
+              "hi": "खाना इतना गरम है कि खाया नहीं जा सकता। कौन-सा वाक्य सही है?"
+            }
+          },
+          "answer": "The food is too hot.",
+          "others": ["The food is two hot.", "The food is to hot."]
+        },
+        {
+          "question": {
+            "text": "Your friend suggests a restaurant and you agree. What do you say?",
+            "translations": {
+              "bn": "বন্ধু একটি রেস্তোরাঁর কথা বলল, আপনি রাজি। কী বলবেন?",
+              "hi": "दोस्त एक रेस्तराँ सुझाता है और आप सहमत हैं। क्या कहेंगे?"
+            }
+          },
+          "answer": "That sounds good!",
+          "others": ["I don’t know.", "It is hot."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Waiter",
+          "text": "Welcome to the café. Here is the menu.",
+          "translations": {
+            "bn": "ক্যাফেতে স্বাগত। এই নিন মেনু।",
+            "hi": "कैफ़े में आपका स्वागत है। यह रहा मेनू।"
+          }
+        },
+        {
+          "speaker": "Anwar",
+          "text": "Thank you. What do you recommend?",
+          "translations": {
+            "bn": "ধন্যবাদ। আপনি কী সুপারিশ করেন?",
+            "hi": "धन्यवाद। आप क्या सुझाएँगे?"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "The sandwich is very good. It is fresh and crunchy.",
+          "translations": {
+            "bn": "স্যান্ডউইচটি খুব ভালো। এটি তাজা আর মচমচে।",
+            "hi": "सैंडविच बहुत अच्छा है। वह ताज़ा और कुरकुरा है।"
+          }
+        },
+        {
+          "speaker": "Anwar",
+          "text": "I would like a sandwich, please.",
+          "translations": {
+            "bn": "আমি একটি স্যান্ডউইচ চাই, দয়া করে।",
+            "hi": "मुझे एक सैंडविच चाहिए, कृपया।"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "And what would you like to drink?",
+          "translations": { "bn": "আর পান করার জন্য কী নেবেন?", "hi": "और पीने के लिए क्या लेंगे?" }
+        },
+        {
+          "speaker": "Anwar",
+          "text": "I would like a mango lassi. Is it sweet?",
+          "translations": {
+            "bn": "আমি একটি আমের লাচ্ছি চাই। এটি কি মিষ্টি?",
+            "hi": "मुझे एक आम की लस्सी चाहिए। क्या वह मीठी है?"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "Yes, it is sweet. You can ask for less sugar.",
+          "translations": {
+            "bn": "হ্যাঁ, মিষ্টি। চাইলে কম চিনি বলতে পারেন।",
+            "hi": "हाँ, मीठी है। आप कम चीनी के लिए कह सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Anwar",
+          "text": "Less sugar, please. And can I have some water?",
+          "translations": {
+            "bn": "কম চিনি, দয়া করে। আর একটু জল পেতে পারি?",
+            "hi": "कम चीनी, कृपया। और क्या थोड़ा पानी मिल सकता है?"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "Of course. Anything else?",
+          "translations": { "bn": "অবশ্যই। আর কিছু?", "hi": "बिल्कुल। और कुछ?" }
+        },
+        {
+          "speaker": "Anwar",
+          "text": "No, that is all. Thank you.",
+          "translations": { "bn": "না, এটুকুই। ধন্যবাদ।", "hi": "नहीं, बस इतना ही। धन्यवाद।" }
+        }
+      ],
+      "voices": { "Waiter": "female", "Anwar": "male" }
+    },
+    "review_roleplay": {
+      "partner": "the waiter",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! Here is the menu. What would you like to eat?",
+          "reply": "I would like … please.",
+          "cues": { "bn": "আপনি কী খেতে চান, বলুন।", "hi": "बताएँ कि आप क्या खाना चाहेंगे।" }
+        },
+        {
+          "partner": "And to drink?",
+          "reply": "I would like … please.",
+          "cues": { "bn": "কী পান করতে চান, বলুন।", "hi": "बताएँ कि आप क्या पीना चाहेंगे।" }
+        },
+        {
+          "partner": "Do you like it spicy?",
+          "reply": "A little, please.",
+          "cues": { "bn": "বলুন একটু ঝাল।", "hi": "कहें कि थोड़ा तीखा।" }
+        },
+        {
+          "partner": "Of course. Enjoy your meal!",
+          "reply": "Thank you!",
+          "cues": { "bn": "ধন্যবাদ দিন।", "hi": "धन्यवाद दें।" }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "At a restaurant",
+            "translations": { "bn": "রেস্তোরাঁয়", "hi": "रेस्तराँ में" }
+          },
+          "roleplay": {
+            "partner": "the waiter",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good evening. A table for two?",
+                "reply": "Yes, please.",
+                "cues": { "bn": "বলুন হ্যাঁ, দয়া করে।", "hi": "कहें कि हाँ, कृपया।" }
+              },
+              {
+                "partner": "Here is the menu. What would you like?",
+                "reply": "I would like … please.",
+                "cues": { "bn": "আপনি কী খেতে চান, বলুন।", "hi": "बताएँ कि आप क्या खाना चाहेंगे।" }
+              },
+              {
+                "partner": "Would you like a drink?",
+                "reply": "Yes, … please.",
+                "cues": { "bn": "একটি পানীয়ের নাম বলুন।", "hi": "एक पेय का नाम बताएँ।" }
+              },
+              {
+                "partner": "Your food is ready. Enjoy!",
+                "reply": "Thank you. It looks delicious!",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর বলুন খাবারটি দেখতে সুস্বাদু।",
+                  "hi": "धन्यवाद दें, और कहें कि खाना स्वादिष्ट दिख रहा है।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Planning a party",
+            "translations": { "bn": "পার্টির পরিকল্পনা", "hi": "दावत की योजना" }
+          },
+          "roleplay": {
+            "partner": "Neel",
+            "asWoman": "Neela",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "We are having a small party on Saturday. What food do you like?",
+                "reply": "I like …",
+                "cues": { "bn": "আপনার পছন্দের খাবার বলুন।", "hi": "अपना पसंदीदा खाना बताएँ।" }
+              },
+              {
+                "partner": "Good. Do you like spicy food?",
+                "reply": "Not very much.",
+                "cues": {
+                  "bn": "ভদ্রভাবে বলুন, খুব বেশি নয়।",
+                  "hi": "विनम्रता से कहें कि ज़्यादा नहीं।"
+                }
+              },
+              {
+                "partner": "OK, I will make something sweet. What would you like to drink?",
+                "reply": "I would like …",
+                "cues": { "bn": "কী পান করতে চান, বলুন।", "hi": "बताएँ कि आप क्या पीना चाहेंगे।" }
+              },
+              {
+                "partner": "Great! See you on Saturday.",
+                "reply": "See you. Thank you!",
+                "cues": {
+                  "bn": "বলুন দেখা হবে, আর ধন্যবাদ দিন।",
+                  "hi": "कहें कि मिलेंगे, और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At a street stall",
+            "translations": { "bn": "রাস্তার দোকানে", "hi": "ठेले पर" }
+          },
+          "roleplay": {
+            "partner": "the vendor",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! What would you like?",
+                "reply": "I would like some … please.",
+                "cues": { "bn": "কী চান, বলুন।", "hi": "बताएँ कि आपको क्या चाहिए।" }
+              },
+              {
+                "partner": "Spicy or not spicy?",
+                "reply": "Not too spicy, please.",
+                "cues": { "bn": "বলুন খুব ঝাল নয়।", "hi": "कहें कि ज़्यादा तीखा नहीं।" }
+              },
+              {
+                "partner": "Here you are. It is fresh and hot.",
+                "reply": "Thank you. How much is it?",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর দাম জিজ্ঞেস করুন।",
+                  "hi": "धन्यवाद दें, और दाम पूछें।"
+                }
+              },
+              {
+                "partner": "Twenty rupees.",
+                "reply": "Here you are. Thank you!",
+                "cues": { "bn": "টাকা দিন, আর ধন্যবাদ জানান।", "hi": "पैसे दें, और धन्यवाद कहें।" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

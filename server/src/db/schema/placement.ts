@@ -1,3 +1,12 @@
+import {
+  PLACEMENT_DEVICE_TYPES,
+  PLACEMENT_LEVELS,
+  PLACEMENT_SKILLS,
+  PLACEMENT_SKIP_REASONS,
+  PLACEMENT_STAGES,
+  PLACEMENT_STATUSES,
+  PLACEMENT_SUPPORT_LEVELS,
+} from '@kuhedu/contracts'
 import { sql } from 'drizzle-orm'
 import {
   boolean,
@@ -16,17 +25,10 @@ import { users } from './accounts.ts'
 import { id, instant, isLanguageTag, oneOf } from './columns.ts'
 
 /**
- * The placement test, in the shapes the app already keeps (`sessionSchema`, `responseSchema`
- * and `resultSchema` in the app's `features/placement`), so a test taken in the browser can be
- * stored as it is. The lists below are that feature's `types.ts`.
+ * The placement test, in the shapes the app keeps it in (`placementSessionSchema`,
+ * `placementResponseSchema` and `placementResultSchema` in `@kuhedu/contracts`, whose lists
+ * these are), so a test taken in the browser is stored as it is.
  */
-export const PLACEMENT_LEVELS = ['FOUNDATION', 'A1', 'A2', 'B1', 'B2+'] as const
-export const PLACEMENT_STAGES = ['LISTEN', 'UNDERSTAND', 'SPEAK'] as const
-export const PLACEMENT_STATUSES = ['IN_PROGRESS', 'PAUSED', 'COMPLETED', 'ABANDONED'] as const
-export const PLACEMENT_SKIP_REASONS = ['notSure', 'audioFailed', 'declined'] as const
-export const PLACEMENT_DEVICE_TYPES = ['mobile', 'tablet', 'desktop'] as const
-export const PLACEMENT_SUPPORT_LEVELS = ['HIGH', 'MEDIUM', 'LOW'] as const
-export const PLACEMENT_SKILLS = ['listening', 'understanding', 'speaking'] as const
 
 /** Why a stage ended without evidence, by stage: `{ SPEAK: 'notScoredYet' }`. */
 type NotAssessed = Partial<Record<(typeof PLACEMENT_STAGES)[number], string>>

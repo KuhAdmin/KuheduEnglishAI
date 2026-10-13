@@ -1,0 +1,670 @@
+{
+  "week": 12,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Navya",
+          "text": "Hi Naveen! How are you feeling today?",
+          "translations": {
+            "bn": "হাই নবীন! আজ আপনি কেমন বোধ করছেন?",
+            "hi": "हाय नवीन! आज आप कैसा महसूस कर रहे हैं?"
+          }
+        },
+        {
+          "speaker": "Naveen",
+          "text": "Not very good. I am tired and a little worried.",
+          "translations": {
+            "bn": "খুব ভালো নয়। আমি ক্লান্ত আর একটু চিন্তিত।",
+            "hi": "बहुत अच्छा नहीं। मैं थका हुआ हूँ और थोड़ा चिंतित हूँ।"
+          }
+        },
+        {
+          "speaker": "Navya",
+          "text": "Oh no. Why are you worried?",
+          "translations": { "bn": "ইস। কেন চিন্তিত?", "hi": "अरे। आप चिंतित क्यों हैं?" }
+        },
+        {
+          "speaker": "Naveen",
+          "text": "I have an important exam tomorrow. I am nervous.",
+          "translations": {
+            "bn": "কাল আমার একটি গুরুত্বপূর্ণ পরীক্ষা আছে। আমি নার্ভাস।",
+            "hi": "कल मेरी एक ज़रूरी परीक्षा है। मैं घबराया हुआ हूँ।"
+          }
+        },
+        {
+          "speaker": "Navya",
+          "text": "I understand. How do you feel about the subject?",
+          "translations": {
+            "bn": "বুঝতে পারছি। বিষয়টি নিয়ে আপনার কেমন লাগছে?",
+            "hi": "मैं समझती हूँ। उस विषय के बारे में आप कैसा महसूस करते हैं?"
+          }
+        },
+        {
+          "speaker": "Naveen",
+          "text": "I like it, but I am afraid of the long questions.",
+          "translations": {
+            "bn": "বিষয়টি আমার ভালো লাগে, কিন্তু লম্বা প্রশ্নগুলোকে ভয় পাই।",
+            "hi": "मुझे वह विषय पसंद है, पर मुझे लंबे सवालों से डर लगता है।"
+          }
+        },
+        {
+          "speaker": "Navya",
+          "text": "You study hard, so you will do well. Don’t worry.",
+          "translations": {
+            "bn": "আপনি কঠোর পরিশ্রম করেন, তাই ভালো করবেন। চিন্তা করবেন না।",
+            "hi": "आप मेहनत से पढ़ते हैं, इसलिए अच्छा करेंगे। चिंता मत कीजिए।"
+          }
+        },
+        {
+          "speaker": "Naveen",
+          "text": "Thank you. That makes me feel better.",
+          "translations": {
+            "bn": "ধন্যবাদ। এতে আমার একটু ভালো লাগছে।",
+            "hi": "धन्यवाद। इससे मुझे थोड़ा अच्छा लग रहा है।"
+          }
+        },
+        {
+          "speaker": "Navya",
+          "text": "And how was your day before this? Were you happy?",
+          "translations": {
+            "bn": "আর এর আগে আপনার দিন কেমন কাটল? আপনি কি খুশি ছিলেন?",
+            "hi": "और इससे पहले आपका दिन कैसा रहा? क्या आप ख़ुश थे?"
+          }
+        },
+        {
+          "speaker": "Naveen",
+          "text": "Yes, I was excited this morning. My brother called me.",
+          "translations": {
+            "bn": "হ্যাঁ, আজ সকালে আমি উচ্ছ্বসিত ছিলাম। আমার ভাই আমাকে ফোন করেছিল।",
+            "hi": "हाँ, आज सुबह मैं उत्साहित था। मेरे भाई ने मुझे फ़ोन किया था।"
+          }
+        },
+        {
+          "speaker": "Navya",
+          "text": "That is lovely. Call me if you feel sad or lonely.",
+          "translations": {
+            "bn": "খুব ভালো। মন খারাপ বা একা লাগলে আমাকে ফোন করবেন।",
+            "hi": "यह बहुत अच्छा है। उदास या अकेला लगे तो मुझे फ़ोन कीजिए।"
+          }
+        },
+        {
+          "speaker": "Naveen",
+          "text": "I will. You are a good friend.",
+          "translations": {
+            "bn": "করব। আপনি একজন ভালো বন্ধু।",
+            "hi": "करूँगा। आप एक अच्छी दोस्त हैं।"
+          }
+        }
+      ],
+      "voices": { "Navya": "female", "Naveen": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "happy",
+          "phonetic": "/ˈhæpi/",
+          "imageUrl": null,
+          "meanings": { "bn": "খুশি", "hi": "ख़ुश" },
+          "syllables": ["hap", "py"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“a” ছোট, “cat”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “a” is short, as in “cat”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“a” छोटा है, “cat” जैसा।"]
+          }
+        },
+        {
+          "word": "sad",
+          "phonetic": "/sæd/",
+          "imageUrl": null,
+          "meanings": { "bn": "দুঃখিত, মন খারাপ", "hi": "उदास" },
+          "syllables": ["sad"],
+          "stress": null,
+          "tips": {
+            "bn": ["“a” ছোট, “cat”-এর মতো।", "শেষে “d” স্পষ্ট বলুন।"],
+            "en": ["The “a” is short, as in “cat”.", "End with a clear “d”."],
+            "hi": ["“a” छोटा है, “cat” जैसा।", "अंत में “d” साफ़ बोलें।"]
+          }
+        },
+        {
+          "word": "worried",
+          "phonetic": "/ˈwʌrid/",
+          "imageUrl": null,
+          "meanings": { "bn": "চিন্তিত", "hi": "चिंतित" },
+          "syllables": ["wor", "ried"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশের উচ্চারণ “cup”-এর “u”-এর মতো।", "প্রথম অংশটি জোর দিয়ে বলুন।"],
+            "en": ["The first part sounds like the “u” in “cup”.", "Say the first part stronger."],
+            "hi": ["पहले हिस्से की आवाज़ “cup” के “u” जैसी है।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        },
+        {
+          "word": "angry",
+          "phonetic": "/ˈæŋɡri/",
+          "imageUrl": null,
+          "meanings": { "bn": "রাগান্বিত", "hi": "ग़ुस्से में" },
+          "syllables": ["an", "gry"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“ng”-এর পরে “g” ধ্বনি আছে।"],
+            "en": ["Say the first part stronger.", "There is a “g” sound after the “n”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“n” के बाद “g” की आवाज़ है।"]
+          }
+        },
+        {
+          "word": "tired",
+          "phonetic": "/ˈtaɪəd/",
+          "imageUrl": null,
+          "meanings": { "bn": "ক্লান্ত", "hi": "थका हुआ" },
+          "syllables": ["tir(e)d"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i”-এর উচ্চারণ “eye”-এর মতো।", "শব্দটি এক ঝটকায় বলুন।"],
+            "en": ["The “i” sounds like “eye”.", "Say it as one quick part."],
+            "hi": ["“i” की आवाज़ “eye” जैसी है।", "शब्द को एक झटके में बोलें।"]
+          }
+        },
+        {
+          "word": "excited",
+          "phonetic": "/ɪkˈsaɪtɪd/",
+          "imageUrl": null,
+          "meanings": { "bn": "উচ্ছ্বসিত", "hi": "उत्साहित" },
+          "syllables": ["ex", "ci", "ted"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "দ্বিতীয় অংশের উচ্চারণ “সাই”-এর মতো।"],
+            "en": ["Say the second part stronger.", "The second part sounds like “sigh”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "दूसरे हिस्से की आवाज़ “साइ” जैसी है।"]
+          }
+        },
+        {
+          "word": "nervous",
+          "phonetic": "/ˈnɜːvəs/",
+          "imageUrl": null,
+          "meanings": { "bn": "নার্ভাস, ঘাবড়ানো", "hi": "घबराया हुआ" },
+          "syllables": ["ner", "vous"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "শেষ অংশটি ছোট ও হালকা রাখুন।"],
+            "en": ["Say the first part stronger.", "Keep the last part short and soft."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "आख़िरी हिस्सा छोटा और हल्का रखें।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "How does she feel about the exam?",
+          "alsoAccepted": [],
+          "translations": {
+            "bn": "পরীক্ষা নিয়ে সে কেমন বোধ করছে?",
+            "hi": "परीक्षा के बारे में वह कैसा महसूस करती है?"
+          },
+          "tips": {
+            "bn": [
+              "কারও অনুভূতি জানতে “How does … feel” বলুন।",
+              "“feel about” মানে কোনো বিষয়ে কেমন লাগে।"
+            ],
+            "en": [
+              "Use “How does … feel” to ask about feelings.",
+              "“feel about” means how you think of something."
+            ],
+            "hi": [
+              "किसी की भावना पूछने के लिए “How does … feel” कहें।",
+              "“feel about” का मतलब है किसी बात पर कैसा लगता है।"
+            ]
+          }
+        },
+        {
+          "english": "She feels nervous about the exam.",
+          "alsoAccepted": ["She is nervous about the exam.", "She is nervous about her exam."],
+          "translations": {
+            "bn": "পরীক্ষা নিয়ে সে নার্ভাস বোধ করছে।",
+            "hi": "वह परीक्षा को लेकर घबराई हुई है।"
+          },
+          "tips": {
+            "bn": ["“feels” বা “is” দুটিই চলে।", "“nervous”-এর পরে “about” বসিয়ে কারণ বলুন।"],
+            "en": [
+              "Both “feels” and “is” work.",
+              "After “nervous”, use “about” to give the reason."
+            ],
+            "hi": ["“feels” और “is” दोनों चलते हैं।", "“nervous” के बाद “about” लगाकर कारण बताएँ।"]
+          }
+        },
+        {
+          "english": "He is happy because his team won.",
+          "alsoAccepted": ["He is happy because his team has won."],
+          "translations": {
+            "bn": "সে খুশি, কারণ তার দল জিতেছে।",
+            "hi": "वह ख़ुश है क्योंकि उसकी टीम जीत गई।"
+          },
+          "tips": {
+            "bn": ["কারণ বলতে “because” ব্যবহার করুন।", "“won” হলো “win”-এর অতীত রূপ।"],
+            "en": ["Use “because” to give a reason.", "“won” is the past of “win”."],
+            "hi": ["कारण बताने के लिए “because” लगाएँ।", "“won”, “win” का भूतकाल है।"]
+          }
+        },
+        {
+          "english": "Why are you sad today?",
+          "alsoAccepted": ["Why are you sad?"],
+          "translations": { "bn": "আজ আপনি দুঃখিত কেন?", "hi": "आज आप उदास क्यों हैं?" },
+          "tips": {
+            "bn": ["কারণ জানতে “Why” দিয়ে শুরু করুন।", "উত্তরে “Because …” বলুন।"],
+            "en": ["Start with “Why” to ask for a reason.", "Answer with “Because …”."],
+            "hi": ["कारण पूछने के लिए “Why” से शुरू करें।", "जवाब में “Because …” कहें।"]
+          }
+        },
+        {
+          "english": "I am sorry to hear that.",
+          "alsoAccepted": ["I’m sorry to hear that.", "I am sorry to hear it."],
+          "translations": { "bn": "এটা শুনে আমি দুঃখিত।", "hi": "यह सुनकर मुझे दुख हुआ।" },
+          "tips": {
+            "bn": ["কারও খারাপ খবর শুনলে এটি বলুন।", "এটি সহানুভূতি দেখায়, ক্ষমা চাওয়া নয়।"],
+            "en": ["Say this when you hear bad news.", "It shows sympathy. It is not an apology."],
+            "hi": ["किसी की बुरी ख़बर सुनकर यह कहें।", "यह सहानुभूति दिखाता है, माफ़ी नहीं।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Neel",
+      "asWoman": "Neela",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello. I am not feeling well today.",
+          "reply": "Oh no. What is wrong?",
+          "cues": {
+            "bn": "সহানুভূতি দেখান, আর জিজ্ঞেস করুন কী হয়েছে।",
+            "hi": "सहानुभूति दिखाएँ, और पूछें कि क्या हुआ।"
+          }
+        },
+        {
+          "partner": "I am very worried. My mother is in hospital.",
+          "reply": "I am sorry to hear that.",
+          "cues": { "bn": "বলুন, এটা শুনে আপনি দুঃখিত।", "hi": "कहें कि यह सुनकर आपको दुख हुआ।" }
+        },
+        {
+          "partner": "Thank you. The doctor says she will be fine, but I feel nervous.",
+          "reply": "That is good news. How can I help?",
+          "cues": {
+            "bn": "বলুন এটি ভালো খবর, আর জিজ্ঞেস করুন কীভাবে সাহায্য করতে পারেন।",
+            "hi": "कहें कि यह अच्छी ख़बर है, और पूछें कि आप कैसे मदद कर सकते हैं।"
+          }
+        },
+        {
+          "partner": "Please just talk to me for a while. It makes me feel better.",
+          "reply": "Of course. I am here for you.",
+          "cues": {
+            "bn": "বলুন, অবশ্যই, আপনি তাঁর পাশে আছেন।",
+            "hi": "कहें कि बिल्कुल, आप उनके साथ हैं।"
+          }
+        },
+        {
+          "partner": "Thank you for listening. I feel a little happier now.",
+          "reply": "I am glad. Call me anytime.",
+          "cues": {
+            "bn": "বলুন আপনি খুশি, আর যে কোনো সময় ফোন করতে বলুন।",
+            "hi": "कहें कि आपको ख़ुशी है, और कभी भी फ़ोन करने को कहें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Let’s talk about feelings",
+        "translations": { "bn": "চলুন অনুভূতির কথা বলি", "hi": "आइए, भावनाओं की बात करें" }
+      },
+      "instruction": {
+        "text": "Talk with a friend about how you feel and why. Listen, and respond kindly.",
+        "translations": {
+          "bn": "বন্ধুর সঙ্গে নিজের অনুভূতি আর তার কারণ নিয়ে কথা বলুন। শুনুন, আর সদয়ভাবে সাড়া দিন।",
+          "hi": "दोस्त से अपनी भावना और उसका कारण बताएँ। सुनें, और दया से जवाब दें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say how you feel today",
+          "translations": {
+            "bn": "আজ কেমন বোধ করছেন, বলুন",
+            "hi": "बताएँ कि आज आप कैसा महसूस कर रहे हैं"
+          }
+        },
+        {
+          "text": "Give one reason with “because”",
+          "translations": {
+            "bn": "“because” দিয়ে একটি কারণ বলুন",
+            "hi": "“because” से एक कारण बताएँ"
+          }
+        },
+        {
+          "text": "Ask your friend how they feel",
+          "translations": {
+            "bn": "বন্ধু কেমন বোধ করছে, জিজ্ঞেস করুন",
+            "hi": "दोस्त से पूछें कि वह कैसा महसूस कर रहा है"
+          }
+        },
+        {
+          "text": "Say how you feel about one thing",
+          "translations": {
+            "bn": "কোনো একটি বিষয়ে আপনার কেমন লাগে, বলুন",
+            "hi": "किसी एक बात पर आपको कैसा लगता है, बताएँ"
+          }
+        },
+        {
+          "text": "Respond kindly to your friend",
+          "translations": { "bn": "বন্ধুকে সদয়ভাবে সাড়া দিন", "hi": "दोस्त को दया से जवाब दें" }
+        }
+      ],
+      "phrases": [
+        "I feel … today.",
+        "I am … because …",
+        "How do you feel?",
+        "I feel … about …",
+        "I am sorry to hear that.",
+        "That sounds great!"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you ask how someone feels today?",
+            "translations": {
+              "bn": "কেউ আজ কেমন বোধ করছে, তা কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "कोई आज कैसा महसूस कर रहा है, यह कैसे पूछें?"
+            }
+          },
+          "answer": "How are you feeling today?",
+          "others": ["How old are you today?", "Where are you today?"]
+        },
+        {
+          "question": {
+            "text": "Which word shows that someone is afraid or unsure?",
+            "translations": {
+              "bn": "কোন শব্দ বোঝায় কেউ ভয় পাচ্ছে বা অনিশ্চিত?",
+              "hi": "कौन-सा शब्द बताता है कि कोई डरा हुआ या अनिश्चित है?"
+            }
+          },
+          "answer": "nervous",
+          "others": ["excited", "happy"]
+        },
+        {
+          "question": {
+            "text": "Your friend says, “My dog is ill.” What do you say?",
+            "translations": {
+              "bn": "বন্ধু বলল, “My dog is ill.” আপনি কী বলবেন?",
+              "hi": "दोस्त कहता है, “My dog is ill.” आप क्या कहेंगे?"
+            }
+          },
+          "answer": "I am sorry to hear that.",
+          "others": ["That sounds great!", "I am hungry."]
+        },
+        {
+          "question": {
+            "text": "Complete: She is happy ___ she passed the exam.",
+            "translations": {
+              "bn": "পূরণ করুন: She is happy ___ she passed the exam.",
+              "hi": "पूरा करें: She is happy ___ she passed the exam."
+            }
+          },
+          "answer": "because",
+          "others": ["but", "or"]
+        },
+        {
+          "question": {
+            "text": "How do you ask for the reason someone is sad?",
+            "translations": {
+              "bn": "কেউ কেন দুঃখিত, তার কারণ কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "कोई क्यों उदास है, यह कारण कैसे पूछें?"
+            }
+          },
+          "answer": "Why are you sad?",
+          "others": ["Who are you sad?", "What are you sad?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Maya",
+          "text": "Hi Sunny. You look happy today!",
+          "translations": {
+            "bn": "হাই সানি। আজ আপনাকে খুশি দেখাচ্ছে!",
+            "hi": "हाय सनी। आज आप ख़ुश लग रहे हैं!"
+          }
+        },
+        {
+          "speaker": "Sunny",
+          "text": "I am! I got a new job today.",
+          "translations": {
+            "bn": "আমি খুশি! আজ আমি নতুন চাকরি পেয়েছি।",
+            "hi": "हाँ! आज मुझे नई नौकरी मिली है।"
+          }
+        },
+        {
+          "speaker": "Maya",
+          "text": "That is wonderful! How do you feel about it?",
+          "translations": {
+            "bn": "দারুণ! এ নিয়ে আপনার কেমন লাগছে?",
+            "hi": "बहुत बढ़िया! इसके बारे में आप कैसा महसूस कर रहे हैं?"
+          }
+        },
+        {
+          "speaker": "Sunny",
+          "text": "I am excited, but a little nervous too.",
+          "translations": {
+            "bn": "আমি উচ্ছ্বসিত, তবে একটু নার্ভাসও।",
+            "hi": "मैं उत्साहित हूँ, पर थोड़ा घबराया हुआ भी।"
+          }
+        },
+        {
+          "speaker": "Maya",
+          "text": "Why are you nervous?",
+          "translations": { "bn": "কেন নার্ভাস?", "hi": "आप घबराए हुए क्यों हैं?" }
+        },
+        {
+          "speaker": "Sunny",
+          "text": "The office is far, and I don’t know anyone there.",
+          "translations": {
+            "bn": "অফিস অনেক দূরে, আর ওখানে আমি কাউকে চিনি না।",
+            "hi": "दफ़्तर दूर है, और वहाँ मैं किसी को नहीं जानता।"
+          }
+        },
+        {
+          "speaker": "Maya",
+          "text": "Everyone is friendly in a new office. You will make friends.",
+          "translations": {
+            "bn": "নতুন অফিসে সবাই মিশুকে হয়। আপনি বন্ধু পাবেন।",
+            "hi": "नए दफ़्तर में सब मिलनसार होते हैं। आपके दोस्त बन जाएँगे।"
+          }
+        },
+        {
+          "speaker": "Sunny",
+          "text": "Thank you, Maya. That makes me feel better.",
+          "translations": {
+            "bn": "ধন্যবাদ, মায়া। এতে আমার ভালো লাগছে।",
+            "hi": "धन्यवाद, माया। इससे मुझे अच्छा लग रहा है।"
+          }
+        },
+        {
+          "speaker": "Maya",
+          "text": "And how is your family? Are they happy?",
+          "translations": {
+            "bn": "আর আপনার পরিবার কেমন আছে? তাঁরা কি খুশি?",
+            "hi": "और आपका परिवार कैसा है? क्या वे ख़ुश हैं?"
+          }
+        },
+        {
+          "speaker": "Sunny",
+          "text": "Yes, they are very proud of me.",
+          "translations": {
+            "bn": "হ্যাঁ, তাঁরা আমাকে নিয়ে খুব গর্বিত।",
+            "hi": "हाँ, उन्हें मुझ पर बहुत गर्व है।"
+          }
+        }
+      ],
+      "voices": { "Maya": "female", "Sunny": "male" }
+    },
+    "review_roleplay": {
+      "partner": "Maya",
+      "asMan": "Manoj",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! You look different today. How are you feeling?",
+          "reply": "I feel … today.",
+          "cues": {
+            "bn": "আজ কেমন বোধ করছেন, বলুন।",
+            "hi": "बताएँ कि आज आप कैसा महसूस कर रहे हैं।"
+          }
+        },
+        {
+          "partner": "Why do you feel like that?",
+          "reply": "Because …",
+          "cues": { "bn": "“because” দিয়ে কারণ বলুন।", "hi": "“because” से कारण बताएँ।" }
+        },
+        {
+          "partner": "I understand. Thank you for telling me.",
+          "reply": "How are you feeling today?",
+          "cues": {
+            "bn": "তাঁকেও জিজ্ঞেস করুন তিনি কেমন বোধ করছেন।",
+            "hi": "उनसे भी पूछें कि वे कैसा महसूस कर रहे हैं।"
+          }
+        },
+        {
+          "partner": "I am happy. The sun is shining!",
+          "reply": "That sounds great!",
+          "cues": { "bn": "বলুন, শুনে ভালো লাগল।", "hi": "कहें कि सुनकर अच्छा लगा।" }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A friend feels sad",
+            "translations": { "bn": "বন্ধুর মন খারাপ", "hi": "दोस्त उदास है" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi. I am not happy today.",
+                "reply": "Oh no. Why are you sad?",
+                "cues": { "bn": "জিজ্ঞেস করুন কেন মন খারাপ।", "hi": "पूछें कि वे उदास क्यों हैं।" }
+              },
+              {
+                "partner": "I failed my driving test.",
+                "reply": "I am sorry to hear that.",
+                "cues": { "bn": "সহানুভূতি দেখান।", "hi": "सहानुभूति दिखाएँ।" }
+              },
+              {
+                "partner": "I feel angry with myself. I practised a lot.",
+                "reply": "Don’t worry. You can try again.",
+                "cues": {
+                  "bn": "বলুন চিন্তা করবেন না, আবার চেষ্টা করা যাবে।",
+                  "hi": "कहें कि चिंता न करें, फिर कोशिश कर सकते हैं।"
+                }
+              },
+              {
+                "partner": "Thank you. I feel a little better.",
+                "reply": "I am glad. Let’s have tea.",
+                "cues": {
+                  "bn": "বলুন আপনি খুশি, আর চা খেতে ডাকুন।",
+                  "hi": "कहें कि आपको ख़ुशी है, और चाय पर बुलाएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": { "text": "Good news", "translations": { "bn": "ভালো খবর", "hi": "अच्छी ख़बर" } },
+          "roleplay": {
+            "partner": "Gauri",
+            "asMan": "Gaurav",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Guess what! I am so happy today!",
+                "reply": "Really? Why are you so happy?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন কেন এত খুশি।",
+                  "hi": "पूछें कि वे इतने ख़ुश क्यों हैं।"
+                }
+              },
+              {
+                "partner": "My sister is getting married next month!",
+                "reply": "That is wonderful news!",
+                "cues": { "bn": "বলুন দারুণ খবর।", "hi": "कहें कि बहुत अच्छी ख़बर है।" }
+              },
+              {
+                "partner": "I am very excited. There is a lot to do.",
+                "reply": "How can I help?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন কীভাবে সাহায্য করতে পারেন।",
+                  "hi": "पूछें कि आप कैसे मदद कर सकते हैं।"
+                }
+              },
+              {
+                "partner": "Thank you. You are kind.",
+                "reply": "Of course. I am happy for you.",
+                "cues": { "bn": "বলুন আপনি তাঁর জন্য খুশি।", "hi": "कहें कि आप उनके लिए ख़ुश हैं।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Before an interview",
+            "translations": { "bn": "ইন্টারভিউয়ের আগে", "hi": "इंटरव्यू से पहले" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I have an interview in ten minutes. I feel very nervous.",
+                "reply": "Why do you feel nervous?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন কেন নার্ভাস।",
+                  "hi": "पूछें कि वे घबराए हुए क्यों हैं।"
+                }
+              },
+              {
+                "partner": "Because it is my dream job.",
+                "reply": "I understand. You are well prepared.",
+                "cues": {
+                  "bn": "বলুন আপনি বুঝতে পারছেন, আর তিনি ভালোভাবে তৈরি।",
+                  "hi": "कहें कि आप समझते हैं, और वे अच्छी तरह तैयार हैं।"
+                }
+              },
+              {
+                "partner": "Do you really think so?",
+                "reply": "Yes. Take a deep breath. Good luck!",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, গভীর শ্বাস নিন, শুভকামনা!",
+                  "hi": "कहें कि हाँ, गहरी साँस लें, शुभकामनाएँ!"
+                }
+              },
+              {
+                "partner": "Thank you. I feel better now.",
+                "reply": "Call me after the interview.",
+                "cues": {
+                  "bn": "ইন্টারভিউয়ের পরে ফোন করতে বলুন।",
+                  "hi": "इंटरव्यू के बाद फ़ोन करने को कहें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

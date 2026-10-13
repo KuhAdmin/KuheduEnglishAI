@@ -10,7 +10,9 @@
   "scripts": {
     "dev": "vite",
     "dev:server": "npm run dev -w @kuhedu/server",
-    "dev:speech": "node speech/dev.mjs",
+    "dev:speech": "node speech/dev.mjs speech",
+    "dev:scorer": "node speech/dev.mjs scorer",
+    "dev:grader": "node speech/dev.mjs grader",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "lint": "eslint .",

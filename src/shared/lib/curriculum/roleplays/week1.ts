@@ -7,10 +7,13 @@ import type { WeekRoleplay } from '../weekRoleplays'
  * Written by the assistant, with the Bengali and Hindi cues. The cues speak of Ravi in forms
  * that do not depend on gender ("তাঁকে", "उनका"). "My name is …" is left open for the learner's
  * own name; the device's voice reads it as far as "is".
+ * The learner's tutor plays Ravi; a woman tutor plays the same part as Asha, the other of the
+ * week's two people.
  * TODO(content): expert review of the English, native review of the cues.
  */
 export const week1Roleplay: WeekRoleplay = {
   partner: 'Ravi',
+  asWoman: 'Asha',
   imageUrl: null,
   turns: [
     {

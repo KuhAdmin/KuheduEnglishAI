@@ -1,10 +1,10 @@
 import { Play, RotateCcw } from 'lucide-react'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useWakeLock } from '@/shared/hooks/useWakeLock'
 import { MicrophoneHelp } from '@/shared/lib/audio/MicrophoneHelp'
-import { cn } from '@/shared/lib/cn'
-import type { WeekRoleplay } from '@/shared/lib/curriculum/weekRoleplays'
+import { roleplayPlayedBy, type WeekRoleplay } from '@/shared/lib/curriculum/weekRoleplays'
 import { fillText, formatNumber, useLanguage, useT } from '@/shared/lib/i18n'
+import { useTutorVoiceKind } from '@/shared/lib/learner/tutorAvatar'
 import { Button } from '@/shared/ui/Button'
 import { StepScreen } from '@/shared/ui/StepScreen'
 import { useRolePlay, type RolePlayHelp } from '../hooks/useRolePlay'
@@ -13,8 +13,7 @@ import { revealOnMount } from '../lib/revealOnMount'
 import { PAUSE_ENDS_TURN_MS } from '../lib/turnTiming'
 import { EndChatConfirm } from './EndChatConfirm'
 import { LessonNextButton } from './LessonNextButton'
-import { LessonTopBar } from './LessonTopBar'
-import { PartnerAvatar } from './PartnerAvatar'
+import { PartnerBand } from './PartnerBand'
 import { TalkControls } from './TalkControls'
 import { TalkTranscript } from './TalkTranscript'
 
@@ -39,15 +38,20 @@ export type RolePlayStepProps = {
 
 /**
  * Day 4, a role-play (and, with other ones, the mini role-play of Day 6's review and the
- * scenarios of Day 7's challenge): the learner talks with a partner whose lines are written (there is no AI
- * yet, so the screen does not claim one). It starts on a tap, so the device may speak and the
- * microphone has been explained. Once the browser allows the microphone it opens by itself on
- * each of the learner's turns, counting down the time to begin and the end of a long turn.
+ * scenarios of Day 7's challenge): the learner talks with a partner whose lines are written (the
+ * partner does not listen or answer, so the screen does not claim an AI one). A reply the
+ * learner gave can be checked by the server when they ask, turn by turn (`ReplyCheck`); nothing
+ * of the conversation depends on it. **The partner's face stays in view**, in a band at the top
+ * with the way back and the day's place in the week (`PartnerBand`), as the tutor does on the
+ * week's overview; the heading and the conversation scroll under it. It starts on a tap, so the
+ * device may speak and the microphone has been explained. Once the browser allows the
+ * microphone it opens by itself on each of the learner's turns, counting down the time to begin
+ * and the end of a long turn.
  * "Next" comes after the last turn; leaving before that asks first and does not finish the day.
  * Speaking is never required: every turn can be skipped.
  */
 export function RolePlayStep({
-  roleplay,
+  roleplay: written,
   day,
   dayCount,
   backTo,
@@ -59,6 +63,9 @@ export function RolePlayStep({
 }: RolePlayStepProps) {
   const t = useT()
   const language = useLanguage()
+  // The learner's tutor plays the partner, so the partner is called what fits that tutor.
+  const tutor = useTutorVoiceKind()
+  const roleplay = useMemo(() => roleplayPlayedBy(written, tutor), [written, tutor])
   const talk = useRolePlay(roleplay, help)
   const { recording, stage } = talk
   const [confirmingEnd, setConfirmingEnd] = useState(false)
@@ -143,17 +150,20 @@ export function RolePlayStep({
       eyebrow={eyebrow}
       title={fillText(t('lessonDay.talk.title'), { name: roleplay.partner })}
       subtitle={t('lessonDay.talk.subtitle')}
-      topBar={<LessonTopBar backTo={backTo} backLabel={backLabel} day={day} dayCount={dayCount} />}
+      topBarTone="soft"
+      topBar={
+        <PartnerBand
+          backTo={backTo}
+          backLabel={backLabel}
+          day={day}
+          dayCount={dayCount}
+          imageUrl={roleplay.imageUrl}
+          speaking={talk.speakingTurn !== null}
+        />
+      }
       footer={footer}
     >
-      <div
-        className={cn(
-          'flex flex-1 animate-rise-in flex-col items-center gap-4',
-          stage === 'intro' && 'justify-center',
-        )}
-      >
-        <PartnerAvatar imageUrl={roleplay.imageUrl} speaking={talk.speakingTurn !== null} />
-
+      <div className="flex flex-1 animate-rise-in flex-col items-center gap-4">
         {stage !== 'intro' && talk.cannotSpeak && (
           <p
             role="alert"
@@ -177,6 +187,8 @@ export function RolePlayStep({
               onReplay={talk.canSpeak ? talk.replayPartner : undefined}
               onSayReply={talk.canSpeak ? talk.sayReply : undefined}
               onListenToSelf={talk.listenToSelf}
+              replyChecks={talk.replyChecks}
+              onCheckReply={talk.canCheckReply ? talk.checkReply : undefined}
             />
           </div>
         )}

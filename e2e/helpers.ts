@@ -73,9 +73,209 @@ export const signedInAs = (target: Page | BrowserContext, user: Record<string, u
 export const test = base.extend({
   context: async ({ context }, run) => {
     await signedInAs(context, LEARNER)
+    await withoutLearnerServer(context)
+    await withoutLessonServer(context)
     await run(context)
   },
 })
+
+/**
+ * What a learner sets and does is kept with their account (`/api/me`). A spec has no server
+ * behind it, and must not reach a real one (`vite preview` passes `/api` on to a backend if one
+ * is running): asked, it does not answer, so the app goes by what the browser holds, as it does
+ * offline. This is every spec's start; one about the account's data says `learnerServer`.
+ */
+export const withoutLearnerServer = (target: Page | BrowserContext) =>
+  target.route(/\/api\/me(\/|$|\?)/, (route) => route.abort())
+
+/**
+ * The lessons are kept on the server (`/api/lessons`, and `/api/admin/lessons` for an admin). A
+ * spec has no server behind it: asked, it does not answer, so a learner's screens run on what is
+ * built in and on what the spec seeded, as they do offline. This is every spec's start; an admin
+ * (`signInAsAdmin`) gets a stand-in that keeps what they save, and a spec about a learner
+ * reading the server says `lessonServer` itself.
+ */
+export const withoutLessonServer = (target: Page | BrowserContext) =>
+  target.route(/\/api\/(admin\/)?lessons(\/|$|\?)/, (route) => route.abort())
+
+/** A piece of a week's lesson content, as the stand-in server keeps it. */
+export type KeptPiece = { week: number; kind: string; value: unknown; version: number }
+
+const LESSON_KINDS = [
+  'picture',
+  'dialogue',
+  'vocabulary',
+  'sentences',
+  'roleplay',
+  'challenge',
+  'quiz',
+  'review_dialogue',
+  'review_roleplay',
+  'scenarios',
+]
+
+/**
+ * Stand in for the server's lesson routes: what is kept of every week, in `kept`, which
+ * several browsers can be given to share a server. What the real one checks and refuses is its
+ * own tests' to say (`server/test/lessons.db.test.ts`).
+ */
+export async function lessonServer(target: Page | BrowserContext, kept: KeptPiece[] = []) {
+  const find = (kind: string, week: number) =>
+    kept.find((piece) => piece.kind === kind && piece.week === week)
+
+  await target.route(/\/api\/(admin\/)?lessons(\/|$|\?)/, (route) => {
+    const request = route.request()
+    const url = new URL(request.url())
+    const method = request.method()
+
+    const week = /^\/api\/lessons\/weeks\/(\d+)$/.exec(url.pathname)
+    if (week && method === 'GET') {
+      const number = Number(week[1])
+      const content = Object.fromEntries(
+        LESSON_KINDS.map((kind) => [kind, find(kind, number)?.value ?? null]),
+      )
+      return route.fulfill({ json: { week: number, content } })
+    }
+    if (url.pathname === '/api/admin/lessons' && method === 'GET') {
+      return route.fulfill({ json: { pieces: kept } })
+    }
+
+    const piece = /^\/api\/admin\/lessons\/weeks\/(\d+)\/(\w+)$/.exec(url.pathname)
+    if (!piece) {
+      return route.fulfill({ status: 404, json: { error: { code: 'not_found', message: '' } } })
+    }
+    const number = Number(piece[1])
+    const kind = String(piece[2])
+    const there = find(kind, number)
+    const sent =
+      method === 'PUT' ? (request.postDataJSON() as { value: unknown; version: number }) : null
+    const based = sent ? sent.version : Number(url.searchParams.get('version'))
+    if (based !== (there?.version ?? 0)) {
+      return route.fulfill({ status: 409, json: { error: { code: 'conflict', message: '' } } })
+    }
+    if (there) kept.splice(kept.indexOf(there), 1)
+    if (!sent) return route.fulfill({ status: 204 })
+    const version = (there?.version ?? 0) + 1
+    kept.push({ week: number, kind, value: sent.value, version })
+    return route.fulfill({ json: { version } })
+  })
+}
+
+/** What an account holds of its learner, as the stand-in server keeps it between browsers. */
+export type KeptOfLearner = {
+  profile: Record<string, unknown>
+  marks: { week: number; kind: string; ref: string }[]
+  placement: { session: unknown; result: unknown }
+  photo: { photo: string; photoUpdatedAt: string } | null
+}
+
+export const nothingKept = (): KeptOfLearner => ({
+  profile: {},
+  marks: [],
+  placement: { session: null, result: null },
+  photo: null,
+})
+
+const REVIEW_PARTS = ['quiz', 'listening', 'speaking', 'flashcards', 'roleplay']
+
+/** The marks as the app's store keeps progress, which is how the server answers with them. */
+function progressOf(marks: KeptOfLearner['marks']) {
+  const byWeek = (kind: string) => {
+    const weeks: Record<string, string[]> = {}
+    for (const mark of marks) if (mark.kind === kind) (weeks[mark.week] ??= []).push(mark.ref)
+    return weeks
+  }
+  const numbers = (weeks: Record<string, string[]>) =>
+    Object.fromEntries(
+      Object.entries(weeks).map(([week, refs]) => [week, refs.map(Number).sort((a, b) => a - b)]),
+    )
+  return {
+    heardWeeks: marks.filter((mark) => mark.kind === 'heard').map((mark) => mark.week),
+    doneDays: numbers(byWeek('day')),
+    reviewParts: Object.fromEntries(
+      Object.entries(byWeek('review_part')).map(([week, parts]) => [
+        week,
+        REVIEW_PARTS.filter((part) => parts.includes(part)),
+      ]),
+    ),
+    scenariosDone: numbers(byWeek('scenario')),
+  }
+}
+
+/**
+ * Stand in for the server's `/api/me` routes: what is kept of one learner, in `kept`, which
+ * several browsers can be given to share an account. What the real server checks and refuses is
+ * its own tests' to say (`server/test/me.db.test.ts`).
+ */
+export async function learnerServer(target: Page | BrowserContext, kept: KeptOfLearner) {
+  await target.route(/\/api\/me(\/|$|\?)/, (route) => {
+    const request = route.request()
+    const path = new URL(request.url()).pathname.replace(/^.*\/api\/me/, '')
+    const method = request.method()
+    const profile = () => ({
+      language: null,
+      ageGroup: null,
+      tutorAvatar: null,
+      theme: null,
+      voices: {},
+      ...kept.profile,
+      photoUpdatedAt: kept.photo?.photoUpdatedAt ?? null,
+    })
+
+    if (path === '' && method === 'GET') {
+      return route.fulfill({
+        json: { profile: profile(), progress: progressOf(kept.marks), placement: kept.placement },
+      })
+    }
+    if (path === '/profile' && method === 'PATCH') {
+      Object.assign(kept.profile, request.postDataJSON())
+      return route.fulfill({ json: profile() })
+    }
+    if (path === '/progress/marks' && method === 'POST') {
+      const { marks } = request.postDataJSON() as { marks: KeptOfLearner['marks'] }
+      for (const mark of marks) {
+        const there = kept.marks.some(
+          (other) => other.week === mark.week && other.kind === mark.kind && other.ref === mark.ref,
+        )
+        if (!there) kept.marks.push(mark)
+      }
+      return route.fulfill({ status: 204 })
+    }
+    if (path.startsWith('/placement/sessions/') && method === 'PUT') {
+      kept.placement = request.postDataJSON() as KeptOfLearner['placement']
+      return route.fulfill({ status: 204 })
+    }
+    if (path === '/photo' && method === 'PUT') {
+      const { photo } = request.postDataJSON() as { photo: string }
+      kept.photo = { photo, photoUpdatedAt: new Date().toISOString() }
+      return route.fulfill({ json: { photoUpdatedAt: kept.photo.photoUpdatedAt } })
+    }
+    if (path === '/photo' && method === 'DELETE') {
+      kept.photo = null
+      return route.fulfill({ status: 204 })
+    }
+    if (path === '/photo' && method === 'GET' && kept.photo) {
+      return route.fulfill({ json: { photo: kept.photo.photo } })
+    }
+    return route.fulfill({ status: 404, json: { error: { code: 'not_found', message: path } } })
+  })
+}
+
+/**
+ * The server's account routes for a learner who is signed in until they sign out: nobody after.
+ */
+export async function learnerSession(target: Page | BrowserContext) {
+  let user: typeof LEARNER | null = LEARNER
+  await target.route('**/api/auth/**', (route) => {
+    const path = new URL(route.request().url()).pathname.replace('/api/auth', '')
+    if (path === '/session') return route.fulfill({ json: { user } })
+    if (path === '/sign-out') {
+      user = null
+      return route.fulfill({ status: 204 })
+    }
+    return route.fulfill({ status: 404, json: { error: { code: 'not_found', message: path } } })
+  })
+}
 
 /** Start with settings an admin saved earlier. */
 export const seedSettings = (target: Page | BrowserContext, name: string, value: unknown) =>
@@ -116,6 +316,8 @@ export async function adminServer(target: Page | BrowserContext) {
  */
 export async function signInAsAdmin(page: Page) {
   await adminServer(page.context())
+  // What an admin saves of the lessons goes to the server: one that keeps it, for every tab.
+  await lessonServer(page.context())
   await page.goto('/sign-in')
   await page.getByLabel('Email address').fill(ADMIN.email)
   await page.getByLabel('Password', { exact: true }).fill(ADMIN.password)

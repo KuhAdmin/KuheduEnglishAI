@@ -241,6 +241,38 @@ export const hi: TextCatalog = {
   'lessonDay.practice.listen': 'अपनी आवाज़ सुनें',
   'lessonDay.practice.micNote':
     'हम आपके माइक्रोफ़ोन के इस्तेमाल की अनुमति माँगेंगे। आपकी रिकॉर्डिंग सेव नहीं की जाती।',
+  'lessonDay.feedback.check': 'देखें मैंने कैसे बोला',
+  'lessonDay.feedback.checking': 'आपकी रिकॉर्डिंग सुनी जा रही है…',
+  'lessonDay.feedback.sends':
+    'जाँच के लिए यह रिकॉर्डिंग हमारे सर्वर पर भेजी जाती है। इसे रखा नहीं जाता।',
+  'lessonDay.feedback.title': 'कैसा सुनाई दिया',
+  'lessonDay.feedback.firstVersion':
+    'यह जाँच नई है और ग़लत भी हो सकती है। इससे ज़्यादा अपने कान और अपने शिक्षक पर भरोसा करें।',
+  'lessonDay.feedback.ok': 'सही सुनाई दिया। बहुत बढ़िया!',
+  'lessonDay.feedback.nothingHeard':
+    'कोई शब्द सुनाई नहीं दिया। माइक्रोफ़ोन के थोड़ा पास आकर फिर कोशिश करें।',
+  'lessonDay.feedback.toTry': 'एक बार यह आज़माएँ',
+  'lessonDay.feedback.extraSyllable': 'ऐसा लगा कि एक हिस्सा ज़्यादा बोला गया।',
+  'lessonDay.feedback.missingSyllable': 'ऐसा लगा कि एक हिस्सा छूट गया।',
+  'lessonDay.feedback.counts': 'इस शब्द में हिस्से: {expected}। सुनाई दिए: {heard}।',
+  'lessonDay.feedback.stressMoved': 'ऐसा लगा कि ज़ोर किसी और हिस्से पर पड़ा।',
+  'lessonDay.feedback.strongPart': '“{part}” पर ज़ोर दें।',
+  'lessonDay.feedback.soundDiffers':
+    'एक या अधिक ध्वनियाँ थोड़ी अलग सुनाई दीं। शब्द फिर सुनें और मिलाएँ।',
+  'lessonDay.feedback.theWord': 'शब्द',
+  'lessonDay.feedback.you': 'आप',
+  'lessonDay.feedback.hearWord': 'शब्द सुनें',
+  'lessonDay.feedback.hearYou': 'खुद को सुनें',
+  'lessonDay.feedback.wordsDiffer': 'ये शब्द थोड़े अलग सुनाई दिए: {words}। फिर सुनें और मिलाएँ।',
+  'lessonDay.feedback.sentenceDiffers':
+    'कुछ हिस्सा थोड़ा अलग सुनाई दिया। वाक्य फिर सुनें और मिलाएँ।',
+  'lessonDay.feedback.hearSentence': 'वाक्य सुनें',
+  'lessonDay.feedback.unreadableSentence':
+    'इस रिकॉर्डिंग की जाँच नहीं हो सकी। वाक्य फिर से रिकॉर्ड करें।',
+  'lessonDay.feedback.afterAnswer': 'जाँच करवाने के लिए, वाक्य अब देखकर एक बार फिर बोलें।',
+  'lessonDay.feedback.unavailable': 'अभी इसकी जाँच नहीं हो सकती। आप अपनी आवाज़ सुन सकते हैं।',
+  'lessonDay.feedback.unreadable': 'इस रिकॉर्डिंग की जाँच नहीं हो सकी। शब्द फिर से रिकॉर्ड करें।',
+  'lessonDay.feedback.tooMany': 'बहुत बार जाँच हो चुकी है। एक मिनट रुककर फिर कोशिश करें।',
   'lessonDay.translate.title': 'अनुवाद करें और बोलें',
   'lessonDay.translate.subtitle': 'वाक्य का अनुवाद करें, फिर बोलें।',
   'lessonDay.translate.listenSubtitle': 'वाक्य सुनें, फिर बोलें।',
@@ -284,6 +316,18 @@ export const hi: TextCatalog = {
   'lessonDay.talk.again': 'फिर से अभ्यास करें',
   'lessonDay.talk.audioFailed':
     'पंक्तियाँ अभी बोलकर नहीं सुनाई जा सकतीं। इन्हें पढ़ें, फिर जवाब दें।',
+  'lessonDay.reply.check': 'मेरा जवाब जाँचें',
+  'lessonDay.reply.checking': 'आपका जवाब जाँचा जा रहा है…',
+  'lessonDay.reply.title': 'आपके जवाब के बारे में',
+  'lessonDay.reply.heard': 'हमने सुना',
+  'lessonDay.reply.nothingToChange': 'हमें बदलने लायक कुछ नहीं मिला।',
+  'lessonDay.reply.offTopic':
+    '{name} ने जो कहा, यह शायद उसका जवाब नहीं है। ऊपर दिए जवाब से मिलाकर देखें।',
+  'lessonDay.reply.better': 'इसे ऐसे कह सकते हैं',
+  'lessonDay.reply.nothingHeard':
+    'शब्द समझ में नहीं आए। अगली बार माइक्रोफ़ोन के थोड़ा पास आकर बोलें।',
+  'lessonDay.reply.unavailable': 'अभी आपके जवाब की जाँच नहीं हो सकती। आप अपनी आवाज़ सुन सकते हैं।',
+  'lessonDay.reply.unreadable': 'इस रिकॉर्डिंग की जाँच नहीं हो सकी।',
   'lessonDay.perform.tasks': 'क्या करना है',
   'lessonDay.perform.record': 'अपनी कोशिश रिकॉर्ड करें',
   'lessonDay.perform.selfCheck': 'अपनी रिकॉर्डिंग सुनें, और जो-जो कर पाए उस पर टिक लगाएँ।',
@@ -371,7 +415,7 @@ export const hi: TextCatalog = {
   'profile.photo.alt': 'आपकी फ़ोटो',
   'profile.photo.change': 'अपनी फ़ोटो बदलें',
   'profile.photo.remove': 'फ़ोटो हटाएँ',
-  'profile.photo.onThisDevice': 'यह फ़ोटो सिर्फ़ इसी डिवाइस पर रखी गई है।',
+  'profile.photo.withAccount': 'यह फ़ोटो आपके खाते के साथ रखी गई है। इसे सिर्फ़ आप देखते हैं।',
   'profile.photo.unreadable': 'यह फ़ाइल फ़ोटो के रूप में पढ़ी नहीं जा सकी। कोई और चुनें।',
   'profile.photo.notKept': 'यह फ़ोटो रखी नहीं जा सकी। कोई छोटी फ़ोटो आज़माएँ।',
   'voice.title': 'आवाज़ की सेटिंग्स',

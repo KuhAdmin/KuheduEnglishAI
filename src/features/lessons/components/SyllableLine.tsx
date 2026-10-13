@@ -7,20 +7,33 @@ export type SyllableLineProps = {
   syllables: readonly string[]
   /** Which part is the strong one, counted from 1; `null` when none is marked. */
   stress: number | null
+  /** What the row of parts is called, when it is not simply the word in parts. */
+  label?: string
+  /** Leave out the note on crossed-out letters: for a second row of a word already explained. */
+  withoutSilentNote?: boolean
 }
 
 /**
  * How a word is said, shown on the word itself: its parts side by side, the strong one larger
- * and named, and the letters that are not said crossed out. It teaches; it judges nothing.
+ * and named, and the letters that are not said crossed out. It teaches; it judges nothing: the
+ * same drawing shows the word as it is said and, in `StressComparison`, as a learner said it.
  */
-export function SyllableLine({ syllables, stress }: SyllableLineProps) {
+export function SyllableLine({
+  syllables,
+  stress,
+  label,
+  withoutSilentNote = false,
+}: SyllableLineProps) {
   const t = useT()
   const parts = syllables.map(syllableLetters)
-  const silent = parts.flat().filter((run) => run.silent)
+  const silent = withoutSilentNote ? [] : parts.flat().filter((run) => run.silent)
 
   return (
     <div className="flex flex-col gap-1">
-      <ol aria-label={t('lessonDay.words.parts')} className="flex flex-wrap items-start gap-1">
+      <ol
+        aria-label={label ?? t('lessonDay.words.parts')}
+        className="flex flex-wrap items-start gap-1"
+      >
         {parts.map((runs, index) => {
           const strong = index + 1 === stress
           return (

@@ -54,10 +54,10 @@ export function ProfileSummaryCard() {
           {t(photo.problem)}
         </p>
       )}
-      {/* Their own photo is this browser's only, and theirs to take away again. */}
+      {/* Their own photo is saved with their account, and theirs to take away again. */}
       {photo.isOwn && (
         <div className="flex flex-col items-start">
-          <p className="text-sm text-fg-muted">{t('profile.photo.onThisDevice')}</p>
+          <p className="text-sm text-fg-muted">{t('profile.photo.withAccount')}</p>
           {/* Pulled back by its own padding, so its label lines up with the note above it. */}
           <Button variant="ghost" size="sm" className="-ms-3" onClick={photo.remove}>
             {t('profile.photo.remove')}

@@ -248,6 +248,40 @@ export const en = {
   'lessonDay.practice.recorded': 'Recorded. Listen, or try again.',
   'lessonDay.practice.listen': 'Listen to yourself',
   'lessonDay.practice.micNote': 'We will ask to use your microphone. Your recording is not saved.',
+  'lessonDay.feedback.check': 'Check how I said it',
+  'lessonDay.feedback.checking': 'Listening to your recording…',
+  'lessonDay.feedback.sends': 'Sends this recording to our server to be checked. It is not kept.',
+  'lessonDay.feedback.title': 'How it sounded',
+  'lessonDay.feedback.firstVersion':
+    'This check is new and can be wrong. Trust your own ear, and your teacher, over it.',
+  'lessonDay.feedback.ok': 'That sounded right. Well done!',
+  'lessonDay.feedback.nothingHeard':
+    'We could not hear a word. Try again, a little closer to the microphone.',
+  'lessonDay.feedback.toTry': 'Something to try',
+  'lessonDay.feedback.extraSyllable': 'It sounded like there was an extra part.',
+  'lessonDay.feedback.missingSyllable': 'It sounded like a part was missing.',
+  'lessonDay.feedback.counts': 'Parts in this word: {expected}. Parts heard: {heard}.',
+  'lessonDay.feedback.stressMoved': 'Another part sounded like the strong one.',
+  'lessonDay.feedback.strongPart': 'Make “{part}” the strong part.',
+  'lessonDay.feedback.soundDiffers':
+    'One or more sounds were a little different. Listen to the word again and compare.',
+  'lessonDay.feedback.theWord': 'The word',
+  'lessonDay.feedback.you': 'You',
+  'lessonDay.feedback.hearWord': 'Hear the word',
+  'lessonDay.feedback.hearYou': 'Hear yourself',
+  'lessonDay.feedback.wordsDiffer':
+    'These words sounded a little different: {words}. Listen again and compare.',
+  'lessonDay.feedback.sentenceDiffers':
+    'Some of it sounded a little different. Listen to the sentence again and compare.',
+  'lessonDay.feedback.hearSentence': 'Hear the sentence',
+  'lessonDay.feedback.unreadableSentence':
+    'This recording could not be checked. Record the sentence again.',
+  'lessonDay.feedback.afterAnswer':
+    'To have it checked, say the sentence once more now that you can see it.',
+  'lessonDay.feedback.unavailable':
+    'This cannot be checked right now. You can still listen to yourself.',
+  'lessonDay.feedback.unreadable': 'This recording could not be checked. Record the word again.',
+  'lessonDay.feedback.tooMany': 'That is a lot of checks. Wait a minute, then try again.',
   'lessonDay.translate.title': 'Translate and speak',
   'lessonDay.translate.subtitle': 'Translate the sentence, then say it.',
   'lessonDay.translate.listenSubtitle': 'Listen to the sentence, then say it.',
@@ -290,6 +324,19 @@ export const en = {
   'lessonDay.talk.done': 'Well done! You finished the conversation.',
   'lessonDay.talk.again': 'Practise again',
   'lessonDay.talk.audioFailed': 'The lines cannot be said aloud right now. Read them, then answer.',
+  'lessonDay.reply.check': 'Check my reply',
+  'lessonDay.reply.checking': 'Checking your reply…',
+  'lessonDay.reply.title': 'About your reply',
+  'lessonDay.reply.heard': 'We heard',
+  'lessonDay.reply.nothingToChange': 'We found nothing to change.',
+  'lessonDay.reply.offTopic':
+    'This may not answer what {name} said. Compare it with the reply above.',
+  'lessonDay.reply.better': 'You could say it like this',
+  'lessonDay.reply.nothingHeard':
+    'We could not make out the words. Next time, speak a little closer to the microphone.',
+  'lessonDay.reply.unavailable':
+    'Your reply cannot be checked right now. You can still listen to yourself.',
+  'lessonDay.reply.unreadable': 'This recording could not be checked.',
   'lessonDay.perform.tasks': 'What to do',
   'lessonDay.perform.record': 'Record your attempt',
   'lessonDay.perform.selfCheck': 'Listen to your recording and tick what you managed.',
@@ -376,7 +423,7 @@ export const en = {
   'profile.photo.alt': 'Your photo',
   'profile.photo.change': 'Change your photo',
   'profile.photo.remove': 'Remove photo',
-  'profile.photo.onThisDevice': 'This photo is kept on this device only.',
+  'profile.photo.withAccount': 'This photo is saved with your account. Only you see it.',
   'profile.photo.unreadable': 'That file could not be read as a picture. Choose another one.',
   'profile.photo.notKept': 'That picture could not be kept. Try a smaller one.',
   'voice.title': 'Voice settings',

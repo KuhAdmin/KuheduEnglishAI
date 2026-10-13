@@ -103,8 +103,22 @@ export async function accountStanding(): Promise<Standing> {
   return user.emailVerified ? { account: 'verified', user } : { account: 'unverified' }
 }
 
+const leaving = new Set<() => Promise<void>>()
+
+/**
+ * Have something done before a browser is signed out, while the server still knows who it is:
+ * what a learner changed and the server has not taken yet is sent then. Answers with how to
+ * take it back.
+ */
+export function onSigningOut(task: () => Promise<void>) {
+  leaving.add(task)
+  return () => void leaving.delete(task)
+}
+
 /** Sign this browser out. Throws if the server could not be told: it is then still signed in. */
 export async function signOut(): Promise<void> {
+  // None of them may keep someone signed in: what could not be done is left undone.
+  await Promise.allSettled([...leaving].map((task) => task()))
   await apiRequest('/auth/sign-out', { method: 'POST', schema: noContentSchema })
   useSessionStore.getState().setUser(null)
 }

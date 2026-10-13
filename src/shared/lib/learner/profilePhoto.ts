@@ -3,10 +3,9 @@ import { createJSONStorage, persist } from 'zustand/middleware'
 import { isSafeAssetUrl } from '../appConfig/fields'
 
 /**
- * The photo a learner chose for their profile: shrunk in the browser and kept here, in this
- * browser only, as a `data:` URL. It is not sent anywhere, so it does not follow them to
- * another phone, and it is the browser's rather than the account's.
- * TODO(learner): keep it with the account once the server keeps a learner's profile.
+ * The photo a learner chose for their profile: shrunk in the browser and kept here as a
+ * `data:` URL. For someone signed in it is saved with their account too, and so follows them
+ * to another phone (`shared/lib/learnerData/photoPart.ts`); it is shown to nobody else.
  */
 
 /** A photo as it may be kept and shown: one of ours, re-encoded as a raster image. */

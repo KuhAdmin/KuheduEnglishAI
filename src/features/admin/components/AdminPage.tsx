@@ -7,7 +7,13 @@ const statusText: Record<Exclude<DraftStatus, 'idle'>, string> = {
   saved: adminText.actions.saved,
   reset: adminText.actions.reset,
   'storage-full': adminText.actions.storageFull,
+  saving: adminText.actions.saving,
+  failed: adminText.actions.saveFailed,
+  conflict: adminText.actions.saveConflict,
 }
+
+/** A save that did not reach the server: said at once, and in the colour of a problem. */
+const NOT_SAVED: readonly DraftStatus[] = ['failed', 'conflict']
 
 export type AdminPageProps = {
   heading: string
@@ -22,6 +28,11 @@ export type AdminPageProps = {
   onSave: () => void
   onDiscard: () => void
   onResetToDefaults: () => void
+  /**
+   * What "Reset" asks before it acts, where the usual question would not say enough: for the
+   * lessons, which are kept on the server, it removes what was written for every week.
+   */
+  resetConfirm?: string
 }
 
 /** Frame of one admin section: heading, the form, and a pinned bar with Save / Discard / Reset. */
@@ -36,12 +47,18 @@ export function AdminPage({
   onSave,
   onDiscard,
   onResetToDefaults,
+  resetConfirm = adminText.actions.resetAllConfirm,
 }: AdminPageProps) {
   const handleReset = () => {
-    if (window.confirm(adminText.actions.resetAllConfirm)) onResetToDefaults()
+    if (window.confirm(resetConfirm)) onResetToDefaults()
   }
 
-  const message = isDirty ? adminText.actions.unsaved : status === 'idle' ? '' : statusText[status]
+  // A save under way, or one the server did not take, is said even with changes still unsaved:
+  // they are unsaved because of it.
+  const notSaved = NOT_SAVED.includes(status)
+  const happened = status === 'idle' ? '' : statusText[status]
+  const message =
+    status === 'saving' || notSaved ? happened : isDirty ? adminText.actions.unsaved : happened
 
   return (
     <form
@@ -65,7 +82,7 @@ export function AdminPage({
             role="status"
             aria-live="polite"
             className={
-              status === 'storage-full' && !isDirty
+              notSaved || (status === 'storage-full' && !isDirty)
                 ? 'text-sm font-bold text-danger'
                 : 'text-sm text-fg-muted'
             }
@@ -78,7 +95,7 @@ export function AdminPage({
             <Button
               variant="ghost"
               aria-label={adminText.actions.resetAll}
-              disabled={!isCustomised && !isDirty}
+              disabled={(!isCustomised && !isDirty) || status === 'saving'}
               onClick={handleReset}
             >
               <span className="sm:hidden">{adminText.actions.resetAllShort}</span>
@@ -90,7 +107,7 @@ export function AdminPage({
             <Button
               type="submit"
               aria-label={adminText.actions.save}
-              disabled={!isDirty || !canSave}
+              disabled={!isDirty || !canSave || status === 'saving'}
             >
               <span className="sm:hidden">{adminText.actions.saveShort}</span>
               <span className="hidden sm:inline">{adminText.actions.save}</span>

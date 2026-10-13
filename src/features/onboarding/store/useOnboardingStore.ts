@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 import { isAgeGroupId, type AgeGroupId } from '@/shared/lib/learner/ageGroups'
+import { onValueChange, registerProfileField } from '@/shared/lib/learnerData/profileFields'
 
 type OnboardingAnswers = {
   /** Used to personalise examples and situations. */
@@ -13,7 +14,6 @@ type OnboardingState = OnboardingAnswers & {
 
 // The learner's language is not here: the whole app needs it, so it lives in
 // shared/lib/i18n/useLanguageStore.
-// TODO(auth): sync these answers to the learner's account once sign-in exists.
 export const useOnboardingStore = create<OnboardingState>()(
   persist(
     (set) => ({
@@ -32,3 +32,11 @@ export const useOnboardingStore = create<OnboardingState>()(
     },
   ),
 )
+
+// Kept with the learner's account, like the answers the shared stores hold.
+registerProfileField({
+  key: 'ageGroup',
+  read: () => useOnboardingStore.getState().ageGroup,
+  apply: (value) => useOnboardingStore.setState({ ageGroup: isAgeGroupId(value) ? value : null }),
+  subscribe: (changed) => onValueChange(useOnboardingStore, (state) => state.ageGroup, changed),
+})

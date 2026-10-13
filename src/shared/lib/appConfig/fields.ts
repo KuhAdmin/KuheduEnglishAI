@@ -1,39 +1,17 @@
+import { isSafeAssetUrl, isSafeMediaUrl } from '@kuhedu/contracts'
 import { z } from 'zod'
+
+// What a safe image or media source is, is written once, in `@kuhedu/contracts`: the server
+// checks what an admin saves by the same rule.
+export { isSafeAssetUrl, isSafeMediaUrl }
 
 /**
  * Building blocks for admin-managed settings schemas (see CLAUDE.md, "Admin-managed settings").
  * Pair each field with `.catch(default)` so one bad value never breaks a screen.
  */
 
-const MAX_URL_LENGTH = 2048
-/** About 1 MB of image once base64-encoded. */
-const MAX_DATA_URL_LENGTH = 1_400_000
-
-/** A picture uploaded in the admin area and kept in the browser. Raster only: no SVG, no HTML. */
-const RASTER_DATA_URL = /^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/]+=*$/
-
-/**
- * Safe image source: an https URL, a root-relative path, or an uploaded raster image.
- * Never `javascript:`, protocol-relative URLs or other `data:` types.
- */
-export function isSafeAssetUrl(value: string): boolean {
-  if (value.startsWith('data:')) {
-    return value.length <= MAX_DATA_URL_LENGTH && RASTER_DATA_URL.test(value)
-  }
-  if (value.length > MAX_URL_LENGTH) return false
-  return /^https:\/\//i.test(value) || (value.startsWith('/') && !value.startsWith('//'))
-}
-
 /** URL of an image an admin uploaded or picked. */
 export const assetUrl = z.string().refine(isSafeAssetUrl)
-
-/**
- * Safe source of a video or sound kept elsewhere: an https URL or a root-relative path. Never
- * a `data:` URL: media is far too big for the browser's settings storage.
- */
-export function isSafeMediaUrl(value: string): boolean {
-  return !value.startsWith('data:') && isSafeAssetUrl(value)
-}
 
 /** URL of a video or sound an admin linked to. */
 export const mediaUrl = z.string().refine(isSafeMediaUrl)

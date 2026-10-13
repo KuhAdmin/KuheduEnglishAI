@@ -15,10 +15,14 @@ export function combineDrafts(...drafts: AnyDraft[]) {
   return {
     isDirty: drafts.some((draft) => draft.isDirty),
     isCustomised: drafts.some((draft) => draft.isCustomised),
-    // Something that did not fit is the thing to say, whatever happened to the rest.
-    status: statuses.includes('storage-full')
-      ? ('storage-full' as const)
-      : (statuses.find((status) => status !== 'idle') ?? ('idle' as const)),
+    // What went wrong is the thing to say, whatever happened to the rest; then what is still
+    // on its way.
+    status:
+      (['storage-full', 'conflict', 'failed', 'saving'] as const).find((status) =>
+        statuses.includes(status),
+      ) ??
+      statuses.find((status) => status !== 'idle') ??
+      ('idle' as const),
     save() {
       for (const draft of drafts) if (draft.isDirty) draft.save()
     },

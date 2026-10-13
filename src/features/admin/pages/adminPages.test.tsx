@@ -994,6 +994,30 @@ describe('LessonsPage', () => {
       expect(stored(WEEK_ROLEPLAYS_CONFIG_NAME)).toEqual({})
     })
 
+    it('names the partner for a woman tutor and for a man, and has nothing to save once one is typed back', async () => {
+      render(<LessonsPage />)
+      await openRoleplay()
+
+      // Ravi was written as a man; a woman tutor plays the part as Asha.
+      const asWoman = field('Name when the tutor is a woman')
+      const asMan = field('Name when the tutor is a man')
+      expect(asWoman).toHaveValue('Asha')
+      expect(asMan).toHaveValue('')
+
+      await userEvent.type(asMan, 'Rohan')
+      await userEvent.clear(asWoman)
+      await save()
+      // Only what was written: an emptied name is not kept as one.
+      expect(roleplays()['1']).toMatchObject({ partner: 'Ravi', asMan: 'Rohan' })
+      expect(roleplays()['1']).not.toHaveProperty('asWoman')
+
+      await userEvent.clear(asMan)
+      await userEvent.type(asWoman, 'Asha')
+      await save()
+      // Back to how it is built in, names and their order included.
+      expect(stored(WEEK_ROLEPLAYS_CONFIG_NAME)).toEqual({})
+    })
+
     it('has nothing to save once an edit is typed back', async () => {
       render(<LessonsPage />)
       await openRoleplay()

@@ -1,7 +1,6 @@
+import { parseByWeek, parseWeekPicture } from '@kuhedu/contracts'
 import { z } from 'zod'
-import { assetUrl } from '../appConfig/fields'
 import { useAppConfig } from '../appConfig/useAppConfig'
-import { isWeekNumber } from './curriculum'
 
 /**
  * The picture of each week's real-life situation, by week number: `{ 20: '…' }`. Uploaded in
@@ -11,17 +10,9 @@ import { isWeekNumber } from './curriculum'
 export type WeekPictures = Partial<Record<number, string>>
 
 /** Keeps safe image sources for weeks that exist; drops everything else instead of failing. */
-export const weekPicturesSchema = z.unknown().transform((value): WeekPictures => {
-  if (typeof value !== 'object' || value === null || Array.isArray(value)) return {}
-
-  const pictures: WeekPictures = {}
-  for (const [week, url] of Object.entries(value)) {
-    // `String(Number(…))` turns away "07" and "7.0", which would be second names for week 7.
-    if (!isWeekNumber(Number(week)) || String(Number(week)) !== week) continue
-    if (assetUrl.safeParse(url).success) pictures[Number(week)] = url as string
-  }
-  return pictures
-})
+export const weekPicturesSchema = z
+  .unknown()
+  .transform((value): WeekPictures => parseByWeek(value, parseWeekPicture))
 
 export const defaultWeekPictures: WeekPictures = {}
 

@@ -1,0 +1,707 @@
+{
+  "week": 4,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Lata",
+          "text": "It’s lunch time! What do you like to eat, Imran?",
+          "translations": {
+            "bn": "দুপুরের খাওয়ার সময় হয়েছে! আপনি কী খেতে ভালোবাসেন, ইমরান?",
+            "hi": "खाने का समय हो गया! आपको क्या खाना पसंद है, इमरान?"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "I like rice and dal. And you?",
+          "translations": {
+            "bn": "আমার ভাত আর ডাল ভালো লাগে। আর আপনার?",
+            "hi": "मुझे चावल और दाल पसंद है। और आपको?"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "I like rice too. I also like fish.",
+          "translations": {
+            "bn": "আমারও ভাত ভালো লাগে। আমার মাছও ভালো লাগে।",
+            "hi": "मुझे भी चावल पसंद है। मुझे मछली भी पसंद है।"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "I don’t like fish very much.",
+          "translations": {
+            "bn": "আমার মাছ খুব একটা ভালো লাগে না।",
+            "hi": "मुझे मछली ज़्यादा पसंद नहीं है।"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "Really? Do you like sweets?",
+          "translations": {
+            "bn": "তাই নাকি? আপনার কি মিষ্টি ভালো লাগে?",
+            "hi": "सच में? क्या आपको मिठाई पसंद है?"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "Yes, I do! I love sweets.",
+          "translations": {
+            "bn": "হ্যাঁ, লাগে! আমি মিষ্টি খুব ভালোবাসি।",
+            "hi": "जी हाँ, पसंद है! मुझे मिठाई बहुत पसंद है।"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "Me too. What is your favourite sweet?",
+          "translations": {
+            "bn": "আমিও। আপনার প্রিয় মিষ্টি কোনটি?",
+            "hi": "मुझे भी। आपकी पसंदीदा मिठाई कौन-सी है?"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "My favourite sweet is rasgulla.",
+          "translations": {
+            "bn": "আমার প্রিয় মিষ্টি রসগোল্লা।",
+            "hi": "मेरी पसंदीदा मिठाई रसगुल्ला है।"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "Do you like tea or coffee?",
+          "translations": {
+            "bn": "আপনার চা ভালো লাগে, না কফি?",
+            "hi": "आपको चाय पसंद है या कॉफ़ी?"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "I like tea. I’m sorry, I don’t like coffee.",
+          "translations": {
+            "bn": "আমার চা ভালো লাগে। দুঃখিত, আমার কফি ভালো লাগে না।",
+            "hi": "मुझे चाय पसंद है। माफ़ कीजिए, मुझे कॉफ़ी पसंद नहीं है।"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "No problem. Let’s have tea, then.",
+          "translations": {
+            "bn": "কোনো সমস্যা নেই। তাহলে চলুন চা খাই।",
+            "hi": "कोई बात नहीं। तो चलिए, चाय पीते हैं।"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "Good idea. Thank you, Lata!",
+          "translations": { "bn": "ভালো কথা। ধন্যবাদ, লতা!", "hi": "अच्छा विचार है। धन्यवाद, लता!" }
+        }
+      ],
+      "voices": { "Lata": "female", "Imran": "male" }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "like",
+          "phonetic": "/laɪk/",
+          "imageUrl": null,
+          "meanings": { "bn": "পছন্দ করা, ভালো লাগা", "hi": "पसंद करना" },
+          "syllables": ["lik(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i”-এর উচ্চারণ “eye”-এর মতো।", "শেষের “e” উচ্চারণ হয় না।"],
+            "en": ["The “i” sounds like “eye”.", "The last “e” is not said."],
+            "hi": ["“i” की आवाज़ “eye” जैसी है।", "आख़िरी “e” बोला नहीं जाता।"]
+          }
+        },
+        {
+          "word": "don’t like",
+          "phonetic": "/dəʊnt laɪk/",
+          "imageUrl": null,
+          "meanings": { "bn": "পছন্দ না করা", "hi": "पसंद न करना" },
+          "syllables": ["don’t", "lik(e)"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“don’t” হলো “do not”-এর সংক্ষিপ্ত রূপ।",
+              "“don’t”-এর “o”-এর উচ্চারণ “ওউ”-এর মতো।"
+            ],
+            "en": ["“don’t” is short for “do not”.", "The “o” in “don’t” sounds like “oh”."],
+            "hi": ["“don’t”, “do not” का छोटा रूप है।", "“don’t” के “o” की आवाज़ “ओउ” जैसी है।"]
+          }
+        },
+        {
+          "word": "love",
+          "phonetic": "/lʌv/",
+          "imageUrl": null,
+          "meanings": { "bn": "ভালোবাসা, খুব পছন্দ করা", "hi": "प्यार करना, बहुत पसंद करना" },
+          "syllables": ["lov(e)"],
+          "stress": null,
+          "tips": {
+            "bn": ["“o”-এর উচ্চারণ “cup”-এর “u”-এর মতো।", "কিছু খুব ভালো লাগলে “love” বলুন।"],
+            "en": [
+              "The “o” sounds like the “u” in “cup”.",
+              "Use “love” when you like something very much."
+            ],
+            "hi": ["“o” की आवाज़ “cup” के “u” जैसी है।", "कोई चीज़ बहुत पसंद हो तो “love” कहें।"]
+          }
+        },
+        {
+          "word": "favourite",
+          "phonetic": "/ˈfeɪvərɪt/",
+          "imageUrl": null,
+          "meanings": { "bn": "প্রিয়, সবচেয়ে পছন্দের", "hi": "पसंदीदा, सबसे प्रिय" },
+          "syllables": ["fa", "vour", "it(e)"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "প্রথম অংশটি জোর দিয়ে বলুন: এর উচ্চারণ “ফেই”-এর মতো।",
+              "শেষের “e” উচ্চারণ হয় না: শেষ অংশটি “ইট”-এর মতো।"
+            ],
+            "en": [
+              "Say the first part stronger: it sounds like “fay”.",
+              "The last “e” is not said: the ending sounds like “it”."
+            ],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें: इसकी आवाज़ “फ़ेइ” जैसी है।",
+              "आख़िरी “e” बोला नहीं जाता: अंत की आवाज़ “इट” जैसी है।"
+            ]
+          }
+        },
+        {
+          "word": "sorry",
+          "phonetic": "/ˈsɒri/",
+          "imageUrl": null,
+          "meanings": { "bn": "দুঃখিত", "hi": "माफ़ कीजिए" },
+          "syllables": ["sor", "ry"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "অপছন্দের কথা ভদ্রভাবে বলতে আগে “sorry” বলুন।"],
+            "en": ["Say the first part stronger.", "Say “sorry” before a dislike to sound polite."],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "नापसंद की बात विनम्रता से कहने के लिए पहले “sorry” कहें।"
+            ]
+          }
+        },
+        {
+          "word": "sweets",
+          "phonetic": "/swiːts/",
+          "imageUrl": null,
+          "meanings": { "bn": "মিষ্টি", "hi": "मिठाई" },
+          "syllables": ["sweets"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ee” লম্বা।", "শুরুতে “s” আর “w” একসঙ্গে বলুন, মাঝখানে কোনো স্বরধ্বনি নয়।"],
+            "en": [
+              "The “ee” is long.",
+              "Say “s” and “w” together at the start, with no vowel between them."
+            ],
+            "hi": ["“ee” लंबा है।", "शुरू में “s” और “w” एक साथ बोलें, बीच में कोई स्वर नहीं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Do you like tea?",
+          "alsoAccepted": [],
+          "translations": { "bn": "আপনার কি চা ভালো লাগে?", "hi": "क्या आपको चाय पसंद है?" },
+          "tips": {
+            "bn": [
+              "প্রশ্নটি “Do you like …” দিয়ে শুরু করুন।",
+              "প্রশ্নের শেষে গলার স্বর একটু ওপরে ওঠে।"
+            ],
+            "en": [
+              "Start the question with “Do you like …”.",
+              "Your voice goes up at the end of the question."
+            ],
+            "hi": ["सवाल “Do you like …” से शुरू करें।", "सवाल के अंत में आवाज़ थोड़ी ऊपर जाती है।"]
+          }
+        },
+        {
+          "english": "Yes, I do.",
+          "alsoAccepted": ["Yes, I like it."],
+          "translations": { "bn": "হ্যাঁ, লাগে।", "hi": "जी हाँ, पसंद है।" },
+          "tips": {
+            "bn": ["এটি “Do you like …?” প্রশ্নের ছোট উত্তর।", "শুধু “Yes, I like.” বলবেন না।"],
+            "en": [
+              "This is the short answer to “Do you like …?”",
+              "Do not say only “Yes, I like.”"
+            ],
+            "hi": ["यह “Do you like …?” का छोटा जवाब है।", "सिर्फ़ “Yes, I like.” न कहें।"]
+          }
+        },
+        {
+          "english": "No, I don’t.",
+          "alsoAccepted": ["No, I don’t like it."],
+          "translations": { "bn": "না, লাগে না।", "hi": "जी नहीं, पसंद नहीं है।" },
+          "tips": {
+            "bn": [
+              "“don’t” হলো “do not”-এর সংক্ষিপ্ত রূপ।",
+              "ভদ্রভাবে বলতে চাইলে বলুন “No, not really.”"
+            ],
+            "en": ["“don’t” is short for “do not”.", "To be polite, you can say “No, not really.”"],
+            "hi": [
+              "“don’t”, “do not” का छोटा रूप है।",
+              "विनम्रता से कहना हो तो “No, not really.” कहें।"
+            ]
+          }
+        },
+        {
+          "english": "I like music very much.",
+          "alsoAccepted": ["I really like music.", "I love music."],
+          "translations": { "bn": "আমার সংগীত খুব ভালো লাগে।", "hi": "मुझे संगीत बहुत पसंद है।" },
+          "tips": {
+            "bn": ["“very much” বাক্যের শেষে বসান।", "“I love music.”-ও বলা যায়।"],
+            "en": ["Put “very much” at the end.", "You can also say “I love music.”"],
+            "hi": ["“very much” वाक्य के अंत में लगाएँ।", "“I love music.” भी कह सकते हैं।"]
+          }
+        },
+        {
+          "english": "I don’t like coffee very much.",
+          "alsoAccepted": ["I don’t like coffee much.", "I don’t really like coffee."],
+          "translations": {
+            "bn": "আমার কফি খুব একটা ভালো লাগে না।",
+            "hi": "मुझे कॉफ़ी ज़्यादा पसंद नहीं है।"
+          },
+          "tips": {
+            "bn": [
+              "“not … very much” দিয়ে অপছন্দের কথা ভদ্রভাবে বলা যায়।",
+              "এটি “I don’t like coffee.”-এর চেয়ে নরম শোনায়।"
+            ],
+            "en": [
+              "“not … very much” is a polite way to say you don’t like something.",
+              "It is softer than “I don’t like coffee.”"
+            ],
+            "hi": [
+              "“not … very much” से नापसंद की बात विनम्रता से कही जाती है।",
+              "यह “I don’t like coffee.” से नरम लगता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Imran",
+      "asWoman": "Lata",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! I’m Imran. Let’s talk about our favourite things. What is your favourite food?",
+          "reply": "My favourite food is …",
+          "cues": { "bn": "আপনার প্রিয় খাবারের নাম বলুন।", "hi": "अपना पसंदीदा खाना बताएँ।" }
+        },
+        {
+          "partner": "Nice! My favourite food is biryani. What is your favourite colour?",
+          "reply": "My favourite colour is … What is your favourite colour?",
+          "cues": {
+            "bn": "আপনার প্রিয় রং বলুন, আর তাঁর প্রিয় রং জিজ্ঞেস করুন।",
+            "hi": "अपना पसंदीदा रंग बताएँ, और उनका पसंदीदा रंग पूछें।"
+          }
+        },
+        {
+          "partner": "My favourite colour is blue. Do you like cricket?",
+          "reply": "Yes, I do.",
+          "cues": {
+            "bn": "ভালো লাগলে হ্যাঁ বলুন; না লাগলে ভদ্রভাবে না বলুন।",
+            "hi": "पसंद हो तो हाँ कहें; न हो तो विनम्रता से ना कहें।"
+          }
+        },
+        {
+          "partner": "I love cricket. Now ask me about my favourite sweet.",
+          "reply": "What is your favourite sweet?",
+          "cues": {
+            "bn": "তাঁর প্রিয় মিষ্টি কোনটি, জিজ্ঞেস করুন।",
+            "hi": "पूछें कि उनकी पसंदीदा मिठाई कौन-सी है।"
+          }
+        },
+        {
+          "partner": "My favourite sweet is jalebi. It was nice talking to you!",
+          "reply": "Nice talking to you too. Goodbye!",
+          "cues": {
+            "bn": "বলুন আপনারও কথা বলে ভালো লাগল, আর বিদায় জানান।",
+            "hi": "कहें कि आपको भी बात करके अच्छा लगा, और विदा लें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Our likes and dislikes",
+        "translations": { "bn": "আমাদের পছন্দ-অপছন্দ", "hi": "हमारी पसंद और नापसंद" }
+      },
+      "instruction": {
+        "text": "Tell a new friend what you like and what you don’t like. Then ask about them.",
+        "translations": {
+          "bn": "নতুন বন্ধুকে আপনার পছন্দ ও অপছন্দের কথা বলুন। তারপর তাঁর কথা জিজ্ঞেস করুন।",
+          "hi": "किसी नए दोस्त को अपनी पसंद और नापसंद बताएँ। फिर उनसे उनके बारे में पूछें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say two things you like",
+          "translations": {
+            "bn": "আপনার পছন্দের দুটি জিনিস বলুন",
+            "hi": "अपनी पसंद की दो चीज़ें बताएँ"
+          }
+        },
+        {
+          "text": "Say one thing you don’t like, politely",
+          "translations": {
+            "bn": "অপছন্দের একটি জিনিস ভদ্রভাবে বলুন",
+            "hi": "नापसंद की एक चीज़ विनम्रता से बताएँ"
+          }
+        },
+        {
+          "text": "Say your favourite food or colour",
+          "translations": {
+            "bn": "আপনার প্রিয় খাবার বা রং বলুন",
+            "hi": "अपना पसंदीदा खाना या रंग बताएँ"
+          }
+        },
+        {
+          "text": "Ask a “Do you like …?” question",
+          "translations": {
+            "bn": "একটি “Do you like …?” প্রশ্ন করুন",
+            "hi": "एक “Do you like …?” सवाल पूछें"
+          }
+        },
+        {
+          "text": "Ask about their favourite thing",
+          "translations": {
+            "bn": "তাঁর প্রিয় জিনিসের কথা জিজ্ঞেস করুন",
+            "hi": "उनकी पसंदीदा चीज़ के बारे में पूछें"
+          }
+        }
+      ],
+      "phrases": [
+        "I like …",
+        "I don’t like … very much.",
+        "My favourite … is …",
+        "Do you like …?",
+        "What is your favourite …?",
+        "Me too!"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "How do you ask if someone likes tea?",
+            "translations": {
+              "bn": "কারও চা ভালো লাগে কি না, কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी से कैसे पूछें कि उन्हें चाय पसंद है या नहीं?"
+            }
+          },
+          "answer": "Do you like tea?",
+          "others": ["I like tea.", "What is tea?"]
+        },
+        {
+          "question": {
+            "text": "Someone asks, “Do you like fish?” You do not like it. Which answer is polite?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “Do you like fish?” আপনার ভালো লাগে না। কোন উত্তরটি ভদ্র?",
+              "hi": "कोई पूछे, “Do you like fish?” और आपको पसंद नहीं है। कौन-सा जवाब विनम्र है?"
+            }
+          },
+          "answer": "Sorry, I don’t like fish very much.",
+          "others": ["Fish is bad.", "Yes, I do."]
+        },
+        {
+          "question": {
+            "text": "How do you ask about the food someone likes best?",
+            "translations": {
+              "bn": "কারও সবচেয়ে প্রিয় খাবার কোনটি, কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "किसी का सबसे पसंदीदा खाना कैसे पूछें?"
+            }
+          },
+          "answer": "What is your favourite food?",
+          "others": ["Do you like food?", "Where is the food?"]
+        },
+        {
+          "question": {
+            "text": "Your friend says, “I like music.” You like it too. What do you say?",
+            "translations": {
+              "bn": "বন্ধু বললেন, “I like music.” আপনারও ভালো লাগে। কী বলবেন?",
+              "hi": "दोस्त कहे, “I like music.” और आपको भी पसंद है। क्या कहें?"
+            }
+          },
+          "answer": "Me too!",
+          "others": ["No, I don’t.", "I’m sorry."]
+        },
+        {
+          "question": {
+            "text": "Which word means “like very much”?",
+            "translations": {
+              "bn": "কোন শব্দের অর্থ “খুব পছন্দ করা”?",
+              "hi": "किस शब्द का मतलब “बहुत पसंद करना” है?"
+            }
+          },
+          "answer": "love",
+          "others": ["sorry", "sweets"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Farhan",
+          "text": "Hi, Tina! What do you like to do on Sundays?",
+          "translations": {
+            "bn": "হাই, টিনা! রবিবারে আপনি কী করতে ভালোবাসেন?",
+            "hi": "हाय, टीना! रविवार को आपको क्या करना पसंद है?"
+          }
+        },
+        {
+          "speaker": "Tina",
+          "text": "I like reading. I love story books.",
+          "translations": {
+            "bn": "আমার বই পড়তে ভালো লাগে। গল্পের বই আমি খুব ভালোবাসি।",
+            "hi": "मुझे पढ़ना पसंद है। मुझे कहानी की किताबें बहुत पसंद हैं।"
+          }
+        },
+        {
+          "speaker": "Farhan",
+          "text": "Do you like films?",
+          "translations": {
+            "bn": "আপনার কি সিনেমা ভালো লাগে?",
+            "hi": "क्या आपको फ़िल्में पसंद हैं?"
+          }
+        },
+        {
+          "speaker": "Tina",
+          "text": "Yes, I do. What is your favourite film?",
+          "translations": {
+            "bn": "হ্যাঁ, লাগে। আপনার প্রিয় সিনেমা কোনটি?",
+            "hi": "जी हाँ, पसंद हैं। आपकी पसंदीदा फ़िल्म कौन-सी है?"
+          }
+        },
+        {
+          "speaker": "Farhan",
+          "text": "My favourite film is Sholay. Do you like cricket?",
+          "translations": {
+            "bn": "আমার প্রিয় সিনেমা শোলে। আপনার কি ক্রিকেট ভালো লাগে?",
+            "hi": "मेरी पसंदीदा फ़िल्म शोले है। क्या आपको क्रिकेट पसंद है?"
+          }
+        },
+        {
+          "speaker": "Tina",
+          "text": "Not very much. I like football.",
+          "translations": {
+            "bn": "খুব একটা নয়। আমার ফুটবল ভালো লাগে।",
+            "hi": "ज़्यादा नहीं। मुझे फ़ुटबॉल पसंद है।"
+          }
+        },
+        {
+          "speaker": "Farhan",
+          "text": "Football is good too. What is your favourite colour?",
+          "translations": {
+            "bn": "ফুটবলও ভালো। আপনার প্রিয় রং কোনটি?",
+            "hi": "फ़ुटबॉल भी अच्छा है। आपका पसंदीदा रंग कौन-सा है?"
+          }
+        },
+        {
+          "speaker": "Tina",
+          "text": "My favourite colour is green. And yours?",
+          "translations": {
+            "bn": "আমার প্রিয় রং সবুজ। আর আপনার?",
+            "hi": "मेरा पसंदीदा रंग हरा है। और आपका?"
+          }
+        },
+        {
+          "speaker": "Farhan",
+          "text": "I like blue. I don’t like black very much.",
+          "translations": {
+            "bn": "আমার নীল ভালো লাগে। কালো আমার খুব একটা ভালো লাগে না।",
+            "hi": "मुझे नीला पसंद है। मुझे काला ज़्यादा पसंद नहीं है।"
+          }
+        },
+        {
+          "speaker": "Tina",
+          "text": "I like blue too!",
+          "translations": { "bn": "আমারও নীল ভালো লাগে!", "hi": "मुझे भी नीला पसंद है!" }
+        },
+        {
+          "speaker": "Farhan",
+          "text": "Great! We both like blue.",
+          "translations": {
+            "bn": "দারুণ! আমাদের দুজনেরই নীল ভালো লাগে।",
+            "hi": "बहुत बढ़िया! हम दोनों को नीला पसंद है।"
+          }
+        }
+      ],
+      "voices": { "Farhan": "male", "Tina": "female" }
+    },
+    "review_roleplay": {
+      "partner": "Tina",
+      "asMan": "Farhan",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! I’m Tina. Do you like films?",
+          "reply": "Yes, I do.",
+          "cues": {
+            "bn": "ভালো লাগলে হ্যাঁ বলুন; না লাগলে ভদ্রভাবে না বলুন।",
+            "hi": "पसंद हो तो हाँ कहें; न हो तो विनम्रता से ना कहें।"
+          }
+        },
+        {
+          "partner": "What is your favourite film?",
+          "reply": "My favourite film is …",
+          "cues": {
+            "bn": "আপনার প্রিয় সিনেমার নাম বলুন।",
+            "hi": "अपनी पसंदीदा फ़िल्म का नाम बताएँ।"
+          }
+        },
+        {
+          "partner": "Nice! I like football. What do you like?",
+          "reply": "I like … very much.",
+          "cues": {
+            "bn": "আপনার যা খুব ভালো লাগে, তা বলুন।",
+            "hi": "बताएँ कि आपको क्या बहुत पसंद है।"
+          }
+        },
+        {
+          "partner": "That’s great! It was nice talking to you.",
+          "reply": "Nice talking to you too. Goodbye!",
+          "cues": {
+            "bn": "বলুন আপনারও কথা বলে ভালো লাগল, আর বিদায় জানান।",
+            "hi": "कहें कि आपको भी बात करके अच्छा लगा, और विदा लें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "At a tea stall",
+            "translations": { "bn": "চায়ের দোকানে", "hi": "चाय की दुकान पर" }
+          },
+          "roleplay": {
+            "partner": "the tea seller",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning! Do you like tea or coffee?",
+                "reply": "Good morning! I like …",
+                "cues": {
+                  "bn": "সুপ্রভাত জানান, আর বলুন চা না কফি, কোনটি ভালো লাগে।",
+                  "hi": "सुप्रभात कहें, और बताएँ कि चाय पसंद है या कॉफ़ी।"
+                }
+              },
+              {
+                "partner": "Do you like sugar in it?",
+                "reply": "Yes, I do.",
+                "cues": {
+                  "bn": "চিনি ভালো লাগলে হ্যাঁ বলুন; না লাগলে ভদ্রভাবে না বলুন।",
+                  "hi": "चीनी पसंद हो तो हाँ कहें; न हो तो विनम्रता से ना कहें।"
+                }
+              },
+              {
+                "partner": "I have samosas too. Do you like samosas?",
+                "reply": "Sorry, I don’t like samosas very much.",
+                "cues": {
+                  "bn": "ভদ্রভাবে বলুন, শিঙাড়া আপনার খুব একটা ভালো লাগে না।",
+                  "hi": "विनम्रता से कहें कि आपको समोसे ज़्यादा पसंद नहीं हैं।"
+                }
+              },
+              {
+                "partner": "No problem. Here is your cup. Enjoy!",
+                "reply": "Thank you very much!",
+                "cues": { "bn": "অনেক ধন্যবাদ দিন।", "hi": "बहुत धन्यवाद दें।" }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A new friend",
+            "translations": { "bn": "নতুন বন্ধু", "hi": "नए दोस्त" }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! I’m Sam. What do you like to do?",
+                "reply": "Hi, Sam! I like …",
+                "cues": {
+                  "bn": "হাই বলুন, আর আপনার কী করতে ভালো লাগে বলুন।",
+                  "hi": "हाय कहें, और बताएँ कि आपको क्या करना पसंद है।"
+                }
+              },
+              {
+                "partner": "Nice! I like music. Do you like music?",
+                "reply": "Yes, I do. What is your favourite song?",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, আর তাঁর প্রিয় গান কোনটি জিজ্ঞেস করুন।",
+                  "hi": "हाँ कहें, और पूछें कि उनका पसंदीदा गाना कौन-सा है।"
+                }
+              },
+              {
+                "partner": "My favourite song is an old Hindi song. What is your favourite food?",
+                "reply": "My favourite food is …",
+                "cues": { "bn": "আপনার প্রিয় খাবারের নাম বলুন।", "hi": "अपना पसंदीदा खाना बताएँ।" }
+              },
+              {
+                "partner": "I like that too! See you again.",
+                "reply": "See you again. Bye!",
+                "cues": {
+                  "bn": "বলুন আবার দেখা হবে, আর বিদায় জানান।",
+                  "hi": "कहें कि फिर मिलेंगे, और विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Choosing a gift",
+            "translations": { "bn": "উপহার বাছাই", "hi": "उपहार चुनना" }
+          },
+          "roleplay": {
+            "partner": "Nikhil",
+            "asWoman": "Nikita",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Your birthday is next week! What is your favourite colour?",
+                "reply": "My favourite colour is …",
+                "cues": { "bn": "আপনার প্রিয় রং বলুন।", "hi": "अपना पसंदीदा रंग बताएँ।" }
+              },
+              {
+                "partner": "Good. Do you like books?",
+                "reply": "Yes, I do. I like books very much.",
+                "cues": {
+                  "bn": "বলুন হ্যাঁ, বই আপনার খুব ভালো লাগে।",
+                  "hi": "कहें कि हाँ, आपको किताबें बहुत पसंद हैं।"
+                }
+              },
+              {
+                "partner": "And do you like chocolates?",
+                "reply": "Sorry, I don’t like chocolates very much.",
+                "cues": {
+                  "bn": "ভদ্রভাবে বলুন, চকলেট আপনার খুব একটা ভালো লাগে না।",
+                  "hi": "विनम्रता से कहें कि आपको चॉकलेट ज़्यादा पसंद नहीं है।"
+                }
+              },
+              {
+                "partner": "No problem. Thank you for telling me!",
+                "reply": "Thank you. You are very kind.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর বলুন তিনি খুব ভালো মানুষ।",
+                  "hi": "धन्यवाद दें, और कहें कि यह उनकी मेहरबानी है।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

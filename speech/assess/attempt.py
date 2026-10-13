@@ -1,11 +1,11 @@
-"""One recording of one word, from file to findings."""
+"""One recording of one word, from file (or waveform) to findings."""
 
 from __future__ import annotations
 
 from pathlib import Path
 
-from .result import Assessment, judge
-from .sounds import RATE, hear
+from .result import Assessment, Heard, judge
+from .sounds import RATE, hear, listen
 from .stress import measure, read_stress
 from .syllables import is_nucleus, regions
 
@@ -19,7 +19,21 @@ def assess_attempt(
 ) -> Assessment:
     """Assess a recording of `word`, said in `parts` parts with part number `stress` strong."""
     waveform, heard = hear(recording, word, lang)
+    return _judged(waveform, heard, word, parts, stress)
 
+
+def assess_waveform(
+    waveform,
+    word: str,
+    parts: int | None = None,
+    stress: int | None = None,
+    lang: str = "en",
+) -> Assessment:
+    """The same for a recording already in memory (one channel, at `RATE`): nothing is written down."""
+    return _judged(waveform, listen(waveform, word, lang), word, parts, stress)
+
+
+def _judged(waveform, heard: Heard, word: str, parts: int | None, stress: int | None) -> Assessment:
     reading = None
     nuclei = [sound for sound in heard.sounds if is_nucleus(sound.phone)]
     # Stress is measured only when the parts heard are the parts expected, one for one.

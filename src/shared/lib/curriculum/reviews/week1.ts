@@ -81,6 +81,8 @@ export const week1ReviewDialogue: WeekDialogue = {
  */
 export const week1ReviewRoleplay: WeekRoleplay = {
   partner: 'Meera',
+  // The learner's tutor plays her; a man plays the same part under a man's name.
+  asMan: 'Mohan',
   imageUrl: null,
   turns: [
     {

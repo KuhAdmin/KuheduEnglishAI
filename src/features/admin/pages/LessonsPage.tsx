@@ -5,6 +5,7 @@ import { DEFAULT_LANGUAGE, isEnglish } from '@/shared/lib/i18n'
 import { SegmentedControl } from '@/shared/ui/SegmentedControl'
 import { SelectField } from '@/shared/ui/SelectField'
 import { adminText } from '../adminText'
+import { lessonContentOnServer } from '@/shared/lib/curriculum/weekContentRemote'
 import { AdminPage } from '../components/AdminPage'
 import { ChallengeEditor } from '../components/ChallengeEditor'
 import { DialogueEditor } from '../components/DialogueEditor'
@@ -61,6 +62,9 @@ export function LessonsPage() {
       onSave={drafts.save}
       onDiscard={drafts.discard}
       onResetToDefaults={drafts.resetToDefaults}
+      // Kept on the server, "everything back to built-in" removes what was written for every
+      // week, for everyone: the question before it says so.
+      resetConfirm={lessonContentOnServer() ? text.resetAllOnServerConfirm : undefined}
     >
       <div className="flex flex-col gap-4">
         <SelectField

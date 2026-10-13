@@ -12,6 +12,7 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "node src/db/migrate.ts",
     "admin:create": "node src/commands/createAdmin.ts",
+    "content:import": "node src/commands/importLessons.ts",
     "mail:test": "node src/commands/sendTestMail.ts"
   },
   "dependencies": {

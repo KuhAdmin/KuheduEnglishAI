@@ -20,6 +20,21 @@ const text = adminText.lessons
 
 const newTurn: RoleplayTurn = { partner: '', reply: '', cues: {} }
 
+/**
+ * The role-play with one of the partner's two other names set, or taken away when it is emptied:
+ * in the order the schema stores them, so that an undone edit leaves nothing to save.
+ */
+function withName(roleplay: WeekRoleplay, which: 'asWoman' | 'asMan', name: string): WeekRoleplay {
+  const { partner, asWoman, asMan, ...rest } = roleplay
+  const names = { asWoman, asMan, [which]: name }
+  return {
+    partner,
+    ...(names.asWoman && { asWoman: names.asWoman }),
+    ...(names.asMan && { asMan: names.asMan }),
+    ...rest,
+  }
+}
+
 export type RoleplayEditorProps = {
   editor: WeekContentEditor<WeekRoleplay>
   validation: RoleplayValidation
@@ -63,6 +78,25 @@ export function RoleplayEditor({ editor, validation, translateTo }: RoleplayEdit
           maxLength={MAX_PARTNER_LENGTH}
           autoComplete="off"
           onChange={(event) => editor.set({ ...roleplay, partner: event.target.value })}
+        />
+        {/* The learner's tutor plays the partner: a name for when the tutor is the other kind. */}
+        <TextField
+          label={text.partnerAsWoman}
+          hint={text.partnerAsHint}
+          lang="en"
+          value={roleplay.asWoman ?? ''}
+          maxLength={MAX_PARTNER_LENGTH}
+          autoComplete="off"
+          onChange={(event) => editor.set(withName(roleplay, 'asWoman', event.target.value))}
+        />
+        <TextField
+          label={text.partnerAsMan}
+          hint={text.partnerAsHint}
+          lang="en"
+          value={roleplay.asMan ?? ''}
+          maxLength={MAX_PARTNER_LENGTH}
+          autoComplete="off"
+          onChange={(event) => editor.set(withName(roleplay, 'asMan', event.target.value))}
         />
         <ImageField
           label={text.partnerPicture}
