@@ -1,8 +1,12 @@
-import { speechAudioQuerySchema, speechVoicesSchema } from '@kuhedu/contracts'
+import {
+  SPEECH_MOUTH_HEADER,
+  speechAudioQuerySchema,
+  speechVoicesSchema,
+} from '@kuhedu/contracts'
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
 import { HttpError } from '../../plugins/errors.ts'
 import type { SoundCache } from './soundCache.ts'
-import type { Speaker, SpeechCatalogue } from './speaker.ts'
+import type { Speaker, SpeechCatalogue, Spoken } from './speaker.ts'
 
 export type SpeechRoutesOptions = {
   speaker: Speaker
@@ -19,7 +23,7 @@ const CATALOGUE_RETRY_MS = 15_000
 
 /**
  * `/api/speech/*`: the voices the app can speak with, and a text said in one of them. Open to
- * everyone the app is open to, guests included: it says nothing about anyone, and the texts are
+ * anyone, without an account being asked for: it says nothing about anyone, and the texts are
  * the lessons' own.
  */
 export const speechRoutes: FastifyPluginAsyncZod<SpeechRoutesOptions> = async (app, options) => {
@@ -44,7 +48,7 @@ export const speechRoutes: FastifyPluginAsyncZod<SpeechRoutesOptions> = async (a
   }
 
   // The same sentence asked for twice at once (two learners opening one lesson) is made once.
-  const beingMade = new Map<string, Promise<Buffer>>()
+  const beingMade = new Map<string, Promise<Spoken>>()
 
   app.get('/voices', { schema: { response: { 200: speechVoicesSchema } } }, async () => ({
     voices: (await catalogue())?.voices ?? [],
@@ -65,8 +69,8 @@ export const speechRoutes: FastifyPluginAsyncZod<SpeechRoutesOptions> = async (a
       }
 
       const key = { model: voices.model, voice, text }
-      let sound = await cache.read(key)
-      if (!sound) {
+      let spoken: Spoken | null = await cache.read(key)
+      if (!spoken) {
         const id = `${voice}\n${text}`
         let making = beingMade.get(id)
         if (!making) {
@@ -74,22 +78,28 @@ export const speechRoutes: FastifyPluginAsyncZod<SpeechRoutesOptions> = async (a
           beingMade.set(id, making)
         }
         try {
-          sound = await making
+          spoken = await making
         } catch (error) {
           logError(error)
           throw new HttpError(503, 'unavailable', 'The speaking service is not answering')
         }
         // Kept for next time; a disk that is full must not cost this learner the sound.
-        await cache.write(key, sound).catch(logError)
+        await cache.write(key, spoken).catch(logError)
       }
 
-      return (
-        reply
-          .header('Content-Type', 'audio/mpeg')
-          // The same voice and text are the same sound for good: the address is the sound's name.
-          .header('Cache-Control', 'public, max-age=31536000, immutable')
-          .send(sound)
-      )
+      void reply.header('Content-Type', 'audio/mpeg')
+      if (spoken.mouth) {
+        return (
+          reply
+            // The mouth for a drawn face travels with its sound, so whatever keeps one keeps both.
+            .header(SPEECH_MOUTH_HEADER, spoken.mouth)
+            // The same voice and text are the same sound for good: the address is the sound's name.
+            .header('Cache-Control', 'public, max-age=31536000, immutable')
+            .send(spoken.sound)
+        )
+      }
+      // Without its mouth a sound is not finished (see the cache): heard now, kept by nobody.
+      return reply.header('Cache-Control', 'no-store').send(spoken.sound)
     },
   )
 }

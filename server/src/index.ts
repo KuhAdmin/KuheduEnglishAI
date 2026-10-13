@@ -3,7 +3,7 @@ import { buildApp } from './app.ts'
 import { connectDatabase } from './db/client.ts'
 import { readEnv } from './env.ts'
 import { createMailer } from './lib/mailer.ts'
-import { createGoogleVerifier } from './modules/auth/google.ts'
+import { createGoogleSignIn } from './modules/auth/google.ts'
 import { createSoundCache } from './modules/speech/soundCache.ts'
 import { createSpeaker } from './modules/speech/speaker.ts'
 
@@ -21,7 +21,10 @@ const app = buildApp({
     mailer,
     secret: env.SESSION_SECRET,
     production: env.NODE_ENV === 'production',
-    verifyGoogle: env.GOOGLE_CLIENT_ID ? createGoogleVerifier(env.GOOGLE_CLIENT_ID) : undefined,
+    google:
+      env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET
+        ? createGoogleSignIn(env.GOOGLE_CLIENT_ID, env.GOOGLE_CLIENT_SECRET)
+        : undefined,
   },
   speech: {
     speaker: createSpeaker(env.SPEECH_URL),

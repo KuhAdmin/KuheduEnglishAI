@@ -3,6 +3,7 @@ import { paths } from '@/shared/lib/paths'
 
 import { requireUnverified } from './lib/requireUnverified'
 
+export { requireAccount } from './lib/requireAccount'
 export { requireAdmin } from './lib/requireAdmin'
 
 export const authRoutes: RouteObject[] = [

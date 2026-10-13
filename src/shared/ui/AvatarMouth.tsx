@@ -3,7 +3,7 @@ import { cn } from '@/shared/lib/cn'
 
 export type AvatarMouthProps = {
   shape: MouthShape
-  /** A wide smile, teeth showing, for as long as nothing is being said (`rest`). */
+  /** A gentle smile, lips together, for as long as nothing is being said (`rest`). */
   smiling: boolean
 }
 
@@ -21,17 +21,17 @@ const teeth = 'fill-(--figure-teeth)'
  */
 export function AvatarMouth({ shape, smiling }: AvatarMouthProps) {
   if (shape === 'rest' && smiling) {
+    // The lips of `rest`, a little wider and with the corners lifted further. No teeth: a face
+    // that grins at a learner the whole time it is not talking is too much.
     return (
       <g data-part="mouth">
-        <path {...lip} d="M81 109 Q100 116 119 109 Q100 134 81 109 Z" strokeWidth={3} />
-        <path className={inside} d="M83 110.5 Q100 117 117 110.5 Q100 131 83 110.5 Z" />
-        <path className={teeth} d="M85 111.5 Q100 117.5 115 111.5 Q100 122 85 111.5 Z" />
         <path
-          className="stroke-(--figure-lip-light)"
-          d="M90 122.5 Q100 128.5 110 122.5"
-          fill="none"
-          strokeWidth={2}
-          strokeLinecap="round"
+          className="fill-(--figure-lip-light)"
+          d="M88 114.5 Q100 128 112 114.5 Q100 120.5 88 114.5 Z"
+        />
+        <path
+          className="fill-(--figure-lip)"
+          d="M84 111 Q93 112 100 113.5 Q107 112 116 111 Q100 122 84 111 Z"
         />
       </g>
     )

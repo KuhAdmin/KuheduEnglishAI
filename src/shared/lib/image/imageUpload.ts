@@ -1,4 +1,4 @@
-import { isSafeAssetUrl } from '@/shared/lib/appConfig/fields'
+import { isSafeAssetUrl } from '../appConfig/fields'
 
 /** The file is not an image the browser can read. */
 export class ImageUnreadableError extends Error {}
@@ -33,8 +33,9 @@ function loadImage(file: File): Promise<HTMLImageElement> {
 }
 
 /**
- * Turn an uploaded file into a compact image the browser can keep in its own storage (there is
+ * Turn a chosen file into a compact image the browser can keep in its own storage (there is
  * no server to upload to yet): shrunk to the given bounds and re-encoded, as a `data:` URL.
+ * Used by the admin area's pictures and by a learner's profile photo.
  * Re-encoding through a canvas also strips anything that is not pixels (metadata, SVG scripts).
  * TODO(backend): upload the file and return its URL instead.
  */

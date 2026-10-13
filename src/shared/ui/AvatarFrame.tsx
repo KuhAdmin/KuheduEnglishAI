@@ -18,7 +18,7 @@ export type AvatarMood = 'neutral' | 'smile' | 'encourage'
 export type AvatarProps = Omit<ComponentProps<'span'>, 'children'> &
   VariantProps<typeof avatarVariants> & {
     /**
-     * The shape of the mouth. Give it `useLipSync()` to move the lips with the device's voice.
+     * The shape of the mouth. Give it `useLipSync()` to move the lips with the app's voice.
      * `rest`, the default, is a closed mouth, or the smile of the mood.
      */
     mouth?: MouthShape

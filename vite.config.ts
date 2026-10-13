@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-const APP_NAME = 'Kuhedu English AI'
+const APP_NAME = 'Kuhedu Lingo - The Fluency App'
 
 export default defineConfig({
   plugins: [
@@ -14,7 +14,7 @@ export default defineConfig({
     VitePWA({
       // Never reload silently mid-session: the app shows an "Update available" prompt.
       registerType: 'prompt',
-      includeAssets: ['favicon.ico', 'apple-touch-icon-180x180.png', 'logo.svg'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon-180x180.png'],
       manifest: {
         id: '/',
         name: APP_NAME,
@@ -47,6 +47,9 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
         // Only precache Latin font subsets; others load on demand via unicode-range if ever needed.
         globIgnores: [
+          // The picture the icons are made from (pwa-assets.config.ts). The app shows the icons,
+          // never this: it is some thirty times the weight of the largest size a screen needs.
+          'logo.png',
           '**/nunito-{cyrillic,cyrillic-ext,vietnamese}-*.woff2',
           // Baloo Da 2 is only used for Bengali glyphs, Baloo 2 only for Devanagari ones.
           '**/baloo-da-2-{latin,latin-ext,vietnamese}-*.woff2',
@@ -81,8 +84,19 @@ export default defineConfig({
             handler: 'CacheFirst',
             options: {
               cacheName: 'speech',
-              cacheableResponse: { statuses: [200] },
               expiration: { maxEntries: 600, maxAgeSeconds: 60 * 60 * 24 * 60 },
+              plugins: [
+                {
+                  // Kept only with the mouth for it (the `x-speech-mouth` header): a sound that
+                  // came without is not finished, and the server's "do not keep" is not something
+                  // this cache heeds by itself. Written out in full: it is copied into the
+                  // service worker as text, where nothing imported here exists.
+                  cacheWillUpdate: async ({ response }) =>
+                    response.status === 200 && response.headers.has('x-speech-mouth')
+                      ? response
+                      : null,
+                },
+              ],
             },
           },
           {
@@ -111,9 +125,13 @@ export default defineConfig({
     host: true,
     // The backend (`npm run dev:server`) answers on the same origin as the app, as it will in
     // production, so its session cookie needs no cross-site rules.
+    // `changeOrigin: false` is said out loud because a target given as a bare string turns it
+    // on: the backend would then be told it was asked at `127.0.0.1:8787` while the browser's
+    // `Origin` names this dev server, and it refuses every request that changes something as
+    // coming from another site (sign-up, sign-in).
     proxy: {
-      '/api': 'http://127.0.0.1:8787',
-      '/media': 'http://127.0.0.1:8787',
+      '/api': { target: 'http://127.0.0.1:8787', changeOrigin: false },
+      '/media': { target: 'http://127.0.0.1:8787', changeOrigin: false },
     },
   },
   test: {

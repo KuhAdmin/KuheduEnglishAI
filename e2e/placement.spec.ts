@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test'
-import { expectNoHorizontalScroll, seedLanguage } from './helpers'
+import { expect, expectNoHorizontalScroll, seedLanguage, test } from './helpers'
 
 test('explains the placement test in Bengali, with all four skills', async ({ page }) => {
   await seedLanguage(page, 'bn')

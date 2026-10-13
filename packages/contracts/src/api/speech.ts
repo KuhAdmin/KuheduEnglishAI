@@ -41,3 +41,41 @@ export const speechAudioQuerySchema = z.object({
 })
 
 export type SpeechAudioQuery = z.infer<typeof speechAudioQuerySchema>
+
+/**
+ * With a sound comes the mouth for it, in this header: which shape a drawn face's lips have,
+ * and from when. The speaking service knows exactly, because it decides how long every sound of
+ * the sentence lasts before it makes the speech. A sound may come without it.
+ */
+export const SPEECH_MOUTH_HEADER = 'x-speech-mouth'
+
+/** The shapes of speech, by the letter each is sent as. A face's mouth at rest is not one. */
+export const SPEECH_MOUTH_SHAPES = {
+  c: 'closed',
+  m: 'mid',
+  o: 'open',
+  w: 'wide',
+  r: 'round',
+} as const
+
+export type SpeechMouthShape = (typeof SPEECH_MOUTH_SHAPES)[keyof typeof SPEECH_MOUTH_SHAPES]
+
+/** The lips take `shape` from `at` seconds into the sound, until the next mark. */
+export type SpeechMouthMark = { at: number; shape: SpeechMouthShape }
+
+/**
+ * The header as it is sent: thousandths of a second and a shape's letter, over and over
+ * (`0c75m150o`). A sentence at the longest text allowed is well inside the limit.
+ */
+export const speechMouthTextSchema = z
+  .string()
+  .max(8000)
+  .regex(/^(?:\d{1,6}[cmowr])+$/)
+
+/** The header read into marks, in the order they are reached. */
+export const speechMouthSchema = speechMouthTextSchema.transform((text): SpeechMouthMark[] =>
+  [...text.matchAll(/(\d+)([cmowr])/g)].map(([, at, letter]) => ({
+    at: Number(at) / 1000,
+    shape: SPEECH_MOUTH_SHAPES[letter as keyof typeof SPEECH_MOUTH_SHAPES],
+  })),
+)

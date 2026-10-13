@@ -8,10 +8,23 @@ import { LANDING_CONFIG_NAME } from '@/shared/lib/appConfig/landingConfig'
 import { LANGUAGES_CONFIG_NAME } from '@/shared/lib/appConfig/languagesConfig'
 import { settingsRepository } from '@/shared/lib/appConfig/settingsRepository'
 import { AppLanguageProvider, useLanguageStore } from '@/shared/lib/i18n'
+import { SCREEN_TEXTS_CONFIG_NAME } from '@/shared/lib/i18n/screenTexts'
 import { paths } from '@/shared/lib/paths'
 import { fakeServer, refusal, serverUnreachable } from '@/test/fakeServer'
 import { authRoutes, authStepRoutes } from '../index'
+import type * as GoogleSignIn from '../lib/googleSignIn'
 import { requireAdmin } from '../lib/requireAdmin'
+
+// Whether this build was told the server is set up for Google is the machine's own setting
+// (`.env.local`); here each test says which it is, and nothing really leaves for Google.
+const google = vi.hoisted(() => ({ configured: false, go: vi.fn() }))
+vi.mock('../lib/googleSignIn', async (original) => ({
+  ...(await original<typeof GoogleSignIn>()),
+  get googleConfigured() {
+    return google.configured
+  },
+  goToGoogle: google.go,
+}))
 
 const learner: SessionUser = {
   id: 'u-1',
@@ -19,6 +32,7 @@ const learner: SessionUser = {
   emailVerified: false,
   role: 'learner',
   displayName: null,
+  pictureUrl: null,
 }
 const admin: SessionUser = { ...learner, id: 'u-2', email: 'admin@example.com', role: 'admin' }
 
@@ -62,6 +76,8 @@ beforeEach(() => {
   localStorage.clear()
   useSessionStore.setState({ user: null, loaded: false })
   useLanguageStore.setState({ language: null })
+  google.configured = false
+  google.go.mockClear()
   fakeServer({ 'GET /auth/session': { body: { user: null } } })
 })
 
@@ -74,9 +90,9 @@ describe('AuthPage', () => {
     settingsRepository.write(LANDING_CONFIG_NAME, { brand: { name: 'Acme English' } })
     renderApp(paths.signUp)
 
-    expect(
-      await screen.findByRole('heading', { level: 1, name: 'Welcome to Acme English' }),
-    ).toBeVisible()
+    // The brand is above the title, which does not say it a second time.
+    expect(await screen.findByRole('heading', { level: 1, name: 'Welcome here' })).toBeVisible()
+    expect(screen.getByText('Acme English')).toBeVisible()
     expect(screen.getByRole('radio', { name: 'Sign Up' })).toBeChecked()
     expect(submitButton('Create Account')).toBeVisible()
     expect(screen.getByLabelText('Password')).toHaveAttribute('autocomplete', 'new-password')
@@ -160,24 +176,35 @@ describe('AuthPage', () => {
     expect(useSessionStore.getState().user).toBeNull()
   })
 
-  it('says so when the server cannot be reached, and a guest can still go on', async () => {
+  it('says so when the server cannot be reached, and has no way on without an account', async () => {
     serverUnreachable()
-    renderApp(paths.signUp)
+    const router = renderApp(paths.signUp)
     await fillIn('asha@example.com', 'long-enough-password')
     await userEvent.click(submitButton('Create Account'))
 
     expect(await screen.findByRole('alert')).toHaveTextContent('That did not work.')
-
-    await userEvent.click(screen.getByRole('link', { name: 'Continue as Guest' }))
-    expect(await screen.findByRole('heading', { name: 'Onboarding' })).toBeVisible()
+    expect(router.state.location.pathname).toBe(paths.signUp)
   })
 
-  it('signs a learner in to their journey', async () => {
+  it('takes someone who signs in before ever entering their code to the code step', async () => {
+    fakeServer({ 'POST /auth/sign-in': { body: { user: learner } } })
+    renderApp()
+    await fillIn('asha@example.com', 'the-password')
+    await userEvent.click(submitButton('Sign In'))
+
+    // The server sent a new code as it let them in.
+    expect(await screen.findByRole('heading', { name: 'Check your email' })).toBeVisible()
+    expect(screen.getByText('We sent a 6-digit code to asha@example.com.')).toBeVisible()
+  })
+
+  it('signs a learner in and hands them to the app’s front door, which sends them on', async () => {
     fakeServer({ 'POST /auth/sign-in': { body: { user: { ...learner, emailVerified: true } } } })
     renderApp()
     await fillIn('asha@example.com', 'the-password')
     await userEvent.click(submitButton('Sign In'))
-    expect(await screen.findByRole('heading', { name: 'Journey' })).toBeVisible()
+    // Where a learner goes from there is the app's to decide: from where they left off in
+    // this browser, or into onboarding (`openWhereTheyLeftOff`, which this router does not have).
+    expect(await screen.findByRole('heading', { name: 'Landing' })).toBeVisible()
   })
 
   it('opens the admin area for an admin', async () => {
@@ -237,18 +264,61 @@ describe('AuthPage', () => {
     await userEvent.click(await screen.findByRole('button', { name: 'Continue with Google' }))
 
     expect(screen.getByRole('alert')).toHaveTextContent('Google sign-in is not available yet.')
+    expect(google.go).not.toHaveBeenCalled()
   })
 
-  it('lets a visitor continue as a guest into onboarding', async () => {
+  it('hands the browser to Google where it is set up, from either half', async () => {
+    google.configured = true
     renderApp(paths.signUp)
-    await userEvent.click(await screen.findByRole('link', { name: 'Continue as Guest' }))
-    expect(await screen.findByRole('heading', { name: 'Onboarding' })).toBeVisible()
+    await userEvent.click(await screen.findByRole('button', { name: 'Continue with Google' }))
+
+    expect(google.go).toHaveBeenCalledTimes(1)
+    // Nothing is said, and the screen is as it was for a visitor who comes back with Back.
+    expect(screen.queryByRole('alert')).toBeNull()
+    expect(submitButton('Create Account')).toBeEnabled()
+  })
+
+  it('says so when the browser comes back from Google without having been signed in', async () => {
+    renderApp(`${paths.signIn}?google=failed`)
+
+    expect(await screen.findByRole('alert')).toHaveTextContent(
+      'Google sign-in did not work. Try again, or use your email.',
+    )
+    // The message goes as soon as they try something else.
+    await userEvent.type(await emailField(), 'a')
+    expect(screen.queryByRole('alert')).toBeNull()
+  })
+
+  it('puts the brand name where an admin’s title asks for it', async () => {
+    settingsRepository.write(LANDING_CONFIG_NAME, { brand: { name: 'Acme English' } })
+    settingsRepository.write(SCREEN_TEXTS_CONFIG_NAME, {
+      en: { 'auth.title': 'Hello from {brand}' },
+    })
+    renderApp(paths.signIn)
+
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'Hello from Acme English' }),
+    ).toBeVisible()
+  })
+
+  it('offers no way into the app without an account', async () => {
+    renderApp(paths.signUp)
+    await emailField()
+
+    // Back to the landing page, a forgotten password and the other half: nothing leads on.
+    expect(screen.queryByRole('link', { name: /guest/i })).toBeNull()
+    expect(screen.queryByRole('button', { name: /guest/i })).toBeNull()
+    for (const link of screen.getAllByRole('link')) {
+      expect([paths.landing, paths.signIn, paths.forgotPassword]).toContain(
+        link.getAttribute('href'),
+      )
+    }
   })
 
   it('is shown in the learner’s language', async () => {
     renderApp(paths.signIn, 'hi')
     expect(
-      await screen.findByRole('heading', { level: 1, name: 'Kuhedu English में आपका स्वागत है' }),
+      await screen.findByRole('heading', { level: 1, name: 'यहाँ आपका स्वागत है' }),
     ).toBeVisible()
     expect(screen.getByLabelText('पासवर्ड')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'पासवर्ड दिखाएँ' })).toBeInTheDocument()
@@ -264,9 +334,7 @@ describe('AuthPage', () => {
     await userEvent.type(screen.getByLabelText('Email address'), 'learner@example.com')
     await userEvent.selectOptions(picker, 'हिन्दी')
 
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'Kuhedu English में आपका स्वागत है',
-    )
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('यहाँ आपका स्वागत है')
     expect(screen.getByRole('combobox', { name: 'भाषा' })).toHaveValue('hi')
     // Saved as the learner's language, so the rest of the app and onboarding follow it.
     expect(useLanguageStore.getState().language).toBe('hi')
@@ -298,20 +366,37 @@ describe('AuthPage', () => {
 describe('someone already signed in', () => {
   it('is told who they are instead of being asked again, and can sign out', async () => {
     const { calls } = fakeServer({ 'POST /auth/sign-out': {} })
-    useSessionStore.getState().setUser(learner)
+    useSessionStore.getState().setUser({ ...learner, emailVerified: true })
     renderApp()
 
     expect(await screen.findByText('You are signed in as asha@example.com.')).toBeVisible()
     expect(screen.queryByLabelText('Password')).not.toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Continue' })).toHaveAttribute('href', paths.home)
-    // Their address is not verified yet, so the way to do it is offered.
-    expect(screen.getByRole('link', { name: 'Verify your email' })).toBeVisible()
+    // To the front door, which sends them on from where they left off.
+    expect(screen.getByRole('link', { name: 'Continue' })).toHaveAttribute('href', paths.landing)
+    expect(screen.queryByRole('link', { name: 'Verify your email' })).not.toBeInTheDocument()
 
     await userEvent.click(screen.getByRole('button', { name: 'Sign out' }))
 
     expect(await screen.findByLabelText('Password')).toBeVisible()
     expect(calls).toEqual([{ method: 'POST', path: '/auth/sign-out', body: undefined }])
     expect(useSessionStore.getState().user).toBeNull()
+  })
+
+  it('is shown only the way to the code while their address is not verified: no account yet', async () => {
+    useSessionStore.getState().setUser(learner)
+    renderApp()
+
+    expect(await screen.findByText('You are signed in as asha@example.com.')).toBeVisible()
+    expect(
+      screen.getByText('Enter the code we emailed you to finish creating your account.'),
+    ).toBeVisible()
+    expect(screen.getByRole('link', { name: 'Verify your email' })).toHaveAttribute(
+      'href',
+      paths.verifyEmail,
+    )
+    // Not into the app. Out, though: the address may not be theirs to verify.
+    expect(screen.queryByRole('link', { name: 'Continue' })).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Sign out' })).toBeVisible()
   })
 
   it('stays signed in, and says so, when the server could not be told of the sign-out', async () => {

@@ -55,7 +55,7 @@ export function WatchAndListenStep({
 }: WatchAndListenStepProps) {
   const t = useT()
   const language = useLanguage()
-  const playback = useConversationPlayback(dialogue.lines)
+  const playback = useConversationPlayback(dialogue)
   const [view, setView] = useState<View>('dialogue')
   // A video that will not play gives way to the device's voice.
   const [failedVideo, setFailedVideo] = useState<string | null>(null)

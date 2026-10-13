@@ -36,12 +36,28 @@ const envSchema = z.object({
    */
   TRUST_PROXY: z.enum(['true', 'false']).default('false'),
 
-  // Sending the codes. Without these, development writes the code to the server's log instead.
+  // Sending the codes. One of the two ways is enough; with neither, development writes each
+  // code to the server's log instead of sending it.
+  /** Resend's key: the codes go through Resend. A secret. */
+  RESEND_API_KEY: z.string().min(1).optional(),
+  /** The address Resend sends as; its domain must be verified with Resend. Left out: `MAIL_FROM`. */
+  RESEND_FROM_EMAIL: z.string().min(1).optional(),
+  /**
+   * Or a mail server, with the account that may send as `MAIL_FROM`
+   * (`smtp://user:password@host:587`). A secret.
+   */
   SMTP_URL: z.string().min(1).optional(),
-  MAIL_FROM: z.string().min(1).optional(),
+  /** Who the codes come from. Whatever sends them must be allowed to send as this address. */
+  MAIL_FROM: z.string().min(1).default('Kuhedu Lingo <hello@lingo.kuhedu.com>'),
 
-  /** Google sign-in is offered only when this is set (the app has the same id, which is public). */
+  /**
+   * Google sign-in is offered only when both of these are set (and the app is built with
+   * `VITE_GOOGLE_CLIENT_ID`). The id is public. The Google client must list
+   * `<the app's address>/api/auth/google/callback` among its authorized redirect URIs.
+   */
   GOOGLE_CLIENT_ID: z.string().min(1).optional(),
+  /** What the server trades Google's code with. A secret. */
+  GOOGLE_CLIENT_SECRET: z.string().min(1).optional(),
 
   /** Where the speaking service (`speech/tts`, `npm run dev:speech`) listens, on this machine. */
   SPEECH_URL: z.url().default('http://127.0.0.1:8788'),
@@ -50,7 +66,9 @@ const envSchema = z.object({
 })
 
 /** What a server that real people use cannot do without; development has stand-ins for them. */
-const REQUIRED_IN_PRODUCTION = ['SESSION_SECRET', 'SMTP_URL', 'MAIL_FROM'] as const
+const REQUIRED_IN_PRODUCTION = ['SESSION_SECRET'] as const
+/** And a way to send the codes: either of these. */
+const WAYS_TO_SEND = ['RESEND_API_KEY', 'SMTP_URL'] as const
 
 /** Only for a developer's own machine: it is in the repo, so it keeps nothing secret. */
 const DEVELOPMENT_SECRET = 'kuhedu-development-only-not-a-secret'
@@ -69,8 +87,18 @@ export function readEnv(source: NodeJS.ProcessEnv = process.env): Env {
   }
 
   const env = result.data
+  // One without the other is a set-up left half done, which would otherwise show only as a
+  // button that says Google is not available.
+  if ((env.GOOGLE_CLIENT_ID === undefined) !== (env.GOOGLE_CLIENT_SECRET === undefined)) {
+    throw new Error(
+      'Server settings: GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET go together. See server/.env.example.',
+    )
+  }
   if (env.NODE_ENV === 'production') {
-    const missing = REQUIRED_IN_PRODUCTION.filter((name) => env[name] === undefined)
+    const missing: string[] = REQUIRED_IN_PRODUCTION.filter((name) => env[name] === undefined)
+    if (WAYS_TO_SEND.every((name) => env[name] === undefined)) {
+      missing.push(WAYS_TO_SEND.join(' or '))
+    }
     if (missing.length > 0) {
       throw new Error(
         `Server settings needed in production: ${missing.join(', ')}. See server/.env.example.`,

@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router'
 import { adminRoutes } from '@/features/admin'
-import { authRoutes, authStepRoutes, requireAdmin } from '@/features/auth'
+import { authRoutes, authStepRoutes, requireAccount, requireAdmin } from '@/features/auth'
 import { conversationRoutes } from '@/features/conversation'
 import { homeRoutes, weekRoutes } from '@/features/home'
 import { landingRoutes } from '@/features/landing'
@@ -14,6 +14,7 @@ import { RootLayout } from './layouts/RootLayout'
 import { ScreenLayout } from './layouts/ScreenLayout'
 import { TabsLayout } from './layouts/TabsLayout'
 import { RouteError } from './routes/RouteError'
+import { openWhereTheyLeftOff } from './routes/whereTheyLeftOff'
 
 export const router = createBrowserRouter([
   {
@@ -27,23 +28,32 @@ export const router = createBrowserRouter([
       {
         Component: PhoneLayout,
         children: [
-          // Full-bleed screens
-          ...landingRoutes,
+          // What a visitor without an account can open: the landing page (for a first visit;
+          // anyone signed in goes on from where they were) and the ways of getting an account.
+          { loader: openWhereTheyLeftOff, children: landingRoutes },
           ...authStepRoutes,
-          ...onboardingRoutes,
-          ...placementRoutes,
-          ...weekRoutes,
-          ...lessonDayRoutes,
-          ...profileSettingsRoutes,
-          // Padded screens outside the main tabs
+          { Component: ScreenLayout, children: authRoutes },
+          // Everything else is a learner's, and there are no guests: only with an account.
           {
-            Component: ScreenLayout,
-            children: [...authRoutes, ...conversationRoutes],
-          },
-          // The main tabs, with the bottom navigation
-          {
-            Component: TabsLayout,
-            children: [...homeRoutes, ...lessonsRoutes, ...progressRoutes, ...profileRoutes],
+            loader: requireAccount,
+            // Asked on the way in, not again at every step taken inside (a part of a review
+            // opened, a scenario picked): on a poor connection each would wait for the server.
+            shouldRevalidate: () => false,
+            children: [
+              // Full-bleed screens
+              ...onboardingRoutes,
+              ...placementRoutes,
+              ...weekRoutes,
+              ...lessonDayRoutes,
+              ...profileSettingsRoutes,
+              // Padded screens outside the main tabs
+              { Component: ScreenLayout, children: conversationRoutes },
+              // The main tabs, with the bottom navigation
+              {
+                Component: TabsLayout,
+                children: [...homeRoutes, ...lessonsRoutes, ...progressRoutes, ...profileRoutes],
+              },
+            ],
           },
         ],
       },

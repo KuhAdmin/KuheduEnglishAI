@@ -8,14 +8,8 @@ import { SpeakIntro } from '../components/SpeakIntro'
 import { SpeakQuestion } from '../components/SpeakQuestion'
 import { StageIntro } from '../components/StageIntro'
 import { findItem } from '../data/itemBank'
-import type { PlacementSession } from '../lib/sessionSchema'
+import { isUnderWay } from '../lib/isUnderWay'
 import { usePlacementStore } from '../store/usePlacementStore'
-
-/** A test the learner has actually begun — worth offering back rather than silently reopening. */
-const isUnderWay = (session: PlacementSession | null) =>
-  session !== null &&
-  session.status !== 'COMPLETED' &&
-  (session.stageStarted || session.responses.length > 0)
 
 /**
  * The placement test: shows whatever the session has reached — a stage's introduction, a

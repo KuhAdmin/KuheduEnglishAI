@@ -61,4 +61,23 @@ describe('ChoiceChips', () => {
     await userEvent.keyboard('{ArrowRight}')
     expect(handleChange).toHaveBeenCalledWith('b')
   })
+
+  it('is drawn in the on-photo colors on a picture’s scrim, and ticks nothing it was not given', () => {
+    const { rerender } = render(
+      <ChoiceChips tone="hero" legend="Pick" options={options} value="" onChange={vi.fn()} />,
+    )
+
+    for (const radio of screen.getAllByRole('radio')) expect(radio).not.toBeChecked()
+    expect(screen.getByText('Pick')).toHaveClass('text-on-hero')
+    const chip = screen.getByText('Takeaway café').closest('label')
+    expect(chip).toHaveClass('text-on-hero')
+    expect(chip).not.toHaveClass('bg-surface-sunken')
+
+    // Chosen is still more than a color: the dot is filled.
+    rerender(
+      <ChoiceChips tone="hero" legend="Pick" options={options} value="a" onChange={vi.fn()} />,
+    )
+    expect(screen.getByRole('radio', { name: 'Takeaway café' })).toBeChecked()
+    expect(chip?.querySelector('.bg-on-hero')).not.toHaveClass('invisible')
+  })
 })

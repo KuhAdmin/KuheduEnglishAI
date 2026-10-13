@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { z } from 'zod'
 import { isSafeMediaUrl } from '../appConfig/fields'
 import { useAppConfig } from '../appConfig/useAppConfig'
+import { VOICE_KINDS, type VoiceKind } from '../audio/voices'
 import { primarySubtag } from '../i18n'
 import { isRecord, tidy, tidyByLanguage } from './contentText'
 import { isWeekNumber } from './curriculum'
@@ -26,7 +27,16 @@ export type WeekDialogue = {
   videoUrl: string | null
   /** In the order they are said. Never empty. */
   lines: DialogueLine[]
+  /** Who of the speakers is a woman and who a man (see `SpeakerVoices`). Left out: nobody is. */
+  voices?: SpeakerVoices
 }
+
+/**
+ * Whether a speaker is a woman or a man, by the name beside their lines, so that "Asha" is read
+ * in a woman's voice and "Ravi" in a man's whoever speaks first: the default voice of that kind.
+ * A speaker who is not named here takes the tutors' voices by turn, as the speech module has it.
+ */
+export type SpeakerVoices = Record<string, VoiceKind>
 
 /** Conversations by week number. */
 export type WeekDialogues = Partial<Record<number, WeekDialogue>>
@@ -49,10 +59,44 @@ function parseLine(value: unknown): DialogueLine | null {
   return { speaker, text, translations }
 }
 
+const isVoiceKind = (value: unknown): value is VoiceKind =>
+  (VOICE_KINDS as readonly unknown[]).includes(value)
+
+/** The names the lines are said under, each once, in the order they first speak. */
+export function dialogueSpeakers(lines: readonly DialogueLine[]): string[] {
+  const names = lines.map((line) => tidy(line.speaker, MAX_SPEAKER_LENGTH))
+  return [...new Set(names)].filter((name) => name !== '')
+}
+
+/**
+ * The voices of the people who speak in these lines, in the order they first speak. A voice
+ * given to a name nobody speaks under is dropped, so it belongs to a name and goes with it.
+ * `undefined` when none is left: a conversation without any reads back as it was written.
+ */
+export function speakerVoices(
+  lines: readonly DialogueLine[],
+  voices: unknown,
+): SpeakerVoices | undefined {
+  if (!isRecord(voices)) return undefined
+
+  const kept: SpeakerVoices = {}
+  for (const speaker of dialogueSpeakers(lines)) {
+    const kind = Object.hasOwn(voices, speaker) ? voices[speaker] : undefined
+    if (isVoiceKind(kind)) kept[speaker] = kind
+  }
+  return Object.keys(kept).length > 0 ? kept : undefined
+}
+
+/** Whether this speaker is a woman or a man, if the conversation says. */
+export function speakerVoice(dialogue: WeekDialogue, speaker: string): VoiceKind | undefined {
+  const voices = dialogue.voices
+  return voices && Object.hasOwn(voices, speaker) ? voices[speaker] : undefined
+}
+
 /**
  * Conversations an admin wrote or changed, by week; edited in Admin › Lessons. Keeps the lines
- * that have a speaker and a text, and the weeks that have at least one such line; drops
- * everything else instead of failing.
+ * that have a speaker and a text, the weeks that have at least one such line, and the voices of
+ * those who speak in them; drops everything else instead of failing.
  */
 export const weekDialoguesSchema = z.unknown().transform((value): WeekDialogues => {
   if (!isRecord(value)) return {}
@@ -67,7 +111,12 @@ export const weekDialoguesSchema = z.unknown().transform((value): WeekDialogues 
     if (lines.length === 0) continue
 
     const videoUrl = typeof entry.videoUrl === 'string' ? entry.videoUrl.trim() : ''
-    dialogues[Number(week)] = { videoUrl: isSafeMediaUrl(videoUrl) ? videoUrl : null, lines }
+    const voices = speakerVoices(lines, entry.voices)
+    dialogues[Number(week)] = {
+      videoUrl: isSafeMediaUrl(videoUrl) ? videoUrl : null,
+      lines,
+      ...(voices && { voices }),
+    }
   }
   return dialogues
 })

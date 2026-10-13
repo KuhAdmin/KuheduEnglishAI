@@ -1,6 +1,13 @@
-import { expect, test, type Page } from '@playwright/test'
+import type { Page } from '@playwright/test'
 import { itemBank } from '../src/features/placement/data/itemBank'
-import { denyMicrophone, expectNoHorizontalScroll, seedLanguage, stubSpeech } from './helpers'
+import {
+  denyMicrophone,
+  expect,
+  expectNoHorizontalScroll,
+  seedLanguage,
+  stubSpeech,
+  test,
+} from './helpers'
 
 const LEVELS = ['FOUNDATION', 'A1', 'A2', 'B1', 'B2+']
 

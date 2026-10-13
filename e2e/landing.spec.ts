@@ -1,5 +1,15 @@
-import { expect, test } from '@playwright/test'
-import { expectNoHorizontalScroll, PIXEL_PNG, seedSettings } from './helpers'
+import {
+  expect,
+  expectNoHorizontalScroll,
+  LEARNER,
+  PIXEL_PNG,
+  seedSettings,
+  signedInAs,
+  test,
+} from './helpers'
+
+// The landing page is for someone who is not signed in.
+test.beforeEach(({ page }) => signedInAs(page, null))
 
 const HEADLINE = {
   bn: 'আসুন, বাস্তব পরিস্থিতিতে ইংরেজি শিখি',
@@ -11,7 +21,7 @@ test('shows the default landing page with the primary action in reach', async ({
   await page.goto('/')
 
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(HEADLINE.bn)
-  await expect(page.getByText('Kuhedu English')).toBeVisible()
+  await expect(page.getByText('Kuhedu Lingo')).toBeVisible()
 
   const cta = page.getByRole('link', { name: 'Get Started' })
   await expect(cta).toBeInViewport({ ratio: 1 })
@@ -20,7 +30,8 @@ test('shows the default landing page with the primary action in reach', async ({
 
   const signIn = page.getByRole('link', { name: 'Sign in' })
   await expect(signIn).toBeInViewport({ ratio: 1 })
-  expect((await signIn.boundingBox())?.height).toBeGreaterThanOrEqual(44)
+  // Rounded: at a phone's fractional pixel ratio a 44px box can measure 43.9999.
+  expect(Math.round((await signIn.boundingBox())?.height ?? 0)).toBeGreaterThanOrEqual(44)
 
   await cta.click()
   await expect(page).toHaveURL(/\/sign-up$/)
@@ -59,20 +70,64 @@ test('the headline slides to the next language every 5 seconds without moving th
   expect((await cta.boundingBox())?.y).toBe(ctaTop)
 })
 
-test('tapping a language shows its headline and stops the rotation', async ({ page }) => {
+test('choosing the language to learn in shows its headline and stops the rotation', async ({
+  page,
+}) => {
   await page.goto('/')
   const headline = page.getByRole('heading', { level: 1 })
+  const cta = page.getByRole('link', { name: 'Get Started' })
   await expect(headline).toHaveText(HEADLINE.bn)
 
-  const english = page.getByRole('button', { name: 'English' })
-  // Rounded: sub-pixel positions during the entrance animation give 43.9999…
-  expect(Math.round((await english.boundingBox())?.height ?? 0)).toBeGreaterThanOrEqual(44)
-  await english.click()
+  // Each language by its own name; nothing is chosen for a first visit.
+  const languages = page.getByRole('group', { name: 'Choose the language you learn in' })
+  await expect(languages.getByRole('radio')).toHaveCount(3)
+  await expect(languages.getByRole('radio', { checked: true })).toHaveCount(0)
+  for (const name of ['বাংলা', 'हिन्दी', 'English']) {
+    const box = await languages.getByText(name).locator('xpath=ancestor::label').boundingBox()
+    // Rounded: sub-pixel positions during the entrance animation give 43.9999…
+    expect(Math.round(box?.height ?? 0)).toBeGreaterThanOrEqual(44)
+  }
+  // With the picker above it, the main action is still in reach.
+  await expect(cta).toBeInViewport({ ratio: 1 })
+  await expectNoHorizontalScroll(page)
+
+  await languages.getByText('English').click()
   await expect(headline).toHaveText(HEADLINE.en)
-  await expect(english).toHaveAttribute('aria-pressed', 'true')
+  await expect(languages.getByRole('radio', { name: 'English' })).toBeChecked()
 
   await page.waitForTimeout(6000)
   await expect(headline).toHaveText(HEADLINE.en)
+})
+
+test('the language chosen on the landing page is the one the account screen and onboarding are in', async ({
+  page,
+}) => {
+  await page.goto('/')
+  await page.getByText('हिन्दी', { exact: true }).click()
+
+  // The page says at once what was chosen, in that language.
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(HEADLINE.hi)
+  await expect(page.locator('html')).toHaveAttribute('lang', 'hi')
+  await expect(page.getByRole('group', { name: 'जिस भाषा में सीखना है, वह चुनें' })).toBeVisible()
+  await expectNoHorizontalScroll(page)
+
+  await page.getByRole('link', { name: 'Get Started' }).click()
+  await expect(page).toHaveURL(/\/sign-up$/)
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('यहाँ आपका स्वागत है')
+  await expect(page.getByRole('combobox', { name: 'भाषा' })).toHaveValue('hi')
+
+  // With an account, the app opens in onboarding, in that language.
+  await signedInAs(page, LEARNER)
+  await page.goto('/')
+  await expect(page).toHaveURL(/\/onboarding\/language$/)
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('अपनी भाषा चुनें')
+  await expect(page.getByRole('radio', { name: 'हिन्दी (Hindi)' })).toBeChecked()
+  await signedInAs(page, null)
+
+  // And it is still the choice when the visitor comes back.
+  await page.goto('/')
+  await expect(page.getByRole('radio', { name: 'हिन्दी' })).toBeChecked()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText(HEADLINE.hi)
 })
 
 test('"Sign in" opens the sign-in screen', async ({ page }) => {

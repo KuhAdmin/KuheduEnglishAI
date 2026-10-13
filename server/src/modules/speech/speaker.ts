@@ -1,14 +1,22 @@
-import { speechVoiceSchema, type SpeechVoice } from '@kuhedu/contracts'
+import {
+  SPEECH_MOUTH_HEADER,
+  speechMouthTextSchema,
+  speechVoiceSchema,
+  type SpeechVoice,
+} from '@kuhedu/contracts'
 import { z } from 'zod'
 
 /** The voices on offer, and the model that speaks them: a sound made by another is not reused. */
 export type SpeechCatalogue = { model: string; voices: SpeechVoice[] }
 
+/** A text said aloud: the sound as MP3, and the mouth for it as it is sent, where it is known. */
+export type Spoken = { sound: Buffer; mouth: string | null }
+
 /** Whatever turns a text into sound. The real one is the Python service beside this server. */
 export type Speaker = {
   catalogue: () => Promise<SpeechCatalogue>
-  /** The text said in the voice, as MP3. */
-  speak: (text: string, voiceId: string) => Promise<Buffer>
+  /** The text said in the voice. */
+  speak: (text: string, voiceId: string) => Promise<Spoken>
 }
 
 const catalogueSchema = z.object({
@@ -44,7 +52,12 @@ export function createSpeaker(url: string): Speaker {
         signal: AbortSignal.timeout(SPEAK_TIMEOUT_MS),
       })
       if (!response.ok) throw new Error(`The speaking service answered ${response.status}`)
-      return Buffer.from(await response.arrayBuffer())
+      // A mouth that does not read as one is left out: the sound is still the sound.
+      const mouth = speechMouthTextSchema.safeParse(response.headers.get(SPEECH_MOUTH_HEADER))
+      return {
+        sound: Buffer.from(await response.arrayBuffer()),
+        mouth: mouth.success ? mouth.data : null,
+      }
     },
   }
 }

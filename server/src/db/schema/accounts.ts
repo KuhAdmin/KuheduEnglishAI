@@ -7,7 +7,7 @@ export const USER_STATUSES = ['active', 'disabled'] as const
 export const OAUTH_PROVIDERS = ['google'] as const
 export const EMAIL_CODE_PURPOSES = ['verify_email', 'reset_password'] as const
 
-/** Someone with an account. A guest has none: their data stays on their phone until they sign up. */
+/** Someone with an account. The app has no guests: nothing of it opens without one. */
 export const users = pgTable(
   'users',
   {
@@ -18,6 +18,11 @@ export const users = pgTable(
     passwordHash: text('password_hash'),
     role: text('role', { enum: USER_ROLES }).notNull().default('learner'),
     displayName: text('display_name'),
+    /**
+     * Where a picture of them is, as the sign-in provider gave it (Google): an `https` address
+     * on the provider's own servers, shown in the app's Profile. Empty for anyone else.
+     */
+    pictureUrl: text('picture_url'),
     status: text('status', { enum: USER_STATUSES }).notNull().default('active'),
     createdAt: createdAt(),
     updatedAt: updatedAt(),

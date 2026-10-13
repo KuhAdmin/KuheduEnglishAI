@@ -5,10 +5,12 @@ from __future__ import annotations
 import io
 import os
 import threading
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Protocol
 
 from . import bengali
+from .mouth import mouth_of
 from .voices import Voice, base_language
 
 # A language Kokoro cannot read, and what reads it instead: a text to the sounds the model is
@@ -27,10 +29,19 @@ REPO_ID = "hexgrad/Kokoro-82M"
 os.environ.setdefault("HF_HOME", str(Path(__file__).resolve().parents[1] / ".models"))
 
 
-class Synth(Protocol):
-    """Anything that can say a text in a voice, as MP3."""
+@dataclass(frozen=True)
+class Spoken:
+    """A text said aloud."""
 
-    def synthesize(self, text: str, voice: Voice) -> bytes: ...
+    mp3: bytes
+    # The shape of the lips through it (see `mouth.py`); `None` where that is not known.
+    mouth: str | None = None
+
+
+class Synth(Protocol):
+    """Anything that can say a text in a voice."""
+
+    def synthesize(self, text: str, voice: Voice) -> Spoken: ...
 
 
 def to_mp3(samples) -> bytes:
@@ -88,9 +99,11 @@ class KokoroSynth:
         """
         self.synthesize("Hello.", voice)
 
-    def synthesize(self, text: str, voice: Voice) -> bytes:
+    def synthesize(self, text: str, voice: Voice) -> Spoken:
         import numpy as np
 
+        pieces = []
+        timed = []
         with self._lock:
             pipeline = self._pipeline(voice.lang_code)
             reader = READERS.get(base_language(voice.language))
@@ -105,10 +118,17 @@ class KokoroSynth:
                         tokens=sounds, voice=speaker, speed=1.0
                     )
                 )
+            known = self._model.vocab
             # A long text comes back in pieces; they are one sound to the caller.
-            pieces = [
-                result.audio.detach().cpu().numpy() for result in results if result.audio is not None
-            ]
+            for result in results:
+                if result.audio is None:
+                    continue
+                speech = result.audio.detach().cpu().numpy()
+                pieces.append(speech)
+                # The model passes over a sound it does not know, so it has no length either.
+                sounds = "".join(sound for sound in result.phonemes if sound in known)
+                frames = None if result.pred_dur is None else result.pred_dur.reshape(-1).tolist()
+                timed.append((sounds, frames, len(speech) / SAMPLE_RATE))
         if not pieces:
             raise ValueError("Nothing to say in this text")
-        return to_mp3(np.concatenate(pieces))
+        return Spoken(mp3=to_mp3(np.concatenate(pieces)), mouth=mouth_of(timed))

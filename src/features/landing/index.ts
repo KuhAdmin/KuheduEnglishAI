@@ -2,7 +2,7 @@ import type { RouteObject } from 'react-router'
 
 export const landingRoutes: RouteObject[] = [
   {
-    // TODO(auth): redirect signed-in users to paths.home.
+    // For a first visit only: the app sends everyone else on (`openWhereTheyLeftOff`, in app/).
     index: true,
     lazy: async () => ({ Component: (await import('./pages/LandingPage')).LandingPage }),
   },

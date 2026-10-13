@@ -3,7 +3,9 @@ import { verifyEmailRequestSchema } from '@kuhedu/contracts'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router'
+import { signOut } from '@/shared/lib/account'
 import { ApiError } from '@/shared/lib/api/client'
+import { paths } from '@/shared/lib/paths'
 import { resendVerificationCode, verifyEmail } from '../api/authApi'
 import { readFailure } from '../lib/readFailure'
 import type { AuthFeedback } from '../types'
@@ -53,5 +55,18 @@ export function useVerifyEmail(next: string) {
     }
   }
 
-  return { register, errors, feedback, resent, submit, sendAgain }
+  /** Give up on this address: sign the browser out of it, and back to signing up. */
+  const startOver = async () => {
+    setFeedback(null)
+    setResent(null)
+    try {
+      await signOut()
+      navigate(paths.signUp, { replace: true })
+    } catch {
+      // Still signed in, so still here.
+      setFeedback('failed')
+    }
+  }
+
+  return { register, errors, feedback, resent, submit, sendAgain, startOver }
 }

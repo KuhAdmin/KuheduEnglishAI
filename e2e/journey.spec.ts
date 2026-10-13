@@ -1,11 +1,13 @@
-import { expect, test, type Page } from '@playwright/test'
+import type { Page } from '@playwright/test'
 import {
+  expect,
   expectNoHorizontalScroll,
   scrollToEnd,
   seedLanguage,
   serverVoicesWithout,
   spoken,
   stubSpeech,
+  test,
   untouchedUntilTapped,
 } from './helpers'
 

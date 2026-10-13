@@ -23,8 +23,32 @@ export type ChoiceChipsProps<Value extends string> = {
    * shared equally, label over description, for a few choices of the same kind.
    */
   layout?: 'wrap' | 'equal'
+  /**
+   * What the chips are drawn on. `surface`: a screen's own background. `hero`: the scrim over a
+   * photograph (the landing page), in the colors that are readable on it in every theme.
+   */
+  tone?: 'surface' | 'hero'
   className?: string
 }
+
+const tones = {
+  surface: {
+    legend: '',
+    selected: 'border-primary bg-surface shadow-sm',
+    unselected: 'border-transparent bg-surface-sunken',
+    ring: ['border-primary', 'border-border-strong'],
+    dot: 'bg-primary',
+    description: 'text-fg-muted',
+  },
+  hero: {
+    legend: 'text-on-hero',
+    selected: 'border-on-hero bg-on-hero/25 text-on-hero',
+    unselected: 'border-transparent bg-on-hero/10 text-on-hero',
+    ring: ['border-on-hero', 'border-on-hero-muted'],
+    dot: 'bg-on-hero',
+    description: 'text-on-hero-muted',
+  },
+} as const
 
 /**
  * A few short, mutually exclusive choices under their own heading (a radio group), where the
@@ -37,14 +61,16 @@ export function ChoiceChips<Value extends string>({
   value,
   onChange,
   layout = 'wrap',
+  tone = 'surface',
   className,
 }: ChoiceChipsProps<Value>) {
   const name = useId()
   const equal = layout === 'equal'
+  const colors = tones[tone]
 
   return (
     <fieldset className={cn('min-w-0', className)}>
-      <legend className="mb-2 font-extrabold">{legend}</legend>
+      <legend className={cn('mb-2 font-extrabold', colors.legend)}>{legend}</legend>
       <div className={cn('flex gap-2', equal ? 'items-stretch' : 'flex-wrap')}>
         {options.map((option) => {
           const selected = option.value === value
@@ -57,9 +83,7 @@ export function ChoiceChips<Value extends string>({
                 'transition-[transform,background-color,border-color] duration-(--duration-fast) ease-standard active:scale-97',
                 'has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-focus',
                 equal ? 'flex-1 flex-col items-center gap-1 text-center' : 'items-center gap-2',
-                selected
-                  ? 'border-primary bg-surface shadow-sm'
-                  : 'border-transparent bg-surface-sunken',
+                selected ? colors.selected : colors.unselected,
               )}
             >
               <input
@@ -75,10 +99,10 @@ export function ChoiceChips<Value extends string>({
                 aria-hidden="true"
                 className={cn(
                   'flex size-4 shrink-0 items-center justify-center rounded-full border-2',
-                  selected ? 'border-primary' : 'border-border-strong',
+                  colors.ring[selected ? 0 : 1],
                 )}
               >
-                <span className={cn('size-2 rounded-full bg-primary', !selected && 'invisible')} />
+                <span className={cn('size-2 rounded-full', colors.dot, !selected && 'invisible')} />
               </span>
               <span className={cn('flex min-w-0 flex-col', equal && 'items-center')}>
                 <span lang={option.lang} className="font-bold wrap-break-word">
@@ -87,7 +111,7 @@ export function ChoiceChips<Value extends string>({
                 {option.description && (
                   <>
                     {/* Keeps the two lines apart in the accessible name. */}{' '}
-                    <span className="text-sm wrap-break-word text-fg-muted">
+                    <span className={cn('text-sm wrap-break-word', colors.description)}>
                       {option.description}
                     </span>
                   </>

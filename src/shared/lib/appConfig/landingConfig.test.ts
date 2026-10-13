@@ -4,7 +4,7 @@ import { defaultLandingConfig, landingConfigSchema } from './landingConfig'
 describe('landingConfigSchema', () => {
   it('fills every field with a default for an empty payload', () => {
     expect(landingConfigSchema.parse({})).toEqual(defaultLandingConfig)
-    expect(defaultLandingConfig.brand.logoUrl).toBe('/logo.svg')
+    expect(defaultLandingConfig.brand.logoUrl).toBe('/pwa-192x192.png')
     expect(defaultLandingConfig.hero.imageUrl).toBeNull()
     expect(defaultLandingConfig.cta.primaryLabel).toBe('Get Started')
   })
@@ -75,7 +75,7 @@ describe('landingConfigSchema', () => {
     'http://x.io/a.png',
   ])('replaces the unsafe URL %s with the default', (url) => {
     const config = landingConfigSchema.parse({ brand: { logoUrl: url }, hero: { imageUrl: url } })
-    expect(config.brand.logoUrl).toBe('/logo.svg')
+    expect(config.brand.logoUrl).toBe('/pwa-192x192.png')
     expect(config.hero.imageUrl).toBeNull()
   })
 

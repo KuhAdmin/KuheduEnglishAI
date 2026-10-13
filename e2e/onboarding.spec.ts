@@ -1,15 +1,28 @@
-import { expect, test } from '@playwright/test'
-import { expectNoHorizontalScroll, PIXEL_PNG, seedSettings } from './helpers'
+import {
+  expect,
+  expectNoHorizontalScroll,
+  LEARNER,
+  PIXEL_PNG,
+  seedSettings,
+  signedInAs,
+  test,
+} from './helpers'
 
 // Bengali is pre-selected by default, so the language step opens in Bengali.
 const BN = { title: 'আপনার ভাষা বেছে নিন', next: 'এগিয়ে যান' }
 const HI = { title: 'अपनी भाषा चुनें', next: 'आगे बढ़ें' }
 
-test('"Get Started" leads through the account screen to the language step', async ({ page }) => {
+test('"Get Started" leads to the account screen, and an account to the language step', async ({
+  page,
+}) => {
+  await signedInAs(page, null)
   await page.goto('/')
   await page.getByRole('link', { name: 'Get Started' }).click()
-  await page.getByRole('link', { name: 'Continue as Guest' }).click()
+  await expect(page).toHaveURL(/\/sign-up$/)
 
+  // The account made (its own tests say how), the app opens on the first step.
+  await signedInAs(page, LEARNER)
+  await page.goto('/')
   await expect(page).toHaveURL(/\/onboarding\/language$/)
   await expect(page.getByRole('heading', { name: BN.title })).toBeVisible()
 })

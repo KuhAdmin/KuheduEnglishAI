@@ -12,7 +12,7 @@ export type AuthAlternativesProps = {
   onSwitchMode: () => void
 }
 
-/** The ways in other than email and password: Google, guest, or the other half of the screen. */
+/** The ways in other than email and password: Google, or the other half of the screen. */
 export function AuthAlternatives({ mode, onGoogle, onSwitchMode }: AuthAlternativesProps) {
   const t = useT()
   const signingUp = mode === 'signUp'
@@ -25,15 +25,10 @@ export function AuthAlternatives({ mode, onGoogle, onSwitchMode }: AuthAlternati
         <span aria-hidden="true" className="h-px flex-1 bg-border" />
       </p>
 
-      <div className="flex flex-col gap-3">
-        <Button variant="outline" size="lg" fullWidth onClick={onGoogle}>
-          <GoogleLogo className="size-5" />
-          {t('auth.google')}
-        </Button>
-        <Button asChild variant="secondary" size="lg" fullWidth>
-          <Link to={paths.onboarding}>{t('auth.guest')}</Link>
-        </Button>
-      </div>
+      <Button variant="outline" size="lg" fullWidth onClick={onGoogle}>
+        <GoogleLogo className="size-5" />
+        {t('auth.google')}
+      </Button>
 
       <p className="flex flex-wrap items-center justify-center gap-x-1 text-fg-muted">
         {t(signingUp ? 'auth.haveAccount' : 'auth.noAccount')}

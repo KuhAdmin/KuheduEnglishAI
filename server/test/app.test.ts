@@ -132,4 +132,16 @@ describe('readEnv', () => {
     expect(attempt).toThrow(/PORT/)
     expect(attempt).not.toThrow(/eighty|someone/)
   })
+
+  it('takes Google’s id and secret together or not at all, and repeats neither', () => {
+    const google = { GOOGLE_CLIENT_ID: 'an-id', GOOGLE_CLIENT_SECRET: 'a-secret' }
+    expect(readEnv({ ...database, ...google })).toMatchObject(google)
+    expect(readEnv(database).GOOGLE_CLIENT_ID).toBeUndefined()
+
+    for (const half of [{ GOOGLE_CLIENT_ID: 'an-id' }, { GOOGLE_CLIENT_SECRET: 'a-secret' }]) {
+      const attempt = vi.fn(() => readEnv({ ...database, ...half }))
+      expect(attempt).toThrow(/GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET go together/)
+      expect(attempt).not.toThrow(/an-id|a-secret/)
+    }
+  })
 })

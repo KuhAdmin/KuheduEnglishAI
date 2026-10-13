@@ -31,7 +31,7 @@ const SCENARIO_REFS = Array.from({ length: MAX_SCENARIOS }, (_, index) => String
 
 /**
  * What the learner told the app about themselves. Each answer is empty until it is given, and
- * the app then shows its default (English, the first tutor), exactly as it does for a guest.
+ * the app then shows its default (English, the first tutor).
  * Voices, the theme and the tutor's mute are the device's and are not kept here.
  */
 export const learnerProfiles = pgTable(
@@ -58,8 +58,8 @@ export const learnerProfiles = pgTable(
 
 /**
  * Lesson progress, one row per thing done. Rows are only ever added: adding one twice changes
- * nothing, so a phone can send again what it queued while offline, and a guest's progress can
- * be merged into an account without anything to reconcile.
+ * nothing, so a phone can send again what it queued while offline, and what it did before the
+ * server kept progress can be added to the account without anything to reconcile.
  */
 export const lessonMarks = pgTable(
   'lesson_marks',

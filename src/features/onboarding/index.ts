@@ -5,6 +5,12 @@ import { useOnboardingStore } from './store/useOnboardingStore'
 /** The age group the learner said they are in, or `null` if they have not been asked. */
 export const useAgeGroup = () => useOnboardingStore((state) => state.ageGroup)
 
+/**
+ * Whether this browser holds the answer to onboarding's question about the learner: they got
+ * past that step. Read outside a screen, by the loader that decides where someone opens the app.
+ */
+export const hasAnsweredAboutThemselves = () => useOnboardingStore.getState().ageGroup !== null
+
 // Steps in order: language → profile → placement-test intro.
 export const onboardingRoutes: RouteObject[] = [
   {

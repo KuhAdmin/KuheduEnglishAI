@@ -1,4 +1,12 @@
-import { expect, type BrowserContext, type Locator, type Page } from '@playwright/test'
+import {
+  expect,
+  test as base,
+  type BrowserContext,
+  type Locator,
+  type Page,
+} from '@playwright/test'
+
+export { expect }
 
 /** A 1×1 PNG, for uploads and for mocked image URLs. */
 export const PIXEL_PNG = Buffer.from(
@@ -6,7 +14,18 @@ export const PIXEL_PNG = Buffer.from(
   'base64',
 )
 
-export const ADMIN = { username: 'admin', password: 'Kuhedu@123' }
+/** A learner with an account, as the server describes whoever is signed in. */
+export const LEARNER = {
+  id: 'u-learner',
+  email: 'learner@example.com',
+  emailVerified: true,
+  role: 'learner',
+  displayName: null,
+}
+
+/** What the stand-in server takes as the admin's, and who it then says is signed in. */
+export const ADMIN = { email: 'admin@example.com', password: 'the-admin-password' }
+const ADMIN_USER = { ...LEARNER, id: 'u-admin', email: ADMIN.email, role: 'admin' }
 
 /**
  * Put a value in localStorage before the app starts — once per browser context, so later
@@ -28,17 +47,79 @@ async function seedStorage(target: Page | BrowserContext, key: string, value: un
 export const seedLanguage = (target: Page | BrowserContext, language: string) =>
   seedStorage(target, 'kuhedu-language', { state: { language }, version: 0 })
 
+/** Start as someone who already answered onboarding's question about themselves. */
+export const seedAboutThem = (target: Page | BrowserContext, ageGroup = 'adult') =>
+  seedStorage(target, 'kuhedu-onboarding', { state: { ageGroup }, version: 0 })
+
+/** Start as someone who has already finished these days of a week's lessons. */
+export const seedDaysDone = (target: Page | BrowserContext, week: number, days: number[]) =>
+  seedStorage(target, 'kuhedu-lessons', {
+    state: { heardWeeks: [], doneDays: { [week]: days }, reviewParts: {}, scenariosDone: {} },
+    version: 0,
+  })
+
+/**
+ * Who the server says is signed in, for a test without one: `null` for nobody, a visitor. What
+ * is said last counts, and a page's own answer goes before its browser's.
+ */
+export const signedInAs = (target: Page | BrowserContext, user: Record<string, unknown> | null) =>
+  target.route('**/api/auth/session', (route) => route.fulfill({ json: { user } }))
+
+/**
+ * The `test` every spec uses. The app has no guests: a learner's screens open only for someone
+ * signed in, so a test starts as a learner with an account, in every tab of its browser. A test
+ * about a visitor says so with `signedInAs(page, null)`, one about an admin with `signInAsAdmin`.
+ */
+export const test = base.extend({
+  context: async ({ context }, run) => {
+    await signedInAs(context, LEARNER)
+    await run(context)
+  },
+})
+
 /** Start with settings an admin saved earlier. */
 export const seedSettings = (target: Page | BrowserContext, name: string, value: unknown) =>
   seedStorage(target, `kuhedu-settings:${name}`, value)
 
-/** Sign in through the real screen, starting from the landing page's "Sign in" link. */
+/**
+ * The server's account routes, as far as an admin signing in and out needs them: nobody is
+ * signed in until the admin's own address and password are given, and nobody after signing out.
+ * What the real server does is its own tests' to say.
+ */
+export async function adminServer(target: Page | BrowserContext) {
+  let user: typeof ADMIN_USER | null = null
+  await target.route('**/api/auth/**', (route) => {
+    const path = new URL(route.request().url()).pathname.replace('/api/auth', '')
+    if (path === '/session') return route.fulfill({ json: { user } })
+    if (path === '/sign-in') {
+      const given = route.request().postDataJSON() as { email?: string; password?: string }
+      if (given.email !== ADMIN.email || given.password !== ADMIN.password) {
+        return route.fulfill({
+          status: 401,
+          json: { error: { code: 'unauthenticated', message: 'Incorrect email or password' } },
+        })
+      }
+      user = ADMIN_USER
+      return route.fulfill({ json: { user } })
+    }
+    if (path === '/sign-out') {
+      user = null
+      return route.fulfill({ status: 204 })
+    }
+    return route.fulfill({ status: 404, json: { error: { code: 'not_found', message: path } } })
+  })
+}
+
+/**
+ * Sign in as the admin through the real screen, for every tab of the page's browser: an admin's
+ * learner tabs are signed in as them too.
+ */
 export async function signInAsAdmin(page: Page) {
-  await page.goto('/')
-  await page.getByRole('link', { name: 'Sign in' }).click()
-  await page.getByLabel('Email address').fill(ADMIN.username)
+  await adminServer(page.context())
+  await page.goto('/sign-in')
+  await page.getByLabel('Email address').fill(ADMIN.email)
   await page.getByLabel('Password', { exact: true }).fill(ADMIN.password)
-  await page.getByRole('button', { name: 'Sign in' }).click()
+  await page.getByRole('button', { name: 'Sign In', exact: true }).click()
   await expect(page).toHaveURL(/\/admin\/texts$/)
 }
 

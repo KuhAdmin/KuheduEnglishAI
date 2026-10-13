@@ -57,9 +57,6 @@ export const resetPasswordRequestSchema = z.object({
   password: newPassword,
 })
 
-/** `credential` is the ID token Google hands the browser. */
-export const googleSignInRequestSchema = z.object({ credential: z.string().min(1).max(4096) })
-
 /** Who is signed in, as far as a screen needs to know. */
 export const sessionUserSchema = z.object({
   id: z.string(),
@@ -67,11 +64,17 @@ export const sessionUserSchema = z.object({
   emailVerified: z.boolean(),
   role: z.enum(USER_ROLES),
   displayName: z.string().nullable(),
+  /**
+   * Where a picture of them is, when they signed in with Google and it gave one: an `https`
+   * address on Google's servers. `null` for everyone else, and when a server from before this
+   * was added leaves it out.
+   */
+  pictureUrl: z.string().max(2048).nullable().default(null),
 })
 
 export type SessionUser = z.infer<typeof sessionUserSchema>
 
-/** `GET /api/auth/session`, and what signing in or up answers: `null` for a guest. */
+/** `GET /api/auth/session`, and what signing in or up answers: `null` when nobody is signed in. */
 export const authSessionSchema = z.object({ user: sessionUserSchema.nullable() })
 
 export type AuthSession = z.infer<typeof authSessionSchema>

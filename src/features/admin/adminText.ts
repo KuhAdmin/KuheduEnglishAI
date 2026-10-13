@@ -67,7 +67,7 @@ export const adminText = {
     /** Extra guidance for a group, shown under its title. */
     groupNotes: {
       signIn:
-        '“{brand}” in the title is replaced by the brand name. The brand name, tagline and logo shown on this screen are edited under Landing page.',
+        'Write “{brand}” in the title to put the brand name there. The brand name, tagline and logo shown on this screen are edited under Landing page.',
     },
     groups: {
       signIn: 'Sign in and sign up',
@@ -140,6 +140,13 @@ export const adminText = {
     remove: 'Remove line',
     useBuiltIn: 'Use built-in',
     removeContent: 'Remove',
+    voices: 'Voices',
+    voicesIntro:
+      'Say who is a woman and who is a man, and each is read in the default female or male voice. A speaker left on “By turn” takes the two tutors’ voices in the order of speaking, so a woman may be read in a man’s voice. A video is not read at all.',
+    voiceOf: 'Voice of',
+    voiceByTurn: 'By turn',
+    voiceFemale: 'Female',
+    voiceMale: 'Male',
     video: 'Video',
     videoIntro:
       'Optional. Without a video, the phone’s own voice reads the conversation over the week’s picture (uploaded under Curriculum). Learners must hear or watch it through once before they can go on.',

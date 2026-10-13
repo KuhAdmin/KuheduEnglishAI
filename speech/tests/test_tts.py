@@ -2,6 +2,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from tts.server import MAX_TEXT_LENGTH, create_app
+from tts.synth import Spoken
 from tts.voices import VOICES, Voice, find_voice
 
 
@@ -11,11 +12,12 @@ class FakeSynth:
     def __init__(self) -> None:
         self.asked: list[tuple[str, str]] = []
 
-    def synthesize(self, text: str, voice: Voice) -> bytes:
+    def synthesize(self, text: str, voice: Voice) -> Spoken:
         if text == "…":
             raise ValueError("Nothing to say in this text")
         self.asked.append((text, voice.id))
-        return b"ID3 a sound"
+        # A sound whose mouth is not known is still a sound.
+        return Spoken(mp3=b"ID3 a sound", mouth=None if text == "Hm." else "0c75m150o")
 
 
 @pytest.fixture
@@ -101,6 +103,15 @@ def test_a_text_is_said_in_the_voice_asked_for_tidied_of_stray_spaces(client: Te
     assert answer.headers["content-type"] == "audio/mpeg"
     assert answer.content == b"ID3 a sound"
     assert synth.asked == [("Hello! Good morning.", "bf_emma")]
+    # With it, the shapes of the lips through it.
+    assert answer.headers["x-speech-mouth"] == "0c75m150o"
+
+
+def test_a_sound_whose_mouth_is_not_known_is_sent_without_one(client: TestClient):
+    answer = client.post("/speak", json={"text": "Hm.", "voice": "af_heart"})
+
+    assert answer.status_code == 200
+    assert "x-speech-mouth" not in answer.headers
 
 
 @pytest.mark.parametrize(

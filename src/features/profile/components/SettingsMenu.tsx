@@ -1,5 +1,6 @@
-import { Globe, Palette, Smile, Volume2 } from 'lucide-react'
+import { Globe, Palette, Smile, UserRound, Volume2 } from 'lucide-react'
 import { Link } from 'react-router'
+import { useSessionStore } from '@/shared/lib/account'
 import { useLanguagesConfig } from '@/shared/lib/appConfig/useLanguagesConfig'
 import { useVoices } from '@/shared/lib/audio/useVoices'
 import { useVoiceStore } from '@/shared/lib/audio/useVoiceStore'
@@ -14,6 +15,9 @@ import { ListItem } from '@/shared/ui/ListItem'
  * The settings a learner can change, each opening its own screen. A row's second line is its
  * current value, so the menu can be read without opening anything.
  * Only what is built has a row; notifications, downloads and help get theirs when they exist.
+ *
+ * The account row is the way to the account screen for someone who is using the app without
+ * having signed in: the landing page, which used to be the only way there, is shown once.
  */
 export function SettingsMenu() {
   const t = useT()
@@ -30,6 +34,7 @@ export function SettingsMenu() {
   const tutor = tutorAvatars.find(({ id }) => id === tutorAvatar)
   // The voice lessons are heard in: their tutor's.
   const voice = voiceForFace(deviceVoices, DEFAULT_LANGUAGE, voiceKind, chosenVoice)
+  const user = useSessionStore((state) => state.user)
 
   return (
     <nav aria-label={t('profile.settingsLabel')}>
@@ -74,6 +79,24 @@ export function SettingsMenu() {
             description={theme ? t(theme.nameKey) : t('theme.auto')}
           >
             <Link to={paths.profileAppearance} />
+          </ListItem>
+        </li>
+        <li>
+          {/*
+            Who they are signed in as, and on to the screen that says so and signs them out.
+            Their address is not known while the server cannot be asked (offline). Nothing is
+            promised about keeping progress, which an account does not do yet (TODO(learner)).
+          */}
+          <ListItem
+            asChild
+            icon={<UserRound className="size-6" />}
+            title={t('profile.account')}
+            description={
+              // Their own address, as they typed it, in whatever language the screen is in.
+              user && <span className="break-all">{user.email}</span>
+            }
+          >
+            <Link to={paths.signIn} />
           </ListItem>
         </li>
       </ul>

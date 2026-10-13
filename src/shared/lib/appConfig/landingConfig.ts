@@ -30,9 +30,11 @@ const defaultHeadlines: LandingHeadline[] = [
 ]
 
 export const landingDefaults = {
-  logoUrl: '/logo.svg',
-  brandName: 'Kuhedu English',
-  tagline: 'Speak English. Live it.',
+  // The logo at the size a screen needs, made from `public/logo.png` with the other icons
+  // (`npm run generate-pwa-assets`): 7 KB, where the picture itself is 210 KB.
+  logoUrl: '/pwa-192x192.png',
+  brandName: 'Kuhedu Lingo',
+  tagline: 'The Fluency App',
   headlines: defaultHeadlines,
   primaryLabel: 'Get Started',
   signInPrompt: 'Already have an account?',

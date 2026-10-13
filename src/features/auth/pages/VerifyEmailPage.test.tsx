@@ -6,7 +6,7 @@ import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vite
 import { useSessionStore } from '@/shared/lib/account'
 import { AppLanguageProvider, useLanguageStore } from '@/shared/lib/i18n'
 import { paths } from '@/shared/lib/paths'
-import { fakeServer, refusal } from '@/test/fakeServer'
+import { fakeServer, refusal, serverUnreachable } from '@/test/fakeServer'
 import { authStepRoutes } from '../index'
 import { NEW_ACCOUNT_STATE } from '../lib/newAccount'
 
@@ -16,6 +16,7 @@ const learner: SessionUser = {
   emailVerified: false,
   role: 'learner',
   displayName: null,
+  pictureUrl: null,
 }
 
 /** Opens the code step as the account screen does for a new account, unless told otherwise. */
@@ -25,7 +26,8 @@ function renderStep(state: unknown = NEW_ACCOUNT_STATE) {
       ...authStepRoutes,
       { path: paths.signUp, element: <h1>Account screen</h1> },
       { path: paths.onboarding, element: <h1>Onboarding</h1> },
-      { path: paths.home, element: <h1>Journey</h1> },
+      // The app's front door, which sends a learner on from where they left off.
+      { path: paths.landing, element: <h1>Front door</h1> },
     ],
     { initialEntries: [{ pathname: paths.verifyEmail, state }] },
   )
@@ -88,13 +90,13 @@ describe('VerifyEmailPage', () => {
     expect(useSessionStore.getState().user?.emailVerified).toBe(true)
   })
 
-  it('leads someone who came from their account back to their journey', async () => {
+  it('leads someone who came back to finish, by signing in, on from where they left off', async () => {
     fakeServer({ 'POST /auth/verify-email': {} })
     renderStep(null)
     await userEvent.type(await codeField(), '123456')
     await userEvent.click(screen.getByRole('button', { name: 'Verify' }))
 
-    expect(await screen.findByRole('heading', { name: 'Journey' })).toBeVisible()
+    expect(await screen.findByRole('heading', { name: 'Front door' })).toBeVisible()
   })
 
   it('says under the field when the code is wrong, and when there were too many tries', async () => {
@@ -125,24 +127,47 @@ describe('VerifyEmailPage', () => {
     expect(await screen.findByText(/A code was sent a moment ago/)).toBeVisible()
   })
 
-  it('can wait: "Do this later" goes on without a code', async () => {
-    const { calls } = fakeServer()
+  it('cannot be skipped: the only ways on are the code, or another address', async () => {
     renderStep()
-    await userEvent.click(await screen.findByRole('link', { name: 'Do this later' }))
+    await codeField()
 
-    expect(await screen.findByRole('heading', { name: 'Onboarding' })).toBeVisible()
-    expect(calls).toEqual([])
+    expect(screen.queryByRole('link')).not.toBeInTheDocument()
+    expect(screen.getAllByRole('button').map((button) => button.textContent)).toEqual([
+      'Send a new code',
+      'Verify',
+      'Use a different email',
+    ])
   })
 
-  it('is not for a guest', async () => {
+  it('lets go of an address that was mistyped: signed out, and back to signing up', async () => {
+    const { calls } = fakeServer({ 'POST /auth/sign-out': {} })
+    renderStep()
+    await userEvent.click(await screen.findByRole('button', { name: 'Use a different email' }))
+
+    expect(await screen.findByRole('heading', { name: 'Account screen' })).toBeVisible()
+    expect(calls).toEqual([{ method: 'POST', path: '/auth/sign-out', body: undefined }])
+    expect(useSessionStore.getState().user).toBeNull()
+  })
+
+  it('stays on the code step, and says so, when the server could not be told of the sign-out', async () => {
+    serverUnreachable()
+    renderStep()
+    await userEvent.click(await screen.findByRole('button', { name: 'Use a different email' }))
+
+    expect(await screen.findByRole('alert')).toHaveTextContent('That did not work.')
+    expect(await codeField()).toBeVisible()
+    expect(useSessionStore.getState().user?.email).toBe('asha@example.com')
+  })
+
+  it('is not for someone who is not signed in', async () => {
     useSessionStore.getState().setUser(null)
     renderStep()
     expect(await screen.findByRole('heading', { name: 'Account screen' })).toBeVisible()
   })
 
-  it('sends someone whose address is verified on to their journey', async () => {
+  it('sends someone whose address is already verified on, by the front door', async () => {
     useSessionStore.getState().setUser({ ...learner, emailVerified: true })
     renderStep()
-    expect(await screen.findByRole('heading', { name: 'Journey' })).toBeVisible()
+    expect(await screen.findByRole('heading', { name: 'Front door' })).toBeVisible()
   })
 })

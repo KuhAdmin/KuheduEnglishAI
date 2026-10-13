@@ -7,5 +7,6 @@ export type AuthMode = 'signIn' | 'signUp'
  * - `tooMany`: too many tries; the server asks for a pause.
  * - `failed`: the server could not be reached, or could not do it.
  * - `unavailable`: a way of signing in that is not set up here (Google, without its id).
+ * - `googleFailed`: back from Google's page without having been signed in.
  */
-export type AuthFeedback = 'rejected' | 'tooMany' | 'failed' | 'unavailable'
+export type AuthFeedback = 'rejected' | 'tooMany' | 'failed' | 'unavailable' | 'googleFailed'

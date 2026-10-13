@@ -27,6 +27,7 @@ beforeEach(() => {
 })
 
 afterEach(() => {
+  vi.useRealTimers()
   removeFakeSound()
 })
 
@@ -167,6 +168,27 @@ describe('speakAll', () => {
     )
   })
 
+  it('says a woman’s lines in the default female voice and a man’s in the default male one', async () => {
+    // Whoever the learner's tutor is, and whatever voices they chose for their tutors.
+    useTutorAvatarStore.setState({ avatar: 'female' })
+    useVoiceStore.setState({ voices: { en: { male: 'bm_george', female: 'bf_emma' } } })
+
+    void speakAll([
+      { text: 'Hello!', speaker: 0, voice: 'female' },
+      { text: 'Good morning!', speaker: 1, voice: 'male' },
+      { text: 'How are you?', speaker: 0, voice: 'female' },
+    ])
+    await started(1)
+
+    await waitFor(() =>
+      expect(sound.fetched.map((fetched) => fetched.voice)).toEqual([
+        'af_heart',
+        'am_michael',
+        'af_heart',
+      ]),
+    )
+  })
+
   it('has nothing to do for no parts', async () => {
     await expect(speakAll([])).resolves.toBe('ended')
     expect(sound.fetched).toEqual([])
@@ -198,7 +220,7 @@ describe('cancelSpeech', () => {
 })
 
 describe('what a talking face is told', () => {
-  it('hears each part start, with its text and speed, and the end', async () => {
+  it('hears each part start, with its text, and the end', async () => {
     const heard: SpeechActivity[] = []
     const stop = onSpeechActivity((activity) => heard.push(activity))
 
@@ -210,11 +232,59 @@ describe('what a talking face is told', () => {
     await said
     stop()
 
-    expect(heard).toEqual([
-      { type: 'start', text: 'One.', rate: 0.75 },
-      { type: 'start', text: 'Two.', rate: 0.75 },
-      { type: 'end' },
+    expect(heard.map((activity) => ('text' in activity ? activity.text : activity.type))).toEqual([
+      'One.',
+      'Two.',
+      'end',
     ])
+  })
+
+  it('is given the mouth the server sent with the sound, and where the player is in it', async () => {
+    removeFakeSound()
+    sound = installFakeSound(TEST_VOICES, { mouth: '0c100o250c' })
+    vi.useFakeTimers()
+    const heard: SpeechActivity[] = []
+    const stop = onSpeechActivity((activity) => heard.push(activity))
+
+    void speak('map', { rate: 0.5 })
+    await vi.advanceTimersByTimeAsync(0)
+    sound.lasts(0.4)
+    const [activity] = heard
+    if (activity?.type !== 'start') throw new Error('expected the sound to have started')
+
+    expect(activity.sound.mouth).toEqual([
+      { at: 0, shape: 'closed' },
+      { at: 0.1, shape: 'open' },
+      { at: 0.25, shape: 'closed' },
+    ])
+    expect(activity.sound.duration()).toBe(0.4)
+    // Played at half speed, a second on the clock is half a second of the sound.
+    expect(activity.sound.position()).toBe(0)
+    await vi.advanceTimersByTimeAsync(200)
+    expect(activity.sound.position()).toBeCloseTo(0.1)
+
+    // A sound the player has moved on from is no longer where anything is.
+    void speak('Next.')
+    await vi.advanceTimersByTimeAsync(0)
+    expect(activity.sound.position()).toBe(0)
+    stop()
+  })
+
+  it('tells of a sound that came without a mouth, or with one that cannot be read', async () => {
+    const mouths: unknown[] = []
+    const stop = onSpeechActivity((activity) => {
+      if (activity.type === 'start') mouths.push(activity.sound.mouth)
+    })
+
+    void speak('One.')
+    await started(1)
+    removeFakeSound()
+    sound = installFakeSound(TEST_VOICES, { mouth: 'wide open' })
+    void speak('Two.')
+    await started(1)
+    stop()
+
+    expect(mouths).toEqual([null, null])
   })
 })
 
@@ -253,7 +323,7 @@ describe('what can be said', () => {
 describe('soundUrl', () => {
   it('names a sound by its voice and its text, so the same sound is always at the same address', () => {
     expect(soundUrl('I’m fine, thank you. And you?', 'bf_emma')).toBe(
-      '/api/speech/audio?voice=bf_emma&text=I%E2%80%99m+fine%2C+thank+you.+And+you%3F',
+      '/api/speech/audio?voice=bf_emma&text=I%E2%80%99m+fine%2C+thank+you.+And+you%3F&with=lips',
     )
   })
 })

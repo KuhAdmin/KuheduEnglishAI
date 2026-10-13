@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen } from '@testing-library/react'
+import { act, render, screen } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { HEADLINE_INTERVAL_MS, HeadlineSlider } from './HeadlineSlider'
 
@@ -7,10 +7,8 @@ const headlines = [
   { lang: 'hi', text: 'हिन्दी शीर्षक', subtext: 'उपशीर्षक' },
   { lang: 'en', text: 'English headline', subtext: '' },
 ]
-const languageNames = { bn: 'বাংলা', hi: 'हिन्दी' }
-
-const renderSlider = (list = headlines) =>
-  render(<HeadlineSlider headlines={list} languageNames={languageNames} />)
+const renderSlider = (list = headlines, language: string | null = null) =>
+  render(<HeadlineSlider headlines={list} language={language} />)
 
 /** The one headline assistive technology (and the learner) can currently see. */
 const shownHeadline = () => screen.getByRole('heading', { level: 1 })
@@ -56,21 +54,44 @@ describe('HeadlineSlider', () => {
     expect(slideOf('বাংলা শিরোনাম')).toHaveClass('animate-slide-in-left')
   })
 
-  it('lets the visitor jump to a language, which stops the rotation', () => {
-    renderSlider()
+  it('slides to the headline of the language the visitor chooses, and the turns end', () => {
+    const { rerender } = renderSlider()
+    wait(5000)
+    expect(shownHeadline()).toHaveTextContent('हिन्दी शीर्षक')
 
-    const group = screen.getByRole('group', { name: 'Headline language' })
-    expect(group).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'বাংলা' })).toHaveAttribute('aria-pressed', 'true')
-    // No display name known for English here → its code is shown.
-    fireEvent.click(screen.getByRole('button', { name: 'en' }))
-
+    rerender(<HeadlineSlider headlines={headlines} language="en" />)
     expect(shownHeadline()).toHaveTextContent('English headline')
-    expect(screen.getByRole('button', { name: 'en' })).toHaveAttribute('aria-pressed', 'true')
-    expect(screen.getByRole('button', { name: 'বাংলা' })).toHaveAttribute('aria-pressed', 'false')
+    // From the one that was on show, as when they take turns.
+    expect(slideOf('English headline')).toHaveClass('animate-slide-in-left')
+    expect(slideOf('हिन्दी शीर्षक')).toHaveClass('animate-slide-out-left')
 
     wait(20_000)
     expect(shownHeadline()).toHaveTextContent('English headline')
+
+    // Choosing again slides again.
+    rerender(<HeadlineSlider headlines={headlines} language="bn" />)
+    expect(shownHeadline()).toHaveTextContent('বাংলা শিরোনাম')
+    expect(slideOf('English headline')).toHaveClass('animate-slide-out-left')
+  })
+
+  it('opens on the headline of a language chosen earlier, still, and without an entrance slide', () => {
+    renderSlider(headlines, 'hi-IN')
+
+    expect(shownHeadline()).toHaveTextContent('हिन्दी शीर्षक')
+    expect(slideOf('हिन्दी शीर्षक')).not.toHaveClass('animate-slide-in-left')
+    wait(20_000)
+    expect(shownHeadline()).toHaveTextContent('हिन्दी शीर्षक')
+  })
+
+  it('shows the English headline for a language that has none, and the first where there is no English', () => {
+    const { unmount } = renderSlider(headlines, 'ta')
+    expect(shownHeadline()).toHaveTextContent('English headline')
+    unmount()
+
+    renderSlider(headlines.slice(0, 2), 'ta')
+    expect(shownHeadline()).toHaveTextContent('বাংলা শিরোনাম')
+    wait(20_000)
+    expect(shownHeadline()).toHaveTextContent('বাংলা শিরোনাম')
   })
 
   it('does not rotate while the tab is in the background', () => {
@@ -86,12 +107,12 @@ describe('HeadlineSlider', () => {
     hidden.mockRestore()
   })
 
-  it('shows a single headline plainly: no rotation and no language buttons', () => {
+  it('shows a single headline plainly, with no controls of its own', () => {
     renderSlider(headlines.slice(2))
 
     wait(20_000)
     expect(shownHeadline()).toHaveTextContent('English headline')
-    expect(screen.queryByRole('group')).not.toBeInTheDocument()
+    // What stops the turns is the language picker beside it, on the page.
     expect(screen.queryByRole('button')).not.toBeInTheDocument()
   })
 
@@ -100,7 +121,7 @@ describe('HeadlineSlider', () => {
     wait(10_000)
     expect(shownHeadline()).toHaveTextContent('English headline')
 
-    rerender(<HeadlineSlider headlines={headlines.slice(0, 2)} languageNames={languageNames} />)
+    rerender(<HeadlineSlider headlines={headlines.slice(0, 2)} />)
     expect(shownHeadline()).toHaveTextContent('বাংলা শিরোনাম')
   })
 })

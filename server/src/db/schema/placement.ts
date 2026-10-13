@@ -17,7 +17,7 @@ import { id, instant, isLanguageTag, oneOf } from './columns.ts'
 
 /**
  * The placement test, in the shapes the app already keeps (`sessionSchema`, `responseSchema`
- * and `resultSchema` in the app's `features/placement`), so a test taken as a guest can be
+ * and `resultSchema` in the app's `features/placement`), so a test taken in the browser can be
  * stored as it is. The lists below are that feature's `types.ts`.
  */
 export const PLACEMENT_LEVELS = ['FOUNDATION', 'A1', 'A2', 'B1', 'B2+'] as const

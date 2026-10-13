@@ -1,37 +1,55 @@
 import { useEffect, useState } from 'react'
 import type { LandingHeadline } from '@/shared/lib/appConfig/landingConfig'
 import { cn } from '@/shared/lib/cn'
-import { useT } from '@/shared/lib/i18n'
+import { DEFAULT_LANGUAGE, primarySubtag } from '@/shared/lib/i18n'
 
 /** How long each headline stays before the next one slides in. */
 export const HEADLINE_INTERVAL_MS = 5000
 
 export type HeadlineSliderProps = {
   headlines: readonly LandingHeadline[]
-  /** Display name for a language code (its own name, e.g. "বাংলা"); the code is shown if missing. */
-  languageNames: Readonly<Record<string, string>>
+  /**
+   * The language the visitor chose, if they have. Its headline is the one shown, and the
+   * headlines stop taking turns. Left out or `null`: nothing is chosen yet, and they take turns.
+   */
+  language?: string | null
   className?: string
 }
 
 /**
- * The landing headline, said in each language in turn: every few seconds the current one slides
- * out to the left and the next slides in from the right, so every visitor soon sees their own.
- * The language names underneath jump straight to a headline and stop the rotation — text that
- * changes by itself must be stoppable.
+ * Which headline a visitor who chose `language` is shown: the one written in it; else the
+ * English one, which is what the rest of the app falls back to; else the first.
  */
-export function HeadlineSlider({ headlines, languageNames, className }: HeadlineSliderProps) {
-  const t = useT()
+function headlineIn(headlines: readonly LandingHeadline[], language: string): number {
+  const written = (wanted: string) =>
+    headlines.findIndex((headline) => primarySubtag(headline.lang) === primarySubtag(wanted))
+  const own = written(language)
+  return own >= 0 ? own : Math.max(written(DEFAULT_LANGUAGE), 0)
+}
+
+/**
+ * The landing headline. Until the visitor has chosen a language it is said in each in turn:
+ * every few seconds the current one slides out to the left and the next slides in from the
+ * right, so every visitor soon sees their own. Choosing a language (the picker under it, on the
+ * landing page) slides to that language's headline and ends the turns: text that changes by
+ * itself must be stoppable, and that picker is what stops it.
+ */
+export function HeadlineSlider({ headlines, language, className }: HeadlineSliderProps) {
   const count = headlines.length
+  const chosen = language ? headlineIn(headlines, language) : null
   const [position, setPosition] = useState<{ active: number; leaving: number | null }>({
-    active: 0,
+    active: chosen ?? 0,
     leaving: null,
   })
-  const [rotating, setRotating] = useState(true)
+  // The visitor chose, or chose again: slide from the headline on show to theirs.
+  if (chosen !== null && chosen !== position.active) {
+    setPosition({ active: chosen, leaving: position.active })
+  }
   // An admin can shorten the list while the page is open.
   const active = position.active < count ? position.active : 0
 
   useEffect(() => {
-    if (!rotating || count < 2) return
+    if (chosen !== null || count < 2) return
     const timer = setInterval(() => {
       // Do not rotate unseen in a background tab.
       if (document.hidden) return
@@ -41,64 +59,31 @@ export function HeadlineSlider({ headlines, languageNames, className }: Headline
       }))
     }, HEADLINE_INTERVAL_MS)
     return () => clearInterval(timer)
-  }, [rotating, count])
-
-  const handleSelect = (index: number) => {
-    setRotating(false)
-    if (index !== active) setPosition({ active: index, leaving: active })
-  }
+  }, [chosen, count])
 
   return (
-    <div className={cn('flex flex-col gap-1', className)}>
-      {/*
-        Every headline occupies the same grid cell, so the block is as tall as the longest one
-        and nothing below it moves when they change. The cell reaches the screen edges so a
-        sliding headline is clipped there, not at the page gutter.
-      */}
-      <div className="-mx-(--gutter) grid overflow-x-clip px-gutter">
-        {headlines.map((headline, index) => (
-          <div
-            key={index}
-            lang={headline.lang}
-            aria-hidden={index === active ? undefined : true}
-            className={cn(
-              'col-start-1 row-start-1 flex flex-col justify-end gap-2',
-              index === active && position.leaving !== null && 'animate-slide-in-left',
-              index !== active &&
-                (index === position.leaving ? 'animate-slide-out-left' : 'invisible'),
-            )}
-          >
-            <h1 className="text-3xl leading-snug font-extrabold text-balance text-on-hero">
-              {headline.text}
-            </h1>
-            {headline.subtext && <p className="text-lg text-on-hero-muted">{headline.subtext}</p>}
-          </div>
-        ))}
-      </div>
-
-      {count > 1 && (
+    // Every headline occupies the same grid cell, so the block is as tall as the longest one and
+    // nothing below it moves when they change. The cell reaches the screen edges so a sliding
+    // headline is clipped there, not at the page gutter.
+    <div className={cn('-mx-(--gutter) grid overflow-x-clip px-gutter', className)}>
+      {headlines.map((headline, index) => (
         <div
-          role="group"
-          aria-label={t('landing.headlineLanguage')}
-          className="flex flex-wrap gap-x-1"
+          key={index}
+          lang={headline.lang}
+          aria-hidden={index === active ? undefined : true}
+          className={cn(
+            'col-start-1 row-start-1 flex flex-col justify-end gap-2',
+            index === active && position.leaving !== null && 'animate-slide-in-left',
+            index !== active &&
+              (index === position.leaving ? 'animate-slide-out-left' : 'invisible'),
+          )}
         >
-          {headlines.map((headline, index) => (
-            <button
-              key={index}
-              type="button"
-              aria-pressed={index === active}
-              onClick={() => handleSelect(index)}
-              className={cn(
-                'inline-flex touch-target items-center rounded-full px-3 text-sm font-bold',
-                'transition-colors duration-(--duration-fast) ease-standard active:bg-on-hero/25',
-                index === active ? 'bg-on-hero/15 text-on-hero' : 'text-on-hero-muted',
-              )}
-            >
-              <span lang={headline.lang}>{languageNames[headline.lang] ?? headline.lang}</span>
-            </button>
-          ))}
+          <h1 className="text-3xl leading-snug font-extrabold text-balance text-on-hero">
+            {headline.text}
+          </h1>
+          {headline.subtext && <p className="text-lg text-on-hero-muted">{headline.subtext}</p>}
         </div>
-      )}
+      ))}
     </div>
   )
 }

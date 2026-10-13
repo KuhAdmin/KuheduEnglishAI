@@ -1,65 +1,57 @@
 import { useEffect, useState } from 'react'
 import { usePrefersReducedMotion } from '@/shared/hooks/useMediaQuery'
-import { mouthShapesFor, type MouthShape } from './lipSync'
-import { onSpeechActivity } from './speech'
-
-/** How long a mouth shape is held at normal speed: about the length of a spoken sound. */
-const FRAME_MS = 85
-/** What the mouth does when a text is still being said after its own shapes have run out. */
-const STILL_TALKING: MouthShape[] = ['mid', 'open', 'mid', 'closed']
+import { guessedMouth, mouthAt, type MouthMark, type MouthShape } from './lipSync'
+import { onSpeechActivity, type PlayingSound } from './speech'
 
 /**
  * The shape of a mouth that moves with the app's voice, whatever on the screen asked it to
  * speak; `rest` while it is silent.
  *
- * A sound says when it starts and when it ends, not where in the text it is. So the mouth runs
- * through the whole text at a likely pace from the moment the sound starts, with the shapes read
- * off the spelling (`mouthShapesFor`): it looks like speech without being exact. With reduced
- * motion the mouth opens while the voice speaks and does not move.
+ * It follows the sound itself: many times a second it asks the player how far into the sound it
+ * is, and takes the shape the server gave for that moment. So the lips keep time with what is
+ * heard when it is played slowly, when it stalls, and through its pauses. A sound that came
+ * without a mouth gets a likely one from its spelling (`guessedMouth`). With reduced motion the
+ * mouth opens while the voice speaks and does not move.
  */
 export function useLipSync(): MouthShape {
   const [mouth, setMouth] = useState<MouthShape>('rest')
   const reducedMotion = usePrefersReducedMotion()
 
   useEffect(() => {
-    let queue: MouthShape[] = []
-    let timer: ReturnType<typeof setInterval> | undefined
-    let speaking = false
+    let frame: number | undefined
 
     const stop = () => {
-      clearInterval(timer)
-      timer = undefined
+      if (frame !== undefined) cancelAnimationFrame(frame)
+      frame = undefined
     }
-    const step = () => {
-      const next = queue.shift()
-      if (next) {
-        setMouth(next)
-      } else if (speaking) {
-        // The voice is slower than the guess: keep talking until it says it has ended.
-        queue = [...STILL_TALKING]
-      } else {
-        setMouth('rest')
-        stop()
-      }
-    }
-    const run = (shapes: MouthShape[], rate: number) => {
+
+    const follow = (text: string, sound: PlayingSound) => {
       stop()
-      queue = shapes
-      step()
-      timer = setInterval(step, FRAME_MS / Math.max(rate, 0.1))
+      let guess: { seconds: number; marks: MouthMark[] } | undefined
+      const marks = () => {
+        if (sound.mouth) return sound.mouth
+        // Guessed again once the player knows the sound's length, which it may not at first.
+        const seconds = sound.duration()
+        if (!guess || !Object.is(guess.seconds, seconds)) {
+          guess = { seconds, marks: guessedMouth(text, seconds) }
+        }
+        return guess.marks
+      }
+      const look = () => {
+        setMouth(mouthAt(marks(), sound.position()))
+        frame = requestAnimationFrame(look)
+      }
+      look()
     }
 
     const stopListening = onSpeechActivity((activity) => {
       if (activity.type === 'end') {
-        speaking = false
-        queue = []
         stop()
         setMouth('rest')
       } else if (reducedMotion) {
         setMouth('mid')
       } else {
-        speaking = true
-        run(mouthShapesFor(activity.text), activity.rate)
+        follow(activity.text, activity.sound)
       }
     })
 

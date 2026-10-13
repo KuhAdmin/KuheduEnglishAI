@@ -48,7 +48,7 @@ def main() -> None:
         if only and voice.id not in only:
             continue
         started = time.perf_counter()
-        mp3 = synth.synthesize(SENTENCES[base_language(voice.language)], voice)
+        mp3 = synth.synthesize(SENTENCES[base_language(voice.language)], voice).mp3
         took = time.perf_counter() - started
         (folder / f"{voice.id}.mp3").write_bytes(mp3)
         sound = seconds_of(mp3)

@@ -7,6 +7,7 @@ export async function requireUnverified() {
   await loadSession()
   const { user } = useSessionStore.getState()
   if (!user) throw redirect(paths.signUp)
-  if (user.emailVerified) throw redirect(paths.home)
+  // The front door, which sends a learner on from where they left off.
+  if (user.emailVerified) throw redirect(paths.landing)
   return null
 }

@@ -1,10 +1,26 @@
-import { expect, test } from '@playwright/test'
-import { ADMIN, expectNoHorizontalScroll, PIXEL_PNG, seedLanguage, signInAsAdmin } from './helpers'
+import {
+  ADMIN,
+  adminServer,
+  expect,
+  expectNoHorizontalScroll,
+  PIXEL_PNG,
+  seedLanguage,
+  signedInAs,
+  signInAsAdmin,
+  test,
+} from './helpers'
 
 const save = 'Save changes'
 
 test.describe('admin sign-in', () => {
-  test('the admin area is closed to visitors who are not signed in', async ({ page }) => {
+  test('the admin area is closed to a learner, and to visitors who are not signed in', async ({
+    page,
+  }) => {
+    // Signed in as a learner, as every test starts.
+    await page.goto('/admin')
+    await expect(page).toHaveURL(/\/sign-in$/)
+
+    await signedInAs(page, null)
     await page.goto('/admin')
     await expect(page).toHaveURL(/\/sign-in$/)
 
@@ -12,13 +28,14 @@ test.describe('admin sign-in', () => {
     await expect(page).toHaveURL(/\/sign-in$/)
   })
 
-  test('wrong credentials are refused; the default admin gets in from the landing page', async ({
+  test('wrong credentials are refused; the admin gets in from the landing page', async ({
     page,
   }) => {
+    await adminServer(page)
     await page.goto('/')
     await page.getByRole('link', { name: 'Sign in' }).click()
 
-    await page.getByLabel('Email address').fill(ADMIN.username)
+    await page.getByLabel('Email address').fill(ADMIN.email)
     await page.getByLabel('Password', { exact: true }).fill('not-the-password')
     await page.getByRole('button', { name: 'Sign in' }).click()
     await expect(page.getByRole('alert')).toHaveText('Incorrect email or password.')
@@ -35,7 +52,7 @@ test.describe('admin sign-in', () => {
     await page.reload()
     await expect(page).toHaveURL(/\/admin\/texts$/)
 
-    await page.getByRole('button', { name: 'Sign out' }).click()
+    await page.getByRole('button', { name: 'Sign out', exact: true }).click()
     await expect(page).toHaveURL(/\/sign-in$/)
     await page.goto('/admin')
     await expect(page).toHaveURL(/\/sign-in$/)
@@ -320,10 +337,11 @@ test.describe('admin and app side by side', () => {
     await learnerTab.goto('/')
     const headline = learnerTab.getByRole('heading', { level: 1 })
     await expect(headline).toHaveText('নতুন বাংলা শিরোনাম')
-    // Two headlines left, so two language buttons; the English one shows the edited text.
-    await expect(learnerTab.getByRole('group', { name: 'Headline language' })).toBeVisible()
-    await expect(learnerTab.getByRole('button', { name: 'हिन्दी' })).toHaveCount(0)
-    await learnerTab.getByRole('button', { name: 'English' }).click()
+    // Choosing English shows the edited English headline. Hindi can still be chosen, though
+    // its headline was removed: the languages on offer are their own setting.
+    const languages = learnerTab.getByRole('group', { name: 'Choose the language you learn in' })
+    await expect(languages.getByRole('radio')).toHaveCount(3)
+    await languages.getByText('English').click()
     await expect(headline).toHaveText('Speak with confidence')
     await expect(learnerTab.getByText('Acme English')).toBeVisible()
     await expect(learnerTab.getByRole('link', { name: 'Start now' })).toBeVisible()
@@ -332,9 +350,9 @@ test.describe('admin and app side by side', () => {
     // Reset to defaults (after confirming) brings the original landing page back, live.
     adminTab.once('dialog', (dialog) => dialog.accept())
     await adminTab.getByRole('button', { name: 'Reset to defaults' }).click()
-    await expect(learnerTab.getByText('Kuhedu English')).toBeVisible()
+    await expect(learnerTab.getByText('Kuhedu Lingo')).toBeVisible()
     await expect(learnerTab.getByRole('link', { name: 'Get Started' })).toBeVisible()
-    await expect(learnerTab.locator('header img')).toHaveAttribute('src', '/logo.svg')
+    await expect(learnerTab.locator('header img')).toHaveAttribute('src', '/pwa-192x192.png')
   })
 
   test('an uploaded profile picture replaces the bundled one on "Tell us about yourself"', async ({

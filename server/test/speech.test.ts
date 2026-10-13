@@ -1,7 +1,13 @@
 import { mkdtemp, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { apiErrorSchema, speechVoicesSchema, type SpeechVoice } from '@kuhedu/contracts'
+import {
+  apiErrorSchema,
+  SPEECH_MOUTH_HEADER,
+  speechMouthSchema,
+  speechVoicesSchema,
+  type SpeechVoice,
+} from '@kuhedu/contracts'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { buildApp, type App } from '../src/app.ts'
 import { createSoundCache } from '../src/modules/speech/soundCache.ts'
@@ -32,7 +38,13 @@ const omega: SpeechVoice = {
 
 /** A speaking service that says nothing, counts what it was asked, and can be switched off. */
 function fakeSpeaker(model = 'kokoro-test') {
-  const state = { up: true, said: [] as { text: string; voice: string }[], model }
+  const state = {
+    up: true,
+    said: [] as { text: string; voice: string }[],
+    model,
+    /** The mouth that comes with every sound; `null` for a service that cannot say. */
+    mouth: '0c75m150o' as string | null,
+  }
   const speaker: Speaker = {
     catalogue: async () => {
       if (!state.up) throw new Error('connect ECONNREFUSED 127.0.0.1:8788')
@@ -41,7 +53,7 @@ function fakeSpeaker(model = 'kokoro-test') {
     speak: async (text, voice) => {
       if (!state.up) throw new Error('connect ECONNREFUSED 127.0.0.1:8788')
       state.said.push({ text, voice })
-      return Buffer.from(`sound of ${voice}: ${text}`)
+      return { sound: Buffer.from(`sound of ${voice}: ${text}`), mouth: state.mouth }
     },
   }
   return { speaker, state }
@@ -95,6 +107,20 @@ describe('GET /api/speech/voices', () => {
   })
 })
 
+describe('the mouth that comes with a sound', () => {
+  it('is read into marks: a shape, and the second it is taken from', () => {
+    expect(speechMouthSchema.parse('0c75m1500o')).toEqual([
+      { at: 0, shape: 'closed' },
+      { at: 0.075, shape: 'mid' },
+      { at: 1.5, shape: 'open' },
+    ])
+  })
+
+  it.each(['', 'c', '75', '0c75x', '0c 75m', '-5c'])('is not read from %j', (text) => {
+    expect(speechMouthSchema.safeParse(text).success).toBe(false)
+  })
+})
+
 describe('GET /api/speech/audio', () => {
   it('answers with the sound, to be kept for good by whatever is in between', async () => {
     const { speaker, state } = fakeSpeaker()
@@ -117,6 +143,40 @@ describe('GET /api/speech/audio', () => {
     await server.inject(audio('Nice to meet you.', 'hf_alpha'))
 
     expect(again.body).toBe('sound of af_heart: Nice to meet you.')
+    expect(state.said).toHaveLength(2)
+  })
+
+  it('sends the mouth for a drawn face with the sound, the first time and from what was kept', async () => {
+    const { speaker, state } = fakeSpeaker()
+    const server = start(speaker)
+
+    const first = await server.inject(audio('Good morning.'))
+    const again = await server.inject(audio('Good morning.'))
+
+    expect(first.headers[SPEECH_MOUTH_HEADER]).toBe('0c75m150o')
+    expect(again.headers[SPEECH_MOUTH_HEADER]).toBe('0c75m150o')
+    expect(state.said).toHaveLength(1)
+  })
+
+  it('keeps nothing of a sound that came without its mouth, and tells the browser not to either', async () => {
+    // A speaking service older than this server: what it makes is not finished.
+    const { speaker, state } = fakeSpeaker()
+    state.mouth = null
+    const server = start(speaker)
+
+    const first = await server.inject(audio('Hm.'))
+    expect(first.statusCode).toBe(200)
+    expect(first.body).toBe('sound of af_heart: Hm.')
+    expect(first.headers[SPEECH_MOUTH_HEADER]).toBeUndefined()
+    expect(first.headers['cache-control']).toBe('no-store')
+
+    // Once the service can say, the sound is made again, complete, and kept from then on.
+    state.mouth = '0c75m150o'
+    const again = await server.inject(audio('Hm.'))
+    const third = await server.inject(audio('Hm.'))
+
+    expect(again.headers[SPEECH_MOUTH_HEADER]).toBe('0c75m150o')
+    expect(third.headers['cache-control']).toBe('public, max-age=31536000, immutable')
     expect(state.said).toHaveLength(2)
   })
 
@@ -178,6 +238,15 @@ describe('GET /api/speech/audio', () => {
     expect(response.statusCode).toBe(status)
     expect(apiErrorSchema.parse(response.json()).error.code).toBe(code)
     expect(state.said).toEqual([])
+  })
+
+  it('answers the address the app uses, which also names what comes with the sound', async () => {
+    const { speaker, state } = fakeSpeaker()
+
+    const response = await start(speaker).inject(`${audio('Hello.')}&with=lips`)
+
+    expect(response.statusCode).toBe(200)
+    expect(state.said).toEqual([{ text: 'Hello.', voice: 'af_heart' }])
   })
 
   it('turns away an address that asks for more than its share', async () => {

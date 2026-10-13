@@ -176,14 +176,14 @@ describe('Day 1: Watch and listen', () => {
 
     await userEvent.click(screen.getByRole('button', { name: 'Play the conversation' }))
 
-    // The speakers are numbered as they first speak; which voice each number has is the
-    // speech module's to say.
+    // Asha is a woman and Ravi a man, whoever speaks first; which voice that is, is the speech
+    // module's to say. The speakers are numbered too, for a conversation that does not say.
     const [parts, options] = vi.mocked(speakAll).mock.lastCall ?? []
     expect(parts).toHaveLength(9)
     expect(parts?.slice(0, 3)).toEqual([
-      { text: 'Hello! Good morning.', speaker: 0 },
-      { text: 'Good morning! How are you?', speaker: 1 },
-      { text: 'I’m fine, thank you. And you?', speaker: 0 },
+      { text: 'Hello! Good morning.', speaker: 0, voice: 'female' },
+      { text: 'Good morning! How are you?', speaker: 1, voice: 'male' },
+      { text: 'I’m fine, thank you. And you?', speaker: 0, voice: 'female' },
     ])
     expect(options?.rate).toBe(1)
 
@@ -239,7 +239,7 @@ describe('Day 1: Watch and listen', () => {
       screen.getByRole('button', { name: 'Listen to this line: Good morning! How are you?' }),
     )
     expect(vi.mocked(speakAll).mock.lastCall?.[0]).toEqual([
-      { text: 'Good morning! How are you?', speaker: 1 },
+      { text: 'Good morning! How are you?', speaker: 1, voice: 'male' },
     ])
     expect(next()).toBeDisabled()
   })
@@ -344,6 +344,20 @@ describe('Day 1: Watch and listen', () => {
       expect(lines().map((line) => line.textContent)).toEqual(['MeeraHi there!', 'ArjunHello!'])
       expect(document.querySelector('main img')).toHaveAttribute('src', '/weeks/meeting.webp')
       expect(document.querySelector('video')).toBeNull()
+    })
+
+    it('gives speakers they said nothing about the tutors’ voices by turn, and the rest their own', async () => {
+      settingsRepository.write(WEEK_DIALOGUES_CONFIG_NAME, {
+        1: { ...written, videoUrl: null, voices: { Arjun: 'male' } },
+      })
+      renderDay()
+      await step()
+      await userEvent.click(screen.getByRole('button', { name: 'Play the conversation' }))
+
+      expect(vi.mocked(speakAll).mock.lastCall?.[0]).toEqual([
+        { text: 'Hi there!', speaker: 0 },
+        { text: 'Hello!', speaker: 1, voice: 'male' },
+      ])
     })
 
     it('plays their video instead of the voice, and opens Next when it has been watched', async () => {

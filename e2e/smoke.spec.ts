@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test'
-import { expectNoHorizontalScroll, signInAsAdmin } from './helpers'
+import { expect, expectNoHorizontalScroll, signInAsAdmin, test } from './helpers'
 
 const routes = [
   '/',

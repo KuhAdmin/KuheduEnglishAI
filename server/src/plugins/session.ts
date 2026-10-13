@@ -9,7 +9,7 @@ const SESSION_COOKIE = 'kuhedu_session'
 
 declare module 'fastify' {
   interface FastifyRequest {
-    /** Who is asking; `null` for a guest. */
+    /** Who is asking; `null` when nobody is signed in. */
     user: SessionUser | null
     sessionId: string | null
   }
@@ -75,6 +75,18 @@ export type Sessions = ReturnType<typeof registerSessions>
 /** `preHandler`: only someone signed in gets further. */
 export async function requireUser(request: FastifyRequest) {
   if (!request.user) throw new HttpError(401, 'unauthenticated', 'Sign in first')
+}
+
+/**
+ * `preHandler`: only someone whose address is verified gets further. Until the emailed code has
+ * been matched an account is not finished being made: nothing of a learner's own is kept for it
+ * or given out to it. **Every route for a learner's data uses this, not `requireUser`.**
+ */
+export async function requireVerified(request: FastifyRequest) {
+  await requireUser(request)
+  if (!request.user?.emailVerified) {
+    throw new HttpError(403, 'forbidden', 'Verify your email address first')
+  }
 }
 
 /** `preHandler`: only an admin gets further. */

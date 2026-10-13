@@ -65,4 +65,6 @@ export const week1Dialogue: WeekDialogue = {
       translations: { bn: 'বিদায়! আপনার দিনটি ভালো কাটুক।', hi: 'अलविदा! आपका दिन शुभ हो।' },
     },
   ],
+  // In the order they first speak, as the schema stores them.
+  voices: { Asha: 'female', Ravi: 'male' },
 }

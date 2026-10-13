@@ -14,6 +14,8 @@ from .voices import VOICES, find_voice
 
 # A sentence or two: what a lesson or the tutor says in one go. The Node server holds the same limit.
 MAX_TEXT_LENGTH = 400
+# Where the shapes of the lips travel (`mouth.py`). The Node server passes it on under this name.
+MOUTH_HEADER = "X-Speech-Mouth"
 
 
 class SpeakRequest(BaseModel):
@@ -46,9 +48,11 @@ def create_app(synth: Synth) -> FastAPI:
         if voice is None:
             raise HTTPException(status_code=404, detail="No such voice")
         try:
-            sound = synth.synthesize(request.text, voice)
+            spoken = synth.synthesize(request.text, voice)
         except ValueError as error:
             raise HTTPException(status_code=422, detail=str(error)) from error
-        return Response(content=sound, media_type="audio/mpeg")
+        # The lips' shapes go with the sound they belong to, so the two cannot come apart.
+        headers = {MOUTH_HEADER: spoken.mouth} if spoken.mouth else None
+        return Response(content=spoken.mp3, media_type="audio/mpeg", headers=headers)
 
     return app

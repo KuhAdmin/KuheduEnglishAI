@@ -4,7 +4,7 @@
  * TypeScript enforces it. Admins can override any text per language in Admin › Screen texts.
  */
 export const en = {
-  'app.name': 'Kuhedu English AI',
+  'app.name': 'Kuhedu Lingo AI',
   'nav.main': 'Main navigation',
   'nav.home': 'Home',
   'nav.learn': 'Learn',
@@ -12,12 +12,13 @@ export const en = {
   'nav.profile': 'Profile',
 
   // The landing page's wording itself is admin content (Admin › Landing page), not screen text.
-  'landing.headlineLanguage': 'Headline language',
+  'landing.language': 'Choose the language you learn in',
 
-  // Sign in / sign up. `{brand}` in the title is replaced by the brand name from Admin › Landing page.
+  // Sign in / sign up. The brand is already above the title, so the title does not repeat it; an
+  // admin who writes `{brand}` into it gets the brand name from Admin › Landing page there.
   'auth.back': 'Back',
   'auth.language': 'Language',
-  'auth.title': 'Welcome to {brand}',
+  'auth.title': 'Welcome here',
   'auth.signInSubtitle': 'Sign in to continue your learning journey.',
   'auth.signUpSubtitle': 'Create an account to start your learning journey.',
   'auth.modeLegend': 'Sign in or sign up',
@@ -32,7 +33,6 @@ export const en = {
   'auth.signUpSubmit': 'Create Account',
   'auth.or': 'OR',
   'auth.google': 'Continue with Google',
-  'auth.guest': 'Continue as Guest',
   'auth.haveAccount': 'Already have an account?',
   'auth.noAccount': 'Don’t have an account?',
   'auth.invalid': 'Incorrect email or password.',
@@ -40,8 +40,8 @@ export const en = {
   'auth.emailInvalid': 'Enter a valid email address.',
   'auth.passwordRequired': 'Enter your password.',
   'auth.passwordTooShort': 'Use at least 8 characters.',
-  'auth.unavailable':
-    'Google sign-in is not available yet. Use your email, or continue as a guest.',
+  'auth.unavailable': 'Google sign-in is not available yet. Use your email instead.',
+  'auth.googleFailed': 'Google sign-in did not work. Try again, or use your email.',
   'auth.passwordTooLong': 'Use at most 200 characters.',
   'auth.emailTaken': 'This email already has an account. Sign in instead.',
   'auth.failed': 'That did not work. Check your connection and try again.',
@@ -60,7 +60,8 @@ export const en = {
   'auth.verify.title': 'Check your email',
   'auth.verify.subtitle': 'We sent a 6-digit code to {email}.',
   'auth.verify.submit': 'Verify',
-  'auth.verify.later': 'Do this later',
+  'auth.verify.startOver': 'Use a different email',
+  'auth.unverified': 'Enter the code we emailed you to finish creating your account.',
   'auth.verify.open': 'Verify your email',
   'auth.forgot.title': 'Forgot your password?',
   'auth.forgot.subtitle': 'Enter your email address and we’ll send you a code.',
@@ -367,10 +368,17 @@ export const en = {
   'profile.settingsLabel': 'Settings',
   'profile.back': 'Back to your profile',
   'profile.appearance': 'Appearance',
+  'profile.account': 'Account',
   'profile.appearanceHint': 'Choose the colors of the app.',
   'profile.themeLegend': 'Color theme',
   'profile.language': 'Language',
   'profile.languageHint': 'The app and explanations are shown in this language.',
+  'profile.photo.alt': 'Your photo',
+  'profile.photo.change': 'Change your photo',
+  'profile.photo.remove': 'Remove photo',
+  'profile.photo.onThisDevice': 'This photo is kept on this device only.',
+  'profile.photo.unreadable': 'That file could not be read as a picture. Choose another one.',
+  'profile.photo.notKept': 'That picture could not be kept. Try a smaller one.',
   'voice.title': 'Voice settings',
   'voice.subtitle': 'Choose a voice for each tutor.',
   'voice.language': 'Language',

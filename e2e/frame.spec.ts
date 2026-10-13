@@ -1,5 +1,5 @@
-import { expect, test, type Locator, type Page } from '@playwright/test'
-import { expectNoHorizontalScroll, signInAsAdmin } from './helpers'
+import type { Locator, Page } from '@playwright/test'
+import { expect, expectNoHorizontalScroll, signedInAs, signInAsAdmin, test } from './helpers'
 
 // These tests set their own display size, so they mean the same in every project.
 const TABLET = { width: 768, height: 1024 }
@@ -108,6 +108,7 @@ for (const [name, display] of [
     test('the landing page fills the phone, and a page that does not exist is shown in it too', async ({
       page,
     }) => {
+      await signedInAs(page, null)
       await page.goto('/')
       const cta = await box(page.getByRole('link', { name: 'Get Started' }))
       expect(cta.x).toBeGreaterThanOrEqual(screenLeft)

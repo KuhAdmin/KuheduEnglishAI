@@ -3,7 +3,11 @@ import { useId, useRef, useState, type ChangeEvent } from 'react'
 import { cn } from '@/shared/lib/cn'
 import { Button } from '@/shared/ui/Button'
 import { adminText } from '../adminText'
-import { fileToStoredImage, ImageTooLargeError, type ImageBounds } from '../lib/imageUpload'
+import {
+  fileToStoredImage,
+  ImageTooLargeError,
+  type ImageBounds,
+} from '@/shared/lib/image/imageUpload'
 
 const shapeClass = {
   circle: 'size-20 rounded-full',

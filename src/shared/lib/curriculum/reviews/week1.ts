@@ -67,6 +67,8 @@ export const week1ReviewDialogue: WeekDialogue = {
       translations: { bn: 'বিদায়! পরে দেখা হবে।', hi: 'अलविदा! फिर मिलेंगे।' },
     },
   ],
+  // In the order they first speak, as the schema stores them.
+  voices: { Meera: 'female', Arjun: 'male' },
 }
 
 /**

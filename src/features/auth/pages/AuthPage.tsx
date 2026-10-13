@@ -87,7 +87,7 @@ export function AuthPage() {
 
           <AuthAlternatives
             mode={mode}
-            onGoogle={() => void form.continueWithGoogle()}
+            onGoogle={form.continueWithGoogle}
             onSwitchMode={form.clearMessages}
           />
         </>

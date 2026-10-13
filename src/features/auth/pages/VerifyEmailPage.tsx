@@ -1,5 +1,5 @@
 import { useId } from 'react'
-import { Link, Navigate, useLocation } from 'react-router'
+import { Navigate, useLocation } from 'react-router'
 import { useSessionStore } from '@/shared/lib/account'
 import { fillText, useT } from '@/shared/lib/i18n'
 import { paths } from '@/shared/lib/paths'
@@ -14,7 +14,10 @@ import { isNewAccount } from '../lib/newAccount'
 
 /**
  * The code step: the address just given is sent a code, and this is where it is typed in.
- * Verifying can wait ("Do this later"): an account works without it.
+ * **Matching the code is what makes the account**, so there is no way past this screen without
+ * it. The way out is "Use a different email", for an address that was mistyped or cannot be
+ * read: it signs the browser out and goes back to signing up. An address left unverified can be
+ * signed up with again, by anyone, so nothing is lost by walking away.
  */
 export function VerifyEmailPage() {
   const t = useT()
@@ -22,9 +25,10 @@ export function VerifyEmailPage() {
   const errorText = useFieldError()
   const user = useSessionStore((state) => state.user)
   const { state } = useLocation()
-  // A new account has onboarding ahead of it; anyone else came from their account.
-  const next = isNewAccount(state) ? paths.onboarding : paths.home
-  const { register, errors, feedback, resent, submit, sendAgain } = useVerifyEmail(next)
+  // A new account has onboarding ahead of it; anyone else goes on from where they left off,
+  // which the app's front door knows.
+  const next = isNewAccount(state) ? paths.onboarding : paths.landing
+  const { register, errors, feedback, resent, submit, sendAgain, startOver } = useVerifyEmail(next)
 
   if (!user) return <Navigate to={paths.signUp} replace />
 
@@ -37,10 +41,8 @@ export function VerifyEmailPage() {
           <Button type="submit" form={formId} size="lg" fullWidth>
             {t('auth.verify.submit')}
           </Button>
-          <Button asChild variant="ghost" size="lg" fullWidth>
-            <Link to={next} replace>
-              {t('auth.verify.later')}
-            </Link>
+          <Button variant="ghost" size="lg" fullWidth onClick={() => void startOver()}>
+            {t('auth.verify.startOver')}
           </Button>
         </div>
       }

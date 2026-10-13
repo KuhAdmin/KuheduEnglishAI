@@ -7,6 +7,7 @@ const messages = {
   tooMany: 'auth.tooMany',
   failed: 'auth.failed',
   unavailable: 'auth.unavailable',
+  googleFailed: 'auth.googleFailed',
 } satisfies Record<AuthFeedback, TranslationKey>
 
 export type AuthFeedbackMessageProps = { feedback: AuthFeedback | null }

@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test'
-import { seedLanguage } from './helpers'
+import { expect, seedLanguage, test } from './helpers'
 
 const html = 'html'
 

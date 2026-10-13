@@ -22,7 +22,7 @@ import {
   WEEK_VOCABULARY_CONFIG_NAME,
 } from '@/shared/lib/curriculum/weekVocabulary'
 import { SCREEN_TEXTS_CONFIG_NAME } from '@/shared/lib/i18n/screenTexts'
-import type * as ImageUpload from '../lib/imageUpload'
+import type * as ImageUpload from '@/shared/lib/image/imageUpload'
 import { CurriculumPage } from './CurriculumPage'
 import { LandingSettingsPage } from './LandingSettingsPage'
 import { LanguagesSettingsPage } from './LanguagesSettingsPage'
@@ -31,7 +31,7 @@ import { ProfilesSettingsPage } from './ProfilesSettingsPage'
 import { ScreenTextsPage } from './ScreenTextsPage'
 
 // jsdom has no canvas; the resize step itself is covered by fitWithin's tests and by Playwright.
-vi.mock('../lib/imageUpload', async (importOriginal) => ({
+vi.mock('@/shared/lib/image/imageUpload', async (importOriginal) => ({
   ...(await importOriginal<typeof ImageUpload>()),
   fileToStoredImage: vi.fn(async () => 'data:image/webp;base64,UklGRg=='),
 }))
@@ -128,14 +128,14 @@ describe('ScreenTextsPage', { timeout: 120_000 }, () => {
     await userEvent.selectOptions(screenPicker, 'Sign in and sign up')
     expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(1)
     expect(screen.getByRole('heading', { level: 2, name: 'Sign in and sign up' })).toBeVisible()
-    expect(screen.getByText(/replaced by the brand name/)).toBeVisible()
+    expect(screen.getByText(/to put the brand name there/)).toBeVisible()
     expect(screen.getByRole('textbox', { name: 'Create Account' })).toBeInTheDocument()
     expect(screen.getByRole('textbox', { name: 'Language' })).toBeInTheDocument()
     expect(screen.queryByRole('textbox', { name: 'Choose your language' })).not.toBeInTheDocument()
 
     // The search narrows within that screen …
-    await userEvent.type(screen.getByRole('searchbox', { name: 'Search texts' }), 'guest')
-    expect(screen.getByRole('textbox', { name: 'Continue as Guest' })).toBeInTheDocument()
+    await userEvent.type(screen.getByRole('searchbox', { name: 'Search texts' }), 'google')
+    expect(screen.getByRole('textbox', { name: 'Continue with Google' })).toBeInTheDocument()
     expect(screen.queryByRole('textbox', { name: 'Create Account' })).not.toBeInTheDocument()
     await userEvent.clear(screen.getByRole('searchbox', { name: 'Search texts' }))
 
@@ -488,6 +488,40 @@ describe('LessonsPage', () => {
     await userEvent.click(screen.getByRole('button', { name: 'Remove' }))
     await save()
     expect(stored(WEEK_DIALOGUES_CONFIG_NAME)).toEqual({})
+  })
+
+  it('says who is a woman and who a man, for the voice each is read in', async () => {
+    render(<LessonsPage />)
+    const voiceOf = (name: string) => screen.getByRole('combobox', { name: `Voice of ${name}` })
+
+    // The built-in conversation says it already.
+    expect(voiceOf('Asha')).toHaveValue('female')
+    expect(voiceOf('Ravi')).toHaveValue('male')
+
+    await userEvent.selectOptions(voiceOf('Ravi'), 'By turn')
+    await save()
+    expect(dialogues()['1']).toMatchObject({ voices: { Asha: 'female' } })
+    expect(dialogues()['1']?.lines).toHaveLength(9)
+
+    // Chosen back, it is the built-in conversation again: nothing of the admin's is kept.
+    await userEvent.selectOptions(voiceOf('Ravi'), 'Male')
+    await save()
+    expect(stored(WEEK_DIALOGUES_CONFIG_NAME)).toEqual({})
+
+    // A voice belongs to a name, and a week without one has nobody to give a voice to.
+    await userEvent.selectOptions(weekPicker(), '2')
+    expect(screen.queryByRole('combobox', { name: /^Voice of/ })).toBeNull()
+    await userEvent.click(screen.getByRole('button', { name: 'Add line' }))
+    await userEvent.type(field('Speaker (Line 1)'), 'Meera')
+    await userEvent.type(field('English (Line 1)'), 'Where are you from?')
+    await userEvent.selectOptions(voiceOf('Meera'), 'Female')
+    await userEvent.type(field('Speaker (Line 1)'), 'bai')
+    expect(voiceOf('Meerabai')).toHaveValue('')
+    await save()
+    expect(dialogues()['2']).toEqual({
+      videoUrl: null,
+      lines: [{ speaker: 'Meerabai', text: 'Where are you from?', translations: {} }],
+    })
   })
 
   it('accepts only an https video link', async () => {
@@ -1605,7 +1639,7 @@ describe('LandingSettingsPage', () => {
       text: 'Speak with confidence',
     })
     expect(landing.brand.logoUrl).toBe('data:image/webp;base64,UklGRg==')
-    expect(landing.brand.name).toBe('Kuhedu English')
+    expect(landing.brand.name).toBe('Kuhedu Lingo')
   })
 
   it('adds, reorders and removes headlines', async () => {
@@ -1651,7 +1685,7 @@ describe('LandingSettingsPage', () => {
     await userEvent.type(name, 'Something else')
     await userEvent.click(screen.getByRole('button', { name: 'Discard' }))
 
-    expect(screen.getByRole('textbox', { name: 'Brand name' })).toHaveValue('Kuhedu English')
+    expect(screen.getByRole('textbox', { name: 'Brand name' })).toHaveValue('Kuhedu Lingo')
     expect(stored(LANDING_CONFIG_NAME)).toBeUndefined()
   })
 
@@ -1663,7 +1697,7 @@ describe('LandingSettingsPage', () => {
 
     await userEvent.click(screen.getByRole('button', { name: 'Reset to defaults' }))
 
-    expect(screen.getByRole('textbox', { name: 'Brand name' })).toHaveValue('Kuhedu English')
+    expect(screen.getByRole('textbox', { name: 'Brand name' })).toHaveValue('Kuhedu Lingo')
     expect(stored(LANDING_CONFIG_NAME)).toBeUndefined()
   })
 

@@ -1,5 +1,5 @@
-import { expect, test, type Page } from '@playwright/test'
-import { expectNoHorizontalScroll, seedSettings, spoken, stubSpeech } from './helpers'
+import type { Page } from '@playwright/test'
+import { expect, expectNoHorizontalScroll, seedSettings, spoken, stubSpeech, test } from './helpers'
 
 const SAMPLE = 'Hello! Let’s practise speaking English together.'
 const setVoice = { name: 'Set as tutor voice' }
@@ -57,15 +57,26 @@ test('each tutor is given a voice, which is heard, kept, and used by the lessons
   await page.reload()
   await expect(tutors(page).getByRole('radio', { name: 'Female tutor Emma' })).toBeVisible()
 
-  // Lessons speak with the voice of the learner's tutor, the male one until they choose her;
-  // the second speaker of a conversation has the other tutor's voice.
+  // Lessons speak with the voice of the learner's tutor, the male one until they choose her.
+  const hello = page.getByRole('list', { name: 'Words' }).getByRole('button', { name: /^hello/ })
+  await page.goto('/lessons/weeks/1/days/2')
+  await hello.click()
+  await expect
+    .poll(async () => (await spoken(page)).at(0))
+    .toEqual({
+      text: 'hello',
+      voice: 'am_michael',
+    })
+
+  // The people in a conversation are not the tutor: Asha and Ravi keep the default woman's
+  // and man's voices, whatever was chosen for the tutors.
   await page.goto('/lessons/weeks/1/days/1')
   await page.getByRole('button', { name: 'Play the conversation' }).click()
   await expect
     .poll(async () => (await spoken(page)).slice(0, 2))
     .toEqual([
-      { text: 'Hello! Good morning.', voice: 'am_michael' },
-      { text: 'Good morning! How are you?', voice: 'bf_emma' },
+      { text: 'Hello! Good morning.', voice: 'af_heart' },
+      { text: 'Good morning! How are you?', voice: 'am_michael' },
     ])
 
   await page.goto('/profile/tutor')
@@ -74,11 +85,14 @@ test('each tutor is given a voice, which is heard, kept, and used by the lessons
   await page.goto('/profile')
   await expect(page.getByRole('link', { name: /Voice settings/ })).toContainText('Emma')
 
-  await page.goto('/lessons/weeks/1/days/1')
-  await page.getByRole('button', { name: 'Play the conversation' }).click()
+  await page.goto('/lessons/weeks/1/days/2')
+  await hello.click()
   await expect
     .poll(async () => (await spoken(page)).at(0))
-    .toEqual({ text: 'Hello! Good morning.', voice: 'bf_emma' })
+    .toEqual({
+      text: 'hello',
+      voice: 'bf_emma',
+    })
 })
 
 test('each language has its own voices, and its own sample', async ({ page }) => {

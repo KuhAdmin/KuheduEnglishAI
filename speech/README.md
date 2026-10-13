@@ -43,6 +43,14 @@ python -m tts.samples af_heart hf_alpha     # or only some
 - It loads the model **before** it starts answering, which takes up to a minute; the first use
   ever also downloads it (about 330 MB) and each voice (about 0.5 MB).
 - `GET /voices` lists the voices, `POST /speak {text, voice}` answers with MP3, `GET /health`.
+- **With the MP3 comes the mouth for it**, in the `X-Speech-Mouth` header (`tts/mouth.py`): for a
+  drawn face in the app, which shape the lips have and from which thousandth of a second
+  (`0c450m500o575m625r925c`: closed, then nearly closed from 0.45 s, open from 0.5 s, …). It is
+  exact, not estimated: Kokoro decides how long every sound of the sentence lasts before it
+  makes the speech, and those lengths add up to the speech. Which sound gets which of the five
+  shapes is the table at the top of that file; the jaw opens on every vowel and comes up for
+  the consonants between. A sound whose lengths do not line up with its sounds is sent without
+  a mouth, and the Node server then does not keep it.
 - A voice's file is asked of the model hub only the first time it is wanted (`voice_file` in
   `tts/synth.py`). Kokoro would ask again on every start, and on a slow connection that kept
   the first sentence in each voice waiting a minute and a half: longer than the server waits.

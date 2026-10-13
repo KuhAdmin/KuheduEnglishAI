@@ -18,8 +18,8 @@ const shirt = [
 
 /**
  * A drawn man, head and shoulders, shaded to look round and lit like a 3D cartoon character:
- * he blinks, his lips take the shape given (`useLipSync()` moves them with the device's voice),
- * and his mood can be a wide smile or a thumbs up. A drawing, in its own colors whatever the
+ * he blinks, his lips take the shape given (`useLipSync()` moves them with the app's voice),
+ * and his mood can be a gentle smile or a thumbs up. A drawing, in its own colors whatever the
  * theme; only what is behind him is the theme's.
  */
 export function MaleAvatar({ mouth = 'rest', mood = 'neutral', ...rest }: AvatarProps) {

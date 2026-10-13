@@ -20,8 +20,8 @@ const top = [
 
 /**
  * A drawn woman, head and shoulders, the counterpart of `MaleAvatar` and shaded the same way:
- * she blinks, her lips take the shape given (`useLipSync()` moves them with the device's
- * voice), and her mood can be a wide smile or a thumbs up. A drawing, in its own colors
+ * she blinks, her lips take the shape given (`useLipSync()` moves them with the app's
+ * voice), and her mood can be a gentle smile or a thumbs up. A drawing, in its own colors
  * whatever the theme.
  */
 export function FemaleAvatar({ mouth = 'rest', mood = 'neutral', ...rest }: AvatarProps) {

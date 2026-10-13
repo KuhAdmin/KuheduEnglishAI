@@ -25,6 +25,15 @@ type LessonProgressState = LessonProgress & {
   markScenarioDone: (week: number, scenario: number) => void
 }
 
+/** Whether anything in the lessons was heard or finished in this browser: someone has begun. */
+export function hasLessonProgress(): boolean {
+  const { heardWeeks, doneDays, reviewParts, scenariosDone } = useLessonProgressStore.getState()
+  return (
+    heardWeeks.length > 0 ||
+    [doneDays, reviewParts, scenariosDone].some((byWeek) => Object.keys(byWeek).length > 0)
+  )
+}
+
 /** The first day of a week not finished yet; Day 1 again once the whole week is done. */
 export function nextLessonDay(done: readonly number[] = []): number {
   for (let day = 1; day <= DAYS_PER_WEEK; day += 1) {

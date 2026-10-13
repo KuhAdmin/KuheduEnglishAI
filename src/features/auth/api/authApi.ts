@@ -23,8 +23,6 @@ async function enter(path: string, body: unknown): Promise<SessionUser> {
 
 export const signUp = (credentials: SignUpRequest) => enter('/sign-up', credentials)
 export const signIn = (credentials: SignInRequest) => enter('/sign-in', credentials)
-/** `credential` is the ID token Google handed this browser. */
-export const signInWithGoogle = (credential: string) => enter('/google', { credential })
 
 export async function verifyEmail(code: string): Promise<void> {
   await post('/verify-email', noContentSchema, { code })

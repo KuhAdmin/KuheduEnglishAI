@@ -11,7 +11,8 @@
     "test": "vitest run",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "node src/db/migrate.ts",
-    "admin:create": "node src/commands/createAdmin.ts"
+    "admin:create": "node src/commands/createAdmin.ts",
+    "mail:test": "node src/commands/sendTestMail.ts"
   },
   "dependencies": {
     "@fastify/cookie": "^11.1.3",

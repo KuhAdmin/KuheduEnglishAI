@@ -1,6 +1,7 @@
-import { expect, test, type Page } from '@playwright/test'
+import type { Page } from '@playwright/test'
 import {
   denyMicrophone,
+  expect,
   expectNoHorizontalScroll,
   PIXEL_PNG,
   seedLanguage,
@@ -8,6 +9,7 @@ import {
   signInAsAdmin,
   spoken,
   stubSpeech,
+  test,
 } from './helpers'
 
 const heading = (page: Page) => page.getByRole('heading', { level: 1 })
@@ -45,9 +47,20 @@ test('Week 1, Day 1: listen to the conversation, then Next opens', async ({ page
     expect(Math.round(box?.width ?? 0)).toBeGreaterThanOrEqual(44)
   }
 
-  // Hearing one line again is not hearing the conversation.
+  // Hearing one line again is not hearing the conversation. Asha's line is in the default
+  // female voice and Ravi's in the default male one, though the learner's tutor is the man.
   await page.getByRole('button', { name: 'Listen to this line: Hello! Good morning.' }).click()
   await expect(next(page)).toBeDisabled()
+  await page
+    .getByRole('button', { name: 'Listen to this line: Good morning! How are you?' })
+    .click()
+  // (The tutor has spoken on the week's overview before this; only the conversation is looked at.)
+  const lineVoices = async () =>
+    (await spoken(page)).filter(({ text }) => text.includes('Good morning'))
+  await expect.poll(lineVoices).toEqual([
+    { text: 'Hello! Good morning.', voice: 'af_heart' },
+    { text: 'Good morning! How are you?', voice: 'am_michael' },
+  ])
 
   await play.click()
   await expect(next(page)).toBeEnabled()

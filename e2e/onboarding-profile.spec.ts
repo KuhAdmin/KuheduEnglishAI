@@ -1,5 +1,5 @@
-import { expect, test, type Page } from '@playwright/test'
-import { PIXEL_PNG, seedSettings } from './helpers'
+import type { Page } from '@playwright/test'
+import { expect, PIXEL_PNG, seedSettings, test } from './helpers'
 
 /**
  * State of the coin in the first option's avatar. `facing` is the cosine of its turn:

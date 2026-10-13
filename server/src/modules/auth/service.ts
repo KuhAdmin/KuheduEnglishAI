@@ -4,7 +4,7 @@ import type {
   SignInRequest,
   SignUpRequest,
 } from '@kuhedu/contracts'
-import { and, eq } from 'drizzle-orm'
+import { and, eq, isNull } from 'drizzle-orm'
 import type { Db } from '../../db/client.ts'
 import { oauthIdentities, users } from '../../db/schema/index.ts'
 import type { Mailer } from '../../lib/mailer.ts'
@@ -32,17 +32,64 @@ const wrongCode = () =>
   new HttpError(400, 'validation_failed', 'The code is not right', { code: 'auth.codeWrong' })
 const tooManyGuesses = () => new HttpError(429, 'rate_limited', 'Too many guesses at this code')
 
+/**
+ * Send an address the code that verifies it. Nothing goes out when one went a moment ago (it
+ * still works). A mail that fails is logged, not thrown: the caller's own work is done, and a
+ * new code can be asked for from the code step.
+ */
+async function sendVerificationCode({ db, mailer, secret, logError }: AuthDeps, email: string) {
+  try {
+    const code = await issueCode(db, secret, email, 'verify_email')
+    if (code) await mailer.send(codeMail(email, 'verify_email', code))
+  } catch (error) {
+    logError(error)
+  }
+}
+
+/**
+ * An address somebody signed up with and never verified is nobody's account yet: whoever did it
+ * may have mistyped, or may not own it. So signing up with it again is not refused: the new
+ * sign-up takes the place of the old one, whose password and browsers go. Only the code, which
+ * goes to the address itself, makes it an account.
+ */
+async function claimUnverified(db: Db, email: string, passwordHash: string) {
+  return db.transaction(async (tx) => {
+    const [claimed] = await tx
+      .update(users)
+      .set({ passwordHash, lastLoginAt: new Date() })
+      .where(
+        and(
+          eq(users.email, email),
+          isNull(users.emailVerifiedAt),
+          eq(users.role, 'learner'),
+          eq(users.status, 'active'),
+        ),
+      )
+      .returning()
+    if (claimed) await revokeUserSessions(tx, claimed.id)
+    return claimed
+  })
+}
+
+/**
+ * The first half of making an account: the address and password are kept, the browser is
+ * signed in so that it can answer for the code, and the code is sent. **It is an account only
+ * once the code has been matched** (`verifyEmail`): until then the app leads nowhere but the
+ * code step, and `requireVerified` keeps it out of everything that is a learner's own.
+ */
 export async function signUp(
-  { db, mailer, secret, logError }: AuthDeps,
+  deps: AuthDeps,
   { email, password }: SignUpRequest,
   userAgent: string | undefined,
 ): Promise<SignedIn> {
+  const { db } = deps
   const passwordHash = await hashPassword(password)
-  const [user] = await db
+  const [made] = await db
     .insert(users)
     .values({ email, passwordHash, lastLoginAt: new Date() })
     .onConflictDoNothing({ target: users.email })
     .returning()
+  const user = made ?? (await claimUnverified(db, email, passwordHash))
   if (!user) {
     throw new HttpError(409, 'conflict', 'This address already has an account', {
       email: 'auth.emailTaken',
@@ -50,21 +97,16 @@ export async function signUp(
   }
 
   const token = await createSession(db, user.id, userAgent)
-  // The account exists whether or not the mail goes out: a new code can be asked for.
-  try {
-    const code = await issueCode(db, secret, email, 'verify_email')
-    if (code) await mailer.send(codeMail(email, 'verify_email', code))
-  } catch (error) {
-    logError(error)
-  }
+  await sendVerificationCode(deps, email)
   return { user: toSessionUser(user), token }
 }
 
 export async function signIn(
-  { db }: AuthDeps,
+  deps: AuthDeps,
   { email, password }: SignInRequest,
   userAgent: string | undefined,
 ): Promise<SignedIn> {
+  const { db } = deps
   const [user] = await db.select().from(users).where(eq(users.email, email))
   const matches = user?.passwordHash
     ? await verifyPassword(password, user.passwordHash)
@@ -76,6 +118,9 @@ export async function signIn(
     .set({ lastLoginAt: new Date() })
     .where(eq(users.id, user.id))
     .returning()
+  // Someone who signed up and left before the code: they are let back in only as far as the
+  // code step, which needs a code that still works.
+  if (user.emailVerifiedAt === null) await sendVerificationCode(deps, email)
   return {
     user: toSessionUser(updated ?? user),
     token: await createSession(db, user.id, userAgent),
@@ -165,7 +210,12 @@ export async function signInWithGoogle(
     if (!account) {
       ;[account] = await tx
         .insert(users)
-        .values({ email: identity.email, emailVerifiedAt: new Date(), displayName: identity.name })
+        .values({
+          email: identity.email,
+          emailVerifiedAt: new Date(),
+          displayName: identity.name,
+          pictureUrl: identity.picture,
+        })
         .returning()
     }
     if (!account) throw new Error('The account could not be made')
@@ -183,7 +233,9 @@ export async function signInWithGoogle(
 
   const [updated] = await db
     .update(users)
-    .set({ lastLoginAt: new Date() })
+    // Their picture as Google has it now: it is theirs to change there, and the address of an
+    // old one stops working. Signing in without one leaves what was kept.
+    .set({ lastLoginAt: new Date(), ...(identity.picture && { pictureUrl: identity.picture }) })
     .where(eq(users.id, user.id))
     .returning()
   return {

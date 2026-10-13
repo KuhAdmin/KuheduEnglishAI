@@ -7,7 +7,7 @@ import {
 } from 'fastify-type-provider-zod'
 import type { Db } from './db/client.ts'
 import type { Mailer } from './lib/mailer.ts'
-import type { GoogleVerifier } from './modules/auth/google.ts'
+import type { GoogleSignIn } from './modules/auth/google.ts'
 import { authRoutes } from './modules/auth/routes.ts'
 import { speechRoutes } from './modules/speech/routes.ts'
 import type { SoundCache } from './modules/speech/soundCache.ts'
@@ -25,7 +25,7 @@ export type AppServices = {
   /** Real people use this server (`NODE_ENV=production`). */
   production: boolean
   /** Present once Google sign-in is set up. */
-  verifyGoogle?: GoogleVerifier
+  google?: GoogleSignIn
   /** Requests one address may make to each account route in a minute. */
   authRequestsPerMinute?: number
 }
@@ -78,7 +78,7 @@ export function buildApp({
     time: new Date().toISOString(),
   }))
 
-  // Needs no database and no account: guests hear the lessons too.
+  // Needs no database and asks for no account: a sound says nothing about anyone.
   if (speech) {
     void app.register(speechRoutes, {
       prefix: '/api/speech',
@@ -90,7 +90,7 @@ export function buildApp({
   }
 
   if (services) {
-    const { db, mailer, secret, production, verifyGoogle } = services
+    const { db, mailer, secret, production, google } = services
     const sessions = registerSessions(app, { db, production })
     void app.register(authRoutes, {
       prefix: '/api/auth',
@@ -98,7 +98,8 @@ export function buildApp({
       mailer,
       secret,
       sessions,
-      verifyGoogle,
+      google,
+      production,
       requestsPerMinute: services.authRequestsPerMinute ?? AUTH_REQUESTS_PER_MINUTE,
       logError: (error) => app.log.error(error),
     })

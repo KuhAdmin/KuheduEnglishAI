@@ -5,8 +5,10 @@
  * a language, or cannot be reached and the sound was never heard before, the text is only shown.
  */
 
+import { SPEECH_MOUTH_HEADER, speechMouthSchema } from '@kuhedu/contracts'
 import { tutorVoiceKind } from '@/shared/lib/learner/tutorAvatar'
 import { env } from '../env'
+import type { MouthMark } from './lipSync'
 import {
   loadSpeechVoices,
   onSpeechVoicesChanged,
@@ -14,7 +16,13 @@ import {
   speechVoicesKnown,
 } from './speechCatalogue'
 import { chosenVoices } from './useVoiceStore'
-import { voiceForSpeaker, voicesFor, type VoiceChoice } from './voices'
+import {
+  voiceForFace,
+  voiceForSpeaker,
+  voicesFor,
+  type VoiceChoice,
+  type VoiceKind,
+} from './voices'
 
 export class SpeechError extends Error {
   /** `unsupported`: there is no voice for it. `failed`: there is, and it could not be played. */
@@ -44,6 +52,12 @@ export type SpeechPart = {
    * voice of the learner's tutor, the second the other tutor's. Left out: the learner's tutor.
    */
   speaker?: number
+  /**
+   * Said by a woman or a man of the content's own (a person in a conversation): the default
+   * voice of that kind, whoever the learner's tutor is and whatever voices they chose, so that
+   * "Asha" is never given a man's voice. It decides before `speaker` does.
+   */
+  voice?: VoiceKind
 }
 
 export type SpeakAllOptions = SpeakOptions & {
@@ -80,12 +94,24 @@ export function hasVoiceFor(language: string): boolean {
 /** Be told when the server's voices have arrived or changed. Returns how to stop listening. */
 export const onVoicesChanged = onSpeechVoicesChanged
 
+/** A sound while it is being played: what a face needs to move its lips with it. */
+export type PlayingSound = {
+  /** The lips through it, as the server sent them; `null` for a sound that came without. */
+  mouth: readonly MouthMark[] | null
+  /**
+   * How far into it the player is, in seconds of the sound itself: played slowly, it takes
+   * longer to get there, and the lips with it.
+   */
+  position: () => number
+  /** Its length in seconds; not a number until the player knows it. */
+  duration: () => number
+}
+
 /**
  * What the voice is doing, for anything that moves with it (a talking face): each part as its
- * sound starts, and the end. A sound does not say where in its text it is, so a face runs
- * through each part at a likely pace from its `start`.
+ * sound starts, with the sound to follow, and the end.
  */
-export type SpeechActivity = { type: 'start'; text: string; rate: number } | { type: 'end' }
+export type SpeechActivity = { type: 'start'; text: string; sound: PlayingSound } | { type: 'end' }
 
 const activityListeners = new Set<(activity: SpeechActivity) => void>()
 const tell = (activity: SpeechActivity) => {
@@ -102,51 +128,64 @@ export function onSpeechActivity(listener: (activity: SpeechActivity) => void): 
  * The voice a text is said with: the one asked for, else the voice of the learner's tutor for
  * that language (Profile › Voice settings has one for the male tutor and one for the female,
  * Profile › Tutor avatar says which tutor is theirs). A voice the server no longer offers is
- * passed over, so a choice made on another day cannot leave the app silent.
+ * passed over, so a choice made on another day cannot leave the app silent. A part that says
+ * whether a woman or a man speaks it gets the default voice of that kind instead.
  */
 function voiceToUse(
   language: string,
   voiceId: string | undefined,
-  speaker: number,
+  { speaker = 0, voice: kind }: SpeechPart,
 ): VoiceChoice | undefined {
   const voices = speechVoices()
   const asked = voiceId && voicesFor(voices, language).find((voice) => voice.id === voiceId)
   if (asked) return asked
+  if (kind) return voiceForFace(voices, language, kind)
   return voiceForSpeaker(voices, language, tutorVoiceKind(), chosenVoices(language), speaker)
 }
 
-/** Where the sound of a text in a voice is. The address is the sound's name: it never changes. */
+/**
+ * Where the sound of a text in a voice is. The address is the sound's name: it never changes,
+ * and a browser keeps what it got there for good. So the address also names what comes with the
+ * sound (`with`): a copy kept from before the mouth was sent with it is not this sound.
+ */
 export const soundUrl = (text: string, voiceId: string) =>
-  `${env.VITE_API_BASE_URL}/speech/audio?${new URLSearchParams({ voice: voiceId, text })}`
+  `${env.VITE_API_BASE_URL}/speech/audio?${new URLSearchParams({ voice: voiceId, text, with: 'lips' })}`
+
+/** A sound as the player is given it, and the mouth that came with it. */
+type KeptSound = { address: string; mouth: MouthMark[] | null }
 
 // Sounds fetched in this session, each as the address the player is given for it, so that
 // hearing a line again, or slowly, asks for nothing. The browser and the service worker keep
 // them for longer; this is only the nearest shelf.
 const MAX_KEPT = 80
-const kept = new Map<string, Promise<string>>()
+const kept = new Map<string, Promise<KeptSound>>()
 
 const forget = (url: string) => {
   // An address is let go only when its sound leaves the shelf: never while the player may
   // still be holding it.
   void kept.get(url)?.then(
-    (address) => URL.revokeObjectURL(address),
+    ({ address }) => URL.revokeObjectURL(address),
     () => {},
   )
   kept.delete(url)
 }
 
 /** The sound of a text in a voice, fetched once, as an address the player can play. */
-function fetchSound(text: string, voiceId: string): Promise<string> {
+function fetchSound(text: string, voiceId: string): Promise<KeptSound> {
   const url = soundUrl(text, voiceId)
   const known = kept.get(url)
   if (known) return known
 
-  const sound = fetch(url)
-    .then((response) => {
-      if (!response.ok) throw new Error(`No sound (${response.status})`)
-      return response.blob()
-    })
-    .then((blob) => URL.createObjectURL(blob))
+  const sound = fetch(url).then(async (response) => {
+    if (!response.ok) throw new Error(`No sound (${response.status})`)
+    // What the server says is checked like anything else it sends; a mouth that does not read
+    // as one is left out, and the sound is played all the same.
+    const mouth = speechMouthSchema.safeParse(response.headers.get(SPEECH_MOUTH_HEADER))
+    return {
+      address: URL.createObjectURL(await response.blob()),
+      mouth: mouth.success ? mouth.data : null,
+    }
+  })
   kept.set(url, sound)
   // A sound that could not be fetched is asked for again next time.
   sound.catch(() => kept.delete(url))
@@ -230,12 +269,12 @@ export function speakAll(
     const me = { stop: () => finish(() => resolve('cancelled')) }
     current = me
 
-    const play = async (sounds: readonly Promise<string>[], index: number) => {
+    const play = async (sounds: readonly Promise<KeptSound>[], index: number) => {
       const part = parts[index]
       const sound = sounds[index]
       if (!part || !sound) return finish(() => resolve('ended'))
       try {
-        const address = await sound
+        const { address, mouth } = await sound
         if (settled) return
         audio.src = address
         handed = true
@@ -256,7 +295,15 @@ export function speakAll(
         if (settled) return
         unlocked = true
         onPartStart?.(index)
-        tell({ type: 'start', text: part.text, rate })
+        tell({
+          type: 'start',
+          text: part.text,
+          sound: {
+            mouth,
+            position: () => (mine() ? audio.currentTime : 0),
+            duration: () => audio.duration,
+          },
+        })
       } catch {
         // Stopped by `cancelSpeech`, the wait simply ends; anything else could not be played.
         fail('failed')
@@ -266,13 +313,13 @@ export function speakAll(
     const begin = () => {
       if (settled) return
       const language = lang ?? 'en'
-      const voices = parts.map((part) => voiceToUse(language, voiceId, part.speaker ?? 0))
+      const voices = parts.map((part) => voiceToUse(language, voiceId, part))
       if (voices.some((voice) => voice === undefined)) return fail('unsupported')
 
       // Asked for one after another, in the order they will be heard, each as soon as the one
       // before it has arrived. The server makes one sound at a time: asked for all at once, the
       // first line of a conversation could be kept waiting behind its last.
-      const sounds: Promise<string>[] = []
+      const sounds: Promise<KeptSound>[] = []
       let next: Promise<unknown> = Promise.resolve()
       parts.forEach((part, index) => {
         const sound = next.then(() => {

@@ -6,6 +6,7 @@ import {
   MAX_LINE_LENGTH,
   MAX_LINE_TRANSLATION_LENGTH,
   MAX_SPEAKER_LENGTH,
+  speakerVoice,
   weekDialogue,
   weekDialoguesSchema,
 } from './weekDialogues'
@@ -36,6 +37,12 @@ describe('the built-in conversations', () => {
     expect([...new Set(lines.map((written) => written.speaker))]).toEqual(['Asha', 'Ravi'])
     expect(lines[0]?.text).toBe('Hello! Good morning.')
     expect(lines.some((written) => written.text.includes('What’s your name?'))).toBe(true)
+  })
+
+  it('say that Asha is a woman and Ravi a man, so each is read in a voice that fits', () => {
+    const dialogue = builtInWeekDialogues[1]
+    expect(dialogue && speakerVoice(dialogue, 'Asha')).toBe('female')
+    expect(dialogue && speakerVoice(dialogue, 'Ravi')).toBe('male')
   })
 })
 
@@ -75,6 +82,26 @@ describe('weekDialoguesSchema', () => {
         ],
       },
     })
+  })
+
+  it('keeps the voices of those who speak, in the order they first speak, and no others', () => {
+    const lines = [
+      { speaker: ' Asha ', text: 'Hello!' },
+      { speaker: 'Ravi', text: 'Hi!' },
+      { speaker: 'Meera', text: 'Good morning!' },
+    ]
+    const kept = parse({
+      2: {
+        lines,
+        voices: { Ravi: 'male', Asha: 'female', Meera: 'child', Arjun: 'male', toString: 'male' },
+      },
+      3: { lines, voices: 'nonsense' },
+    })
+
+    expect(JSON.stringify(kept[2]?.voices)).toBe('{"Asha":"female","Ravi":"male"}')
+    // A conversation that says nothing about its speakers reads back without the field.
+    expect(kept[3]).toEqual({ videoUrl: null, lines: kept[2]?.lines })
+    expect(kept[3] && speakerVoice(kept[3], 'toString')).toBeUndefined()
   })
 
   it('drops a week that does not exist, one with no finished line, and an unsafe video link', () => {

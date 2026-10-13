@@ -1,5 +1,4 @@
-import { expect, test } from '@playwright/test'
-import { expectNoHorizontalScroll, seedLanguage, spoken, stubSpeech } from './helpers'
+import { expect, expectNoHorizontalScroll, seedLanguage, spoken, stubSpeech, test } from './helpers'
 
 const SAMPLE = 'Hello! Let’s practise speaking English together.'
 // "Male tutor" is also the end of "Female tutor", so it is asked for exactly.

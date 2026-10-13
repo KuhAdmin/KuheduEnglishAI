@@ -38,15 +38,15 @@ describe.each([
     expect(new Set(drawings).size).toBe(shapes.length)
   })
 
-  it('smiles widely when asked, but not over what is being said', () => {
+  it('smiles gently when asked, but not over what is being said', () => {
     const { container, rerender } = render(<Avatar />)
     const closed = drawing(container)
 
     rerender(<Avatar mood="smile" />)
     const smile = drawing(container)
     expect(smile).not.toBe(closed)
-    // A wide smile shows teeth.
-    expect(part(container, 'mouth').querySelector('.fill-\\(--figure-teeth\\)')).not.toBeNull()
+    // Lips together: a smile, not a grin.
+    expect(part(container, 'mouth').querySelector('.fill-\\(--figure-teeth\\)')).toBeNull()
 
     rerender(<Avatar mood="smile" mouth="open" />)
     const speaking = drawing(container)

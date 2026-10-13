@@ -101,11 +101,11 @@ export function codeMail(to: string, purpose: Purpose, code: string) {
   const minutes = CODE_LIFETIME_MS / 60_000
   const what =
     purpose === 'verify_email'
-      ? 'Use this code to confirm your email address'
+      ? 'Use this code to confirm your email address and finish creating your Kuhedu Lingo account'
       : 'Use this code to choose a new password'
   return {
     to,
-    subject: `${code} is your Kuhedu code`,
+    subject: `${code} is your Kuhedu Lingo code`,
     text: `${what}:\n\n${code}\n\nIt works for ${minutes} minutes. If you did not ask for it, you can ignore this email.`,
   }
 }

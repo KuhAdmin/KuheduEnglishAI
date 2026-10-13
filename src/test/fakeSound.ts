@@ -1,4 +1,4 @@
-import type { SpeechVoice } from '@kuhedu/contracts'
+import { SPEECH_MOUTH_HEADER, type SpeechVoice } from '@kuhedu/contracts'
 import { vi } from 'vitest'
 import { resetSpeech } from '@/shared/lib/audio/speech'
 import { resetSpeechVoices } from '@/shared/lib/audio/speechCatalogue'
@@ -62,15 +62,21 @@ export type FakeSound = {
   paused: () => boolean
   /** From now on the server answers, or does not. */
   serverUp: (up: boolean) => void
+  /** The player learns how long the sound it has is, in seconds. Until then it does not know. */
+  lasts: (seconds: number) => void
 }
 
 /**
  * Put the fakes in place, with the server's voices already known to the app (as on any visit
- * but the first). Give `known: false` for the first visit, before the list has arrived.
+ * but the first). Give `known: false` for the first visit, before the list has arrived, and
+ * `mouth` for a server that sends that mouth with every sound (`0c75m150o`).
+ *
+ * The player keeps time by the clock, so a test with fake timers moves through a sound by
+ * advancing them.
  */
 export function installFakeSound(
   voices: readonly SpeechVoice[] = TEST_VOICES,
-  { known = true }: { known?: boolean } = {},
+  { known = true, mouth }: { known?: boolean; mouth?: string } = {},
 ): FakeSound {
   const played: Played[] = []
   const fetched: Sound[] = []
@@ -81,29 +87,51 @@ export function installFakeSound(
   let latest: FakeAudio | undefined
 
   class FakeAudio {
-    src = ''
     preload = ''
     playbackRate = 1
     defaultPlaybackRate = 1
     preservesPitch = true
     paused = true
+    duration = Number.NaN
     onended: (() => void) | null = null
     onerror: (() => void) | null = null
+    private address = ''
+    private reached = 0
+    private since = 0
 
     constructor() {
       // The newest player is the one in use: the app keeps one.
       latest = this as FakeAudio
     }
 
+    get src() {
+      return this.address
+    }
+
+    // A new sound starts from its beginning, and its length is not known yet.
+    set src(address: string) {
+      this.address = address
+      this.reached = 0
+      this.duration = Number.NaN
+    }
+
+    /** Seconds of the sound itself: played slowly, fewer of them go by. */
+    get currentTime() {
+      if (this.paused) return this.reached
+      return this.reached + ((Date.now() - this.since) / 1000) * this.playbackRate
+    }
+
     play() {
       const sound = urls.get(this.src)
       // The silent sound that unlocks a phone's player is not something that was said.
       if (sound) played.push({ ...sound, rate: this.playbackRate })
+      this.since = Date.now()
       this.paused = false
       return Promise.resolve()
     }
 
     pause() {
+      this.reached = this.currentTime
       this.paused = true
     }
   }
@@ -123,8 +151,9 @@ export function installFakeSound(
         fetched.push(sound)
         const blob = new Blob(['sound'], { type: 'audio/mpeg' })
         sounds.set(blob, sound)
+        const headers = new Headers(mouth ? { [SPEECH_MOUTH_HEADER]: mouth } : undefined)
         // Handed back as it is: a real `Response` would give out a copy, which nothing knows.
-        return { ok: true, status: 200, blob: async () => blob } as Response
+        return { ok: true, status: 200, headers, blob: async () => blob } as Response
       }
       return new Response(null, { status: 404 })
     }),
@@ -150,6 +179,9 @@ export function installFakeSound(
     paused: () => latest?.paused ?? true,
     serverUp: (next) => {
       up = next
+    },
+    lasts: (seconds) => {
+      if (latest) latest.duration = seconds
     },
   }
 }

@@ -4,7 +4,8 @@ import { instant } from './columns.ts'
 
 /**
  * What happened in the app and when: never audio, and never what a learner said or typed.
- * A guest's events have no account. Rows are only ever added.
+ * An event from before anyone is signed in (the landing page, the account screen) has no
+ * account. Rows are only ever added.
  */
 export const events = pgTable(
   'events',

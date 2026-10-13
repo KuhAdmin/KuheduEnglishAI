@@ -20,6 +20,7 @@ export const toSessionUser = (user: UserRow): SessionUser => ({
   emailVerified: user.emailVerifiedAt !== null,
   role: user.role,
   displayName: user.displayName,
+  pictureUrl: user.pictureUrl,
 })
 
 /** Sign a browser in. The token goes into its cookie and is not kept anywhere else. */
