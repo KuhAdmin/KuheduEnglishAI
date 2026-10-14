@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { cn } from '@/shared/lib/cn'
 import { TutorAsPartner } from './TutorAsPartner'
 
+/** The picture's side in CSS pixels, for the browser to keep its place before it has loaded. */
+const PIXELS = { sm: 56, md: 112 }
+
 export type PartnerAvatarProps = {
   /**
    * Their picture, when an admin gave them one; `null` shows the learner's tutor playing them,
@@ -10,6 +13,8 @@ export type PartnerAvatarProps = {
   imageUrl: string | null
   /** Their line is being said right now. */
   speaking: boolean
+  /** `md` before the conversation, where they stand alone; `sm` beside each of their lines. */
+  size?: 'sm' | 'md'
 }
 
 /**
@@ -19,14 +24,14 @@ export type PartnerAvatarProps = {
  * With a picture, it is that picture in a circle, a ring pulsing around it while they speak.
  * Either is decoration: the screen's heading names them, and its status line says who speaks.
  */
-export function PartnerAvatar({ imageUrl, speaking }: PartnerAvatarProps) {
+export function PartnerAvatar({ imageUrl, speaking, size = 'md' }: PartnerAvatarProps) {
   const [failedImage, setFailedImage] = useState<string | null>(null)
   const showImage = imageUrl !== null && imageUrl !== failedImage
 
-  if (!showImage) return <TutorAsPartner speaking={speaking} />
+  if (!showImage) return <TutorAsPartner speaking={speaking} size={size} />
 
   return (
-    <span className="relative inline-flex size-28 shrink-0">
+    <span className={cn('relative inline-flex shrink-0', size === 'sm' ? 'size-14' : 'size-28')}>
       {speaking && (
         <span
           aria-hidden="true"
@@ -35,7 +40,8 @@ export function PartnerAvatar({ imageUrl, speaking }: PartnerAvatarProps) {
       )}
       <span
         className={cn(
-          'relative flex size-full items-center justify-center overflow-hidden rounded-full border-4 border-primary bg-primary-soft text-on-primary-soft',
+          'relative flex size-full items-center justify-center overflow-hidden rounded-full border-primary bg-primary-soft text-on-primary-soft',
+          size === 'sm' ? 'border-2' : 'border-4',
           // Without motion, a still ring says the same thing as the pulse.
           speaking && 'motion-reduce:ring-4 motion-reduce:ring-primary-soft',
         )}
@@ -43,8 +49,8 @@ export function PartnerAvatar({ imageUrl, speaking }: PartnerAvatarProps) {
         <img
           src={imageUrl}
           alt=""
-          width={112}
-          height={112}
+          width={PIXELS[size]}
+          height={PIXELS[size]}
           decoding="async"
           draggable={false}
           onError={() => setFailedImage(imageUrl)}

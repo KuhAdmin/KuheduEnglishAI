@@ -75,6 +75,7 @@ export const test = base.extend({
     await signedInAs(context, LEARNER)
     await withoutLearnerServer(context)
     await withoutLessonServer(context)
+    await withoutAppConfigServer(context)
     await run(context)
   },
 })
@@ -157,6 +158,100 @@ export async function lessonServer(target: Page | BrowserContext, kept: KeptPiec
     if (!sent) return route.fulfill({ status: 204 })
     const version = (there?.version ?? 0) + 1
     kept.push({ week: number, kind, value: sent.value, version })
+    return route.fulfill({ json: { version } })
+  })
+}
+
+/**
+ * Everything else an admin manages is kept on the server too (`/api/app-config`, and
+ * `/api/admin/app-config` for an admin). Asked, it does not answer, so the screens run on what
+ * is built in and on what the spec seeded (`seedSettings`), as they do offline. This is every
+ * spec's start; an admin (`signInAsAdmin`) gets a stand-in that keeps what they save, and a
+ * spec about a learner reading the server says `appConfigServer` itself.
+ */
+export const withoutAppConfigServer = (target: Page | BrowserContext) =>
+  target.route(/\/api\/(admin\/)?app-config(\/|$|\?)/, (route) => route.abort())
+
+type Texts = Record<string, Record<string, string>>
+
+/** The settings an admin wrote, as the stand-in server keeps them. */
+export type KeptSettings = {
+  settings: Record<string, { value: unknown; version: number }>
+  texts: { screen: Texts; curriculum: Texts }
+}
+
+export const noSettings = (): KeptSettings => ({
+  settings: {},
+  texts: { screen: {}, curriculum: {} },
+})
+
+/**
+ * Stand in for the server's settings routes: what is kept in `kept`, which several browsers can
+ * be given to share a server. What the real one checks and refuses is its own tests' to say
+ * (`server/test/appConfig.db.test.ts`).
+ */
+export async function appConfigServer(
+  target: Page | BrowserContext,
+  kept: KeptSettings = noSettings(),
+) {
+  const conflict = { status: 409, json: { error: { code: 'conflict', message: '' } } }
+
+  await target.route(/\/api\/(admin\/)?app-config(\/|$|\?)/, (route) => {
+    const request = route.request()
+    const url = new URL(request.url())
+    const method = request.method()
+    const path = url.pathname.replace(/\/$/, '')
+
+    if (path === '/api/app-config' && method === 'GET') {
+      const settings = Object.fromEntries(
+        ['landing', 'languages', 'learner-profiles'].map((name) => [
+          name,
+          kept.settings[name]?.value ?? null,
+        ]),
+      )
+      return route.fulfill({ json: { settings, texts: kept.texts } })
+    }
+    if (path === '/api/admin/app-config' && method === 'GET') {
+      const settings = Object.entries(kept.settings).map(([name, held]) => ({ name, ...held }))
+      return route.fulfill({ json: { settings, texts: kept.texts } })
+    }
+
+    const scope = /^\/api\/admin\/app-config\/texts\/(screen|curriculum)$/.exec(path)?.[1]
+    if ((scope === 'screen' || scope === 'curriculum') && method === 'PATCH') {
+      const texts = kept.texts[scope]
+      const { changes } = request.postDataJSON() as {
+        changes: { language: string; key: string; from: string | null; to: string | null }[]
+      }
+      const stale = changes.some(
+        ({ language, key, from, to }) =>
+          (texts[language]?.[key] ?? null) !== from && (texts[language]?.[key] ?? null) !== to,
+      )
+      if (stale) return route.fulfill(conflict)
+      for (const { language, key, to } of changes) {
+        if (to === null) delete texts[language]?.[key]
+        else (texts[language] ??= {})[key] = to
+      }
+      return route.fulfill({ status: 204 })
+    }
+
+    const whole = /^\/api\/admin\/app-config\/([\w-]+)$/.exec(path)
+    if (!whole || (method !== 'PUT' && method !== 'DELETE')) {
+      return route.fulfill({ status: 404, json: { error: { code: 'not_found', message: '' } } })
+    }
+    const name = String(whole[1])
+    const there = kept.settings[name]
+    const sent =
+      method === 'PUT' ? (request.postDataJSON() as { value: unknown; version: number }) : null
+    const based = sent ? sent.version : Number(url.searchParams.get('version'))
+    if (based !== (there?.version ?? 0)) return route.fulfill(conflict)
+    if (!sent) {
+      kept.settings = Object.fromEntries(
+        Object.entries(kept.settings).filter(([other]) => other !== name),
+      )
+      return route.fulfill({ status: 204 })
+    }
+    const version = (there?.version ?? 0) + 1
+    kept.settings[name] = { value: sent.value, version }
     return route.fulfill({ json: { version } })
   })
 }
@@ -316,8 +411,9 @@ export async function adminServer(target: Page | BrowserContext) {
  */
 export async function signInAsAdmin(page: Page) {
   await adminServer(page.context())
-  // What an admin saves of the lessons goes to the server: one that keeps it, for every tab.
+  // What an admin saves goes to the server: one that keeps it, for every tab.
   await lessonServer(page.context())
+  await appConfigServer(page.context())
   await page.goto('/sign-in')
   await page.getByLabel('Email address').fill(ADMIN.email)
   await page.getByLabel('Password', { exact: true }).fill(ADMIN.password)

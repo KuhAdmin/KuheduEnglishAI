@@ -1,13 +1,17 @@
 import {
   ADMIN,
   adminServer,
+  appConfigServer,
   expect,
   expectNoHorizontalScroll,
+  noSettings,
   PIXEL_PNG,
   seedLanguage,
   signedInAs,
   signInAsAdmin,
   test,
+  withoutLearnerServer,
+  withoutLessonServer,
 } from './helpers'
 
 const save = 'Save changes'
@@ -393,5 +397,70 @@ test.describe('admin and app side by side', () => {
 
     await page.getByRole('button', { name: 'Discard' }).click()
     await expect(page.locator('ol > li')).toHaveCount(3)
+  })
+})
+
+test.describe('what an admin saves is kept on the server', () => {
+  test('it reaches a visitor on another device, who has never seen the admin’s browser', async ({
+    browser,
+    page: adminTab,
+  }) => {
+    // One server, two browsers: the admin's, and a visitor's somewhere else.
+    const kept = noSettings()
+    await signInAsAdmin(adminTab)
+    await appConfigServer(adminTab.context(), kept)
+
+    await adminTab.goto('/admin/landing')
+    await adminTab.getByLabel('Brand name').fill('Acme English')
+    await adminTab.getByRole('button', { name: save }).click()
+    await expect(adminTab.getByRole('status')).toContainText('Saved for everyone')
+
+    await adminTab.goto('/admin/texts')
+    await adminTab.getByText('বাংলা').click()
+    await adminTab
+      .getByRole('textbox', { name: 'Choose the language you learn in', exact: true })
+      .fill('যে ভাষায় শিখবেন, বেছে নিন')
+    await adminTab.getByRole('button', { name: save }).click()
+    await expect(adminTab.getByRole('status')).toContainText('Saved for everyone')
+
+    // On the server: the landing page whole, and the one Bengali text alone.
+    expect(kept.settings.landing?.version).toBe(1)
+    expect(kept.texts.screen).toEqual({
+      bn: { 'landing.language': 'যে ভাষায় শিখবেন, বেছে নিন' },
+    })
+
+    const elsewhere = await browser.newContext()
+    await signedInAs(elsewhere, null)
+    await withoutLearnerServer(elsewhere)
+    await withoutLessonServer(elsewhere)
+    await appConfigServer(elsewhere, kept)
+    await seedLanguage(elsewhere, 'bn')
+    const visitor = await elsewhere.newPage()
+    await visitor.goto('/')
+
+    await expect(visitor.getByText('Acme English')).toBeVisible()
+    await expect(visitor.getByRole('group', { name: 'যে ভাষায় শিখবেন, বেছে নিন' })).toBeVisible()
+    await elsewhere.close()
+  })
+
+  test('a save another admin made first is not written over, and what was typed stays', async ({
+    page,
+  }) => {
+    const kept = noSettings()
+    await signInAsAdmin(page)
+    await appConfigServer(page.context(), kept)
+    await page.goto('/admin/landing')
+
+    // Another admin saves the landing page while this one is still typing.
+    kept.settings.landing = { value: { brand: { name: 'Their English' } }, version: 1 }
+    await page.getByLabel('Brand name').fill('Acme English')
+    await page.getByRole('button', { name: save }).click()
+
+    await expect(page.getByRole('status')).toContainText('someone else changed this')
+    await expect(page.getByLabel('Brand name')).toHaveValue('Acme English')
+    expect(kept.settings.landing).toEqual({
+      value: { brand: { name: 'Their English' } },
+      version: 1,
+    })
   })
 })

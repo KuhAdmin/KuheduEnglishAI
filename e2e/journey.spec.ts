@@ -3,6 +3,7 @@ import {
   expect,
   expectNoHorizontalScroll,
   scrollToEnd,
+  seedDaysDone,
   seedLanguage,
   serverVoicesWithout,
   spoken,
@@ -76,6 +77,38 @@ test('a section opens its five weeks, and Back returns to the journey', async ({
   await expect(page.getByRole('article').first()).toContainText('This week')
   // Among the weeks; the tutor at the top speaks of this week too.
   await expect(page.getByRole('list', { name: 'Weeks' }).getByText('This week')).toHaveCount(1)
+})
+
+test('a week overview offers the day before the one to start, where a lesson day has it', async ({
+  page,
+}) => {
+  await seedDaysDone(page, 1, [1, 2, 3, 4, 5])
+  await page.goto('/home/weeks/1')
+
+  const previous = page.getByRole('link', { name: 'Go back to Day 5' })
+  const bar = page.getByRole('progressbar', { name: 'Your place in the course' })
+  const start = page.getByRole('link', { name: 'Start Day 6' })
+  await expect(previous).toBeInViewport({ ratio: 1 })
+  const previousBox = await previous.boundingBox()
+  const barBox = await bar.boundingBox()
+  const startBox = await start.boundingBox()
+  const viewport = page.viewportSize()
+  if (!previousBox || !barBox || !startBox || !viewport) throw new Error('something is missing')
+
+  // At the end of the bar, in the band at the top: the same small pill, a full touch target.
+  expect(
+    Math.abs(barBox.y + barBox.height / 2 - (previousBox.y + previousBox.height / 2)),
+  ).toBeLessThan(2)
+  expect(previousBox.x).toBeGreaterThan(barBox.x + barBox.width)
+  expect(Math.round(previousBox.height)).toBe(44)
+  expect(previousBox.y).toBeLessThan(viewport.height / 2)
+  // The way on keeps the whole width of the thumb zone to itself.
+  expect(startBox.width).toBeGreaterThan(viewport.width * 0.8)
+  expect(startBox.y).toBeGreaterThan((viewport.height * 2) / 3)
+  await expectNoHorizontalScroll(page)
+
+  await previous.click()
+  await expect(page).toHaveURL(/\/lessons\/weeks\/1\/days\/5$/)
 })
 
 test('a week opens its overview, with Start Day 1 in the thumb zone', async ({ page }) => {

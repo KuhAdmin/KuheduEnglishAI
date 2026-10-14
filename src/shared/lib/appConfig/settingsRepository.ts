@@ -1,10 +1,10 @@
 /**
- * Where admin-managed settings are stored.
+ * This browser's copy of the admin-managed settings, which screens read synchronously.
  *
- * There is no backend yet, so settings live in this browser's localStorage: an admin's edits
- * are visible in every tab of the same browser, and nowhere else.
- * TODO(backend): replace this implementation with one backed by `GET/PUT /api/app-config/<name>`;
- * nothing outside this file needs to know where settings come from.
+ * The settings are the server's: `appConfigRemote` and `weekContentRemote` fill this copy from
+ * it and write an editor's save into it once the server has taken it, and every tab of the
+ * browser follows. Without them running (a unit test), the copy is all there is, as it was
+ * before the server kept settings.
  */
 
 const KEY_PREFIX = 'kuhedu-settings:'

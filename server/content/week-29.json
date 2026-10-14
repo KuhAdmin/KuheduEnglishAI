@@ -1,0 +1,756 @@
+{
+  "week": 29,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Komal",
+          "text": "Harish! I haven’t seen you for five years. You look different!",
+          "translations": {
+            "bn": "হরিশ! পাঁচ বছর দেখা নেই। তোমাকে অন্যরকম লাগছে!",
+            "hi": "हरीश! पाँच साल से तुम्हें नहीं देखा। तुम अलग लग रहे हो!"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "Komal! Yes, a lot has changed. I’ve moved to Bengaluru, and I’ve started running.",
+          "translations": {
+            "bn": "কোমল! হ্যাঁ, অনেক কিছু বদলেছে। বেঙ্গালুরু চলে গেছি, আর দৌড়নো শুরু করেছি।",
+            "hi": "कोमल! हाँ, बहुत कुछ बदल गया है। मैं बेंगलुरु चला गया हूँ, और मैंने दौड़ना शुरू किया है।"
+          }
+        },
+        {
+          "speaker": "Komal",
+          "text": "Running? You used to hate sport!",
+          "translations": {
+            "bn": "দৌড়নো? তুমি তো খেলাধুলো একদম পছন্দ করতে না!",
+            "hi": "दौड़ना? तुम्हें तो खेलकूद से नफ़रत थी!"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "I know! Before, I ate junk food every day. Now I eat healthy food and run every morning.",
+          "translations": {
+            "bn": "জানি! আগে রোজ ভাজাভুজি খেতাম। এখন স্বাস্থ্যকর খাই আর রোজ সকালে দৌড়ই।",
+            "hi": "पता है! पहले मैं रोज़ जंक फ़ूड खाता था। अब सेहतमंद खाना खाता हूँ और हर सुबह दौड़ता हूँ।"
+          }
+        },
+        {
+          "speaker": "Komal",
+          "text": "That’s a big change. What have you learned?",
+          "translations": {
+            "bn": "এটা তো বড় বদল। কী শিখলে?",
+            "hi": "यह तो बड़ा बदलाव है। तुमने क्या सीखा?"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "I’ve learned to be patient. Small steps every day really help. And you? What’s new?",
+          "translations": {
+            "bn": "ধৈর্য ধরতে শিখেছি। রোজ ছোট ছোট পা ফেললে সত্যিই কাজ হয়। আর তোমার কী খবর?",
+            "hi": "मैंने धैर्य रखना सीखा है। रोज़ छोटे-छोटे क़दम सच में मदद करते हैं। और तुम? क्या नया है?"
+          }
+        },
+        {
+          "speaker": "Komal",
+          "text": "Well, I’ve recently opened a small tuition centre. I teach thirty children now.",
+          "translations": {
+            "bn": "আসলে, সম্প্রতি একটা ছোট কোচিং সেন্টার খুলেছি। এখন তিরিশটা বাচ্চাকে পড়াই।",
+            "hi": "दरअसल, मैंने हाल ही में एक छोटा ट्यूशन सेंटर खोला है। अब मैं तीस बच्चों को पढ़ाती हूँ।"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "Thirty! When we were young, you used to teach your dolls.",
+          "translations": {
+            "bn": "তিরিশ! ছোটবেলায় তুমি তো পুতুলদের পড়াতে।",
+            "hi": "तीस! बचपन में तुम अपनी गुड़ियों को पढ़ाया करती थीं।"
+          }
+        },
+        {
+          "speaker": "Komal",
+          "text": "Ha, that’s true! I’ve always loved teaching.",
+          "translations": {
+            "bn": "হা, ঠিক! পড়াতে আমি বরাবরই ভালোবাসি।",
+            "hi": "हा, सही बात! मुझे पढ़ाना हमेशा से पसंद है।"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "Has the neighbourhood changed much?",
+          "translations": {
+            "bn": "পাড়াটা কি অনেক বদলেছে?",
+            "hi": "क्या मोहल्ला बहुत बदल गया है?"
+          }
+        },
+        {
+          "speaker": "Komal",
+          "text": "Yes. There’s a new metro station, and the old cinema has become a mall.",
+          "translations": {
+            "bn": "হ্যাঁ। একটা নতুন মেট্রো স্টেশন হয়েছে, আর পুরোনো সিনেমা হলটা এখন শপিং মল।",
+            "hi": "हाँ। एक नया मेट्रो स्टेशन बना है, और पुराना सिनेमा हॉल अब मॉल बन गया है।"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "Everything changes! Let’s get some tea and talk more.",
+          "translations": {
+            "bn": "সবই বদলায়! চলো চা খেতে খেতে আরও গল্প করি।",
+            "hi": "सब कुछ बदलता है! चलो चाय पीते हुए और बातें करते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Komal": "female",
+        "Harish": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "learned",
+          "phonetic": "/lɜːnd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "শেখা (অতীত রূপ)",
+            "hi": "सीखा"
+          },
+          "syllables": ["learned"],
+          "stress": null,
+          "tips": {
+            "bn": ["শেষে “d” ধ্বনি।", "“I’ve learned a lot” মানে এখন অনেক বেশি জানি।"],
+            "en": ["It ends with a “d” sound.", "“I’ve learned a lot” means I know much more now."],
+            "hi": ["आख़िर में “d” की आवाज़ है।", "“I’ve learned a lot” मतलब अब बहुत कुछ आता है।"]
+          }
+        },
+        {
+          "word": "improve",
+          "phonetic": "/ɪmˈpruːv/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "উন্নতি করা",
+            "hi": "सुधार करना"
+          },
+          "syllables": ["im", "prove"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“o”-এর উচ্চারণ “উ”: “ইম-প্রুভ”।"],
+            "en": ["Say the second part stronger.", "The “o” sounds like “oo”: “im-PROOV”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“o” की आवाज़ “ऊ” जैसी है: “इम-प्रूव”।"]
+          }
+        },
+        {
+          "word": "progress",
+          "phonetic": "/ˈprəʊɡres/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অগ্রগতি",
+            "hi": "प्रगति"
+          },
+          "syllables": ["pro", "gress"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“make progress” মানে ধাপে ধাপে উন্নতি।"],
+            "en": [
+              "Say the first part stronger.",
+              "“make progress” means get better step by step."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“make progress” मतलब धीरे-धीरे बेहतर होना।"]
+          }
+        },
+        {
+          "word": "skill",
+          "phonetic": "/skɪl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দক্ষতা",
+            "hi": "हुनर, कौशल"
+          },
+          "syllables": ["skill"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i” ছোট, “sit”-এর মতো।", "রান্না আর গাড়ি চালানো হল দক্ষতা।"],
+            "en": ["The “i” is short, as in “sit”.", "Cooking and driving are skills."],
+            "hi": ["“i” छोटा है, “sit” जैसा।", "खाना बनाना और गाड़ी चलाना हुनर हैं।"]
+          }
+        },
+        {
+          "word": "confident",
+          "phonetic": "/ˈkɒnfɪdənt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আত্মবিশ্বাসী",
+            "hi": "आत्मविश्वासी"
+          },
+          "syllables": ["con", "fi", "dent"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “I feel more confident now.”"],
+            "en": ["Say the first part stronger.", "Say: “I feel more confident now.”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “I feel more confident now.”"]
+          }
+        },
+        {
+          "word": "practice",
+          "phonetic": "/ˈpræktɪs/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অনুশীলন",
+            "hi": "अभ्यास"
+          },
+          "syllables": ["prac", "tice"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“tice”-এর উচ্চারণ “টিস”।"],
+            "en": ["Say the first part stronger.", "“tice” sounds like “tis”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“tice” की आवाज़ “टिस” जैसी है।"]
+          }
+        },
+        {
+          "word": "mistake",
+          "phonetic": "/mɪˈsteɪk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভুল",
+            "hi": "ग़लती"
+          },
+          "syllables": ["mis", "take"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন “make a mistake”, “do a mistake” নয়।"],
+            "en": ["Say the second part stronger.", "Say “make a mistake”, not “do a mistake”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें “make a mistake”, “do a mistake” नहीं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I used to live in a small village.",
+          "alsoAccepted": ["Before, I lived in a small village."],
+          "translations": {
+            "bn": "আগে আমি একটা ছোট গ্রামে থাকতাম।",
+            "hi": "पहले मेरा घर एक छोटे गाँव में था।"
+          },
+          "tips": {
+            "bn": [
+              "“used to” মানে আগে সত্যি ছিল, এখন নয়।",
+              "“used to”-এর পরে ক্রিয়ার মূল রূপ: “live”।"
+            ],
+            "en": [
+              "“used to” is for something true before, but not now.",
+              "After “used to”, use the plain verb: “live”."
+            ],
+            "hi": [
+              "“used to” मतलब पहले सच था, अब नहीं।",
+              "“used to” के बाद क्रिया का मूल रूप: “live”।"
+            ]
+          }
+        },
+        {
+          "english": "Now I live in a big city.",
+          "alsoAccepted": ["Now I am living in a big city."],
+          "translations": {
+            "bn": "এখন আমি একটা বড় শহরে থাকি।",
+            "hi": "अब मेरा घर एक बड़े शहर में है।"
+          },
+          "tips": {
+            "bn": ["“Now” বর্তমান বোঝায়।", "বদল বোঝাতে “Before … Now …” বলুন।"],
+            "en": ["“Now” shows the present.", "Say “Before … Now …” to show a change."],
+            "hi": ["“Now” वर्तमान दिखाता है।", "बदलाव दिखाने के लिए “Before … Now …” कहें।"]
+          }
+        },
+        {
+          "english": "I didn’t use to like vegetables, but now I do.",
+          "alsoAccepted": ["I did not like vegetables before, but now I do."],
+          "translations": {
+            "bn": "আগে আমার সবজি ভালো লাগত না, কিন্তু এখন লাগে।",
+            "hi": "पहले मुझे सब्ज़ियाँ पसंद नहीं थीं, पर अब हैं।"
+          },
+          "tips": {
+            "bn": ["“didn’t use to”-তে “use”-এর শেষে “d” নেই।", "“but now I do” বদলটা বোঝায়।"],
+            "en": ["In “didn’t use to”, “use” has no “d”.", "“but now I do” shows the change."],
+            "hi": [
+              "“didn’t use to” में “use” के आगे “d” नहीं लगता।",
+              "“but now I do” बदलाव दिखाता है।"
+            ]
+          }
+        },
+        {
+          "english": "My English is much better than before.",
+          "alsoAccepted": ["My English is a lot better than before."],
+          "translations": {
+            "bn": "আমার ইংরেজি আগের চেয়ে অনেক ভালো।",
+            "hi": "मेरी अंग्रेज़ी पहले से बहुत बेहतर है।"
+          },
+          "tips": {
+            "bn": ["“much better” মানে অনেক ভালো।", "“than before” অতীতের সঙ্গে তুলনা।"],
+            "en": ["“much better” means a lot better.", "“than before” compares with the past."],
+            "hi": ["“much better” मतलब बहुत बेहतर।", "“than before” बीते समय से तुलना है।"]
+          }
+        },
+        {
+          "english": "Things have changed a lot since then.",
+          "alsoAccepted": ["A lot has changed since then."],
+          "translations": {
+            "bn": "তারপর থেকে অনেক কিছু বদলে গেছে।",
+            "hi": "तब से बहुत कुछ बदल गया है।"
+          },
+          "tips": {
+            "bn": [
+              "“have changed” অতীতকে এখনকার সঙ্গে জোড়ে।",
+              "“since then” মানে তখন থেকে এখন পর্যন্ত।"
+            ],
+            "en": [
+              "“have changed” joins the past to now.",
+              "“since then” means from that time until now."
+            ],
+            "hi": ["“have changed” बीते समय को अब से जोड़ता है।", "“since then” मतलब तब से अब तक।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Gargi",
+      "asMan": "Girish",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! It’s been ages. What’s new with you?",
+          "reply": "Well, I’ve just started a new course.",
+          "cues": {
+            "bn": "সম্প্রতি কী নতুন, বলুন।",
+            "hi": "बताएँ कि हाल में क्या नया हुआ।"
+          }
+        },
+        {
+          "partner": "Oh! What are you studying?",
+          "reply": "I’m studying …",
+          "cues": {
+            "bn": "কী পড়ছেন, বলুন।",
+            "hi": "बताएँ कि पढ़ाई किस विषय की है।"
+          }
+        },
+        {
+          "partner": "How has it been so far?",
+          "reply": "It’s been hard, but I’ve learned a lot.",
+          "cues": {
+            "bn": "এখন পর্যন্ত কেমন চলছে, বলুন।",
+            "hi": "बताएँ कि अब तक कैसा रहा।"
+          }
+        },
+        {
+          "partner": "Have you made any new friends?",
+          "reply": "Yes, I’ve met some really nice people.",
+          "cues": {
+            "bn": "নতুন বন্ধুদের কথা বলুন।",
+            "hi": "नए दोस्तों के बारे में बताएँ।"
+          }
+        },
+        {
+          "partner": "Great! And has anything else changed?",
+          "reply": "Yes, I’ve moved to a new flat.",
+          "cues": {
+            "bn": "আরেকটা বদলের কথা বলুন।",
+            "hi": "एक और बदलाव बताएँ।"
+          }
+        },
+        {
+          "partner": "Wow, lots of news! Let’s celebrate.",
+          "reply": "Good idea. Have you tried the new café?",
+          "cues": {
+            "bn": "রাজি হয়ে একটা প্রশ্ন করুন।",
+            "hi": "सहमति दें और एक सवाल पूछें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "My Personal Journey",
+        "translations": {
+          "bn": "আমার নিজের যাত্রা",
+          "hi": "मेरी अपनी यात्रा"
+        }
+      },
+      "instruction": {
+        "text": "Talk about how you have changed over the years: before, now, and what you have learned.",
+        "translations": {
+          "bn": "বছরের পর বছর আপনি কীভাবে বদলেছেন বলুন: আগে, এখন, আর কী শিখেছেন।",
+          "hi": "बताएँ कि सालों में आपमें क्या बदला: पहले, अब, और आपने क्या सीखा।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what you used to do or be like",
+          "translations": {
+            "bn": "আগে কী করতেন বা কেমন ছিলেন, বলুন",
+            "hi": "बताएँ कि पहले क्या आदतें या स्वभाव था"
+          }
+        },
+        {
+          "text": "Say what is different now",
+          "translations": {
+            "bn": "এখন কী আলাদা, বলুন",
+            "hi": "बताएँ कि अब क्या अलग है"
+          }
+        },
+        {
+          "text": "Say one thing you have learned",
+          "translations": {
+            "bn": "একটা শেখা জিনিসের কথা বলুন",
+            "hi": "एक सीखी हुई बात बताएँ"
+          }
+        },
+        {
+          "text": "Say what helped you change",
+          "translations": {
+            "bn": "কী আপনাকে বদলাতে সাহায্য করেছে, বলুন",
+            "hi": "बताएँ कि बदलाव में किस चीज़ से मदद मिली"
+          }
+        },
+        {
+          "text": "Say where you hope to be next",
+          "translations": {
+            "bn": "এরপর কোথায় পৌঁছতে চান, বলুন",
+            "hi": "बताएँ कि आगे कहाँ पहुँचने की उम्मीद है"
+          }
+        }
+      ],
+      "phrases": [
+        "When I was younger, I used to …",
+        "Now I …",
+        "I’ve learned that …",
+        "It helped me a lot.",
+        "Since then, …",
+        "In the future, I hope …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Complete: I ___ to live in Patna.",
+            "translations": {
+              "bn": "পূরণ করুন: I ___ to live in Patna.",
+              "hi": "पूरा करें: I ___ to live in Patna."
+            }
+          },
+          "answer": "used",
+          "others": ["use", "using"]
+        },
+        {
+          "question": {
+            "text": "Which sentence compares before and now?",
+            "translations": {
+              "bn": "কোন বাক্যে আগে আর এখনের তুলনা?",
+              "hi": "कौन-सा वाक्य पहले और अब की तुलना करता है?"
+            }
+          },
+          "answer": "I used to walk, but now I drive.",
+          "others": ["I walk every day.", "I will drive tomorrow."]
+        },
+        {
+          "question": {
+            "text": "Complete: Have you ___ anything new recently?",
+            "translations": {
+              "bn": "পূরণ করুন: Have you ___ anything new recently?",
+              "hi": "पूरा करें: Have you ___ anything new recently?"
+            }
+          },
+          "answer": "learned",
+          "others": ["learn", "learning"]
+        },
+        {
+          "question": {
+            "text": "Complete: My English is better ___ before.",
+            "translations": {
+              "bn": "পূরণ করুন: My English is better ___ before.",
+              "hi": "पूरा करें: My English is better ___ before."
+            }
+          },
+          "answer": "than",
+          "others": ["then", "that"]
+        },
+        {
+          "question": {
+            "text": "Which phrase means “from that time until now”?",
+            "translations": {
+              "bn": "কোন কথার মানে “তখন থেকে এখন পর্যন্ত”?",
+              "hi": "किस वाक्यांश का मतलब है “तब से अब तक”?"
+            }
+          },
+          "answer": "since then",
+          "others": ["at that time", "next time"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Coach",
+          "text": "Pari, you’ve improved so much this year!",
+          "translations": {
+            "bn": "পরী, এ বছর তুমি অনেক উন্নতি করেছ!",
+            "hi": "परी, इस साल तुमने बहुत सुधार किया है!"
+          }
+        },
+        {
+          "speaker": "Pari",
+          "text": "Thank you, sir! I used to be scared of deep water.",
+          "translations": {
+            "bn": "ধন্যবাদ, স্যার! আগে গভীর জলে আমার ভয় করত।",
+            "hi": "धन्यवाद, सर! पहले मुझे गहरे पानी से डर लगता था।"
+          }
+        },
+        {
+          "speaker": "Coach",
+          "text": "I remember! Now you swim in the deep end every day.",
+          "translations": {
+            "bn": "মনে আছে! এখন তো রোজ গভীর দিকেই সাঁতার কাটো।",
+            "hi": "मुझे याद है! अब तुम रोज़ गहरी तरफ़ तैरती हो।"
+          }
+        },
+        {
+          "speaker": "Pari",
+          "text": "Yes. I’ve practised a lot since January.",
+          "translations": {
+            "bn": "হ্যাঁ। জানুয়ারি থেকে অনেক অনুশীলন করেছি।",
+            "hi": "हाँ। जनवरी से मैंने बहुत अभ्यास किया है।"
+          }
+        },
+        {
+          "speaker": "Coach",
+          "text": "What has helped you the most?",
+          "translations": {
+            "bn": "সবচেয়ে বেশি কী সাহায্য করেছে?",
+            "hi": "तुम्हें सबसे ज़्यादा किस चीज़ से मदद मिली?"
+          }
+        },
+        {
+          "speaker": "Pari",
+          "text": "Not giving up. I made many mistakes, but I learned from them.",
+          "translations": {
+            "bn": "হাল না ছাড়া। অনেক ভুল করেছি, কিন্তু সেগুলো থেকে শিখেছি।",
+            "hi": "हार न मानना। मैंने कई ग़लतियाँ कीं, पर उनसे सीखा।"
+          }
+        },
+        {
+          "speaker": "Coach",
+          "text": "That’s the right attitude. Have you thought about the city race?",
+          "translations": {
+            "bn": "এটাই ঠিক মনোভাব। শহরের প্রতিযোগিতার কথা ভেবেছ?",
+            "hi": "यही सही सोच है। क्या तुमने शहर की प्रतियोगिता के बारे में सोचा है?"
+          }
+        },
+        {
+          "speaker": "Pari",
+          "text": "Yes! Before, I was too nervous. Now I feel ready.",
+          "translations": {
+            "bn": "হ্যাঁ! আগে খুব ভয় পেতাম। এখন মনে হয় আমি তৈরি।",
+            "hi": "हाँ! पहले मैं बहुत घबराती थी। अब मुझे लगता है मैं तैयार हूँ।"
+          }
+        },
+        {
+          "speaker": "Coach",
+          "text": "Great. Let’s start training for it next week.",
+          "translations": {
+            "bn": "দারুণ। চলো পরের সপ্তাহ থেকে তার জন্য প্রস্তুতি শুরু করি।",
+            "hi": "बढ़िया। चलो अगले हफ़्ते से उसकी तैयारी शुरू करते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Coach": "male",
+        "Pari": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "How have you changed in the last few years?",
+          "reply": "I’ve become more …",
+          "cues": {
+            "bn": "আপনার একটা বদলের কথা বলুন।",
+            "hi": "अपना एक बदलाव बताएँ।"
+          }
+        },
+        {
+          "partner": "What did you use to do that you don’t do now?",
+          "reply": "I used to …, but now I don’t.",
+          "cues": {
+            "bn": "আগে করতেন, এখন করেন না, এমন কিছু বলুন।",
+            "hi": "पहले की कोई आदत बताएँ जो अब नहीं है।"
+          }
+        },
+        {
+          "partner": "What have you learned recently?",
+          "reply": "Recently, I’ve learned …",
+          "cues": {
+            "bn": "সম্প্রতি কী শিখেছেন, বলুন।",
+            "hi": "बताएँ कि हाल में क्या सीखा।"
+          }
+        },
+        {
+          "partner": "That’s great progress!",
+          "reply": "Thank you. I’m happy with it.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Back at your old school",
+            "translations": {
+              "bn": "পুরোনো স্কুলে ফেরা",
+              "hi": "पुराने स्कूल में वापसी"
+            }
+          },
+          "roleplay": {
+            "partner": "the teacher",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Welcome back! How long has it been?",
+                "reply": "It’s been ten years, I think.",
+                "cues": {
+                  "bn": "কত বছর, বলুন।",
+                  "hi": "बताएँ कितने साल हुए।"
+                }
+              },
+              {
+                "partner": "The school has changed, hasn’t it?",
+                "reply": "Yes! There’s a new library. It used to be a garden.",
+                "cues": {
+                  "bn": "একটা বদলের কথা বলুন।",
+                  "hi": "एक बदलाव बताएँ।"
+                }
+              },
+              {
+                "partner": "And what are you doing now?",
+                "reply": "I’m working as a …",
+                "cues": {
+                  "bn": "এখন কী করছেন, বলুন।",
+                  "hi": "बताएँ कि अब क्या काम है।"
+                }
+              },
+              {
+                "partner": "I’m so proud of you!",
+                "reply": "Thank you. You taught me a lot.",
+                "cues": {
+                  "bn": "কৃতজ্ঞতা জানান।",
+                  "hi": "आभार जताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A health check-up",
+            "translations": {
+              "bn": "স্বাস্থ্য পরীক্ষা",
+              "hi": "सेहत की जाँच"
+            }
+          },
+          "roleplay": {
+            "partner": "the doctor",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "How have you been since your last visit?",
+                "reply": "Much better, thank you.",
+                "cues": {
+                  "bn": "বলুন আগের চেয়ে অনেক ভালো।",
+                  "hi": "बताएँ कि पहले से काफ़ी बेहतर।"
+                }
+              },
+              {
+                "partner": "Have you changed your diet?",
+                "reply": "Yes, I’ve stopped eating so much sugar.",
+                "cues": {
+                  "bn": "খাওয়াদাওয়ার একটা বদলের কথা বলুন।",
+                  "hi": "खान-पान का एक बदलाव बताएँ।"
+                }
+              },
+              {
+                "partner": "Good. Do you exercise now?",
+                "reply": "Yes. I used to sit all day, but now I walk every evening.",
+                "cues": {
+                  "bn": "আগে আর এখনের তুলনা করুন।",
+                  "hi": "पहले और अब की तुलना करें।"
+                }
+              },
+              {
+                "partner": "Excellent progress. Keep it up!",
+                "reply": "Thank you, I will.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Meeting a cousin",
+            "translations": {
+              "bn": "তুতো ভাই-বোন",
+              "hi": "कज़िन से मुलाक़ात"
+            }
+          },
+          "roleplay": {
+            "partner": "Sweta",
+            "asMan": "Saurabh",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Look at you! You were so small the last time I saw you!",
+                "reply": "Ha, that was a long time ago!",
+                "cues": {
+                  "bn": "হেসে উত্তর দিন।",
+                  "hi": "हँसकर जवाब दें।"
+                }
+              },
+              {
+                "partner": "What has changed in your life since then?",
+                "reply": "Well, I’ve finished college and started working.",
+                "cues": {
+                  "bn": "দুটো বদলের কথা বলুন।",
+                  "hi": "दो बदलाव बताएँ।"
+                }
+              },
+              {
+                "partner": "Do you still play the violin?",
+                "reply": "No, I used to, but I stopped.",
+                "cues": {
+                  "bn": "বলুন আগে বাজাতেন, এখন নয়।",
+                  "hi": "बताएँ कि पहले बजाना होता था, अब नहीं।"
+                }
+              },
+              {
+                "partner": "That’s a pity. You were so good!",
+                "reply": "Maybe I’ll start again one day.",
+                "cues": {
+                  "bn": "আশার কথা বলুন।",
+                  "hi": "उम्मीद भरी बात कहें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

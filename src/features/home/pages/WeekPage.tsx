@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, Check } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Check, ChevronLeft } from 'lucide-react'
 import { Link, useParams } from 'react-router'
 import { sectionOfWeek, WEEK_COUNT } from '@/shared/lib/curriculum/curriculum'
 import { useCurriculum } from '@/shared/lib/curriculum/useCurriculum'
@@ -79,9 +79,33 @@ export function WeekPage() {
               </IconButton>
             }
           />
-          {/* Under the tutor's two rows: the week's place in the course. It stands alone: an
-              arrow beside a bar reads as moving the bar, not as opening another week. */}
-          <ProgressBar value={number / WEEK_COUNT} label={t('week.progressLabel')} />
+          {/* Under the tutor's two rows: the week's place in the course and, at the bar's end as
+              on a lesson day, the way back to the day before the one to start, to go through it
+              again. Day 1 has nothing before it, and a finished week leads on, not back. Nothing
+              else stands beside the bar: an arrow there reads as moving the bar, not as opening
+              another week. */}
+          <div className="flex items-center gap-3">
+            <ProgressBar
+              className="flex-1"
+              value={number / WEEK_COUNT}
+              label={t('week.progressLabel')}
+            />
+            {!weekDone && nextDay > 1 && (
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                aria-label={fillText(t('lessonDay.previousDayLabel'), {
+                  day: format(nextDay - 1),
+                })}
+              >
+                <Link to={lessonDayPath(number, nextDay - 1)}>
+                  <ChevronLeft aria-hidden="true" className="-ms-1 size-4" />
+                  {fillText(t('lessonDay.previousDay'), { day: format(nextDay - 1) })}
+                </Link>
+              </Button>
+            )}
+          </div>
         </div>
       }
       footer={

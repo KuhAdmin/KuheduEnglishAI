@@ -238,15 +238,11 @@ export const bn: TextCatalog = {
   'lessonDay.practice.recording': 'রেকর্ড হচ্ছে…',
   'lessonDay.practice.recorded': 'রেকর্ড হয়েছে। শুনুন, অথবা আবার চেষ্টা করুন।',
   'lessonDay.practice.listen': 'নিজের কণ্ঠ শুনুন',
-  'lessonDay.practice.micNote':
-    'আমরা আপনার মাইক্রোফোন ব্যবহারের অনুমতি চাইব। আপনার রেকর্ডিং সংরক্ষণ করা হয় না।',
+  'lessonDay.practice.micNote': 'আমরা মাইক্রোফোন ব্যবহারের অনুমতি চাইব। রেকর্ডিং রাখা হয় না।',
   'lessonDay.feedback.check': 'আমি কেমন বললাম দেখুন',
   'lessonDay.feedback.checking': 'আপনার রেকর্ডিং শোনা হচ্ছে…',
-  'lessonDay.feedback.sends':
-    'পরীক্ষার জন্য এই রেকর্ডিং আমাদের সার্ভারে পাঠানো হয়। এটি রেখে দেওয়া হয় না।',
+  'lessonDay.feedback.sends': 'পরীক্ষার জন্য এই রেকর্ডিং আমাদের সার্ভারে যায়। এটি রাখা হয় না।',
   'lessonDay.feedback.title': 'কেমন শোনাল',
-  'lessonDay.feedback.firstVersion':
-    'এই পরীক্ষাটি নতুন, ভুলও হতে পারে। এর চেয়ে নিজের কান আর শিক্ষকের কথায় বেশি ভরসা রাখুন।',
   'lessonDay.feedback.ok': 'ঠিক শোনাল। খুব ভালো!',
   'lessonDay.feedback.nothingHeard':
     'কোনো শব্দ শোনা যায়নি। মাইক্রোফোনের আরেকটু কাছে এসে আবার চেষ্টা করুন।',
@@ -304,6 +300,8 @@ export const bn: TextCatalog = {
   'lessonDay.talk.timeAlmostUp': 'সময় প্রায় শেষ',
   'lessonDay.talk.replay': 'আবার শুনুন',
   'lessonDay.talk.couldSay': 'আপনি বলতে পারেন',
+  'lessonDay.talk.youAnswered': 'আপনি উত্তর দিয়েছেন',
+  'lessonDay.talk.skipped': 'পালা বাদ দিয়েছেন',
   'lessonDay.talk.playReply': 'এই উত্তরটি শুনুন',
   'lessonDay.talk.hint': 'ইঙ্গিত',
   'lessonDay.talk.hintMore': 'আরও সাহায্য',
@@ -314,8 +312,10 @@ export const bn: TextCatalog = {
   'lessonDay.talk.endBody': 'দিনটি সম্পূর্ণ হবে না। সপ্তাহের পাতা থেকে আবার শুরু করতে পারবেন।',
   'lessonDay.talk.endCancel': 'কথা চালিয়ে যান',
   'lessonDay.talk.done': 'খুব ভালো! আপনি কথোপকথনটি শেষ করেছেন।',
+  'lessonDay.talk.doneReview': 'আপনার উত্তরগুলো উপরে আছে। আবার শুনে নিতে পারেন।',
   'lessonDay.talk.again': 'আবার অনুশীলন করুন',
   'lessonDay.talk.audioFailed': 'লাইনগুলো এখন পড়ে শোনানো যাচ্ছে না। পড়ে নিয়ে উত্তর দিন।',
+  'lessonDay.reply.sends': 'উত্তর পরীক্ষা করলে তার রেকর্ডিং আমাদের সার্ভারে যায়। এটি রাখা হয় না।',
   'lessonDay.reply.check': 'আমার উত্তর পরীক্ষা করুন',
   'lessonDay.reply.checking': 'আপনার উত্তর দেখা হচ্ছে…',
   'lessonDay.reply.title': 'আপনার উত্তর সম্পর্কে',

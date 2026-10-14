@@ -1,20 +1,22 @@
-import { Play, RotateCcw } from 'lucide-react'
+import { Play } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { useWakeLock } from '@/shared/hooks/useWakeLock'
 import { MicrophoneHelp } from '@/shared/lib/audio/MicrophoneHelp'
 import { roleplayPlayedBy, type WeekRoleplay } from '@/shared/lib/curriculum/weekRoleplays'
-import { fillText, formatNumber, useLanguage, useT } from '@/shared/lib/i18n'
+import { fillText, useT } from '@/shared/lib/i18n'
 import { useTutorVoiceKind } from '@/shared/lib/learner/tutorAvatar'
 import { Button } from '@/shared/ui/Button'
+import { FitText } from '@/shared/ui/FitText'
 import { StepScreen } from '@/shared/ui/StepScreen'
 import { useRolePlay, type RolePlayHelp } from '../hooks/useRolePlay'
 import { clock } from '../lib/clock'
 import { revealOnMount } from '../lib/revealOnMount'
-import { PAUSE_ENDS_TURN_MS } from '../lib/turnTiming'
 import { EndChatConfirm } from './EndChatConfirm'
 import { LessonNextButton } from './LessonNextButton'
 import { PartnerBand } from './PartnerBand'
 import { TalkControls } from './TalkControls'
+import { TalkFinish } from './TalkFinish'
+import { TalkIntroNotes } from './TalkIntroNotes'
 import { TalkTranscript } from './TalkTranscript'
 
 export type RolePlayStepProps = {
@@ -39,15 +41,19 @@ export type RolePlayStepProps = {
 /**
  * Day 4, a role-play (and, with other ones, the mini role-play of Day 6's review and the
  * scenarios of Day 7's challenge): the learner talks with a partner whose lines are written (the
- * partner does not listen or answer, so the screen does not claim an AI one). A reply the
- * learner gave can be checked by the server when they ask, turn by turn (`ReplyCheck`); nothing
- * of the conversation depends on it. **The partner's face stays in view**, in a band at the top
- * with the way back and the day's place in the week (`PartnerBand`), as the tutor does on the
- * week's overview; the heading and the conversation scroll under it. It starts on a tap, so the
- * device may speak and the microphone has been explained. Once the browser allows the
+ * partner does not listen or answer, so the screen does not claim an AI one). Every reply the
+ * learner gave aloud stays with its turn, to be heard again and, when they ask, checked by the
+ * server (`ReplyCheck`); nothing of the conversation depends on it.
+ *
+ * **The partner's face is in the band at the top until the conversation starts, and from then on
+ * beside each of their lines** (`PartnerBand`, `TalkTranscript`): the band shrinks to the way
+ * back and the day's place in the week, and the conversation has the room. It starts on a tap,
+ * so the device may speak and the microphone has been explained. Once the browser allows the
  * microphone it opens by itself on each of the learner's turns, counting down the time to begin
  * and the end of a long turn.
- * "Next" comes after the last turn; leaving before that asks first and does not finish the day.
+ *
+ * After the last turn the conversation closes with the tutor's praise (`TalkFinish`) and "Next"
+ * is the one pinned action; leaving before that asks first and does not finish the day.
  * Speaking is never required: every turn can be skipped.
  */
 export function RolePlayStep({
@@ -62,7 +68,6 @@ export function RolePlayStep({
   onNext,
 }: RolePlayStepProps) {
   const t = useT()
-  const language = useLanguage()
   // The learner's tutor plays the partner, so the partner is called what fits that tutor.
   const tutor = useTutorVoiceKind()
   const roleplay = useMemo(() => roleplayPlayedBy(written, tutor), [written, tutor])
@@ -89,6 +94,12 @@ export function RolePlayStep({
           ? fillText(t('lessonDay.talk.speaking'), { name: roleplay.partner })
           : t('lessonDay.talk.yourTurn')
 
+  const hasAnswers = Object.keys(talk.takes).length > 0
+  // Some reply can still be sent to be checked: what that does is said by the way out.
+  const canStillCheck =
+    talk.canCheckReply &&
+    Object.keys(talk.takes).some((turn) => talk.replyChecks[Number(turn)]?.status !== 'done')
+
   const footer = confirmingEnd ? (
     <EndChatConfirm
       backTo={backTo}
@@ -100,16 +111,7 @@ export function RolePlayStep({
     />
   ) : stage === 'intro' ? (
     <div className="flex flex-col gap-2">
-      {/* Said before the browser asks, so the request for the microphone is no surprise; nor is
-          a microphone that then opens by itself, or a turn that ends on a pause. */}
-      <div className="flex flex-col gap-1 text-center text-sm text-fg-muted">
-        <p>{t('lessonDay.practice.micNote')}</p>
-        <p>
-          {fillText(t('lessonDay.talk.autoMic'), {
-            seconds: formatNumber(language, PAUSE_ENDS_TURN_MS / 1000),
-          })}
-        </p>
-      </div>
+      <TalkIntroNotes canCheckReply={talk.canCheckReply} />
       <Button size="lg" fullWidth onClick={talk.begin}>
         <Play aria-hidden="true" className="size-5" />
         {t('lessonDay.talk.start')}
@@ -133,14 +135,13 @@ export function RolePlayStep({
       }}
     />
   ) : (
-    <div className="flex flex-col gap-3">
-      <p role="status" className="text-center font-extrabold">
-        {t('lessonDay.talk.done')}
-      </p>
-      <Button variant="secondary" size="lg" fullWidth onClick={talk.begin}>
-        <RotateCcw aria-hidden="true" className="size-5" />
-        {t('lessonDay.talk.again')}
-      </Button>
+    <div className="flex flex-col gap-2">
+      {canStillCheck && (
+        // The check buttons carry no note of their own: said once here, on one line.
+        <FitText className="text-center text-sm text-fg-muted">
+          {t('lessonDay.reply.sends')}
+        </FitText>
+      )}
       <LessonNextButton lockedBecause={null} onNext={onNext} />
     </div>
   )
@@ -158,7 +159,7 @@ export function RolePlayStep({
           day={day}
           dayCount={dayCount}
           imageUrl={roleplay.imageUrl}
-          speaking={talk.speakingTurn !== null}
+          talking={stage !== 'intro'}
         />
       }
       footer={footer}
@@ -177,13 +178,15 @@ export function RolePlayStep({
           <div className="w-full">
             <TalkTranscript
               partnerName={roleplay.partner}
+              partnerImageUrl={roleplay.imageUrl}
               turns={roleplay.turns}
               opened={talk.opened}
               answered={talk.answered}
+              spoken={talk.spoken}
+              takes={talk.takes}
+              playingTake={talk.playingTake}
               hint={talk.hint}
               speakingTurn={talk.speakingTurn}
-              takeTurn={talk.takeTurn}
-              playingTake={recording.playing}
               onReplay={talk.canSpeak ? talk.replayPartner : undefined}
               onSayReply={talk.canSpeak ? talk.sayReply : undefined}
               onListenToSelf={talk.listenToSelf}
@@ -192,6 +195,8 @@ export function RolePlayStep({
             />
           </div>
         )}
+
+        {stage === 'done' && <TalkFinish hasAnswers={hasAnswers} onAgain={talk.begin} />}
 
         {recording.problem && (
           <div ref={revealOnMount} className="w-full">

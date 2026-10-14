@@ -1,0 +1,794 @@
+{
+  "week": 38,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Sunita",
+          "text": "Rohan, can you show me how to pay with this app? The shopkeeper said it’s easy.",
+          "translations": {
+            "bn": "রোহন, এই অ্যাপ দিয়ে কীভাবে টাকা দিতে হয় দেখিয়ে দেবে? দোকানদার বললেন খুব সহজ।",
+            "hi": "रोहन, क्या तुम मुझे दिखाओगे कि इस ऐप से पैसे कैसे देते हैं? दुकानदार ने कहा यह आसान है।"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Sure, Aunty. It’s easy once you know the steps. First, you need your phone with the app open.",
+          "translations": {
+            "bn": "নিশ্চয়ই, মাসি। ধাপগুলো জানলে খুব সহজ। প্রথমে ফোনে অ্যাপটা খুলুন।",
+            "hi": "ज़रूर, आंटी। क़दम पता हों तो बहुत आसान है। पहले फ़ोन में ऐप खोल लीजिए।"
+          }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "OK, it’s open. What do I do next?",
+          "translations": {
+            "bn": "আচ্ছা, খুলেছি। এরপর কী করব?",
+            "hi": "ठीक है, खुल गया। अब आगे क्या करूँ?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Next, tap “Scan” and point the camera at the shop’s QR code. It’s this square with black dots.",
+          "translations": {
+            "bn": "এরপর “Scan”-এ চাপুন আর দোকানের QR কোডের দিকে ক্যামেরা ধরুন। এই যে, কালো বিন্দুওয়ালা চৌকো ছবিটা।",
+            "hi": "इसके बाद “Scan” दबाइए और कैमरा दुकान के QR कोड की ओर कीजिए। यह काले बिंदुओं वाला चौकोर निशान।"
+          }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "Like this? Oh, it shows the shop’s name.",
+          "translations": {
+            "bn": "এইভাবে? ও, দোকানের নাম দেখাচ্ছে।",
+            "hi": "ऐसे? अरे, दुकान का नाम दिख रहा है।"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Exactly. Then type the amount, for example two hundred rupees, and tap “Pay”.",
+          "translations": {
+            "bn": "একদম। তারপর টাকার অঙ্কটা লিখুন, ধরুন দুশো টাকা, আর “Pay”-তে চাপুন।",
+            "hi": "बिल्कुल। फिर रक़म लिखिए, जैसे दो सौ रुपये, और “Pay” दबाइए।"
+          }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "And after that?",
+          "translations": {
+            "bn": "তার পরে?",
+            "hi": "उसके बाद?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Finally, enter your four-digit PIN. But remember one rule: never tell your PIN to anyone.",
+          "translations": {
+            "bn": "শেষে চার অঙ্কের পিনটা দিন। তবে একটা নিয়ম মনে রাখবেন: পিন কাউকে কখনও বলবেন না।",
+            "hi": "आख़िर में अपना चार अंकों का पिन डालिए। पर एक नियम याद रखिए: अपना पिन कभी किसी को मत बताइए।"
+          }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "Not even the shopkeeper?",
+          "translations": {
+            "bn": "দোকানদারকেও না?",
+            "hi": "दुकानदार को भी नहीं?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Not even me! And you must have money in your bank account, or it won’t work.",
+          "translations": {
+            "bn": "আমাকেও না! আর ব্যাংক অ্যাকাউন্টে টাকা থাকতে হবে, নইলে কাজ হবে না।",
+            "hi": "मुझे भी नहीं! और बैंक खाते में पैसे होने चाहिए, वरना यह काम नहीं करेगा।"
+          }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "How does the money get to the shop?",
+          "translations": {
+            "bn": "টাকাটা দোকানে পৌঁছায় কীভাবে?",
+            "hi": "पैसे दुकान तक पहुँचते कैसे हैं?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "The app sends it from your bank account straight to the shop’s account. It takes a few seconds.",
+          "translations": {
+            "bn": "অ্যাপটা আপনার ব্যাংক অ্যাকাউন্ট থেকে সোজা দোকানের অ্যাকাউন্টে পাঠিয়ে দেয়। কয়েক সেকেন্ড লাগে।",
+            "hi": "ऐप उन्हें आपके बैंक खाते से सीधे दुकान के खाते में भेज देता है। बस कुछ सेकंड लगते हैं।"
+          }
+        },
+        {
+          "speaker": "Sunita",
+          "text": "So: scan, type the amount, pay, then the PIN. Is that right?",
+          "translations": {
+            "bn": "তাহলে: স্ক্যান, অঙ্ক লেখা, পে, তারপর পিন। ঠিক তো?",
+            "hi": "तो: स्कैन, रक़म, पे, फिर पिन। सही है न?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Perfect! You’ve got it. Do you want to try it once with me?",
+          "translations": {
+            "bn": "একদম ঠিক! বুঝে গেছেন। একবার আমার সঙ্গে করে দেখবেন?",
+            "hi": "बिल्कुल सही! आप समझ गईं। एक बार मेरे साथ करके देखेंगी?"
+          }
+        }
+      ],
+      "voices": {
+        "Sunita": "female",
+        "Rohan": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "step",
+          "phonetic": "/step/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধাপ",
+            "hi": "क़दम, चरण"
+          },
+          "syllables": ["step"],
+          "stress": null,
+          "tips": {
+            "bn": ["“st” একসঙ্গে বলুন, আগে কোনো স্বর ছাড়া।", "বলুন: “The first step is …”"],
+            "en": ["Say “st” together, with no sound before it.", "Say: “The first step is …”"],
+            "hi": ["“st” एक साथ बोलें, पहले कोई स्वर नहीं।", "कहें: “The first step is …”"]
+          }
+        },
+        {
+          "word": "before",
+          "phonetic": "/bɪˈfɔː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আগে",
+            "hi": "पहले"
+          },
+          "syllables": ["be", "fore"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "“Before you start, …” দিয়ে আগের কাজটা বলুন।"
+            ],
+            "en": [
+              "Say the second part stronger.",
+              "“Before you start, …” is about what comes first."
+            ],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“Before you start, …” से पहले वाला काम बताएँ।"]
+          }
+        },
+        {
+          "word": "next",
+          "phonetic": "/nekst/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "এর পরে",
+            "hi": "इसके बाद, अगला"
+          },
+          "syllables": ["next"],
+          "stress": null,
+          "tips": {
+            "bn": ["শেষে “kst”: প্রতিটা ধ্বনি বলুন।", "“Next, …” দিয়ে পরের ধাপ বলুন।"],
+            "en": ["End with “kst”: say every sound.", "“Next, …” gives the following step."],
+            "hi": ["आख़िर में “kst”: हर आवाज़ बोलें।", "“Next, …” से अगला क़दम बताएँ।"]
+          }
+        },
+        {
+          "word": "once",
+          "phonetic": "/wʌns/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "একবার … হলেই",
+            "hi": "जैसे ही"
+          },
+          "syllables": ["once"],
+          "stress": null,
+          "tips": {
+            "bn": ["উচ্চারণ “ওয়ান্স”।", "“Once it boils, …” মানে ফুটে উঠলেই।"],
+            "en": ["It sounds like “wuns”.", "“Once it boils, …” means as soon as it boils."],
+            "hi": ["इसकी आवाज़ “वन्स” है।", "“Once it boils, …” मतलब जैसे ही उबले।"]
+          }
+        },
+        {
+          "word": "make sure",
+          "phonetic": "/meɪk ˈʃʊə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "নিশ্চিত হয়ে নিন",
+            "hi": "पक्का कर लें"
+          },
+          "syllables": ["make", "sure"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“sure” জোর দিয়ে বলুন।", "“Make sure …” দিয়ে জরুরি কিছু মনে করিয়ে দিন।"],
+            "en": ["Say “sure” stronger.", "“Make sure …” warns about something important."],
+            "hi": ["“sure” ज़ोर से बोलें।", "“Make sure …” से ज़रूरी बात याद दिलाएँ।"]
+          }
+        },
+        {
+          "word": "until",
+          "phonetic": "/ənˈtɪl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যতক্ষণ না",
+            "hi": "जब तक … न हो"
+          },
+          "syllables": ["un", "til"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন: “Stir until it is thick.”"],
+            "en": ["Say the second part stronger.", "Say: “Stir until it is thick.”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें: “Stir until it is thick.”"]
+          }
+        },
+        {
+          "word": "carefully",
+          "phonetic": "/ˈkeəfəli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সাবধানে",
+            "hi": "ध्यान से"
+          },
+          "syllables": ["care", "ful", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "কাজটা কীভাবে করবেন: “Pour it carefully.”"],
+            "en": [
+              "Say the first part stronger.",
+              "It says how to do a step: “Pour it carefully.”"
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "काम कैसे करना है: “Pour it carefully.”"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "You have to show your ID at the gate.",
+          "alsoAccepted": [
+            "You must show your ID at the gate.",
+            "You have to show your ID card at the gate."
+          ],
+          "translations": {
+            "bn": "গেটে আপনার পরিচয়পত্র দেখাতে হবে।",
+            "hi": "गेट पर आपको अपना पहचान-पत्र दिखाना होगा।"
+          },
+          "tips": {
+            "bn": ["অন্য কারও বানানো নিয়মের জন্য “have to”।", "স্পষ্ট আর ভদ্রভাবে বলুন।"],
+            "en": ["“have to” is for a rule someone else makes.", "Say it clearly and kindly."],
+            "hi": ["किसी और के बनाए नियम के लिए “have to”।", "साफ़ और विनम्रता से कहें।"]
+          }
+        },
+        {
+          "english": "You are not allowed to use your phone during the exam.",
+          "alsoAccepted": [
+            "You aren’t allowed to use your phone during the exam.",
+            "You can’t use your phone during the exam."
+          ],
+          "translations": {
+            "bn": "পরীক্ষার সময় ফোন ব্যবহার করা যাবে না।",
+            "hi": "परीक्षा के दौरान फ़ोन इस्तेमाल करने की इजाज़त नहीं है।"
+          },
+          "tips": {
+            "bn": ["“not allowed to” বলে নিয়মে কী মানা।", "তারপর কাজটা: “to use”।"],
+            "en": ["“not allowed to” says what the rule forbids.", "Then the action: “to use”."],
+            "hi": ["“not allowed to” बताता है कि नियम में क्या मना है।", "फिर काम: “to use”।"]
+          }
+        },
+        {
+          "english": "You don’t have to bring anything. Everything is provided.",
+          "alsoAccepted": ["You do not have to bring anything. Everything is provided."],
+          "translations": {
+            "bn": "কিছু আনতে হবে না। সবকিছু দেওয়া হবে।",
+            "hi": "आपको कुछ लाने की ज़रूरत नहीं। सब कुछ दिया जाएगा।"
+          },
+          "tips": {
+            "bn": ["“don’t have to” মানে দরকার নেই।", "এটা “must not”-এর মতো নয়।"],
+            "en": ["“don’t have to” means it is not needed.", "It is not the same as “must not”."],
+            "hi": ["“don’t have to” मतलब ज़रूरत नहीं।", "यह “must not” जैसा नहीं है।"]
+          }
+        },
+        {
+          "english": "Make sure you arrive ten minutes early.",
+          "alsoAccepted": [
+            "Make sure that you arrive ten minutes early.",
+            "Make sure you come ten minutes early."
+          ],
+          "translations": {
+            "bn": "দশ মিনিট আগে পৌঁছে যাবেন, খেয়াল রাখবেন।",
+            "hi": "ध्यान रखें कि आप दस मिनट पहले पहुँच जाएँ।"
+          },
+          "tips": {
+            "bn": ["জরুরি কিছু মনে রাখার জন্য “Make sure”।", "“make sure you”-এর পরে “to” নয়।"],
+            "en": [
+              "“Make sure” is for something important to remember.",
+              "No “to” after “make sure you”."
+            ],
+            "hi": [
+              "याद रखने वाली ज़रूरी बात के लिए “Make sure”।",
+              "“make sure you” के बाद “to” नहीं।"
+            ]
+          }
+        },
+        {
+          "english": "If you are late, you can’t go in.",
+          "alsoAccepted": [
+            "If you’re late, you can’t go in.",
+            "If you are late, you cannot go in."
+          ],
+          "translations": {
+            "bn": "দেরি হলে ঢুকতে পারবেন না।",
+            "hi": "अगर देर हुई, तो अंदर जाने नहीं दिया जाएगा।"
+          },
+          "tips": {
+            "bn": ["একটা নিয়ম, আর না মানলে কী হবে।", "“If …, …” দুটোকে জোড়ে।"],
+            "en": ["A rule, and what happens if it is broken.", "“If …, …” joins the two."],
+            "hi": ["एक नियम, और न मानने पर क्या होगा।", "“If …, …” दोनों को जोड़ता है।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Alex",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I’ve never taken the metro here. How does it work?",
+          "reply": "It’s simple. First, you buy a card or a token at the counter.",
+          "cues": {
+            "bn": "প্রথম ধাপটা বলুন।",
+            "hi": "पहला क़दम बताएँ।"
+          }
+        },
+        {
+          "partner": "And how do I get through the gate?",
+          "reply": "You touch the card on the machine, and the gate opens.",
+          "cues": {
+            "bn": "গেট কীভাবে খোলে বুঝিয়ে বলুন।",
+            "hi": "समझाएँ कि गेट कैसे खुलता है।"
+          }
+        },
+        {
+          "partner": "How does the machine know how much to charge?",
+          "reply": "It records where you get on. When you get off, it takes the fare for that distance.",
+          "cues": {
+            "bn": "ভাড়া কীভাবে কাটা হয় বুঝিয়ে বলুন।",
+            "hi": "समझाएँ कि किराया कैसे कटता है।"
+          }
+        },
+        {
+          "partner": "Oh, so a longer trip costs more?",
+          "reply": "Exactly. The further you go, the more you pay.",
+          "cues": {
+            "bn": "হ্যাঁ বলুন, আর দূরত্ব আর ভাড়ার সম্পর্কটা বুঝিয়ে দিন।",
+            "hi": "हाँ कहें और दूरी व किराए का रिश्ता समझाएँ।"
+          }
+        },
+        {
+          "partner": "Is there anything I shouldn’t do?",
+          "reply": "Yes. Don’t lose your card, or you’ll have to pay the full fare.",
+          "cues": {
+            "bn": "একটা নিয়ম বা সতর্কতা বলুন।",
+            "hi": "एक नियम या सावधानी बताएँ।"
+          }
+        },
+        {
+          "partner": "Got it. Thanks, that was really clear!",
+          "reply": "You’re welcome. Does it all make sense now?",
+          "cues": {
+            "bn": "বোঝা গেল কি না জিজ্ঞেস করুন।",
+            "hi": "पूछें कि बात समझ आई या नहीं।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Teach Me Something",
+        "translations": {
+          "bn": "আমাকে কিছু শেখান",
+          "hi": "मुझे कुछ सिखाइए"
+        }
+      },
+      "instruction": {
+        "text": "Choose something you can do, like making tea. Teach it from start to finish so anyone could do it.",
+        "translations": {
+          "bn": "এমন কিছু বাছুন যা আপনি পারেন, যেমন চা বানানো। শুরু থেকে শেষ পর্যন্ত এমনভাবে শেখান যাতে যে কেউ পারে।",
+          "hi": "कोई ऐसा काम चुनें जो आपको आता हो, जैसे चाय बनाना। शुरू से आख़िर तक ऐसे सिखाएँ कि कोई भी कर सके।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what you will teach and why it is useful",
+          "translations": {
+            "bn": "কী শেখাবেন আর কেন কাজের, বলুন",
+            "hi": "बताएँ कि क्या सिखाना है और यह क्यों काम का है"
+          }
+        },
+        {
+          "text": "List what is needed",
+          "translations": {
+            "bn": "কী কী লাগবে বলুন",
+            "hi": "बताएँ कि क्या-क्या चाहिए"
+          }
+        },
+        {
+          "text": "Give the steps in order: first, next, then, finally",
+          "translations": {
+            "bn": "ধাপগুলো ক্রমে বলুন: first, next, then, finally",
+            "hi": "क़दम क्रम से बताएँ: first, next, then, finally"
+          }
+        },
+        {
+          "text": "Warn about one common mistake",
+          "translations": {
+            "bn": "একটা সাধারণ ভুল নিয়ে সাবধান করুন",
+            "hi": "एक आम ग़लती से सावधान करें"
+          }
+        },
+        {
+          "text": "Check: “Does that make sense?”",
+          "translations": {
+            "bn": "জেনে নিন: “Does that make sense?”",
+            "hi": "पूछ लें: “Does that make sense?”"
+          }
+        }
+      ],
+      "phrases": [
+        "Today I’ll show you how to …",
+        "You will need …",
+        "First, … Next, …",
+        "Make sure you …",
+        "Be careful not to …",
+        "Does that make sense?"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which sentence lists what is needed?",
+            "translations": {
+              "bn": "কোন বাক্যে কী কী লাগবে তা বলা হয়েছে?",
+              "hi": "कौन-सा वाक्य बताता है कि क्या-क्या चाहिए?"
+            }
+          },
+          "answer": "You will need a pan, water and two eggs.",
+          "others": ["I like eggs.", "Eggs are white."]
+        },
+        {
+          "question": {
+            "text": "Which word gives the following step?",
+            "translations": {
+              "bn": "কোন শব্দ দিয়ে পরের ধাপ বলা হয়?",
+              "hi": "कौन-सा शब्द अगला क़दम बताता है?"
+            }
+          },
+          "answer": "Next",
+          "others": ["Yesterday", "Because"]
+        },
+        {
+          "question": {
+            "text": "“You don’t have to pay” means…",
+            "translations": {
+              "bn": "“You don’t have to pay” মানে…",
+              "hi": "“You don’t have to pay” का मतलब…"
+            }
+          },
+          "answer": "Paying is not needed.",
+          "others": ["You must not pay.", "You must pay now."]
+        },
+        {
+          "question": {
+            "text": "Complete: Make ___ you turn it off.",
+            "translations": {
+              "bn": "পূরণ করুন: Make ___ you turn it off.",
+              "hi": "पूरा करें: Make ___ you turn it off."
+            }
+          },
+          "answer": "sure",
+          "others": ["safe", "sore"]
+        },
+        {
+          "question": {
+            "text": "Which question checks that someone understands?",
+            "translations": {
+              "bn": "কোন প্রশ্নে জানা যায় কেউ বুঝলেন কি না?",
+              "hi": "कौन-सा सवाल पूछता है कि बात समझ आई या नहीं?"
+            }
+          },
+          "answer": "Does that make sense?",
+          "others": ["Where are you from?", "Is it raining?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Aman",
+          "text": "Leela, your chai is always perfect. How do you make it?",
+          "translations": {
+            "bn": "লীলা, তোমার চা সবসময় দারুণ হয়। কীভাবে বানাও?",
+            "hi": "लीला, तुम्हारी चाय हमेशा बढ़िया बनती है। कैसे बनाती हो?"
+          }
+        },
+        {
+          "speaker": "Leela",
+          "text": "It’s easy. You’ll need water, milk, tea leaves, sugar and a little ginger.",
+          "translations": {
+            "bn": "সহজ। লাগবে জল, দুধ, চা-পাতা, চিনি আর একটু আদা।",
+            "hi": "आसान है। चाहिए पानी, दूध, चायपत्ती, चीनी और थोड़ा अदरक।"
+          }
+        },
+        {
+          "speaker": "Aman",
+          "text": "OK. What’s the first step?",
+          "translations": {
+            "bn": "আচ্ছা। প্রথম ধাপ কী?",
+            "hi": "ठीक है। पहला क़दम क्या है?"
+          }
+        },
+        {
+          "speaker": "Leela",
+          "text": "First, boil one cup of water with the ginger.",
+          "translations": {
+            "bn": "প্রথমে এক কাপ জল আদা দিয়ে ফোটাও।",
+            "hi": "पहले एक कप पानी अदरक के साथ उबालो।"
+          }
+        },
+        {
+          "speaker": "Aman",
+          "text": "And next?",
+          "translations": {
+            "bn": "তারপর?",
+            "hi": "और उसके बाद?"
+          }
+        },
+        {
+          "speaker": "Leela",
+          "text": "Next, add the tea leaves and let it boil for two minutes. Then add the milk and sugar.",
+          "translations": {
+            "bn": "এরপর চা-পাতা দিয়ে দু মিনিট ফুটতে দাও। তারপর দুধ আর চিনি দাও।",
+            "hi": "फिर चायपत्ती डालो और दो मिनट उबलने दो। उसके बाद दूध और चीनी डालो।"
+          }
+        },
+        {
+          "speaker": "Aman",
+          "text": "How long should it boil after that?",
+          "translations": {
+            "bn": "তার পরে কতক্ষণ ফোটাব?",
+            "hi": "उसके बाद कितनी देर उबालना है?"
+          }
+        },
+        {
+          "speaker": "Leela",
+          "text": "Until it rises once. But be careful: don’t leave it alone, or it will boil over.",
+          "translations": {
+            "bn": "যতক্ষণ না একবার উথলে ওঠে। তবে সাবধান: ছেড়ে যেও না, নইলে উপচে পড়বে।",
+            "hi": "जब तक एक बार उफान न आए। पर ध्यान रहे: छोड़कर मत जाना, वरना उबलकर गिर जाएगी।"
+          }
+        },
+        {
+          "speaker": "Aman",
+          "text": "Ah, that’s the mistake I always make!",
+          "translations": {
+            "bn": "আহা, এই ভুলটাই তো আমি সবসময় করি!",
+            "hi": "अरे, यही ग़लती तो मैं हमेशा करता हूँ!"
+          }
+        },
+        {
+          "speaker": "Leela",
+          "text": "Finally, strain it into a cup. Does that make sense?",
+          "translations": {
+            "bn": "শেষে ছেঁকে কাপে ঢালো। বুঝলে?",
+            "hi": "आख़िर में छानकर कप में डालो। समझ आया?"
+          }
+        },
+        {
+          "speaker": "Aman",
+          "text": "Totally. Thanks, I’ll try it tomorrow.",
+          "translations": {
+            "bn": "পুরোপুরি। ধন্যবাদ, কাল চেষ্টা করব।",
+            "hi": "पूरी तरह। धन्यवाद, कल बनाकर देखूँगा।"
+          }
+        }
+      ],
+      "voices": {
+        "Aman": "male",
+        "Leela": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the new member",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi, I’ve just joined the gym. Are there any rules?",
+          "reply": "Yes, a few. You have to bring a towel every time.",
+          "cues": {
+            "bn": "একটা নিয়ম বলুন।",
+            "hi": "एक नियम बताएँ।"
+          }
+        },
+        {
+          "partner": "OK. Can I wear my outdoor shoes?",
+          "reply": "No, you aren’t allowed to. You need clean indoor shoes.",
+          "cues": {
+            "bn": "না বলুন, আর কী লাগবে বলুন।",
+            "hi": "मना करें और बताएँ कि क्या चाहिए।"
+          }
+        },
+        {
+          "partner": "Do I have to book the machines?",
+          "reply": "No, you don’t have to book. Just don’t use one for more than thirty minutes.",
+          "cues": {
+            "bn": "বলুন বুক করার দরকার নেই, তবে একটা সীমা আছে।",
+            "hi": "बताएँ कि बुकिंग ज़रूरी नहीं, पर एक सीमा है।"
+          }
+        },
+        {
+          "partner": "Great, that’s clear. Thanks!",
+          "reply": "You’re welcome. Enjoy your workout!",
+          "cues": {
+            "bn": "শুভেচ্ছা জানান।",
+            "hi": "शुभकामना दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Teaching a new colleague",
+            "translations": {
+              "bn": "নতুন সহকর্মীকে শেখানো",
+              "hi": "नए साथी को सिखाना"
+            }
+          },
+          "roleplay": {
+            "partner": "Pallavi",
+            "asMan": "Pranav",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Can you show me how to use the printer?",
+                "reply": "Sure. First, send your file to “Office Printer” from your computer.",
+                "cues": {
+                  "bn": "প্রথম ধাপ বলুন।",
+                  "hi": "पहला क़दम बताएँ।"
+                }
+              },
+              {
+                "partner": "Done. But nothing is coming out.",
+                "reply": "Next, enter your four-digit code on the printer’s screen.",
+                "cues": {
+                  "bn": "পরের ধাপ বলুন।",
+                  "hi": "अगला क़दम बताएँ।"
+                }
+              },
+              {
+                "partner": "Oh, I need a code?",
+                "reply": "Yes, everyone has to use one. It’s on your ID card.",
+                "cues": {
+                  "bn": "নিয়মটা বুঝিয়ে বলুন।",
+                  "hi": "नियम समझाएँ।"
+                }
+              },
+              {
+                "partner": "It’s working now!",
+                "reply": "Great. Make sure you collect your pages straight away.",
+                "cues": {
+                  "bn": "একটা সতর্কতা দিয়ে শেষ করুন।",
+                  "hi": "एक सावधानी बताकर ख़त्म करें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "How a plant grows",
+            "translations": {
+              "bn": "গাছ কীভাবে বাড়ে",
+              "hi": "पौधा कैसे बढ़ता है"
+            }
+          },
+          "roleplay": {
+            "partner": "Kiaan",
+            "asWoman": "Kiara",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "How does a seed become a plant?",
+                "reply": "First, you put the seed in soil and give it water.",
+                "cues": {
+                  "bn": "প্রথম ধাপ বলুন।",
+                  "hi": "पहला क़दम बताएँ।"
+                }
+              },
+              {
+                "partner": "Then what happens?",
+                "reply": "After a few days, a small root grows down, and a green shoot comes up.",
+                "cues": {
+                  "bn": "এরপর কী হয় বলুন।",
+                  "hi": "बताएँ कि फिर क्या होता है।"
+                }
+              },
+              {
+                "partner": "Why does it need sunlight?",
+                "reply": "Because the leaves use sunlight to make food for the plant.",
+                "cues": {
+                  "bn": "কারণটা বুঝিয়ে বলুন।",
+                  "hi": "वजह समझाएँ।"
+                }
+              },
+              {
+                "partner": "Wow! So no sun means no food?",
+                "reply": "That’s right. Does that make sense?",
+                "cues": {
+                  "bn": "হ্যাঁ বলে জিজ্ঞেস করুন বোঝা গেল কি না।",
+                  "hi": "हाँ कहें और पूछें कि बात समझ आई या नहीं।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Hostel rules",
+            "translations": {
+              "bn": "হোস্টেলের নিয়ম",
+              "hi": "हॉस्टल के नियम"
+            }
+          },
+          "roleplay": {
+            "partner": "the new student",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi, I’m new here. What time do I have to be back at night?",
+                "reply": "You have to be back by ten o’clock.",
+                "cues": {
+                  "bn": "সময়ের নিয়মটা বলুন।",
+                  "hi": "समय का नियम बताएँ।"
+                }
+              },
+              {
+                "partner": "Can I cook in my room?",
+                "reply": "No, you aren’t allowed to cook in the rooms. There’s a kitchen downstairs.",
+                "cues": {
+                  "bn": "না বলুন, আর বিকল্প জানান।",
+                  "hi": "मना करें और दूसरा रास्ता बताएँ।"
+                }
+              },
+              {
+                "partner": "Do I have to clean my room myself?",
+                "reply": "No, you don’t have to. Someone cleans it every Monday.",
+                "cues": {
+                  "bn": "বলুন দরকার নেই, আর কেন।",
+                  "hi": "बताएँ कि ज़रूरत नहीं, और क्यों।"
+                }
+              },
+              {
+                "partner": "That’s all clear. Thank you!",
+                "reply": "You’re welcome. Ask me if you have any questions.",
+                "cues": {
+                  "bn": "সাহায্যের প্রস্তাব দিন।",
+                  "hi": "मदद की पेशकश करें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

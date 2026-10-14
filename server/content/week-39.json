@@ -1,0 +1,787 @@
+{
+  "week": 39,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Vikram",
+          "text": "Farah, is your talk for English class ready?",
+          "translations": {
+            "bn": "ফারহা, ইংরেজি ক্লাসের বক্তৃতাটা তৈরি?",
+            "hi": "फ़राह, अंग्रेज़ी क्लास का तुम्हारा भाषण तैयार है?"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Almost. Can I practise it on you? It’s about why I started cycling.",
+          "translations": {
+            "bn": "প্রায়। তোমাকে শুনিয়ে একবার অভ্যেস করব? বিষয়টা হলো আমি কেন সাইকেল চালানো শুরু করলাম।",
+            "hi": "लगभग। क्या मैं तुम्हें सुनाकर अभ्यास कर लूँ? यह इस बारे में है कि मैंने साइकिल चलाना क्यों शुरू किया।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Sure, go ahead.",
+          "translations": {
+            "bn": "নিশ্চয়ই, বলো।",
+            "hi": "ज़रूर, शुरू करो।"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Today I’d like to talk about cycling. First, I’ll say why I started, and then what changed.",
+          "translations": {
+            "bn": "আজ আমি সাইকেল চালানো নিয়ে বলতে চাই। প্রথমে বলব কেন শুরু করলাম, তারপর কী বদলাল।",
+            "hi": "आज मैं साइकिल चलाने के बारे में बात करना चाहती हूँ। पहले बताऊँगी कि क्यों शुरू किया, और फिर क्या बदला।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Good start. You told me the plan.",
+          "translations": {
+            "bn": "ভালো শুরু। পরিকল্পনাটা আগেই বলে দিলে।",
+            "hi": "अच्छी शुरुआत। तुमने पहले ही योजना बता दी।"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Last year the buses were always full, and the traffic was terrible, so I bought a bicycle.",
+          "translations": {
+            "bn": "গত বছর বাসগুলো সবসময় ভিড়ে ঠাসা থাকত, আর যানজট ছিল ভয়ানক, তাই একটা সাইকেল কিনলাম।",
+            "hi": "पिछले साल बसें हमेशा भरी रहती थीं, और ट्रैफ़िक बहुत बुरा था, इसलिए मैंने एक साइकिल ख़रीदी।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Nice. “And” adds a reason, and “so” gives the result.",
+          "translations": {
+            "bn": "বাহ্। “And” একটা কারণ যোগ করে, আর “so” ফলটা বলে।",
+            "hi": "बढ़िया। “And” एक वजह जोड़ता है, और “so” नतीजा बताता है।"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Although it was hard at first, I kept going. My legs hurt, but after a month it felt easy.",
+          "translations": {
+            "bn": "প্রথমে কঠিন হলেও থামিনি। পা ব্যথা করত, কিন্তু এক মাস পরে সহজ লাগতে লাগল।",
+            "hi": "हालाँकि शुरू में मुश्किल था, मैंने हार नहीं मानी। पैरों में दर्द होता था, पर एक महीने बाद आसान लगने लगा।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "“Although”, that’s a good one. What happened next?",
+          "translations": {
+            "bn": "“Although”, দারুণ। তারপর কী হলো?",
+            "hi": "“Although”, यह अच्छा है। फिर क्या हुआ?"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Because I cycle every day, I feel healthier. I also save money, so I can travel more.",
+          "translations": {
+            "bn": "রোজ সাইকেল চালাই বলে শরীর ভালো থাকে। টাকাও বাঁচে, তাই বেশি বেড়াতে পারি।",
+            "hi": "क्योंकि मैं रोज़ साइकिल चलाती हूँ, मैं ज़्यादा सेहतमंद महसूस करती हूँ। पैसे भी बचते हैं, इसलिए ज़्यादा घूम पाती हूँ।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Lots of results. How will you finish?",
+          "translations": {
+            "bn": "অনেকগুলো ফল। শেষ করবে কীভাবে?",
+            "hi": "कई नतीजे। ख़त्म कैसे करोगी?"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Finally: cycling isn’t for everyone. However, it changed my life. Therefore, I think you should try it once.",
+          "translations": {
+            "bn": "শেষে: সাইকেল সবার জন্য নয়। তবে এটা আমার জীবন বদলে দিয়েছে। তাই আমার মনে হয়, একবার চেষ্টা করে দেখা উচিত।",
+            "hi": "आख़िर में: साइकिल सबके लिए नहीं है। फिर भी, इसने मेरी ज़िंदगी बदल दी। इसलिए मुझे लगता है, आपको इसे एक बार आज़माना चाहिए।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Great ending! Every idea leads to the next. You didn’t lose the thread once.",
+          "translations": {
+            "bn": "দারুণ শেষ! প্রতিটা ভাবনা পরেরটায় নিয়ে যায়। একবারও খেই হারাওনি।",
+            "hi": "शानदार अंत! हर विचार अगले तक ले जाता है। तुमने एक बार भी बात का सिरा नहीं छोड़ा।"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Thanks! Now I just need to say it for three minutes without notes.",
+          "translations": {
+            "bn": "ধন্যবাদ! এখন শুধু কাগজ না দেখে তিন মিনিট বলতে হবে।",
+            "hi": "धन्यवाद! अब बस बिना नोट्स के तीन मिनट बोलना है।"
+          }
+        }
+      ],
+      "voices": {
+        "Vikram": "male",
+        "Farah": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "because",
+          "phonetic": "/bɪˈkɒz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কারণ",
+            "hi": "क्योंकि"
+          },
+          "syllables": ["be", "cause"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "“because”-এর পরে কারণ: “because it was late”।"
+            ],
+            "en": ["Say the second part stronger.", "“because” + a reason: “because it was late”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“because” के बाद वजह: “because it was late”।"]
+          }
+        },
+        {
+          "word": "so",
+          "phonetic": "/səʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "তাই",
+            "hi": "इसलिए"
+          },
+          "syllables": ["so"],
+          "stress": null,
+          "tips": {
+            "bn": ["উচ্চারণ “সোউ”।", "“so”-এর পরে ফল: “so I stayed at home”।"],
+            "en": ["It sounds like “soh”.", "“so” + a result: “so I stayed at home”."],
+            "hi": ["इसकी आवाज़ “सो” है।", "“so” के बाद नतीजा: “so I stayed at home”।"]
+          }
+        },
+        {
+          "word": "because of",
+          "phonetic": "/bɪˈkɒz əv/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "…-এর কারণে",
+            "hi": "… की वजह से"
+          },
+          "syllables": ["be", "cause", "of"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "“cause” জোর দিয়ে বলুন।",
+              "“because of”-এর পরে একটা জিনিস: “because of the rain”।"
+            ],
+            "en": ["Say “cause” stronger.", "“because of” + a thing: “because of the rain”."],
+            "hi": ["“cause” ज़ोर से बोलें।", "“because of” के बाद कोई चीज़: “because of the rain”।"]
+          }
+        },
+        {
+          "word": "that’s why",
+          "phonetic": "/ðæts ˈwaɪ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সেই জন্যই",
+            "hi": "इसीलिए"
+          },
+          "syllables": ["that’s", "why"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“why” জোর দিয়ে বলুন।", "কারণ বলার পরে “That’s why …” দিয়ে ফল বলুন।"],
+            "en": ["Say “why” stronger.", "“That’s why …” gives the result after a reason."],
+            "hi": ["“why” ज़ोर से बोलें।", "वजह के बाद “That’s why …” से नतीजा बताएँ।"]
+          }
+        },
+        {
+          "word": "as a result",
+          "phonetic": "/æz ə rɪˈzʌlt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ফলে",
+            "hi": "नतीजतन"
+          },
+          "syllables": ["as", "a", "re", "sult"],
+          "stress": 4,
+          "tips": {
+            "bn": ["“sult” জোর দিয়ে বলুন।", "ফল বলতে বাক্যের শুরুতে বলুন।"],
+            "en": ["Say “sult” stronger.", "Start a sentence with it to give the result."],
+            "hi": ["“sult” ज़ोर से बोलें।", "नतीजा बताने के लिए वाक्य इससे शुरू करें।"]
+          }
+        },
+        {
+          "word": "reason",
+          "phonetic": "/ˈriːzn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কারণ, যুক্তি",
+            "hi": "वजह, कारण"
+          },
+          "syllables": ["rea", "son"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “The main reason is …”"],
+            "en": ["Say the first part stronger.", "Say: “The main reason is …”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “The main reason is …”"]
+          }
+        },
+        {
+          "word": "result",
+          "phonetic": "/rɪˈzʌlt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ফল",
+            "hi": "नतीजा"
+          },
+          "syllables": ["re", "sult"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“s”-এর উচ্চারণ “z”-এর মতো।"],
+            "en": ["Say the second part stronger.", "The “s” sounds like “z”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“s” की आवाज़ “z” जैसी है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Although it was raining, the children played outside.",
+          "alsoAccepted": [
+            "Although it was raining, the children played outdoors.",
+            "The children played outside, although it was raining."
+          ],
+          "translations": {
+            "bn": "বৃষ্টি পড়ছিল, তবুও বাচ্চারা বাইরে খেলল।",
+            "hi": "हालाँकि बारिश हो रही थी, फिर भी बच्चे बाहर खेले।"
+          },
+          "tips": {
+            "bn": [
+              "এমন কিছুর আগে “Although”, যার পরে বাকিটা অবাক করে।",
+              "“although”-এর অংশের পরে “but” বসাবেন না।"
+            ],
+            "en": [
+              "“Although” comes before something that makes the rest surprising.",
+              "Don’t add “but” after an “although” part."
+            ],
+            "hi": [
+              "“Although” उस बात से पहले, जिसके बाद बाक़ी हैरान करे।",
+              "“although” वाले हिस्से के बाद “but” न लगाएँ।"
+            ]
+          }
+        },
+        {
+          "english": "The phone is expensive. However, it lasts for years.",
+          "alsoAccepted": ["The phone is expensive. However, it lasts for many years."],
+          "translations": {
+            "bn": "ফোনটা দামি। তবে এটা বহু বছর চলে।",
+            "hi": "फ़ोन महँगा है। फिर भी, यह सालों चलता है।"
+          },
+          "tips": {
+            "bn": ["“However” দিয়ে নতুন বাক্যে অন্য দিকটা বলুন।", "এর পরে কমা দিন।"],
+            "en": ["“However” starts a new sentence with the other side.", "Put a comma after it."],
+            "hi": ["“However” से नए वाक्य में दूसरा पहलू बताएँ।", "इसके बाद अल्पविराम लगाएँ।"]
+          }
+        },
+        {
+          "english": "The roads were closed. Therefore, the bus was late.",
+          "alsoAccepted": [
+            "The roads were closed. Therefore the bus was late.",
+            "The roads were closed, so the bus was late."
+          ],
+          "translations": {
+            "bn": "রাস্তা বন্ধ ছিল। তাই বাসটা দেরিতে এল।",
+            "hi": "सड़कें बंद थीं। इसलिए बस देर से आई।"
+          },
+          "tips": {
+            "bn": ["“Therefore” হলো আনুষ্ঠানিক “so”।", "আগের বাক্যের ফল বলে।"],
+            "en": ["“Therefore” is a formal “so”.", "It gives the result of the sentence before."],
+            "hi": ["“Therefore” औपचारिक “so” है।", "यह पिछले वाक्य का नतीजा बताता है।"]
+          }
+        },
+        {
+          "english": "I like my job, but the hours are long.",
+          "alsoAccepted": ["I like my job, but the working hours are long."],
+          "translations": {
+            "bn": "আমার কাজটা ভালো লাগে, কিন্তু কাজের সময়টা অনেক লম্বা।",
+            "hi": "मुझे अपनी नौकरी पसंद है, पर काम के घंटे लंबे हैं।"
+          },
+          "tips": {
+            "bn": ["“but” দুটো উল্টো দিকের ভাবনা জোড়ে।", "“but”-এর আগে কমা দিন।"],
+            "en": ["“but” joins two ideas that pull apart.", "Put a comma before “but”."],
+            "hi": ["“but” दो उलटी बातों को जोड़ता है।", "“but” से पहले अल्पविराम लगाएँ।"]
+          }
+        },
+        {
+          "english": "It was late, so the shops were closed.",
+          "alsoAccepted": ["It was late, so the shops had closed."],
+          "translations": {
+            "bn": "অনেক রাত হয়ে গিয়েছিল, তাই দোকানগুলো বন্ধ ছিল।",
+            "hi": "देर हो चुकी थी, इसलिए दुकानें बंद थीं।"
+          },
+          "tips": {
+            "bn": ["“so” দিয়ে ফল বলুন।", "আগে কারণ, তারপর “so”।"],
+            "en": ["“so” gives the result.", "The reason comes first, then “so”."],
+            "hi": ["“so” से नतीजा बताएँ।", "पहले वजह, फिर “so”।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the teacher",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Today you’re giving a short talk. What’s your topic?",
+          "reply": "My topic is my favourite festival, Diwali.",
+          "cues": {
+            "bn": "বিষয়টা বলুন।",
+            "hi": "विषय बताएँ।"
+          }
+        },
+        {
+          "partner": "Good. How will you organise it?",
+          "reply": "First, I’ll explain what it is. Next, how we celebrate it. Finally, why I love it.",
+          "cues": {
+            "bn": "তিনটে অংশের পরিকল্পনা বলুন।",
+            "hi": "तीन हिस्सों की योजना बताएँ।"
+          }
+        },
+        {
+          "partner": "Let’s hear the first part.",
+          "reply": "First, Diwali is the festival of lights. It usually comes in October or November.",
+          "cues": {
+            "bn": "প্রথম অংশ: উৎসবটা কী।",
+            "hi": "पहला हिस्सा: त्योहार क्या है।"
+          }
+        },
+        {
+          "partner": "And next?",
+          "reply": "Next, we clean the house, light lamps and share sweets with our neighbours.",
+          "cues": {
+            "bn": "দ্বিতীয় অংশ: কীভাবে পালন করা হয়।",
+            "hi": "दूसरा हिस्सा: कैसे मनाया जाता है।"
+          }
+        },
+        {
+          "partner": "And finally?",
+          "reply": "Finally, I love it because the whole family comes together. That’s why it’s special.",
+          "cues": {
+            "bn": "শেষ অংশ: কেন ভালো লাগে, কারণসহ।",
+            "hi": "आख़िरी हिस्सा: क्यों पसंद है, वजह के साथ।"
+          }
+        },
+        {
+          "partner": "Very well organised! Every part was clear.",
+          "reply": "Thank you! Planning the parts really helped.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Three Minutes Without Losing the Thread",
+        "translations": {
+          "bn": "তিন মিনিট, কথার খেই না হারিয়ে",
+          "hi": "तीन मिनट, बात का सिरा न छूटे"
+        }
+      },
+      "instruction": {
+        "text": "Speak for three minutes about a topic you know, like your town or a hobby. Link every idea to the next.",
+        "translations": {
+          "bn": "চেনা কোনো বিষয়ে তিন মিনিট বলুন, যেমন আপনার শহর বা শখ। প্রতিটা ভাবনা পরেরটার সঙ্গে জুড়ুন।",
+          "hi": "किसी जाने-पहचाने विषय पर तीन मिनट बोलें, जैसे आपका शहर या शौक़। हर विचार को अगले से जोड़ें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Open: say your topic and your plan",
+          "translations": {
+            "bn": "শুরু: বিষয় আর পরিকল্পনা বলুন",
+            "hi": "शुरुआत: विषय और योजना बताएँ"
+          }
+        },
+        {
+          "text": "Organise it with first, next and finally",
+          "translations": {
+            "bn": "first, next আর finally দিয়ে সাজান",
+            "hi": "first, next और finally से क्रम बनाएँ"
+          }
+        },
+        {
+          "text": "Give reasons and results with because and so",
+          "translations": {
+            "bn": "because আর so দিয়ে কারণ আর ফল বলুন",
+            "hi": "because और so से वजह और नतीजे बताएँ"
+          }
+        },
+        {
+          "text": "Show the other side with although or however",
+          "translations": {
+            "bn": "although বা however দিয়ে অন্য দিকটা দেখান",
+            "hi": "although या however से दूसरा पहलू दिखाएँ"
+          }
+        },
+        {
+          "text": "Finish with a clear conclusion",
+          "translations": {
+            "bn": "একটা স্পষ্ট উপসংহার দিয়ে শেষ করুন",
+            "hi": "साफ़ निष्कर्ष के साथ ख़त्म करें"
+          }
+        },
+        {
+          "text": "Keep going for three minutes, even after a mistake",
+          "translations": {
+            "bn": "ভুল হলেও তিন মিনিট বলে যান",
+            "hi": "ग़लती हो जाए तो भी तीन मिनट बोलते रहें"
+          }
+        }
+      ],
+      "phrases": [
+        "Today I’d like to talk about …",
+        "First, … Next, … Finally, …",
+        "This is because …",
+        "As a result, …",
+        "However, …",
+        "So, to sum up, …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Choose the word: “I was tired, ___ I went to bed early.”",
+            "translations": {
+              "bn": "শব্দ বাছুন: “I was tired, ___ I went to bed early.”",
+              "hi": "शब्द चुनें: “I was tired, ___ I went to bed early.”"
+            }
+          },
+          "answer": "so",
+          "others": ["but", "although"]
+        },
+        {
+          "question": {
+            "text": "Choose the word: “It was cheap, ___ it was very good.”",
+            "translations": {
+              "bn": "শব্দ বাছুন: “It was cheap, ___ it was very good.”",
+              "hi": "शब्द चुनें: “It was cheap, ___ it was very good.”"
+            }
+          },
+          "answer": "but",
+          "others": ["so", "because"]
+        },
+        {
+          "question": {
+            "text": "Which sentence is correct?",
+            "translations": {
+              "bn": "কোন বাক্যটা ঠিক?",
+              "hi": "कौन-सा वाक्य सही है?"
+            }
+          },
+          "answer": "Although it was cold, we swam.",
+          "others": ["Although it was cold, but we swam.", "Although it was cold, so we swam."]
+        },
+        {
+          "question": {
+            "text": "Which word gives a result, in a formal way?",
+            "translations": {
+              "bn": "কোন শব্দ আনুষ্ঠানিকভাবে ফল বোঝায়?",
+              "hi": "कौन-सा शब्द औपचारिक ढंग से नतीजा बताता है?"
+            }
+          },
+          "answer": "Therefore",
+          "others": ["However", "Although"]
+        },
+        {
+          "question": {
+            "text": "Which word starts the last part of a talk?",
+            "translations": {
+              "bn": "বক্তৃতার শেষ অংশ কোন শব্দ দিয়ে শুরু হয়?",
+              "hi": "भाषण का आख़िरी हिस्सा किस शब्द से शुरू होता है?"
+            }
+          },
+          "answer": "Finally",
+          "others": ["First", "Next"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Imran",
+          "text": "Neha, why was the report late this week?",
+          "translations": {
+            "bn": "নেহা, এ সপ্তাহে রিপোর্টটা দেরিতে এল কেন?",
+            "hi": "नेहा, इस हफ़्ते रिपोर्ट देर से क्यों आई?"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "There were two reasons. First, the data came late, so we started two days after the plan.",
+          "translations": {
+            "bn": "দুটো কারণ ছিল। প্রথমত, তথ্য দেরিতে এসেছিল, তাই আমরা পরিকল্পনার দু দিন পরে শুরু করি।",
+            "hi": "दो वजहें थीं। पहली, डेटा देर से आया, इसलिए हमने योजना से दो दिन बाद शुरू किया।"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "I see. And the second reason?",
+          "translations": {
+            "bn": "বুঝলাম। আর দ্বিতীয় কারণ?",
+            "hi": "समझा। और दूसरी वजह?"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "Second, two people were ill. As a result, the rest of us had more work.",
+          "translations": {
+            "bn": "দ্বিতীয়ত, দুজন অসুস্থ ছিলেন। ফলে বাকিদের কাজ বেড়ে গিয়েছিল।",
+            "hi": "दूसरी, दो लोग बीमार थे। नतीजतन, बाक़ी लोगों पर काम बढ़ गया।"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "That makes sense. Although it was late, the report is very good.",
+          "translations": {
+            "bn": "বোঝা গেল। দেরি হলেও রিপোর্টটা খুব ভালো হয়েছে।",
+            "hi": "बात समझ आती है। हालाँकि देर हुई, रिपोर्ट बहुत अच्छी है।"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "Thank you. However, we learned something.",
+          "translations": {
+            "bn": "ধন্যবাদ। তবে আমরা একটা জিনিস শিখেছি।",
+            "hi": "धन्यवाद। फिर भी, हमने एक बात सीखी।"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "What did you learn?",
+          "translations": {
+            "bn": "কী শিখলে?",
+            "hi": "क्या सीखा?"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "We need the data a week earlier. Therefore, next time I’ll ask for it on Monday.",
+          "translations": {
+            "bn": "তথ্যটা এক সপ্তাহ আগে দরকার। তাই পরের বার আমি সোমবারই চেয়ে নেব।",
+            "hi": "डेटा हमें एक हफ़्ता पहले चाहिए। इसलिए अगली बार मैं सोमवार को ही माँग लूँगी।"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "Great idea. That’s why I like working with you: you always find a solution.",
+          "translations": {
+            "bn": "দারুণ ভাবনা। এই জন্যই তোমার সঙ্গে কাজ করতে ভালো লাগে: তুমি সবসময় সমাধান খুঁজে নাও।",
+            "hi": "बढ़िया विचार। इसीलिए मुझे तुम्हारे साथ काम करना पसंद है: तुम हमेशा हल ढूँढ लेती हो।"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "Thanks, Imran!",
+          "translations": {
+            "bn": "ধন্যবাদ, ইমরান!",
+            "hi": "धन्यवाद, इमरान!"
+          }
+        }
+      ],
+      "voices": {
+        "Imran": "male",
+        "Neha": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Rhea",
+      "asMan": "Rohit",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Why are you learning English?",
+          "reply": "Because I want a better job, and many companies need English.",
+          "cues": {
+            "bn": "কারণ বলুন।",
+            "hi": "वजह बताएँ।"
+          }
+        },
+        {
+          "partner": "Is it difficult?",
+          "reply": "Yes, it’s difficult. However, I practise every day, so it’s getting easier.",
+          "cues": {
+            "bn": "কঠিন মেনে নিন, তারপর রোজ অভ্যেসে কী বদলাচ্ছে বলুন।",
+            "hi": "मुश्किल मानें, फिर बताएँ कि रोज़ के अभ्यास से क्या बदल रहा है।"
+          }
+        },
+        {
+          "partner": "What has changed so far?",
+          "reply": "I understand more. As a result, I can talk to customers without fear.",
+          "cues": {
+            "bn": "ফলটা বলুন।",
+            "hi": "नतीजा बताएँ।"
+          }
+        },
+        {
+          "partner": "That’s great to hear!",
+          "reply": "Thanks! That’s why I won’t stop now.",
+          "cues": {
+            "bn": "কথাটা শেষ করুন।",
+            "hi": "बात पूरी करें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A job interview",
+            "translations": {
+              "bn": "চাকরির ইন্টারভিউ",
+              "hi": "नौकरी का इंटरव्यू"
+            }
+          },
+          "roleplay": {
+            "partner": "the interviewer",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Tell me about yourself in a few sentences.",
+                "reply": "Sure. First, I studied commerce. Next, I worked in a bank for two years.",
+                "cues": {
+                  "bn": "ক্রমে নিজের কথা বলুন।",
+                  "hi": "अपने बारे में क्रम से बताएँ।"
+                }
+              },
+              {
+                "partner": "Why did you leave the bank?",
+                "reply": "I enjoyed it, but I wanted to work with people more, so I looked for a new job.",
+                "cues": {
+                  "bn": "কারণ আর ফল বলুন।",
+                  "hi": "वजह और नतीजा बताएँ।"
+                }
+              },
+              {
+                "partner": "You have no experience in sales, though.",
+                "reply": "That’s true. However, I learn fast, and I talk to customers every day.",
+                "cues": {
+                  "bn": "মেনে নিন, তারপর নিজের পক্ষে বলুন।",
+                  "hi": "बात मानें, फिर अपनी ख़ूबी बताएँ।"
+                }
+              },
+              {
+                "partner": "Why should we choose you?",
+                "reply": "Because I’m hard-working and friendly. Therefore, I think I’d be good at this job.",
+                "cues": {
+                  "bn": "কারণ দিয়ে উপসংহার টানুন।",
+                  "hi": "वजह के साथ निष्कर्ष दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Talking about my town",
+            "translations": {
+              "bn": "আমার শহরের কথা",
+              "hi": "मेरे शहर की बात"
+            }
+          },
+          "roleplay": {
+            "partner": "the visitor",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "What’s your town like?",
+                "reply": "It’s small, but it’s very green, and the people are friendly.",
+                "cues": {
+                  "bn": "শহরটা কেমন বলুন।",
+                  "hi": "शहर कैसा है, बताएँ।"
+                }
+              },
+              {
+                "partner": "Is it a good place to live?",
+                "reply": "Yes, because life is calm and everything is close.",
+                "cues": {
+                  "bn": "কারণ দিয়ে উত্তর দিন।",
+                  "hi": "वजह के साथ जवाब दें।"
+                }
+              },
+              {
+                "partner": "Is there anything you don’t like?",
+                "reply": "Although it’s peaceful, there aren’t many jobs, so young people move away.",
+                "cues": {
+                  "bn": "অন্য দিকটা আর তার ফল বলুন।",
+                  "hi": "दूसरा पहलू और उसका नतीजा बताएँ।"
+                }
+              },
+              {
+                "partner": "Would you recommend a visit?",
+                "reply": "Definitely. Come in winter, because the weather is perfect then.",
+                "cues": {
+                  "bn": "কারণসহ ঘুরে যাওয়ার পরামর্শ দিন।",
+                  "hi": "वजह के साथ घूमने की सलाह दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A class debate",
+            "translations": {
+              "bn": "ক্লাসের বিতর্ক",
+              "hi": "क्लास की बहस"
+            }
+          },
+          "roleplay": {
+            "partner": "Tanvi",
+            "asMan": "Tanmay",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Should students wear uniforms? What do you think?",
+                "reply": "I think they should. First, uniforms are cheaper than lots of clothes.",
+                "cues": {
+                  "bn": "মত দিয়ে প্রথম যুক্তি বলুন।",
+                  "hi": "राय दें और पहला तर्क बताएँ।"
+                }
+              },
+              {
+                "partner": "But students can’t show their style.",
+                "reply": "That’s true. However, everyone looks equal, so nobody feels left out.",
+                "cues": {
+                  "bn": "মেনে নিয়ে অন্য দিকটা বলুন।",
+                  "hi": "बात मानें और दूसरा पहलू बताएँ।"
+                }
+              },
+              {
+                "partner": "Any other reason?",
+                "reply": "Yes. Next, it saves time in the morning, because you don’t have to choose.",
+                "cues": {
+                  "bn": "আরেকটা কারণ বলুন।",
+                  "hi": "एक और वजह बताएँ।"
+                }
+              },
+              {
+                "partner": "OK, what’s your conclusion?",
+                "reply": "Finally, for these reasons, I believe uniforms are a good idea.",
+                "cues": {
+                  "bn": "উপসংহার টানুন।",
+                  "hi": "निष्कर्ष दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

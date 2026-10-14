@@ -1,0 +1,739 @@
+{
+  "week": 31,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Nakul",
+          "text": "Aditi, what do you think about children using phones at school?",
+          "translations": {
+            "bn": "অদিতি, স্কুলে বাচ্চাদের ফোন ব্যবহার নিয়ে তোমার কী মত?",
+            "hi": "अदिति, स्कूल में बच्चों के फ़ोन इस्तेमाल करने के बारे में तुम्हारा क्या ख़याल है?"
+          }
+        },
+        {
+          "speaker": "Aditi",
+          "text": "Honestly, I feel phones should stay in their bags during class.",
+          "translations": {
+            "bn": "সত্যি বলতে, আমার মনে হয় ক্লাসের সময় ফোন ব্যাগেই থাকা উচিত।",
+            "hi": "सच कहूँ तो, मुझे लगता है क्लास के दौरान फ़ोन बैग में ही रहने चाहिए।"
+          }
+        },
+        {
+          "speaker": "Nakul",
+          "text": "Why do you think so?",
+          "translations": {
+            "bn": "কেন এমন মনে হয়?",
+            "hi": "तुम्हें ऐसा क्यों लगता है?"
+          }
+        },
+        {
+          "speaker": "Aditi",
+          "text": "Because children can’t focus when a phone keeps buzzing. For example, my nephew’s marks went up when his school banned phones.",
+          "translations": {
+            "bn": "কারণ ফোন বারবার বাজলে বাচ্চারা মন দিতে পারে না। যেমন, আমার ভাইপোর স্কুলে ফোন বন্ধ হওয়ার পর ওর নম্বর বেড়েছে।",
+            "hi": "क्योंकि फ़ोन बार-बार बजे, तो बच्चे ध्यान नहीं लगा पाते। जैसे, मेरे भतीजे के स्कूल में फ़ोन बंद हुए, तो उसके नंबर बढ़ गए।"
+          }
+        },
+        {
+          "speaker": "Nakul",
+          "text": "I see. In my opinion, phones can also help. Students can look things up quickly.",
+          "translations": {
+            "bn": "বুঝলাম। আমার মতে, ফোন কাজেও লাগে। ছাত্ররা তাড়াতাড়ি কিছু খুঁজে নিতে পারে।",
+            "hi": "समझा। मेरी राय में, फ़ोन मददगार भी हो सकते हैं। छात्र जल्दी से कुछ भी खोज सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Aditi",
+          "text": "That’s true. Do you have an example?",
+          "translations": {
+            "bn": "ঠিক কথা। কোনো উদাহরণ আছে?",
+            "hi": "यह सच है। कोई उदाहरण है?"
+          }
+        },
+        {
+          "speaker": "Nakul",
+          "text": "Yes. In my science class, we used phones to check the weather for a project.",
+          "translations": {
+            "bn": "হ্যাঁ। আমার বিজ্ঞানের ক্লাসে একটা প্রজেক্টের জন্য আমরা ফোনে আবহাওয়া দেখতাম।",
+            "hi": "हाँ। मेरी विज्ञान की कक्षा में हमने एक प्रोजेक्ट के लिए फ़ोन से मौसम देखा था।"
+          }
+        },
+        {
+          "speaker": "Aditi",
+          "text": "Hmm, I believe that’s different. The teacher decided when to use them.",
+          "translations": {
+            "bn": "হুম, আমার বিশ্বাস ওটা আলাদা। কখন ব্যবহার হবে, সেটা শিক্ষক ঠিক করতেন।",
+            "hi": "हम्म, मेरे ख़याल से वह अलग बात है। कब इस्तेमाल करना है, यह टीचर तय करते थे।"
+          }
+        },
+        {
+          "speaker": "Nakul",
+          "text": "Good point. So maybe phones are OK, but only when the teacher says so.",
+          "translations": {
+            "bn": "ভালো কথা। তাহলে হয়তো ফোন চলতে পারে, কিন্তু শুধু শিক্ষক বললে।",
+            "hi": "अच्छी बात है। तो शायद फ़ोन ठीक हैं, पर तभी जब टीचर कहें।"
+          }
+        },
+        {
+          "speaker": "Aditi",
+          "text": "Exactly. That’s my opinion too.",
+          "translations": {
+            "bn": "একদম। আমারও তাই মত।",
+            "hi": "बिल्कुल। मेरी भी यही राय है।"
+          }
+        },
+        {
+          "speaker": "Nakul",
+          "text": "Great. Let’s say that at the parents’ meeting tomorrow.",
+          "translations": {
+            "bn": "দারুণ। চলো কালকের অভিভাবকদের সভায় এটা বলি।",
+            "hi": "बढ़िया। चलो कल की अभिभावक बैठक में यही बात रखते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Nakul": "male",
+        "Aditi": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "opinion",
+          "phonetic": "/əˈpɪnjən/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মত",
+            "hi": "राय"
+          },
+          "syllables": ["o", "pin", "ion"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "বলুন “in my opinion”, “according to me” নয়।"
+            ],
+            "en": ["Say the second part stronger.", "Say “in my opinion”, not “according to me”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें “in my opinion”, “according to me” नहीं।"]
+          }
+        },
+        {
+          "word": "believe",
+          "phonetic": "/bɪˈliːv/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বিশ্বাস করা, মনে করা",
+            "hi": "मानना"
+          },
+          "syllables": ["be", "lieve"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“ie” লম্বা, “see”-এর মতো।"],
+            "en": ["Say the second part stronger.", "The “ie” is long, as in “see”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“ie” लंबा है, “see” जैसा।"]
+          }
+        },
+        {
+          "word": "feel",
+          "phonetic": "/fiːl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মনে হওয়া, অনুভব করা",
+            "hi": "महसूस होना, लगना"
+          },
+          "syllables": ["feel"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ee” লম্বা।", "“I feel that …” “I think …”-এর চেয়ে নরম শোনায়।"],
+            "en": ["The “ee” is long.", "“I feel that …” sounds softer than “I think …”."],
+            "hi": ["“ee” लंबा है।", "“I feel that …” “I think …” से नरम लगता है।"]
+          }
+        },
+        {
+          "word": "think",
+          "phonetic": "/θɪŋk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভাবা, মনে করা",
+            "hi": "सोचना"
+          },
+          "syllables": ["think"],
+          "stress": null,
+          "tips": {
+            "bn": ["“th” বলতে জিভ দাঁতের মাঝে রাখুন।", "“tink” বা “sink” বলবেন না।"],
+            "en": ["For “th”, put your tongue between your teeth.", "Do not say “tink” or “sink”."],
+            "hi": ["“th” बोलने के लिए जीभ दाँतों के बीच रखें।", "“tink” या “sink” न बोलें।"]
+          }
+        },
+        {
+          "word": "view",
+          "phonetic": "/vjuː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দৃষ্টিভঙ্গি, মত",
+            "hi": "नज़रिया"
+          },
+          "syllables": ["view"],
+          "stress": null,
+          "tips": {
+            "bn": ["উচ্চারণ “ভিউ”।", "“my point of view” মানে আমার মত।"],
+            "en": ["It sounds like “vyoo”.", "“my point of view” means my opinion."],
+            "hi": ["इसकी आवाज़ “व्यू” जैसी है।", "“my point of view” मतलब मेरी राय।"]
+          }
+        },
+        {
+          "word": "personally",
+          "phonetic": "/ˈpɜːsənəli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ব্যক্তিগতভাবে",
+            "hi": "व्यक्तिगत रूप से"
+          },
+          "syllables": ["per", "son", "al", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "এটা শুধু আপনার মত, বোঝাতে শুরুতে বলুন।"],
+            "en": ["Say the first part stronger.", "Start with it to show this is only your view."],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "यह सिर्फ़ आपकी राय है, यह दिखाने के लिए शुरू में कहें।"
+            ]
+          }
+        },
+        {
+          "word": "suppose",
+          "phonetic": "/səˈpəʊz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধরে নেওয়া, মনে করা",
+            "hi": "मान लेना"
+          },
+          "syllables": ["sup", "pose"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "“I suppose so” মানে হ্যাঁ, তবে জোর দিয়ে নয়।"
+            ],
+            "en": ["Say the second part stronger.", "“I suppose so” means yes, but not strongly."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“I suppose so” मतलब हाँ, पर पूरे यक़ीन से नहीं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I think it’s a good idea because it saves time.",
+          "alsoAccepted": ["I think it is a good idea, because it saves time."],
+          "translations": {
+            "bn": "আমার মনে হয় এটা ভালো বুদ্ধি, কারণ এতে সময় বাঁচে।",
+            "hi": "मुझे लगता है यह अच्छा विचार है, क्योंकि इससे समय बचता है।"
+          },
+          "tips": {
+            "bn": ["আগে মত, তারপর কারণ।", "“because” দুটোকে জোড়ে।"],
+            "en": ["Give your opinion, then the reason.", "“because” joins the two."],
+            "hi": ["पहले राय, फिर कारण।", "“because” दोनों को जोड़ता है।"]
+          }
+        },
+        {
+          "english": "The main reason is the cost.",
+          "alsoAccepted": ["The main reason is the price."],
+          "translations": {
+            "bn": "মূল কারণ হল খরচ।",
+            "hi": "मुख्य कारण है ख़र्च।"
+          },
+          "tips": {
+            "bn": ["“The main reason” মানে সবচেয়ে জরুরি কারণ।", "এটা দিয়েই শুরু করুন।"],
+            "en": ["“The main reason” is the most important one.", "Start with it."],
+            "hi": ["“The main reason” मतलब सबसे ज़रूरी कारण।", "इसी से शुरू करें।"]
+          }
+        },
+        {
+          "english": "That’s why I prefer the train.",
+          "alsoAccepted": ["So I prefer the train."],
+          "translations": {
+            "bn": "সেই জন্যই আমার ট্রেন পছন্দ।",
+            "hi": "इसीलिए मुझे ट्रेन ज़्यादा पसंद है।"
+          },
+          "tips": {
+            "bn": ["“That’s why” কারণের ফল বোঝায়।", "আগে কারণটা বলুন।"],
+            "en": ["“That’s why” gives the result of a reason.", "Say the reason first."],
+            "hi": ["“That’s why” कारण का नतीजा बताता है।", "पहले कारण बताएँ।"]
+          }
+        },
+        {
+          "english": "Another reason is that it’s safer.",
+          "alsoAccepted": ["Another reason is it’s safer."],
+          "translations": {
+            "bn": "আরেকটা কারণ হল এটা বেশি নিরাপদ।",
+            "hi": "एक और कारण यह है कि यह ज़्यादा सुरक्षित है।"
+          },
+          "tips": {
+            "bn": ["“Another reason” দিয়ে আরও একটা কারণ।", "“safer” মানে বেশি নিরাপদ।"],
+            "en": ["“Another reason” adds one more.", "“safer” means more safe."],
+            "hi": ["“Another reason” से एक और कारण जुड़ता है।", "“safer” मतलब ज़्यादा सुरक्षित।"]
+          }
+        },
+        {
+          "english": "I feel strongly about this, since it affects children.",
+          "alsoAccepted": ["I feel strongly about this because it affects children."],
+          "translations": {
+            "bn": "এ নিয়ে আমার জোরালো মত আছে, কারণ এটা বাচ্চাদের ওপর প্রভাব ফেলে।",
+            "hi": "इस बारे में मेरी राय पक्की है, क्योंकि इसका असर बच्चों पर पड़ता है।"
+          },
+          "tips": {
+            "bn": ["“feel strongly” মানে খুব গুরুত্ব দেন।", "“since”-এর মানে “because” হতে পারে।"],
+            "en": ["“feel strongly” means you care a lot.", "“since” can mean “because”."],
+            "hi": [
+              "“feel strongly” मतलब आप इसे बहुत अहम मानते हैं।",
+              "“since” का मतलब “because” भी हो सकता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Arpita",
+      "asMan": "Arpit",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I think learning English online is easy.",
+          "reply": "I agree. For example, I practise with this app every day.",
+          "cues": {
+            "bn": "একমত হয়ে নিজের একটা উদাহরণ দিন।",
+            "hi": "सहमति दें और अपना एक उदाहरण दें।"
+          }
+        },
+        {
+          "partner": "But some people say teachers are better.",
+          "reply": "That’s true. For instance, a teacher can correct you at once.",
+          "cues": {
+            "bn": "“For instance” দিয়ে একটা উদাহরণ দিন।",
+            "hi": "“For instance” से एक उदाहरण दें।"
+          }
+        },
+        {
+          "partner": "Can you give another example?",
+          "reply": "Sure. A teacher can see if you look confused.",
+          "cues": {
+            "bn": "আরেকটা উদাহরণ দিন।",
+            "hi": "एक और उदाहरण दें।"
+          }
+        },
+        {
+          "partner": "So which is better, do you think?",
+          "reply": "In my opinion, both are useful, like a bicycle and a bus.",
+          "cues": {
+            "bn": "মত দিন, আর একটা তুলনা দিয়ে বোঝান।",
+            "hi": "राय दें और किसी तुलना से समझाएँ।"
+          }
+        },
+        {
+          "partner": "Ha, nice comparison! Why a bicycle and a bus?",
+          "reply": "Because one is free and easy, and the other takes you further.",
+          "cues": {
+            "bn": "তুলনাটা ব্যাখ্যা করুন।",
+            "hi": "तुलना समझाएँ।"
+          }
+        },
+        {
+          "partner": "That makes sense. I agree with you now.",
+          "reply": "Great! Thanks for listening.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "My Opinion on an Everyday Topic",
+        "translations": {
+          "bn": "রোজকার এক বিষয়ে আমার মত",
+          "hi": "रोज़ के एक विषय पर मेरी राय"
+        }
+      },
+      "instruction": {
+        "text": "Choose an everyday topic, like street food or online shopping. Give your opinion, two reasons and an example.",
+        "translations": {
+          "bn": "রোজকার একটা বিষয় বেছে নিন, যেমন রাস্তার খাবার বা অনলাইন কেনাকাটা। মত, দুটো কারণ আর একটা উদাহরণ দিন।",
+          "hi": "रोज़ का कोई विषय चुनें, जैसे सड़क का खाना या ऑनलाइन ख़रीदारी। अपनी राय, दो कारण और एक उदाहरण दें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say the topic and your opinion",
+          "translations": {
+            "bn": "বিষয় আর নিজের মত বলুন",
+            "hi": "विषय और अपनी राय बताएँ"
+          }
+        },
+        {
+          "text": "Give your first reason",
+          "translations": {
+            "bn": "প্রথম কারণটা দিন",
+            "hi": "पहला कारण दें"
+          }
+        },
+        {
+          "text": "Give a second reason with “Also, …”",
+          "translations": {
+            "bn": "“Also, …” দিয়ে দ্বিতীয় কারণ দিন",
+            "hi": "“Also, …” से दूसरा कारण दें"
+          }
+        },
+        {
+          "text": "Give one example from your life",
+          "translations": {
+            "bn": "নিজের জীবন থেকে একটা উদাহরণ দিন",
+            "hi": "अपनी ज़िंदगी से एक उदाहरण दें"
+          }
+        },
+        {
+          "text": "Finish by saying your opinion again",
+          "translations": {
+            "bn": "শেষে আবার নিজের মত বলুন",
+            "hi": "आख़िर में अपनी राय फिर से कहें"
+          }
+        }
+      ],
+      "phrases": [
+        "In my opinion, …",
+        "I believe …",
+        "The main reason is …",
+        "Also, …",
+        "For example, …",
+        "That’s why I think …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which phrase introduces an opinion?",
+            "translations": {
+              "bn": "কোন কথা দিয়ে মত শুরু হয়?",
+              "hi": "कौन-सा वाक्यांश राय की शुरुआत करता है?"
+            }
+          },
+          "answer": "In my opinion, …",
+          "others": ["For example, …", "In the end, …"]
+        },
+        {
+          "question": {
+            "text": "Complete: I ___ that sport is important.",
+            "translations": {
+              "bn": "পূরণ করুন: I ___ that sport is important.",
+              "hi": "पूरा करें: I ___ that sport is important."
+            }
+          },
+          "answer": "believe",
+          "others": ["belief", "believing"]
+        },
+        {
+          "question": {
+            "text": "Which word gives a reason?",
+            "translations": {
+              "bn": "কোন শব্দ দিয়ে কারণ বলা হয়?",
+              "hi": "कौन-सा शब्द कारण बताता है?"
+            }
+          },
+          "answer": "because",
+          "others": ["but", "or"]
+        },
+        {
+          "question": {
+            "text": "Which phrase introduces an example?",
+            "translations": {
+              "bn": "কোন কথা দিয়ে উদাহরণ শুরু হয়?",
+              "hi": "कौन-सा वाक्यांश उदाहरण शुरू करता है?"
+            }
+          },
+          "answer": "For instance, …",
+          "others": ["That’s why …", "On the other hand, …"]
+        },
+        {
+          "question": {
+            "text": "Someone asks, “What do you think?” Which is the best start?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “What do you think?” কোন শুরুটা সবচেয়ে ভালো?",
+              "hi": "किसी ने पूछा, “What do you think?” सबसे अच्छी शुरुआत कौन-सी है?"
+            }
+          },
+          "answer": "Personally, I think …",
+          "others": ["I don’t know nothing.", "Think is good."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Host",
+          "text": "Good evening! Today’s question: is street food good or bad? Neelima, what do you think?",
+          "translations": {
+            "bn": "শুভ সন্ধ্যা! আজকের প্রশ্ন: রাস্তার খাবার ভালো না খারাপ? নীলিমা, আপনার কী মত?",
+            "hi": "शुभ संध्या! आज का सवाल: सड़क का खाना अच्छा है या बुरा? नीलिमा, आपका क्या ख़याल है?"
+          }
+        },
+        {
+          "speaker": "Neelima",
+          "text": "Personally, I love it. I believe it’s one of the best things about our cities.",
+          "translations": {
+            "bn": "আমি নিজে খুব ভালোবাসি। আমার বিশ্বাস, এটা আমাদের শহরগুলোর সেরা জিনিসগুলোর একটা।",
+            "hi": "मुझे तो बहुत पसंद है। मेरा मानना है कि यह हमारे शहरों की सबसे अच्छी चीज़ों में से एक है।"
+          }
+        },
+        {
+          "speaker": "Host",
+          "text": "Why do you feel that way?",
+          "translations": {
+            "bn": "এমন কেন মনে হয়?",
+            "hi": "आपको ऐसा क्यों लगता है?"
+          }
+        },
+        {
+          "speaker": "Neelima",
+          "text": "Because it’s cheap, fresh and full of flavour. For example, the pani puri near my office is amazing.",
+          "translations": {
+            "bn": "কারণ এটা সস্তা, টাটকা আর স্বাদে ভরা। যেমন, আমার অফিসের কাছের ফুচকা অসাধারণ।",
+            "hi": "क्योंकि यह सस्ता, ताज़ा और स्वाद से भरपूर है। जैसे, मेरे दफ़्तर के पास के गोलगप्पे कमाल के हैं।"
+          }
+        },
+        {
+          "speaker": "Host",
+          "text": "But some people say it isn’t clean.",
+          "translations": {
+            "bn": "কিন্তু কেউ কেউ বলেন এটা পরিষ্কার নয়।",
+            "hi": "पर कुछ लोग कहते हैं कि यह साफ़ नहीं होता।"
+          }
+        },
+        {
+          "speaker": "Neelima",
+          "text": "That’s a fair point. In my opinion, you should choose busy stalls. The food there is always fresh.",
+          "translations": {
+            "bn": "ন্যায্য কথা। আমার মতে, ভিড় থাকা দোকান বেছে নেওয়া উচিত। ওখানকার খাবার সবসময় টাটকা।",
+            "hi": "यह जायज़ बात है। मेरी राय में, भीड़ वाले ठेले चुनने चाहिए। वहाँ का खाना हमेशा ताज़ा होता है।"
+          }
+        },
+        {
+          "speaker": "Host",
+          "text": "Interesting. So, what’s your final opinion?",
+          "translations": {
+            "bn": "মজার। তাহলে আপনার শেষ মত কী?",
+            "hi": "दिलचस्प। तो आपकी आख़िरी राय क्या है?"
+          }
+        },
+        {
+          "speaker": "Neelima",
+          "text": "Street food is great, if you choose carefully. That’s why I eat it every week!",
+          "translations": {
+            "bn": "বেছে খেলে রাস্তার খাবার দারুণ। সেই জন্যই আমি প্রতি সপ্তাহে খাই!",
+            "hi": "सोच-समझकर चुनें तो सड़क का खाना बढ़िया है। इसीलिए मैं हर हफ़्ते खाती हूँ!"
+          }
+        },
+        {
+          "speaker": "Host",
+          "text": "Thank you, Neelima! Now, our next caller…",
+          "translations": {
+            "bn": "ধন্যবাদ, নীলিমা! এবার আমাদের পরের শ্রোতা…",
+            "hi": "धन्यवाद, नीलिमा! अब हमारे अगले कॉलर…"
+          }
+        }
+      ],
+      "voices": {
+        "Host": "male",
+        "Neelima": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the host",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Welcome to the show! What do you think about online shopping?",
+          "reply": "In my opinion, it’s very useful.",
+          "cues": {
+            "bn": "নিজের মত দিন।",
+            "hi": "अपनी राय दें।"
+          }
+        },
+        {
+          "partner": "Why do you think so?",
+          "reply": "Because it saves time.",
+          "cues": {
+            "bn": "একটা কারণ দিন।",
+            "hi": "एक कारण दें।"
+          }
+        },
+        {
+          "partner": "Can you give an example?",
+          "reply": "For example, I buy my medicines online.",
+          "cues": {
+            "bn": "নিজের জীবন থেকে উদাহরণ দিন।",
+            "hi": "अपनी ज़िंदगी से एक उदाहरण दें।"
+          }
+        },
+        {
+          "partner": "Thank you for calling!",
+          "reply": "Thank you for having me.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Choosing a film",
+            "translations": {
+              "bn": "সিনেমা বাছাই",
+              "hi": "फ़िल्म चुनना"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "What do you think of action films?",
+                "reply": "Personally, I find them a bit loud.",
+                "cues": {
+                  "bn": "নিজের মত দিন।",
+                  "hi": "अपनी राय दें।"
+                }
+              },
+              {
+                "partner": "Really? What kind of films do you like?",
+                "reply": "I prefer comedies, because they help me relax.",
+                "cues": {
+                  "bn": "পছন্দ আর কারণ বলুন।",
+                  "hi": "पसंद और कारण बताएँ।"
+                }
+              },
+              {
+                "partner": "Give me an example of a good one.",
+                "reply": "For example, …",
+                "cues": {
+                  "bn": "একটা উদাহরণ দিন।",
+                  "hi": "एक उदाहरण दें।"
+                }
+              },
+              {
+                "partner": "OK, let’s watch a comedy tonight!",
+                "reply": "Great idea!",
+                "cues": {
+                  "bn": "রাজি হোন।",
+                  "hi": "हामी भरें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Cooking at home",
+            "translations": {
+              "bn": "বাড়িতে রান্না",
+              "hi": "घर पर खाना बनाना"
+            }
+          },
+          "roleplay": {
+            "partner": "Shruti",
+            "asMan": "Shrey",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Do you think people should cook at home more?",
+                "reply": "Yes, I believe they should.",
+                "cues": {
+                  "bn": "নিজের মত দিন।",
+                  "hi": "अपनी राय दें।"
+                }
+              },
+              {
+                "partner": "Why?",
+                "reply": "Because home food is healthier and cheaper.",
+                "cues": {
+                  "bn": "দুটো কারণ দিন।",
+                  "hi": "दो कारण दें।"
+                }
+              },
+              {
+                "partner": "But it takes a lot of time.",
+                "reply": "That’s true, but simple dishes are quick. For example, dal and rice.",
+                "cues": {
+                  "bn": "মেনে নিয়ে একটা উদাহরণ দিন।",
+                  "hi": "बात मानें और एक उदाहरण दें।"
+                }
+              },
+              {
+                "partner": "Good point. I might try cooking more.",
+                "reply": "I’m sure you’ll enjoy it.",
+                "cues": {
+                  "bn": "উৎসাহ দিন।",
+                  "hi": "हौसला बढ़ाएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "City buses",
+            "translations": {
+              "bn": "শহরের বাস",
+              "hi": "शहर की बसें"
+            }
+          },
+          "roleplay": {
+            "partner": "the reporter",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Excuse me, what do you think about the city buses?",
+                "reply": "Honestly, I think they could be better.",
+                "cues": {
+                  "bn": "সৎভাবে মত দিন।",
+                  "hi": "ईमानदारी से राय दें।"
+                }
+              },
+              {
+                "partner": "What’s the main problem?",
+                "reply": "The main problem is that they are often late.",
+                "cues": {
+                  "bn": "মূল সমস্যাটা বলুন।",
+                  "hi": "मुख्य समस्या बताएँ।"
+                }
+              },
+              {
+                "partner": "Can you give an example?",
+                "reply": "For example, yesterday I waited forty minutes.",
+                "cues": {
+                  "bn": "একটা উদাহরণ দিন।",
+                  "hi": "एक उदाहरण दें।"
+                }
+              },
+              {
+                "partner": "Thank you for your opinion!",
+                "reply": "You’re welcome.",
+                "cues": {
+                  "bn": "উত্তর দিন।",
+                  "hi": "जवाब दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

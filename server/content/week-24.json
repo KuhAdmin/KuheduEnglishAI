@@ -1,0 +1,771 @@
+{
+  "week": 24,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Courier",
+          "text": "Hello, this is Speedy Courier. I have a parcel for Mansi Shah.",
+          "translations": {
+            "bn": "হ্যালো, স্পিডি কুরিয়ার থেকে বলছি। মানসী শাহের নামে একটা পার্সেল আছে।",
+            "hi": "हैलो, मैं स्पीडी कूरियर से बोल रहा हूँ। मानसी शाह के लिए एक पार्सल है।"
+          }
+        },
+        {
+          "speaker": "Mansi",
+          "text": "Sorry, I didn’t understand. Who is calling?",
+          "translations": {
+            "bn": "দুঃখিত, বুঝতে পারলাম না। কে বলছেন?",
+            "hi": "माफ़ कीजिए, मैं समझी नहीं। कौन बोल रहे हैं?"
+          }
+        },
+        {
+          "speaker": "Courier",
+          "text": "Speedy Courier. We deliver parcels.",
+          "translations": {
+            "bn": "স্পিডি কুরিয়ার। আমরা পার্সেল পৌঁছে দিই।",
+            "hi": "स्पीडी कूरियर। हम पार्सल पहुँचाते हैं।"
+          }
+        },
+        {
+          "speaker": "Mansi",
+          "text": "Oh, OK. The line is bad. Could you say that again, please?",
+          "translations": {
+            "bn": "ও, আচ্ছা। লাইনটা খারাপ। আরেকবার বলবেন?",
+            "hi": "अच्छा, ठीक है। लाइन ख़राब है। क्या आप फिर से कहेंगे?"
+          }
+        },
+        {
+          "speaker": "Courier",
+          "text": "I have a parcel for you. I can come between two and four.",
+          "translations": {
+            "bn": "আপনার একটা পার্সেল আছে। দুটো থেকে চারটের মধ্যে আসতে পারি।",
+            "hi": "आपका एक पार्सल है। मैं दो से चार बजे के बीच आ सकता हूँ।"
+          }
+        },
+        {
+          "speaker": "Mansi",
+          "text": "Two or four? What do you mean?",
+          "translations": {
+            "bn": "দুটো না চারটে? মানে?",
+            "hi": "दो या चार? आपका मतलब क्या है?"
+          }
+        },
+        {
+          "speaker": "Courier",
+          "text": "Let me explain it differently. Any time after two o’clock and before four o’clock.",
+          "translations": {
+            "bn": "অন্যভাবে বলি। দুটোর পরে আর চারটের আগে যেকোনো সময়।",
+            "hi": "मैं दूसरे तरीक़े से समझाता हूँ। दो बजे के बाद और चार बजे से पहले, कभी भी।"
+          }
+        },
+        {
+          "speaker": "Mansi",
+          "text": "Ah, I see. So you’ll come in the afternoon. That’s fine.",
+          "translations": {
+            "bn": "আচ্ছা, বুঝলাম। তাহলে বিকেলে আসবেন। ঠিক আছে।",
+            "hi": "अच्छा, समझ गई। तो आप दोपहर में आएँगे। ठीक है।"
+          }
+        },
+        {
+          "speaker": "Courier",
+          "text": "Can you confirm your address? Is it 14 Lake Road?",
+          "translations": {
+            "bn": "ঠিকানাটা মিলিয়ে নেবেন? চোদ্দো নম্বর লেক রোড তো?",
+            "hi": "क्या आप अपना पता पक्का करेंगी? 14 लेक रोड है न?"
+          }
+        },
+        {
+          "speaker": "Mansi",
+          "text": "No, it’s 40. Four, zero. Not 14.",
+          "translations": {
+            "bn": "না, চল্লিশ। চার, শূন্য। চোদ্দো নয়।",
+            "hi": "नहीं, 40 है। चार, शून्य। 14 नहीं।"
+          }
+        },
+        {
+          "speaker": "Courier",
+          "text": "Sorry! 40 Lake Road. Thank you for checking.",
+          "translations": {
+            "bn": "দুঃখিত! চল্লিশ নম্বর লেক রোড। মিলিয়ে দেওয়ার জন্য ধন্যবাদ।",
+            "hi": "माफ़ कीजिए! 40 लेक रोड। जाँचने के लिए धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Mansi",
+          "text": "No problem. See you this afternoon.",
+          "translations": {
+            "bn": "অসুবিধা নেই। বিকেলে দেখা হবে।",
+            "hi": "कोई बात नहीं। दोपहर में मिलते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Courier": "male",
+        "Mansi": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "again",
+          "phonetic": "/əˈɡen/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আবার",
+            "hi": "फिर से"
+          },
+          "syllables": ["a", "gain"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“ai”-এর উচ্চারণ “ten”-এর “e”-এর মতো।"],
+            "en": ["Say the second part stronger.", "The “ai” sounds like the “e” in “ten”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“ai” की आवाज़ “ten” के “e” जैसी है।"]
+          }
+        },
+        {
+          "word": "repeat",
+          "phonetic": "/rɪˈpiːt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আবার বলা",
+            "hi": "दोहराना"
+          },
+          "syllables": ["re", "peat"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "জিজ্ঞেস করুন: “Could you repeat that, please?”"
+            ],
+            "en": ["Say the second part stronger.", "Ask: “Could you repeat that, please?”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "पूछें: “Could you repeat that, please?”"]
+          }
+        },
+        {
+          "word": "slowly",
+          "phonetic": "/ˈsləʊli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধীরে",
+            "hi": "धीरे"
+          },
+          "syllables": ["slow", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“ow”-এর উচ্চারণ “ওউ”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “ow” sounds like “oh”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“ow” की आवाज़ “ओ” जैसी है।"]
+          }
+        },
+        {
+          "word": "louder",
+          "phonetic": "/ˈlaʊdə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আরও জোরে",
+            "hi": "और ज़ोर से"
+          },
+          "syllables": ["loud", "er"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“ou”-এর উচ্চারণ “now”-এর “ow”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “ou” sounds like the “ow” in “now”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“ou” की आवाज़ “now” के “ow” जैसी है।"]
+          }
+        },
+        {
+          "word": "spell",
+          "phonetic": "/spel/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বানান বলা",
+            "hi": "वर्तनी बताना"
+          },
+          "syllables": ["spell"],
+          "stress": null,
+          "tips": {
+            "bn": ["“e” ছোট, “red”-এর মতো।", "জিজ্ঞেস করুন: “How do you spell that?”"],
+            "en": ["The “e” is short, as in “red”.", "Ask: “How do you spell that?”"],
+            "hi": ["“e” छोटा है, “red” जैसा।", "पूछें: “How do you spell that?”"]
+          }
+        },
+        {
+          "word": "pardon",
+          "phonetic": "/ˈpɑːdn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মাফ করবেন, আবার বলুন",
+            "hi": "माफ़ कीजिए, फिर से कहिए"
+          },
+          "syllables": ["par", "don"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“Pardon?” মানে সংক্ষেপে আবার বলতে বলা।"],
+            "en": [
+              "Say the first part stronger.",
+              "“Pardon?” is a short way to ask someone to repeat."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“Pardon?” फिर से कहने को कहने का छोटा तरीक़ा है।"]
+          }
+        },
+        {
+          "word": "line",
+          "phonetic": "/laɪn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "(ফোনের) লাইন",
+            "hi": "(फ़ोन की) लाइन"
+          },
+          "syllables": ["line"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“i”-এর উচ্চারণ “আই”-এর মতো।",
+              "“The line is bad” মানে ফোনে ঠিকমতো শোনা যাচ্ছে না।"
+            ],
+            "en": ["The “i” sounds like “eye”.", "“The line is bad” means the call is not clear."],
+            "hi": ["“i” की आवाज़ “आइ” जैसी है।", "“The line is bad” मतलब फ़ोन पर आवाज़ साफ़ नहीं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "What do you mean by “soon”?",
+          "alsoAccepted": ["What do you mean when you say “soon”?"],
+          "translations": {
+            "bn": "“soon” বলতে আপনি কী বোঝাচ্ছেন?",
+            "hi": "“soon” से आपका क्या मतलब है?"
+          },
+          "tips": {
+            "bn": [
+              "অস্পষ্ট শব্দটি “by”-এর পরে বসান।",
+              "কোনো শব্দ পরিষ্কার না হলে এটি জিজ্ঞেস করুন।"
+            ],
+            "en": ["Put the unclear word after “by”.", "Ask this when a word is not clear."],
+            "hi": ["अस्पष्ट शब्द को “by” के बाद रखें।", "जब कोई शब्द साफ़ न हो, तब यह पूछें।"]
+          }
+        },
+        {
+          "english": "Do you mean today or tomorrow?",
+          "alsoAccepted": ["Is that today or tomorrow?"],
+          "translations": {
+            "bn": "আপনি কি আজকের কথা বলছেন, না কালকের?",
+            "hi": "आपका मतलब आज है या कल?"
+          },
+          "tips": {
+            "bn": ["“or” দিয়ে দুটো বিকল্প দিন।", "এতে তিনি তাড়াতাড়ি উত্তর দিতে পারবেন।"],
+            "en": ["Give two choices with “or”.", "It helps them answer quickly."],
+            "hi": ["“or” से दो विकल्प दें।", "इससे जवाब देना आसान होता है।"]
+          }
+        },
+        {
+          "english": "Sorry, I’m not sure what you mean.",
+          "alsoAccepted": ["Sorry, I’m not sure what you mean by that."],
+          "translations": {
+            "bn": "দুঃখিত, আপনি কী বলতে চাইছেন ঠিক বুঝলাম না।",
+            "hi": "माफ़ कीजिए, मुझे ठीक से समझ नहीं आया कि आपका क्या मतलब है।"
+          },
+          "tips": {
+            "bn": ["“I’m not sure” ভদ্র শোনায়।", "এতে আবার বুঝিয়ে বলতে অনুরোধ করা হয়।"],
+            "en": ["“I’m not sure” sounds polite.", "It asks them to explain again."],
+            "hi": ["“I’m not sure” विनम्र लगता है।", "इससे फिर से समझाने का अनुरोध होता है।"]
+          }
+        },
+        {
+          "english": "Could you give me an example?",
+          "alsoAccepted": ["Can you give me an example?"],
+          "translations": {
+            "bn": "একটা উদাহরণ দেবেন?",
+            "hi": "क्या आप मुझे एक उदाहरण दे सकते हैं?"
+          },
+          "tips": {
+            "bn": [
+              "উদাহরণে প্রায়ই কথা পরিষ্কার হয়।",
+              "“example” স্বরবর্ণে শুরু, তাই “an example”।"
+            ],
+            "en": [
+              "An example often makes things clear.",
+              "Say “an example”: “example” starts with a vowel."
+            ],
+            "hi": [
+              "उदाहरण से अक्सर बात साफ़ हो जाती है।",
+              "“example” स्वर से शुरू होता है, इसलिए “an example”।"
+            ]
+          }
+        },
+        {
+          "english": "So you mean I should call back later?",
+          "alsoAccepted": ["So I should call back later?"],
+          "translations": {
+            "bn": "তার মানে আমি পরে আবার ফোন করব?",
+            "hi": "यानी मुझे बाद में फिर से फ़ोन करना चाहिए?"
+          },
+          "tips": {
+            "bn": ["যা বুঝেছেন তা বলে নিশ্চিত হন।", "“call back” মানে আবার ফোন করা।"],
+            "en": ["Say what you understood, to check it.", "“call back” means phone again."],
+            "hi": ["जो समझा, उसे कहकर पक्का करें।", "“call back” मतलब फिर से फ़ोन करना।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Vivek",
+      "asWoman": "Vidya",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi, I’m near your house, but I can’t find it.",
+          "reply": "Is there a big temple near you?",
+          "cues": {
+            "bn": "কাছে কোনো বড় মন্দির আছে কি না জিজ্ঞেস করুন।",
+            "hi": "पूछें कि क्या पास में कोई बड़ा मंदिर है।"
+          }
+        },
+        {
+          "partner": "A temple? Sorry, I don’t understand.",
+          "reply": "Let me explain differently. Can you see a building with a tall tower?",
+          "cues": {
+            "bn": "অন্যভাবে বোঝান: উঁচু চূড়াওয়ালা বাড়ি।",
+            "hi": "दूसरे तरीक़े से समझाएँ: ऊँचे शिखर वाली इमारत।"
+          }
+        },
+        {
+          "partner": "Yes, I can see it now.",
+          "reply": "Good. Walk past it and turn right.",
+          "cues": {
+            "bn": "সেটা পেরিয়ে ডানে ঘুরতে বলুন।",
+            "hi": "उसके आगे जाकर दाएँ मुड़ने को कहें।"
+          }
+        },
+        {
+          "partner": "Turn right at the tower?",
+          "reply": "No, after the tower. Go past it first.",
+          "cues": {
+            "bn": "ভুলটা শুধরে দিন: চূড়া পেরিয়ে।",
+            "hi": "ग़लतफ़हमी ठीक करें: शिखर के बाद।"
+          }
+        },
+        {
+          "partner": "OK, I’ve turned right. Now what?",
+          "reply": "My house is the third one. It has a blue gate.",
+          "cues": {
+            "bn": "বাড়িটা চেনান: তিন নম্বর, নীল গেট।",
+            "hi": "घर की पहचान बताएँ: तीसरा घर, नीला गेट।"
+          }
+        },
+        {
+          "partner": "I see it! I’m outside now.",
+          "reply": "Great! I’m coming to open the gate.",
+          "cues": {
+            "bn": "বলুন গেট খুলতে আসছেন।",
+            "hi": "कहें कि गेट अभी खुल रहा है।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Talking Without Perfect Understanding",
+        "translations": {
+          "bn": "সব না বুঝেও কথা চালানো",
+          "hi": "पूरा समझे बिना बातचीत"
+        }
+      },
+      "instruction": {
+        "text": "Ask a friend to speak fast or use hard words. Keep talking for about one minute, using repair phrases.",
+        "translations": {
+          "bn": "বন্ধুকে দ্রুত বা কঠিন শব্দে কথা বলতে বলুন। বোঝার কৌশল দিয়ে প্রায় এক মিনিট কথা চালিয়ে যান।",
+          "hi": "किसी दोस्त से तेज़ या कठिन शब्दों में बोलने को कहें। समझने के तरीक़ों से लगभग एक मिनट बात जारी रखें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say when you did not understand",
+          "translations": {
+            "bn": "না বুঝলে সেটা বলুন",
+            "hi": "जब समझ न आए, तो बताएँ"
+          }
+        },
+        {
+          "text": "Ask them to repeat or speak more slowly",
+          "translations": {
+            "bn": "আবার বলতে বা আস্তে বলতে অনুরোধ করুন",
+            "hi": "दोहराने या धीरे बोलने को कहें"
+          }
+        },
+        {
+          "text": "Ask what a word or a sentence means",
+          "translations": {
+            "bn": "কোনো শব্দ বা বাক্যের মানে জিজ্ঞেস করুন",
+            "hi": "किसी शब्द या वाक्य का मतलब पूछें"
+          }
+        },
+        {
+          "text": "Check what you understood: “So you mean …?”",
+          "translations": {
+            "bn": "যা বুঝলেন মিলিয়ে নিন: “So you mean …?”",
+            "hi": "जो समझा, उसे जाँचें: “So you mean …?”"
+          }
+        },
+        {
+          "text": "Explain one of your own ideas in a different way",
+          "translations": {
+            "bn": "নিজের একটা কথা অন্যভাবে বুঝিয়ে বলুন",
+            "hi": "अपनी कोई बात दूसरे तरीक़े से समझाएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "Sorry, I didn’t understand.",
+        "Could you say that again, please?",
+        "What do you mean by …?",
+        "So you mean …?",
+        "Let me say it another way.",
+        "Ah, I see. Thanks."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "The phone line is bad. What do you say?",
+            "translations": {
+              "bn": "ফোনের লাইন খারাপ। কী বলবেন?",
+              "hi": "फ़ोन की लाइन ख़राब है। आप क्या कहेंगे?"
+            }
+          },
+          "answer": "Sorry, could you say that again?",
+          "others": ["Speak correctly!", "Goodbye."]
+        },
+        {
+          "question": {
+            "text": "You don’t know the word “refund”. What do you ask?",
+            "translations": {
+              "bn": "“refund” শব্দটা জানেন না। কী জিজ্ঞেস করবেন?",
+              "hi": "आपको “refund” शब्द नहीं पता। आप क्या पूछेंगे?"
+            }
+          },
+          "answer": "What does “refund” mean?",
+          "others": ["What is your refund?", "Refund is good."]
+        },
+        {
+          "question": {
+            "text": "Which phrase checks that you understood?",
+            "translations": {
+              "bn": "কোন কথায় বোঝা মিলিয়ে নেওয়া হয়?",
+              "hi": "कौन-सा वाक्यांश जाँचता है कि आपने ठीक समझा?"
+            }
+          },
+          "answer": "So you mean …?",
+          "others": ["By the way, …", "I agree."]
+        },
+        {
+          "question": {
+            "text": "Someone does not understand you. What do you say?",
+            "translations": {
+              "bn": "কেউ আপনার কথা বোঝেননি। কী বলবেন?",
+              "hi": "कोई आपकी बात नहीं समझा। आप क्या कहेंगे?"
+            }
+          },
+          "answer": "Let me explain it another way.",
+          "others": ["You don’t listen.", "Forget it."]
+        },
+        {
+          "question": {
+            "text": "Complete: Could you speak more ___, please?",
+            "translations": {
+              "bn": "পূরণ করুন: Could you speak more ___, please?",
+              "hi": "पूरा करें: Could you speak more ___, please?"
+            }
+          },
+          "answer": "slowly",
+          "others": ["slow", "slower"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Manager",
+          "text": "Good evening, Green Leaf. How can I help?",
+          "translations": {
+            "bn": "শুভ সন্ধ্যা, গ্রিন লিফ। কীভাবে সাহায্য করতে পারি?",
+            "hi": "शुभ संध्या, ग्रीन लीफ़। मैं आपकी क्या मदद कर सकता हूँ?"
+          }
+        },
+        {
+          "speaker": "Usha",
+          "text": "Hi. I’d like to book a table for eight tonight.",
+          "translations": {
+            "bn": "হাই। আজ রাতে আটজনের জন্য একটা টেবিল বুক করতে চাই।",
+            "hi": "नमस्ते। मुझे आज रात आठ लोगों के लिए एक टेबल बुक करनी है।"
+          }
+        },
+        {
+          "speaker": "Manager",
+          "text": "For eight o’clock?",
+          "translations": {
+            "bn": "আটটার জন্য?",
+            "hi": "आठ बजे के लिए?"
+          }
+        },
+        {
+          "speaker": "Usha",
+          "text": "Sorry, I mean eight people, at seven o’clock.",
+          "translations": {
+            "bn": "দুঃখিত, মানে আটজন, সাতটায়।",
+            "hi": "माफ़ कीजिए, मेरा मतलब है आठ लोग, सात बजे।"
+          }
+        },
+        {
+          "speaker": "Manager",
+          "text": "Ah, I see. Eight people at seven. We have a table by the window.",
+          "translations": {
+            "bn": "আচ্ছা। সাতটায় আটজন। জানলার ধারে একটা টেবিল আছে।",
+            "hi": "अच्छा, समझा। सात बजे आठ लोग। खिड़की के पास एक टेबल है।"
+          }
+        },
+        {
+          "speaker": "Usha",
+          "text": "Sorry, could you speak a little louder? It’s noisy here.",
+          "translations": {
+            "bn": "দুঃখিত, একটু জোরে বলবেন? এখানে খুব আওয়াজ।",
+            "hi": "माफ़ कीजिए, क्या आप थोड़ा ज़ोर से बोलेंगे? यहाँ बहुत शोर है।"
+          }
+        },
+        {
+          "speaker": "Manager",
+          "text": "Of course. We have a table by the window. Is that OK?",
+          "translations": {
+            "bn": "নিশ্চয়ই। জানলার ধারে একটা টেবিল আছে। চলবে?",
+            "hi": "ज़रूर। खिड़की के पास एक टेबल है। ठीक रहेगी?"
+          }
+        },
+        {
+          "speaker": "Usha",
+          "text": "Perfect, thank you.",
+          "translations": {
+            "bn": "একদম ঠিক, ধন্যবাদ।",
+            "hi": "बिल्कुल ठीक, धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Manager",
+          "text": "Can I have a name for the booking?",
+          "translations": {
+            "bn": "বুকিংয়ের জন্য একটা নাম বলবেন?",
+            "hi": "बुकिंग किस नाम से करूँ?"
+          }
+        },
+        {
+          "speaker": "Usha",
+          "text": "Usha. U, S, H, A.",
+          "translations": {
+            "bn": "ঊষা। U, S, H, A।",
+            "hi": "उषा। U, S, H, A।"
+          }
+        },
+        {
+          "speaker": "Manager",
+          "text": "Thank you, Usha. See you at seven.",
+          "translations": {
+            "bn": "ধন্যবাদ, ঊষা। সাতটায় দেখা হবে।",
+            "hi": "धन्यवाद, उषा। सात बजे मिलते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Manager": "male",
+        "Usha": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the agent",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Your new card will arrive in seven to ten days.",
+          "reply": "Sorry, I didn’t understand. How many days?",
+          "cues": {
+            "bn": "বলুন বোঝেননি, আর জিজ্ঞেস করুন কত দিন।",
+            "hi": "कहें कि समझ नहीं आया, और पूछें कितने दिन।"
+          }
+        },
+        {
+          "partner": "Between seven and ten working days.",
+          "reply": "What do you mean by “working days”?",
+          "cues": {
+            "bn": "“working days” মানে জিজ্ঞেস করুন।",
+            "hi": "“working days” का मतलब पूछें।"
+          }
+        },
+        {
+          "partner": "Monday to Friday. Not weekends.",
+          "reply": "So you mean about two weeks?",
+          "cues": {
+            "bn": "যা বুঝলেন তা বলে নিশ্চিত হন।",
+            "hi": "जो समझा, उसे कहकर पक्का करें।"
+          }
+        },
+        {
+          "partner": "Yes, exactly.",
+          "reply": "Great, thank you for explaining.",
+          "cues": {
+            "bn": "বুঝিয়ে বলার জন্য ধন্যবাদ দিন।",
+            "hi": "समझाने के लिए धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A wrong number",
+            "translations": {
+              "bn": "ভুল নম্বর",
+              "hi": "ग़लत नंबर"
+            }
+          },
+          "roleplay": {
+            "partner": "the caller",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello, is this Raj Electricals?",
+                "reply": "Sorry, I think you have the wrong number.",
+                "cues": {
+                  "bn": "বলুন মনে হয় নম্বরটা ভুল।",
+                  "hi": "कहें कि शायद नंबर ग़लत है।"
+                }
+              },
+              {
+                "partner": "Is this not 98400 12345?",
+                "reply": "Could you say that again, slowly?",
+                "cues": {
+                  "bn": "আস্তে আবার বলতে বলুন।",
+                  "hi": "धीरे-धीरे फिर से कहने को कहें।"
+                }
+              },
+              {
+                "partner": "Nine, eight, four, zero, zero, one, two, three, four, five.",
+                "reply": "No, my number ends in four, six.",
+                "cues": {
+                  "bn": "বলুন আপনার নম্বরের শেষে চার ছয়।",
+                  "hi": "बताएँ कि आपका नंबर चार छह पर ख़त्म होता है।"
+                }
+              },
+              {
+                "partner": "Oh, I’m so sorry!",
+                "reply": "No problem. Good luck.",
+                "cues": {
+                  "bn": "বলুন অসুবিধা নেই।",
+                  "hi": "कहें कि कोई बात नहीं।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A noisy station",
+            "translations": {
+              "bn": "আওয়াজভরা স্টেশন",
+              "hi": "शोर वाला स्टेशन"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! I’m at the station. Where should we meet?",
+                "reply": "Sorry, it’s very noisy. Could you speak louder?",
+                "cues": {
+                  "bn": "আওয়াজের কথা বলে জোরে বলতে বলুন।",
+                  "hi": "शोर के बारे में बताएँ और ज़ोर से बोलने को कहें।"
+                }
+              },
+              {
+                "partner": "WHERE SHOULD WE MEET?",
+                "reply": "Let’s meet at the main gate.",
+                "cues": {
+                  "bn": "মূল গেটে দেখা করার কথা বলুন।",
+                  "hi": "मुख्य गेट पर मिलने को कहें।"
+                }
+              },
+              {
+                "partner": "The main gate, or the gate near the main road?",
+                "reply": "I mean the big gate with the clock.",
+                "cues": {
+                  "bn": "অন্যভাবে বুঝিয়ে দিন: ঘড়িওয়ালা বড় গেট।",
+                  "hi": "दूसरे तरीक़े से समझाएँ: घड़ी वाला बड़ा गेट।"
+                }
+              },
+              {
+                "partner": "Oh, the clock gate! See you there.",
+                "reply": "Great. See you in five minutes.",
+                "cues": {
+                  "bn": "রাজি হোন।",
+                  "hi": "हामी भरें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A new word at work",
+            "translations": {
+              "bn": "কাজে নতুন শব্দ",
+              "hi": "काम पर नया शब्द"
+            }
+          },
+          "roleplay": {
+            "partner": "the manager",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Please send me the report by EOD.",
+                "reply": "Sorry, what does “EOD” mean?",
+                "cues": {
+                  "bn": "“EOD” মানে জিজ্ঞেস করুন।",
+                  "hi": "“EOD” का मतलब पूछें।"
+                }
+              },
+              {
+                "partner": "End of day. Before six o’clock.",
+                "reply": "So you mean by six today?",
+                "cues": {
+                  "bn": "যা বুঝলেন তা বলে নিশ্চিত হন।",
+                  "hi": "जो समझा, उसे कहकर पक्का करें।"
+                }
+              },
+              {
+                "partner": "Yes. And add the sales numbers too.",
+                "reply": "Do you mean this month’s numbers or last month’s?",
+                "cues": {
+                  "bn": "কোন মাসের সংখ্যা, স্পষ্ট করে জিজ্ঞেস করুন।",
+                  "hi": "साफ़ पूछें कि किस महीने के आँकड़े।"
+                }
+              },
+              {
+                "partner": "This month’s, please. Thanks!",
+                "reply": "OK, I’ll send it before six.",
+                "cues": {
+                  "bn": "বলুন ছটার আগে পাঠাবেন।",
+                  "hi": "कहें कि छह बजे से पहले भेज देंगे।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

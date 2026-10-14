@@ -1,5 +1,6 @@
 import { RouterProvider } from 'react-router/dom'
 import { loadSession } from '@/shared/lib/account'
+import { startAppConfig } from '@/shared/lib/appConfig/appConfigRemote'
 import { startLessonContent } from '@/shared/lib/curriculum/weekContentRemote'
 import { startLearnerSync } from '@/shared/lib/learnerData/learnerSync'
 import { AppProviders } from './providers/AppProviders'
@@ -7,6 +8,9 @@ import { createAppRouter } from './router'
 
 // The lessons are kept on the server: a week is fetched when it is opened.
 startLessonContent()
+// So is everything else an admin manages (landing page, languages, screen texts, …): fetched as
+// the first screen opens.
+startAppConfig()
 // What a learner sets and does is kept with their account. This follows who is signed in, so
 // it is listening before that is asked.
 startLearnerSync()

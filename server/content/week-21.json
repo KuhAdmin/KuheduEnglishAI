@@ -1,0 +1,803 @@
+{
+  "week": 21,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Ishita",
+          "text": "Good morning! I write for the school magazine. Can I ask you a few questions?",
+          "translations": {
+            "bn": "সুপ্রভাত! আমি স্কুলের পত্রিকায় লিখি। আপনাকে কয়েকটা প্রশ্ন করতে পারি?",
+            "hi": "सुप्रभात! मैं स्कूल की पत्रिका के लिए लिखती हूँ। क्या मैं आपसे कुछ सवाल पूछ सकती हूँ?"
+          }
+        },
+        {
+          "speaker": "Gopal",
+          "text": "Of course. Please sit down.",
+          "translations": {
+            "bn": "নিশ্চয়ই। বসুন।",
+            "hi": "ज़रूर। बैठिए।"
+          }
+        },
+        {
+          "speaker": "Ishita",
+          "text": "What is your name, and where are you from?",
+          "translations": {
+            "bn": "আপনার নাম কী, আর আপনি কোথাকার মানুষ?",
+            "hi": "आपका नाम क्या है, और आप कहाँ से हैं?"
+          }
+        },
+        {
+          "speaker": "Gopal",
+          "text": "I’m Gopal. I’m from Mysore, but I have lived here for twenty years.",
+          "translations": {
+            "bn": "আমি গোপাল। আমি মাইসোরের, তবে কুড়ি বছর এখানে আছি।",
+            "hi": "मैं गोपाल हूँ। मैं मैसूर से हूँ, पर बीस साल से यहाँ रहता हूँ।"
+          }
+        },
+        {
+          "speaker": "Ishita",
+          "text": "When did you open this bakery?",
+          "translations": {
+            "bn": "এই বেকারিটা কবে খুলেছিলেন?",
+            "hi": "आपने यह बेकरी कब खोली?"
+          }
+        },
+        {
+          "speaker": "Gopal",
+          "text": "In 2010. It was very small then.",
+          "translations": {
+            "bn": "দু হাজার দশ সালে। তখন খুব ছোট ছিল।",
+            "hi": "सन 2010 में। तब यह बहुत छोटी थी।"
+          }
+        },
+        {
+          "speaker": "Ishita",
+          "text": "Why did you choose to make bread and cakes?",
+          "translations": {
+            "bn": "পাউরুটি আর কেক বানানোর কাজ কেন বেছে নিলেন?",
+            "hi": "आपने ब्रेड और केक बनाने का काम क्यों चुना?"
+          }
+        },
+        {
+          "speaker": "Gopal",
+          "text": "Because my mother baked bread every day. I loved the smell.",
+          "translations": {
+            "bn": "কারণ আমার মা রোজ পাউরুটি বানাতেন। গন্ধটা আমার খুব ভালো লাগত।",
+            "hi": "क्योंकि मेरी माँ रोज़ ब्रेड बनाती थीं। मुझे उसकी ख़ुशबू बहुत पसंद थी।"
+          }
+        },
+        {
+          "speaker": "Ishita",
+          "text": "How do you make your bread so soft?",
+          "translations": {
+            "bn": "আপনার পাউরুটি এত নরম হয় কীভাবে?",
+            "hi": "आप अपनी ब्रेड इतनी नरम कैसे बनाते हैं?"
+          }
+        },
+        {
+          "speaker": "Gopal",
+          "text": "I let the dough rest for a long time. That is the secret.",
+          "translations": {
+            "bn": "মাখা ময়দা অনেকক্ষণ রেখে দিই। এটাই রহস্য।",
+            "hi": "मैं गुँधे आटे को काफ़ी देर रखा रहने देता हूँ। यही राज़ है।"
+          }
+        },
+        {
+          "speaker": "Ishita",
+          "text": "How many loaves do you sell a day?",
+          "translations": {
+            "bn": "দিনে কটা পাউরুটি বিক্রি করেন?",
+            "hi": "आप दिन में कितनी ब्रेड बेचते हैं?"
+          }
+        },
+        {
+          "speaker": "Gopal",
+          "text": "About two hundred. More on Sundays.",
+          "translations": {
+            "bn": "প্রায় দুশো। রবিবারে আরও বেশি।",
+            "hi": "लगभग दो सौ। रविवार को और ज़्यादा।"
+          }
+        },
+        {
+          "speaker": "Ishita",
+          "text": "Really? And how often do you take a holiday?",
+          "translations": {
+            "bn": "তাই নাকি? আর কত ঘন ঘন ছুটি নেন?",
+            "hi": "सच में? और आप कितनी बार छुट्टी लेते हैं?"
+          }
+        },
+        {
+          "speaker": "Gopal",
+          "text": "Only once a year. But I’m happy. I love my work.",
+          "translations": {
+            "bn": "বছরে মাত্র একবার। তবে আমি খুশি। কাজটা খুব ভালোবাসি।",
+            "hi": "साल में बस एक बार। पर मैं ख़ुश हूँ। मुझे अपना काम बहुत पसंद है।"
+          }
+        },
+        {
+          "speaker": "Ishita",
+          "text": "Thank you so much for your time!",
+          "translations": {
+            "bn": "সময় দেওয়ার জন্য অনেক ধন্যবাদ!",
+            "hi": "अपना समय देने के लिए बहुत-बहुत धन्यवाद!"
+          }
+        }
+      ],
+      "voices": {
+        "Ishita": "female",
+        "Gopal": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "why",
+          "phonetic": "/waɪ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কেন",
+            "hi": "क्यों"
+          },
+          "syllables": ["why"],
+          "stress": null,
+          "tips": {
+            "bn": ["“wh”-এর উচ্চারণ “w”-এর মতো।", "“why”-এর উত্তর দিন “because” দিয়ে।"],
+            "en": ["The “wh” sounds like “w”.", "Answer a “why” question with “because”."],
+            "hi": ["“wh” की आवाज़ “w” जैसी है।", "“why” का जवाब “because” से दें।"]
+          }
+        },
+        {
+          "word": "how",
+          "phonetic": "/haʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কীভাবে, কেমন",
+            "hi": "कैसे"
+          },
+          "syllables": ["how"],
+          "stress": null,
+          "tips": {
+            "bn": ["“now”-এর সঙ্গে ছন্দ মেলে।", "“How” জানতে চায় কোনো কিছু কীভাবে হয়।"],
+            "en": ["It rhymes with “now”.", "“How” asks about the way something happens."],
+            "hi": ["यह “now” से तुक मिलाता है।", "“How” पूछता है कि कोई बात किस तरह होती है।"]
+          }
+        },
+        {
+          "word": "explain",
+          "phonetic": "/ɪkˈspleɪn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ব্যাখ্যা করা",
+            "hi": "समझाना"
+          },
+          "syllables": ["ex", "plain"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "জিজ্ঞেস করুন: “Can you explain that?”"],
+            "en": ["Say the second part stronger.", "Ask: “Can you explain that?”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "पूछें: “Can you explain that?”"]
+          }
+        },
+        {
+          "word": "detail",
+          "phonetic": "/ˈdiːteɪl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "খুঁটিনাটি",
+            "hi": "ब्योरा"
+          },
+          "syllables": ["de", "tail"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“more details” মানে আরও তথ্য।"],
+            "en": ["Say the first part stronger.", "“more details” means more information."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“more details” मतलब और जानकारी।"]
+          }
+        },
+        {
+          "word": "decide",
+          "phonetic": "/dɪˈsaɪd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ঠিক করা, সিদ্ধান্ত নেওয়া",
+            "hi": "तय करना"
+          },
+          "syllables": ["de", "cide"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন: “সাইড”।",
+              "জিজ্ঞেস করুন: “Why did you decide to …?”"
+            ],
+            "en": ["Say the second part stronger: “SIDE”.", "Ask: “Why did you decide to …?”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें: “साइड”।", "पूछें: “Why did you decide to …?”"]
+          }
+        },
+        {
+          "word": "become",
+          "phonetic": "/bɪˈkʌm/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হওয়া",
+            "hi": "बनना"
+          },
+          "syllables": ["be", "come"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "জিজ্ঞেস করুন: “How did you become a teacher?”"
+            ],
+            "en": ["Say the second part stronger.", "Ask: “How did you become a teacher?”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "पूछें: “How did you become a teacher?”"]
+          }
+        },
+        {
+          "word": "learn",
+          "phonetic": "/lɜːn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "শেখা",
+            "hi": "सीखना"
+          },
+          "syllables": ["learn"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“ea”-এর উচ্চারণ “bird”-এর “ir”-এর মতো।",
+              "জিজ্ঞেস করুন: “How did you learn it?”"
+            ],
+            "en": ["The “ea” sounds like the “ir” in “bird”.", "Ask: “How did you learn it?”"],
+            "hi": ["“ea” की आवाज़ “bird” के “ir” जैसी है।", "पूछें: “How did you learn it?”"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "How often do you go to the gym?",
+          "alsoAccepted": ["How often do you visit the gym?"],
+          "translations": {
+            "bn": "আপনি কত ঘন ঘন জিমে যান?",
+            "hi": "आप कितनी बार जिम जाते हैं?"
+          },
+          "tips": {
+            "bn": [
+              "“How often” দিয়ে জানতে চাওয়া হয় কত ঘন ঘন।",
+              "উত্তর দিন “every day”, “twice a week” এভাবে।"
+            ],
+            "en": [
+              "“How often” asks how many times something happens.",
+              "Answer with “every day”, “twice a week” and so on."
+            ],
+            "hi": [
+              "“How often” से पूछा जाता है कि कितनी बार।",
+              "जवाब “every day”, “twice a week” जैसे दें।"
+            ]
+          }
+        },
+        {
+          "english": "How many people work here?",
+          "alsoAccepted": ["How many people work in this place?"],
+          "translations": {
+            "bn": "এখানে কতজন কাজ করেন?",
+            "hi": "यहाँ कितने लोग काम करते हैं?"
+          },
+          "tips": {
+            "bn": ["গোনা যায় এমন জিনিসে “How many”।", "“people”-এর সঙ্গে “many”, “much” নয়।"],
+            "en": [
+              "Use “How many” with things you can count.",
+              "“people” takes “many”, not “much”."
+            ],
+            "hi": [
+              "गिनी जा सकने वाली चीज़ों के लिए “How many”।",
+              "“people” के साथ “many” आता है, “much” नहीं।"
+            ]
+          }
+        },
+        {
+          "english": "How much does a cake cost?",
+          "alsoAccepted": ["How much is a cake?"],
+          "translations": {
+            "bn": "একটা কেকের দাম কত?",
+            "hi": "एक केक कितने का है?"
+          },
+          "tips": {
+            "bn": [
+              "“How much” দিয়ে দাম জানতে চাওয়া যায়।",
+              "বলুন “does … cost”, “is … cost” নয়।"
+            ],
+            "en": ["“How much” can ask about a price.", "Say “does … cost”, not “is … cost”."],
+            "hi": ["“How much” से दाम पूछा जा सकता है।", "कहें “does … cost”, “is … cost” नहीं।"]
+          }
+        },
+        {
+          "english": "How many hours do you work every day?",
+          "alsoAccepted": [
+            "How many hours do you work each day?",
+            "How many hours a day do you work?"
+          ],
+          "translations": {
+            "bn": "আপনি রোজ কত ঘণ্টা কাজ করেন?",
+            "hi": "आप रोज़ कितने घंटे काम करते हैं?"
+          },
+          "tips": {
+            "bn": ["“hours” গোনা যায়, তাই “many”।", "“every day” শেষে বসান।"],
+            "en": ["“hours” can be counted, so use “many”.", "Put “every day” at the end."],
+            "hi": ["“hours” गिने जा सकते हैं, इसलिए “many”।", "“every day” आख़िर में रखें।"]
+          }
+        },
+        {
+          "english": "How much water do you drink every day?",
+          "alsoAccepted": ["How much water do you drink each day?"],
+          "translations": {
+            "bn": "আপনি রোজ কতটা জল খান?",
+            "hi": "आप रोज़ कितना पानी पीते हैं?"
+          },
+          "tips": {
+            "bn": ["“water” গোনা যায় না, তাই “much”।", "বলুন “drink water”, “eat water” নয়।"],
+            "en": [
+              "“water” cannot be counted, so use “much”.",
+              "Say “drink water”, not “eat water”."
+            ],
+            "hi": [
+              "“water” गिना नहीं जा सकता, इसलिए “much”।",
+              "कहें “drink water”, “eat water” नहीं।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Pallavi",
+      "asMan": "Pranav",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I went on a trip last month.",
+          "reply": "Oh, nice! Where did you go?",
+          "cues": {
+            "bn": "আগ্রহ দেখিয়ে জিজ্ঞেস করুন কোথায় বেড়াতে গিয়েছিলেন।",
+            "hi": "दिलचस्पी दिखाएँ और पूछें कि यात्रा कहाँ की थी।"
+          }
+        },
+        {
+          "partner": "To Goa, with my cousins.",
+          "reply": "That sounds fun! What did you do there?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন সেখানে কী কী করলেন।",
+            "hi": "पूछें कि वहाँ क्या-क्या किया।"
+          }
+        },
+        {
+          "partner": "We went to the beach and tried a lot of new food.",
+          "reply": "What was your favourite food there?",
+          "cues": {
+            "bn": "সেখানকার প্রিয় খাবার কী, জিজ্ঞেস করুন।",
+            "hi": "पूछें कि वहाँ का सबसे पसंदीदा खाना कौन-सा था।"
+          }
+        },
+        {
+          "partner": "Fish curry! It was delicious.",
+          "reply": "Was it very spicy?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন খুব ঝাল ছিল কি না।",
+            "hi": "पूछें कि क्या वह बहुत तीखी थी।"
+          }
+        },
+        {
+          "partner": "A little, but I loved it.",
+          "reply": "How long did you stay?",
+          "cues": {
+            "bn": "কত দিন ছিলেন, জিজ্ঞেস করুন।",
+            "hi": "पूछें कि यात्रा कितने दिनों की थी।"
+          }
+        },
+        {
+          "partner": "Five days. I want to go again next year.",
+          "reply": "Can I come with you next time?",
+          "cues": {
+            "bn": "মজা করে জিজ্ঞেস করুন পরের বার আপনিও যেতে পারেন কি না।",
+            "hi": "मज़ाक में पूछें कि क्या अगली बार आप भी साथ चल सकते हैं।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Interview Someone About Their Life",
+        "translations": {
+          "bn": "কারও জীবন নিয়ে সাক্ষাৎকার",
+          "hi": "किसी के जीवन पर इंटरव्यू"
+        }
+      },
+      "instruction": {
+        "text": "Interview a friend or a family member about their life. Ask at least five questions in about one minute.",
+        "translations": {
+          "bn": "বন্ধু বা পরিবারের কারও জীবন নিয়ে সাক্ষাৎকার নিন। প্রায় এক মিনিটে অন্তত পাঁচটা প্রশ্ন করুন।",
+          "hi": "किसी दोस्त या घरवाले से उनके जीवन पर इंटरव्यू लें। लगभग एक मिनट में कम से कम पाँच सवाल पूछें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Ask a Who, What, Where or When question",
+          "translations": {
+            "bn": "Who, What, Where বা When দিয়ে একটা প্রশ্ন করুন",
+            "hi": "Who, What, Where या When से एक सवाल पूछें"
+          }
+        },
+        {
+          "text": "Ask a Why or How question",
+          "translations": {
+            "bn": "Why বা How দিয়ে একটা প্রশ্ন করুন",
+            "hi": "Why या How से एक सवाल पूछें"
+          }
+        },
+        {
+          "text": "Ask How much, How many or How often",
+          "translations": {
+            "bn": "How much, How many বা How often দিয়ে প্রশ্ন করুন",
+            "hi": "How much, How many या How often से पूछें"
+          }
+        },
+        {
+          "text": "Ask one follow-up question about an answer",
+          "translations": {
+            "bn": "একটা উত্তর নিয়ে পরের প্রশ্ন করুন",
+            "hi": "किसी जवाब पर एक आगे का सवाल पूछें"
+          }
+        },
+        {
+          "text": "Thank them at the end",
+          "translations": {
+            "bn": "শেষে ধন্যবাদ দিন",
+            "hi": "आख़िर में धन्यवाद दें"
+          }
+        }
+      ],
+      "phrases": [
+        "Where did you grow up?",
+        "Why did you choose …?",
+        "How often do you …?",
+        "Really? Tell me more about …",
+        "What happened next?",
+        "Thank you for talking to me."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which word asks about a place?",
+            "translations": {
+              "bn": "কোন শব্দ দিয়ে জায়গা জানতে চাওয়া হয়?",
+              "hi": "कौन-सा शब्द जगह के बारे में पूछता है?"
+            }
+          },
+          "answer": "Where",
+          "others": ["When", "Who"]
+        },
+        {
+          "question": {
+            "text": "Complete: How ___ people came to the party?",
+            "translations": {
+              "bn": "পূরণ করুন: How ___ people came to the party?",
+              "hi": "पूरा करें: How ___ people came to the party?"
+            }
+          },
+          "answer": "many",
+          "others": ["much", "often"]
+        },
+        {
+          "question": {
+            "text": "Complete: How ___ do you visit your parents?",
+            "translations": {
+              "bn": "পূরণ করুন: How ___ do you visit your parents?",
+              "hi": "पूरा करें: How ___ do you visit your parents?"
+            }
+          },
+          "answer": "often",
+          "others": ["much", "many"]
+        },
+        {
+          "question": {
+            "text": "Someone says, “I started painting last year.” Which is a good follow-up question?",
+            "translations": {
+              "bn": "কেউ বললেন, “I started painting last year.” ভালো পরের প্রশ্ন কোনটি?",
+              "hi": "किसी ने कहा, “I started painting last year.” अच्छा अगला सवाल कौन-सा है?"
+            }
+          },
+          "answer": "What do you like to paint?",
+          "others": ["What is your name?", "Is it raining?"]
+        },
+        {
+          "question": {
+            "text": "Which question asks for a reason?",
+            "translations": {
+              "bn": "কোন প্রশ্নে কারণ জানতে চাওয়া হচ্ছে?",
+              "hi": "कौन-सा सवाल कारण पूछता है?"
+            }
+          },
+          "answer": "Why did you move here?",
+          "others": ["When did you move here?", "Who moved here?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Zara",
+          "text": "Joseph, you run marathons. When did you start running?",
+          "translations": {
+            "bn": "জোসেফ, আপনি ম্যারাথন দৌড়ান। কবে থেকে দৌড়নো শুরু করলেন?",
+            "hi": "जोसेफ़, आप मैराथन दौड़ते हैं। आपने दौड़ना कब शुरू किया?"
+          }
+        },
+        {
+          "speaker": "Joseph",
+          "text": "Five years ago. I wanted to get fit.",
+          "translations": {
+            "bn": "পাঁচ বছর আগে। ফিট হতে চেয়েছিলাম।",
+            "hi": "पाँच साल पहले। मैं फ़िट होना चाहता था।"
+          }
+        },
+        {
+          "speaker": "Zara",
+          "text": "How often do you train?",
+          "translations": {
+            "bn": "কত ঘন ঘন অনুশীলন করেন?",
+            "hi": "आप कितनी बार अभ्यास करते हैं?"
+          }
+        },
+        {
+          "speaker": "Joseph",
+          "text": "Five days a week, early in the morning.",
+          "translations": {
+            "bn": "সপ্তাহে পাঁচ দিন, ভোরবেলা।",
+            "hi": "हफ़्ते में पाँच दिन, सुबह-सुबह।"
+          }
+        },
+        {
+          "speaker": "Zara",
+          "text": "How far do you run?",
+          "translations": {
+            "bn": "কতটা দৌড়ান?",
+            "hi": "आप कितनी दूर दौड़ते हैं?"
+          }
+        },
+        {
+          "speaker": "Joseph",
+          "text": "About ten kilometres a day.",
+          "translations": {
+            "bn": "দিনে প্রায় দশ কিলোমিটার।",
+            "hi": "रोज़ लगभग दस किलोमीटर।"
+          }
+        },
+        {
+          "speaker": "Zara",
+          "text": "Wow! Why do you enjoy it so much?",
+          "translations": {
+            "bn": "বাহ! এত ভালো লাগে কেন?",
+            "hi": "वाह! आपको इसमें इतना मज़ा क्यों आता है?"
+          }
+        },
+        {
+          "speaker": "Joseph",
+          "text": "It clears my mind, and I meet nice people.",
+          "translations": {
+            "bn": "মন হালকা হয়, আর ভালো ভালো মানুষের সঙ্গে দেখা হয়।",
+            "hi": "मन हल्का हो जाता है, और अच्छे लोगों से मुलाक़ात होती है।"
+          }
+        },
+        {
+          "speaker": "Zara",
+          "text": "What is your next race?",
+          "translations": {
+            "bn": "আপনার পরের দৌড় কোনটা?",
+            "hi": "आपकी अगली दौड़ कौन-सी है?"
+          }
+        },
+        {
+          "speaker": "Joseph",
+          "text": "The city marathon in December. Come and watch!",
+          "translations": {
+            "bn": "ডিসেম্বরে শহরের ম্যারাথন। দেখতে আসবেন!",
+            "hi": "दिसंबर में शहर की मैराथन। देखने आइए!"
+          }
+        }
+      ],
+      "voices": {
+        "Zara": "female",
+        "Joseph": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the reporter",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! Can I ask you about your hobby?",
+          "reply": "Sure. My hobby is …",
+          "cues": {
+            "bn": "রাজি হোন, আর আপনার শখের কথা বলুন।",
+            "hi": "हामी भरें और अपना शौक़ बताएँ।"
+          }
+        },
+        {
+          "partner": "When did you start?",
+          "reply": "I started when I was …",
+          "cues": {
+            "bn": "কখন শুরু করেছেন, বলুন।",
+            "hi": "बताएँ कि यह कब शुरू हुआ।"
+          }
+        },
+        {
+          "partner": "How often do you do it?",
+          "reply": "I do it … times a week.",
+          "cues": {
+            "bn": "সপ্তাহে কতবার, বলুন।",
+            "hi": "बताएँ कि हफ़्ते में कितनी बार।"
+          }
+        },
+        {
+          "partner": "And do you have any questions for me?",
+          "reply": "Yes. What is your hobby?",
+          "cues": {
+            "bn": "উল্টে তাঁর শখ জিজ্ঞেস করুন।",
+            "hi": "पलटकर उनका शौक़ पूछें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A new classmate",
+            "translations": {
+              "bn": "নতুন সহপাঠী",
+              "hi": "नए सहपाठी"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi, I just joined this class.",
+                "reply": "Welcome! Where are you from?",
+                "cues": {
+                  "bn": "স্বাগত জানিয়ে জিজ্ঞেস করুন কোথাকার মানুষ।",
+                  "hi": "स्वागत करें और पूछें कि वे कहाँ से हैं।"
+                }
+              },
+              {
+                "partner": "From Shillong. We moved here last month.",
+                "reply": "Why did you move here?",
+                "cues": {
+                  "bn": "কেন এসেছেন, জিজ্ঞেস করুন।",
+                  "hi": "यहाँ आने का कारण पूछें।"
+                }
+              },
+              {
+                "partner": "My father got a new job here.",
+                "reply": "How do you like the city so far?",
+                "cues": {
+                  "bn": "শহরটা কেমন লাগছে, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि शहर अब तक कैसा लगा।"
+                }
+              },
+              {
+                "partner": "It’s big, but people are nice.",
+                "reply": "I’m happy to hear that. Let me show you around.",
+                "cues": {
+                  "bn": "খুশি হয়ে ঘুরিয়ে দেখানোর প্রস্তাব দিন।",
+                  "hi": "ख़ुशी जताएँ और जगह दिखाने की पेशकश करें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A famous chef",
+            "translations": {
+              "bn": "নামী শেফ",
+              "hi": "मशहूर शेफ़"
+            }
+          },
+          "roleplay": {
+            "partner": "the chef",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Welcome to my kitchen! What would you like to know?",
+                "reply": "When did you learn to cook?",
+                "cues": {
+                  "bn": "কবে রান্না শিখেছেন, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि खाना बनाना कब सीखा।"
+                }
+              },
+              {
+                "partner": "When I was ten, from my grandmother.",
+                "reply": "What was the first dish you made?",
+                "cues": {
+                  "bn": "প্রথম কী রেঁধেছিলেন, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि पहला व्यंजन कौन-सा बनाया था।"
+                }
+              },
+              {
+                "partner": "Rice and dal. It was terrible!",
+                "reply": "How many dishes can you cook now?",
+                "cues": {
+                  "bn": "এখন কটা পদ রাঁধতে পারেন, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि अब कितने व्यंजन बनाना आता है।"
+                }
+              },
+              {
+                "partner": "More than two hundred! Any more questions?",
+                "reply": "Just one: what is your favourite dish?",
+                "cues": {
+                  "bn": "শেষ প্রশ্ন: প্রিয় পদ কোনটা।",
+                  "hi": "आख़िरी सवाल: पसंदीदा व्यंजन कौन-सा है।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "An old neighbour",
+            "translations": {
+              "bn": "পুরোনো প্রতিবেশী",
+              "hi": "पुराने पड़ोसी"
+            }
+          },
+          "roleplay": {
+            "partner": "Mrs Pillai",
+            "asMan": "Mr Pillai",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I have lived on this street for fifty years.",
+                "reply": "Fifty years! What was it like then?",
+                "cues": {
+                  "bn": "অবাক হয়ে জিজ্ঞেস করুন তখন কেমন ছিল।",
+                  "hi": "हैरानी जताएँ और पूछें कि तब कैसा था।"
+                }
+              },
+              {
+                "partner": "Very quiet. There were fields here.",
+                "reply": "Really? Where did children play?",
+                "cues": {
+                  "bn": "জিজ্ঞেস করুন ছোটরা কোথায় খেলত।",
+                  "hi": "पूछें कि बच्चे कहाँ खेलते थे।"
+                }
+              },
+              {
+                "partner": "In the fields, and by the river.",
+                "reply": "How often did you go to the river?",
+                "cues": {
+                  "bn": "নদীতে কত ঘন ঘন যেতেন, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि नदी पर कितनी बार जाना होता था।"
+                }
+              },
+              {
+                "partner": "Every evening! Those were happy days.",
+                "reply": "Thank you for telling me. It’s a lovely story.",
+                "cues": {
+                  "bn": "গল্পের জন্য ধন্যবাদ দিন।",
+                  "hi": "कहानी सुनाने के लिए धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

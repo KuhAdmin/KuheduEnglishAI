@@ -258,6 +258,26 @@ describe('WeekPage', () => {
     )
   })
 
+  it('offers the day before the one to start, to go through it again', async () => {
+    useLessonProgressStore.setState({ doneDays: { 20: [1, 2, 3, 4, 5] } })
+    const router = renderHome('/home/weeks/20')
+    await overview()
+
+    expect(screen.getByRole('link', { name: 'Start Day 6' })).toHaveAttribute(
+      'href',
+      '/lessons/weeks/20/days/6',
+    )
+    expect(screen.getByRole('link', { name: 'Go back to Day 5' })).toHaveAttribute(
+      'href',
+      '/lessons/weeks/20/days/5',
+    )
+
+    // Nothing is before Day 1.
+    await act(() => router.navigate('/home/weeks/22'))
+    expect(await screen.findByRole('link', { name: 'Start Day 1' })).toBeVisible()
+    expect(screen.queryByRole('link', { name: /^Go back to Day/ })).toBeNull()
+  })
+
   it('says a week is complete once all seven days are done, and leads on to the next week', async () => {
     useLessonProgressStore.setState({
       doneDays: { 20: [1, 2, 3, 4, 5, 6, 7], 21: [1, 2, 3, 4, 5, 6] },

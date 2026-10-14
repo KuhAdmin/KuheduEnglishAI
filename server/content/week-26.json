@@ -1,0 +1,751 @@
+{
+  "week": 26,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Sandeep",
+          "text": "Good morning, Riddhi! You look tired. What did you do yesterday?",
+          "translations": {
+            "bn": "সুপ্রভাত, ঋদ্ধি! আপনাকে ক্লান্ত দেখাচ্ছে। কাল কী করলেন?",
+            "hi": "सुप्रभात, रिद्धि! आप थकी हुई लग रही हैं। आपने कल क्या किया?"
+          }
+        },
+        {
+          "speaker": "Riddhi",
+          "text": "I had a very busy day. First, I helped my brother move to a new flat.",
+          "translations": {
+            "bn": "খুব ব্যস্ত দিন গেছে। প্রথমে ভাইকে নতুন ফ্ল্যাটে উঠতে সাহায্য করলাম।",
+            "hi": "दिन बहुत व्यस्त रहा। पहले मैंने अपने भाई को नए फ़्लैट में सामान ले जाने में मदद की।"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "Oh! What time did you start?",
+          "translations": {
+            "bn": "ও! কটায় শুরু করেছিলেন?",
+            "hi": "अरे! आपने कितने बजे शुरू किया?"
+          }
+        },
+        {
+          "speaker": "Riddhi",
+          "text": "At seven in the morning. We carried boxes for four hours.",
+          "translations": {
+            "bn": "সকাল সাতটায়। চার ঘণ্টা ধরে বাক্স বয়েছি।",
+            "hi": "सुबह सात बजे। हमने चार घंटे तक डिब्बे उठाए।"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "That sounds hard. What did you do after that?",
+          "translations": {
+            "bn": "শুনে কঠিন মনে হচ্ছে। তারপর কী করলেন?",
+            "hi": "यह तो मुश्किल लगता है। उसके बाद आपने क्या किया?"
+          }
+        },
+        {
+          "speaker": "Riddhi",
+          "text": "After that, we had lunch at a small dhaba. Then I went to the market.",
+          "translations": {
+            "bn": "তারপর একটা ছোট ধাবায় দুপুরের খাবার খেলাম। এরপর বাজারে গেলাম।",
+            "hi": "उसके बाद हमने एक छोटे ढाबे पर दोपहर का खाना खाया। फिर मैं बाज़ार गई।"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "Did you buy anything nice?",
+          "translations": {
+            "bn": "ভালো কিছু কিনলেন?",
+            "hi": "कुछ अच्छा ख़रीदा?"
+          }
+        },
+        {
+          "speaker": "Riddhi",
+          "text": "Yes, I bought some plants for his balcony. In the evening, I cooked dinner for us.",
+          "translations": {
+            "bn": "হ্যাঁ, ওর বারান্দার জন্য কয়েকটা গাছ কিনলাম। সন্ধ্যায় আমাদের জন্য রাতের খাবার রাঁধলাম।",
+            "hi": "हाँ, मैंने उसकी बालकनी के लिए कुछ पौधे ख़रीदे। शाम को मैंने हम सबके लिए रात का खाना बनाया।"
+          }
+        },
+        {
+          "speaker": "Riddhi",
+          "text": "What about you? Did you do anything special yesterday?",
+          "translations": {
+            "bn": "আর আপনি? কাল বিশেষ কিছু করলেন?",
+            "hi": "और आप? आपने कल कुछ ख़ास किया?"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "Not really. I watched a cricket match with my friends, and then I slept early.",
+          "translations": {
+            "bn": "তেমন কিছু না। বন্ধুদের সঙ্গে ক্রিকেট ম্যাচ দেখলাম, তারপর তাড়াতাড়ি ঘুমিয়ে পড়লাম।",
+            "hi": "कुछ ख़ास नहीं। मैंने दोस्तों के साथ क्रिकेट मैच देखा, और फिर जल्दी सो गया।"
+          }
+        },
+        {
+          "speaker": "Riddhi",
+          "text": "Who won the match?",
+          "translations": {
+            "bn": "ম্যাচে কে জিতল?",
+            "hi": "मैच कौन जीता?"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "India won, in the last over! It was very exciting.",
+          "translations": {
+            "bn": "ভারত জিতল, শেষ ওভারে! খুব উত্তেজনা ছিল।",
+            "hi": "भारत जीता, आख़िरी ओवर में! बहुत रोमांचक था।"
+          }
+        }
+      ],
+      "voices": {
+        "Sandeep": "male",
+        "Riddhi": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "went",
+          "phonetic": "/went/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "“go”-এর অতীত রূপ",
+            "hi": "“go” का बीता रूप"
+          },
+          "syllables": ["went"],
+          "stress": null,
+          "tips": {
+            "bn": ["“went” হল “go”-এর অতীত রূপ।", "বলুন “I went”, “I goed” নয়।"],
+            "en": ["“went” is the past of “go”.", "Say “I went”, not “I goed”."],
+            "hi": ["“went”, “go” का बीता रूप है।", "कहें “I went”, “I goed” नहीं।"]
+          }
+        },
+        {
+          "word": "visited",
+          "phonetic": "/ˈvɪzɪtɪd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দেখা করতে যাওয়া (অতীত)",
+            "hi": "मिलने जाना (बीता रूप)"
+          },
+          "syllables": ["vis", "it", "ed"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“t”-এর পরে “-ed”-এর উচ্চারণ “ইড”।"],
+            "en": ["Say the first part stronger.", "After a “t”, “-ed” sounds like “id”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“t” के बाद “-ed” की आवाज़ “इड” होती है।"]
+          }
+        },
+        {
+          "word": "watched",
+          "phonetic": "/wɒtʃt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দেখা (অতীত)",
+            "hi": "देखा"
+          },
+          "syllables": ["watched"],
+          "stress": null,
+          "tips": {
+            "bn": ["এখানে “-ed”-এর উচ্চারণ “t”: “ওয়াচ্ট”।", "এক টানে বলুন।"],
+            "en": ["Here “-ed” sounds like “t”: “watcht”.", "Say it as one part."],
+            "hi": ["यहाँ “-ed” की आवाज़ “t” है: “वॉच्ट”।", "एक ही हिस्से में बोलें।"]
+          }
+        },
+        {
+          "word": "stayed",
+          "phonetic": "/steɪd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "থাকা (অতীত)",
+            "hi": "रुकना (बीता रूप)"
+          },
+          "syllables": ["stayed"],
+          "stress": null,
+          "tips": {
+            "bn": ["এখানে “-ed”-এর উচ্চারণ “d”।", "“I stayed at home” মানে বাইরে যাইনি।"],
+            "en": ["Here “-ed” sounds like “d”.", "“I stayed at home” means I did not go out."],
+            "hi": ["यहाँ “-ed” की आवाज़ “d” है।", "“I stayed at home” मतलब बाहर जाना नहीं हुआ।"]
+          }
+        },
+        {
+          "word": "weekend",
+          "phonetic": "/ˈwiːkend/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সপ্তাহান্ত",
+            "hi": "सप्ताहांत, वीकेंड"
+          },
+          "syllables": ["week", "end"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“last weekend” মানে সদ্য পেরোনো শনি-রবি।"],
+            "en": [
+              "Say the first part stronger.",
+              "“last weekend” means the Saturday and Sunday just gone."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“last weekend” मतलब अभी बीते शनिवार-रविवार।"]
+          }
+        },
+        {
+          "word": "relaxed",
+          "phonetic": "/rɪˈlækst/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বিশ্রাম নেওয়া (অতীত)",
+            "hi": "आराम किया"
+          },
+          "syllables": ["re", "laxed"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "শেষটা “ক্স্ট”-এর মতো শোনায়।"],
+            "en": ["Say the second part stronger.", "The end sounds like “kst”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "आख़िर की आवाज़ “क्स्ट” जैसी है।"]
+          }
+        },
+        {
+          "word": "enjoyed",
+          "phonetic": "/ɪnˈdʒɔɪd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "উপভোগ করা (অতীত)",
+            "hi": "मज़ा लिया"
+          },
+          "syllables": ["en", "joyed"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন “I enjoyed it”, শুধু “I enjoyed” নয়।"],
+            "en": ["Say the second part stronger.", "Say “I enjoyed it”, not just “I enjoyed”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें “I enjoyed it”, सिर्फ़ “I enjoyed” नहीं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "First, I had breakfast.",
+          "alsoAccepted": ["First, I ate breakfast."],
+          "translations": {
+            "bn": "প্রথমে আমি জলখাবার খেলাম।",
+            "hi": "पहले मैंने नाश्ता किया।"
+          },
+          "tips": {
+            "bn": ["“First” দিয়ে গল্প শুরু।", "“had breakfast” মানে জলখাবার খাওয়া।"],
+            "en": ["“First” starts the story.", "“had breakfast” means ate breakfast."],
+            "hi": ["“First” से कहानी शुरू होती है।", "“had breakfast” मतलब नाश्ता किया।"]
+          }
+        },
+        {
+          "english": "Then I took the bus to work.",
+          "alsoAccepted": ["Then I took a bus to work.", "Then I caught the bus to work."],
+          "translations": {
+            "bn": "তারপর বাসে করে কাজে গেলাম।",
+            "hi": "फिर मैंने काम पर जाने के लिए बस ली।"
+          },
+          "tips": {
+            "bn": ["“Then” দিয়ে পরের ধাপ।", "“took” হল “take”-এর অতীত রূপ।"],
+            "en": ["“Then” gives the next step.", "“took” is the past of “take”."],
+            "hi": ["“Then” से अगला क़दम बताया जाता है।", "“took”, “take” का बीता रूप है।"]
+          }
+        },
+        {
+          "english": "After lunch, I called my mother.",
+          "alsoAccepted": ["After lunch, I phoned my mother."],
+          "translations": {
+            "bn": "দুপুরের খাবারের পরে মাকে ফোন করলাম।",
+            "hi": "दोपहर के खाने के बाद मैंने माँ को फ़ोन किया।"
+          },
+          "tips": {
+            "bn": ["“After lunch” বলে কখন।", "এখানে “called” মানে ফোন করা।"],
+            "en": ["“After lunch” says when.", "Here “called” means phoned."],
+            "hi": ["“After lunch” बताता है कब।", "यहाँ “called” का मतलब फ़ोन करना है।"]
+          }
+        },
+        {
+          "english": "Before dinner, I finished my homework.",
+          "alsoAccepted": ["I finished my homework before dinner."],
+          "translations": {
+            "bn": "রাতের খাবারের আগে বাড়ির কাজ শেষ করলাম।",
+            "hi": "रात के खाने से पहले मैंने अपना होमवर्क पूरा किया।"
+          },
+          "tips": {
+            "bn": ["“Before” দিয়ে আগের কাজ বোঝায়।", "“finished”-এর শেষে “t” ধ্বনি।"],
+            "en": ["“Before” puts one thing earlier.", "“finished” ends with a “t” sound."],
+            "hi": [
+              "“Before” से पहले वाला काम बताया जाता है।",
+              "“finished” के आख़िर में “t” की आवाज़ है।"
+            ]
+          }
+        },
+        {
+          "english": "Finally, I read a book before sleeping.",
+          "alsoAccepted": ["Finally, I read a book before I slept."],
+          "translations": {
+            "bn": "শেষে, ঘুমোনোর আগে একটা বই পড়লাম।",
+            "hi": "आख़िर में, सोने से पहले मैंने एक किताब पढ़ी।"
+          },
+          "tips": {
+            "bn": ["“Finally” দিয়ে গল্প শেষ।", "অতীতে “read”-এর উচ্চারণ “red”-এর মতো।"],
+            "en": ["“Finally” ends the story.", "In the past, “read” sounds like “red”."],
+            "hi": [
+              "“Finally” से कहानी ख़त्म होती है।",
+              "बीते समय में “read” की आवाज़ “red” जैसी है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Jatin",
+      "asWoman": "Jyoti",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I had a strange day yesterday.",
+          "reply": "Really? What happened?",
+          "cues": {
+            "bn": "আগ্রহ দেখিয়ে জিজ্ঞেস করুন কী হয়েছিল।",
+            "hi": "दिलचस्पी दिखाएँ और पूछें कि क्या हुआ।"
+          }
+        },
+        {
+          "partner": "I lost my keys in the morning.",
+          "reply": "Oh no! Where did you find them?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন চাবি কোথায় পাওয়া গেল।",
+            "hi": "पूछें कि चाबियाँ कहाँ मिलीं।"
+          }
+        },
+        {
+          "partner": "In the fridge! Next to the milk.",
+          "reply": "In the fridge? How did they get there?",
+          "cues": {
+            "bn": "অবাক হয়ে জিজ্ঞেস করুন ওখানে কীভাবে গেল।",
+            "hi": "हैरानी से पूछें कि वे वहाँ कैसे पहुँचीं।"
+          }
+        },
+        {
+          "partner": "I was half asleep when I put the milk away.",
+          "reply": "Ha! Were you late for work?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন কাজে দেরি হয়েছিল কি না।",
+            "hi": "पूछें कि क्या काम पर देर हुई।"
+          }
+        },
+        {
+          "partner": "Only ten minutes. What did you do yesterday?",
+          "reply": "I … and then I …",
+          "cues": {
+            "bn": "আপনার কালকের দুটো কাজের কথা বলুন।",
+            "hi": "कल के अपने दो काम बताएँ।"
+          }
+        },
+        {
+          "partner": "Sounds nice. Did you sleep well?",
+          "reply": "Yes, I slept very well, thanks.",
+          "cues": {
+            "bn": "উত্তর দিন।",
+            "hi": "जवाब दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Tell Me About Your Yesterday",
+        "translations": {
+          "bn": "আপনার কালকের দিনের কথা",
+          "hi": "आपका बीता कल"
+        }
+      },
+      "instruction": {
+        "text": "Talk about your day yesterday, from morning to night, in order. Speak for about one minute.",
+        "translations": {
+          "bn": "সকাল থেকে রাত পর্যন্ত কালকের দিনটা পরপর বলুন। প্রায় এক মিনিট বলুন।",
+          "hi": "कल सुबह से रात तक का अपना दिन क्रम से बताएँ। लगभग एक मिनट बोलें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what you did in the morning",
+          "translations": {
+            "bn": "সকালে কী করেছিলেন, বলুন",
+            "hi": "बताएँ कि सुबह क्या किया"
+          }
+        },
+        {
+          "text": "Use “first”, “then” and “after that”",
+          "translations": {
+            "bn": "“first”, “then” আর “after that” ব্যবহার করুন",
+            "hi": "“first”, “then” और “after that” का प्रयोग करें"
+          }
+        },
+        {
+          "text": "Say one time: “at seven o’clock”",
+          "translations": {
+            "bn": "একটা সময় বলুন: “at seven o’clock”",
+            "hi": "एक समय बताएँ: “at seven o’clock”"
+          }
+        },
+        {
+          "text": "Say who you were with, or what you ate",
+          "translations": {
+            "bn": "কার সঙ্গে ছিলেন বা কী খেয়েছিলেন, বলুন",
+            "hi": "बताएँ कि किसके साथ थे या क्या खाया"
+          }
+        },
+        {
+          "text": "Say how the day ended",
+          "translations": {
+            "bn": "দিনটা কীভাবে শেষ হল, বলুন",
+            "hi": "बताएँ कि दिन कैसे ख़त्म हुआ"
+          }
+        }
+      ],
+      "phrases": [
+        "Yesterday, I got up at …",
+        "First, I …",
+        "Then I …",
+        "After that, …",
+        "In the evening, I …",
+        "Finally, I …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "What is the past of “go”?",
+            "translations": {
+              "bn": "“go”-এর অতীত রূপ কী?",
+              "hi": "“go” का बीता रूप क्या है?"
+            }
+          },
+          "answer": "went",
+          "others": ["goed", "gone"]
+        },
+        {
+          "question": {
+            "text": "Complete: Yesterday I ___ my grandmother.",
+            "translations": {
+              "bn": "পূরণ করুন: Yesterday I ___ my grandmother.",
+              "hi": "पूरा करें: Yesterday I ___ my grandmother."
+            }
+          },
+          "answer": "visited",
+          "others": ["visit", "visiting"]
+        },
+        {
+          "question": {
+            "text": "Which word comes last in a story?",
+            "translations": {
+              "bn": "গল্পের শেষে কোন শব্দ আসে?",
+              "hi": "कहानी के आख़िर में कौन-सा शब्द आता है?"
+            }
+          },
+          "answer": "Finally",
+          "others": ["First", "Then"]
+        },
+        {
+          "question": {
+            "text": "Which question asks about the past?",
+            "translations": {
+              "bn": "কোন প্রশ্ন অতীত নিয়ে?",
+              "hi": "कौन-सा सवाल बीते समय के बारे में है?"
+            }
+          },
+          "answer": "What did you do last night?",
+          "others": ["What do you do at night?", "What will you do tonight?"]
+        },
+        {
+          "question": {
+            "text": "Complete: ___ you watch the match yesterday?",
+            "translations": {
+              "bn": "পূরণ করুন: ___ you watch the match yesterday?",
+              "hi": "पूरा करें: ___ you watch the match yesterday?"
+            }
+          },
+          "answer": "Did",
+          "others": ["Do", "Are"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Mum",
+          "text": "Ayaan, how was the school trip yesterday?",
+          "translations": {
+            "bn": "আয়ান, কালকের স্কুলের ভ্রমণ কেমন হল?",
+            "hi": "अयान, कल स्कूल की सैर कैसी रही?"
+          }
+        },
+        {
+          "speaker": "Ayaan",
+          "text": "It was great! We went to the science museum.",
+          "translations": {
+            "bn": "দারুণ! আমরা বিজ্ঞান জাদুঘরে গিয়েছিলাম।",
+            "hi": "बहुत बढ़िया! हम विज्ञान संग्रहालय गए थे।"
+          }
+        },
+        {
+          "speaker": "Mum",
+          "text": "What did you see first?",
+          "translations": {
+            "bn": "প্রথমে কী দেখলে?",
+            "hi": "पहले क्या देखा?"
+          }
+        },
+        {
+          "speaker": "Ayaan",
+          "text": "First, we saw a big model of the moon. Then we watched a film about stars.",
+          "translations": {
+            "bn": "প্রথমে চাঁদের একটা বড় মডেল দেখলাম। তারপর তারাদের নিয়ে একটা ছবি দেখলাম।",
+            "hi": "पहले हमने चाँद का एक बड़ा मॉडल देखा। फिर तारों पर एक फ़िल्म देखी।"
+          }
+        },
+        {
+          "speaker": "Mum",
+          "text": "Lovely. Did you eat your lunch?",
+          "translations": {
+            "bn": "বাহ। দুপুরের খাবার খেয়েছিলে?",
+            "hi": "बढ़िया। अपना खाना खाया था?"
+          }
+        },
+        {
+          "speaker": "Ayaan",
+          "text": "Yes, we ate in the garden. After that, we made paper rockets!",
+          "translations": {
+            "bn": "হ্যাঁ, বাগানে বসে খেলাম। তারপর কাগজের রকেট বানালাম!",
+            "hi": "हाँ, हमने बग़ीचे में खाया। उसके बाद हमने काग़ज़ के रॉकेट बनाए!"
+          }
+        },
+        {
+          "speaker": "Mum",
+          "text": "Paper rockets? Did yours fly?",
+          "translations": {
+            "bn": "কাগজের রকেট? তোমারটা উড়েছিল?",
+            "hi": "काग़ज़ के रॉकेट? तुम्हारा उड़ा?"
+          }
+        },
+        {
+          "speaker": "Ayaan",
+          "text": "Yes, it flew the highest in my class!",
+          "translations": {
+            "bn": "হ্যাঁ, আমাদের ক্লাসে সবচেয়ে উঁচুতে উড়েছিল!",
+            "hi": "हाँ, मेरी कक्षा में सबसे ऊँचा उड़ा!"
+          }
+        },
+        {
+          "speaker": "Mum",
+          "text": "Well done! When did you get back?",
+          "translations": {
+            "bn": "বাহ! কখন ফিরলে?",
+            "hi": "शाबाश! कब लौटे?"
+          }
+        },
+        {
+          "speaker": "Ayaan",
+          "text": "At four o’clock. Then I fell asleep on the bus!",
+          "translations": {
+            "bn": "চারটেয়। তারপর বাসেই ঘুমিয়ে পড়লাম!",
+            "hi": "चार बजे। फिर मैं बस में ही सो गया!"
+          }
+        }
+      ],
+      "voices": {
+        "Mum": "female",
+        "Ayaan": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! Did you have a good day yesterday?",
+          "reply": "Yes, I did, thanks.",
+          "cues": {
+            "bn": "হ্যাঁ বলুন।",
+            "hi": "हाँ कहें।"
+          }
+        },
+        {
+          "partner": "What did you do in the morning?",
+          "reply": "In the morning, I …",
+          "cues": {
+            "bn": "সকালে কী করেছিলেন, বলুন।",
+            "hi": "बताएँ कि सुबह क्या किया।"
+          }
+        },
+        {
+          "partner": "And after that?",
+          "reply": "After that, I …",
+          "cues": {
+            "bn": "তারপর কী করলেন, বলুন।",
+            "hi": "बताएँ कि उसके बाद क्या किया।"
+          }
+        },
+        {
+          "partner": "Nice. Did you go out in the evening?",
+          "reply": "No, I stayed at home and …",
+          "cues": {
+            "bn": "বলুন সন্ধ্যায় বাড়িতে ছিলেন, আর কী করলেন।",
+            "hi": "बताएँ कि शाम घर पर बीती, और क्या किया।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Monday at the office",
+            "translations": {
+              "bn": "অফিসে সোমবার",
+              "hi": "दफ़्तर में सोमवार"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning! How was your weekend?",
+                "reply": "It was great, thanks. I visited my cousins.",
+                "cues": {
+                  "bn": "ভালো কেটেছে বলুন, আর কার কাছে গিয়েছিলেন বলুন।",
+                  "hi": "बताएँ कि अच्छा रहा, और किससे मिलना हुआ।"
+                }
+              },
+              {
+                "partner": "Oh, nice! Where do they live?",
+                "reply": "They live in Nashik. I took the train on Saturday.",
+                "cues": {
+                  "bn": "কোথায় থাকেন আর কীভাবে গেলেন, বলুন।",
+                  "hi": "बताएँ कि वे कहाँ रहते हैं और सफ़र कैसे हुआ।"
+                }
+              },
+              {
+                "partner": "What did you do there?",
+                "reply": "We cooked together and visited a temple.",
+                "cues": {
+                  "bn": "দুটো কাজের কথা বলুন।",
+                  "hi": "दो काम बताएँ।"
+                }
+              },
+              {
+                "partner": "Sounds lovely. When did you get back?",
+                "reply": "Last night, at about ten.",
+                "cues": {
+                  "bn": "কখন ফিরলেন, বলুন।",
+                  "hi": "बताएँ कि वापसी कब हुई।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At the doctor’s",
+            "translations": {
+              "bn": "ডাক্তারের কাছে",
+              "hi": "डॉक्टर के पास"
+            }
+          },
+          "roleplay": {
+            "partner": "the doctor",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "So, when did the pain start?",
+                "reply": "It started yesterday morning.",
+                "cues": {
+                  "bn": "বলুন কাল সকালে শুরু হয়েছে।",
+                  "hi": "बताएँ कि दर्द कल सुबह शुरू हुआ।"
+                }
+              },
+              {
+                "partner": "What did you eat yesterday?",
+                "reply": "I had rice, and some street food in the evening.",
+                "cues": {
+                  "bn": "কাল কী খেয়েছিলেন, বলুন।",
+                  "hi": "बताएँ कि कल क्या खाया।"
+                }
+              },
+              {
+                "partner": "Did you drink enough water?",
+                "reply": "No, not really. It was a busy day.",
+                "cues": {
+                  "bn": "সৎভাবে উত্তর দিন।",
+                  "hi": "ईमानदारी से जवाब दें।"
+                }
+              },
+              {
+                "partner": "Drink more water and eat simple food today.",
+                "reply": "OK, I will. Thank you, doctor.",
+                "cues": {
+                  "bn": "রাজি হয়ে ধন্যবাদ দিন।",
+                  "hi": "हामी भरें और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A lost phone",
+            "translations": {
+              "bn": "হারানো ফোন",
+              "hi": "खोया हुआ फ़ोन"
+            }
+          },
+          "roleplay": {
+            "partner": "the guard",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "You lost your phone? When did you last see it?",
+                "reply": "I saw it at the café at two o’clock.",
+                "cues": {
+                  "bn": "শেষ কোথায় আর কখন দেখেছেন, বলুন।",
+                  "hi": "बताएँ कि आख़िरी बार कहाँ और कब देखा।"
+                }
+              },
+              {
+                "partner": "Where did you go after the café?",
+                "reply": "After that, I went to the bookshop.",
+                "cues": {
+                  "bn": "ক্যাফের পরে কোথায় গেলেন, বলুন।",
+                  "hi": "बताएँ कि कैफ़े के बाद कहाँ जाना हुआ।"
+                }
+              },
+              {
+                "partner": "Did you use your phone in the bookshop?",
+                "reply": "Yes, I paid with it.",
+                "cues": {
+                  "bn": "বলুন ফোন দিয়ে দাম দিয়েছিলেন।",
+                  "hi": "बताएँ कि फ़ोन से भुगतान किया था।"
+                }
+              },
+              {
+                "partner": "Then let’s ask at the bookshop.",
+                "reply": "Good idea. Thank you for your help.",
+                "cues": {
+                  "bn": "রাজি হয়ে ধন্যবাদ দিন।",
+                  "hi": "हामी भरें और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

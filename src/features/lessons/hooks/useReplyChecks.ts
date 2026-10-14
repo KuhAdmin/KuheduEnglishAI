@@ -12,8 +12,7 @@ export type ReplyCheck =
 
 /**
  * Having the server check the learner's replies in one conversation, each when they ask. What a
- * check came to stays with its turn after the recording itself has gone (only the last answer's
- * is kept), until the conversation is started again.
+ * check came to stays with its turn until the conversation is started again.
  */
 export function useReplyChecks() {
   const [checks, setChecks] = useState<Readonly<Record<number, ReplyCheck>>>({})

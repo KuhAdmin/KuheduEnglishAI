@@ -1,0 +1,789 @@
+{
+  "week": 45,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Amit",
+          "text": "Good evening, FreshCart customer service. This is Amit. How can I help?",
+          "translations": {
+            "bn": "শুভ সন্ধ্যা, ফ্রেশকার্ট কাস্টমার সার্ভিস। আমি অমিত। কী সাহায্য করতে পারি?",
+            "hi": "शुभ संध्या, फ़्रेशकार्ट कस्टमर सर्विस। मैं अमित बोल रहा हूँ। मैं आपकी क्या मदद करूँ?"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "Hi Amit. I have a problem with my order. It came two hours late, and some things are wrong.",
+          "translations": {
+            "bn": "হাই অমিত। আমার অর্ডারে একটা সমস্যা হয়েছে। দু ঘণ্টা দেরিতে এসেছে, আর কিছু জিনিস ভুল।",
+            "hi": "हाय अमित। मेरे ऑर्डर में एक समस्या है। वह दो घंटे देर से आया, और कुछ चीज़ें ग़लत हैं।"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "I’m very sorry about that. Can you tell me exactly what happened?",
+          "translations": {
+            "bn": "এর জন্য খুবই দুঃখিত। ঠিক কী হয়েছে বলবেন?",
+            "hi": "इसके लिए मुझे बहुत अफ़सोस है। क्या आप ठीक-ठीक बताएँगी कि क्या हुआ?"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "I ordered fifteen eggs, but I got fifty. And the milk is missing.",
+          "translations": {
+            "bn": "আমি পনেরোটা ডিম চেয়েছিলাম, কিন্তু পঞ্চাশটা এসেছে। আর দুধটা আসেনি।",
+            "hi": "मैंने पंद्रह अंडे मँगवाए थे, पर पचास आ गए। और दूध नहीं आया।"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "Fifty eggs instead of fifteen? Let me check… The order says fifty.",
+          "translations": {
+            "bn": "পনেরোর বদলে পঞ্চাশটা ডিম? দেখছি… অর্ডারে পঞ্চাশ লেখা।",
+            "hi": "पंद्रह की जगह पचास अंडे? मैं देखता हूँ… ऑर्डर में पचास लिखा है।"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "That’s a misunderstanding. I said fifteen: one, five. Not five, zero.",
+          "translations": {
+            "bn": "এটা ভুল বোঝাবুঝি। আমি বলেছিলাম পনেরো: এক, পাঁচ। পাঁচ, শূন্য নয়।",
+            "hi": "यह ग़लतफ़हमी है। मैंने पंद्रह कहा था: एक, पाँच। पाँच, शून्य नहीं।"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "Ah, I see. Sorry for the confusion. Shall we take back the extra eggs?",
+          "translations": {
+            "bn": "ও, বুঝলাম। গোলমালের জন্য দুঃখিত। বাড়তি ডিমগুলো ফেরত নিয়ে যাব?",
+            "hi": "अच्छा, समझ गया। गड़बड़ी के लिए माफ़ी। क्या हम अतिरिक्त अंडे वापस ले जाएँ?"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "Yes, please. But I need the milk urgently. My baby needs it tonight.",
+          "translations": {
+            "bn": "হ্যাঁ, নিয়ে যান। কিন্তু দুধটা এখনই দরকার। আজ রাতে বাচ্চার লাগবে।",
+            "hi": "हाँ, ले जाइए। पर मुझे दूध तुरंत चाहिए। आज रात मेरे बच्चे को चाहिए।"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "I understand. I can send the milk in thirty minutes. Is that OK?",
+          "translations": {
+            "bn": "বুঝতে পারছি। তিরিশ মিনিটে দুধ পাঠাতে পারি। চলবে?",
+            "hi": "मैं समझता हूँ। मैं तीस मिनट में दूध भिजवा सकता हूँ। ठीक है?"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "Thank you, that helps a lot. But I’m not happy about the delay.",
+          "translations": {
+            "bn": "ধন্যবাদ, খুব উপকার হলো। তবে দেরিটা নিয়ে আমি খুশি নই।",
+            "hi": "धन्यवाद, इससे बहुत मदद होगी। पर मैं देरी से ख़ुश नहीं हूँ।"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "You’re right to tell us. We’ll refund the delivery charge.",
+          "translations": {
+            "bn": "জানিয়ে ঠিকই করেছেন। ডেলিভারির খরচটা আমরা ফেরত দেব।",
+            "hi": "आपने बताकर ठीक किया। हम डिलीवरी का ख़र्च वापस कर देंगे।"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "That’s fair. So: the milk in thirty minutes, the extra eggs taken back and a refund.",
+          "translations": {
+            "bn": "এটা ন্যায্য। তাহলে: তিরিশ মিনিটে দুধ, বাড়তি ডিম ফেরত, আর টাকা ফেরত।",
+            "hi": "यह ठीक है। तो: तीस मिनट में दूध, अतिरिक्त अंडे वापस, और पैसे वापस।"
+          }
+        },
+        {
+          "speaker": "Amit",
+          "text": "Exactly. Again, I apologise. Is there anything else?",
+          "translations": {
+            "bn": "একদম। আবারও ক্ষমা চাইছি। আর কিছু?",
+            "hi": "बिल्कुल। एक बार फिर माफ़ी चाहता हूँ। और कुछ?"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "No, that’s all. Thanks for sorting it out, Amit.",
+          "translations": {
+            "bn": "না, এটুকুই। ব্যাপারটা মিটিয়ে দেওয়ার জন্য ধন্যবাদ, অমিত।",
+            "hi": "नहीं, बस इतना ही। मामला सुलझाने के लिए धन्यवाद, अमित।"
+          }
+        }
+      ],
+      "voices": {
+        "Amit": "male",
+        "Sneha": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "help",
+          "phonetic": "/help/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সাহায্য",
+            "hi": "मदद"
+          },
+          "syllables": ["help"],
+          "stress": null,
+          "tips": {
+            "bn": ["“l” স্পষ্ট করে বলুন।", "জিজ্ঞেস করুন: “Can you help me, please?”"],
+            "en": ["Say the “l” clearly.", "Ask: “Can you help me, please?”"],
+            "hi": ["“l” साफ़ बोलें।", "पूछें: “Can you help me, please?”"]
+          }
+        },
+        {
+          "word": "emergency",
+          "phonetic": "/ɪˈmɜːdʒənsi/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "জরুরি অবস্থা",
+            "hi": "आपात स्थिति"
+          },
+          "syllables": ["e", "mer", "gen", "cy"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "“It’s an emergency” মানে এখনই সাহায্য দরকার।"
+            ],
+            "en": [
+              "Say the second part stronger.",
+              "“It’s an emergency” means help is needed now."
+            ],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“It’s an emergency” मतलब अभी मदद चाहिए।"]
+          }
+        },
+        {
+          "word": "immediately",
+          "phonetic": "/ɪˈmiːdiətli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "এখনই, সঙ্গে সঙ্গে",
+            "hi": "तुरंत, फ़ौरन"
+          },
+          "syllables": ["im", "me", "di", "ate", "ly"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "মানে এই মুহূর্তে।"],
+            "en": ["Say the second part stronger.", "It means right now."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "मतलब अभी, इसी वक़्त।"]
+          }
+        },
+        {
+          "word": "ambulance",
+          "phonetic": "/ˈæmbjələns/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অ্যাম্বুলেন্স",
+            "hi": "एम्बुलेंस"
+          },
+          "syllables": ["am", "bu", "lance"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “Please call an ambulance.”"],
+            "en": ["Say the first part stronger.", "Say: “Please call an ambulance.”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “Please call an ambulance.”"]
+          }
+        },
+        {
+          "word": "injured",
+          "phonetic": "/ˈɪndʒəd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আহত",
+            "hi": "घायल"
+          },
+          "syllables": ["in", "jured"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“Someone is injured” মানে কেউ চোট পেয়েছেন।"],
+            "en": ["Say the first part stronger.", "“Someone is injured” means someone is hurt."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“Someone is injured” मतलब किसी को चोट लगी है।"]
+          }
+        },
+        {
+          "word": "quickly",
+          "phonetic": "/ˈkwɪkli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "তাড়াতাড়ি",
+            "hi": "जल्दी से"
+          },
+          "syllables": ["quick", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “Please come quickly.”"],
+            "en": ["Say the first part stronger.", "Say: “Please come quickly.”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “Please come quickly.”"]
+          }
+        },
+        {
+          "word": "stuck",
+          "phonetic": "/stʌk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আটকে পড়া",
+            "hi": "फँस जाना"
+          },
+          "syllables": ["stuck"],
+          "stress": null,
+          "tips": {
+            "bn": ["“u”-এর উচ্চারণ “cup”-এর “u”-এর মতো।", "বলুন: “I’m stuck in the lift.”"],
+            "en": ["The “u” sounds like the “u” in “cup”.", "Say: “I’m stuck in the lift.”"],
+            "hi": ["“u” की आवाज़ “cup” के “u” जैसी है।", "कहें: “I’m stuck in the lift.”"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I’m sorry, but I’d like to make a complaint.",
+          "alsoAccepted": [
+            "I’m sorry, but I would like to make a complaint.",
+            "Sorry, but I’d like to make a complaint."
+          ],
+          "translations": {
+            "bn": "মাফ করবেন, কিন্তু আমি একটা অভিযোগ জানাতে চাই।",
+            "hi": "माफ़ कीजिए, पर मुझे एक शिकायत करनी है।"
+          },
+          "tips": {
+            "bn": ["মন খারাপ থাকলেও ভদ্রভাবে শুরু করুন।", "“I’d like to …” শান্ত শোনায়।"],
+            "en": ["Start politely, even when you are upset.", "“I’d like to …” sounds calm."],
+            "hi": ["नाराज़ हों, तब भी विनम्रता से शुरू करें।", "“I’d like to …” शांत लगता है।"]
+          }
+        },
+        {
+          "english": "The room is not clean, and the shower doesn’t work.",
+          "alsoAccepted": [
+            "The room isn’t clean, and the shower doesn’t work.",
+            "The room is not clean and the shower does not work."
+          ],
+          "translations": {
+            "bn": "ঘরটা পরিষ্কার নয়, আর শাওয়ারটা চলছে না।",
+            "hi": "कमरा साफ़ नहीं है, और शावर काम नहीं कर रहा।"
+          },
+          "tips": {
+            "bn": ["ঠিক কী গোলমাল, তা বলুন।", "রাগের চেয়ে তথ্যে বেশি কাজ হয়।"],
+            "en": ["Say exactly what is wrong.", "Facts work better than anger."],
+            "hi": ["ठीक-ठीक बताएँ कि क्या ग़लत है।", "ग़ुस्से से ज़्यादा तथ्य काम आते हैं।"]
+          }
+        },
+        {
+          "english": "I paid for fast delivery, but it came three days late.",
+          "alsoAccepted": [
+            "I paid for a fast delivery, but it came three days late.",
+            "I paid for fast delivery, but it arrived three days late."
+          ],
+          "translations": {
+            "bn": "আমি দ্রুত ডেলিভারির জন্য টাকা দিয়েছিলাম, কিন্তু তিন দিন দেরিতে এসেছে।",
+            "hi": "मैंने तेज़ डिलीवरी के पैसे दिए थे, पर सामान तीन दिन देर से आया।"
+          },
+          "tips": {
+            "bn": ["কী আশা করেছিলেন, তারপর কী হলো বলুন।", "“but” দিয়ে পার্থক্যটা বোঝান।"],
+            "en": ["Say what you expected, then what happened.", "“but” shows the difference."],
+            "hi": ["बताएँ कि क्या उम्मीद थी, फिर क्या हुआ।", "“but” से फ़र्क़ दिखाएँ।"]
+          }
+        },
+        {
+          "english": "Could you replace it, or give me a refund?",
+          "alsoAccepted": [
+            "Could you replace it or give me a refund?",
+            "Can you replace it, or give me a refund?"
+          ],
+          "translations": {
+            "bn": "এটা বদলে দেবেন, নাকি টাকা ফেরত দেবেন?",
+            "hi": "क्या इसे बदला जा सकता है, या पैसे वापस मिल सकते हैं?"
+          },
+          "tips": {
+            "bn": ["কীসে সমস্যা মিটবে, বলুন।", "বেছে নেওয়ার সুযোগ দিলে ন্যায্য শোনায়।"],
+            "en": ["Say what would fix the problem.", "Giving a choice sounds fair."],
+            "hi": ["बताएँ कि समस्या कैसे सुलझेगी।", "विकल्प देना ठीक लगता है।"]
+          }
+        },
+        {
+          "english": "Thank you for your help. I appreciate it.",
+          "alsoAccepted": [
+            "Thanks for your help. I appreciate it.",
+            "Thank you for your help. I really appreciate it."
+          ],
+          "translations": {
+            "bn": "সাহায্যের জন্য ধন্যবাদ। খুব উপকার হলো।",
+            "hi": "आपकी मदद के लिए शुक्रिया। यह बहुत मायने रखता है।"
+          },
+          "tips": {
+            "bn": ["অভিযোগের পরেও ভদ্রভাবে শেষ করুন।", "ভদ্র থাকলে মানুষ বেশি সাহায্য করেন।"],
+            "en": ["End kindly, even after a complaint.", "People help more when you are polite."],
+            "hi": [
+              "शिकायत के बाद भी विनम्रता से ख़त्म करें।",
+              "विनम्र रहने पर लोग ज़्यादा मदद करते हैं।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the tailor",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Here are your trousers. I made them shorter, as you asked.",
+          "reply": "Thank you, but I think there’s a misunderstanding. They’re much too short.",
+          "cues": {
+            "bn": "ভদ্রভাবে বলুন ভুল বোঝাবুঝি হয়েছে।",
+            "hi": "विनम्रता से बताएँ कि कुछ ग़लतफ़हमी हुई है।"
+          }
+        },
+        {
+          "partner": "You said to cut them by two inches, didn’t you?",
+          "reply": "No, I meant two centimetres, not two inches.",
+          "cues": {
+            "bn": "আসলে কী বলতে চেয়েছিলেন, স্পষ্ট করুন।",
+            "hi": "साफ़ करें कि असल में क्या कहना था।"
+          }
+        },
+        {
+          "partner": "Oh, I’m sorry. I misunderstood.",
+          "reply": "That’s OK. It can happen. Can anything be done?",
+          "cues": {
+            "bn": "শান্তভাবে মেনে নিয়ে সমাধান জানতে চান।",
+            "hi": "शांति से बात मानें और हल पूछें।"
+          }
+        },
+        {
+          "partner": "I can let them down a little. They’ll be one inch longer.",
+          "reply": "Just to check: one inch longer than now, so they touch my shoes?",
+          "cues": {
+            "bn": "ঠিক বুঝেছেন কি না মিলিয়ে নিন।",
+            "hi": "पक्का करें कि बात सही समझी।"
+          }
+        },
+        {
+          "partner": "Yes, exactly. And there’s no charge for this.",
+          "reply": "Thank you. When can I pick them up?",
+          "cues": {
+            "bn": "ধন্যবাদ দিয়ে কবে নেবেন জিজ্ঞেস করুন।",
+            "hi": "धन्यवाद दें और पूछें कि कब लेने आएँ।"
+          }
+        },
+        {
+          "partner": "Tomorrow after five.",
+          "reply": "Tomorrow after five. Great, see you then.",
+          "cues": {
+            "bn": "সময়টা আবার বলে বিদায় জানান।",
+            "hi": "समय दोहराएँ और अलविदा कहें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Real-world Communication Challenge",
+        "translations": {
+          "bn": "বাস্তব জীবনের যোগাযোগের চ্যালেঞ্জ",
+          "hi": "असली ज़िंदगी में बातचीत की चुनौती"
+        }
+      },
+      "instruction": {
+        "text": "Your new phone stops working on a trip. Explain, ask for help, complain politely and agree a solution.",
+        "translations": {
+          "bn": "বেড়াতে গিয়ে নতুন ফোনটা চলা বন্ধ করে দিল। সমস্যা বুঝিয়ে বলুন, সাহায্য চান, ভদ্রভাবে অভিযোগ করুন আর সমাধানে পৌঁছন।",
+          "hi": "सफ़र में आपका नया फ़ोन बंद हो गया है। समस्या समझाएँ, मदद माँगें, विनम्रता से शिकायत करें और हल तय करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Explain what happened, step by step",
+          "translations": {
+            "bn": "কী হয়েছে, ধাপে ধাপে বুঝিয়ে বলুন",
+            "hi": "क्या हुआ, क़दम-दर-क़दम समझाएँ"
+          }
+        },
+        {
+          "text": "Say why you need help now",
+          "translations": {
+            "bn": "এখনই কেন সাহায্য দরকার বলুন",
+            "hi": "बताएँ कि अभी मदद क्यों चाहिए"
+          }
+        },
+        {
+          "text": "Make a polite complaint with the facts",
+          "translations": {
+            "bn": "তথ্য দিয়ে ভদ্রভাবে অভিযোগ করুন",
+            "hi": "तथ्यों के साथ विनम्रता से शिकायत करें"
+          }
+        },
+        {
+          "text": "Clear up one misunderstanding: “No, I meant …”",
+          "translations": {
+            "bn": "একটা ভুল বোঝাবুঝি মেটান: “No, I meant …”",
+            "hi": "एक ग़लतफ़हमी दूर करें: “No, I meant …”"
+          }
+        },
+        {
+          "text": "Agree on a solution and repeat it to check",
+          "translations": {
+            "bn": "সমাধানে একমত হয়ে মিলিয়ে নিতে আবার বলুন",
+            "hi": "हल पर सहमति बनाएँ और पक्का करने के लिए दोहराएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "I have a problem: …",
+        "I need help urgently because …",
+        "I’m sorry, but I’m not happy with …",
+        "No, I meant …",
+        "Could you …, please?",
+        "So, just to check: …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which sentence explains a problem clearly?",
+            "translations": {
+              "bn": "কোন বাক্যে সমস্যাটা স্পষ্ট করে বলা হয়েছে?",
+              "hi": "कौन-सा वाक्य समस्या को साफ़ बताता है?"
+            }
+          },
+          "answer": "The machine took my card, and I can’t get it back.",
+          "others": ["Machine bad.", "Help, help, help."]
+        },
+        {
+          "question": {
+            "text": "Which word means “right now”?",
+            "translations": {
+              "bn": "কোন শব্দের মানে “এই মুহূর্তে”?",
+              "hi": "किस शब्द का मतलब “अभी, इसी वक़्त” है?"
+            }
+          },
+          "answer": "immediately",
+          "others": ["finally", "usually"]
+        },
+        {
+          "question": {
+            "text": "Which complaint is polite?",
+            "translations": {
+              "bn": "কোন অভিযোগটা ভদ্র?",
+              "hi": "कौन-सी शिकायत विनम्र है?"
+            }
+          },
+          "answer": "I’m sorry, but my food is cold. Could you warm it up?",
+          "others": ["This food is terrible!", "Take it away now!"]
+        },
+        {
+          "question": {
+            "text": "Someone misunderstood you. What do you say?",
+            "translations": {
+              "bn": "কেউ আপনাকে ভুল বুঝেছেন। কী বলবেন?",
+              "hi": "किसी ने आपकी बात ग़लत समझी। क्या कहें?"
+            }
+          },
+          "answer": "Sorry, I think there’s a misunderstanding. I meant …",
+          "others": ["You never listen!", "Forget it."]
+        },
+        {
+          "question": {
+            "text": "How do you check that you understood?",
+            "translations": {
+              "bn": "ঠিক বুঝেছেন কি না কীভাবে মিলিয়ে নেবেন?",
+              "hi": "कैसे पक्का करें कि बात सही समझी?"
+            }
+          },
+          "answer": "Just to check: you mean tomorrow, not today?",
+          "others": ["Whatever you say.", "I don’t care."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Nandini",
+          "text": "Hello? Can anyone hear me? I’m stuck in the lift!",
+          "translations": {
+            "bn": "হ্যালো? কেউ শুনতে পাচ্ছেন? আমি লিফটে আটকে পড়েছি!",
+            "hi": "हैलो? क्या कोई सुन रहा है? मैं लिफ़्ट में फँस गई हूँ!"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "Yes, I can hear you. This is security. Are you OK?",
+          "translations": {
+            "bn": "হ্যাঁ, শুনতে পাচ্ছি। আমি নিরাপত্তারক্ষী। আপনি ঠিক আছেন?",
+            "hi": "हाँ, मैं सुन रहा हूँ। मैं सिक्योरिटी से हूँ। आप ठीक हैं?"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "I’m OK, but the lift stopped between the third and fourth floors.",
+          "translations": {
+            "bn": "আমি ঠিক আছি, কিন্তু লিফটটা তিনতলা আর চারতলার মাঝে থেমে গেছে।",
+            "hi": "मैं ठीक हूँ, पर लिफ़्ट तीसरी और चौथी मंज़िल के बीच रुक गई है।"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "Is anyone injured?",
+          "translations": {
+            "bn": "কেউ আহত হয়েছেন?",
+            "hi": "क्या किसी को चोट लगी है?"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "No, nobody is injured. There are two of us here. Please come quickly.",
+          "translations": {
+            "bn": "না, কেউ আহত নন। এখানে আমরা দুজন। তাড়াতাড়ি আসুন।",
+            "hi": "नहीं, किसी को चोट नहीं लगी। यहाँ हम दो लोग हैं। कृपया जल्दी आइए।"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "Don’t worry. The engineer is on the way. He’ll be there in ten minutes.",
+          "translations": {
+            "bn": "চিন্তা করবেন না। মিস্ত্রি আসছেন। দশ মিনিটে পৌঁছে যাবেন।",
+            "hi": "चिंता मत कीजिए। इंजीनियर रास्ते में हैं। दस मिनट में पहुँच जाएँगे।"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "Ten minutes? It’s very hot in here.",
+          "translations": {
+            "bn": "দশ মিনিট? এখানে খুব গরম।",
+            "hi": "दस मिनट? यहाँ बहुत गर्मी है।"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "I understand. I’ll switch on the fan from here. Can you feel it now?",
+          "translations": {
+            "bn": "বুঝতে পারছি। এখান থেকে পাখাটা চালিয়ে দিচ্ছি। এখন হাওয়া লাগছে?",
+            "hi": "मैं समझता हूँ। मैं यहाँ से पंखा चला देता हूँ। अब हवा लग रही है?"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "Yes, that’s better. Thank you.",
+          "translations": {
+            "bn": "হ্যাঁ, এখন ভালো। ধন্যবাদ।",
+            "hi": "हाँ, अब बेहतर है। धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Guard",
+          "text": "Stay calm, and don’t try to open the doors. I’ll stay on the line with you.",
+          "translations": {
+            "bn": "শান্ত থাকুন, দরজা খোলার চেষ্টা করবেন না। আমি লাইনে আপনাদের সঙ্গে আছি।",
+            "hi": "शांत रहिए, और दरवाज़े खोलने की कोशिश मत कीजिए। मैं लाइन पर आपके साथ रहूँगा।"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "OK. Thank you for staying with us.",
+          "translations": {
+            "bn": "আচ্ছা। আমাদের সঙ্গে থাকার জন্য ধন্যবাদ।",
+            "hi": "ठीक है। हमारे साथ बने रहने के लिए धन्यवाद।"
+          }
+        }
+      ],
+      "voices": {
+        "Nandini": "female",
+        "Guard": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the waiter",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Is everything all right with your meal?",
+          "reply": "I’m sorry, but my soup is cold.",
+          "cues": {
+            "bn": "ভদ্রভাবে সমস্যাটা জানান।",
+            "hi": "विनम्रता से समस्या बताएँ।"
+          }
+        },
+        {
+          "partner": "Oh, I’m sorry. I’ll bring you a new one.",
+          "reply": "Thank you. Also, we ordered rice twenty minutes ago, but it hasn’t come.",
+          "cues": {
+            "bn": "তথ্যসহ আরেকটা অভিযোগ জানান।",
+            "hi": "तथ्य के साथ एक और शिकायत बताएँ।"
+          }
+        },
+        {
+          "partner": "I apologise. The kitchen is very busy tonight.",
+          "reply": "I understand. Could you check how long it will be?",
+          "cues": {
+            "bn": "বুঝেছেন বলে একটা অনুরোধ করুন।",
+            "hi": "बताएँ कि बात समझ आई, फिर एक अनुरोध करें।"
+          }
+        },
+        {
+          "partner": "Five minutes. And the soup is free tonight.",
+          "reply": "That’s very kind. Thank you for your help.",
+          "cues": {
+            "bn": "ধন্যবাদ জানান।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A stolen wallet",
+            "translations": {
+              "bn": "চুরি যাওয়া মানিব্যাগ",
+              "hi": "चोरी हुआ बटुआ"
+            }
+          },
+          "roleplay": {
+            "partner": "the police officer",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good afternoon. How can I help you?",
+                "reply": "I need help, please. My wallet was stolen on the bus an hour ago.",
+                "cues": {
+                  "bn": "সমস্যাটা আর কখন হয়েছে বলুন।",
+                  "hi": "समस्या और समय बताएँ।"
+                }
+              },
+              {
+                "partner": "I’m sorry to hear that. What was in it?",
+                "reply": "My ID card, two bank cards and about two thousand rupees.",
+                "cues": {
+                  "bn": "ভেতরে কী ছিল বলুন।",
+                  "hi": "बताएँ कि उसमें क्या था।"
+                }
+              },
+              {
+                "partner": "First, you should block your bank cards immediately.",
+                "reply": "Yes, I’ll call the bank now. Can I also make a report here?",
+                "cues": {
+                  "bn": "রাজি হয়ে অভিযোগ লেখানোর কথা জিজ্ঞেস করুন।",
+                  "hi": "हाँ कहें और रिपोर्ट लिखवाने के बारे में पूछें।"
+                }
+              },
+              {
+                "partner": "Yes. Please fill in this form.",
+                "reply": "Thank you. Could you tell me how long it usually takes?",
+                "cues": {
+                  "bn": "ধন্যবাদ দিয়ে কত সময় লাগে জিজ্ঞেস করুন।",
+                  "hi": "धन्यवाद दें और पूछें कि कितना समय लगता है।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A wrong bill",
+            "translations": {
+              "bn": "ভুল বিল",
+              "hi": "ग़लत बिल"
+            }
+          },
+          "roleplay": {
+            "partner": "the cashier",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Your total is two thousand four hundred rupees.",
+                "reply": "Sorry, I think there’s a mistake. That seems too much.",
+                "cues": {
+                  "bn": "ভদ্রভাবে ভুলের কথা বলুন।",
+                  "hi": "विनम्रता से ग़लती की बात कहें।"
+                }
+              },
+              {
+                "partner": "Let me see. You have three shirts here.",
+                "reply": "No, I only bought two. The third one isn’t mine.",
+                "cues": {
+                  "bn": "ভুল বোঝাবুঝিটা স্পষ্ট করুন।",
+                  "hi": "ग़लतफ़हमी साफ़ करें।"
+                }
+              },
+              {
+                "partner": "Oh, you’re right. Sorry about that.",
+                "reply": "No problem. So, what is the new total?",
+                "cues": {
+                  "bn": "শান্তভাবে নতুন হিসেব জিজ্ঞেস করুন।",
+                  "hi": "शांति से नया जोड़ पूछें।"
+                }
+              },
+              {
+                "partner": "It’s sixteen hundred rupees.",
+                "reply": "Sixteen hundred. Great, thank you.",
+                "cues": {
+                  "bn": "অঙ্কটা আবার বলে ধন্যবাদ দিন।",
+                  "hi": "रक़म दोहराएँ और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Help on the road",
+            "translations": {
+              "bn": "রাস্তায় সাহায্য",
+              "hi": "सड़क पर मदद"
+            }
+          },
+          "roleplay": {
+            "partner": "the mechanic",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Roadside help. What’s the problem?",
+                "reply": "My car has stopped on the highway, and it won’t start.",
+                "cues": {
+                  "bn": "সমস্যাটা জানান।",
+                  "hi": "समस्या बताएँ।"
+                }
+              },
+              {
+                "partner": "Where are you exactly?",
+                "reply": "About five kilometres after the toll gate, near a petrol pump.",
+                "cues": {
+                  "bn": "চেনা জায়গার নাম দিয়ে ঠিকানা বলুন।",
+                  "hi": "किसी पहचान वाली जगह के साथ ठिकाना बताएँ।"
+                }
+              },
+              {
+                "partner": "OK. Is everyone safe?",
+                "reply": "Yes, we’re safe, but it’s getting dark. Can you come quickly?",
+                "cues": {
+                  "bn": "নিরাপদ আছেন বলে তাড়াতাড়ি আসতে বলুন।",
+                  "hi": "बताएँ कि सब सुरक्षित हैं, और जल्दी आने को कहें।"
+                }
+              },
+              {
+                "partner": "Someone will be there in twenty minutes.",
+                "reply": "Twenty minutes. Thank you so much.",
+                "cues": {
+                  "bn": "সময়টা আবার বলে ধন্যবাদ দিন।",
+                  "hi": "समय दोहराएँ और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { WEEK_CONTENT_KINDS } from '@kuhedu/contracts'
+import { APP_CONFIG_NAMES, TEXT_SCOPES, WEEK_CONTENT_KINDS } from '@kuhedu/contracts'
 import { sql } from 'drizzle-orm'
 import { check, index, integer, jsonb, pgTable, primaryKey, text, uuid } from 'drizzle-orm/pg-core'
 import { users } from './accounts.ts'
@@ -10,11 +10,9 @@ import { createdAt, id, instant, isLanguageTag, isWeek, oneOf, updatedAt } from 
  * in the app, which is what it shows where there is no row.
  */
 
-/** Small objects read at start-up and saved whole. */
-export const APP_CONFIG_NAMES = ['landing', 'languages', 'learner-profiles'] as const
-
-/** The app's `screen-texts` and `curriculum` settings. */
-export const TEXT_SCOPES = ['screen', 'curriculum'] as const
+// `app_config` holds small objects read at start-up and saved whole (`APP_CONFIG_NAMES`);
+// `text_overrides` the app's `screen-texts` and `curriculum` settings (`TEXT_SCOPES`). Both
+// lists are `@kuhedu/contracts`', which the app reads them by.
 
 export const CONTENT_SOURCES = ['app_config', 'text_override', 'week_content'] as const
 

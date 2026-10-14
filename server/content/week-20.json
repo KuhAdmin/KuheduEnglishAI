@@ -1,0 +1,788 @@
+{
+  "week": 20,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Shopkeeper",
+          "text": "Good morning! Can I help you?",
+          "translations": {
+            "bn": "সুপ্রভাত! কী দেখাব?",
+            "hi": "सुप्रभात! बताइए, क्या दिखाऊँ?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "Yes. How much is this phone charger?",
+          "translations": {
+            "bn": "হ্যাঁ। এই ফোনের চার্জারটার দাম কত?",
+            "hi": "जी। इस फ़ोन चार्जर की क़ीमत क्या है?"
+          }
+        },
+        {
+          "speaker": "Shopkeeper",
+          "text": "Four hundred rupees. You can pay by card or cash.",
+          "translations": {
+            "bn": "চারশো টাকা। কার্ডে বা নগদে দিতে পারেন।",
+            "hi": "चार सौ रुपये। आप कार्ड या नक़द से दे सकती हैं।"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "I’ll take it. Here’s my card.",
+          "translations": {
+            "bn": "এটাই নেব। এই নিন আমার কার্ড।",
+            "hi": "मैं यही लूँगी। यह रहा मेरा कार्ड।"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "Hello! Are you ready to order?",
+          "translations": {
+            "bn": "হ্যালো! অর্ডার দেবেন?",
+            "hi": "नमस्ते! क्या आप ऑर्डर देंगी?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "Yes. I’d like a masala dosa and a coffee, please.",
+          "translations": {
+            "bn": "হ্যাঁ। একটা মশলা দোসা আর একটা কফি দিন।",
+            "hi": "जी। एक मसाला डोसा और एक कॉफ़ी दीजिए।"
+          }
+        },
+        {
+          "speaker": "Waiter",
+          "text": "Would you like sugar in your coffee?",
+          "translations": {
+            "bn": "কফিতে চিনি দেব?",
+            "hi": "कॉफ़ी में चीनी डालूँ?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "No sugar, thank you.",
+          "translations": {
+            "bn": "চিনি লাগবে না, ধন্যবাদ।",
+            "hi": "चीनी नहीं, धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Next, please! How can I help?",
+          "translations": {
+            "bn": "পরের জন! বলুন, কী করতে পারি?",
+            "hi": "अगले! बताइए, मैं क्या कर सकता हूँ?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "I’d like to send this parcel to Pune. How long will it take?",
+          "translations": {
+            "bn": "এই পার্সেলটা পুনেতে পাঠাতে চাই। কত দিন লাগবে?",
+            "hi": "मुझे यह पार्सल पुणे भेजना है। कितने दिन लगेंगे?"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "About three days. Please fill in this form.",
+          "translations": {
+            "bn": "প্রায় তিন দিন। এই ফর্মটা ভরে দিন।",
+            "hi": "लगभग तीन दिन। कृपया यह फ़ॉर्म भर दीजिए।"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Good afternoon, City Clinic. How can I help you?",
+          "translations": {
+            "bn": "শুভ বিকেল, সিটি ক্লিনিক। কীভাবে সাহায্য করতে পারি?",
+            "hi": "नमस्ते, सिटी क्लिनिक। मैं आपकी क्या मदद कर सकता हूँ?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "I’d like to make an appointment with the dentist, please.",
+          "translations": {
+            "bn": "আমি দাঁতের ডাক্তারের একটা অ্যাপয়েন্টমেন্ট চাই।",
+            "hi": "मुझे दाँतों के डॉक्टर से मिलने का समय चाहिए।"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Is Monday at ten o’clock OK?",
+          "translations": {
+            "bn": "সোমবার দশটায় হবে?",
+            "hi": "क्या सोमवार दस बजे ठीक रहेगा?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "Sorry, I work on Monday mornings. Is Tuesday afternoon possible?",
+          "translations": {
+            "bn": "দুঃখিত, সোমবার সকালে আমার কাজ থাকে। মঙ্গলবার বিকেলে হবে?",
+            "hi": "माफ़ कीजिए, सोमवार सुबह मेरा काम होता है। क्या मंगलवार दोपहर हो सकता है?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Yes, Tuesday at three. See you then!",
+          "translations": {
+            "bn": "হ্যাঁ, মঙ্গলবার তিনটে। তখন দেখা হবে!",
+            "hi": "जी हाँ, मंगलवार तीन बजे। तब मिलते हैं!"
+          }
+        }
+      ],
+      "voices": {
+        "Shopkeeper": "male",
+        "Leena": "female",
+        "Waiter": "male",
+        "Clerk": "male",
+        "Receptionist": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "menu",
+          "phonetic": "/ˈmenjuː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "খাবারের তালিকা, মেনু",
+            "hi": "मेन्यू, व्यंजन-सूची"
+          },
+          "syllables": ["men", "u"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“u”-এর উচ্চারণ “ইউ”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “u” sounds like “you”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“u” की आवाज़ “यू” जैसी है।"]
+          }
+        },
+        {
+          "word": "order",
+          "phonetic": "/ˈɔːdə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অর্ডার দেওয়া",
+            "hi": "ऑर्डर देना"
+          },
+          "syllables": ["or", "der"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “I’d like to order, please.”"],
+            "en": ["Say the first part stronger.", "Say: “I’d like to order, please.”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “I’d like to order, please.”"]
+          }
+        },
+        {
+          "word": "spicy",
+          "phonetic": "/ˈspaɪsi/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ঝাল, মশলাদার",
+            "hi": "तीखा, मसालेदार"
+          },
+          "syllables": ["spi", "cy"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “স্পাই”।", "জিজ্ঞেস করুন: “Is it spicy?”"],
+            "en": ["Say the first part stronger: “SPY”.", "Ask: “Is it spicy?”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “स्पाइ”।", "पूछें: “Is it spicy?”"]
+          }
+        },
+        {
+          "word": "vegetarian",
+          "phonetic": "/ˌvedʒəˈteəriən/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "নিরামিষ",
+            "hi": "शाकाहारी"
+          },
+          "syllables": ["veg", "e", "tar", "i", "an"],
+          "stress": 3,
+          "tips": {
+            "bn": ["তৃতীয় অংশটি জোর দিয়ে বলুন: “টেয়ার”।", "“g”-এর উচ্চারণ “j”-এর মতো।"],
+            "en": ["Say the third part stronger: “TAIR”.", "The “g” sounds like “j”."],
+            "hi": ["तीसरा हिस्सा ज़ोर से बोलें: “टेअ”।", "“g” की आवाज़ “j” जैसी है।"]
+          }
+        },
+        {
+          "word": "dessert",
+          "phonetic": "/dɪˈzɜːt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "শেষপাতের মিষ্টি",
+            "hi": "खाने के बाद का मीठा"
+          },
+          "syllables": ["des", "sert"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“desert” (মরুভূমি) নয়।"],
+            "en": [
+              "Say the second part stronger.",
+              "Do not mix it up with “desert”, the dry land."
+            ],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "इसे “desert” (रेगिस्तान) से न मिलाएँ।"]
+          }
+        },
+        {
+          "word": "bill",
+          "phonetic": "/bɪl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বিল",
+            "hi": "बिल"
+          },
+          "syllables": ["bill"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i” ছোট, “sit”-এর মতো।", "জিজ্ঞেস করুন: “Could I have the bill, please?”"],
+            "en": ["The “i” is short, as in “sit”.", "Ask: “Could I have the bill, please?”"],
+            "hi": ["“i” छोटा है, “sit” जैसा।", "पूछें: “Could I have the bill, please?”"]
+          }
+        },
+        {
+          "word": "receipt",
+          "phonetic": "/rɪˈsiːt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "রসিদ",
+            "hi": "रसीद"
+          },
+          "syllables": ["re", "cei(p)t"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“p” উচ্চারিত হয় না।", "দ্বিতীয় অংশটি জোর দিয়ে বলুন: “সিট”।"],
+            "en": ["The “p” is not said.", "Say the second part stronger: “SEET”."],
+            "hi": ["“p” नहीं बोला जाता।", "दूसरा हिस्सा ज़ोर से बोलें: “सीट”।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I’d like to open a bank account.",
+          "alsoAccepted": [
+            "I would like to open a bank account.",
+            "I want to open a bank account."
+          ],
+          "translations": {
+            "bn": "আমি একটা ব্যাংক অ্যাকাউন্ট খুলতে চাই।",
+            "hi": "मुझे एक बैंक खाता खोलना है।"
+          },
+          "tips": {
+            "bn": ["“I’d like” হল ভদ্রভাবে “I want”।", "“I’d” মানে “I would”।"],
+            "en": ["“I’d like” is a polite “I want”.", "“I’d” is “I would”."],
+            "hi": ["“I’d like” विनम्र “I want” है।", "“I’d” मतलब “I would”।"]
+          }
+        },
+        {
+          "english": "Which documents do I need?",
+          "alsoAccepted": ["What documents do I need?"],
+          "translations": {
+            "bn": "কোন কোন কাগজপত্র লাগবে?",
+            "hi": "मुझे कौन-से दस्तावेज़ चाहिए?"
+          },
+          "tips": {
+            "bn": [
+              "“Which” দিয়ে বাছাই জানতে চাওয়া হয়।",
+              "“documents” মানে পরিচয়পত্রের মতো কাগজ।"
+            ],
+            "en": ["“Which” asks about a choice.", "“documents” are papers, like an ID card."],
+            "hi": [
+              "“Which” विकल्प के बारे में पूछता है।",
+              "“documents” मतलब पहचान-पत्र जैसे काग़ज़।"
+            ]
+          }
+        },
+        {
+          "english": "How long will it take?",
+          "alsoAccepted": ["How much time will it take?"],
+          "translations": {
+            "bn": "কত সময় লাগবে?",
+            "hi": "इसमें कितना समय लगेगा?"
+          },
+          "tips": {
+            "bn": ["“How long” সময় জানতে চায়।", "“will it take” ভবিষ্যতের কথা।"],
+            "en": ["“How long” asks about time.", "“will it take” is about the future."],
+            "hi": ["“How long” समय पूछता है।", "“will it take” आगे की बात है।"]
+          }
+        },
+        {
+          "english": "Is this the right counter for passports?",
+          "alsoAccepted": ["Is this the correct counter for passports?"],
+          "translations": {
+            "bn": "পাসপোর্টের জন্য এটাই কি সঠিক কাউন্টার?",
+            "hi": "क्या पासपोर्ट के लिए यही सही काउंटर है?"
+          },
+          "tips": {
+            "bn": ["লম্বা লাইনে দাঁড়ানোর আগে এটি জিজ্ঞেস করুন।", "শেষে গলা ওপরে তুলুন।"],
+            "en": ["Ask this before you wait in a long line.", "Your voice goes up at the end."],
+            "hi": ["लंबी लाइन में लगने से पहले यह पूछें।", "आख़िर में आवाज़ ऊपर ले जाएँ।"]
+          }
+        },
+        {
+          "english": "Could you check my form, please?",
+          "alsoAccepted": ["Can you check my form, please?", "Could you please check my form?"],
+          "translations": {
+            "bn": "আমার ফর্মটা একটু দেখে দেবেন?",
+            "hi": "क्या आप कृपया मेरा फ़ॉर्म जाँच देंगे?"
+          },
+          "tips": {
+            "bn": ["“Could you …, please?” ভদ্র।", "“check” মানে ভুল আছে কি না দেখা।"],
+            "en": ["“Could you …, please?” is polite.", "“check” means look for mistakes."],
+            "hi": ["“Could you …, please?” विनम्र है।", "“check” का मतलब है ग़लतियाँ देखना।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the receptionist",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good morning, Sunrise Clinic. How can I help you?",
+          "reply": "I’d like to make an appointment with Dr Shah.",
+          "cues": {
+            "bn": "ডাক্তার শাহের সঙ্গে অ্যাপয়েন্টমেন্ট চান।",
+            "hi": "डॉक्टर शाह से मिलने का समय माँगें।"
+          }
+        },
+        {
+          "partner": "Of course. What is the problem?",
+          "reply": "I have had a bad cough for a week.",
+          "cues": {
+            "bn": "বলুন এক সপ্তাহ ধরে খুব কাশি।",
+            "hi": "बताएँ कि एक हफ़्ते से तेज़ खाँसी है।"
+          }
+        },
+        {
+          "partner": "Can you come on Wednesday at eleven?",
+          "reply": "Sorry, I’m busy then. Is Thursday possible?",
+          "cues": {
+            "bn": "বুধবার পারবেন না বলুন, বৃহস্পতিবারের কথা জিজ্ঞেস করুন।",
+            "hi": "बुधवार को मना करें और गुरुवार के बारे में पूछें।"
+          }
+        },
+        {
+          "partner": "Yes. Thursday at four o’clock?",
+          "reply": "Yes, that’s fine.",
+          "cues": {
+            "bn": "রাজি হোন।",
+            "hi": "हामी भरें।"
+          }
+        },
+        {
+          "partner": "May I have your name and phone number?",
+          "reply": "My name is … My number is …",
+          "cues": {
+            "bn": "নাম আর ফোন নম্বর বলুন।",
+            "hi": "अपना नाम और फ़ोन नंबर बताएँ।"
+          }
+        },
+        {
+          "partner": "Thank you. Please come ten minutes early.",
+          "reply": "Thank you. See you on Thursday.",
+          "cues": {
+            "bn": "ধন্যবাদ দিয়ে বিদায় জানান।",
+            "hi": "धन्यवाद दें और विदा लें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Everyday Situation Challenge",
+        "translations": {
+          "bn": "রোজকার পরিস্থিতির চ্যালেঞ্জ",
+          "hi": "रोज़मर्रा की स्थिति की चुनौती"
+        }
+      },
+      "instruction": {
+        "text": "Ask someone to pick a place for you: a shop, a café, a counter or a clinic. Act it out in about one minute.",
+        "translations": {
+          "bn": "কাউকে একটা জায়গা বেছে দিতে বলুন: দোকান, ক্যাফে, কাউন্টার বা ক্লিনিক। প্রায় এক মিনিট অভিনয় করুন।",
+          "hi": "किसी से अपने लिए एक जगह चुनवाएँ: दुकान, कैफ़े, काउंटर या क्लिनिक। लगभग एक मिनट अभिनय करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Greet the person and say what you need",
+          "translations": {
+            "bn": "নমস্কার জানিয়ে বলুন কী দরকার",
+            "hi": "नमस्ते कहें और बताएँ कि आपको क्या चाहिए"
+          }
+        },
+        {
+          "text": "Ask one question about price, time or options",
+          "translations": {
+            "bn": "দাম, সময় বা বিকল্প নিয়ে একটা প্রশ্ন করুন",
+            "hi": "दाम, समय या विकल्पों पर एक सवाल पूछें"
+          }
+        },
+        {
+          "text": "Answer one question you are asked",
+          "translations": {
+            "bn": "আপনাকে করা একটা প্রশ্নের উত্তর দিন",
+            "hi": "आपसे पूछे गए एक सवाल का जवाब दें"
+          }
+        },
+        {
+          "text": "Make one polite request",
+          "translations": {
+            "bn": "একটা ভদ্র অনুরোধ করুন",
+            "hi": "एक विनम्र अनुरोध करें"
+          }
+        },
+        {
+          "text": "Finish politely: pay, confirm or say goodbye",
+          "translations": {
+            "bn": "ভদ্রভাবে শেষ করুন: দাম দিন, নিশ্চিত করুন বা বিদায় নিন",
+            "hi": "विनम्रता से ख़त्म करें: भुगतान करें, पक्का करें या विदा लें"
+          }
+        }
+      ],
+      "phrases": [
+        "Hello, I’d like …",
+        "How much is …?",
+        "Could I have …, please?",
+        "Is … possible?",
+        "Can I pay by card?",
+        "Thank you. Have a nice day!"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "In a shop, how do you ask the price?",
+            "translations": {
+              "bn": "দোকানে দাম কীভাবে জিজ্ঞেস করবেন?",
+              "hi": "दुकान में दाम कैसे पूछेंगे?"
+            }
+          },
+          "answer": "How much is this?",
+          "others": ["How many is this?", "What is this cost?"]
+        },
+        {
+          "question": {
+            "text": "The waiter asks, “Are you ready to order?” What do you say?",
+            "translations": {
+              "bn": "ওয়েটার জিজ্ঞেস করলেন, “Are you ready to order?” কী বলবেন?",
+              "hi": "वेटर ने पूछा, “Are you ready to order?” आप क्या कहेंगे?"
+            }
+          },
+          "answer": "Yes, I’d like the soup, please.",
+          "others": ["Yes, give soup.", "I am ready soup."]
+        },
+        {
+          "question": {
+            "text": "Complete: Can I pay ___ card?",
+            "translations": {
+              "bn": "পূরণ করুন: Can I pay ___ card?",
+              "hi": "पूरा करें: Can I pay ___ card?"
+            }
+          },
+          "answer": "by",
+          "others": ["in", "on"]
+        },
+        {
+          "question": {
+            "text": "Which is the right way to make an appointment?",
+            "translations": {
+              "bn": "অ্যাপয়েন্টমেন্ট নেওয়ার ঠিক উপায় কোনটি?",
+              "hi": "मिलने का समय लेने का सही तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "I’d like to make an appointment, please.",
+          "others": ["I want doctor now.", "Give me a time."]
+        },
+        {
+          "question": {
+            "text": "The time they offer is not good for you. What do you say?",
+            "translations": {
+              "bn": "যে সময় দিচ্ছেন সেটা আপনার সুবিধার নয়। কী বলবেন?",
+              "hi": "जो समय दिया गया है, वह आपके लिए ठीक नहीं। क्या कहेंगे?"
+            }
+          },
+          "answer": "Sorry, is another day possible?",
+          "others": ["No.", "That time is bad. Bye."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Mohan",
+          "text": "Hi! What would you like?",
+          "translations": {
+            "bn": "হাই! কী নেবেন?",
+            "hi": "नमस्ते! आपको क्या चाहिए?"
+          }
+        },
+        {
+          "speaker": "Rita",
+          "text": "Hi. Do you have any vegetarian sandwiches?",
+          "translations": {
+            "bn": "হাই। নিরামিষ স্যান্ডউইচ আছে?",
+            "hi": "नमस्ते। क्या आपके पास शाकाहारी सैंडविच है?"
+          }
+        },
+        {
+          "speaker": "Mohan",
+          "text": "Yes, we have cheese and tomato, or paneer.",
+          "translations": {
+            "bn": "হ্যাঁ, চিজ-টমেটো আছে, আর পনিরও আছে।",
+            "hi": "जी हाँ, चीज़ और टमाटर वाला है, या पनीर वाला।"
+          }
+        },
+        {
+          "speaker": "Rita",
+          "text": "I’ll have the paneer one, please. Is it spicy?",
+          "translations": {
+            "bn": "পনিরেরটা দিন। ওটা কি ঝাল?",
+            "hi": "मुझे पनीर वाला दीजिए। क्या यह तीखा है?"
+          }
+        },
+        {
+          "speaker": "Mohan",
+          "text": "A little. I can make it without chilli.",
+          "translations": {
+            "bn": "একটু। লঙ্কা ছাড়া করে দিতে পারি।",
+            "hi": "थोड़ा-सा। मैं इसे बिना मिर्च के बना सकता हूँ।"
+          }
+        },
+        {
+          "speaker": "Rita",
+          "text": "Yes, please. And a cold coffee.",
+          "translations": {
+            "bn": "হ্যাঁ, তাই দিন। আর একটা কোল্ড কফি।",
+            "hi": "जी, ऐसा ही कीजिए। और एक कोल्ड कॉफ़ी।"
+          }
+        },
+        {
+          "speaker": "Mohan",
+          "text": "For here or to take away?",
+          "translations": {
+            "bn": "এখানে খাবেন, না নিয়ে যাবেন?",
+            "hi": "यहीं खाएँगी या साथ ले जाएँगी?"
+          }
+        },
+        {
+          "speaker": "Rita",
+          "text": "To take away, please. How much is that?",
+          "translations": {
+            "bn": "নিয়ে যাব। মোট কত হল?",
+            "hi": "साथ ले जाऊँगी। कुल कितना हुआ?"
+          }
+        },
+        {
+          "speaker": "Mohan",
+          "text": "That’s two hundred and fifty rupees.",
+          "translations": {
+            "bn": "দুশো পঞ্চাশ টাকা।",
+            "hi": "दो सौ पचास रुपये।"
+          }
+        },
+        {
+          "speaker": "Rita",
+          "text": "Here you are. Thank you!",
+          "translations": {
+            "bn": "এই নিন। ধন্যবাদ!",
+            "hi": "यह लीजिए। धन्यवाद!"
+          }
+        }
+      ],
+      "voices": {
+        "Mohan": "male",
+        "Rita": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the shopkeeper",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! Can I help you?",
+          "reply": "Yes, I’m looking for a blue shirt.",
+          "cues": {
+            "bn": "বলুন আপনি একটা নীল শার্ট খুঁজছেন।",
+            "hi": "बताएँ कि आपको नीली शर्ट चाहिए।"
+          }
+        },
+        {
+          "partner": "What size do you need?",
+          "reply": "Medium, please.",
+          "cues": {
+            "bn": "মাপ বলুন: মিডিয়াম।",
+            "hi": "साइज़ बताएँ: मीडियम।"
+          }
+        },
+        {
+          "partner": "Here you are. It’s nine hundred rupees.",
+          "reply": "Do you have anything cheaper?",
+          "cues": {
+            "bn": "সস্তা কিছু আছে কি না জিজ্ঞেস করুন।",
+            "hi": "पूछें कि क्या कुछ सस्ता है।"
+          }
+        },
+        {
+          "partner": "Yes, this one is six hundred.",
+          "reply": "Great, I’ll take it.",
+          "cues": {
+            "bn": "বলুন এটাই নেবেন।",
+            "hi": "कहें कि आप यही लेंगे।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "At the post office",
+            "translations": {
+              "bn": "ডাকঘরে",
+              "hi": "डाकघर में"
+            }
+          },
+          "roleplay": {
+            "partner": "the clerk",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Next, please. What can I do for you?",
+                "reply": "I’d like to send this letter to Kolkata.",
+                "cues": {
+                  "bn": "বলুন চিঠিটা কলকাতায় পাঠাতে চান।",
+                  "hi": "बताएँ कि यह चिट्ठी कोलकाता भेजनी है।"
+                }
+              },
+              {
+                "partner": "By normal post or speed post?",
+                "reply": "Which one is faster?",
+                "cues": {
+                  "bn": "কোনটা তাড়াতাড়ি পৌঁছায়, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि कौन-सी जल्दी पहुँचती है।"
+                }
+              },
+              {
+                "partner": "Speed post. It takes two days.",
+                "reply": "Speed post, please. How much is it?",
+                "cues": {
+                  "bn": "স্পিড পোস্ট বেছে নিয়ে দাম জিজ্ঞেস করুন।",
+                  "hi": "स्पीड पोस्ट चुनें और दाम पूछें।"
+                }
+              },
+              {
+                "partner": "Forty-one rupees.",
+                "reply": "Here you are. Thank you.",
+                "cues": {
+                  "bn": "টাকা দিয়ে ধন্যবাদ দিন।",
+                  "hi": "पैसे दें और धन्यवाद कहें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Ordering a meal",
+            "translations": {
+              "bn": "খাবার অর্ডার",
+              "hi": "खाना ऑर्डर करना"
+            }
+          },
+          "roleplay": {
+            "partner": "the waiter",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good evening. Here is the menu.",
+                "reply": "Thank you. What do you recommend?",
+                "cues": {
+                  "bn": "ধন্যবাদ দিয়ে জিজ্ঞেস করুন কোনটা ভালো।",
+                  "hi": "धन्यवाद दें और पूछें कि क्या अच्छा है।"
+                }
+              },
+              {
+                "partner": "The paneer curry is very popular.",
+                "reply": "OK, I’ll have that, with two rotis.",
+                "cues": {
+                  "bn": "সেটাই নিন, সঙ্গে দুটো রুটি।",
+                  "hi": "वही लें, साथ में दो रोटियाँ।"
+                }
+              },
+              {
+                "partner": "Anything to drink?",
+                "reply": "Just water, please.",
+                "cues": {
+                  "bn": "শুধু জল চান।",
+                  "hi": "सिर्फ़ पानी माँगें।"
+                }
+              },
+              {
+                "partner": "Here is your food. Enjoy!",
+                "reply": "Thank you. Could I have the bill later?",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন, আর পরে বিল চান।",
+                  "hi": "धन्यवाद दें और बाद में बिल माँगें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Booking a haircut",
+            "translations": {
+              "bn": "চুল কাটার সময় নেওয়া",
+              "hi": "बाल कटवाने का समय"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello, Style Salon. How can I help?",
+                "reply": "Hi. I’d like to book a haircut, please.",
+                "cues": {
+                  "bn": "চুল কাটার জন্য সময় চান।",
+                  "hi": "बाल कटवाने का समय माँगें।"
+                }
+              },
+              {
+                "partner": "Sure. Is Saturday morning OK?",
+                "reply": "Is Saturday afternoon possible?",
+                "cues": {
+                  "bn": "শনিবার বিকেলে হবে কি না জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि क्या शनिवार दोपहर हो सकता है।"
+                }
+              },
+              {
+                "partner": "Yes, at two o’clock. What is your name?",
+                "reply": "My name is …",
+                "cues": {
+                  "bn": "আপনার নাম বলুন।",
+                  "hi": "अपना नाम बताएँ।"
+                }
+              },
+              {
+                "partner": "Thank you. See you on Saturday at two.",
+                "reply": "Great. See you then!",
+                "cues": {
+                  "bn": "বিদায় জানান।",
+                  "hi": "विदा लें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

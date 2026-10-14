@@ -1,0 +1,767 @@
+{
+  "week": 27,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Varun",
+          "text": "Ayesha, what is your most memorable day?",
+          "translations": {
+            "bn": "আয়েশা, তোমার সবচেয়ে মনে রাখার মতো দিন কোনটা?",
+            "hi": "आयशा, तुम्हारा सबसे यादगार दिन कौन-सा है?"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "Hmm… The day I finished my first marathon. It was three years ago, in Mumbai.",
+          "translations": {
+            "bn": "হুম… যেদিন প্রথম ম্যারাথন শেষ করলাম। তিন বছর আগে, মুম্বইয়ে।",
+            "hi": "हम्म… जिस दिन मैंने अपनी पहली मैराथन पूरी की। तीन साल पहले, मुंबई में।"
+          }
+        },
+        {
+          "speaker": "Varun",
+          "text": "Wow! What happened?",
+          "translations": {
+            "bn": "বাহ! কী হয়েছিল?",
+            "hi": "वाह! क्या हुआ था?"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "Well, it started at five in the morning, when it was still dark. After twenty kilometres, my legs hurt a lot.",
+          "translations": {
+            "bn": "আসলে, ভোর পাঁচটায় শুরু হয়েছিল, তখনও অন্ধকার। কুড়ি কিলোমিটার পরে পা খুব ব্যথা করছিল।",
+            "hi": "दरअसल, सुबह पाँच बजे शुरू हुई, तब अँधेरा ही था। बीस किलोमीटर के बाद मेरे पैरों में बहुत दर्द होने लगा।"
+          }
+        },
+        {
+          "speaker": "Varun",
+          "text": "Oh no! Did you want to stop?",
+          "translations": {
+            "bn": "ইস! থেমে যেতে ইচ্ছে করেছিল?",
+            "hi": "अरे! क्या रुकने का मन हुआ?"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "Yes! But then something amazing happened. Suddenly, my little brother appeared by the road with a sign.",
+          "translations": {
+            "bn": "হ্যাঁ! কিন্তু তারপর দারুণ একটা ব্যাপার হল। হঠাৎ আমার ছোট ভাই একটা বোর্ড নিয়ে রাস্তার ধারে হাজির।",
+            "hi": "हाँ! पर फिर कुछ कमाल हुआ। अचानक मेरा छोटा भाई सड़क किनारे एक तख़्ती लेकर आ गया।"
+          }
+        },
+        {
+          "speaker": "Varun",
+          "text": "What did it say?",
+          "translations": {
+            "bn": "তাতে কী লেখা ছিল?",
+            "hi": "उस पर क्या लिखा था?"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "“Go, Didi, go!” I felt so happy and proud. I ran faster after that.",
+          "translations": {
+            "bn": "“Go, Didi, go!” আমার এত আনন্দ আর গর্ব হল! তারপর আরও জোরে দৌড়লাম।",
+            "hi": "“Go, Didi, go!” मुझे बहुत ख़ुशी और गर्व महसूस हुआ। उसके बाद मैं और तेज़ दौड़ी।"
+          }
+        },
+        {
+          "speaker": "Varun",
+          "text": "That’s so sweet. How did you feel at the finish line?",
+          "translations": {
+            "bn": "কী মিষ্টি। শেষ রেখায় পৌঁছে কেমন লেগেছিল?",
+            "hi": "कितना प्यारा। फ़िनिश लाइन पर कैसा लगा?"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "I cried! I was tired, but it was the best feeling of my life.",
+          "translations": {
+            "bn": "কেঁদে ফেলেছিলাম! ক্লান্ত ছিলাম, কিন্তু জীবনের সেরা অনুভূতি।",
+            "hi": "मैं रो पड़ी! थकी हुई थी, पर वह मेरी ज़िंदगी का सबसे अच्छा एहसास था।"
+          }
+        },
+        {
+          "speaker": "Varun",
+          "text": "Have you run another marathon since then?",
+          "translations": {
+            "bn": "তারপর আর কোনো ম্যারাথন দৌড়েছ?",
+            "hi": "क्या उसके बाद तुमने कोई और मैराथन दौड़ी है?"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "Yes, two more. But the first one is still my favourite memory.",
+          "translations": {
+            "bn": "হ্যাঁ, আরও দুটো। তবে প্রথমটাই এখনও আমার প্রিয় স্মৃতি।",
+            "hi": "हाँ, दो और। पर पहली वाली अब भी मेरी सबसे प्यारी याद है।"
+          }
+        }
+      ],
+      "voices": {
+        "Varun": "male",
+        "Ayesha": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "suddenly",
+          "phonetic": "/ˈsʌdənli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হঠাৎ",
+            "hi": "अचानक"
+          },
+          "syllables": ["sud", "den", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "হঠাৎ কিছু ঘটলে এটি বলুন।"],
+            "en": [
+              "Say the first part stronger.",
+              "Use it when something happens fast and without warning."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "जब कुछ अचानक हो, तब यह कहें।"]
+          }
+        },
+        {
+          "word": "happened",
+          "phonetic": "/ˈhæpənd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ঘটেছিল",
+            "hi": "हुआ"
+          },
+          "syllables": ["hap", "pened"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "জিজ্ঞেস করুন: “What happened?”"],
+            "en": ["Say the first part stronger.", "Ask: “What happened?”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "पूछें: “What happened?”"]
+          }
+        },
+        {
+          "word": "remember",
+          "phonetic": "/rɪˈmembə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মনে রাখা, মনে পড়া",
+            "hi": "याद होना"
+          },
+          "syllables": ["re", "mem", "ber"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন: “I remember the day …”"],
+            "en": ["Say the second part stronger.", "Say: “I remember the day …”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें: “I remember the day …”"]
+          }
+        },
+        {
+          "word": "memory",
+          "phonetic": "/ˈmeməri/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "স্মৃতি",
+            "hi": "याद, स्मृति"
+          },
+          "syllables": ["mem", "o", "ry"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "মাঝের অংশটি খুব ছোট।"],
+            "en": ["Say the first part stronger.", "The middle part is very short."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "बीच का हिस्सा बहुत छोटा है।"]
+          }
+        },
+        {
+          "word": "while",
+          "phonetic": "/waɪl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যখন, যে সময়ে",
+            "hi": "जब, जिस दौरान"
+          },
+          "syllables": ["while"],
+          "stress": null,
+          "tips": {
+            "bn": ["“wh”-এর উচ্চারণ “w”-এর মতো।", "“While I was walking, …” দিয়ে দৃশ্যটা সাজান।"],
+            "en": ["The “wh” sounds like “w”.", "“While I was walking, …” sets the scene."],
+            "hi": ["“wh” की आवाज़ “w” जैसी है।", "“While I was walking, …” से दृश्य बनाएँ।"]
+          }
+        },
+        {
+          "word": "luckily",
+          "phonetic": "/ˈlʌkɪli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভাগ্যিস",
+            "hi": "क़िस्मत से"
+          },
+          "syllables": ["luck", "i", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "ভালো কিছু ঘটার কথার আগে এটি বলুন।"],
+            "en": ["Say the first part stronger.", "Use it before something good that happened."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कुछ अच्छा हुआ हो, तो उससे पहले कहें।"]
+          }
+        },
+        {
+          "word": "amazing",
+          "phonetic": "/əˈmeɪzɪŋ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অসাধারণ",
+            "hi": "कमाल का"
+          },
+          "syllables": ["a", "maz", "ing"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন: “মেই”।", "“z” গুনগুন করা ধ্বনি।"],
+            "en": ["Say the second part stronger: “MAY”.", "The “z” is a buzzing sound."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें: “मे”।", "“z” भिनभिनाती आवाज़ है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I felt very nervous before the exam.",
+          "alsoAccepted": ["I was very nervous before the exam."],
+          "translations": {
+            "bn": "পরীক্ষার আগে আমার খুব ভয় করছিল।",
+            "hi": "परीक्षा से पहले मुझे बहुत घबराहट हो रही थी।"
+          },
+          "tips": {
+            "bn": ["“felt” হল “feel”-এর অতীত রূপ।", "“felt”-এর পরে অনুভূতি: “felt nervous”।"],
+            "en": [
+              "“felt” is the past of “feel”.",
+              "Put the feeling after “felt”: “felt nervous”."
+            ],
+            "hi": ["“felt”, “feel” का बीता रूप है।", "“felt” के बाद भावना आती है: “felt nervous”।"]
+          }
+        },
+        {
+          "english": "I was so surprised when I saw them.",
+          "alsoAccepted": [
+            "I was really surprised when I saw them.",
+            "I felt so surprised when I saw them."
+          ],
+          "translations": {
+            "bn": "ওঁদের দেখে আমি খুব অবাক হয়েছিলাম।",
+            "hi": "उन्हें देखकर मुझे बहुत हैरानी हुई।"
+          },
+          "tips": {
+            "bn": ["“so” অনুভূতিকে জোরালো করে।", "“when” বলে কোন মুহূর্তে।"],
+            "en": ["“so” makes the feeling stronger.", "“when” tells the moment it happened."],
+            "hi": ["“so” भावना को और गहरा बनाता है।", "“when” बताता है किस पल।"]
+          }
+        },
+        {
+          "english": "It made me really happy.",
+          "alsoAccepted": ["It made me very happy."],
+          "translations": {
+            "bn": "এতে আমার খুব আনন্দ হয়েছিল।",
+            "hi": "इससे मुझे बहुत ख़ुशी हुई।"
+          },
+          "tips": {
+            "bn": ["“It made me …” বলে অনুভূতির কারণ।", "“made me”-এর পরে অনুভূতি বসান।"],
+            "en": [
+              "“It made me …” says what caused the feeling.",
+              "After “made me”, put the feeling."
+            ],
+            "hi": ["“It made me …” भावना की वजह बताता है।", "“made me” के बाद भावना रखें।"]
+          }
+        },
+        {
+          "english": "I was disappointed because it rained.",
+          "alsoAccepted": ["I felt disappointed because it rained."],
+          "translations": {
+            "bn": "বৃষ্টি হওয়ায় আমার মন খারাপ হয়েছিল।",
+            "hi": "बारिश होने की वजह से मेरा मन उदास हो गया।"
+          },
+          "tips": {
+            "bn": ["“disappointed” মানে আশা পূরণ না হয়ে মন খারাপ।", "“because” দিয়ে কারণ দিন।"],
+            "en": [
+              "“disappointed” means sad that something did not go well.",
+              "Give the reason with “because”."
+            ],
+            "hi": ["“disappointed” मतलब उम्मीद टूटने से उदास।", "“because” से कारण दें।"]
+          }
+        },
+        {
+          "english": "Looking back, I feel proud of that day.",
+          "alsoAccepted": ["Looking back, I am proud of that day."],
+          "translations": {
+            "bn": "পেছন ফিরে দেখলে, ওই দিনটার জন্য আমার গর্ব হয়।",
+            "hi": "पीछे मुड़कर देखूँ तो, उस दिन पर मुझे गर्व होता है।"
+          },
+          "tips": {
+            "bn": [
+              "“Looking back” মানে এখন সেটা নিয়ে ভাবলে।",
+              "অনুভূতি দিয়ে গল্প শেষ করতে এটি বলুন।"
+            ],
+            "en": [
+              "“Looking back” means thinking about it now.",
+              "Use it to end a story with a feeling."
+            ],
+            "hi": [
+              "“Looking back” मतलब अब उसके बारे में सोचें तो।",
+              "कहानी को किसी भावना के साथ ख़त्म करने के लिए कहें।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Ruchi",
+      "asMan": "Ritesh",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Have you ever been on a plane?",
+          "reply": "Yes, I have. I flew to … once.",
+          "cues": {
+            "bn": "উত্তর দিন, আর কোথায় গিয়েছিলেন বলুন।",
+            "hi": "जवाब दें और बताएँ कि कहाँ जाना हुआ था।"
+          }
+        },
+        {
+          "partner": "Have you ever seen snow?",
+          "reply": "No, I haven’t. But I’d love to.",
+          "cues": {
+            "bn": "না বলুন, আর বলুন দেখতে চান।",
+            "hi": "ना कहें और बताएँ कि देखने की इच्छा है।"
+          }
+        },
+        {
+          "partner": "Me neither. Have you ever cooked for a big group?",
+          "reply": "Yes, I have. I cooked for twenty people once.",
+          "cues": {
+            "bn": "হ্যাঁ বলুন, আর কতজনের জন্য বলুন।",
+            "hi": "हाँ कहें और बताएँ कि कितने लोगों के लिए।"
+          }
+        },
+        {
+          "partner": "Twenty! How did it go?",
+          "reply": "It was hard, but everyone loved the food.",
+          "cues": {
+            "bn": "বলুন কঠিন ছিল, কিন্তু সবার ভালো লেগেছিল।",
+            "hi": "बताएँ कि मुश्किल था, पर सबको खाना पसंद आया।"
+          }
+        },
+        {
+          "partner": "Have you ever met a famous person?",
+          "reply": "No, never. Have you?",
+          "cues": {
+            "bn": "না বলুন, আর উল্টে জিজ্ঞেস করুন।",
+            "hi": "ना कहें और पलटकर पूछें।"
+          }
+        },
+        {
+          "partner": "Yes! I met a cricket player at the airport.",
+          "reply": "Really? What did you say to him?",
+          "cues": {
+            "bn": "অবাক হয়ে জিজ্ঞেস করুন কী বলেছিলেন।",
+            "hi": "हैरानी से पूछें कि उनसे क्या कहा।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Share a Memorable Experience",
+        "translations": {
+          "bn": "একটা স্মরণীয় অভিজ্ঞতা",
+          "hi": "एक यादगार अनुभव"
+        }
+      },
+      "instruction": {
+        "text": "Tell the story of a day you will never forget. Say what happened, how you felt and why it mattered.",
+        "translations": {
+          "bn": "এমন একটা দিনের গল্প বলুন যা কখনও ভুলবেন না। কী হয়েছিল, কেমন লেগেছিল আর কেন জরুরি, বলুন।",
+          "hi": "ऐसे दिन की कहानी सुनाएँ जो कभी भूला नहीं जा सकता। क्या हुआ, कैसा लगा और वह क्यों ख़ास था, बताएँ।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say when and where it happened",
+          "translations": {
+            "bn": "কবে আর কোথায় ঘটেছিল, বলুন",
+            "hi": "बताएँ कि यह कब और कहाँ हुआ"
+          }
+        },
+        {
+          "text": "Tell what happened, in order",
+          "translations": {
+            "bn": "কী ঘটেছিল, পরপর বলুন",
+            "hi": "जो हुआ, क्रम से बताएँ"
+          }
+        },
+        {
+          "text": "Say how you felt",
+          "translations": {
+            "bn": "আপনার কেমন লেগেছিল, বলুন",
+            "hi": "बताएँ कि आपको कैसा लगा"
+          }
+        },
+        {
+          "text": "Add one interesting detail",
+          "translations": {
+            "bn": "একটা মজার খুঁটিনাটি যোগ করুন",
+            "hi": "एक दिलचस्प ब्योरा जोड़ें"
+          }
+        },
+        {
+          "text": "Say why the day mattered to you",
+          "translations": {
+            "bn": "দিনটা আপনার কাছে কেন জরুরি, বলুন",
+            "hi": "बताएँ कि वह दिन आपके लिए क्यों ख़ास था"
+          }
+        }
+      ],
+      "phrases": [
+        "It was … years ago.",
+        "I remember …",
+        "Suddenly, …",
+        "I felt so …",
+        "Luckily, …",
+        "Looking back, …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Complete: Have you ever ___ a horse?",
+            "translations": {
+              "bn": "পূরণ করুন: Have you ever ___ a horse?",
+              "hi": "पूरा करें: Have you ever ___ a horse?"
+            }
+          },
+          "answer": "ridden",
+          "others": ["rode", "ride"]
+        },
+        {
+          "question": {
+            "text": "Which word starts a surprising part of a story?",
+            "translations": {
+              "bn": "গল্পের অবাক করা অংশ কোন শব্দে শুরু হয়?",
+              "hi": "कहानी का चौंकाने वाला हिस्सा किस शब्द से शुरू होता है?"
+            }
+          },
+          "answer": "Suddenly",
+          "others": ["Usually", "Never"]
+        },
+        {
+          "question": {
+            "text": "Complete: It made me ___ happy.",
+            "translations": {
+              "bn": "পূরণ করুন: It made me ___ happy.",
+              "hi": "पूरा करें: It made me ___ happy."
+            }
+          },
+          "answer": "really",
+          "others": ["real", "reality"]
+        },
+        {
+          "question": {
+            "text": "Someone says, “I won a prize.” What is a good question?",
+            "translations": {
+              "bn": "কেউ বললেন, “I won a prize.” ভালো প্রশ্ন কোনটি?",
+              "hi": "किसी ने कहा, “I won a prize.” अच्छा सवाल कौन-सा है?"
+            }
+          },
+          "answer": "How did you feel?",
+          "others": ["Are you hungry?", "What time is it?"]
+        },
+        {
+          "question": {
+            "text": "Which sentence is about a life experience?",
+            "translations": {
+              "bn": "কোন বাক্যে জীবনের অভিজ্ঞতার কথা আছে?",
+              "hi": "कौन-सा वाक्य जीवन के अनुभव के बारे में है?"
+            }
+          },
+          "answer": "I have visited Kolkata twice.",
+          "others": ["I am visiting Kolkata tomorrow.", "I visit Kolkata every year."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rehan",
+          "text": "Nani, what was your wedding day like?",
+          "translations": {
+            "bn": "নানি, তোমার বিয়ের দিনটা কেমন ছিল?",
+            "hi": "नानी, आपकी शादी का दिन कैसा था?"
+          }
+        },
+        {
+          "speaker": "Nani",
+          "text": "Oh, I remember it well. It was fifty years ago, in our village.",
+          "translations": {
+            "bn": "ও, আমার পরিষ্কার মনে আছে। পঞ্চাশ বছর আগে, আমাদের গ্রামে।",
+            "hi": "अरे, मुझे अच्छी तरह याद है। पचास साल पहले, हमारे गाँव में।"
+          }
+        },
+        {
+          "speaker": "Rehan",
+          "text": "What happened that day?",
+          "translations": {
+            "bn": "সেদিন কী হয়েছিল?",
+            "hi": "उस दिन क्या हुआ था?"
+          }
+        },
+        {
+          "speaker": "Nani",
+          "text": "Well, suddenly it started to rain, and everyone ran inside!",
+          "translations": {
+            "bn": "আসলে, হঠাৎ বৃষ্টি শুরু হল, আর সবাই ভেতরে দৌড়ল!",
+            "hi": "दरअसल, अचानक बारिश शुरू हो गई, और सब अंदर भागे!"
+          }
+        },
+        {
+          "speaker": "Rehan",
+          "text": "Oh no! Were you upset?",
+          "translations": {
+            "bn": "ইস! তোমার মন খারাপ হয়েছিল?",
+            "hi": "अरे! क्या आप दुखी हो गई थीं?"
+          }
+        },
+        {
+          "speaker": "Nani",
+          "text": "At first, yes. But then the music started inside, and we danced all night.",
+          "translations": {
+            "bn": "প্রথমে হ্যাঁ। কিন্তু তারপর ভেতরে গান শুরু হল, আর সারা রাত আমরা নাচলাম।",
+            "hi": "पहले तो हाँ। पर फिर अंदर संगीत शुरू हुआ, और हम पूरी रात नाचे।"
+          }
+        },
+        {
+          "speaker": "Rehan",
+          "text": "That sounds wonderful! How did you feel?",
+          "translations": {
+            "bn": "দারুণ শোনাচ্ছে! তোমার কেমন লেগেছিল?",
+            "hi": "बहुत अच्छा लगता है! आपको कैसा लगा?"
+          }
+        },
+        {
+          "speaker": "Nani",
+          "text": "So happy. Luckily, the rain brought everyone closer.",
+          "translations": {
+            "bn": "খুব আনন্দ। ভাগ্যিস, বৃষ্টি সবাইকে কাছে নিয়ে এসেছিল।",
+            "hi": "बहुत ख़ुशी हुई। अच्छा हुआ कि बारिश ने सबको और क़रीब ला दिया।"
+          }
+        },
+        {
+          "speaker": "Rehan",
+          "text": "Have you ever told Mum this story?",
+          "translations": {
+            "bn": "এই গল্পটা মাকে কখনও বলেছ?",
+            "hi": "क्या आपने यह कहानी कभी मम्मी को सुनाई है?"
+          }
+        },
+        {
+          "speaker": "Nani",
+          "text": "Many times! Looking back, it was the best day of my life.",
+          "translations": {
+            "bn": "অনেকবার! পেছন ফিরে দেখলে, ওটাই আমার জীবনের সেরা দিন।",
+            "hi": "कई बार! पीछे मुड़कर देखूँ तो, वह मेरी ज़िंदगी का सबसे अच्छा दिन था।"
+          }
+        }
+      ],
+      "voices": {
+        "Rehan": "male",
+        "Nani": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Tell me about a happy day you remember.",
+          "reply": "I remember the day I …",
+          "cues": {
+            "bn": "একটা আনন্দের দিনের কথা শুরু করুন।",
+            "hi": "किसी ख़ुशी भरे दिन की बात शुरू करें।"
+          }
+        },
+        {
+          "partner": "When was it?",
+          "reply": "It was … years ago.",
+          "cues": {
+            "bn": "কবে, বলুন।",
+            "hi": "बताएँ कब।"
+          }
+        },
+        {
+          "partner": "How did you feel?",
+          "reply": "I felt so …",
+          "cues": {
+            "bn": "অনুভূতির কথা বলুন।",
+            "hi": "भावना बताएँ।"
+          }
+        },
+        {
+          "partner": "What a lovely memory! Why was it special?",
+          "reply": "It was special because …",
+          "cues": {
+            "bn": "কেন বিশেষ, বলুন।",
+            "hi": "बताएँ कि वह ख़ास क्यों था।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A school reunion",
+            "translations": {
+              "bn": "স্কুলের পুনর্মিলন",
+              "hi": "स्कूल का पुनर्मिलन"
+            }
+          },
+          "roleplay": {
+            "partner": "Juhi",
+            "asMan": "Jai",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Do you remember our school trip to the hills?",
+                "reply": "Of course! It was so much fun.",
+                "cues": {
+                  "bn": "মনে আছে বলুন, আর বলুন খুব মজা হয়েছিল।",
+                  "hi": "कहें कि याद है, और बहुत मज़ा आया था।"
+                }
+              },
+              {
+                "partner": "What do you remember most?",
+                "reply": "I remember the cold nights and the campfire.",
+                "cues": {
+                  "bn": "সবচেয়ে কী মনে আছে, বলুন।",
+                  "hi": "बताएँ कि सबसे ज़्यादा क्या याद है।"
+                }
+              },
+              {
+                "partner": "Me too! Do you remember the monkey that stole our bread?",
+                "reply": "Yes! Everyone laughed so much.",
+                "cues": {
+                  "bn": "মজার ঘটনাটা মনে করে কিছু বলুন।",
+                  "hi": "मज़ेदार घटना याद करके कुछ कहें।"
+                }
+              },
+              {
+                "partner": "Those were great days.",
+                "reply": "They really were. Let’s keep in touch.",
+                "cues": {
+                  "bn": "রাজি হয়ে যোগাযোগ রাখার কথা বলুন।",
+                  "hi": "सहमति दें और संपर्क में रहने की बात कहें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A job interview",
+            "translations": {
+              "bn": "চাকরির ইন্টারভিউ",
+              "hi": "नौकरी का इंटरव्यू"
+            }
+          },
+          "roleplay": {
+            "partner": "the manager",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Tell me about a problem you have solved.",
+                "reply": "Last year, our team had a big problem with …",
+                "cues": {
+                  "bn": "আগের বছরের একটা সমস্যার কথা বলুন।",
+                  "hi": "पिछले साल की कोई समस्या बताएँ।"
+                }
+              },
+              {
+                "partner": "What did you do?",
+                "reply": "First, I … Then I …",
+                "cues": {
+                  "bn": "ধাপে ধাপে কী করেছিলেন, বলুন।",
+                  "hi": "क्रम से बताएँ कि क्या किया।"
+                }
+              },
+              {
+                "partner": "And how did it end?",
+                "reply": "In the end, we finished on time.",
+                "cues": {
+                  "bn": "কীভাবে শেষ হল, বলুন।",
+                  "hi": "बताएँ कि अंत कैसा रहा।"
+                }
+              },
+              {
+                "partner": "How did you feel about it?",
+                "reply": "I felt proud, and I learned a lot.",
+                "cues": {
+                  "bn": "অনুভূতি আর শিক্ষার কথা বলুন।",
+                  "hi": "भावना और सीख बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A funny story",
+            "translations": {
+              "bn": "মজার গল্প",
+              "hi": "मज़ेदार क़िस्सा"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Has anything funny happened to you recently?",
+                "reply": "Yes! Last week, I got on the wrong bus.",
+                "cues": {
+                  "bn": "সম্প্রতি একটা মজার ঘটনার কথা বলুন।",
+                  "hi": "हाल की कोई मज़ेदार घटना बताएँ।"
+                }
+              },
+              {
+                "partner": "Oh no! Where did it go?",
+                "reply": "It went to the airport, not to my office!",
+                "cues": {
+                  "bn": "বলুন বাসটা কোথায় গেল।",
+                  "hi": "बताएँ कि बस कहाँ गई।"
+                }
+              },
+              {
+                "partner": "What did you do?",
+                "reply": "I laughed, got off and took a taxi.",
+                "cues": {
+                  "bn": "কী করলেন, বলুন।",
+                  "hi": "बताएँ कि फिर क्या किया।"
+                }
+              },
+              {
+                "partner": "Were you late?",
+                "reply": "Only a little. Luckily, my boss laughed too.",
+                "cues": {
+                  "bn": "শেষটা বলুন।",
+                  "hi": "आख़िर में क्या हुआ, बताएँ।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

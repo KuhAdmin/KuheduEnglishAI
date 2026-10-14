@@ -1,0 +1,781 @@
+{
+  "week": 44,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Manoj",
+          "text": "Hello, Manoj speaking.",
+          "translations": {
+            "bn": "হ্যালো, মনোজ বলছি।",
+            "hi": "हैलो, मनोज बोल रहा हूँ।"
+          }
+        },
+        {
+          "speaker": "Kavita",
+          "text": "Hi Manoj, it’s Kavita from Bright Solutions. Is this a good time to talk?",
+          "translations": {
+            "bn": "হাই মনোজ, আমি ব্রাইট সলিউশনস থেকে কবিতা। এখন কথা বলা যাবে?",
+            "hi": "हाय मनोज, मैं ब्राइट सॉल्यूशंस से कविता। क्या अभी बात करने का सही समय है?"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Yes, of course. Did you leave me a voice message this morning?",
+          "translations": {
+            "bn": "হ্যাঁ, নিশ্চয়ই। আজ সকালে কি আপনি ভয়েস মেসেজ রেখেছিলেন?",
+            "hi": "हाँ, ज़रूर। क्या आपने आज सुबह मुझे वॉइस मैसेज छोड़ा था?"
+          }
+        },
+        {
+          "speaker": "Kavita",
+          "text": "Yes, I did. I wanted to talk about next week’s training.",
+          "translations": {
+            "bn": "হ্যাঁ। পরের সপ্তাহের প্রশিক্ষণ নিয়ে কথা বলতে চাইছিলাম।",
+            "hi": "हाँ, छोड़ा था। मैं अगले हफ़्ते की ट्रेनिंग के बारे में बात करना चाहती थी।"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Sorry, you’re breaking up. Could you say that again?",
+          "translations": {
+            "bn": "মাফ করবেন, কথা কেটে কেটে যাচ্ছে। আরেকবার বলবেন?",
+            "hi": "माफ़ कीजिए, आवाज़ टूट रही है। क्या आप फिर से कहेंगी?"
+          }
+        },
+        {
+          "speaker": "Kavita",
+          "text": "Next week’s training. Can you hear me now?",
+          "translations": {
+            "bn": "পরের সপ্তাহের প্রশিক্ষণ। এখন শুনতে পাচ্ছেন?",
+            "hi": "अगले हफ़्ते की ट्रेनिंग। अब आवाज़ आ रही है?"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Yes, much better. What would you like to discuss?",
+          "translations": {
+            "bn": "হ্যাঁ, এখন অনেক ভালো। কী নিয়ে কথা বলতে চান?",
+            "hi": "हाँ, अब बहुत बेहतर। आप किस बारे में बात करना चाहती हैं?"
+          }
+        },
+        {
+          "speaker": "Kavita",
+          "text": "The date. Instead of Monday, could we do it on Tuesday?",
+          "translations": {
+            "bn": "তারিখটা। সোমবারের বদলে মঙ্গলবার করা যায়?",
+            "hi": "तारीख़। सोमवार की जगह क्या हम इसे मंगलवार को रख सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Tuesday works for me. Shall we talk on a video call to plan it?",
+          "translations": {
+            "bn": "মঙ্গলবার আমার চলবে। পরিকল্পনার জন্য একটা ভিডিও কল করি?",
+            "hi": "मंगलवार मेरे लिए ठीक है। योजना बनाने के लिए वीडियो कॉल पर बात करें?"
+          }
+        },
+        {
+          "speaker": "Kavita",
+          "text": "Good idea. How about tomorrow at eleven?",
+          "translations": {
+            "bn": "ভালো ভাবনা। কাল এগারোটায় হলে কেমন হয়?",
+            "hi": "अच्छा विचार है। कल ग्यारह बजे कैसा रहेगा?"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Eleven is fine. I’ll send you the link by message.",
+          "translations": {
+            "bn": "এগারোটা ঠিক আছে। লিংকটা মেসেজে পাঠিয়ে দেব।",
+            "hi": "ग्यारह बजे ठीक है। मैं लिंक मैसेज से भेज दूँगा।"
+          }
+        },
+        {
+          "speaker": "Kavita",
+          "text": "Great. Please also write the time in the message, so I don’t forget.",
+          "translations": {
+            "bn": "দারুণ। মেসেজে সময়টাও লিখে দেবেন, যাতে ভুলে না যাই।",
+            "hi": "बढ़िया। मैसेज में समय भी लिख दीजिए, ताकि मैं भूलूँ नहीं।"
+          }
+        },
+        {
+          "speaker": "Manoj",
+          "text": "Sure. So: a video call tomorrow at eleven, and the link by message.",
+          "translations": {
+            "bn": "নিশ্চয়ই। তাহলে: কাল এগারোটায় ভিডিও কল, আর লিংক মেসেজে।",
+            "hi": "ज़रूर। तो: कल ग्यारह बजे वीडियो कॉल, और लिंक मैसेज से।"
+          }
+        },
+        {
+          "speaker": "Kavita",
+          "text": "Perfect. Thanks, Manoj. Bye for now!",
+          "translations": {
+            "bn": "চমৎকার। ধন্যবাদ, মনোজ। এখন রাখি!",
+            "hi": "बढ़िया। धन्यवाद, मनोज। अभी के लिए अलविदा!"
+          }
+        }
+      ],
+      "voices": {
+        "Manoj": "male",
+        "Kavita": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "voice message",
+          "phonetic": "/ˈvɔɪs mesɪdʒ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভয়েস মেসেজ",
+            "hi": "वॉइस मैसेज"
+          },
+          "syllables": ["voice", "mes", "sage"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“voice” জোর দিয়ে বলুন।", "কেউ ফোন না ধরলে ভয়েস মেসেজ রাখুন।"],
+            "en": ["Say “voice” stronger.", "Leave a voice message when nobody answers."],
+            "hi": ["“voice” ज़ोर से बोलें।", "कोई फ़ोन न उठाए, तो वॉइस मैसेज छोड़ें।"]
+          }
+        },
+        {
+          "word": "call back",
+          "phonetic": "/ˌkɔːl ˈbæk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "পাল্টা ফোন করা",
+            "hi": "वापस फ़ोन करना"
+          },
+          "syllables": ["call", "back"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“back” জোর দিয়ে বলুন।", "বলুন: “Please call me back.”"],
+            "en": ["Say “back” stronger.", "Say: “Please call me back.”"],
+            "hi": ["“back” ज़ोर से बोलें।", "कहें: “Please call me back.”"]
+          }
+        },
+        {
+          "word": "missed call",
+          "phonetic": "/ˌmɪst ˈkɔːl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মিসড কল",
+            "hi": "मिस्ड कॉल"
+          },
+          "syllables": ["missed", "call"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“missed”-এর “-ed”-এর উচ্চারণ “ট”।", "বলুন: “I had a missed call from you.”"],
+            "en": [
+              "The “-ed” in “missed” sounds like “t”.",
+              "Say: “I had a missed call from you.”"
+            ],
+            "hi": ["“missed” के “-ed” की आवाज़ “ट” है।", "कहें: “I had a missed call from you.”"]
+          }
+        },
+        {
+          "word": "reach",
+          "phonetic": "/riːtʃ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যোগাযোগ করা",
+            "hi": "संपर्क करना"
+          },
+          "syllables": ["reach"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ea” লম্বা, “see”-এর মতো।", "বলুন: “You can reach me on this number.”"],
+            "en": ["The “ea” is long, as in “see”.", "Say: “You can reach me on this number.”"],
+            "hi": ["“ea” लंबा है, “see” जैसा।", "कहें: “You can reach me on this number.”"]
+          }
+        },
+        {
+          "word": "urgent",
+          "phonetic": "/ˈɜːdʒənt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "জরুরি",
+            "hi": "फ़ौरी, ज़रूरी"
+          },
+          "syllables": ["ur", "gent"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“It’s urgent” মানে দেরি করা যাবে না।"],
+            "en": ["Say the first part stronger.", "“It’s urgent” means it can’t wait."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“It’s urgent” मतलब इंतज़ार नहीं हो सकता।"]
+          }
+        },
+        {
+          "word": "as soon as possible",
+          "phonetic": "/əz ˈsuːn əz ˈpɒsəbl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যত তাড়াতাড়ি সম্ভব",
+            "hi": "जितनी जल्दी हो सके"
+          },
+          "syllables": ["as", "soon", "as", "pos", "si", "ble"],
+          "stress": 4,
+          "tips": {
+            "bn": ["“pos” জোর দিয়ে বলুন।", "মানে তাড়াতাড়ি। লেখায় “ASAP”-ও চলে।"],
+            "en": ["Say “pos” stronger.", "It means quickly. People also write “ASAP”."],
+            "hi": ["“pos” ज़ोर से बोलें।", "मतलब जल्दी। लिखने में “ASAP” भी चलता है।"]
+          }
+        },
+        {
+          "word": "number",
+          "phonetic": "/ˈnʌmbə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "নম্বর",
+            "hi": "नंबर"
+          },
+          "syllables": ["num", "ber"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "ফোন নম্বর ধীরে, ছোট ছোট ভাগে বলুন।"],
+            "en": ["Say the first part stronger.", "Say a phone number slowly, in small groups."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "फ़ोन नंबर धीरे-धीरे, छोटे हिस्सों में बोलें।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Can everyone hear me?",
+          "alsoAccepted": ["Can everybody hear me?", "Can you all hear me?"],
+          "translations": {
+            "bn": "সবাই কি আমার কথা শুনতে পাচ্ছেন?",
+            "hi": "क्या सबको मेरी आवाज़ सुनाई दे रही है?"
+          },
+          "tips": {
+            "bn": ["শুরুতেই আওয়াজ ঠিক আছে কি না দেখুন।", "কেউ উত্তর দেওয়া পর্যন্ত অপেক্ষা করুন।"],
+            "en": ["Check the sound at the start.", "Wait for someone to answer."],
+            "hi": ["शुरू में ही आवाज़ जाँच लें।", "किसी के जवाब का इंतज़ार करें।"]
+          }
+        },
+        {
+          "english": "Sorry, I think you’re on mute.",
+          "alsoAccepted": ["Sorry, I think you are on mute.", "Sorry, you’re on mute."],
+          "translations": {
+            "bn": "মাফ করবেন, মনে হয় আপনার মাইক বন্ধ।",
+            "hi": "माफ़ कीजिए, लगता है आपका माइक बंद है।"
+          },
+          "tips": {
+            "bn": ["“on mute” মানে মাইক বন্ধ।", "নরমভাবে বলুন: এটা সবারই হয়।"],
+            "en": [
+              "“on mute” means the microphone is off.",
+              "Say it kindly: it happens to everyone."
+            ],
+            "hi": ["“on mute” मतलब माइक बंद है।", "नरमी से कहें: यह सबके साथ होता है।"]
+          }
+        },
+        {
+          "english": "Could you share your screen, please?",
+          "alsoAccepted": [
+            "Can you share your screen, please?",
+            "Could you please share your screen?"
+          ],
+          "translations": {
+            "bn": "আপনার স্ক্রিনটা একটু শেয়ার করবেন?",
+            "hi": "कृपया अपनी स्क्रीन शेयर कीजिए।"
+          },
+          "tips": {
+            "bn": ["কিছু দেখার দরকার হলে জিজ্ঞেস করুন।", "ভদ্র শোনাতে “please” যোগ করুন।"],
+            "en": ["Ask when you need to see something.", "Add “please” to sound polite."],
+            "hi": ["कुछ देखना हो, तो पूछें।", "विनम्र लगने के लिए “please” जोड़ें।"]
+          }
+        },
+        {
+          "english": "Your video is frozen. Could you turn it off and on again?",
+          "alsoAccepted": [
+            "Your video has frozen. Could you turn it off and on again?",
+            "Your video is frozen. Can you turn it off and on again?"
+          ],
+          "translations": {
+            "bn": "আপনার ভিডিও আটকে গেছে। একবার বন্ধ করে আবার চালু করবেন?",
+            "hi": "आपका वीडियो रुक गया है। एक बार बंद करके फिर चालू कीजिए।"
+          },
+          "tips": {
+            "bn": ["আগে সমস্যাটা বলুন।", "তারপর সমাধানের প্রস্তাব দিন।"],
+            "en": ["Say what the problem is first.", "Then suggest a fix."],
+            "hi": ["पहले समस्या बताएँ।", "फिर हल सुझाएँ।"]
+          }
+        },
+        {
+          "english": "Let’s stop here and continue tomorrow.",
+          "alsoAccepted": [
+            "Let’s stop here and carry on tomorrow.",
+            "Let us stop here and continue tomorrow."
+          ],
+          "translations": {
+            "bn": "আজ এখানেই থামি, কাল আবার শুরু করব।",
+            "hi": "चलिए यहीं रुकते हैं और कल आगे बात करते हैं।"
+          },
+          "tips": {
+            "bn": ["স্পষ্ট করে কল শেষ করুন।", "আবার কবে কথা হবে বলুন।"],
+            "en": ["Close the call clearly.", "Say when you will meet again."],
+            "hi": ["साफ़ तौर पर कॉल ख़त्म करें।", "बताएँ कि फिर कब मिलेंगे।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Tara",
+      "asMan": "Tarun",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I got your message: “Meeting moved, 3, room B.” What does it mean?",
+          "reply": "Sorry, it wasn’t clear. The meeting has moved to three o’clock, in Room B.",
+          "cues": {
+            "bn": "বার্তাটা পুরো বাক্যে বুঝিয়ে বলুন।",
+            "hi": "मैसेज को पूरे वाक्य में समझाएँ।"
+          }
+        },
+        {
+          "partner": "Today or tomorrow?",
+          "reply": "Today. I should have written that.",
+          "cues": {
+            "bn": "দিনটা জানান।",
+            "hi": "दिन बताएँ।"
+          }
+        },
+        {
+          "partner": "OK. Can you send a clearer message to the whole team?",
+          "reply": "Sure. I’ll write: “Today’s meeting is now at 3 pm in Room B.”",
+          "cues": {
+            "bn": "পরিষ্কার একটা বার্তা বলে শোনান।",
+            "hi": "एक साफ़ मैसेज बोलकर सुनाएँ।"
+          }
+        },
+        {
+          "partner": "Good. Should they reply?",
+          "reply": "Yes, I’ll add: “Please reply OK if you can come.”",
+          "cues": {
+            "bn": "উত্তর চাওয়ার একটা লাইন যোগ করুন।",
+            "hi": "जवाब माँगने वाली एक पंक्ति जोड़ें।"
+          }
+        },
+        {
+          "partner": "What if someone can’t come?",
+          "reply": "Then they can message me, and I’ll share the notes later.",
+          "cues": {
+            "bn": "যাঁরা আসতে পারবেন না, তাঁরা কী করবেন বলুন।",
+            "hi": "बताएँ कि जो न आ सकें, वे क्या करें।"
+          }
+        },
+        {
+          "partner": "Perfect. That’s much clearer now.",
+          "reply": "Thanks. Next time, I’ll write in full sentences.",
+          "cues": {
+            "bn": "পরের বার কী করবেন বলুন।",
+            "hi": "बताएँ कि अगली बार क्या करना है।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Digital Communication Challenge",
+        "translations": {
+          "bn": "ডিজিটাল যোগাযোগের চ্যালেঞ্জ",
+          "hi": "डिजिटल बातचीत की चुनौती"
+        }
+      },
+      "instruction": {
+        "text": "Act out a call that goes wrong: a bad line, a voice message, then a plan for a video call.",
+        "translations": {
+          "bn": "একটা গোলমেলে ফোনকল অভিনয় করে দেখান: খারাপ লাইন, একটা ভয়েস মেসেজ, তারপর ভিডিও কলের পরিকল্পনা।",
+          "hi": "एक गड़बड़ फ़ोन कॉल का अभिनय करें: ख़राब लाइन, एक वॉइस मैसेज, फिर वीडियो कॉल की योजना।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Start the call: say who you are and why you are calling",
+          "translations": {
+            "bn": "ফোন শুরু করুন: আপনি কে আর কেন ফোন করছেন বলুন",
+            "hi": "कॉल शुरू करें: अपना परिचय दें और फ़ोन की वजह बताएँ"
+          }
+        },
+        {
+          "text": "Deal with a bad line: ask them to repeat",
+          "translations": {
+            "bn": "খারাপ লাইন সামলান: আবার বলতে বলুন",
+            "hi": "ख़राब लाइन संभालें: दोबारा बोलने को कहें"
+          }
+        },
+        {
+          "text": "Leave a voice message with your name, reason and number",
+          "translations": {
+            "bn": "নাম, কারণ আর নম্বর দিয়ে একটা ভয়েস মেসেজ রাখুন",
+            "hi": "नाम, वजह और नंबर के साथ वॉइस मैसेज छोड़ें"
+          }
+        },
+        {
+          "text": "Suggest a video call and agree a time",
+          "translations": {
+            "bn": "ভিডিও কলের প্রস্তাব দিয়ে সময় ঠিক করুন",
+            "hi": "वीडियो कॉल का सुझाव दें और समय तय करें"
+          }
+        },
+        {
+          "text": "Say the short message you will send to confirm",
+          "translations": {
+            "bn": "নিশ্চিত করতে যে ছোট বার্তা পাঠাবেন, সেটা বলুন",
+            "hi": "पक्का करने के लिए भेजा जाने वाला छोटा मैसेज बोलें"
+          }
+        },
+        {
+          "text": "End the call politely",
+          "translations": {
+            "bn": "ভদ্রভাবে ফোন শেষ করুন",
+            "hi": "विनम्रता से कॉल ख़त्म करें"
+          }
+        }
+      ],
+      "phrases": [
+        "Hello, it’s … from …",
+        "Is this a good time to talk?",
+        "Sorry, you’re breaking up.",
+        "Please call me back on …",
+        "Shall we have a video call?",
+        "Thanks for your time. Bye!"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which is a good way to start a phone call?",
+            "translations": {
+              "bn": "ফোন শুরু করার ভালো উপায় কোনটি?",
+              "hi": "फ़ोन कॉल शुरू करने का अच्छा तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "Hi, it’s Ravi from Star Bank. Is this a good time?",
+          "others": ["Who are you?", "Talk now."]
+        },
+        {
+          "question": {
+            "text": "The line is bad. What do you say?",
+            "translations": {
+              "bn": "লাইন খারাপ। কী বলবেন?",
+              "hi": "लाइन ख़राब है। क्या कहें?"
+            }
+          },
+          "answer": "Sorry, you’re breaking up. Could you repeat that?",
+          "others": ["Why are you so quiet?", "Goodbye."]
+        },
+        {
+          "question": {
+            "text": "What should a voice message have?",
+            "translations": {
+              "bn": "ভয়েস মেসেজে কী থাকা উচিত?",
+              "hi": "वॉइस मैसेज में क्या होना चाहिए?"
+            }
+          },
+          "answer": "Your name, the reason and your number",
+          "others": ["Only your name", "A long story"]
+        },
+        {
+          "question": {
+            "text": "In a video call, “You’re on mute” means…",
+            "translations": {
+              "bn": "ভিডিও কলে “You’re on mute” মানে…",
+              "hi": "वीडियो कॉल में “You’re on mute” का मतलब…"
+            }
+          },
+          "answer": "Your microphone is off.",
+          "others": ["Your camera is on.", "You are too loud."]
+        },
+        {
+          "question": {
+            "text": "Which message is the clearest?",
+            "translations": {
+              "bn": "কোন বার্তাটা সবচেয়ে স্পষ্ট?",
+              "hi": "कौन-सा मैसेज सबसे साफ़ है?"
+            }
+          },
+          "answer": "Meeting moved to 3 pm today, Room B.",
+          "others": ["Mtg 3 B", "Meeting… later maybe?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Receptionist",
+          "text": "Hello, this message is for Ayesha Khan. This is Sunrise Clinic. Your appointment on Thursday has moved to Friday at ten. Please call us back. Thank you.",
+          "translations": {
+            "bn": "নমস্কার, এই বার্তাটা আয়েশা খানের জন্য। সানরাইজ ক্লিনিক থেকে বলছি। বৃহস্পতিবারের অ্যাপয়েন্টমেন্ট সরে শুক্রবার দশটায় হয়েছে। আমাদের ফোন করবেন। ধন্যবাদ।",
+            "hi": "नमस्ते, यह संदेश आयशा ख़ान के लिए है। सनराइज़ क्लिनिक से बोल रहे हैं। गुरुवार की अपॉइंटमेंट अब शुक्रवार दस बजे है। कृपया हमें वापस फ़ोन करें। धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "Hello, this is Ayesha Khan. I got your voice message about my appointment.",
+          "translations": {
+            "bn": "নমস্কার, আমি আয়েশা খান। অ্যাপয়েন্টমেন্ট নিয়ে আপনাদের ভয়েস মেসেজ পেয়েছি।",
+            "hi": "नमस्ते, मैं आयशा ख़ान बोल रही हूँ। मुझे अपॉइंटमेंट के बारे में आपका वॉइस मैसेज मिला।"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Ah yes, Ms Khan. Is Friday at ten OK for you?",
+          "translations": {
+            "bn": "ও হ্যাঁ, মিস খান। শুক্রবার দশটা আপনার চলবে?",
+            "hi": "अच्छा, जी, मिस ख़ान। क्या शुक्रवार दस बजे आपके लिए ठीक है?"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "Unfortunately, I have a meeting then. Could I come at four instead?",
+          "translations": {
+            "bn": "দুর্ভাগ্যবশত, তখন আমার একটা মিটিং আছে। বদলে চারটেয় আসা যায়?",
+            "hi": "अफ़सोस, उस समय मेरी एक मीटिंग है। क्या मैं उसकी जगह चार बजे आ सकती हूँ?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Let me check… Yes, four o’clock is available.",
+          "translations": {
+            "bn": "দেখছি… হ্যাঁ, চারটে খালি আছে।",
+            "hi": "देखता हूँ… हाँ, चार बजे का समय ख़ाली है।"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "Great. Could you send me a text message to confirm?",
+          "translations": {
+            "bn": "দারুণ। নিশ্চিত করতে একটা মেসেজ পাঠাবেন?",
+            "hi": "बढ़िया। क्या आप पक्का करने के लिए एक मैसेज भेज देंगे?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Of course. You’ll get it in a few minutes. Can I check your number?",
+          "translations": {
+            "bn": "নিশ্চয়ই। কয়েক মিনিটে পেয়ে যাবেন। আপনার নম্বরটা মিলিয়ে নিই?",
+            "hi": "ज़रूर। कुछ मिनटों में मिल जाएगा। क्या मैं आपका नंबर जाँच लूँ?"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "It’s nine eight seven six five, four three two one zero.",
+          "translations": {
+            "bn": "নয় আট সাত ছয় পাঁচ, চার তিন দুই এক শূন্য।",
+            "hi": "नौ आठ सात छह पाँच, चार तीन दो एक शून्य।"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Nine eight seven six five, four three two one zero. Thank you.",
+          "translations": {
+            "bn": "নয় আট সাত ছয় পাঁচ, চার তিন দুই এক শূন্য। ধন্যবাদ।",
+            "hi": "नौ आठ सात छह पाँच, चार तीन दो एक शून्य। धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Ayesha",
+          "text": "That’s right. Thanks for your help. Bye!",
+          "translations": {
+            "bn": "ঠিক। সাহায্যের জন্য ধন্যবাদ। রাখছি!",
+            "hi": "सही है। मदद के लिए धन्यवाद। अलविदा!"
+          }
+        }
+      ],
+      "voices": {
+        "Receptionist": "male",
+        "Ayesha": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the receptionist",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good morning, Green Tech. How can I help you?",
+          "reply": "Good morning. Could I speak to Mr Sharma, please?",
+          "cues": {
+            "bn": "ভদ্রভাবে কারও সঙ্গে কথা বলতে চান।",
+            "hi": "विनम्रता से किसी से बात करने को कहें।"
+          }
+        },
+        {
+          "partner": "May I ask who’s calling?",
+          "reply": "Yes, I’m calling from Star Traders about an order.",
+          "cues": {
+            "bn": "কোথা থেকে আর কেন ফোন করছেন বলুন।",
+            "hi": "अपना परिचय दें और फ़ोन की वजह बताएँ।"
+          }
+        },
+        {
+          "partner": "I’m sorry, he’s in a meeting. Would you like to leave a message?",
+          "reply": "Yes, please. Could you ask him to call me back this afternoon?",
+          "cues": {
+            "bn": "বার্তা রেখে পাল্টা ফোন করতে বলুন।",
+            "hi": "संदेश छोड़ें और वापस फ़ोन करने को कहें।"
+          }
+        },
+        {
+          "partner": "Of course. Does he have your number?",
+          "reply": "I’ll give it to you. It’s nine eight four five zero, one two three four five.",
+          "cues": {
+            "bn": "নম্বরটা দিন।",
+            "hi": "अपना नंबर दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Booking by phone",
+            "translations": {
+              "bn": "ফোনে বুকিং",
+              "hi": "फ़ोन पर बुकिंग"
+            }
+          },
+          "roleplay": {
+            "partner": "the restaurant",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello, Spice Garden. How can I help?",
+                "reply": "Hello, I’d like to book a table for four on Saturday evening.",
+                "cues": {
+                  "bn": "টেবিল বুক করতে চান বলুন।",
+                  "hi": "टेबल बुक करने की बात कहें।"
+                }
+              },
+              {
+                "partner": "Sorry, the line is bad. For how many people?",
+                "reply": "For four people. Four.",
+                "cues": {
+                  "bn": "স্পষ্ট করে আবার বলুন।",
+                  "hi": "साफ़-साफ़ दोहराएँ।"
+                }
+              },
+              {
+                "partner": "What time would you like?",
+                "reply": "At eight o’clock, please.",
+                "cues": {
+                  "bn": "সময় বলুন।",
+                  "hi": "समय बताएँ।"
+                }
+              },
+              {
+                "partner": "Great. Could I have a name and number?",
+                "reply": "The name is Gupta, and the number is nine eight three zero zero, one one two two three.",
+                "cues": {
+                  "bn": "নাম আর নম্বর দিন।",
+                  "hi": "नाम और नंबर दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A job interview online",
+            "translations": {
+              "bn": "অনলাইন ইন্টারভিউ",
+              "hi": "ऑनलाइन इंटरव्यू"
+            }
+          },
+          "roleplay": {
+            "partner": "the interviewer",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! Can you hear me and see me clearly?",
+                "reply": "Yes, I can hear you well, but your video is a little dark.",
+                "cues": {
+                  "bn": "শুনতে পাচ্ছেন বলুন, আর একটা সমস্যা জানান।",
+                  "hi": "बताएँ कि आवाज़ आ रही है, और एक समस्या बताएँ।"
+                }
+              },
+              {
+                "partner": "Is that better now?",
+                "reply": "Yes, much better. Thank you.",
+                "cues": {
+                  "bn": "বলুন এখন ভালো।",
+                  "hi": "बताएँ कि अब ठीक है।"
+                }
+              },
+              {
+                "partner": "Great. First, tell me why you want this job.",
+                "reply": "Sorry, you froze for a moment. Could you repeat the question?",
+                "cues": {
+                  "bn": "বলুন ছবি আটকে গিয়েছিল, প্রশ্নটা আবার চান।",
+                  "hi": "बताएँ कि वीडियो अटक गया था, और सवाल दोबारा पूछने को कहें।"
+                }
+              },
+              {
+                "partner": "Of course. Why do you want this job?",
+                "reply": "Because I enjoy working with people, and I want to grow in sales.",
+                "cues": {
+                  "bn": "কারণ বলুন।",
+                  "hi": "वजह बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A message for a friend",
+            "translations": {
+              "bn": "বন্ধুর জন্য বার্তা",
+              "hi": "दोस्त के लिए संदेश"
+            }
+          },
+          "roleplay": {
+            "partner": "Aditya",
+            "asWoman": "Aditi",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Did you get my voice message about the party?",
+                "reply": "Yes, I did. You said it’s on Saturday at seven, right?",
+                "cues": {
+                  "bn": "বার্তা পেয়েছেন বলে তথ্যটা মিলিয়ে নিন।",
+                  "hi": "बताएँ कि संदेश मिला, और जानकारी पक्की करें।"
+                }
+              },
+              {
+                "partner": "That’s right. Can you come?",
+                "reply": "Yes, but I might be a little late. Is that OK?",
+                "cues": {
+                  "bn": "রাজি হয়ে একটু দেরির কথা বলুন।",
+                  "hi": "हाँ कहें और थोड़ी देर की बात बताएँ।"
+                }
+              },
+              {
+                "partner": "No problem. Can you bring some music?",
+                "reply": "Sure. I’ll make a playlist and send you the link.",
+                "cues": {
+                  "bn": "রাজি হয়ে কী পাঠাবেন বলুন।",
+                  "hi": "हाँ कहें और बताएँ कि क्या भेजना है।"
+                }
+              },
+              {
+                "partner": "Great! See you on Saturday.",
+                "reply": "See you then. Bye!",
+                "cues": {
+                  "bn": "বিদায় জানান।",
+                  "hi": "अलविदा कहें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

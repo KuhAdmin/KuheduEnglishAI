@@ -29,8 +29,11 @@ export {
 /** Challenges by week number. */
 export type WeekChallenges = Partial<Record<number, WeekChallenge>>
 
-/** The longest a learner's one take may be; it is held in memory until the screen goes. */
-export const MAX_CHALLENGE_TAKE_MS = 120_000
+/**
+ * The longest a learner's one take may be; it is held in memory until the screen goes. Five
+ * minutes, because Week 48's challenge is to speak for that long.
+ */
+export const MAX_CHALLENGE_TAKE_MS = 300_000
 
 /** The challenges that ship with the app. TODO(content): weeks 2 to 50. */
 export const builtInWeekChallenges: WeekChallenges = { 1: week1Challenge }

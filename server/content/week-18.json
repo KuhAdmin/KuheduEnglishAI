@@ -1,0 +1,769 @@
+{
+  "week": 18,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Pooja",
+          "text": "Sameer, can you please help me with something?",
+          "translations": {
+            "bn": "সমীর, আমাকে একটু সাহায্য করবেন?",
+            "hi": "समीर, क्या आप एक काम में मेरी मदद कर सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "Sure. What is it?",
+          "translations": {
+            "bn": "নিশ্চয়ই। কী ব্যাপার?",
+            "hi": "ज़रूर। क्या बात है?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "It’s Mr Iyer’s last day on Friday. Let’s plan a small party for him.",
+          "translations": {
+            "bn": "শুক্রবার আয়ার সাহেবের শেষ দিন। চলুন ওঁর জন্য একটা ছোট পার্টির পরিকল্পনা করি।",
+            "hi": "शुक्रवार को अय्यर जी का आख़िरी दिन है। चलिए उनके लिए एक छोटी पार्टी की योजना बनाते हैं।"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "Good idea! Why don’t we have it at lunch time?",
+          "translations": {
+            "bn": "ভালো বুদ্ধি! দুপুরের খাবারের সময় করলে কেমন হয়?",
+            "hi": "अच्छा विचार है! क्यों न हम इसे दोपहर के खाने के समय रखें?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "Yes, that works. Would you mind ordering the cake?",
+          "translations": {
+            "bn": "হ্যাঁ, সেটা ঠিক আছে। আপনি কেকটা অর্ডার করে দেবেন?",
+            "hi": "हाँ, यह ठीक रहेगा। क्या आप केक का ऑर्डर दे देंगे?"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "Not at all. Shall we also buy him a gift?",
+          "translations": {
+            "bn": "একদম অসুবিধা নেই। ওঁর জন্য একটা উপহারও কিনব কি?",
+            "hi": "बिल्कुल, कोई दिक़्क़त नहीं। क्या हम उनके लिए एक तोहफ़ा भी ख़रीदें?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "That’s a lovely idea. How about a book? He loves reading.",
+          "translations": {
+            "bn": "দারুণ ভাবনা। একটা বই কেমন হয়? উনি পড়তে খুব ভালোবাসেন।",
+            "hi": "बहुत अच्छा विचार है। एक किताब कैसी रहेगी? उन्हें पढ़ना बहुत पसंद है।"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "Great. Let’s ask everyone to sign a card too.",
+          "translations": {
+            "bn": "দারুণ। চলুন সবাইকে একটা কার্ডেও সই করতে বলি।",
+            "hi": "बढ़िया। चलिए सबसे एक कार्ड पर भी हस्ताक्षर करवाते हैं।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "Could you please send an email to the team?",
+          "translations": {
+            "bn": "আপনি দয়া করে দলের সবাইকে একটা ইমেল পাঠাবেন?",
+            "hi": "क्या आप कृपया टीम को एक ईमेल भेज सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "I’m sorry, I can’t today. I have meetings all afternoon. Could you do it?",
+          "translations": {
+            "bn": "দুঃখিত, আজ পারব না। সারা বিকেল মিটিং আছে। আপনি পাঠাতে পারবেন?",
+            "hi": "माफ़ कीजिए, आज नहीं हो पाएगा। पूरी दोपहर मेरी मीटिंग हैं। क्या आप भेज सकती हैं?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "No problem. I’ll send it. So: lunch on Friday, a cake, a book and a card.",
+          "translations": {
+            "bn": "অসুবিধা নেই। আমি পাঠিয়ে দেব। তাহলে: শুক্রবার দুপুরে, কেক, একটা বই আর একটা কার্ড।",
+            "hi": "कोई बात नहीं। मैं भेज दूँगी। तो: शुक्रवार को दोपहर का खाना, केक, एक किताब और एक कार्ड।"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "Perfect. It’s a plan!",
+          "translations": {
+            "bn": "একদম ঠিক। তাহলে এটাই ঠিক হল!",
+            "hi": "बिल्कुल सही। तो यह तय रहा!"
+          }
+        }
+      ],
+      "voices": {
+        "Pooja": "female",
+        "Sameer": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "would",
+          "phonetic": "/wʊd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভদ্র অনুরোধের শব্দ",
+            "hi": "विनम्र अनुरोध का शब्द"
+          },
+          "syllables": ["wou(l)d"],
+          "stress": null,
+          "tips": {
+            "bn": ["“l” উচ্চারিত হয় না।", "“wood”-এর মতোই শোনায়।"],
+            "en": ["The “l” is not said.", "It sounds the same as “wood”."],
+            "hi": ["“l” नहीं बोला जाता।", "यह “wood” जैसा ही सुनाई देता है।"]
+          }
+        },
+        {
+          "word": "mind",
+          "phonetic": "/maɪnd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আপত্তি করা",
+            "hi": "बुरा मानना, एतराज़ करना"
+          },
+          "syllables": ["mind"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“i”-এর উচ্চারণ “আই”-এর মতো।",
+              "“Would you mind …?” জানতে চায় অন্যজনের অসুবিধা হবে কি না।"
+            ],
+            "en": [
+              "The “i” sounds like “eye”.",
+              "“Would you mind …?” asks if it is OK for the other person."
+            ],
+            "hi": [
+              "“i” की आवाज़ “आइ” जैसी है।",
+              "“Would you mind …?” पूछता है कि सामने वाले को दिक़्क़त तो नहीं।"
+            ]
+          }
+        },
+        {
+          "word": "borrow",
+          "phonetic": "/ˈbɒrəʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধার নেওয়া",
+            "hi": "उधार लेना"
+          },
+          "syllables": ["bor", "row"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "প্রথম অংশটি জোর দিয়ে বলুন।",
+              "আপনি কারও কাছ থেকে borrow করেন; তিনি আপনাকে lend করেন।"
+            ],
+            "en": ["Say the first part stronger.", "You borrow from someone; they lend to you."],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "आप किसी से borrow करते हैं; वे आपको lend करते हैं।"
+            ]
+          }
+        },
+        {
+          "word": "lend",
+          "phonetic": "/lend/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধার দেওয়া",
+            "hi": "उधार देना"
+          },
+          "syllables": ["lend"],
+          "stress": null,
+          "tips": {
+            "bn": ["“e” ছোট, “red”-এর মতো।", "জিজ্ঞেস করুন: “Could you lend me a pen?”"],
+            "en": ["The “e” is short, as in “red”.", "Ask: “Could you lend me a pen?”"],
+            "hi": ["“e” छोटा है, “red” जैसा।", "पूछें: “Could you lend me a pen?”"]
+          }
+        },
+        {
+          "word": "favour",
+          "phonetic": "/ˈfeɪvə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "উপকার",
+            "hi": "मेहरबानी, एहसान"
+          },
+          "syllables": ["fa", "vour"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “ফেই”।", "জিজ্ঞেস করুন: “Can you do me a favour?”"],
+            "en": ["Say the first part stronger: “FAY”.", "Ask: “Can you do me a favour?”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “फ़े”।", "पूछें: “Can you do me a favour?”"]
+          }
+        },
+        {
+          "word": "possible",
+          "phonetic": "/ˈpɒsəbl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সম্ভব",
+            "hi": "संभव"
+          },
+          "syllables": ["pos", "si", "ble"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "দুটো “s” মিলে একটাই “s” ধ্বনি।"],
+            "en": ["Say the first part stronger.", "The double “s” is one “s” sound."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "दो “s” मिलकर एक ही “s” की आवाज़ हैं।"]
+          }
+        },
+        {
+          "word": "of course",
+          "phonetic": "/əv ˈkɔːs/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "নিশ্চয়ই",
+            "hi": "ज़रूर"
+          },
+          "syllables": ["of", "course"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“course” জোর দিয়ে বলুন।", "অনুরোধে রাজি হতে এটি বলুন।"],
+            "en": ["Say “course” stronger.", "Say it to agree to a request."],
+            "hi": ["“course” ज़ोर से बोलें।", "किसी अनुरोध पर हामी भरने के लिए यह कहें।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Let’s go to the park this evening.",
+          "alsoAccepted": ["Let us go to the park this evening."],
+          "translations": {
+            "bn": "চলুন আজ সন্ধ্যায় পার্কে যাই।",
+            "hi": "चलिए आज शाम पार्क चलते हैं।"
+          },
+          "tips": {
+            "bn": ["“Let’s” মানে “let us”: আপনিও আছেন।", "“Let’s”-এর পরে ক্রিয়ার মূল রূপ: “go”।"],
+            "en": [
+              "“Let’s” is “let us”: it includes you.",
+              "After “Let’s”, use the plain verb: “go”."
+            ],
+            "hi": [
+              "“Let’s” मतलब “let us”: आप भी शामिल हैं।",
+              "“Let’s” के बाद क्रिया का मूल रूप: “go”।"
+            ]
+          }
+        },
+        {
+          "english": "Why don’t we eat together on Sunday?",
+          "alsoAccepted": ["Why don’t we have a meal together on Sunday?"],
+          "translations": {
+            "bn": "রবিবার একসঙ্গে খেলে কেমন হয়?",
+            "hi": "क्यों न हम रविवार को साथ में खाना खाएँ?"
+          },
+          "tips": {
+            "bn": ["“Why don’t we …?” বন্ধুত্বপূর্ণ প্রস্তাব।", "এটা আসলে “কেন” জানতে চাওয়া নয়।"],
+            "en": [
+              "“Why don’t we …?” is a friendly suggestion.",
+              "It is not really a question about why."
+            ],
+            "hi": [
+              "“Why don’t we …?” एक दोस्ताना सुझाव है।",
+              "यह असल में “क्यों” वाला सवाल नहीं है।"
+            ]
+          }
+        },
+        {
+          "english": "How about watching a film?",
+          "alsoAccepted": ["What about watching a film?", "How about watching a movie?"],
+          "translations": {
+            "bn": "একটা সিনেমা দেখলে কেমন হয়?",
+            "hi": "एक फ़िल्म देखें तो कैसा रहेगा?"
+          },
+          "tips": {
+            "bn": ["“How about”-এর পরে “-ing”: “watching”।", "শেষে গলা ওপরে তুলুন।"],
+            "en": ["After “How about”, use “-ing”: “watching”.", "Your voice goes up at the end."],
+            "hi": ["“How about” के बाद “-ing”: “watching”।", "आख़िर में आवाज़ ऊपर ले जाएँ।"]
+          }
+        },
+        {
+          "english": "Shall we meet at six?",
+          "alsoAccepted": ["Should we meet at six?", "Shall we meet at 6?"],
+          "translations": {
+            "bn": "আমরা কি ছটায় দেখা করব?",
+            "hi": "क्या हम छह बजे मिलें?"
+          },
+          "tips": {
+            "bn": ["“Shall we …?” অন্যজনের ইচ্ছা জানতে চায়।", "সময় বা জায়গা ঠিক করতে এটি বলুন।"],
+            "en": [
+              "“Shall we …?” asks what the other person wants.",
+              "Use it to fix a time or a place."
+            ],
+            "hi": [
+              "“Shall we …?” सामने वाले की इच्छा पूछता है।",
+              "समय या जगह तय करने के लिए यह कहें।"
+            ]
+          }
+        },
+        {
+          "english": "That’s a good idea, but I’m busy on Saturday.",
+          "alsoAccepted": ["Good idea, but I’m busy on Saturday."],
+          "translations": {
+            "bn": "ভালো বুদ্ধি, কিন্তু শনিবার আমি ব্যস্ত।",
+            "hi": "अच्छा विचार है, पर शनिवार को मैं व्यस्त हूँ।"
+          },
+          "tips": {
+            "bn": ["“but”-এর আগে ভালো কিছু বলুন।", "না বলার সময় কারণ দিন।"],
+            "en": ["Say something kind before “but”.", "Give a reason when you say no."],
+            "hi": ["“but” से पहले कोई अच्छी बात कहें।", "मना करते समय कारण बताएँ।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Kunal",
+      "asWoman": "Kusum",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Let’s go for a walk this evening.",
+          "reply": "Sure, that sounds nice!",
+          "cues": {
+            "bn": "খুশি হয়ে রাজি হোন।",
+            "hi": "ख़ुशी से हामी भरें।"
+          }
+        },
+        {
+          "partner": "Why don’t we go at five o’clock?",
+          "reply": "Sorry, I can’t at five. How about six?",
+          "cues": {
+            "bn": "বলুন পাঁচটায় পারবেন না, ছটার কথা বলুন।",
+            "hi": "कहें कि पाँच बजे नहीं हो पाएगा, और छह बजे का सुझाव दें।"
+          }
+        },
+        {
+          "partner": "Six is fine. Shall we go to the lake?",
+          "reply": "Good idea. I love the lake.",
+          "cues": {
+            "bn": "রাজি হোন, বলুন লেকটা আপনার খুব ভালো লাগে।",
+            "hi": "सहमति दें और कहें कि झील आपको बहुत पसंद है।"
+          }
+        },
+        {
+          "partner": "How about ice cream after the walk?",
+          "reply": "I’d rather not, thanks. Maybe some tea?",
+          "cues": {
+            "bn": "ভদ্রভাবে না বলুন, চায়ের কথা বলুন।",
+            "hi": "विनम्रता से मना करें और चाय का सुझाव दें।"
+          }
+        },
+        {
+          "partner": "Tea is perfect. Can you bring your camera?",
+          "reply": "Of course. I’ll bring it.",
+          "cues": {
+            "bn": "রাজি হোন, বলুন নিয়ে আসবেন।",
+            "hi": "हामी भरें और कहें कि आप ले आएँगे।"
+          }
+        },
+        {
+          "partner": "Great! See you at six.",
+          "reply": "See you then!",
+          "cues": {
+            "bn": "বিদায় জানান।",
+            "hi": "विदा लें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Planning Something Together",
+        "translations": {
+          "bn": "একসঙ্গে কিছু পরিকল্পনা",
+          "hi": "मिलकर योजना बनाना"
+        }
+      },
+      "instruction": {
+        "text": "Plan a day out with a friend. Suggest ideas, make a request and agree on a plan in about one minute.",
+        "translations": {
+          "bn": "বন্ধুর সঙ্গে একদিন বেড়ানোর পরিকল্পনা করুন। প্রস্তাব দিন, অনুরোধ করুন, প্রায় এক মিনিটে ঠিক করুন।",
+          "hi": "दोस्त के साथ घूमने का एक दिन तय करें। सुझाव दें, अनुरोध करें और लगभग एक मिनट में योजना पक्की करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Suggest a place to go with “Let’s …”",
+          "translations": {
+            "bn": "“Let’s …” দিয়ে কোথায় যাবেন, প্রস্তাব দিন",
+            "hi": "“Let’s …” से कहीं जाने का सुझाव दें"
+          }
+        },
+        {
+          "text": "Make a polite request with “Would you mind …?”",
+          "translations": {
+            "bn": "“Would you mind …?” দিয়ে ভদ্র অনুরোধ করুন",
+            "hi": "“Would you mind …?” से विनम्र अनुरोध करें"
+          }
+        },
+        {
+          "text": "Accept one idea and refuse one politely",
+          "translations": {
+            "bn": "একটা প্রস্তাবে রাজি হোন, একটায় ভদ্রভাবে না বলুন",
+            "hi": "एक सुझाव मानें और एक को विनम्रता से मना करें"
+          }
+        },
+        {
+          "text": "Agree on a day and a time",
+          "translations": {
+            "bn": "একটা দিন আর সময় ঠিক করুন",
+            "hi": "एक दिन और समय तय करें"
+          }
+        },
+        {
+          "text": "Say the final plan in one sentence",
+          "translations": {
+            "bn": "শেষ পরিকল্পনাটা এক বাক্যে বলুন",
+            "hi": "आख़िरी योजना एक वाक्य में बताएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "Let’s go to …",
+        "Why don’t we …?",
+        "Would you mind …?",
+        "That sounds great!",
+        "Sorry, I can’t. How about …?",
+        "So, the plan is …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which is the most polite request?",
+            "translations": {
+              "bn": "সবচেয়ে ভদ্র অনুরোধ কোনটি?",
+              "hi": "सबसे विनम्र अनुरोध कौन-सा है?"
+            }
+          },
+          "answer": "Would you mind closing the window?",
+          "others": ["Close the window.", "You close the window."]
+        },
+        {
+          "question": {
+            "text": "Complete: Would you mind ___ me?",
+            "translations": {
+              "bn": "পূরণ করুন: Would you mind ___ me?",
+              "hi": "पूरा करें: Would you mind ___ me?"
+            }
+          },
+          "answer": "helping",
+          "others": ["help", "to help"]
+        },
+        {
+          "question": {
+            "text": "Which sentence makes a suggestion?",
+            "translations": {
+              "bn": "কোন বাক্যে প্রস্তাব দেওয়া হচ্ছে?",
+              "hi": "किस वाक्य में सुझाव दिया गया है?"
+            }
+          },
+          "answer": "Why don’t we take a bus?",
+          "others": ["We took a bus.", "Do you take a bus?"]
+        },
+        {
+          "question": {
+            "text": "Someone asks, “Would you mind waiting?” You are happy to wait. What do you say?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “Would you mind waiting?” আপনি অপেক্ষা করতে রাজি। কী বলবেন?",
+              "hi": "किसी ने पूछा, “Would you mind waiting?” आप रुकने को तैयार हैं। क्या कहेंगे?"
+            }
+          },
+          "answer": "Not at all.",
+          "others": ["Yes, I mind.", "No, thanks."]
+        },
+        {
+          "question": {
+            "text": "Which is a polite way to refuse?",
+            "translations": {
+              "bn": "ভদ্রভাবে না বলার উপায় কোনটি?",
+              "hi": "विनम्रता से मना करने का तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "Sorry, I can’t, but thanks for asking.",
+          "others": ["No.", "I don’t want to."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Sara",
+          "text": "Imran, the weather is lovely. Let’s have a picnic on Sunday!",
+          "translations": {
+            "bn": "ইমরান, আবহাওয়াটা দারুণ। চলো রবিবার পিকনিক করি!",
+            "hi": "इमरान, मौसम बहुत अच्छा है। चलो रविवार को पिकनिक करते हैं!"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "Great idea! Why don’t we go to the river?",
+          "translations": {
+            "bn": "দারুণ! নদীর ধারে গেলে কেমন হয়?",
+            "hi": "बढ़िया विचार! क्यों न हम नदी किनारे चलें?"
+          }
+        },
+        {
+          "speaker": "Sara",
+          "text": "Hmm, it’s far. How about the city garden?",
+          "translations": {
+            "bn": "হুম, ওটা দূরে। শহরের বাগানটা কেমন হয়?",
+            "hi": "हम्म, वह दूर है। शहर का बाग़ कैसा रहेगा?"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "OK, the garden is fine. Could you bring some sandwiches?",
+          "translations": {
+            "bn": "ঠিক আছে, বাগানই ভালো। তুমি কিছু স্যান্ডউইচ আনতে পারবে?",
+            "hi": "ठीक है, बाग़ ठीक है। क्या तुम कुछ सैंडविच ला सकती हो?"
+          }
+        },
+        {
+          "speaker": "Sara",
+          "text": "Sure. Would you mind bringing the drinks?",
+          "translations": {
+            "bn": "নিশ্চয়ই। তুমি কি পানীয়গুলো আনবে?",
+            "hi": "ज़रूर। क्या तुम पेय ले आओगे?"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "Not at all. Shall we ask Leela too?",
+          "translations": {
+            "bn": "একদম অসুবিধা নেই। লীলাকেও বলব?",
+            "hi": "बिल्कुल, कोई बात नहीं। क्या लीला को भी बुलाएँ?"
+          }
+        },
+        {
+          "speaker": "Sara",
+          "text": "Yes, let’s. Let’s meet at eleven.",
+          "translations": {
+            "bn": "হ্যাঁ, বলো। চলো এগারোটায় দেখা করি।",
+            "hi": "हाँ, बुला लेते हैं। चलो ग्यारह बजे मिलते हैं।"
+          }
+        },
+        {
+          "speaker": "Imran",
+          "text": "Eleven is a bit early for me. Can we say twelve?",
+          "translations": {
+            "bn": "এগারোটা আমার জন্য একটু তাড়াতাড়ি। বারোটা করা যায়?",
+            "hi": "ग्यारह बजे मेरे लिए थोड़ा जल्दी है। क्या बारह बजे रखें?"
+          }
+        },
+        {
+          "speaker": "Sara",
+          "text": "Sure, twelve it is. See you on Sunday!",
+          "translations": {
+            "bn": "ঠিক আছে, বারোটাই। রবিবার দেখা হবে!",
+            "hi": "ठीक है, बारह बजे ही सही। रविवार को मिलते हैं!"
+          }
+        }
+      ],
+      "voices": {
+        "Sara": "female",
+        "Imran": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the manager",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "We need to plan the team lunch. Any ideas?",
+          "reply": "Let’s go to a restaurant near the office.",
+          "cues": {
+            "bn": "অফিসের কাছে একটা রেস্তোরাঁর প্রস্তাব দিন।",
+            "hi": "दफ़्तर के पास किसी रेस्तराँ का सुझाव दें।"
+          }
+        },
+        {
+          "partner": "Good. Would you mind booking a table?",
+          "reply": "Not at all. I’ll call them today.",
+          "cues": {
+            "bn": "রাজি হোন, বলুন আজই ফোন করবেন।",
+            "hi": "हामी भरें और कहें कि आज ही फ़ोन करेंगे।"
+          }
+        },
+        {
+          "partner": "How about Thursday at one o’clock?",
+          "reply": "Sorry, I have a meeting then. Why don’t we go on Friday?",
+          "cues": {
+            "bn": "বৃহস্পতিবার পারবেন না বলুন, শুক্রবারের কথা বলুন।",
+            "hi": "गुरुवार को मना करें और शुक्रवार का सुझाव दें।"
+          }
+        },
+        {
+          "partner": "Friday works for me. Thank you!",
+          "reply": "Great. I’ll book it for Friday.",
+          "cues": {
+            "bn": "বলুন শুক্রবারের জন্য বুক করবেন।",
+            "hi": "कहें कि शुक्रवार के लिए बुक करेंगे।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A movie night",
+            "translations": {
+              "bn": "সিনেমার সন্ধ্যা",
+              "hi": "फ़िल्म की शाम"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I’m bored. What shall we do tonight?",
+                "reply": "Let’s watch a film at home.",
+                "cues": {
+                  "bn": "বাড়িতে সিনেমা দেখার প্রস্তাব দিন।",
+                  "hi": "घर पर फ़िल्म देखने का सुझाव दें।"
+                }
+              },
+              {
+                "partner": "Good idea. Can you choose the film?",
+                "reply": "Sure. How about a comedy?",
+                "cues": {
+                  "bn": "রাজি হোন আর একটা কমেডির কথা বলুন।",
+                  "hi": "हामी भरें और कॉमेडी का सुझाव दें।"
+                }
+              },
+              {
+                "partner": "Perfect. Shall we order pizza?",
+                "reply": "I’d rather cook something. Why don’t we make pasta?",
+                "cues": {
+                  "bn": "ভদ্রভাবে না বলুন, পাস্তা বানানোর কথা বলুন।",
+                  "hi": "विनम्रता से मना करें और पास्ता बनाने का सुझाव दें।"
+                }
+              },
+              {
+                "partner": "OK, pasta it is! Could you buy the vegetables?",
+                "reply": "No problem. I’ll go now.",
+                "cues": {
+                  "bn": "রাজি হোন।",
+                  "hi": "हामी भरें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A neighbour’s request",
+            "translations": {
+              "bn": "প্রতিবেশীর অনুরোধ",
+              "hi": "पड़ोसी का अनुरोध"
+            }
+          },
+          "roleplay": {
+            "partner": "Mrs Rao",
+            "asMan": "Mr Rao",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! Would you mind watering my plants this weekend?",
+                "reply": "Not at all. Are you going away?",
+                "cues": {
+                  "bn": "রাজি হোন, জিজ্ঞেস করুন উনি কোথাও যাচ্ছেন কি না।",
+                  "hi": "हामी भरें और पूछें कि क्या वे कहीं जा रहे हैं।"
+                }
+              },
+              {
+                "partner": "Yes, to my son’s house. Could you also take in my letters?",
+                "reply": "Of course. Can you give me the key?",
+                "cues": {
+                  "bn": "রাজি হোন আর চাবিটা চান।",
+                  "hi": "हामी भरें और चाबी माँगें।"
+                }
+              },
+              {
+                "partner": "Here it is. Can you feed my cat too?",
+                "reply": "Sorry, I can’t. I’m allergic to cats.",
+                "cues": {
+                  "bn": "দুঃখিত বলুন, বিড়ালে আপনার অ্যালার্জি।",
+                  "hi": "माफ़ी माँगें और बताएँ कि बिल्ली से आपको एलर्जी है।"
+                }
+              },
+              {
+                "partner": "Oh, no problem. I’ll ask my sister. Thank you!",
+                "reply": "You’re welcome. Have a nice trip!",
+                "cues": {
+                  "bn": "যাত্রার শুভকামনা জানান।",
+                  "hi": "यात्रा की शुभकामना दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A study group",
+            "translations": {
+              "bn": "পড়ার দল",
+              "hi": "पढ़ाई का समूह"
+            }
+          },
+          "roleplay": {
+            "partner": "Rohit",
+            "asWoman": "Rohini",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "The exam is next week. Shall we study together?",
+                "reply": "Yes, let’s. That’s a great idea.",
+                "cues": {
+                  "bn": "খুশি হয়ে রাজি হোন।",
+                  "hi": "ख़ुशी से हामी भरें।"
+                }
+              },
+              {
+                "partner": "Why don’t we meet at the library?",
+                "reply": "How about my house? It’s quieter.",
+                "cues": {
+                  "bn": "নিজের বাড়ির কথা বলুন, কারণ সেটা শান্ত।",
+                  "hi": "अपने घर का सुझाव दें, क्योंकि वहाँ शांति है।"
+                }
+              },
+              {
+                "partner": "OK. Could you make some notes for us?",
+                "reply": "Sure. Would you mind bringing some snacks?",
+                "cues": {
+                  "bn": "রাজি হোন, আর কিছু খাবার আনতে অনুরোধ করুন।",
+                  "hi": "हामी भरें और कुछ नाश्ता लाने का अनुरोध करें।"
+                }
+              },
+              {
+                "partner": "Not at all. See you on Monday at four!",
+                "reply": "See you then!",
+                "cues": {
+                  "bn": "বিদায় জানান।",
+                  "hi": "विदा लें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

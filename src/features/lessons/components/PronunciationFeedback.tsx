@@ -23,10 +23,10 @@ export type PronunciationFeedbackProps = {
 }
 
 /**
- * What the server heard in a recording of a word. It is a first version, and says so every
- * time: it has not been measured on learners yet, so it can be wrong. The words and the icon
- * say what was found; the colour only adds to them, and stays soft: this is something to try,
- * not a mark. With something to try come the two sounds to compare (`CompareByEar`).
+ * What the server heard in a recording of a word. It has not been measured on learners yet, so
+ * it can be wrong, and nothing may count on it; the card no longer says so (the user had the note
+ * taken off on 2026-10-14). The words and the icon say what was found; the colour only adds to
+ * them, and stays soft: this is something to try, not a mark. With something to try come the two sounds to compare (`CompareByEar`).
  */
 export function PronunciationFeedback({
   check,
@@ -112,7 +112,6 @@ export function PronunciationFeedback({
           kind={kind}
         />
       )}
-      <p className="text-sm">{t('lessonDay.feedback.firstVersion')}</p>
     </section>
   )
 }

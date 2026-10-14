@@ -14,8 +14,8 @@ export type ReplyFeedbackProps = {
 /**
  * What the server made of a reply the learner gave in a role-play: the words it heard, whether
  * they answer the partner, and a better way to say them where there is one. It is a first
- * version and says so every time: the words are a recogniser's guess, and a small model reads
- * them. So nothing here is called wrong. The icon and the words say what was found; the colour
+ * version: the words are a recogniser's guess, and a small model reads them. So nothing here is
+ * called wrong. The icon and the words say what was found; the colour
  * only adds to them, and stays soft.
  *
  * **Whether a reply answers the partner is said only as a doubt, never as praise.** The model
@@ -97,7 +97,6 @@ export function ReplyFeedback({ check, partnerName }: ReplyFeedbackProps) {
           </div>
         )}
       </div>
-      <p className="text-sm">{t('lessonDay.feedback.firstVersion')}</p>
     </section>
   )
 }

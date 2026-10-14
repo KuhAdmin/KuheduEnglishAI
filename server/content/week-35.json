@@ -1,0 +1,739 @@
+{
+  "week": 35,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Megha",
+          "text": "Arvind, I have an idea. Let’s start a small garden on the office roof.",
+          "translations": {
+            "bn": "অরবিন্দ, একটা ভাবনা আছে। চলুন অফিসের ছাদে একটা ছোট বাগান করি।",
+            "hi": "अरविंद, मेरे पास एक विचार है। चलिए दफ़्तर की छत पर एक छोटा बग़ीचा बनाते हैं।"
+          }
+        },
+        {
+          "speaker": "Arvind",
+          "text": "A garden? Why should we do that?",
+          "translations": {
+            "bn": "বাগান? কেন করব?",
+            "hi": "बग़ीचा? हम ऐसा क्यों करें?"
+          }
+        },
+        {
+          "speaker": "Megha",
+          "text": "Think of the benefits. It will keep the building cooler, and people can relax there.",
+          "translations": {
+            "bn": "সুবিধাগুলো ভাবুন। বাড়িটা ঠান্ডা থাকবে, আর লোকে ওখানে একটু বিশ্রাম নিতে পারবে।",
+            "hi": "फ़ायदों के बारे में सोचिए। इमारत ठंडी रहेगी, और लोग वहाँ आराम कर सकेंगे।"
+          }
+        },
+        {
+          "speaker": "Arvind",
+          "text": "It sounds nice, but who will look after it? We’re all busy.",
+          "translations": {
+            "bn": "শুনতে ভালো, কিন্তু দেখাশোনা করবে কে? আমরা সবাই ব্যস্ত।",
+            "hi": "सुनने में अच्छा है, पर इसकी देखभाल कौन करेगा? हम सब व्यस्त हैं।"
+          }
+        },
+        {
+          "speaker": "Megha",
+          "text": "I understand. But it only needs ten minutes a day. We could take turns.",
+          "translations": {
+            "bn": "বুঝতে পারছি। কিন্তু দিনে মাত্র দশ মিনিট লাগবে। পালা করে করতে পারি।",
+            "hi": "मैं समझती हूँ। पर इसमें रोज़ बस दस मिनट लगेंगे। हम बारी-बारी से कर सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Arvind",
+          "text": "And the cost? Plants and pots aren’t free.",
+          "translations": {
+            "bn": "আর খরচ? গাছ আর টব তো বিনা পয়সায় আসে না।",
+            "hi": "और ख़र्च? पौधे और गमले मुफ़्त तो नहीं आते।"
+          }
+        },
+        {
+          "speaker": "Megha",
+          "text": "That’s a fair point. What if we start small, with just ten pots? It costs less than one team lunch.",
+          "translations": {
+            "bn": "ন্যায্য কথা। যদি ছোট করে শুরু করি, মাত্র দশটা টব দিয়ে? একটা দলের লাঞ্চের চেয়েও কম খরচ।",
+            "hi": "यह जायज़ बात है। अगर हम छोटे से शुरू करें, सिर्फ़ दस गमलों से? यह एक टीम लंच से भी सस्ता है।"
+          }
+        },
+        {
+          "speaker": "Arvind",
+          "text": "Hmm. Less than a team lunch? That’s not bad.",
+          "translations": {
+            "bn": "হুম। একটা লাঞ্চের চেয়েও কম? মন্দ নয়।",
+            "hi": "हम्म। एक टीम लंच से भी कम? बुरा नहीं है।"
+          }
+        },
+        {
+          "speaker": "Megha",
+          "text": "And if it doesn’t work after three months, we stop. Deal?",
+          "translations": {
+            "bn": "আর তিন মাসে কাজ না হলে বন্ধ করে দেব। রাজি?",
+            "hi": "और अगर तीन महीने में बात न बनी, तो बंद कर देंगे। मंज़ूर?"
+          }
+        },
+        {
+          "speaker": "Arvind",
+          "text": "OK, you’ve convinced me. But you’re watering first!",
+          "translations": {
+            "bn": "ঠিক আছে, আপনি রাজি করিয়ে ফেললেন। তবে প্রথম জল দেবেন আপনিই!",
+            "hi": "ठीक है, आपने मुझे मना लिया। पर पहले पानी आप ही देंगी!"
+          }
+        },
+        {
+          "speaker": "Megha",
+          "text": "Deal! Thank you, Arvind.",
+          "translations": {
+            "bn": "রাজি! ধন্যবাদ, অরবিন্দ।",
+            "hi": "मंज़ूर! धन्यवाद, अरविंद।"
+          }
+        }
+      ],
+      "voices": {
+        "Megha": "female",
+        "Arvind": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "benefit",
+          "phonetic": "/ˈbenɪfɪt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সুবিধা, লাভ",
+            "hi": "फ़ायदा"
+          },
+          "syllables": ["ben", "e", "fit"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “The main benefit is …”"],
+            "en": ["Say the first part stronger.", "Say: “The main benefit is …”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “The main benefit is …”"]
+          }
+        },
+        {
+          "word": "save",
+          "phonetic": "/seɪv/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বাঁচানো",
+            "hi": "बचाना"
+          },
+          "syllables": ["save"],
+          "stress": null,
+          "tips": {
+            "bn": ["“a”-এর উচ্চারণ “এই”-এর মতো।", "বলুন “save money”, “save time”।"],
+            "en": ["The “a” sounds like “ay”.", "Say “save money” and “save time”."],
+            "hi": ["“a” की आवाज़ “ए” जैसी है।", "कहें “save money”, “save time”।"]
+          }
+        },
+        {
+          "word": "healthy",
+          "phonetic": "/ˈhelθi/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "স্বাস্থ্যকর, সুস্থ",
+            "hi": "सेहतमंद"
+          },
+          "syllables": ["heal", "thy"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“ea” ছোট, “red”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “ea” is short, as in “red”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“ea” छोटा है, “red” जैसा।"]
+          }
+        },
+        {
+          "word": "useful",
+          "phonetic": "/ˈjuːsfl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কাজের, দরকারি",
+            "hi": "उपयोगी"
+          },
+          "syllables": ["use", "ful"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“u”-এর উচ্চারণ “ইউ”।"],
+            "en": ["Say the first part stronger.", "The “u” sounds like “you”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“u” की आवाज़ “यू” जैसी है।"]
+          }
+        },
+        {
+          "word": "worth it",
+          "phonetic": "/ˈwɜːθ ɪt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "খরচ বা পরিশ্রমের যোগ্য",
+            "hi": "क़ीमत के लायक़"
+          },
+          "syllables": ["worth", "it"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“worth” জোর দিয়ে বলুন।", "“It’s worth it” মানে খরচ বা পরিশ্রমের যোগ্য।"],
+            "en": [
+              "Say “worth” stronger.",
+              "“It’s worth it” means it is good enough for the cost or the work."
+            ],
+            "hi": ["“worth” ज़ोर से बोलें।", "“It’s worth it” मतलब ख़र्च या मेहनत के लायक़।"]
+          }
+        },
+        {
+          "word": "convince",
+          "phonetic": "/kənˈvɪns/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "রাজি করানো",
+            "hi": "मनाना, यक़ीन दिलाना"
+          },
+          "syllables": ["con", "vince"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“You’ve convinced me” মানে এখন আপনি রাজি।"],
+            "en": ["Say the second part stronger.", "“You’ve convinced me” means you agree now."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“You’ve convinced me” मतलब अब आप सहमत हैं।"]
+          }
+        },
+        {
+          "word": "deal",
+          "phonetic": "/diːl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "চুক্তি, রাজি",
+            "hi": "सौदा, पक्का"
+          },
+          "syllables": ["deal"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ea” লম্বা, “see”-এর মতো।", "“Deal!” মানে “আমি রাজি।”"],
+            "en": ["The “ea” is long, as in “see”.", "“Deal!” means “I agree to this.”"],
+            "hi": ["“ea” लंबा है, “see” जैसा।", "“Deal!” मतलब “मुझे मंज़ूर है।”"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I understand your concern, but it won’t take long.",
+          "alsoAccepted": ["I understand your worry, but it won’t take long."],
+          "translations": {
+            "bn": "আপনার চিন্তাটা বুঝি, কিন্তু বেশি সময় লাগবে না।",
+            "hi": "आपकी चिंता समझ आती है, पर इसमें ज़्यादा समय नहीं लगेगा।"
+          },
+          "tips": {
+            "bn": ["আগে বোঝান চিন্তাটা শুনেছেন।", "তারপর “but”-এর পরে উত্তর দিন।"],
+            "en": ["Show you heard the worry first.", "Then answer it after “but”."],
+            "hi": ["पहले जताएँ कि चिंता सुनी।", "फिर “but” के बाद जवाब दें।"]
+          }
+        },
+        {
+          "english": "That’s a fair point. Let me explain.",
+          "alsoAccepted": ["Fair point. Let me explain."],
+          "translations": {
+            "bn": "ন্যায্য কথা। আমি বুঝিয়ে বলি।",
+            "hi": "यह जायज़ बात है। मुझे समझाने दीजिए।"
+          },
+          "tips": {
+            "bn": ["“a fair point” মানে চিন্তার ন্যায্য কারণ।", "শান্ত থেকে বুঝিয়ে বলুন।"],
+            "en": ["“a fair point” is a good reason to worry.", "Stay calm and explain."],
+            "hi": ["“a fair point” मतलब चिंता की जायज़ वजह।", "शांत रहकर समझाएँ।"]
+          }
+        },
+        {
+          "english": "It costs a little more, but it lasts much longer.",
+          "alsoAccepted": ["It costs a bit more, but it lasts much longer."],
+          "translations": {
+            "bn": "দাম একটু বেশি, কিন্তু অনেক বেশি দিন টেকে।",
+            "hi": "यह थोड़ा महँगा है, पर बहुत ज़्यादा दिन चलता है।"
+          },
+          "tips": {
+            "bn": ["দুর্বল দিকটা মেনে জোরালো দিকটা বলুন।", "“lasts” মানে টেকে।"],
+            "en": [
+              "Agree with the weak point, then give a stronger one.",
+              "“lasts” means stays good."
+            ],
+            "hi": ["कमज़ोर बात मानें, फिर मज़बूत बात कहें।", "“lasts” मतलब टिकता है।"]
+          }
+        },
+        {
+          "english": "What if we try it for one month first?",
+          "alsoAccepted": ["How about trying it for one month first?"],
+          "translations": {
+            "bn": "যদি প্রথমে এক মাস চেষ্টা করে দেখি?",
+            "hi": "अगर पहले एक महीने के लिए आज़माकर देखें तो?"
+          },
+          "tips": {
+            "bn": [
+              "ছোট পরীক্ষায় রাজি হওয়া সহজ হয়।",
+              "“What if …?” খোলামেলা আর বন্ধুত্বপূর্ণ শোনায়।"
+            ],
+            "en": ["A small trial makes “yes” easier.", "“What if …?” sounds open and friendly."],
+            "hi": [
+              "छोटे परीक्षण से “हाँ” कहना आसान होता है।",
+              "“What if …?” खुला और दोस्ताना लगता है।"
+            ]
+          }
+        },
+        {
+          "english": "Don’t worry, I’ll take care of that part.",
+          "alsoAccepted": ["Don’t worry, I will take care of that part."],
+          "translations": {
+            "bn": "চিন্তা করবেন না, ওই অংশটা আমার দায়িত্ব।",
+            "hi": "चिंता मत कीजिए, वह हिस्सा मेरे ज़िम्मे।"
+          },
+          "tips": {
+            "bn": ["কঠিন অংশটা নিজে করার প্রস্তাব দিন।", "এতে তাঁর চিন্তা দূর হয়।"],
+            "en": ["Offer to do the hard part yourself.", "It takes away their worry."],
+            "hi": ["मुश्किल हिस्सा ख़ुद करने की पेशकश करें।", "इससे उनकी चिंता दूर होती है।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Ronak",
+      "asWoman": "Roshni",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I think you should do the cooking every day.",
+          "reply": "Every day is too much. How about we take turns?",
+          "cues": {
+            "bn": "ভদ্রভাবে না বলে পালা করার প্রস্তাব দিন।",
+            "hi": "विनम्रता से मना करें और बारी-बारी का सुझाव दें।"
+          }
+        },
+        {
+          "partner": "But I’m bad at cooking!",
+          "reply": "OK, then I’ll cook, and you do the dishes.",
+          "cues": {
+            "bn": "বদলে কিছু করার প্রস্তাব দিন।",
+            "hi": "बदले में कुछ करने का सुझाव दें।"
+          }
+        },
+        {
+          "partner": "All the dishes? That’s a lot.",
+          "reply": "Fair point. What if I cook four days, and you cook three?",
+          "cues": {
+            "bn": "মাঝামাঝি একটা প্রস্তাব দিন।",
+            "hi": "बीच का रास्ता सुझाएँ।"
+          }
+        },
+        {
+          "partner": "Hmm. Three days of simple food?",
+          "reply": "Sure, simple food is fine. Eggs and rice are easy.",
+          "cues": {
+            "bn": "রাজি হয়ে ভরসা দিন।",
+            "hi": "हामी भरें और भरोसा दिलाएँ।"
+          }
+        },
+        {
+          "partner": "OK. And we share the cleaning?",
+          "reply": "Yes, that’s fair. Let’s write it down.",
+          "cues": {
+            "bn": "রাজি হয়ে লিখে রাখার কথা বলুন।",
+            "hi": "सहमति दें और लिखकर रखने की बात कहें।"
+          }
+        },
+        {
+          "partner": "Deal!",
+          "reply": "Deal! I’m glad we agree.",
+          "cues": {
+            "bn": "চুক্তিতে খুশি জানান।",
+            "hi": "समझौते पर ख़ुशी जताएँ।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Convince Me!",
+        "translations": {
+          "bn": "আমাকে রাজি করান!",
+          "hi": "मुझे मनाइए!"
+        }
+      },
+      "instruction": {
+        "text": "Choose an idea, like a family trip. Persuade someone: give benefits, answer their worries and agree.",
+        "translations": {
+          "bn": "একটা ভাবনা বাছুন, যেমন পরিবারের সঙ্গে বেড়ানো। কাউকে রাজি করান: সুবিধা বলুন, চিন্তার উত্তর দিন, একমত হোন।",
+          "hi": "कोई विचार चुनें, जैसे परिवार की सैर। किसी को मनाएँ: फ़ायदे बताएँ, चिंताओं का जवाब दें और सहमति बनाएँ।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say your idea clearly",
+          "translations": {
+            "bn": "আপনার ভাবনাটা স্পষ্ট করে বলুন",
+            "hi": "अपना विचार साफ़-साफ़ बताएँ"
+          }
+        },
+        {
+          "text": "Give two benefits",
+          "translations": {
+            "bn": "দুটো সুবিধা বলুন",
+            "hi": "दो फ़ायदे बताएँ"
+          }
+        },
+        {
+          "text": "Answer one worry calmly",
+          "translations": {
+            "bn": "একটা চিন্তার শান্তভাবে উত্তর দিন",
+            "hi": "एक चिंता का शांति से जवाब दें"
+          }
+        },
+        {
+          "text": "Offer a small trial or a compromise",
+          "translations": {
+            "bn": "ছোট পরীক্ষা বা আপসের প্রস্তাব দিন",
+            "hi": "छोटे परीक्षण या समझौते की पेशकश करें"
+          }
+        },
+        {
+          "text": "Check if they agree: “So, what do you say?”",
+          "translations": {
+            "bn": "রাজি কি না জেনে নিন: “So, what do you say?”",
+            "hi": "पूछें कि वे सहमत हैं या नहीं: “So, what do you say?”"
+          }
+        }
+      ],
+      "phrases": [
+        "I have an idea: …",
+        "Think of the benefits: …",
+        "I understand, but …",
+        "What if we try it for …?",
+        "It’s worth it because …",
+        "So, what do you say?"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which sentence explains a benefit?",
+            "translations": {
+              "bn": "কোন বাক্যে সুবিধার কথা বলা হয়েছে?",
+              "hi": "कौन-सा वाक्य फ़ायदा बताता है?"
+            }
+          },
+          "answer": "It will save us money every month.",
+          "others": ["It is blue.", "I bought it yesterday."]
+        },
+        {
+          "question": {
+            "text": "Someone says, “It’s too expensive.” What is a good reply?",
+            "translations": {
+              "bn": "কেউ বললেন, “It’s too expensive.” ভালো উত্তর কোনটি?",
+              "hi": "किसी ने कहा, “It’s too expensive.” अच्छा जवाब कौन-सा है?"
+            }
+          },
+          "answer": "I understand, but it lasts much longer.",
+          "others": ["No, it isn’t!", "So what?"]
+        },
+        {
+          "question": {
+            "text": "Which sentence offers a compromise?",
+            "translations": {
+              "bn": "কোন বাক্যে আপসের প্রস্তাব?",
+              "hi": "कौन-सा वाक्य समझौते की पेशकश करता है?"
+            }
+          },
+          "answer": "What if we each pay half?",
+          "others": ["You pay everything.", "I won’t pay."]
+        },
+        {
+          "question": {
+            "text": "Complete: It’s ___ it.",
+            "translations": {
+              "bn": "পূরণ করুন: It’s ___ it.",
+              "hi": "पूरा करें: It’s ___ it."
+            }
+          },
+          "answer": "worth",
+          "others": ["worthy", "worse"]
+        },
+        {
+          "question": {
+            "text": "Which question checks if someone is convinced?",
+            "translations": {
+              "bn": "কোন প্রশ্নে জানা যায় কেউ রাজি হলেন কি না?",
+              "hi": "कौन-सा सवाल पूछता है कि कोई मान गया या नहीं?"
+            }
+          },
+          "answer": "So, what do you say?",
+          "others": ["What time is it?", "Where were you?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Tia",
+          "text": "Dad, can we please get a dog?",
+          "translations": {
+            "bn": "বাবা, আমরা কি একটা কুকুর আনতে পারি?",
+            "hi": "पापा, क्या हम एक कुत्ता ला सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Dad",
+          "text": "A dog is a lot of work, Tia.",
+          "translations": {
+            "bn": "কুকুর পোষা অনেক কাজ, টিয়া।",
+            "hi": "कुत्ता पालना बहुत मेहनत का काम है, टिया।"
+          }
+        },
+        {
+          "speaker": "Tia",
+          "text": "I know. But think of the benefits. We’ll walk more, so we’ll all be healthier.",
+          "translations": {
+            "bn": "জানি। কিন্তু সুবিধাগুলো ভাবো। আমরা বেশি হাঁটব, তাই সবাই সুস্থ থাকব।",
+            "hi": "पता है। पर फ़ायदों के बारे में सोचिए। हम ज़्यादा चलेंगे, तो सब सेहतमंद रहेंगे।"
+          }
+        },
+        {
+          "speaker": "Dad",
+          "text": "That’s true. But who will feed it and clean up?",
+          "translations": {
+            "bn": "ঠিক কথা। কিন্তু খাওয়াবে আর পরিষ্কার করবে কে?",
+            "hi": "यह सच है। पर उसे खाना कौन देगा और सफ़ाई कौन करेगा?"
+          }
+        },
+        {
+          "speaker": "Tia",
+          "text": "I will! I’ll do it every morning before school.",
+          "translations": {
+            "bn": "আমি! রোজ স্কুলের আগে সকালে করব।",
+            "hi": "मैं! मैं हर सुबह स्कूल से पहले करूँगी।"
+          }
+        },
+        {
+          "speaker": "Dad",
+          "text": "Every morning? Even in winter?",
+          "translations": {
+            "bn": "রোজ সকালে? শীতেও?",
+            "hi": "हर सुबह? सर्दियों में भी?"
+          }
+        },
+        {
+          "speaker": "Tia",
+          "text": "Yes. What if I look after Auntie’s dog for one month first?",
+          "translations": {
+            "bn": "হ্যাঁ। যদি প্রথমে এক মাস মাসির কুকুরটার দেখাশোনা করি?",
+            "hi": "हाँ। अगर मैं पहले एक महीने मौसी के कुत्ते की देखभाल करूँ तो?"
+          }
+        },
+        {
+          "speaker": "Dad",
+          "text": "Hmm, that’s a clever idea. If you do it every day, we’ll talk again.",
+          "translations": {
+            "bn": "হুম, বুদ্ধিটা ভালো। রোজ করলে আবার কথা হবে।",
+            "hi": "हम्म, यह तो समझदारी वाला विचार है। अगर रोज़ करोगी, तो फिर बात करेंगे।"
+          }
+        },
+        {
+          "speaker": "Tia",
+          "text": "Deal! Thank you, Dad!",
+          "translations": {
+            "bn": "রাজি! ধন্যবাদ, বাবা!",
+            "hi": "पक्का! धन्यवाद, पापा!"
+          }
+        }
+      ],
+      "voices": {
+        "Tia": "female",
+        "Dad": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the manager",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "You wanted to talk about an idea?",
+          "reply": "Yes. I think we should have a short team meeting every Monday.",
+          "cues": {
+            "bn": "ভাবনাটা স্পষ্ট করে বলুন।",
+            "hi": "विचार साफ़-साफ़ बताएँ।"
+          }
+        },
+        {
+          "partner": "Why? We’re already busy.",
+          "reply": "Because it will save time later. Everyone will know the plan.",
+          "cues": {
+            "bn": "সুবিধা বলুন।",
+            "hi": "फ़ायदा बताएँ।"
+          }
+        },
+        {
+          "partner": "I’m worried it will be too long.",
+          "reply": "I understand. What if we keep it to fifteen minutes?",
+          "cues": {
+            "bn": "চিন্তার উত্তরে একটা প্রস্তাব দিন।",
+            "hi": "चिंता का जवाब देते हुए एक सुझाव दें।"
+          }
+        },
+        {
+          "partner": "Fifteen minutes? OK, let’s try it for a month.",
+          "reply": "Great! Thank you for listening.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Learning together",
+            "translations": {
+              "bn": "একসঙ্গে শেখা",
+              "hi": "साथ मिलकर सीखना"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Why should I join your English class?",
+                "reply": "Because practising together is more fun, and we can help each other.",
+                "cues": {
+                  "bn": "দুটো সুবিধা বলুন।",
+                  "hi": "दो फ़ायदे बताएँ।"
+                }
+              },
+              {
+                "partner": "But I don’t have time in the evenings.",
+                "reply": "I understand. The class is on Saturday mornings.",
+                "cues": {
+                  "bn": "চিন্তার উত্তর দিন।",
+                  "hi": "चिंता का जवाब दें।"
+                }
+              },
+              {
+                "partner": "Is it expensive?",
+                "reply": "Not at all. The first class is free, so you can try it.",
+                "cues": {
+                  "bn": "খরচের চিন্তা দূর করুন।",
+                  "hi": "ख़र्च की चिंता दूर करें।"
+                }
+              },
+              {
+                "partner": "Free? OK, I’ll come once.",
+                "reply": "Great! You won’t regret it.",
+                "cues": {
+                  "bn": "খুশি জানান।",
+                  "hi": "ख़ुशी जताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At the market",
+            "translations": {
+              "bn": "বাজারে দরাদরি",
+              "hi": "बाज़ार में मोलभाव"
+            }
+          },
+          "roleplay": {
+            "partner": "the shopkeeper",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "This bag is eight hundred rupees.",
+                "reply": "It’s nice, but that’s too much. Could you do six hundred?",
+                "cues": {
+                  "bn": "দাম কমানোর অনুরোধ করুন।",
+                  "hi": "दाम कम करने का अनुरोध करें।"
+                }
+              },
+              {
+                "partner": "Six hundred? No, I can’t.",
+                "reply": "What if I buy two bags? Could you give me a better price?",
+                "cues": {
+                  "bn": "বেশি কেনার প্রস্তাব দিয়ে দরাদরি করুন।",
+                  "hi": "ज़्यादा ख़रीदने की पेशकश करके मोलभाव करें।"
+                }
+              },
+              {
+                "partner": "Two bags for fourteen hundred.",
+                "reply": "How about thirteen hundred? Then it’s a deal.",
+                "cues": {
+                  "bn": "মাঝামাঝি দাম বলুন।",
+                  "hi": "बीच का दाम बताएँ।"
+                }
+              },
+              {
+                "partner": "OK, thirteen hundred. Deal!",
+                "reply": "Thank you! Deal.",
+                "cues": {
+                  "bn": "চুক্তি পাকা করুন।",
+                  "hi": "सौदा पक्का करें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A team project",
+            "translations": {
+              "bn": "দলের প্রজেক্ট",
+              "hi": "टीम का प्रोजेक्ट"
+            }
+          },
+          "roleplay": {
+            "partner": "Lipika",
+            "asMan": "Lokesh",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I think we should make a poster for our project.",
+                "reply": "A poster is good, but a short video would be better.",
+                "cues": {
+                  "bn": "মেনে নিয়ে নিজের প্রস্তাব দিন।",
+                  "hi": "बात मानें और अपना सुझाव दें।"
+                }
+              },
+              {
+                "partner": "Why a video?",
+                "reply": "Because people remember videos, and we can share it online.",
+                "cues": {
+                  "bn": "সুবিধা বলুন।",
+                  "hi": "फ़ायदे बताएँ।"
+                }
+              },
+              {
+                "partner": "But none of us can edit videos.",
+                "reply": "That’s a fair point. I can learn it this weekend. It’s easy with a phone app.",
+                "cues": {
+                  "bn": "চিন্তার উত্তর দিন।",
+                  "hi": "चिंता का जवाब दें।"
+                }
+              },
+              {
+                "partner": "Hmm, OK. Let’s do both: a poster and a video?",
+                "reply": "Perfect, that’s a great compromise!",
+                "cues": {
+                  "bn": "আপস মেনে নিন।",
+                  "hi": "समझौता मान लें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

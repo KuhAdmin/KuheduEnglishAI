@@ -1,0 +1,805 @@
+{
+  "week": 47,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rakesh",
+          "text": "Good morning. What can I get for you?",
+          "translations": {
+            "bn": "সুপ্রভাত। কী দেব আপনাকে?",
+            "hi": "सुप्रभात। आपको क्या चाहिए?"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "Hi. I need a… oh, what’s it called? The thing you use to turn screws.",
+          "translations": {
+            "bn": "নমস্কার। আমার একটা… ও, কী যেন নাম? যেটা দিয়ে স্ক্রু ঘোরায়।",
+            "hi": "नमस्ते। मुझे एक… अरे, उसे क्या कहते हैं? वह चीज़ जिससे पेच घुमाते हैं।"
+          }
+        },
+        {
+          "speaker": "Rakesh",
+          "text": "A screwdriver?",
+          "translations": {
+            "bn": "স্ক্রুড্রাইভার?",
+            "hi": "पेचकस?"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "Yes, a screwdriver! Sorry, the word just went out of my head.",
+          "translations": {
+            "bn": "হ্যাঁ, স্ক্রুড্রাইভার! মাফ করবেন, শব্দটা মাথা থেকে বেরিয়ে গিয়েছিল।",
+            "hi": "हाँ, पेचकस! माफ़ कीजिए, शब्द दिमाग़ से निकल गया था।"
+          }
+        },
+        {
+          "speaker": "Rakesh",
+          "text": "No problem. What are you doing at home?",
+          "translations": {
+            "bn": "কোনো অসুবিধা নেই। বাড়িতে কী করছেন?",
+            "hi": "कोई बात नहीं। घर पर क्या कर रही हैं?"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "I’m doing some repairs. I need to fix a shelf and make a hole in the wall.",
+          "translations": {
+            "bn": "কিছু মেরামতের কাজ করছি। একটা তাক লাগাতে হবে, আর দেওয়ালে একটা ফুটো করতে হবে।",
+            "hi": "कुछ मरम्मत का काम कर रही हूँ। एक शेल्फ़ लगानी है और दीवार में एक छेद करना है।"
+          }
+        },
+        {
+          "speaker": "Rakesh",
+          "text": "Then you’ll need a drill too. Do you have one?",
+          "translations": {
+            "bn": "তাহলে একটা ড্রিলও লাগবে। আছে আপনার?",
+            "hi": "तो आपको ड्रिल भी चाहिए होगी। आपके पास है?"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "No. Is it the machine that goes round and round very fast?",
+          "translations": {
+            "bn": "না। ওটা কি সেই যন্ত্র, যেটা খুব জোরে ঘোরে?",
+            "hi": "नहीं। क्या वह मशीन है जो बहुत तेज़ी से गोल-गोल घूमती है?"
+          }
+        },
+        {
+          "speaker": "Rakesh",
+          "text": "That’s it. This one is light and easy to use.",
+          "translations": {
+            "bn": "ঠিক ধরেছেন। এটা হালকা আর ব্যবহার করা সহজ।",
+            "hi": "वही। यह वाली हल्की है और इस्तेमाल में आसान।"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "It looks great. Actually, “great” isn’t the right word. It looks practical.",
+          "translations": {
+            "bn": "দারুণ দেখতে। আসলে, “দারুণ” ঠিক শব্দ নয়। কাজের জিনিস মনে হচ্ছে।",
+            "hi": "बढ़िया दिखती है। दरअसल, “बढ़िया” सही शब्द नहीं है। काम की लगती है।"
+          }
+        },
+        {
+          "speaker": "Rakesh",
+          "text": "Ha! It is. Anything else?",
+          "translations": {
+            "bn": "হা হা! তা তো বটেই। আর কিছু?",
+            "hi": "हा हा! है तो। और कुछ?"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "Yes, those small metal things… not nails, but similar, with a line going round them.",
+          "translations": {
+            "bn": "হ্যাঁ, ওই ছোট ধাতুর জিনিসগুলো… পেরেক নয়, তবে ওরকমই, গায়ে প্যাঁচানো দাগ।",
+            "hi": "हाँ, वे छोटी धातु की चीज़ें… कीलें नहीं, पर वैसी ही, जिन पर चारों ओर घुमावदार लकीर होती है।"
+          }
+        },
+        {
+          "speaker": "Rakesh",
+          "text": "Screws! How many do you need?",
+          "translations": {
+            "bn": "স্ক্রু! কটা লাগবে?",
+            "hi": "पेच! कितने चाहिए?"
+          }
+        },
+        {
+          "speaker": "Anita",
+          "text": "About twenty, please. Thank you for being so patient.",
+          "translations": {
+            "bn": "গোটা কুড়ি। এত ধৈর্য ধরার জন্য ধন্যবাদ।",
+            "hi": "लगभग बीस। इतने धीरज के लिए धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Rakesh",
+          "text": "Not at all. You explained everything very clearly.",
+          "translations": {
+            "bn": "না না। আপনি সব খুব স্পষ্ট বুঝিয়ে বলেছেন।",
+            "hi": "अरे नहीं। आपने सब कुछ बहुत साफ़ समझाया।"
+          }
+        }
+      ],
+      "voices": {
+        "Rakesh": "male",
+        "Anita": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "make a mistake",
+          "phonetic": "/meɪk ə mɪˈsteɪk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভুল করা",
+            "hi": "ग़लती करना"
+          },
+          "syllables": ["make", "a", "mis", "take"],
+          "stress": 4,
+          "tips": {
+            "bn": ["“take” জোর দিয়ে বলুন।", "বলা হয় “make a mistake”, কখনও “do a mistake” নয়।"],
+            "en": ["Say “take” stronger.", "We say “make a mistake”, never “do a mistake”."],
+            "hi": ["“take” ज़ोर से बोलें।", "“make a mistake” कहते हैं, “do a mistake” कभी नहीं।"]
+          }
+        },
+        {
+          "word": "do homework",
+          "phonetic": "/duː ˈhəʊmwɜːk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বাড়ির কাজ করা",
+            "hi": "होमवर्क करना"
+          },
+          "syllables": ["do", "home", "work"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“home” জোর দিয়ে বলুন।", "homework-এর সঙ্গে “do”, “make” নয়।"],
+            "en": ["Say “home” stronger.", "We “do” homework, not “make” it."],
+            "hi": ["“home” ज़ोर से बोलें।", "homework के साथ “do”, “make” नहीं।"]
+          }
+        },
+        {
+          "word": "take a photo",
+          "phonetic": "/teɪk ə ˈfəʊtəʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ছবি তোলা",
+            "hi": "फ़ोटो खींचना"
+          },
+          "syllables": ["take", "a", "pho", "to"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“pho” জোর দিয়ে বলুন।", "ছবির সঙ্গে “take”।"],
+            "en": ["Say “pho” stronger.", "We “take” a photo."],
+            "hi": ["“pho” ज़ोर से बोलें।", "फ़ोटो के साथ “take”।"]
+          }
+        },
+        {
+          "word": "have a break",
+          "phonetic": "/hæv ə ˈbreɪk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বিরতি নেওয়া",
+            "hi": "थोड़ा आराम करना"
+          },
+          "syllables": ["have", "a", "break"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“break” জোর দিয়ে বলুন।", "“Let’s have a break” মানে একটু থেমে বিশ্রাম নিই।"],
+            "en": ["Say “break” stronger.", "“Let’s have a break” means let’s stop and rest."],
+            "hi": ["“break” ज़ोर से बोलें।", "“Let’s have a break” मतलब थोड़ा रुककर आराम करें।"]
+          }
+        },
+        {
+          "word": "catch a bus",
+          "phonetic": "/kætʃ ə ˈbʌs/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বাস ধরা",
+            "hi": "बस पकड़ना"
+          },
+          "syllables": ["catch", "a", "bus"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“bus” জোর দিয়ে বলুন।", "বাস বা ট্রেনের সঙ্গে “catch”: সময়মতো ওঠা।"],
+            "en": ["Say “bus” stronger.", "You “catch” a bus or a train: you get on it in time."],
+            "hi": ["“bus” ज़ोर से बोलें।", "बस या ट्रेन के साथ “catch”: समय पर चढ़ना।"]
+          }
+        },
+        {
+          "word": "pay attention",
+          "phonetic": "/peɪ əˈtenʃn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মন দেওয়া",
+            "hi": "ध्यान देना"
+          },
+          "syllables": ["pay", "at", "ten", "tion"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“ten” জোর দিয়ে বলুন।", "attention-এর সঙ্গে “pay”: মন দিয়ে শোনা আর দেখা।"],
+            "en": ["Say “ten” stronger.", "We “pay” attention: we listen and look carefully."],
+            "hi": ["“ten” ज़ोर से बोलें।", "attention के साथ “pay”: ध्यान से सुनना और देखना।"]
+          }
+        },
+        {
+          "word": "heavy rain",
+          "phonetic": "/ˌhevi ˈreɪn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভারী বৃষ্টি",
+            "hi": "तेज़ बारिश"
+          },
+          "syllables": ["heav", "y", "rain"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“rain” জোর দিয়ে বলুন।", "বলা হয় “heavy rain”, “big rain” নয়।"],
+            "en": ["Say “rain” stronger.", "We say “heavy rain”, not “big rain”."],
+            "hi": ["“rain” ज़ोर से बोलें।", "“heavy rain” कहते हैं, “big rain” नहीं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "The film was fascinating, and the music was beautiful.",
+          "alsoAccepted": [
+            "The movie was fascinating, and the music was beautiful.",
+            "The film was fascinating and the music was beautiful."
+          ],
+          "translations": {
+            "bn": "সিনেমাটা দারুণ আকর্ষণীয় ছিল, আর গানবাজনা ছিল সুন্দর।",
+            "hi": "फ़िल्म बेहद दिलचस्प थी, और संगीत ख़ूबसूरत था।"
+          },
+          "tips": {
+            "bn": ["প্রতিটা ভালো জিনিসের জন্য আলাদা শব্দ বলুন।", "বারবার “very good” নয়।"],
+            "en": ["Use a different word for each good thing.", "Not “very good … very good”."],
+            "hi": ["हर अच्छी चीज़ के लिए अलग शब्द बोलें।", "बार-बार “very good” नहीं।"]
+          }
+        },
+        {
+          "english": "It was freezing outside, so the children stayed indoors.",
+          "alsoAccepted": [
+            "It was freezing outside, so the children stayed inside.",
+            "It was freezing outside so the children stayed indoors."
+          ],
+          "translations": {
+            "bn": "বাইরে কনকনে ঠান্ডা ছিল, তাই বাচ্চারা ঘরেই ছিল।",
+            "hi": "बाहर कड़ाके की ठंड थी, इसलिए बच्चे घर के अंदर ही रहे।"
+          },
+          "tips": {
+            "bn": [
+              "“freezing” “very cold”-এর চেয়ে জোরালো।",
+              "একটা জোরালো শব্দ “very, very”-র চেয়ে ভালো।"
+            ],
+            "en": [
+              "“freezing” is stronger than “very cold”.",
+              "One strong word beats “very, very”."
+            ],
+            "hi": [
+              "“freezing” “very cold” से ज़्यादा असरदार है।",
+              "एक असरदार शब्द “very, very” से बेहतर है।"
+            ]
+          }
+        },
+        {
+          "english": "I’m exhausted after such a long day.",
+          "alsoAccepted": ["I am exhausted after such a long day."],
+          "translations": {
+            "bn": "এত লম্বা দিনের পরে আমি একেবারে ক্লান্ত।",
+            "hi": "इतने लंबे दिन के बाद मुझमें ज़रा भी ताक़त नहीं बची।"
+          },
+          "tips": {
+            "bn": ["“exhausted” মানে খুবই ক্লান্ত।", "“very tired”-এর চেয়ে স্বাভাবিক শোনায়।"],
+            "en": [
+              "“exhausted” means very, very tired.",
+              "It sounds more natural than “very tired”."
+            ],
+            "hi": ["“exhausted” मतलब बेहद थकान।", "यह “very tired” से ज़्यादा सहज लगता है।"]
+          }
+        },
+        {
+          "english": "The food was delicious, and the service was excellent.",
+          "alsoAccepted": ["The food was delicious and the service was excellent."],
+          "translations": {
+            "bn": "খাবারটা খুব সুস্বাদু ছিল, আর পরিষেবা ছিল চমৎকার।",
+            "hi": "खाना लज़ीज़ था, और सेवा बेहतरीन थी।"
+          },
+          "tips": {
+            "bn": ["“delicious” খাবারের জন্য।", "“excellent” পরিষেবা বা কাজের জন্য।"],
+            "en": ["“delicious” is for food.", "“excellent” is for service or work."],
+            "hi": ["“delicious” खाने के लिए।", "“excellent” सेवा या काम के लिए।"]
+          }
+        },
+        {
+          "english": "This task is challenging, but it’s worth trying.",
+          "alsoAccepted": [
+            "This task is challenging, but it is worth trying.",
+            "This task is difficult, but it’s worth trying."
+          ],
+          "translations": {
+            "bn": "কাজটা কঠিন, কিন্তু চেষ্টা করে দেখার মতো।",
+            "hi": "यह काम चुनौती भरा है, पर कोशिश करने लायक़ है।"
+          },
+          "tips": {
+            "bn": [
+              "“challenging” মানে কঠিন, তবে ভালো অর্থে।",
+              "“worth trying” মানে চেষ্টা করা ভালো।"
+            ],
+            "en": [
+              "“challenging” is a positive way to say “hard”.",
+              "“worth trying” means it is a good idea to try."
+            ],
+            "hi": [
+              "“challenging” मतलब मुश्किल, पर अच्छे अर्थ में।",
+              "“worth trying” मतलब कोशिश करना अच्छा है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the pharmacist",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello. What do you need today?",
+          "reply": "I need the thing you put in your mouth to check if you have a fever.",
+          "cues": {
+            "bn": "শব্দটা মনে নেই; জিনিসটা কী কাজে লাগে বুঝিয়ে বলুন।",
+            "hi": "शब्द याद नहीं; बताएँ कि वह चीज़ किस काम आती है।"
+          }
+        },
+        {
+          "partner": "A thermometer?",
+          "reply": "Yes, a thermometer! Thank you.",
+          "cues": {
+            "bn": "ঠিক শব্দটা পেয়ে হ্যাঁ বলুন।",
+            "hi": "सही शब्द मिलने पर हामी भरें।"
+          }
+        },
+        {
+          "partner": "Anything else?",
+          "reply": "Yes, the soft white cloth you wrap around a cut. I don’t know the word.",
+          "cues": {
+            "bn": "আরেকটা জিনিস বর্ণনা করুন: কেমন দেখতে আর কী কাজে লাগে।",
+            "hi": "एक और चीज़ का वर्णन करें: कैसी दिखती है और किस काम आती है।"
+          }
+        },
+        {
+          "partner": "Oh, you mean a bandage.",
+          "reply": "That’s it, a bandage. And something for a sore throat, please.",
+          "cues": {
+            "bn": "শব্দটা আবার বলে আরেকটা জিনিস চান।",
+            "hi": "शब्द दोहराएँ और एक और चीज़ माँगें।"
+          }
+        },
+        {
+          "partner": "These sweets help a sore throat. Take one every three hours.",
+          "reply": "One every three hours. Are they OK for children?",
+          "cues": {
+            "bn": "নিয়মটা আবার বলে একটা প্রশ্ন করুন।",
+            "hi": "नियम दोहराएँ और एक सवाल पूछें।"
+          }
+        },
+        {
+          "partner": "Yes, for children over six.",
+          "reply": "Great. Thanks for understanding me so well.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Express the Same Idea in Different Ways",
+        "translations": {
+          "bn": "একই কথা নানাভাবে বলুন",
+          "hi": "एक ही बात अलग-अलग ढंग से कहें"
+        }
+      },
+      "instruction": {
+        "text": "Choose an everyday thing, like a phone. Describe it three ways, without using its name.",
+        "translations": {
+          "bn": "রোজকার একটা জিনিস বাছুন, যেমন ফোন। নাম না বলে তিনভাবে বর্ণনা করুন।",
+          "hi": "रोज़ की कोई चीज़ चुनें, जैसे फ़ोन। उसका नाम लिए बिना तीन तरह से उसका वर्णन करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what it is used for",
+          "translations": {
+            "bn": "কী কাজে লাগে বলুন",
+            "hi": "बताएँ कि वह किस काम आती है"
+          }
+        },
+        {
+          "text": "Describe how it looks and feels",
+          "translations": {
+            "bn": "কেমন দেখতে আর ছুঁলে কেমন লাগে বলুন",
+            "hi": "बताएँ कि वह कैसी दिखती है और छूने में कैसी लगती है"
+          }
+        },
+        {
+          "text": "Compare it with something similar",
+          "translations": {
+            "bn": "একই রকম কোনো কিছুর সঙ্গে তুলনা করুন",
+            "hi": "किसी मिलती-जुलती चीज़ से तुलना करें"
+          }
+        },
+        {
+          "text": "Say one idea again in other words",
+          "translations": {
+            "bn": "একটা কথা অন্য শব্দে আবার বলুন",
+            "hi": "एक बात दूसरे शब्दों में दोबारा कहें"
+          }
+        },
+        {
+          "text": "Use a stronger word instead of “very good”",
+          "translations": {
+            "bn": "“very good”-এর বদলে আরও জোরালো শব্দ বলুন",
+            "hi": "“very good” की जगह कोई ज़्यादा असरदार शब्द बोलें"
+          }
+        }
+      ],
+      "phrases": [
+        "It’s the thing you use to …",
+        "It’s a kind of …",
+        "It looks like …",
+        "In other words, …",
+        "What I mean is …",
+        "It’s similar to …, but …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which is correct?",
+            "translations": {
+              "bn": "কোনটা ঠিক?",
+              "hi": "कौन-सा सही है?"
+            }
+          },
+          "answer": "make a mistake",
+          "others": ["do a mistake", "take a mistake"]
+        },
+        {
+          "question": {
+            "text": "Choose: “Let’s ___ a photo.”",
+            "translations": {
+              "bn": "বাছুন: “Let’s ___ a photo.”",
+              "hi": "चुनें: “Let’s ___ a photo.”"
+            }
+          },
+          "answer": "take",
+          "others": ["do", "make"]
+        },
+        {
+          "question": {
+            "text": "Which word is stronger than “very tired”?",
+            "translations": {
+              "bn": "কোন শব্দ “very tired”-এর চেয়ে জোরালো?",
+              "hi": "कौन-सा शब्द “very tired” से ज़्यादा असरदार है?"
+            }
+          },
+          "answer": "exhausted",
+          "others": ["tired", "sleepy"]
+        },
+        {
+          "question": {
+            "text": "You forgot the word “umbrella”. What can you say?",
+            "translations": {
+              "bn": "“umbrella” শব্দটা ভুলে গেছেন। কী বলতে পারেন?",
+              "hi": "“umbrella” शब्द याद नहीं आ रहा। क्या कह सकते हैं?"
+            }
+          },
+          "answer": "The thing you hold over your head in the rain",
+          "others": ["I don’t know. Sorry.", "Rain thing no."]
+        },
+        {
+          "question": {
+            "text": "Which phrase helps you say something again in another way?",
+            "translations": {
+              "bn": "কোন কথা দিয়ে একই জিনিস অন্যভাবে বলা যায়?",
+              "hi": "किस वाक्यांश से कोई बात दूसरे ढंग से दोबारा कह सकते हैं?"
+            }
+          },
+          "answer": "What I mean is …",
+          "others": ["See you later.", "Not at all."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Joel",
+          "text": "How was your trip to Kerala?",
+          "translations": {
+            "bn": "কেরালা বেড়ানো কেমন হলো?",
+            "hi": "केरल की यात्रा कैसी रही?"
+          }
+        },
+        {
+          "speaker": "Sameera",
+          "text": "Amazing! The beaches were stunning, and the people were so welcoming.",
+          "translations": {
+            "bn": "অসাধারণ! সমুদ্রসৈকতগুলো অপূর্ব, আর মানুষজন খুব আন্তরিক।",
+            "hi": "शानदार! समुद्र तट बेहद ख़ूबसूरत थे, और लोग बहुत मेहमाननवाज़।"
+          }
+        },
+        {
+          "speaker": "Joel",
+          "text": "And the food?",
+          "translations": {
+            "bn": "আর খাবার?",
+            "hi": "और खाना?"
+          }
+        },
+        {
+          "speaker": "Sameera",
+          "text": "Delicious. There was one dish with… oh, what’s the word? The big brown fruit, white inside, with water in it.",
+          "translations": {
+            "bn": "সুস্বাদু। একটা পদে ছিল… ও, কী যেন বলে? ওই বড় বাদামি ফল, ভেতরে সাদা, আর জল থাকে।",
+            "hi": "लज़ीज़। एक पकवान में था… अरे, उसे क्या कहते हैं? वह बड़ा भूरा फल, अंदर से सफ़ेद, और उसमें पानी होता है।"
+          }
+        },
+        {
+          "speaker": "Joel",
+          "text": "A coconut?",
+          "translations": {
+            "bn": "নারকেল?",
+            "hi": "नारियल?"
+          }
+        },
+        {
+          "speaker": "Sameera",
+          "text": "Yes, coconut! Almost every dish had coconut milk in it.",
+          "translations": {
+            "bn": "হ্যাঁ, নারকেল! প্রায় সব পদেই নারকেলের দুধ ছিল।",
+            "hi": "हाँ, नारियल! लगभग हर पकवान में नारियल का दूध था।"
+          }
+        },
+        {
+          "speaker": "Joel",
+          "text": "Was it spicy?",
+          "translations": {
+            "bn": "ঝাল ছিল?",
+            "hi": "तीखा था?"
+          }
+        },
+        {
+          "speaker": "Sameera",
+          "text": "Some of it was quite hot. Not just a bit spicy: really fiery!",
+          "translations": {
+            "bn": "কিছু বেশ ঝাল। একটু ঝাল নয়: একেবারে আগুন!",
+            "hi": "कुछ तो काफ़ी तीखा था। थोड़ा-सा नहीं: एकदम आग जैसा!"
+          }
+        },
+        {
+          "speaker": "Joel",
+          "text": "Ha! What else did you do?",
+          "translations": {
+            "bn": "হা হা! আর কী করলে?",
+            "hi": "हा हा! और क्या किया?"
+          }
+        },
+        {
+          "speaker": "Sameera",
+          "text": "We took a boat on the backwaters. In other words, the quiet rivers between the villages.",
+          "translations": {
+            "bn": "ব্যাকওয়াটারে নৌকায় ঘুরলাম। মানে, গ্রামগুলোর মাঝের শান্ত নদীপথ।",
+            "hi": "हमने बैकवॉटर में नाव की सैर की। दूसरे शब्दों में, गाँवों के बीच की शांत नदियाँ।"
+          }
+        },
+        {
+          "speaker": "Joel",
+          "text": "That sounds peaceful. You described it so well, I want to go now.",
+          "translations": {
+            "bn": "শুনেই শান্তি লাগছে। এত সুন্দর বললে, এখনই যেতে ইচ্ছে করছে।",
+            "hi": "सुनकर ही सुकून मिलता है। तुमने इतना अच्छा बताया कि अभी जाने का मन कर रहा है।"
+          }
+        }
+      ],
+      "voices": {
+        "Joel": "male",
+        "Sameera": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Raghav",
+      "asWoman": "Radhika",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "How was the concert last night?",
+          "reply": "It was brilliant. The singer was fantastic, and the crowd was full of energy.",
+          "cues": {
+            "bn": "আলাদা আলাদা প্রশংসার শব্দে বলুন।",
+            "hi": "तारीफ़ के अलग-अलग शब्दों में बताएँ।"
+          }
+        },
+        {
+          "partner": "Was it crowded?",
+          "reply": "Yes, it was packed. There was hardly any room to move.",
+          "cues": {
+            "bn": "ভিড়ের কথা আরও জোরালো শব্দে বলুন।",
+            "hi": "भीड़ की बात ज़्यादा असरदार शब्द में कहें।"
+          }
+        },
+        {
+          "partner": "How did you get home?",
+          "reply": "We caught the last bus, which was nearly empty.",
+          "cues": {
+            "bn": "বাড়ি ফেরার কথা বলুন।",
+            "hi": "बताएँ कि घर वापसी कैसे हुई।"
+          }
+        },
+        {
+          "partner": "Would you go again?",
+          "reply": "Definitely. It was the best evening I’ve had in months.",
+          "cues": {
+            "bn": "জোর দিয়ে হ্যাঁ বলুন।",
+            "hi": "पूरे यक़ीन से हाँ कहें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Describing a pain",
+            "translations": {
+              "bn": "ব্যথার বর্ণনা",
+              "hi": "दर्द का वर्णन"
+            }
+          },
+          "roleplay": {
+            "partner": "the doctor",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Where does it hurt?",
+                "reply": "Here, at the back of my leg, between the knee and the foot.",
+                "cues": {
+                  "bn": "শব্দ না জানলে জায়গাটা বুঝিয়ে বলুন।",
+                  "hi": "शब्द न आए तो जगह समझाएँ।"
+                }
+              },
+              {
+                "partner": "Ah, your calf. What kind of pain is it?",
+                "reply": "It’s a sharp pain, like a needle, when I walk.",
+                "cues": {
+                  "bn": "ব্যথাটা কেমন, তুলনা দিয়ে বলুন।",
+                  "hi": "दर्द कैसा है, तुलना करके बताएँ।"
+                }
+              },
+              {
+                "partner": "When did it start?",
+                "reply": "Three days ago, after I played football.",
+                "cues": {
+                  "bn": "কবে শুরু হয়েছিল বলুন।",
+                  "hi": "बताएँ कि कब शुरू हुआ।"
+                }
+              },
+              {
+                "partner": "It sounds like a pulled muscle. Rest it for a week.",
+                "reply": "So, I should rest it and not play for a week. Thank you.",
+                "cues": {
+                  "bn": "পরামর্শটা নিজের ভাষায় আবার বলুন।",
+                  "hi": "सलाह अपने शब्दों में दोहराएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Finding a kitchen tool",
+            "translations": {
+              "bn": "রান্নাঘরের জিনিস খোঁজা",
+              "hi": "रसोई का सामान ढूँढना"
+            }
+          },
+          "roleplay": {
+            "partner": "the shop assistant",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Can I help you find something?",
+                "reply": "Yes, I’m looking for the thing you use to take the skin off potatoes.",
+                "cues": {
+                  "bn": "জিনিসটা কী কাজে লাগে বলুন।",
+                  "hi": "बताएँ कि वह चीज़ किस काम आती है।"
+                }
+              },
+              {
+                "partner": "A peeler? They’re over here.",
+                "reply": "Yes, a peeler! Do you have one that’s easy to hold?",
+                "cues": {
+                  "bn": "শব্দটা আবার বলে একটা প্রশ্ন করুন।",
+                  "hi": "शब्द दोहराएँ और एक सवाल पूछें।"
+                }
+              },
+              {
+                "partner": "This one has a soft handle.",
+                "reply": "Perfect. I also need a big bowl with small holes, for washing rice.",
+                "cues": {
+                  "bn": "আরেকটা জিনিস বর্ণনা করুন।",
+                  "hi": "एक और चीज़ का वर्णन करें।"
+                }
+              },
+              {
+                "partner": "Oh, a strainer. Here you go.",
+                "reply": "A strainer. Thank you, that’s exactly what I meant.",
+                "cues": {
+                  "bn": "নতুন শব্দটা বলে ধন্যবাদ দিন।",
+                  "hi": "नया शब्द दोहराएँ और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Explaining a festival",
+            "translations": {
+              "bn": "উৎসবের কথা বোঝানো",
+              "hi": "त्योहार के बारे में समझाना"
+            }
+          },
+          "roleplay": {
+            "partner": "Emma",
+            "asMan": "Ethan",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "What is Holi? I’ve never heard of it.",
+                "reply": "It’s a spring festival in India, when people throw coloured powder at each other.",
+                "cues": {
+                  "bn": "সহজ কথায় উৎসবটা বুঝিয়ে বলুন।",
+                  "hi": "आसान शब्दों में त्योहार समझाएँ।"
+                }
+              },
+              {
+                "partner": "Why do they do that?",
+                "reply": "It celebrates the end of winter. In other words, it’s a happy welcome to spring.",
+                "cues": {
+                  "bn": "কারণ বলুন, তারপর অন্যভাবে আবার বলুন।",
+                  "hi": "वजह बताएँ, फिर दूसरे ढंग से दोहराएँ।"
+                }
+              },
+              {
+                "partner": "Is there special food?",
+                "reply": "Yes, there are sweets like gujiya. It’s a kind of sweet dumpling.",
+                "cues": {
+                  "bn": "খাবারের নাম বলে বুঝিয়ে দিন।",
+                  "hi": "पकवान का नाम बताएँ और समझाएँ।"
+                }
+              },
+              {
+                "partner": "It sounds wonderful!",
+                "reply": "It is. You should come and join us next year.",
+                "cues": {
+                  "bn": "আমন্ত্রণ জানান।",
+                  "hi": "न्योता दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

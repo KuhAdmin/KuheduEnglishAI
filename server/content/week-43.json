@@ -1,0 +1,781 @@
+{
+  "week": 43,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Priya",
+          "text": "Good morning, everyone. Before we start, let’s welcome Sunil, who joined us this week.",
+          "translations": {
+            "bn": "সবাইকে সুপ্রভাত। শুরু করার আগে সুনীলকে স্বাগত জানাই, উনি এ সপ্তাহে যোগ দিয়েছেন।",
+            "hi": "सभी को सुप्रभात। शुरू करने से पहले सुनील का स्वागत करते हैं, जो इस हफ़्ते हमसे जुड़े हैं।"
+          }
+        },
+        {
+          "speaker": "Sunil",
+          "text": "Thank you, Priya. Hello, everyone. I’m Sunil Mehta, and I’m the new data analyst.",
+          "translations": {
+            "bn": "ধন্যবাদ, প্রিয়া। সবাইকে নমস্কার। আমি সুনীল মেহতা, নতুন ডেটা অ্যানালিস্ট।",
+            "hi": "धन्यवाद, प्रिया। सभी को नमस्ते। मैं सुनील मेहता हूँ, नया डेटा एनालिस्ट।"
+          }
+        },
+        {
+          "speaker": "Priya",
+          "text": "Sunil, could you tell us a little about your role?",
+          "translations": {
+            "bn": "সুনীল, আপনার কাজ সম্পর্কে একটু বলবেন?",
+            "hi": "सुनील, क्या आप अपनी भूमिका के बारे में थोड़ा बताएँगे?"
+          }
+        },
+        {
+          "speaker": "Sunil",
+          "text": "Sure. I’m responsible for the sales reports. I collect the numbers every week and look for trends.",
+          "translations": {
+            "bn": "নিশ্চয়ই। বিক্রির রিপোর্টের দায়িত্ব আমার। প্রতি সপ্তাহে সংখ্যাগুলো জোগাড় করে কোন দিকে যাচ্ছে দেখি।",
+            "hi": "ज़रूर। बिक्री की रिपोर्टें मेरी ज़िम्मेदारी हैं। मैं हर हफ़्ते आँकड़े जुटाता हूँ और रुझान देखता हूँ।"
+          }
+        },
+        {
+          "speaker": "Priya",
+          "text": "Great. Now, let’s look at the website project. Where are we?",
+          "translations": {
+            "bn": "দারুণ। এবার ওয়েবসাইট প্রজেক্টটা দেখি। কাজ কোথায় দাঁড়িয়ে?",
+            "hi": "बढ़िया। अब वेबसाइट प्रोजेक्ट देखते हैं। काम कहाँ तक पहुँचा?"
+          }
+        },
+        {
+          "speaker": "Sunil",
+          "text": "Can I ask a question first? When is the deadline?",
+          "translations": {
+            "bn": "আগে একটা প্রশ্ন করতে পারি? শেষ সময়সীমা কবে?",
+            "hi": "क्या मैं पहले एक सवाल पूछ सकता हूँ? आख़िरी तारीख़ कब है?"
+          }
+        },
+        {
+          "speaker": "Priya",
+          "text": "Good question. It’s the thirtieth of this month.",
+          "translations": {
+            "bn": "ভালো প্রশ্ন। এ মাসের তিরিশ তারিখ।",
+            "hi": "अच्छा सवाल। इस महीने की तीस तारीख़।"
+          }
+        },
+        {
+          "speaker": "Sunil",
+          "text": "Thanks. Then I’d like to suggest something: I can prepare the visitor numbers by Friday.",
+          "translations": {
+            "bn": "ধন্যবাদ। তাহলে একটা প্রস্তাব দিই: শুক্রবারের মধ্যে আমি ভিজিটরের সংখ্যা তৈরি করে দিতে পারি।",
+            "hi": "धन्यवाद। तो मेरा एक सुझाव है: मैं शुक्रवार तक विज़िटर के आँकड़े तैयार कर सकता हूँ।"
+          }
+        },
+        {
+          "speaker": "Priya",
+          "text": "That would really help. Ravi gave me an update yesterday: the design is finished.",
+          "translations": {
+            "bn": "খুব কাজে লাগবে। রবি কাল জানিয়েছেন, ডিজাইন শেষ।",
+            "hi": "इससे बहुत मदद मिलेगी। रवि ने कल बताया कि डिज़ाइन पूरा हो गया है।"
+          }
+        },
+        {
+          "speaker": "Sunil",
+          "text": "So the next step is testing?",
+          "translations": {
+            "bn": "তাহলে এরপর পরীক্ষা?",
+            "hi": "तो अगला क़दम टेस्टिंग है?"
+          }
+        },
+        {
+          "speaker": "Priya",
+          "text": "Exactly. Testing starts on Monday. Any other points?",
+          "translations": {
+            "bn": "একদম। সোমবার থেকে পরীক্ষা শুরু। আর কিছু?",
+            "hi": "बिल्कुल। टेस्टिंग सोमवार से शुरू होगी। कोई और बात?"
+          }
+        },
+        {
+          "speaker": "Sunil",
+          "text": "Just one. Who should I send the report to?",
+          "translations": {
+            "bn": "একটাই। রিপোর্টটা কাকে পাঠাব?",
+            "hi": "बस एक। रिपोर्ट किसे भेजूँ?"
+          }
+        },
+        {
+          "speaker": "Priya",
+          "text": "Send it to me, and copy the whole team. So, next steps: Sunil’s report on Friday, and testing on Monday.",
+          "translations": {
+            "bn": "আমাকে পাঠান, আর পুরো দলকে কপি দিন। তাহলে পরের ধাপ: শুক্রবার সুনীলের রিপোর্ট, আর সোমবার পরীক্ষা।",
+            "hi": "मुझे भेजिए, और पूरी टीम को कॉपी कीजिए। तो अगले क़दम: शुक्रवार को सुनील की रिपोर्ट, और सोमवार को टेस्टिंग।"
+          }
+        },
+        {
+          "speaker": "Sunil",
+          "text": "Sounds good. Thanks, everyone.",
+          "translations": {
+            "bn": "ঠিক আছে। সবাইকে ধন্যবাদ।",
+            "hi": "ठीक है। सभी का धन्यवाद।"
+          }
+        }
+      ],
+      "voices": {
+        "Priya": "female",
+        "Sunil": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "responsible",
+          "phonetic": "/rɪˈspɒnsəbl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দায়িত্বপ্রাপ্ত",
+            "hi": "ज़िम्मेदार"
+          },
+          "syllables": ["re", "spon", "si", "ble"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন: “I’m responsible for …”"],
+            "en": ["Say the second part stronger.", "Say: “I’m responsible for …”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें: “I’m responsible for …”"]
+          }
+        },
+        {
+          "word": "in charge of",
+          "phonetic": "/ɪn ˈtʃɑːdʒ əv/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "…-এর দায়িত্বে",
+            "hi": "… का इंचार्ज"
+          },
+          "syllables": ["in", "charge", "of"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“charge” জোর দিয়ে বলুন।", "বলুন: “I’m in charge of the new staff.”"],
+            "en": ["Say “charge” stronger.", "Say: “I’m in charge of the new staff.”"],
+            "hi": ["“charge” ज़ोर से बोलें।", "कहें: “I’m in charge of the new staff.”"]
+          }
+        },
+        {
+          "word": "deal with",
+          "phonetic": "/ˈdiːl wɪð/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সামলানো",
+            "hi": "निपटना, संभालना"
+          },
+          "syllables": ["deal", "with"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “I deal with customer complaints.”"],
+            "en": ["Say the first part stronger.", "Say: “I deal with customer complaints.”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “I deal with customer complaints.”"]
+          }
+        },
+        {
+          "word": "report to",
+          "phonetic": "/rɪˈpɔːt tə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "…-এর অধীনে কাজ করা",
+            "hi": "… के अधीन काम करना"
+          },
+          "syllables": ["re", "port", "to"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "“port” জোর দিয়ে বলুন।",
+              "“I report to the manager” মানে ম্যানেজার আপনার ওপরওয়ালা।"
+            ],
+            "en": [
+              "Say “port” stronger.",
+              "“I report to the manager” means the manager is your boss."
+            ],
+            "hi": ["“port” ज़ोर से बोलें।", "“I report to the manager” मतलब मैनेजर आपके बॉस हैं।"]
+          }
+        },
+        {
+          "word": "colleague",
+          "phonetic": "/ˈkɒliːɡ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সহকর্মী",
+            "hi": "सहकर्मी"
+          },
+          "syllables": ["col", "leag(ue)"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "শেষের “ue” উচ্চারণ হয় না।"],
+            "en": ["Say the first part stronger.", "The “ue” at the end is not said."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "आख़िरी “ue” नहीं बोला जाता।"]
+          }
+        },
+        {
+          "word": "deadline",
+          "phonetic": "/ˈdedlaɪn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "শেষ সময়সীমা",
+            "hi": "आख़िरी तारीख़"
+          },
+          "syllables": ["dead", "line"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "কাজ শেষ করার শেষ দিন।"],
+            "en": ["Say the first part stronger.", "A deadline is the last day to finish a task."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "काम पूरा करने का आख़िरी दिन।"]
+          }
+        },
+        {
+          "word": "task",
+          "phonetic": "/tɑːsk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কাজ",
+            "hi": "काम"
+          },
+          "syllables": ["task"],
+          "stress": null,
+          "tips": {
+            "bn": ["শেষে “sk” একসঙ্গে বলুন।", "একটা নির্দিষ্ট কাজকে task বলে।"],
+            "en": ["Say “sk” together at the end.", "A task is one piece of work."],
+            "hi": ["आख़िर में “sk” एक साथ बोलें।", "एक काम को task कहते हैं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Could I add something to that?",
+          "alsoAccepted": ["Can I add something to that?", "May I add something to that?"],
+          "translations": {
+            "bn": "আমি কি এর সঙ্গে কিছু যোগ করতে পারি?",
+            "hi": "क्या मैं इसमें कुछ जोड़ूँ?"
+          },
+          "tips": {
+            "bn": ["নিজের কথা যোগ করার আগে জিজ্ঞেস করুন।", "মিটিংয়ে এটা ভদ্র শোনায়।"],
+            "en": ["Ask before you add your point.", "It sounds polite in a meeting."],
+            "hi": ["अपनी बात जोड़ने से पहले पूछें।", "मीटिंग में यह विनम्र लगता है।"]
+          }
+        },
+        {
+          "english": "What is the deadline for this task?",
+          "alsoAccepted": [
+            "What’s the deadline for this task?",
+            "When is the deadline for this task?"
+          ],
+          "translations": {
+            "bn": "এই কাজের শেষ সময়সীমা কবে?",
+            "hi": "इस काम की आख़िरी तारीख़ क्या है?"
+          },
+          "tips": {
+            "bn": ["তারিখের কথা আগেই জিজ্ঞেস করুন।", "“deadline” মানে শেষ দিন।"],
+            "en": ["Ask about dates early.", "“deadline” is the last day."],
+            "hi": ["तारीख़ के बारे में पहले ही पूछें।", "“deadline” मतलब आख़िरी दिन।"]
+          }
+        },
+        {
+          "english": "I’m not sure I agree. Can we look at the numbers again?",
+          "alsoAccepted": [
+            "I’m not sure I agree. Could we look at the numbers again?",
+            "I am not sure I agree. Can we look at the numbers again?"
+          ],
+          "translations": {
+            "bn": "আমি একমত কি না ঠিক নিশ্চিত নই। সংখ্যাগুলো আরেকবার দেখা যায়?",
+            "hi": "मुझे पूरा यक़ीन नहीं कि मैं सहमत हूँ। क्या हम आँकड़े फिर से देखें?"
+          },
+          "tips": {
+            "bn": ["অফিসে নরমভাবে দ্বিমত করার উপায়।", "তারপর কী করা যায়, বলুন।"],
+            "en": ["A soft way to disagree at work.", "Then suggest what to do."],
+            "hi": ["दफ़्तर में नरमी से असहमति जताने का तरीक़ा।", "फिर सुझाएँ कि क्या करें।"]
+          }
+        },
+        {
+          "english": "Let me summarise the next steps.",
+          "alsoAccepted": ["Let me sum up the next steps."],
+          "translations": {
+            "bn": "পরের ধাপগুলো সংক্ষেপে বলি।",
+            "hi": "मुझे अगले क़दमों का सार बताने दीजिए।"
+          },
+          "tips": {
+            "bn": ["মিটিংয়ের শেষের দিকে বলুন।", "তারপর বলুন কে কী করবেন।"],
+            "en": ["Use it near the end of a meeting.", "Then say who does what."],
+            "hi": ["मीटिंग के आख़िर में कहें।", "फिर बताएँ कि किसके ज़िम्मे क्या है।"]
+          }
+        },
+        {
+          "english": "Who is responsible for the report?",
+          "alsoAccepted": ["Who’s responsible for the report?", "Who is in charge of the report?"],
+          "translations": {
+            "bn": "রিপোর্টের দায়িত্ব কার?",
+            "hi": "रिपोर्ट की ज़िम्मेदारी किसकी है?"
+          },
+          "tips": {
+            "bn": [
+              "প্রতিটা কাজের একজন দায়িত্বে আছেন কি না দেখুন।",
+              "“responsible for”-এর পরে কাজটা।"
+            ],
+            "en": ["Make sure every task has a person.", "“responsible for” + the task."],
+            "hi": ["पक्का करें कि हर काम किसी के ज़िम्मे हो।", "“responsible for” के बाद काम।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the manager",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi, can you give me a quick update on the training project?",
+          "reply": "Sure. We’ve finished the first two modules, and they’re ready for review.",
+          "cues": {
+            "bn": "কী শেষ হয়েছে বলুন।",
+            "hi": "बताएँ कि क्या पूरा हो चुका है।"
+          }
+        },
+        {
+          "partner": "Great. What are you working on now?",
+          "reply": "Right now, we’re recording the videos for module three.",
+          "cues": {
+            "bn": "এখন কী চলছে বলুন।",
+            "hi": "बताएँ कि अभी क्या चल रहा है।"
+          }
+        },
+        {
+          "partner": "Are there any problems?",
+          "reply": "Yes, one. The sound in our room is poor, so recording is slow.",
+          "cues": {
+            "bn": "একটা সমস্যা আর তার ফল বলুন।",
+            "hi": "एक समस्या और उसका असर बताएँ।"
+          }
+        },
+        {
+          "partner": "I see. Do you need anything from me?",
+          "reply": "Could you book the meeting room with better sound for next week?",
+          "cues": {
+            "bn": "কী সাহায্য চান বলুন।",
+            "hi": "बताएँ कि क्या मदद चाहिए।"
+          }
+        },
+        {
+          "partner": "Yes, I can do that. When will it all be finished?",
+          "reply": "If we get the room, we’ll finish everything by the twentieth.",
+          "cues": {
+            "bn": "শর্তসহ বলুন কবে শেষ হবে।",
+            "hi": "शर्त के साथ बताएँ कि काम कब पूरा होगा।"
+          }
+        },
+        {
+          "partner": "Perfect. Thanks for the clear update.",
+          "reply": "You’re welcome. I’ll send you a short email too.",
+          "cues": {
+            "bn": "ধন্যবাদের উত্তর দিয়ে ইমেলের কথা বলুন।",
+            "hi": "धन्यवाद का जवाब दें और ईमेल की बात कहें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Workplace Communication Simulation",
+        "translations": {
+          "bn": "অফিসের কথাবার্তার মহড়া",
+          "hi": "दफ़्तर की बातचीत का अभ्यास"
+        }
+      },
+      "instruction": {
+        "text": "Imagine your first team meeting. Introduce yourself, describe your role, give an update and agree next steps.",
+        "translations": {
+          "bn": "দলের প্রথম মিটিং কল্পনা করুন। নিজের পরিচয় দিন, কাজের দায়িত্ব বলুন, আপডেট দিন আর পরের ধাপ ঠিক করুন।",
+          "hi": "अपनी पहली टीम मीटिंग की कल्पना करें। अपना परिचय दें, अपनी भूमिका बताएँ, अपडेट दें और अगले क़दम तय करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Introduce yourself: your name, role and team",
+          "translations": {
+            "bn": "নিজের পরিচয় দিন: নাম, পদ আর দল",
+            "hi": "अपना परिचय दें: नाम, पद और टीम"
+          }
+        },
+        {
+          "text": "Describe two of your responsibilities",
+          "translations": {
+            "bn": "আপনার দুটো দায়িত্বের কথা বলুন",
+            "hi": "अपनी दो ज़िम्मेदारियाँ बताएँ"
+          }
+        },
+        {
+          "text": "Give an update: what is done and what is next",
+          "translations": {
+            "bn": "আপডেট দিন: কী হয়েছে আর এরপর কী",
+            "hi": "अपडेट दें: क्या हो गया और आगे क्या है"
+          }
+        },
+        {
+          "text": "Ask one question about the project",
+          "translations": {
+            "bn": "প্রজেক্ট নিয়ে একটা প্রশ্ন করুন",
+            "hi": "प्रोजेक्ट के बारे में एक सवाल पूछें"
+          }
+        },
+        {
+          "text": "Sum up the next steps and who does them",
+          "translations": {
+            "bn": "পরের ধাপ আর কে কোনটা করবেন, সংক্ষেপে বলুন",
+            "hi": "संक्षेप में बताएँ कि आगे क्या है और किसके ज़िम्मे"
+          }
+        }
+      ],
+      "phrases": [
+        "Hello, I’m …, and I work as …",
+        "I’m responsible for …",
+        "So far, we have …",
+        "The next step is …",
+        "Could I ask a question?",
+        "So, to summarise, …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which is a professional introduction?",
+            "translations": {
+              "bn": "কোনটা পেশাদার পরিচয়?",
+              "hi": "कौन-सा परिचय पेशेवर है?"
+            }
+          },
+          "answer": "Hello, I’m Asha, and I manage the sales team.",
+          "others": ["Hi, I’m Asha. I like films.", "Asha. Sales. Bye."]
+        },
+        {
+          "question": {
+            "text": "Complete: I’m responsible ___ the reports.",
+            "translations": {
+              "bn": "পূরণ করুন: I’m responsible ___ the reports.",
+              "hi": "पूरा करें: I’m responsible ___ the reports."
+            }
+          },
+          "answer": "for",
+          "others": ["of", "to"]
+        },
+        {
+          "question": {
+            "text": "Which sentence gives a progress update?",
+            "translations": {
+              "bn": "কোন বাক্যে কাজের অগ্রগতি জানানো হয়েছে?",
+              "hi": "कौन-सा वाक्य काम की प्रगति बताता है?"
+            }
+          },
+          "answer": "We’ve finished the design, and testing starts on Monday.",
+          "others": ["The design is nice.", "I like Mondays."]
+        },
+        {
+          "question": {
+            "text": "How do you join a discussion politely?",
+            "translations": {
+              "bn": "ভদ্রভাবে আলোচনায় কীভাবে যোগ দেবেন?",
+              "hi": "चर्चा में विनम्रता से कैसे शामिल हों?"
+            }
+          },
+          "answer": "Could I add something here?",
+          "others": ["Stop talking.", "Listen to me now."]
+        },
+        {
+          "question": {
+            "text": "What is a deadline?",
+            "translations": {
+              "bn": "deadline কী?",
+              "hi": "deadline क्या होती है?"
+            }
+          },
+          "answer": "The last day to finish something",
+          "others": ["The first day of a job", "A kind of meeting"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Asif",
+          "text": "Hi, I don’t think we’ve met. I’m Asif from the marketing team.",
+          "translations": {
+            "bn": "নমস্কার, আমাদের বোধহয় আলাপ হয়নি। আমি আসিফ, মার্কেটিং দলে আছি।",
+            "hi": "नमस्ते, शायद हम पहले नहीं मिले। मैं आसिफ़ हूँ, मार्केटिंग टीम से।"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "Nice to meet you, Asif. I’m Lata. I work in customer support.",
+          "translations": {
+            "bn": "আলাপ করে ভালো লাগল, আসিফ। আমি লতা। কাস্টমার সাপোর্টে কাজ করি।",
+            "hi": "आपसे मिलकर अच्छा लगा, आसिफ़। मैं लता हूँ। मैं कस्टमर सपोर्ट में काम करती हूँ।"
+          }
+        },
+        {
+          "speaker": "Asif",
+          "text": "What does your job involve?",
+          "translations": {
+            "bn": "আপনার কাজটা কী রকম?",
+            "hi": "आपके काम में क्या-क्या शामिल है?"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "I deal with customer calls and emails. I’m also in charge of training new staff.",
+          "translations": {
+            "bn": "গ্রাহকদের ফোন আর ইমেল সামলাই। নতুন কর্মীদের প্রশিক্ষণের দায়িত্বও আমার।",
+            "hi": "मैं ग्राहकों के फ़ोन और ईमेल संभालती हूँ। नए कर्मचारियों की ट्रेनिंग भी मेरे ज़िम्मे है।"
+          }
+        },
+        {
+          "speaker": "Asif",
+          "text": "That sounds busy. Who do you report to?",
+          "translations": {
+            "bn": "বেশ ব্যস্ত কাজ। আপনি কার অধীনে কাজ করেন?",
+            "hi": "काफ़ी व्यस्त काम लगता है। आप किसे रिपोर्ट करती हैं?"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "I report to Mr Rao, the support manager. What about you?",
+          "translations": {
+            "bn": "সাপোর্ট ম্যানেজার মিস্টার রাওয়ের অধীনে। আর আপনি?",
+            "hi": "सपोर्ट मैनेजर मिस्टर राव को। और आप?"
+          }
+        },
+        {
+          "speaker": "Asif",
+          "text": "I’m responsible for our social media. I plan the posts and check the results every week.",
+          "translations": {
+            "bn": "সোশ্যাল মিডিয়ার দায়িত্ব আমার। পোস্টের পরিকল্পনা করি আর প্রতি সপ্তাহে ফলাফল দেখি।",
+            "hi": "सोशल मीडिया मेरी ज़िम्मेदारी है। मैं पोस्ट की योजना बनाता हूँ और हर हफ़्ते नतीजे देखता हूँ।"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "Interesting! Do you work with the sales team too?",
+          "translations": {
+            "bn": "বাহ্! বিক্রির দলের সঙ্গেও কাজ করেন?",
+            "hi": "दिलचस्प! क्या आप सेल्स टीम के साथ भी काम करते हैं?"
+          }
+        },
+        {
+          "speaker": "Asif",
+          "text": "Yes, we meet every Monday to share updates.",
+          "translations": {
+            "bn": "হ্যাঁ, প্রতি সোমবার মিটিংয়ে খবরাখবর দিই।",
+            "hi": "हाँ, हम हर सोमवार मिलकर अपडेट साझा करते हैं।"
+          }
+        },
+        {
+          "speaker": "Lata",
+          "text": "Maybe we should meet too. Customers often ask about your ads.",
+          "translations": {
+            "bn": "আমাদেরও হয়তো বসা উচিত। গ্রাহকেরা প্রায়ই আপনাদের বিজ্ঞাপন নিয়ে জিজ্ঞেস করেন।",
+            "hi": "शायद हमें भी मिलना चाहिए। ग्राहक अक्सर आपके विज्ञापनों के बारे में पूछते हैं।"
+          }
+        },
+        {
+          "speaker": "Asif",
+          "text": "Good idea. Let’s set up a meeting next week.",
+          "translations": {
+            "bn": "ভালো ভাবনা। পরের সপ্তাহে একটা মিটিং রাখি।",
+            "hi": "अच्छा विचार है। अगले हफ़्ते एक मीटिंग रखते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Asif": "male",
+        "Lata": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the new client",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello, nice to meet you. Could you introduce yourself?",
+          "reply": "Nice to meet you too. I’m the project coordinator for your account.",
+          "cues": {
+            "bn": "পরিচয় দিয়ে আপনার পদ বলুন।",
+            "hi": "परिचय दें और अपना पद बताएँ।"
+          }
+        },
+        {
+          "partner": "What will you do for us?",
+          "reply": "I’ll be your main contact. I plan the work and make sure we meet every deadline.",
+          "cues": {
+            "bn": "আপনার দায়িত্বগুলো বলুন।",
+            "hi": "अपनी ज़िम्मेदारियाँ बताएँ।"
+          }
+        },
+        {
+          "partner": "How long have you worked here?",
+          "reply": "For five years. Before that, I worked in a bank.",
+          "cues": {
+            "bn": "কত দিনের অভিজ্ঞতা বলুন।",
+            "hi": "अपना अनुभव बताएँ।"
+          }
+        },
+        {
+          "partner": "Great. How can I contact you?",
+          "reply": "Here’s my card. You can call or email me any time.",
+          "cues": {
+            "bn": "যোগাযোগের উপায় জানান।",
+            "hi": "संपर्क का तरीक़ा बताएँ।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "First day at work",
+            "translations": {
+              "bn": "অফিসে প্রথম দিন",
+              "hi": "दफ़्तर में पहला दिन"
+            }
+          },
+          "roleplay": {
+            "partner": "Meenal",
+            "asMan": "Mohit",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! You must be new here. Welcome!",
+                "reply": "Thank you! I’m the new accountant. I started today.",
+                "cues": {
+                  "bn": "নিজের পরিচয় আর পদ বলুন।",
+                  "hi": "अपना परिचय और पद बताएँ।"
+                }
+              },
+              {
+                "partner": "Nice to meet you. Which team are you in?",
+                "reply": "I’m in the finance team. I report to Mr Shah.",
+                "cues": {
+                  "bn": "কোন দল আর কার অধীনে বলুন।",
+                  "hi": "टीम और किसके अधीन, बताएँ।"
+                }
+              },
+              {
+                "partner": "Oh, I work with them sometimes. What will you do?",
+                "reply": "I’ll deal with salaries and check the monthly bills.",
+                "cues": {
+                  "bn": "দায়িত্বগুলো বলুন।",
+                  "hi": "ज़िम्मेदारियाँ बताएँ।"
+                }
+              },
+              {
+                "partner": "Let me know if you need anything.",
+                "reply": "Thanks! Where can I get a cup of tea?",
+                "cues": {
+                  "bn": "ধন্যবাদ দিয়ে একটা প্রশ্ন করুন।",
+                  "hi": "धन्यवाद दें और एक सवाल पूछें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A project meeting",
+            "translations": {
+              "bn": "প্রজেক্টের মিটিং",
+              "hi": "प्रोजेक्ट की मीटिंग"
+            }
+          },
+          "roleplay": {
+            "partner": "the team leader",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Let’s start. Can you give us your update?",
+                "reply": "Sure. I’ve finished the survey, and we have two hundred answers.",
+                "cues": {
+                  "bn": "কী শেষ হয়েছে বলুন।",
+                  "hi": "बताएँ कि क्या पूरा हुआ।"
+                }
+              },
+              {
+                "partner": "Good. What did people say?",
+                "reply": "Mainly, they want faster delivery and lower prices.",
+                "cues": {
+                  "bn": "মূল ফলাফল বলুন।",
+                  "hi": "मुख्य नतीजे बताएँ।"
+                }
+              },
+              {
+                "partner": "Can we reduce prices?",
+                "reply": "I’m not sure. Could we ask the finance team first?",
+                "cues": {
+                  "bn": "নিশ্চিত নন বলে একটা প্রস্তাব দিন।",
+                  "hi": "बताएँ कि पक्का नहीं, और एक सुझाव दें।"
+                }
+              },
+              {
+                "partner": "Good idea. Who will contact them?",
+                "reply": "I can do it. I’ll email them today and share their answer on Friday.",
+                "cues": {
+                  "bn": "দায়িত্ব নিয়ে কবে জানাবেন বলুন।",
+                  "hi": "ज़िम्मेदारी लें और जवाब का दिन बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A delay to explain",
+            "translations": {
+              "bn": "দেরির ব্যাখ্যা",
+              "hi": "देरी की वजह बताना"
+            }
+          },
+          "roleplay": {
+            "partner": "the client",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Is our order ready? You said Tuesday.",
+                "reply": "I’m sorry, there’s a short delay. One part arrived late from our supplier.",
+                "cues": {
+                  "bn": "দেরির কথা জানিয়ে কারণ বলুন।",
+                  "hi": "देरी के बारे में बताएँ और वजह दें।"
+                }
+              },
+              {
+                "partner": "That’s a problem. When will it be ready?",
+                "reply": "It will be ready on Thursday morning.",
+                "cues": {
+                  "bn": "নতুন দিনটা বলুন।",
+                  "hi": "नया दिन बताएँ।"
+                }
+              },
+              {
+                "partner": "Are you sure this time?",
+                "reply": "Yes. The part is here now, and the team is working on it.",
+                "cues": {
+                  "bn": "কারণসহ ভরসা দিন।",
+                  "hi": "वजह के साथ भरोसा दिलाएँ।"
+                }
+              },
+              {
+                "partner": "OK. Please keep me updated.",
+                "reply": "Of course. I’ll call you on Wednesday with an update.",
+                "cues": {
+                  "bn": "আপডেট দেওয়ার কথা দিন।",
+                  "hi": "अपडेट देने का वादा करें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

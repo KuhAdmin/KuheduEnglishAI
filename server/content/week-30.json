@@ -1,0 +1,765 @@
+{
+  "week": 30,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Payal",
+          "text": "Siddharth, we need to plan the team trip. What should we do?",
+          "translations": {
+            "bn": "সিদ্ধার্থ, দলের বেড়ানোর পরিকল্পনা করতে হবে। কী করা যায়?",
+            "hi": "सिद्धार्थ, हमें टीम ट्रिप की योजना बनानी है। हमें क्या करना चाहिए?"
+          }
+        },
+        {
+          "speaker": "Siddharth",
+          "text": "We could go to the beach, or we could go to the hills.",
+          "translations": {
+            "bn": "আমরা সমুদ্রে যেতে পারি, নয়তো পাহাড়ে।",
+            "hi": "हम समुद्र तट जा सकते हैं, या पहाड़ों पर।"
+          }
+        },
+        {
+          "speaker": "Payal",
+          "text": "Hmm. The beach is closer, but it’s very hot in May.",
+          "translations": {
+            "bn": "হুম। সমুদ্র কাছে, কিন্তু মে মাসে খুব গরম।",
+            "hi": "हम्म। समुद्र तट पास है, पर मई में बहुत गर्मी होती है।"
+          }
+        },
+        {
+          "speaker": "Siddharth",
+          "text": "True. The hills are cooler, but the journey is longer.",
+          "translations": {
+            "bn": "ঠিক। পাহাড়ে ঠান্ডা, তবে যাত্রাটা লম্বা।",
+            "hi": "सही। पहाड़ों पर ठंडक है, पर सफ़र लंबा है।"
+          }
+        },
+        {
+          "speaker": "Payal",
+          "text": "What if it rains in the hills?",
+          "translations": {
+            "bn": "পাহাড়ে যদি বৃষ্টি হয়?",
+            "hi": "अगर पहाड़ों पर बारिश हो गई तो?"
+          }
+        },
+        {
+          "speaker": "Siddharth",
+          "text": "If it rains, we can play games at the hotel. It will still be fun.",
+          "translations": {
+            "bn": "বৃষ্টি হলে হোটেলে খেলাধুলো করব। তবুও মজা হবে।",
+            "hi": "अगर बारिश हुई, तो हम होटल में खेल खेल सकते हैं। फिर भी मज़ा आएगा।"
+          }
+        },
+        {
+          "speaker": "Payal",
+          "text": "Good point. What do you advise for the journey?",
+          "translations": {
+            "bn": "ভালো কথা। যাতায়াতের জন্য তোমার কী পরামর্শ?",
+            "hi": "अच्छी बात है। सफ़र के लिए तुम्हारी क्या सलाह है?"
+          }
+        },
+        {
+          "speaker": "Siddharth",
+          "text": "I think we should take the train. It’s safer and cheaper than a bus.",
+          "translations": {
+            "bn": "আমার মনে হয় ট্রেনে যাওয়া উচিত। বাসের চেয়ে নিরাপদ আর সস্তা।",
+            "hi": "मुझे लगता है हमें ट्रेन लेनी चाहिए। बस से ज़्यादा सुरक्षित और सस्ती है।"
+          }
+        },
+        {
+          "speaker": "Payal",
+          "text": "I agree. And we should book early, because trains fill up fast.",
+          "translations": {
+            "bn": "একমত। আর তাড়াতাড়ি টিকিট কেটে ফেলা উচিত, কারণ ট্রেন তাড়াতাড়ি ভরে যায়।",
+            "hi": "मैं सहमत हूँ। और हमें जल्दी बुक करना चाहिए, क्योंकि ट्रेनें जल्दी भर जाती हैं।"
+          }
+        },
+        {
+          "speaker": "Siddharth",
+          "text": "OK. So: the hills, by train, on the second weekend of May?",
+          "translations": {
+            "bn": "ঠিক আছে। তাহলে: পাহাড়, ট্রেনে, মে মাসের দ্বিতীয় সপ্তাহান্তে?",
+            "hi": "ठीक है। तो: पहाड़, ट्रेन से, मई के दूसरे वीकेंड पर?"
+          }
+        },
+        {
+          "speaker": "Payal",
+          "text": "Perfect. Let’s tell the team today.",
+          "translations": {
+            "bn": "একদম। চলো আজই দলকে জানাই।",
+            "hi": "बिल्कुल सही। चलो आज ही टीम को बताते हैं।"
+          }
+        },
+        {
+          "speaker": "Siddharth",
+          "text": "Great. I’ll send a message now.",
+          "translations": {
+            "bn": "দারুণ। আমি এখনই মেসেজ পাঠাচ্ছি।",
+            "hi": "बढ़िया। मैं अभी मैसेज भेजता हूँ।"
+          }
+        }
+      ],
+      "voices": {
+        "Payal": "female",
+        "Siddharth": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "should",
+          "phonetic": "/ʃʊd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "উচিত",
+            "hi": "चाहिए"
+          },
+          "syllables": ["shou(l)d"],
+          "stress": null,
+          "tips": {
+            "bn": ["“l” উচ্চারিত হয় না।", "বলুন “You should rest”, “You should to rest” নয়।"],
+            "en": ["The “l” is not said.", "Say “You should rest”, not “You should to rest”."],
+            "hi": ["“l” नहीं बोला जाता।", "कहें “You should rest”, “You should to rest” नहीं।"]
+          }
+        },
+        {
+          "word": "advice",
+          "phonetic": "/ədˈvaɪs/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "পরামর্শ",
+            "hi": "सलाह"
+          },
+          "syllables": ["ad", "vice"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন “some advice”, “an advice” নয়।"],
+            "en": ["Say the second part stronger.", "Say “some advice”, not “an advice”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें “some advice”, “an advice” नहीं।"]
+          }
+        },
+        {
+          "word": "suggest",
+          "phonetic": "/səˈdʒest/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "প্রস্তাব দেওয়া",
+            "hi": "सुझाव देना"
+          },
+          "syllables": ["sug", "gest"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“gg”-এর উচ্চারণ “j”-এর মতো: “স-জেস্ট”।"],
+            "en": ["Say the second part stronger.", "The “gg” sounds like “j”: “suh-JEST”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“gg” की आवाज़ “j” जैसी है: “स-जेस्ट”।"]
+          }
+        },
+        {
+          "word": "better",
+          "phonetic": "/ˈbetə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আরও ভালো",
+            "hi": "बेहतर"
+          },
+          "syllables": ["bet", "ter"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন “better than”, “more better” নয়।"],
+            "en": ["Say the first part stronger.", "Say “better than”, not “more better”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें “better than”, “more better” नहीं।"]
+          }
+        },
+        {
+          "word": "careful",
+          "phonetic": "/ˈkeəfl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সাবধান",
+            "hi": "सावधान"
+          },
+          "syllables": ["care", "ful"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“Be careful!” মানে সাবধান!"],
+            "en": ["Say the first part stronger.", "“Be careful!” is a warning."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“Be careful!” एक चेतावनी है।"]
+          }
+        },
+        {
+          "word": "option",
+          "phonetic": "/ˈɒpʃn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বিকল্প",
+            "hi": "विकल्प"
+          },
+          "syllables": ["op", "tion"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“tion”-এর উচ্চারণ “শন”-এর মতো।"],
+            "en": ["Say the first part stronger.", "“tion” sounds like “shun”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“tion” की आवाज़ “शन” जैसी है।"]
+          }
+        },
+        {
+          "word": "choice",
+          "phonetic": "/tʃɔɪs/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "পছন্দ, বাছাই",
+            "hi": "चुनाव, पसंद"
+          },
+          "syllables": ["choice"],
+          "stress": null,
+          "tips": {
+            "bn": ["“oi”-এর উচ্চারণ “boy”-এর “oy”-এর মতো।", "“a good choice” মানে ভালো বাছাই।"],
+            "en": [
+              "The “oi” sounds like the “oy” in “boy”.",
+              "“a good choice” means a good thing to pick."
+            ],
+            "hi": ["“oi” की आवाज़ “boy” के “oy” जैसी है।", "“a good choice” मतलब अच्छा चुनाव।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "What if it rains tomorrow?",
+          "alsoAccepted": ["What happens if it rains tomorrow?"],
+          "translations": {
+            "bn": "কাল যদি বৃষ্টি হয়?",
+            "hi": "अगर कल बारिश हुई तो?"
+          },
+          "tips": {
+            "bn": [
+              "“What if …?” দিয়ে সম্ভাব্য সমস্যার কথা জিজ্ঞেস করা হয়।",
+              "পরিকল্পনার সময় এটি বলুন।"
+            ],
+            "en": ["“What if …?” asks about a possible problem.", "Use it when you plan."],
+            "hi": [
+              "“What if …?” किसी संभावित परेशानी के बारे में पूछता है।",
+              "योजना बनाते समय कहें।"
+            ]
+          }
+        },
+        {
+          "english": "If it rains, we will stay at home.",
+          "alsoAccepted": ["If it rains, we will stay home."],
+          "translations": {
+            "bn": "বৃষ্টি হলে আমরা বাড়িতে থাকব।",
+            "hi": "अगर बारिश हुई, तो घर पर ही रहना होगा।"
+          },
+          "tips": {
+            "bn": [
+              "“If”-এর পরে বর্তমান কাল, তারপর “will”।",
+              "বলুন “If it rains”, “If it will rain” নয়।"
+            ],
+            "en": [
+              "After “If”, use the present; then “will”.",
+              "Say “If it rains”, not “If it will rain”."
+            ],
+            "hi": [
+              "“If” के बाद वर्तमान काल, फिर “will”।",
+              "कहें “If it rains”, “If it will rain” नहीं।"
+            ]
+          }
+        },
+        {
+          "english": "If I had more time, I would learn to dance.",
+          "alsoAccepted": ["If I had more time, I’d learn to dance."],
+          "translations": {
+            "bn": "আরও সময় থাকলে আমি নাচ শিখতাম।",
+            "hi": "अगर मेरे पास ज़्यादा समय होता, तो नाच सीखना मेरी पहली पसंद होती।"
+          },
+          "tips": {
+            "bn": ["কাল্পনিক কথায়: “If I had …, I would …”।", "এখানে “had” মানে অতীত নয়।"],
+            "en": [
+              "For an imagined idea: “If I had …, I would …”.",
+              "Here “had” does not mean the past."
+            ],
+            "hi": [
+              "कल्पना वाली बात के लिए: “If I had …, I would …”।",
+              "यहाँ “had” का मतलब बीता समय नहीं है।"
+            ]
+          }
+        },
+        {
+          "english": "What would you do if you won a prize?",
+          "alsoAccepted": ["If you won a prize, what would you do?"],
+          "translations": {
+            "bn": "পুরস্কার জিতলে আপনি কী করতেন?",
+            "hi": "अगर आप कोई इनाम जीतते, तो क्या करते?"
+          },
+          "tips": {
+            "bn": ["কারও স্বপ্নের কথা শুনতে এটি জিজ্ঞেস করুন।", "“won” হল “win”-এর অতীত রূপ।"],
+            "en": ["Ask this to hear about someone’s dreams.", "“won” is the past of “win”."],
+            "hi": [
+              "किसी के सपनों के बारे में सुनने के लिए यह पूछें।",
+              "“won”, “win” का बीता रूप है।"
+            ]
+          }
+        },
+        {
+          "english": "If the shop is closed, we can go to the market.",
+          "alsoAccepted": ["If the shop is closed, we could go to the market."],
+          "translations": {
+            "bn": "দোকান বন্ধ থাকলে আমরা বাজারে যেতে পারি।",
+            "hi": "अगर दुकान बंद हो, तो बाज़ार चला जा सकता है।"
+          },
+          "tips": {
+            "bn": ["“If …, we can …” দিয়ে দ্বিতীয় পরিকল্পনা।", "সবসময় একটা বিকল্প তৈরি রাখুন।"],
+            "en": ["“If …, we can …” gives a second plan.", "Always have a plan B ready."],
+            "hi": [
+              "“If …, we can …” से दूसरी योजना बताई जाती है।",
+              "हमेशा एक दूसरी योजना तैयार रखें।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Ved",
+      "asWoman": "Veda",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "We need a new phone for the office. Phone A or phone B?",
+          "reply": "What’s the difference between them?",
+          "cues": {
+            "bn": "দুটোর পার্থক্য জিজ্ঞেস করুন।",
+            "hi": "दोनों में फ़र्क़ पूछें।"
+          }
+        },
+        {
+          "partner": "A is cheaper. B has a better camera and a bigger battery.",
+          "reply": "Which is more important for the office?",
+          "cues": {
+            "bn": "অফিসের জন্য কোনটা জরুরি, জিজ্ঞেস করুন।",
+            "hi": "पूछें कि दफ़्तर के लिए क्या ज़्यादा ज़रूरी है।"
+          }
+        },
+        {
+          "partner": "The battery, I think. We use it all day.",
+          "reply": "Then I think B is the better choice.",
+          "cues": {
+            "bn": "একটা বেছে নিয়ে বলুন।",
+            "hi": "एक चुनें और बताएँ।"
+          }
+        },
+        {
+          "partner": "But it’s three thousand rupees more.",
+          "reply": "Yes, but it will last longer, so it’s worth it.",
+          "cues": {
+            "bn": "কারণ দিয়ে সিদ্ধান্তটা বোঝান।",
+            "hi": "कारण देकर फ़ैसला समझाएँ।"
+          }
+        },
+        {
+          "partner": "Good point. Should we ask the manager first?",
+          "reply": "Yes, we should. Let’s show her both.",
+          "cues": {
+            "bn": "রাজি হোন।",
+            "hi": "हामी भरें।"
+          }
+        },
+        {
+          "partner": "OK, I’ll write a short note about both.",
+          "reply": "Great. I’ll add the prices.",
+          "cues": {
+            "bn": "বলুন আপনি দাম যোগ করবেন।",
+            "hi": "कहें कि दाम आप जोड़ देंगे।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Let’s Make a Plan Together",
+        "translations": {
+          "bn": "চলুন একসঙ্গে পরিকল্পনা করি",
+          "hi": "आइए मिलकर योजना बनाएँ"
+        }
+      },
+      "instruction": {
+        "text": "Plan a group outing with someone. Compare two options, give advice and agree on a final plan.",
+        "translations": {
+          "bn": "কারও সঙ্গে দলবেঁধে বেড়ানোর পরিকল্পনা করুন। দুটো বিকল্প তুলনা করুন, পরামর্শ দিন, পরিকল্পনা পাকা করুন।",
+          "hi": "किसी के साथ मिलकर घूमने की योजना बनाएँ। दो विकल्पों की तुलना करें, सलाह दें और योजना पक्की करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Suggest two possible places or activities",
+          "translations": {
+            "bn": "দুটো সম্ভাব্য জায়গা বা কাজের প্রস্তাব দিন",
+            "hi": "दो संभावित जगहें या गतिविधियाँ सुझाएँ"
+          }
+        },
+        {
+          "text": "Say one good and one bad point for each",
+          "translations": {
+            "bn": "প্রতিটার একটা ভালো আর একটা খারাপ দিক বলুন",
+            "hi": "हर एक की एक अच्छी और एक बुरी बात बताएँ"
+          }
+        },
+        {
+          "text": "Ask “What if …?” about one problem",
+          "translations": {
+            "bn": "একটা সমস্যা নিয়ে “What if …?” জিজ্ঞেস করুন",
+            "hi": "किसी एक परेशानी पर “What if …?” पूछें"
+          }
+        },
+        {
+          "text": "Give advice with “We should …”",
+          "translations": {
+            "bn": "“We should …” দিয়ে পরামর্শ দিন",
+            "hi": "“We should …” से सलाह दें"
+          }
+        },
+        {
+          "text": "Agree on the final plan and say it clearly",
+          "translations": {
+            "bn": "শেষ পরিকল্পনা ঠিক করে স্পষ্ট করে বলুন",
+            "hi": "आख़िरी योजना तय करें और साफ़-साफ़ बताएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "We could … or …",
+        "… is better because …",
+        "What if …?",
+        "I think we should …",
+        "Let’s go with …",
+        "So, the plan is …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which sentence gives advice?",
+            "translations": {
+              "bn": "কোন বাক্যে পরামর্শ দেওয়া হচ্ছে?",
+              "hi": "कौन-सा वाक्य सलाह देता है?"
+            }
+          },
+          "answer": "You should drink more water.",
+          "others": ["You drank some water.", "Water is cold."]
+        },
+        {
+          "question": {
+            "text": "Complete: If it rains, we ___ stay at home.",
+            "translations": {
+              "bn": "পূরণ করুন: If it rains, we ___ stay at home.",
+              "hi": "पूरा करें: If it rains, we ___ stay at home."
+            }
+          },
+          "answer": "will",
+          "others": ["would", "did"]
+        },
+        {
+          "question": {
+            "text": "Complete: If I ___ rich, I would travel the world.",
+            "translations": {
+              "bn": "পূরণ করুন: If I ___ rich, I would travel the world.",
+              "hi": "पूरा करें: If I ___ rich, I would travel the world."
+            }
+          },
+          "answer": "were",
+          "others": ["am", "will be"]
+        },
+        {
+          "question": {
+            "text": "Which sentence compares two options?",
+            "translations": {
+              "bn": "কোন বাক্যে দুটো বিকল্পের তুলনা?",
+              "hi": "कौन-सा वाक्य दो विकल्पों की तुलना करता है?"
+            }
+          },
+          "answer": "The train is cheaper than the bus.",
+          "others": ["The train is here.", "I like trains."]
+        },
+        {
+          "question": {
+            "text": "Which sentence makes the plan final?",
+            "translations": {
+              "bn": "কোন বাক্যে পরিকল্পনা পাকা হয়?",
+              "hi": "कौन-सा वाक्य योजना पक्की करता है?"
+            }
+          },
+          "answer": "So, we’re meeting at nine on Sunday.",
+          "others": ["Maybe we could meet.", "What if we meet?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rashmi",
+          "text": "Manish, it’s Dad’s sixtieth birthday next month. What should we do?",
+          "translations": {
+            "bn": "মনীশ, পরের মাসে বাবার ষাটতম জন্মদিন। কী করা উচিত?",
+            "hi": "मनीष, अगले महीने पापा का साठवाँ जन्मदिन है। हमें क्या करना चाहिए?"
+          }
+        },
+        {
+          "speaker": "Manish",
+          "text": "We could have a big party, or we could take him on a trip.",
+          "translations": {
+            "bn": "একটা বড় পার্টি করতে পারি, নয়তো বাবাকে বেড়াতে নিয়ে যেতে পারি।",
+            "hi": "हम एक बड़ी पार्टी कर सकते हैं, या उन्हें कहीं घुमाने ले जा सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Rashmi",
+          "text": "A party is fun, but Dad doesn’t like noise.",
+          "translations": {
+            "bn": "পার্টি মজার, কিন্তু বাবা হইচই পছন্দ করেন না।",
+            "hi": "पार्टी मज़ेदार है, पर पापा को शोर पसंद नहीं।"
+          }
+        },
+        {
+          "speaker": "Manish",
+          "text": "True. He loves gardens. What if we go to the botanical garden in Ooty?",
+          "translations": {
+            "bn": "ঠিক। বাবা বাগান ভালোবাসেন। উটির বোটানিক্যাল গার্ডেনে গেলে কেমন হয়?",
+            "hi": "सही है। उन्हें बाग़ पसंद हैं। अगर हम ऊटी के बॉटनिकल गार्डन चलें तो?"
+          }
+        },
+        {
+          "speaker": "Rashmi",
+          "text": "That’s a lovely idea! But it’s far. Should we drive or take the train?",
+          "translations": {
+            "bn": "দারুণ ভাবনা! তবে দূর। গাড়িতে যাব, না ট্রেনে?",
+            "hi": "बहुत अच्छा विचार है! पर दूर है। गाड़ी से चलें या ट्रेन से?"
+          }
+        },
+        {
+          "speaker": "Manish",
+          "text": "I think we should take the toy train. Dad would love it.",
+          "translations": {
+            "bn": "আমার মনে হয় টয় ট্রেনে যাওয়া উচিত। বাবার খুব ভালো লাগবে।",
+            "hi": "मुझे लगता है हमें टॉय ट्रेन लेनी चाहिए। पापा को बहुत पसंद आएगी।"
+          }
+        },
+        {
+          "speaker": "Rashmi",
+          "text": "Perfect. If we book this week, we’ll get good seats.",
+          "translations": {
+            "bn": "একদম। এই সপ্তাহে বুক করলে ভালো সিট পাব।",
+            "hi": "बिल्कुल। अगर इस हफ़्ते बुक करें, तो अच्छी सीटें मिलेंगी।"
+          }
+        },
+        {
+          "speaker": "Manish",
+          "text": "OK. So: Ooty, the toy train, on his birthday weekend. Agreed?",
+          "translations": {
+            "bn": "ঠিক আছে। তাহলে: উটি, টয় ট্রেন, জন্মদিনের সপ্তাহান্তে। রাজি?",
+            "hi": "ठीक है। तो: ऊटी, टॉय ट्रेन, जन्मदिन वाले वीकेंड पर। तय?"
+          }
+        },
+        {
+          "speaker": "Rashmi",
+          "text": "Agreed! And let’s keep it a surprise.",
+          "translations": {
+            "bn": "রাজি! আর এটা চমক হিসেবেই রাখি।",
+            "hi": "तय! और इसे सरप्राइज़ रखते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Rashmi": "female",
+        "Manish": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I can’t decide: should I learn the guitar or the piano?",
+          "reply": "What do you want to play: songs or classical music?",
+          "cues": {
+            "bn": "সিদ্ধান্তে সাহায্য করতে একটা প্রশ্ন করুন।",
+            "hi": "फ़ैसले में मदद के लिए एक सवाल पूछें।"
+          }
+        },
+        {
+          "partner": "Mostly songs, with friends.",
+          "reply": "Then I think you should learn the guitar.",
+          "cues": {
+            "bn": "পরামর্শ দিন।",
+            "hi": "सलाह दें।"
+          }
+        },
+        {
+          "partner": "But what if it’s too hard?",
+          "reply": "If you practise every day, it will get easier.",
+          "cues": {
+            "bn": "“If …” দিয়ে ভরসা দিন।",
+            "hi": "“If …” से भरोसा दिलाएँ।"
+          }
+        },
+        {
+          "partner": "OK, the guitar it is! Thanks for the advice.",
+          "reply": "You’re welcome. Good luck!",
+          "cues": {
+            "bn": "শুভকামনা জানান।",
+            "hi": "शुभकामना दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A weekend trip",
+            "translations": {
+              "bn": "সপ্তাহান্তের বেড়ানো",
+              "hi": "वीकेंड की सैर"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Let’s go away this weekend. Any ideas?",
+                "reply": "We could go to the lake or to the fort.",
+                "cues": {
+                  "bn": "দুটো বিকল্প বলুন।",
+                  "hi": "दो विकल्प बताएँ।"
+                }
+              },
+              {
+                "partner": "Which is better, do you think?",
+                "reply": "The lake is better because it’s quieter.",
+                "cues": {
+                  "bn": "একটা বেছে কারণ দিন।",
+                  "hi": "एक चुनें और कारण बताएँ।"
+                }
+              },
+              {
+                "partner": "What if it’s too crowded?",
+                "reply": "If it’s crowded, we can go early in the morning.",
+                "cues": {
+                  "bn": "“If …” দিয়ে সমাধান দিন।",
+                  "hi": "“If …” से हल बताएँ।"
+                }
+              },
+              {
+                "partner": "Good idea. Shall we leave at six?",
+                "reply": "Yes, let’s leave at six.",
+                "cues": {
+                  "bn": "পরিকল্পনা পাকা করুন।",
+                  "hi": "योजना पक्की करें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Advice for a friend",
+            "translations": {
+              "bn": "বন্ধুকে পরামর্শ",
+              "hi": "दोस्त को सलाह"
+            }
+          },
+          "roleplay": {
+            "partner": "Raghav",
+            "asWoman": "Radha",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I have two job offers. I don’t know which to choose.",
+                "reply": "Tell me about them. What are the differences?",
+                "cues": {
+                  "bn": "দুটো চাকরির পার্থক্য জিজ্ঞেস করুন।",
+                  "hi": "दोनों नौकरियों का फ़र्क़ पूछें।"
+                }
+              },
+              {
+                "partner": "One pays more. The other is close to home.",
+                "reply": "Which is more important to you?",
+                "cues": {
+                  "bn": "কোনটা বেশি জরুরি, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि उनके लिए क्या ज़्यादा ज़रूरी है।"
+                }
+              },
+              {
+                "partner": "Time with my family.",
+                "reply": "Then I think you should take the job close to home.",
+                "cues": {
+                  "bn": "পরামর্শ দিন।",
+                  "hi": "सलाह दें।"
+                }
+              },
+              {
+                "partner": "You’re right. Thanks, that really helps!",
+                "reply": "Anytime. Good luck with the new job!",
+                "cues": {
+                  "bn": "শুভকামনা জানান।",
+                  "hi": "शुभकामना दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Planning a class event",
+            "translations": {
+              "bn": "ক্লাসের অনুষ্ঠান",
+              "hi": "कक्षा का कार्यक्रम"
+            }
+          },
+          "roleplay": {
+            "partner": "the teacher",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "What should we do for Teachers’ Day?",
+                "reply": "We could sing songs, or we could put on a short play.",
+                "cues": {
+                  "bn": "দুটো প্রস্তাব দিন।",
+                  "hi": "दो सुझाव दें।"
+                }
+              },
+              {
+                "partner": "Which do you prefer?",
+                "reply": "I prefer the play, because everyone can take part.",
+                "cues": {
+                  "bn": "পছন্দ আর কারণ বলুন।",
+                  "hi": "पसंद और कारण बताएँ।"
+                }
+              },
+              {
+                "partner": "What if some students are shy?",
+                "reply": "If they’re shy, they can help with the costumes.",
+                "cues": {
+                  "bn": "লাজুকদের জন্য একটা উপায় বলুন।",
+                  "hi": "शर्मीले छात्रों के लिए एक रास्ता बताएँ।"
+                }
+              },
+              {
+                "partner": "Wonderful. Let’s start practising on Monday.",
+                "reply": "Great. I’ll tell the class.",
+                "cues": {
+                  "bn": "বলুন ক্লাসকে জানাবেন।",
+                  "hi": "कहें कि कक्षा को बता देंगे।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

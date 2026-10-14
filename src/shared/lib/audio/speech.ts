@@ -114,13 +114,21 @@ export type PlayingSound = {
 export type SpeechActivity = { type: 'start'; text: string; sound: PlayingSound } | { type: 'end' }
 
 const activityListeners = new Set<(activity: SpeechActivity) => void>()
+/** The part being said right now, for a listener that starts listening while it is. */
+let underWay: SpeechActivity | null = null
 const tell = (activity: SpeechActivity) => {
+  underWay = activity.type === 'start' ? activity : null
   for (const listener of activityListeners) listener(activity)
 }
 
-/** Be told as texts are said aloud, whoever asked for them. Returns how to stop listening. */
+/**
+ * Be told as texts are said aloud, whoever asked for them. Returns how to stop listening. A
+ * listener that joins while something is being said is told of it at once: a face drawn only as
+ * its line begins (a partner's, in a conversation) must not miss the sound it is there for.
+ */
 export function onSpeechActivity(listener: (activity: SpeechActivity) => void): () => void {
   activityListeners.add(listener)
+  if (underWay) listener(underWay)
   return () => activityListeners.delete(listener)
 }
 

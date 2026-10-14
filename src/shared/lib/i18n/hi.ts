@@ -240,14 +240,12 @@ export const hi: TextCatalog = {
   'lessonDay.practice.recorded': 'रिकॉर्ड हो गया। सुनें, या फिर से कोशिश करें।',
   'lessonDay.practice.listen': 'अपनी आवाज़ सुनें',
   'lessonDay.practice.micNote':
-    'हम आपके माइक्रोफ़ोन के इस्तेमाल की अनुमति माँगेंगे। आपकी रिकॉर्डिंग सेव नहीं की जाती।',
+    'हम माइक्रोफ़ोन इस्तेमाल करने की अनुमति माँगेंगे। रिकॉर्डिंग सेव नहीं होती।',
   'lessonDay.feedback.check': 'देखें मैंने कैसे बोला',
   'lessonDay.feedback.checking': 'आपकी रिकॉर्डिंग सुनी जा रही है…',
   'lessonDay.feedback.sends':
     'जाँच के लिए यह रिकॉर्डिंग हमारे सर्वर पर भेजी जाती है। इसे रखा नहीं जाता।',
   'lessonDay.feedback.title': 'कैसा सुनाई दिया',
-  'lessonDay.feedback.firstVersion':
-    'यह जाँच नई है और ग़लत भी हो सकती है। इससे ज़्यादा अपने कान और अपने शिक्षक पर भरोसा करें।',
   'lessonDay.feedback.ok': 'सही सुनाई दिया। बहुत बढ़िया!',
   'lessonDay.feedback.nothingHeard':
     'कोई शब्द सुनाई नहीं दिया। माइक्रोफ़ोन के थोड़ा पास आकर फिर कोशिश करें।',
@@ -303,6 +301,8 @@ export const hi: TextCatalog = {
   'lessonDay.talk.timeAlmostUp': 'समय लगभग समाप्त है',
   'lessonDay.talk.replay': 'फिर से सुनें',
   'lessonDay.talk.couldSay': 'आप कह सकते हैं',
+  'lessonDay.talk.youAnswered': 'आपने जवाब दिया',
+  'lessonDay.talk.skipped': 'यह बारी छोड़ी गई',
   'lessonDay.talk.playReply': 'यह जवाब सुनें',
   'lessonDay.talk.hint': 'संकेत',
   'lessonDay.talk.hintMore': 'और मदद',
@@ -313,9 +313,12 @@ export const hi: TextCatalog = {
   'lessonDay.talk.endBody': 'दिन पूरा नहीं होगा। आप हफ़्ते के पन्ने से फिर शुरू कर सकते हैं।',
   'lessonDay.talk.endCancel': 'बात जारी रखें',
   'lessonDay.talk.done': 'बहुत बढ़िया! आपने बातचीत पूरी कर ली।',
+  'lessonDay.talk.doneReview': 'आपके जवाब ऊपर हैं। आप उन्हें फिर से सुन सकते हैं।',
   'lessonDay.talk.again': 'फिर से अभ्यास करें',
   'lessonDay.talk.audioFailed':
     'पंक्तियाँ अभी बोलकर नहीं सुनाई जा सकतीं। इन्हें पढ़ें, फिर जवाब दें।',
+  'lessonDay.reply.sends':
+    'जवाब जाँचने पर उसकी रिकॉर्डिंग हमारे सर्वर पर जाती है। इसे रखा नहीं जाता।',
   'lessonDay.reply.check': 'मेरा जवाब जाँचें',
   'lessonDay.reply.checking': 'आपका जवाब जाँचा जा रहा है…',
   'lessonDay.reply.title': 'आपके जवाब के बारे में',

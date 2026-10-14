@@ -252,8 +252,6 @@ export const en = {
   'lessonDay.feedback.checking': 'Listening to your recording…',
   'lessonDay.feedback.sends': 'Sends this recording to our server to be checked. It is not kept.',
   'lessonDay.feedback.title': 'How it sounded',
-  'lessonDay.feedback.firstVersion':
-    'This check is new and can be wrong. Trust your own ear, and your teacher, over it.',
   'lessonDay.feedback.ok': 'That sounded right. Well done!',
   'lessonDay.feedback.nothingHeard':
     'We could not hear a word. Try again, a little closer to the microphone.',
@@ -312,6 +310,8 @@ export const en = {
   'lessonDay.talk.timeAlmostUp': 'Time is almost up',
   'lessonDay.talk.replay': 'Listen again',
   'lessonDay.talk.couldSay': 'You could say',
+  'lessonDay.talk.youAnswered': 'You answered',
+  'lessonDay.talk.skipped': 'Skipped',
   'lessonDay.talk.playReply': 'Listen to this reply',
   'lessonDay.talk.hint': 'Hint',
   'lessonDay.talk.hintMore': 'More help',
@@ -322,8 +322,10 @@ export const en = {
   'lessonDay.talk.endBody': 'The day will not be finished. You can start again from the week.',
   'lessonDay.talk.endCancel': 'Keep talking',
   'lessonDay.talk.done': 'Well done! You finished the conversation.',
+  'lessonDay.talk.doneReview': 'Your answers are above. You can listen to them again.',
   'lessonDay.talk.again': 'Practise again',
   'lessonDay.talk.audioFailed': 'The lines cannot be said aloud right now. Read them, then answer.',
+  'lessonDay.reply.sends': 'Checking a reply sends its recording to our server. It is not kept.',
   'lessonDay.reply.check': 'Check my reply',
   'lessonDay.reply.checking': 'Checking your reply…',
   'lessonDay.reply.title': 'About your reply',

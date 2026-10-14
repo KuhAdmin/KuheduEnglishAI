@@ -1,5 +1,7 @@
+import { Ear } from 'lucide-react'
+import { useT } from '@/shared/lib/i18n'
+import { Button } from '@/shared/ui/Button'
 import type { ReplyCheck as Checked } from '../hooks/useReplyChecks'
-import { PronunciationCheckAction } from './PronunciationCheckAction'
 import { ReplyFeedback } from './ReplyFeedback'
 
 export type ReplyCheckProps = {
@@ -12,25 +14,35 @@ export type ReplyCheckProps = {
 }
 
 /**
- * Under a reply the learner gave: the way to have it checked, for as long as its recording is
- * kept, and then what the check came to, which stays after the recording has gone. A check that
- * could not be made leaves the button there to try again.
+ * Under a reply the learner gave: the way to have it checked, and then what the check came to.
+ * A check that could not be made leaves the button there to try again.
+ *
+ * The button is a small one at the end of its bubble, so that it reads as being about that
+ * reply. **What the tap does is not said beside it**: every reply of a conversation has one, and
+ * the same sentence under each would bury them. It is said once before the conversation starts
+ * and once at its end (`lessonDay.reply.sends`; decided by the user on 2026-10-14).
  */
 export function ReplyCheck({ check, onCheck, partnerName }: ReplyCheckProps) {
+  const t = useT()
   const canAsk = onCheck !== undefined && check?.status !== 'done'
+  const checking = check?.status === 'checking'
   if (!canAsk && !check) return null
 
   return (
-    <div className="flex w-full flex-col gap-2 pt-1">
+    <div className="flex flex-col items-end gap-2 self-stretch">
       {canAsk && (
-        <PronunciationCheckAction
-          checking={check?.status === 'checking'}
-          onCheck={onCheck}
-          label="lessonDay.reply.check"
-          checkingLabel="lessonDay.reply.checking"
-        />
+        <Button variant="outline" size="sm" disabled={checking} onClick={onCheck}>
+          <Ear aria-hidden="true" className="size-5" />
+          {t(checking ? 'lessonDay.reply.checking' : 'lessonDay.reply.check')}
+        </Button>
       )}
-      {check && <ReplyFeedback check={check} partnerName={partnerName} />}
+      {check && !checking && (
+        // As wide as the conversation, not as the reply's own column, which is set in from the
+        // edge: what was found is read, and wants the room.
+        <div className="-ms-8 self-stretch">
+          <ReplyFeedback check={check} partnerName={partnerName} />
+        </div>
+      )}
     </div>
   )
 }

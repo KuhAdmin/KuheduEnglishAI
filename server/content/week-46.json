@@ -1,0 +1,849 @@
+{
+  "week": 46,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Deepa",
+          "text": "Sohan, thanks for helping with Dad while I’m away. Can I go through the details with you?",
+          "translations": {
+            "bn": "সোহন, আমি না থাকার সময় বাবাকে দেখার জন্য ধন্যবাদ। খুঁটিনাটিগুলো একবার বলে দিই?",
+            "hi": "सोहन, मेरे बाहर रहने के दौरान पापा का ध्यान रखने के लिए धन्यवाद। क्या मैं तुम्हें सारी बातें समझा दूँ?"
+          }
+        },
+        {
+          "speaker": "Sohan",
+          "text": "Of course. Details matter here, so tell me everything.",
+          "translations": {
+            "bn": "নিশ্চয়ই। এখানে খুঁটিনাটি জরুরি, তাই সব বলো।",
+            "hi": "ज़रूर। यहाँ हर बात ज़रूरी है, तो सब कुछ बताओ।"
+          }
+        },
+        {
+          "speaker": "Deepa",
+          "text": "He has already taken his morning tablet today. Tomorrow, he must take it at eight, after breakfast.",
+          "translations": {
+            "bn": "আজ সকালের ওষুধটা উনি খেয়ে নিয়েছেন। কাল আটটায়, জলখাবারের পরে খেতেই হবে।",
+            "hi": "आज सुबह की गोली वे ले चुके हैं। कल उन्हें आठ बजे, नाश्ते के बाद, लेनी ही है।"
+          }
+        },
+        {
+          "speaker": "Sohan",
+          "text": "At eight, after breakfast. And the evening one?",
+          "translations": {
+            "bn": "আটটায়, জলখাবারের পরে। আর রাতেরটা?",
+            "hi": "आठ बजे, नाश्ते के बाद। और शाम वाली?"
+          }
+        },
+        {
+          "speaker": "Deepa",
+          "text": "He takes the white tablet at night, before he goes to bed.",
+          "translations": {
+            "bn": "সাদা ওষুধটা রাতে, শুতে যাওয়ার আগে।",
+            "hi": "सफ़ेद गोली वे रात को, सोने से पहले लेते हैं।"
+          }
+        },
+        {
+          "speaker": "Sohan",
+          "text": "So the white one is in the morning?",
+          "translations": {
+            "bn": "তাহলে সাদাটা সকালে?",
+            "hi": "तो सफ़ेद वाली सुबह?"
+          }
+        },
+        {
+          "speaker": "Deepa",
+          "text": "No, sorry, let me correct that. The white one is at night. The yellow one is in the morning.",
+          "translations": {
+            "bn": "না, দাঁড়াও, শুধরে দিই। সাদাটা রাতে। হলুদটা সকালে।",
+            "hi": "नहीं, रुको, ठीक कर दूँ। सफ़ेद वाली रात को। पीली वाली सुबह।"
+          }
+        },
+        {
+          "speaker": "Sohan",
+          "text": "Got it: yellow in the morning, white at night.",
+          "translations": {
+            "bn": "বুঝেছি: সকালে হলুদ, রাতে সাদা।",
+            "hi": "समझ गया: सुबह पीली, रात को सफ़ेद।"
+          }
+        },
+        {
+          "speaker": "Deepa",
+          "text": "Exactly. He might forget, so you should remind him. He doesn’t like being reminded, though!",
+          "translations": {
+            "bn": "একদম। উনি ভুলে যেতে পারেন, তাই মনে করিয়ে দিও। যদিও মনে করালে উনি পছন্দ করেন না!",
+            "hi": "बिल्कुल। वे भूल सकते हैं, इसलिए उन्हें याद दिला देना। हालाँकि उन्हें याद दिलाया जाना पसंद नहीं!"
+          }
+        },
+        {
+          "speaker": "Sohan",
+          "text": "I’ll be gentle. What if he feels unwell?",
+          "translations": {
+            "bn": "আমি নরম করে বলব। শরীর খারাপ লাগলে?",
+            "hi": "मैं प्यार से कहूँगा। अगर उनकी तबीयत ठीक न लगे तो?"
+          }
+        },
+        {
+          "speaker": "Deepa",
+          "text": "If he feels dizzy, he should sit down and drink water. If it gets worse, you must call Dr Bose.",
+          "translations": {
+            "bn": "মাথা ঘুরলে বসে জল খাওয়া উচিত। আরও খারাপ হলে ডাক্তার বসুকে অবশ্যই ফোন করবে।",
+            "hi": "अगर चक्कर आए, तो उन्हें बैठकर पानी पीना चाहिए। हालत बिगड़े, तो तुम्हें डॉक्टर बोस को फ़ोन करना ही होगा।"
+          }
+        },
+        {
+          "speaker": "Sohan",
+          "text": "When did he last see Dr Bose?",
+          "translations": {
+            "bn": "শেষ কবে ডাক্তার বসুর কাছে গিয়েছিলেন?",
+            "hi": "उन्होंने आख़िरी बार डॉक्टर बोस को कब दिखाया था?"
+          }
+        },
+        {
+          "speaker": "Deepa",
+          "text": "He saw her last Tuesday, and she said everything was fine.",
+          "translations": {
+            "bn": "গত মঙ্গলবার। উনি বলেছিলেন সব ঠিক আছে।",
+            "hi": "पिछले मंगलवार को। उन्होंने कहा था कि सब ठीक है।"
+          }
+        },
+        {
+          "speaker": "Sohan",
+          "text": "Good. Let me check I’ve understood: yellow at eight, white at bedtime, and Dr Bose if he’s worse.",
+          "translations": {
+            "bn": "ভালো। দেখি ঠিক বুঝেছি কি না: আটটায় হলুদ, শোয়ার সময় সাদা, আর খারাপ লাগলে ডাক্তার বসু।",
+            "hi": "अच्छा। देखूँ, मैंने ठीक समझा या नहीं: आठ बजे पीली, सोते समय सफ़ेद, और हालत बिगड़े तो डॉक्टर बोस।"
+          }
+        },
+        {
+          "speaker": "Deepa",
+          "text": "Perfect. I’ll be back on Sunday evening.",
+          "translations": {
+            "bn": "একদম ঠিক। আমি রবিবার সন্ধেয় ফিরব।",
+            "hi": "बिल्कुल सही। मैं रविवार शाम को लौट आऊँगी।"
+          }
+        }
+      ],
+      "voices": {
+        "Deepa": "female",
+        "Sohan": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "already",
+          "phonetic": "/ɔːlˈredi/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ইতিমধ্যে",
+            "hi": "पहले ही"
+          },
+          "syllables": ["al", "read", "y"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "“He has already taken it”: “has” বা “have”-এর সঙ্গে।"
+            ],
+            "en": [
+              "Say the second part stronger.",
+              "“He has already taken it”: use it with “has” or “have”."
+            ],
+            "hi": [
+              "दूसरा हिस्सा ज़ोर से बोलें।",
+              "“He has already taken it”: “has” या “have” के साथ।"
+            ]
+          }
+        },
+        {
+          "word": "yet",
+          "phonetic": "/jet/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "এখনও (প্রশ্নে বা “না”-এর সঙ্গে)",
+            "hi": "अब तक (सवाल में या “नहीं” के साथ)"
+          },
+          "syllables": ["yet"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "শুরুটা “yes”-এর “y”-এর মতো।",
+              "“Has she called yet?” প্রশ্নে আর “not”-এর সঙ্গে।"
+            ],
+            "en": [
+              "It starts with the “y” of “yes”.",
+              "“Has she called yet?” Use it in questions and with “not”."
+            ],
+            "hi": [
+              "शुरुआत “yes” के “y” जैसी है।",
+              "“Has she called yet?” सवाल में और “not” के साथ।"
+            ]
+          }
+        },
+        {
+          "word": "just",
+          "phonetic": "/dʒʌst/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "এইমাত্র",
+            "hi": "अभी-अभी"
+          },
+          "syllables": ["just"],
+          "stress": null,
+          "tips": {
+            "bn": ["শেষের “st” বলুন।", "“I’ve just finished” মানে এইমাত্র শেষ হলো।"],
+            "en": ["Say the “st” at the end.", "“I’ve just finished” means a moment ago."],
+            "hi": ["आख़िर का “st” बोलें।", "“I’ve just finished” मतलब अभी-अभी ख़त्म हुआ।"]
+          }
+        },
+        {
+          "word": "ago",
+          "phonetic": "/əˈɡəʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আগে (যেমন দু দিন আগে)",
+            "hi": "पहले (जैसे दो दिन पहले)"
+          },
+          "syllables": ["a", "go"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "“two days ago” অতীত কালের সঙ্গে, কখনও “have”-এর সঙ্গে নয়।"
+            ],
+            "en": [
+              "Say the second part stronger.",
+              "“two days ago” goes with the past, never with “have”."
+            ],
+            "hi": [
+              "दूसरा हिस्सा ज़ोर से बोलें।",
+              "“two days ago” भूतकाल के साथ, कभी “have” के साथ नहीं।"
+            ]
+          }
+        },
+        {
+          "word": "since",
+          "phonetic": "/sɪns/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "থেকে (কোনো সময় থেকে)",
+            "hi": "से (किसी समय से)"
+          },
+          "syllables": ["since"],
+          "stress": null,
+          "tips": {
+            "bn": ["উচ্চারণ “সিন্স”।", "“since Monday”: একটা সময় থেকে এখন পর্যন্ত।"],
+            "en": ["It sounds like “sins”.", "“since Monday”: from a point in time until now."],
+            "hi": ["इसकी आवाज़ “सिन्स” है।", "“since Monday”: किसी समय से अब तक।"]
+          }
+        },
+        {
+          "word": "by",
+          "phonetic": "/baɪ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "…-এর মধ্যে",
+            "hi": "… तक"
+          },
+          "syllables": ["by"],
+          "stress": null,
+          "tips": {
+            "bn": ["উচ্চারণ “buy”-এর মতো।", "“by Friday” মানে শুক্রবার বা তার আগে।"],
+            "en": ["It sounds like “buy”.", "“by Friday” means on Friday or before."],
+            "hi": ["इसकी आवाज़ “buy” जैसी है।", "“by Friday” मतलब शुक्रवार या उससे पहले।"]
+          }
+        },
+        {
+          "word": "recently",
+          "phonetic": "/ˈriːsntli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সম্প্রতি",
+            "hi": "हाल ही में"
+          },
+          "syllables": ["re", "cent", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“I have recently started …” মানে কিছু দিন আগে।"],
+            "en": [
+              "Say the first part stronger.",
+              "“I have recently started …” is about a short time ago."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“I have recently started …” मतलब कुछ समय पहले।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "You should see a doctor if the pain continues.",
+          "alsoAccepted": [
+            "You should see a doctor if the pain doesn’t stop.",
+            "If the pain continues, you should see a doctor."
+          ],
+          "translations": {
+            "bn": "ব্যথা না কমলে ডাক্তার দেখানো উচিত।",
+            "hi": "अगर दर्द बना रहे, तो आपको डॉक्टर को दिखाना चाहिए।"
+          },
+          "tips": {
+            "bn": ["“should” দিয়ে পরামর্শ দিন।", "“should”-এর পরে “to” নয়।"],
+            "en": ["“should” gives advice.", "No “to” after “should”."],
+            "hi": ["“should” से सलाह दें।", "“should” के बाद “to” नहीं।"]
+          }
+        },
+        {
+          "english": "We must leave by six, or we’ll miss the train.",
+          "alsoAccepted": [
+            "We must leave by six or we will miss the train.",
+            "We have to leave by six, or we’ll miss the train."
+          ],
+          "translations": {
+            "bn": "ছ’টার মধ্যে বেরোতেই হবে, নইলে ট্রেন ধরা যাবে না।",
+            "hi": "हमें छह बजे तक निकलना ही होगा, वरना ट्रेन छूट जाएगी।"
+          },
+          "tips": {
+            "bn": ["“must” জোরালো: অন্য উপায় নেই।", "“or” বলে না করলে কী হবে।"],
+            "en": ["“must” is strong: there is no choice.", "“or” says what happens if not."],
+            "hi": ["“must” पक्का है: कोई और रास्ता नहीं।", "“or” बताता है कि न करें तो क्या होगा।"]
+          }
+        },
+        {
+          "english": "It might rain later, so take an umbrella.",
+          "alsoAccepted": [
+            "It may rain later, so take an umbrella.",
+            "It might rain later, so bring an umbrella."
+          ],
+          "translations": {
+            "bn": "পরে বৃষ্টি হতে পারে, তাই ছাতা নিয়ে যান।",
+            "hi": "बाद में बारिश हो सकती है, इसलिए छाता ले जाइए।"
+          },
+          "tips": {
+            "bn": ["“might” মানে হতে পারে, নিশ্চিত নয়।", "“may”-ও ঠিক।"],
+            "en": ["“might” means possible, not sure.", "“may” is also right."],
+            "hi": ["“might” मतलब हो सकता है, पक्का नहीं।", "“may” भी सही है।"]
+          }
+        },
+        {
+          "english": "You don’t have to come, but you can if you want.",
+          "alsoAccepted": [
+            "You do not have to come, but you can if you want.",
+            "You don’t need to come, but you can if you want."
+          ],
+          "translations": {
+            "bn": "আসতেই হবে এমন নয়, তবে চাইলে আসতে পারেন।",
+            "hi": "आपका आना ज़रूरी नहीं, पर चाहें तो आ सकते हैं।"
+          },
+          "tips": {
+            "bn": ["“don’t have to” মানে দরকার নেই।", "“can” দিয়ে অনুমতি দিন।"],
+            "en": ["“don’t have to” means there is no need.", "“can” gives permission."],
+            "hi": ["“don’t have to” मतलब ज़रूरत नहीं।", "“can” से इजाज़त दें।"]
+          }
+        },
+        {
+          "english": "Could you check this before I send it?",
+          "alsoAccepted": [
+            "Can you check this before I send it?",
+            "Could you please check this before I send it?"
+          ],
+          "translations": {
+            "bn": "পাঠানোর আগে এটা একটু দেখে দেবেন?",
+            "hi": "भेजने से पहले कृपया इसे एक बार देख लीजिए।"
+          },
+          "tips": {
+            "bn": ["“Could you …?” ভদ্র অনুরোধ।", "“before”-এর পরে বর্তমান কাল: “before I send”।"],
+            "en": [
+              "“Could you …?” is a polite request.",
+              "After “before”, use the present: “before I send”."
+            ],
+            "hi": [
+              "“Could you …?” विनम्र अनुरोध है।",
+              "“before” के बाद वर्तमान काल: “before I send”।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Vivek",
+      "asWoman": "Vidya",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I heard you started a new course. What is it?",
+          "reply": "Yes, it’s a cooking course, which I take every Saturday morning.",
+          "cues": {
+            "bn": "কোর্সটা কী আর কবে হয়, এক বাক্যে বলুন।",
+            "hi": "एक ही वाक्य में बताएँ कि कोर्स क्या है और कब होता है।"
+          }
+        },
+        {
+          "partner": "Why did you choose cooking?",
+          "reply": "I chose it because I want to eat healthier food and save money.",
+          "cues": {
+            "bn": "কারণসহ একটা বাক্য বলুন।",
+            "hi": "वजह के साथ एक वाक्य कहें।"
+          }
+        },
+        {
+          "partner": "Is it easy?",
+          "reply": "Although it’s hard work, I enjoy it, and I’m getting better every week.",
+          "cues": {
+            "bn": "কঠিন দিক আর ভালো দিক, দুটোই এক বাক্যে বলুন।",
+            "hi": "मुश्किल और अच्छी बात, दोनों एक वाक्य में बताएँ।"
+          }
+        },
+        {
+          "partner": "What have you learned so far?",
+          "reply": "So far, I’ve learned how to make bread, which was harder than I thought.",
+          "cues": {
+            "bn": "এখনও পর্যন্ত কী শিখেছেন, বিশদে বলুন।",
+            "hi": "अब तक क्या सीखा, ब्योरे के साथ बताएँ।"
+          }
+        },
+        {
+          "partner": "What will you do when the course ends?",
+          "reply": "When it ends, I’ll cook for my family, and if they like it, I’ll do it every weekend.",
+          "cues": {
+            "bn": "কোর্স শেষে কী করবেন, শর্তসহ বলুন।",
+            "hi": "शर्त के साथ बताएँ कि कोर्स के बाद क्या करना है।"
+          }
+        },
+        {
+          "partner": "That sounds great. Can I come and try your food?",
+          "reply": "Of course! Come on Sunday, and I’ll make you lunch.",
+          "cues": {
+            "bn": "আমন্ত্রণ জানান।",
+            "hi": "न्योता दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Speak Naturally Without Losing Accuracy",
+        "translations": {
+          "bn": "স্বাভাবিকভাবে বলুন, নির্ভুল থেকে",
+          "hi": "सहज बोलें, सही बोलें"
+        }
+      },
+      "instruction": {
+        "text": "Talk about your past year, your life now and your plans. Use the right tenses, and connect your ideas.",
+        "translations": {
+          "bn": "গত বছর, এখনকার জীবন আর পরিকল্পনা নিয়ে বলুন। ঠিক কাল ব্যবহার করুন, আর ভাবনাগুলো জুড়ে জুড়ে বলুন।",
+          "hi": "पिछले साल, अभी की ज़िंदगी और अपनी योजनाओं के बारे में बोलें। सही काल इस्तेमाल करें और विचारों को जोड़ें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say one thing that happened last year (past)",
+          "translations": {
+            "bn": "গত বছরের একটা ঘটনা বলুন (অতীত)",
+            "hi": "पिछले साल की एक घटना बताएँ (भूतकाल)"
+          }
+        },
+        {
+          "text": "Say what has changed since then (has / have)",
+          "translations": {
+            "bn": "তারপর থেকে কী বদলেছে বলুন (has / have)",
+            "hi": "तब से क्या बदला है, बताएँ (has / have)"
+          }
+        },
+        {
+          "text": "Describe your life now (present)",
+          "translations": {
+            "bn": "এখনকার জীবনের কথা বলুন (বর্তমান)",
+            "hi": "अभी की ज़िंदगी के बारे में बताएँ (वर्तमान)"
+          }
+        },
+        {
+          "text": "Give a plan, and say what might go wrong",
+          "translations": {
+            "bn": "একটা পরিকল্পনা বলুন, আর কী গোলমাল হতে পারে",
+            "hi": "एक योजना बताएँ, और क्या गड़बड़ हो सकती है"
+          }
+        },
+        {
+          "text": "Give someone one piece of advice with “should”",
+          "translations": {
+            "bn": "“should” দিয়ে কাউকে একটা পরামর্শ দিন",
+            "hi": "“should” से किसी को एक सलाह दें"
+          }
+        },
+        {
+          "text": "Join ideas with because, although, when or if",
+          "translations": {
+            "bn": "because, although, when বা if দিয়ে ভাবনা জুড়ুন",
+            "hi": "because, although, when या if से विचार जोड़ें"
+          }
+        }
+      ],
+      "phrases": [
+        "Last year, I …",
+        "Since then, I have …",
+        "These days, I …",
+        "Next year, I’m going to …",
+        "It might …, so …",
+        "You should …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Choose: “I ___ him two days ago.”",
+            "translations": {
+              "bn": "বাছুন: “I ___ him two days ago.”",
+              "hi": "चुनें: “I ___ him two days ago.”"
+            }
+          },
+          "answer": "saw",
+          "others": ["have seen", "see"]
+        },
+        {
+          "question": {
+            "text": "Choose: “She has lived here ___ 2020.”",
+            "translations": {
+              "bn": "বাছুন: “She has lived here ___ 2020.”",
+              "hi": "चुनें: “She has lived here ___ 2020.”"
+            }
+          },
+          "answer": "since",
+          "others": ["for", "ago"]
+        },
+        {
+          "question": {
+            "text": "Which word gives advice?",
+            "translations": {
+              "bn": "কোন শব্দ দিয়ে পরামর্শ দেওয়া হয়?",
+              "hi": "कौन-सा शब्द सलाह देता है?"
+            }
+          },
+          "answer": "should",
+          "others": ["might", "did"]
+        },
+        {
+          "question": {
+            "text": "Which sentence means it is possible, not certain?",
+            "translations": {
+              "bn": "কোন বাক্যের মানে হতে পারে, নিশ্চিত নয়?",
+              "hi": "किस वाक्य का मतलब है कि हो सकता है, पक्का नहीं?"
+            }
+          },
+          "answer": "It might rain tonight.",
+          "others": ["It rains every night.", "It rained last night."]
+        },
+        {
+          "question": {
+            "text": "Which sentence joins two ideas correctly?",
+            "translations": {
+              "bn": "কোন বাক্যে দুটো ভাবনা ঠিকভাবে জোড়া হয়েছে?",
+              "hi": "कौन-सा वाक्य दो विचारों को सही ढंग से जोड़ता है?"
+            }
+          },
+          "answer": "I stayed at home because I was ill.",
+          "others": ["I stayed at home because ill.", "Because I was ill, so I stayed at home."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rekha",
+          "text": "QuickParcel, Rekha speaking. How can I help?",
+          "translations": {
+            "bn": "কুইকপার্সেল, রেখা বলছি। কী সাহায্য করতে পারি?",
+            "hi": "क्विकपार्सल, रेखा बोल रही हूँ। मैं आपकी क्या मदद करूँ?"
+          }
+        },
+        {
+          "speaker": "Tanvir",
+          "text": "Hi. I’m calling about my parcel. The tracking says it was delivered yesterday, but I haven’t received it.",
+          "translations": {
+            "bn": "নমস্কার। আমার পার্সেলের ব্যাপারে ফোন করছি। ট্র্যাকিংয়ে দেখাচ্ছে কাল পৌঁছে গেছে, কিন্তু আমি পাইনি।",
+            "hi": "नमस्ते। मैं अपने पार्सल के बारे में फ़ोन कर रहा हूँ। ट्रैकिंग में लिखा है कि कल पहुँच गया, पर मुझे मिला नहीं।"
+          }
+        },
+        {
+          "speaker": "Rekha",
+          "text": "I’m sorry. Can I have the tracking number?",
+          "translations": {
+            "bn": "দুঃখিত। ট্র্যাকিং নম্বরটা বলবেন?",
+            "hi": "माफ़ कीजिए। क्या आप ट्रैकिंग नंबर बताएँगे?"
+          }
+        },
+        {
+          "speaker": "Tanvir",
+          "text": "It’s Q K four four seven two.",
+          "translations": {
+            "bn": "Q K চার চার সাত দুই।",
+            "hi": "Q K चार चार सात दो।"
+          }
+        },
+        {
+          "speaker": "Rekha",
+          "text": "Thank you. It says it was left at flat 12B.",
+          "translations": {
+            "bn": "ধন্যবাদ। দেখাচ্ছে ফ্ল্যাট 12B-তে রেখে আসা হয়েছে।",
+            "hi": "धन्यवाद। इसमें लिखा है कि फ़्लैट 12B में छोड़ा गया।"
+          }
+        },
+        {
+          "speaker": "Tanvir",
+          "text": "Ah, that’s the problem. I live in 21B, not 12B.",
+          "translations": {
+            "bn": "ও, এটাই সমস্যা। আমি থাকি 21B-তে, 12B-তে নয়।",
+            "hi": "अरे, यही दिक़्क़त है। मैं 21B में रहता हूँ, 12B में नहीं।"
+          }
+        },
+        {
+          "speaker": "Rekha",
+          "text": "I see. So the numbers were swapped. I’m sorry about that.",
+          "translations": {
+            "bn": "বুঝলাম। তাহলে সংখ্যা দুটো উল্টে গেছে। এর জন্য দুঃখিত।",
+            "hi": "समझ गई। तो अंक आपस में बदल गए। इसके लिए माफ़ी चाहती हूँ।"
+          }
+        },
+        {
+          "speaker": "Tanvir",
+          "text": "No problem. Can someone collect it and bring it to the right flat?",
+          "translations": {
+            "bn": "অসুবিধা নেই। কেউ ওটা নিয়ে ঠিক ফ্ল্যাটে পৌঁছে দিতে পারবেন?",
+            "hi": "कोई बात नहीं। क्या कोई उसे लेकर सही फ़्लैट में पहुँचा सकता है?"
+          }
+        },
+        {
+          "speaker": "Rekha",
+          "text": "Yes. The driver will pick it up and deliver it by six this evening.",
+          "translations": {
+            "bn": "হ্যাঁ। চালক ওটা তুলে আজ সন্ধে ছ’টার মধ্যে পৌঁছে দেবেন।",
+            "hi": "हाँ। ड्राइवर उसे उठाकर आज शाम छह बजे तक पहुँचा देंगे।"
+          }
+        },
+        {
+          "speaker": "Tanvir",
+          "text": "By six today. Should I be at home?",
+          "translations": {
+            "bn": "আজ ছ’টার মধ্যে। আমাকে কি বাড়িতে থাকতে হবে?",
+            "hi": "आज छह बजे तक। क्या मुझे घर पर रहना चाहिए?"
+          }
+        },
+        {
+          "speaker": "Rekha",
+          "text": "You don’t have to be. He can leave it with the guard if you’re out.",
+          "translations": {
+            "bn": "দরকার নেই। আপনি না থাকলে উনি দারোয়ানের কাছে রেখে যেতে পারেন।",
+            "hi": "ज़रूरी नहीं। अगर आप बाहर हों, तो वे उसे गार्ड के पास छोड़ सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Tanvir",
+          "text": "Great. Just to check: 21B, by six today, and with the guard if I’m not in.",
+          "translations": {
+            "bn": "দারুণ। একবার মিলিয়ে নিই: 21B, আজ ছ’টার মধ্যে, আর না থাকলে দারোয়ানের কাছে।",
+            "hi": "बढ़िया। एक बार पक्का कर लूँ: 21B, आज छह बजे तक, और मैं न रहूँ तो गार्ड के पास।"
+          }
+        },
+        {
+          "speaker": "Rekha",
+          "text": "That’s right.",
+          "translations": {
+            "bn": "একদম ঠিক।",
+            "hi": "बिल्कुल सही।"
+          }
+        }
+      ],
+      "voices": {
+        "Rekha": "female",
+        "Tanvir": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the doctor",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "So, what seems to be the problem?",
+          "reply": "I’ve had a headache for three days.",
+          "cues": {
+            "bn": "কত দিন ধরে সমস্যা, বলুন।",
+            "hi": "बताएँ कि समस्या कितने दिनों से है।"
+          }
+        },
+        {
+          "partner": "When did it start?",
+          "reply": "It started on Monday, after I worked late.",
+          "cues": {
+            "bn": "কবে শুরু হয়েছিল বলুন।",
+            "hi": "बताएँ कि यह कब शुरू हुआ।"
+          }
+        },
+        {
+          "partner": "Have you taken any medicine?",
+          "reply": "Yes, I took one tablet yesterday, but it didn’t help much.",
+          "cues": {
+            "bn": "কী খেয়েছেন আর কাজ হয়েছে কি না বলুন।",
+            "hi": "बताएँ कि कौन-सी दवा ली और असर हुआ या नहीं।"
+          }
+        },
+        {
+          "partner": "You should rest and drink more water. Come back if it gets worse.",
+          "reply": "OK, I will. Thank you, doctor.",
+          "cues": {
+            "bn": "পরামর্শ মেনে ধন্যবাদ দিন।",
+            "hi": "सलाह मानें और धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Ordering a cake",
+            "translations": {
+              "bn": "কেক অর্ডার",
+              "hi": "केक का ऑर्डर"
+            }
+          },
+          "roleplay": {
+            "partner": "the baker",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello! What kind of cake would you like?",
+                "reply": "A chocolate cake for twelve people, please, with “Happy Birthday, Meena” on it.",
+                "cues": {
+                  "bn": "কেক, মাপ আর ওপরের লেখাটা বলুন।",
+                  "hi": "केक, आकार और उस पर लिखावट बताएँ।"
+                }
+              },
+              {
+                "partner": "When do you need it?",
+                "reply": "I need it by four o’clock on Saturday, the twentieth.",
+                "cues": {
+                  "bn": "নির্দিষ্ট দিন আর সময় বলুন।",
+                  "hi": "सटीक दिन और समय बताएँ।"
+                }
+              },
+              {
+                "partner": "So, Sunday the twentieth?",
+                "reply": "No, sorry. Saturday the twentieth, not Sunday.",
+                "cues": {
+                  "bn": "ভুলটা শুধরে দিন।",
+                  "hi": "ग़लती सुधारें।"
+                }
+              },
+              {
+                "partner": "Got it. Saturday at four. Anything else?",
+                "reply": "Yes, it mustn’t have nuts, because one of the guests is allergic.",
+                "cues": {
+                  "bn": "একটা জরুরি শর্ত কারণসহ বলুন।",
+                  "hi": "वजह के साथ एक ज़रूरी शर्त बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A mistake at the bank",
+            "translations": {
+              "bn": "ব্যাংকে একটা ভুল",
+              "hi": "बैंक में एक ग़लती"
+            }
+          },
+          "roleplay": {
+            "partner": "the bank officer",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good morning. How can I help?",
+                "reply": "Good morning. Two thousand rupees were taken from my account twice.",
+                "cues": {
+                  "bn": "সমস্যাটা নির্দিষ্ট করে বলুন।",
+                  "hi": "समस्या सटीक बताएँ।"
+                }
+              },
+              {
+                "partner": "When did this happen?",
+                "reply": "It happened on the fifth of this month, when I paid my electricity bill.",
+                "cues": {
+                  "bn": "কখন আর কীভাবে হয়েছিল বলুন।",
+                  "hi": "बताएँ कि कब और कैसे हुआ।"
+                }
+              },
+              {
+                "partner": "I can see it. The money should come back in three working days.",
+                "reply": "Three working days. Should I do anything else?",
+                "cues": {
+                  "bn": "সময়টা আবার বলে আর কী করতে হবে জিজ্ঞেস করুন।",
+                  "hi": "समय दोहराएँ और पूछें कि और क्या करना है।"
+                }
+              },
+              {
+                "partner": "No, you don’t have to. We’ll send you a message.",
+                "reply": "Thank you. If it doesn’t arrive, I’ll come back on Friday.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিয়ে বলুন না এলে কী করবেন।",
+                  "hi": "धन्यवाद दें और बताएँ कि पैसे न आएँ तो क्या करना है।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Agreeing a time",
+            "translations": {
+              "bn": "সময় ঠিক করা",
+              "hi": "समय तय करना"
+            }
+          },
+          "roleplay": {
+            "partner": "Shreya",
+            "asMan": "Shreyas",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Can we meet next week to plan the trip?",
+                "reply": "Sure. I’m free on Wednesday afternoon, after three.",
+                "cues": {
+                  "bn": "কবে ফাঁকা আছেন, নির্দিষ্ট করে বলুন।",
+                  "hi": "सटीक बताएँ कि आप कब ख़ाली हैं।"
+                }
+              },
+              {
+                "partner": "Wednesday is the thirteenth, right?",
+                "reply": "No, Wednesday is the fourteenth. The thirteenth is Tuesday.",
+                "cues": {
+                  "bn": "তারিখটা শুধরে দিন।",
+                  "hi": "तारीख़ सुधारें।"
+                }
+              },
+              {
+                "partner": "Oh, you’re right. Shall we say four o’clock?",
+                "reply": "Four is fine. Should we meet at the café near the station?",
+                "cues": {
+                  "bn": "রাজি হয়ে জায়গার প্রস্তাব দিন।",
+                  "hi": "हाँ कहें और जगह सुझाएँ।"
+                }
+              },
+              {
+                "partner": "Perfect. See you then.",
+                "reply": "Great. So, Wednesday the fourteenth, at four, at the station café.",
+                "cues": {
+                  "bn": "সব তথ্য আবার বলে মিলিয়ে নিন।",
+                  "hi": "सारी जानकारी दोहराकर पक्की करें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

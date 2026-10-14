@@ -64,10 +64,16 @@ export default defineConfig({
             handler: 'NetworkOnly',
           },
           {
-            // Admin-managed settings (landing page, ...): instant from cache, refreshed behind.
+            // Admin-managed settings (landing page, screen texts, ...): the server's answer while
+            // it can be had, so that an admin's change reaches a learner at their next look, and
+            // the last one kept when it cannot (the app keeps its own copy as well).
             urlPattern: ({ url }) => url.pathname.startsWith('/api/app-config'),
-            handler: 'StaleWhileRevalidate',
-            options: { cacheName: 'app-config', expiration: { maxEntries: 20 } },
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'app-config',
+              networkTimeoutSeconds: 3,
+              expiration: { maxEntries: 5 },
+            },
           },
           {
             // A week's lesson content: the server's answer while it can be had, so that an

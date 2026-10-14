@@ -1,10 +1,12 @@
-import { useLipSync } from '@/shared/lib/audio/useLipSync'
 import { useTutorAvatar } from '@/shared/lib/learner/tutorAvatar'
 import { TutorAvatar } from '@/shared/ui/TutorAvatar'
+import { TutorSayingLine } from './TutorSayingLine'
 
 export type TutorAsPartnerProps = {
   /** The partner's line is being said right now. */
   speaking: boolean
+  /** `md` where the face stands alone, `sm` beside a line of the conversation. */
+  size?: 'sm' | 'md'
 }
 
 /**
@@ -12,13 +14,16 @@ export type TutorAsPartnerProps = {
  * with the line. A partner's lines are said in that tutor's English voice, so this is the face
  * the voice belongs to: a woman's voice from a woman's face, a man's from a man's.
  *
- * The moving mouth is kept in here, so the conversation around it does not re-render with it.
+ * A conversation has this face beside every one of the partner's lines, so only the one whose
+ * line is being said follows the sound (`TutorSayingLine`); the others are still, and are not
+ * drawn again with it.
  */
-export function TutorAsPartner({ speaking }: TutorAsPartnerProps) {
+export function TutorAsPartner({ speaking, size = 'md' }: TutorAsPartnerProps) {
   const avatar = useTutorAvatar()
-  const mouth = useLipSync()
 
-  return (
-    <TutorAvatar avatar={avatar} size="md" mouth={mouth} mood={speaking ? 'neutral' : 'smile'} />
+  return speaking ? (
+    <TutorSayingLine avatar={avatar} size={size} />
+  ) : (
+    <TutorAvatar avatar={avatar} size={size} mood="smile" />
   )
 }

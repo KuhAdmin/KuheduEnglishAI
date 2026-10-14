@@ -1,0 +1,736 @@
+{
+  "week": 33,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Abhay",
+          "text": "Sneha, I think we should buy a flat instead of renting.",
+          "translations": {
+            "bn": "স্নেহা, আমার মনে হয় ভাড়া না নিয়ে একটা ফ্ল্যাট কেনা উচিত।",
+            "hi": "स्नेहा, मुझे लगता है किराए की जगह हमें एक फ़्लैट ख़रीद लेना चाहिए।"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "I partly agree. Owning a home is a good idea, but not right now.",
+          "translations": {
+            "bn": "আংশিক একমত। নিজের বাড়ি ভালো ভাবনা, তবে এখনই নয়।",
+            "hi": "मैं कुछ हद तक सहमत हूँ। अपना घर अच्छा विचार है, पर अभी नहीं।"
+          }
+        },
+        {
+          "speaker": "Abhay",
+          "text": "Why not now? The rent goes up every year.",
+          "translations": {
+            "bn": "এখন নয় কেন? ভাড়া তো প্রতি বছর বাড়ে।",
+            "hi": "अभी क्यों नहीं? किराया तो हर साल बढ़ता है।"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "I see your point, but we don’t have enough savings yet.",
+          "translations": {
+            "bn": "তোমার কথা বুঝলাম, কিন্তু আমাদের এখনও যথেষ্ট সঞ্চয় নেই।",
+            "hi": "मैं तुम्हारी बात समझती हूँ, पर अभी हमारे पास काफ़ी बचत नहीं है।"
+          }
+        },
+        {
+          "speaker": "Abhay",
+          "text": "We could take a loan. My brother did that.",
+          "translations": {
+            "bn": "ঋণ নিতে পারি। আমার ভাই তাই করেছে।",
+            "hi": "हम लोन ले सकते हैं। मेरे भाई ने भी यही किया।"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "With respect, I don’t think that’s wise. A big loan would worry me every month.",
+          "translations": {
+            "bn": "কিছু মনে কোরো না, আমার মনে হয় সেটা বুদ্ধিমানের কাজ নয়। বড় ঋণ নিয়ে প্রতি মাসে চিন্তা হবে।",
+            "hi": "बुरा मत मानना, पर मुझे नहीं लगता यह समझदारी है। बड़ा लोन हर महीने मुझे परेशान करेगा।"
+          }
+        },
+        {
+          "speaker": "Abhay",
+          "text": "That’s fair. But think of the future: the flat would be ours.",
+          "translations": {
+            "bn": "ন্যায্য কথা। কিন্তু ভবিষ্যতের কথা ভাবো: ফ্ল্যাটটা আমাদের হবে।",
+            "hi": "यह ठीक बात है। पर भविष्य के बारे में सोचो: फ़्लैट हमारा होगा।"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "Absolutely, I agree with that. So let’s save for two more years, then buy.",
+          "translations": {
+            "bn": "অবশ্যই, এতে আমি পুরো একমত। তাহলে আরও দু বছর জমাই, তারপর কিনি।",
+            "hi": "बिल्कुल, इससे मैं पूरी तरह सहमत हूँ। तो चलो दो साल और बचत करते हैं, फिर ख़रीदेंगे।"
+          }
+        },
+        {
+          "speaker": "Abhay",
+          "text": "Two years? That’s a long time.",
+          "translations": {
+            "bn": "দু বছর? সে তো অনেক দিন।",
+            "hi": "दो साल? यह तो लंबा समय है।"
+          }
+        },
+        {
+          "speaker": "Sneha",
+          "text": "Maybe, but then we’d need a smaller loan. For example, half of what your brother took.",
+          "translations": {
+            "bn": "হয়তো, কিন্তু তখন ঋণ কম লাগবে। যেমন, তোমার ভাইয়ের অর্ধেক।",
+            "hi": "शायद, पर तब कम लोन लेना पड़ेगा। जैसे, तुम्हारे भाई का आधा।"
+          }
+        },
+        {
+          "speaker": "Abhay",
+          "text": "OK, you’ve convinced me. Two years it is!",
+          "translations": {
+            "bn": "ঠিক আছে, তুমি আমাকে রাজি করালে। তাহলে দু বছরই!",
+            "hi": "ठीक है, तुमने मुझे मना लिया। दो साल ही सही!"
+          }
+        }
+      ],
+      "voices": {
+        "Abhay": "male",
+        "Sneha": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "respect",
+          "phonetic": "/rɪˈspekt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সম্মান",
+            "hi": "सम्मान"
+          },
+          "syllables": ["re", "spect"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“With respect, …” দিয়ে দ্বিমত ভদ্র হয়।"],
+            "en": ["Say the second part stronger.", "“With respect, …” makes disagreement polite."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“With respect, …” से असहमति विनम्र बनती है।"]
+          }
+        },
+        {
+          "word": "however",
+          "phonetic": "/haʊˈevə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "তবে, তবুও",
+            "hi": "फिर भी"
+          },
+          "syllables": ["how", "ev", "er"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "এর পরে কমা দিন: “However, …”"],
+            "en": ["Say the second part stronger.", "Put a comma after it: “However, …”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "इसके बाद अल्पविराम लगाएँ: “However, …”"]
+          }
+        },
+        {
+          "word": "exactly",
+          "phonetic": "/ɪɡˈzæktli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "একদম ঠিক",
+            "hi": "बिल्कुल सही"
+          },
+          "syllables": ["ex", "act", "ly"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“Exactly!” মানে পুরো একমত।"],
+            "en": ["Say the second part stronger.", "“Exactly!” shows strong agreement."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“Exactly!” पूरी सहमति दिखाता है।"]
+          }
+        },
+        {
+          "word": "absolutely",
+          "phonetic": "/ˌæbsəˈluːtli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অবশ্যই, পুরোপুরি",
+            "hi": "बिल्कुल, पूरी तरह"
+          },
+          "syllables": ["ab", "so", "lute", "ly"],
+          "stress": 3,
+          "tips": {
+            "bn": ["তৃতীয় অংশটি জোর দিয়ে বলুন: “লুট”।", "“Absolutely!” মানে হ্যাঁ, পুরোপুরি।"],
+            "en": ["Say the third part stronger: “LOOT”.", "“Absolutely!” means yes, completely."],
+            "hi": ["तीसरा हिस्सा ज़ोर से बोलें: “लूट”।", "“Absolutely!” मतलब हाँ, पूरी तरह।"]
+          }
+        },
+        {
+          "word": "partly",
+          "phonetic": "/ˈpɑːtli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আংশিকভাবে",
+            "hi": "कुछ हद तक"
+          },
+          "syllables": ["part", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“I partly agree” মানে কিছুটা একমত।"],
+            "en": [
+              "Say the first part stronger.",
+              "“I partly agree” means I agree with some of it."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“I partly agree” मतलब कुछ बातों से सहमत।"]
+          }
+        },
+        {
+          "word": "although",
+          "phonetic": "/ɔːlˈðəʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যদিও",
+            "hi": "हालाँकि"
+          },
+          "syllables": ["al", "thou(gh)"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“gh” উচ্চারিত হয় না।"],
+            "en": ["Say the second part stronger.", "The “gh” is not said."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“gh” नहीं बोला जाता।"]
+          }
+        },
+        {
+          "word": "disagree",
+          "phonetic": "/ˌdɪsəˈɡriː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দ্বিমত হওয়া",
+            "hi": "असहमत होना"
+          },
+          "syllables": ["dis", "a", "gree"],
+          "stress": 3,
+          "tips": {
+            "bn": ["শেষ অংশটি জোর দিয়ে বলুন।", "বলুন “I disagree”, “I am disagree” নয়।"],
+            "en": ["Say the last part stronger.", "Say “I disagree”, not “I am disagree”."],
+            "hi": ["आख़िरी हिस्सा ज़ोर से बोलें।", "कहें “I disagree”, “I am disagree” नहीं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I see your point, but I think it’s too expensive.",
+          "alsoAccepted": ["I see your point, but I think it is too expensive."],
+          "translations": {
+            "bn": "আপনার কথা বুঝলাম, কিন্তু আমার মনে হয় এটা বড্ড দামি।",
+            "hi": "आपकी बात समझ आती है, पर मुझे लगता है यह बहुत महँगा है।"
+          },
+          "tips": {
+            "bn": ["আগে বোঝান আপনি বুঝেছেন।", "তারপর “but”-এর পরে নিজের মত।"],
+            "en": ["First show you understand.", "Then give your view after “but”."],
+            "hi": ["पहले जताएँ कि बात समझ आई।", "फिर “but” के बाद अपनी राय दें।"]
+          }
+        },
+        {
+          "english": "You may be right, but have you thought about the cost?",
+          "alsoAccepted": ["You might be right, but have you thought about the cost?"],
+          "translations": {
+            "bn": "আপনি ঠিক হতে পারেন, কিন্তু খরচের কথা ভেবেছেন?",
+            "hi": "आप सही हो सकते हैं, पर क्या आपने ख़र्च के बारे में सोचा है?"
+          },
+          "tips": {
+            "bn": ["“may be right” দিয়ে নরমভাবে শুরু।", "প্রশ্ন দিয়েও ভদ্রভাবে দ্বিমত করা যায়।"],
+            "en": ["“may be right” is a kind way to start.", "A question can disagree politely."],
+            "hi": [
+              "“may be right” से नरमी से शुरुआत होती है।",
+              "सवाल से भी विनम्र असहमति जताई जा सकती है।"
+            ]
+          }
+        },
+        {
+          "english": "That’s a good point. However, I still disagree.",
+          "alsoAccepted": ["That’s a good point, but I still disagree."],
+          "translations": {
+            "bn": "ভালো কথা। তবুও আমি একমত নই।",
+            "hi": "यह अच्छी बात है। फिर भी मैं सहमत नहीं हूँ।"
+          },
+          "tips": {
+            "bn": ["“However” হল একটু আনুষ্ঠানিক “but”।", "এর পরে কমা দিন।"],
+            "en": ["“However” is a more formal “but”.", "Put a comma after it."],
+            "hi": ["“However” थोड़ा औपचारिक “but” है।", "इसके बाद अल्पविराम लगाएँ।"]
+          }
+        },
+        {
+          "english": "I agree up to a point.",
+          "alsoAccepted": ["I partly agree."],
+          "translations": {
+            "bn": "আমি কিছুটা একমত।",
+            "hi": "मैं कुछ हद तक सहमत हूँ।"
+          },
+          "tips": {
+            "bn": ["“up to a point” মানে আংশিক।", "তারপর বলুন কোন অংশে একমত।"],
+            "en": ["“up to a point” means partly.", "Then say which part you agree with."],
+            "hi": ["“up to a point” मतलब कुछ हद तक।", "फिर बताएँ कि किस बात पर सहमत हैं।"]
+          }
+        },
+        {
+          "english": "I understand why you feel that way, but I see it differently.",
+          "alsoAccepted": ["I understand why you feel like that, but I see it differently."],
+          "translations": {
+            "bn": "আপনার কেন এমন মনে হয় বুঝি, কিন্তু আমি অন্যভাবে দেখি।",
+            "hi": "आपको ऐसा क्यों लगता है, यह समझ आता है, पर मेरा नज़रिया अलग है।"
+          },
+          "tips": {
+            "bn": ["তাঁর অনুভূতিকে সম্মান দেখান।", "“see it differently” মানে অন্য মত থাকা।"],
+            "en": [
+              "Show respect for their feelings.",
+              "“see it differently” means have another view."
+            ],
+            "hi": ["उनकी भावनाओं का सम्मान दिखाएँ।", "“see it differently” मतलब अलग नज़रिया होना।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Ojas",
+      "asWoman": "Ojasvi",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I think working from home is better than going to the office.",
+          "reply": "I disagree. I think the office is better for teamwork.",
+          "cues": {
+            "bn": "ভদ্রভাবে দ্বিমত করে নিজের মত দিন।",
+            "hi": "विनम्रता से असहमति जताएँ और अपनी राय दें।"
+          }
+        },
+        {
+          "partner": "Why do you say that?",
+          "reply": "Because it’s easier to share ideas face to face.",
+          "cues": {
+            "bn": "কারণ দিন।",
+            "hi": "कारण दें।"
+          }
+        },
+        {
+          "partner": "But we can share ideas on video calls.",
+          "reply": "That’s true, but it’s not the same. For example, people talk less on calls.",
+          "cues": {
+            "bn": "মেনে নিয়ে একটা উদাহরণ দিন।",
+            "hi": "बात मानें और एक उदाहरण दें।"
+          }
+        },
+        {
+          "partner": "Hmm. Working from home saves two hours of travel, though.",
+          "reply": "I agree with that. Maybe two days at home would be fair.",
+          "cues": {
+            "bn": "আংশিক একমত হয়ে মাঝামাঝি প্রস্তাব দিন।",
+            "hi": "कुछ हद तक सहमति दें और बीच का रास्ता सुझाएँ।"
+          }
+        },
+        {
+          "partner": "Two days at home, three at the office?",
+          "reply": "Exactly. That gives us the best of both.",
+          "cues": {
+            "bn": "পুরো একমত হোন।",
+            "hi": "पूरी सहमति दें।"
+          }
+        },
+        {
+          "partner": "OK, I can accept that.",
+          "reply": "Great. Let’s suggest it to the manager.",
+          "cues": {
+            "bn": "পরের পদক্ষেপ বলুন।",
+            "hi": "अगला क़दम बताएँ।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "A Friendly Debate",
+        "translations": {
+          "bn": "বন্ধুত্বপূর্ণ বিতর্ক",
+          "hi": "दोस्ताना बहस"
+        }
+      },
+      "instruction": {
+        "text": "Debate a topic with a friend, like “Is TV good for children?” Take one side and defend it politely.",
+        "translations": {
+          "bn": "বন্ধুর সঙ্গে একটা বিষয়ে বিতর্ক করুন, যেমন “টিভি কি বাচ্চাদের জন্য ভালো?” একটা দিক নিন, ভদ্রভাবে সমর্থন করুন।",
+          "hi": "किसी दोस्त से किसी विषय पर बहस करें, जैसे “क्या टीवी बच्चों के लिए अच्छा है?” एक पक्ष लें और विनम्रता से रखें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say which side you take",
+          "translations": {
+            "bn": "কোন দিকে আছেন, বলুন",
+            "hi": "बताएँ कि आप किस पक्ष में हैं"
+          }
+        },
+        {
+          "text": "Give two reasons and an example",
+          "translations": {
+            "bn": "দুটো কারণ আর একটা উদাহরণ দিন",
+            "hi": "दो कारण और एक उदाहरण दें"
+          }
+        },
+        {
+          "text": "Listen, and say what you agree with",
+          "translations": {
+            "bn": "শুনুন, আর কোন কথায় একমত বলুন",
+            "hi": "सुनें, और बताएँ कि किस बात से सहमत हैं"
+          }
+        },
+        {
+          "text": "Disagree politely: “I see your point, but …”",
+          "translations": {
+            "bn": "ভদ্রভাবে দ্বিমত করুন: “I see your point, but …”",
+            "hi": "विनम्रता से असहमति जताएँ: “I see your point, but …”"
+          }
+        },
+        {
+          "text": "End by finding something you both agree on",
+          "translations": {
+            "bn": "শেষে এমন কিছু খুঁজুন যাতে দুজনেই একমত",
+            "hi": "आख़िर में कोई बात खोजें जिस पर दोनों सहमत हों"
+          }
+        }
+      ],
+      "phrases": [
+        "I strongly believe …",
+        "Firstly, … Secondly, …",
+        "I see your point, but …",
+        "I agree up to a point.",
+        "With respect, I disagree.",
+        "At least we agree that …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which phrase shows strong agreement?",
+            "translations": {
+              "bn": "কোন কথায় পুরো একমত বোঝায়?",
+              "hi": "कौन-सा वाक्यांश पूरी सहमति दिखाता है?"
+            }
+          },
+          "answer": "I completely agree.",
+          "others": ["I agree up to a point.", "I’m not sure."]
+        },
+        {
+          "question": {
+            "text": "Which phrase shows partial agreement?",
+            "translations": {
+              "bn": "কোন কথায় আংশিক একমত বোঝায়?",
+              "hi": "कौन-सा वाक्यांश आंशिक सहमति दिखाता है?"
+            }
+          },
+          "answer": "I partly agree.",
+          "others": ["Absolutely!", "Exactly!"]
+        },
+        {
+          "question": {
+            "text": "Which is the most respectful way to disagree?",
+            "translations": {
+              "bn": "দ্বিমত করার সবচেয়ে সম্মানজনক উপায় কোনটি?",
+              "hi": "असहमति जताने का सबसे सम्मानजनक तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "With respect, I see it differently.",
+          "others": ["That’s rubbish.", "You’re wrong, as usual."]
+        },
+        {
+          "question": {
+            "text": "Complete: That’s a good point. ___, I still disagree.",
+            "translations": {
+              "bn": "পূরণ করুন: That’s a good point. ___, I still disagree.",
+              "hi": "पूरा करें: That’s a good point. ___, I still disagree."
+            }
+          },
+          "answer": "However",
+          "others": ["Because", "So"]
+        },
+        {
+          "question": {
+            "text": "Which phrase supports your position with an example?",
+            "translations": {
+              "bn": "কোন কথা দিয়ে উদাহরণসহ নিজের মত জোরালো হয়?",
+              "hi": "कौन-सा वाक्यांश उदाहरण देकर आपकी बात को मज़बूत करता है?"
+            }
+          },
+          "answer": "For example, …",
+          "others": ["I see your point.", "Anyway, …"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Dhruv",
+          "text": "I strongly believe school uniforms are a good idea.",
+          "translations": {
+            "bn": "আমার দৃঢ় বিশ্বাস, স্কুল ইউনিফর্ম ভালো ব্যাপার।",
+            "hi": "मेरा पक्का मानना है कि स्कूल यूनिफ़ॉर्म अच्छा विचार है।"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "I agree up to a point. Why do you think so?",
+          "translations": {
+            "bn": "কিছুটা একমত। তোমার কেন এমন মনে হয়?",
+            "hi": "मैं कुछ हद तक सहमत हूँ। तुम्हें ऐसा क्यों लगता है?"
+          }
+        },
+        {
+          "speaker": "Dhruv",
+          "text": "Firstly, everyone looks equal. Secondly, mornings are easier.",
+          "translations": {
+            "bn": "প্রথমত, সবাইকে সমান দেখায়। দ্বিতীয়ত, সকালগুলো সহজ হয়।",
+            "hi": "पहली बात, सब बराबर दिखते हैं। दूसरी बात, सुबह आसान हो जाती है।"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "I see your point, but uniforms can be expensive for some families.",
+          "translations": {
+            "bn": "তোমার কথা বুঝলাম, কিন্তু কিছু পরিবারের কাছে ইউনিফর্ম দামি হতে পারে।",
+            "hi": "मैं तुम्हारी बात समझती हूँ, पर कुछ परिवारों के लिए यूनिफ़ॉर्म महँगी हो सकती है।"
+          }
+        },
+        {
+          "speaker": "Dhruv",
+          "text": "That’s true. However, normal clothes can cost even more.",
+          "translations": {
+            "bn": "ঠিক কথা। তবে সাধারণ জামাকাপড়ের খরচ আরও বেশি হতে পারে।",
+            "hi": "यह सच है। फिर भी, आम कपड़े और भी महँगे पड़ सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "Maybe. But with respect, I think students should express themselves.",
+          "translations": {
+            "bn": "হয়তো। কিন্তু কিছু মনে কোরো না, আমার মনে হয় ছাত্রছাত্রীদের নিজেদের মতো করে প্রকাশ করতে দেওয়া উচিত।",
+            "hi": "शायद। पर बुरा मत मानना, मुझे लगता है छात्रों को ख़ुद को व्यक्त करने का मौक़ा मिलना चाहिए।"
+          }
+        },
+        {
+          "speaker": "Dhruv",
+          "text": "Could they do that on Fridays? For example, one free-dress day a week.",
+          "translations": {
+            "bn": "শুক্রবারে করলে কেমন? যেমন, সপ্তাহে একদিন নিজের পছন্দের পোশাক।",
+            "hi": "क्या वे शुक्रवार को ऐसा कर सकते हैं? जैसे, हफ़्ते में एक दिन अपनी पसंद के कपड़े।"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "Now that’s a great idea. I completely agree!",
+          "translations": {
+            "bn": "এটা দারুণ বুদ্ধি। আমি পুরো একমত!",
+            "hi": "अब यह बढ़िया विचार है। मैं पूरी तरह सहमत हूँ!"
+          }
+        },
+        {
+          "speaker": "Dhruv",
+          "text": "So at least we agree on something!",
+          "translations": {
+            "bn": "যাক, অন্তত একটা বিষয়ে আমরা একমত!",
+            "hi": "चलो, कम से कम एक बात पर हम सहमत हैं!"
+          }
+        }
+      ],
+      "voices": {
+        "Dhruv": "male",
+        "Ritika": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I think everyone should learn to drive.",
+          "reply": "I agree up to a point.",
+          "cues": {
+            "bn": "আংশিক একমত হোন।",
+            "hi": "कुछ हद तक सहमति दें।"
+          }
+        },
+        {
+          "partner": "Why only up to a point?",
+          "reply": "Because in big cities, public transport is often better.",
+          "cues": {
+            "bn": "কারণ দিন।",
+            "hi": "कारण दें।"
+          }
+        },
+        {
+          "partner": "But driving is a useful skill.",
+          "reply": "I see your point. For example, it helps in emergencies.",
+          "cues": {
+            "bn": "মেনে নিয়ে একটা উদাহরণ দিন।",
+            "hi": "बात मानें और एक उदाहरण दें।"
+          }
+        },
+        {
+          "partner": "So you agree with me?",
+          "reply": "Partly! It’s useful, but not for everyone.",
+          "cues": {
+            "bn": "আপনার শেষ মত বলুন।",
+            "hi": "अपनी आख़िरी राय बताएँ।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Choosing a holiday",
+            "translations": {
+              "bn": "ছুটির জায়গা বাছাই",
+              "hi": "छुट्टी की जगह चुनना"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Let’s go to Goa. Beaches are the best!",
+                "reply": "I see your point, but it’s very crowded in December.",
+                "cues": {
+                  "bn": "মেনে নিয়ে দ্বিমত করুন।",
+                  "hi": "बात मानें, फिर असहमति जताएँ।"
+                }
+              },
+              {
+                "partner": "Where would you go, then?",
+                "reply": "I’d prefer the mountains, because they’re quiet.",
+                "cues": {
+                  "bn": "নিজের পছন্দ আর কারণ বলুন।",
+                  "hi": "अपनी पसंद और कारण बताएँ।"
+                }
+              },
+              {
+                "partner": "But it’s so cold there in winter.",
+                "reply": "That’s true. However, the views are amazing.",
+                "cues": {
+                  "bn": "মেনে নিয়ে নিজের যুক্তি দিন।",
+                  "hi": "बात मानें और अपना तर्क दें।"
+                }
+              },
+              {
+                "partner": "Hmm, what about Goa in March?",
+                "reply": "Now that’s a good idea. I agree!",
+                "cues": {
+                  "bn": "একমত হোন।",
+                  "hi": "सहमति दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A family decision",
+            "translations": {
+              "bn": "পরিবারের সিদ্ধান্ত",
+              "hi": "परिवार का फ़ैसला"
+            }
+          },
+          "roleplay": {
+            "partner": "Mrs Bose",
+            "asMan": "Mr Bose",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I think we should buy a big car.",
+                "reply": "I partly agree, but we don’t need a very big one.",
+                "cues": {
+                  "bn": "আংশিক একমত হোন।",
+                  "hi": "कुछ हद तक सहमति दें।"
+                }
+              },
+              {
+                "partner": "Why not? There are five of us.",
+                "reply": "True, but a big car uses more petrol.",
+                "cues": {
+                  "bn": "মেনে নিয়ে একটা কারণ দিন।",
+                  "hi": "बात मानें और एक कारण दें।"
+                }
+              },
+              {
+                "partner": "A small car would be too tight.",
+                "reply": "With respect, a medium car would be fine. For example, my friend’s car fits five.",
+                "cues": {
+                  "bn": "ভদ্রভাবে দ্বিমত করে উদাহরণ দিন।",
+                  "hi": "विनम्र असहमति जताएँ और उदाहरण दें।"
+                }
+              },
+              {
+                "partner": "OK, let’s look at medium cars.",
+                "reply": "Great. I’m glad we agree.",
+                "cues": {
+                  "bn": "খুশি জানান।",
+                  "hi": "ख़ुशी जताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Tea or coffee?",
+            "translations": {
+              "bn": "চা না কফি?",
+              "hi": "चाय या कॉफ़ी?"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Coffee is much better than tea.",
+                "reply": "I completely disagree! Tea is better.",
+                "cues": {
+                  "bn": "মজা করে দৃঢ়ভাবে দ্বিমত করুন।",
+                  "hi": "मज़ाक में मज़बूती से असहमति जताएँ।"
+                }
+              },
+              {
+                "partner": "Why do you say that?",
+                "reply": "Because it’s lighter, and there are so many kinds.",
+                "cues": {
+                  "bn": "কারণ দিন।",
+                  "hi": "कारण दें।"
+                }
+              },
+              {
+                "partner": "But coffee gives me more energy.",
+                "reply": "That’s true, but too much coffee isn’t healthy.",
+                "cues": {
+                  "bn": "মেনে নিয়ে যুক্তি দিন।",
+                  "hi": "बात मानें और तर्क दें।"
+                }
+              },
+              {
+                "partner": "OK, let’s agree that both are good!",
+                "reply": "Agreed! Let’s have one of each.",
+                "cues": {
+                  "bn": "মজা করে একমত হোন।",
+                  "hi": "मज़ाक में सहमति दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,801 @@
+{
+  "week": 40,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Anjali",
+          "text": "Harish, I missed the building meeting last night. What was it about?",
+          "translations": {
+            "bn": "হরিশ, কাল রাতে বিল্ডিংয়ের মিটিংয়ে যেতে পারিনি। কী নিয়ে ছিল?",
+            "hi": "हरीश, मैं कल रात बिल्डिंग की मीटिंग में नहीं जा पाई। किस बारे में थी?"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "The main idea was simple: there will be no water on Saturday.",
+          "translations": {
+            "bn": "মূল কথাটা সোজা: শনিবার জল থাকবে না।",
+            "hi": "मुख्य बात सीधी थी: शनिवार को पानी नहीं आएगा।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "No water? Why not?",
+          "translations": {
+            "bn": "জল থাকবে না? কেন?",
+            "hi": "पानी नहीं? क्यों?"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "The secretary said the tanks need maintenance. In simple words, they need cleaning and repairs.",
+          "translations": {
+            "bn": "সেক্রেটারি বললেন ট্যাংকগুলোর রক্ষণাবেক্ষণ দরকার। সহজ কথায়, পরিষ্কার আর মেরামত করতে হবে।",
+            "hi": "सचिव ने कहा कि टंकियों का रखरखाव ज़रूरी है। आसान शब्दों में, उनकी सफ़ाई और मरम्मत होनी है।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "Oh, I see. For how long?",
+          "translations": {
+            "bn": "ও, বুঝলাম। কতক্ষণ?",
+            "hi": "अच्छा, समझी। कितनी देर?"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "She said it would take from nine in the morning until six in the evening.",
+          "translations": {
+            "bn": "উনি বললেন সকাল ন’টা থেকে সন্ধে ছ’টা পর্যন্ত লাগবে।",
+            "hi": "उन्होंने कहा कि सुबह नौ बजे से शाम छह बजे तक लगेगा।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "That’s a long day. Did she say anything else?",
+          "translations": {
+            "bn": "অনেকটা সময়। আর কিছু বললেন?",
+            "hi": "यह तो पूरा दिन है। उन्होंने और कुछ कहा?"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "Yes. She told us to store water on Friday night. She also asked everyone to check their taps.",
+          "translations": {
+            "bn": "হ্যাঁ। শুক্রবার রাতে জল ধরে রাখতে বললেন। আর সবাইকে কল দেখে নিতে বললেন।",
+            "hi": "हाँ। उन्होंने शुक्रवार रात पानी भरकर रखने को कहा। उन्होंने सबसे अपने नल जाँचने को भी कहा।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "Why the taps?",
+          "translations": {
+            "bn": "কল কেন?",
+            "hi": "नल क्यों?"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "Because when the water comes back, it may be dirty for a few minutes. So let it run first.",
+          "translations": {
+            "bn": "কারণ জল ফিরে এলে কয়েক মিনিট ঘোলা আসতে পারে। তাই আগে একটু চলতে দিতে হবে।",
+            "hi": "क्योंकि पानी लौटने पर कुछ मिनट गंदा आ सकता है। इसलिए पहले उसे थोड़ा बहने दो।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "Got it. Was there anything else important?",
+          "translations": {
+            "bn": "বুঝেছি। আর কিছু জরুরি ছিল?",
+            "hi": "समझ गई। और कुछ ज़रूरी था?"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "Not really. People talked a lot about parking, but nothing was decided.",
+          "translations": {
+            "bn": "তেমন কিছু না। পার্কিং নিয়ে অনেক কথা হলো, কিন্তু কিছু ঠিক হয়নি।",
+            "hi": "ख़ास नहीं। पार्किंग पर बहुत बात हुई, पर कुछ तय नहीं हुआ।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "So, to sum up: no water on Saturday, store some on Friday, and run the taps after.",
+          "translations": {
+            "bn": "তাহলে সংক্ষেপে: শনিবার জল নেই, শুক্রবার ধরে রাখতে হবে, আর পরে কল খানিক চালাতে হবে।",
+            "hi": "तो कुल मिलाकर: शनिवार को पानी नहीं, शुक्रवार को भरकर रखना है, और बाद में नल थोड़ा चलाना है।"
+          }
+        },
+        {
+          "speaker": "Harish",
+          "text": "Exactly. That’s the whole meeting in one sentence!",
+          "translations": {
+            "bn": "একদম। পুরো মিটিংটা এক বাক্যে!",
+            "hi": "बिल्कुल। पूरी मीटिंग एक वाक्य में!"
+          }
+        }
+      ],
+      "voices": {
+        "Anjali": "female",
+        "Harish": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "in other words",
+          "phonetic": "/ɪn ˈʌðə wɜːdz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অন্যভাবে বললে",
+            "hi": "दूसरे शब्दों में"
+          },
+          "syllables": ["in", "oth", "er", "words"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“oth” জোর দিয়ে বলুন।", "একই কথা আরও সহজ করে বলতে।"],
+            "en": ["Say “oth” stronger.", "Use it to say the same thing more simply."],
+            "hi": ["“oth” ज़ोर से बोलें।", "वही बात और आसान ढंग से कहने के लिए।"]
+          }
+        },
+        {
+          "word": "basically",
+          "phonetic": "/ˈbeɪsɪkli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মূলত",
+            "hi": "मूल रूप से"
+          },
+          "syllables": ["ba", "si", "c(al)ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“al” উচ্চারণ হয় না।"],
+            "en": ["Say the first part stronger.", "The “al” is not said."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“al” नहीं बोला जाता।"]
+          }
+        },
+        {
+          "word": "it means",
+          "phonetic": "/ɪt ˈmiːnz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "এর মানে",
+            "hi": "इसका मतलब है"
+          },
+          "syllables": ["it", "means"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“means” জোর দিয়ে বলুন।", "“It means …” দিয়ে কঠিন শব্দ বুঝিয়ে দিন।"],
+            "en": ["Say “means” stronger.", "“It means …” explains a hard word."],
+            "hi": ["“means” ज़ोर से बोलें।", "“It means …” से कठिन शब्द समझाएँ।"]
+          }
+        },
+        {
+          "word": "simply",
+          "phonetic": "/ˈsɪmpli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সহজভাবে",
+            "hi": "सीधे शब्दों में"
+          },
+          "syllables": ["sim", "ply"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“Simply put, …” দিয়ে সহজ ব্যাখ্যা শুরু হয়।"],
+            "en": ["Say the first part stronger.", "“Simply put, …” starts an easy explanation."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“Simply put, …” से आसान व्याख्या शुरू होती है।"]
+          }
+        },
+        {
+          "word": "mainly",
+          "phonetic": "/ˈmeɪnli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "প্রধানত",
+            "hi": "मुख्य रूप से"
+          },
+          "syllables": ["main", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“It’s mainly about …” দিয়ে মূল কথা বলুন।"],
+            "en": ["Say the first part stronger.", "“It’s mainly about …” gives the main idea."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“It’s mainly about …” से मुख्य बात बताएँ।"]
+          }
+        },
+        {
+          "word": "for example",
+          "phonetic": "/fər ɪɡˈzɑːmpl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যেমন, উদাহরণস্বরূপ",
+            "hi": "उदाहरण के लिए"
+          },
+          "syllables": ["for", "ex", "am", "ple"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“am” জোর দিয়ে বলুন।", "উদাহরণ দিলে ভাবনা স্পষ্ট হয়।"],
+            "en": ["Say “am” stronger.", "An example makes an idea clear."],
+            "hi": ["“am” ज़ोर से बोलें।", "उदाहरण से बात साफ़ होती है।"]
+          }
+        },
+        {
+          "word": "in short",
+          "phonetic": "/ɪn ˈʃɔːt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সংক্ষেপে",
+            "hi": "संक्षेप में"
+          },
+          "syllables": ["in", "short"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“short” জোর দিয়ে বলুন।", "“In short, …” দিয়ে অল্প কথায় সারাংশ দিন।"],
+            "en": ["Say “short” stronger.", "“In short, …” gives a summary in a few words."],
+            "hi": ["“short” ज़ोर से बोलें।", "“In short, …” से कम शब्दों में सार बताएँ।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "The story is about a boy who finds a lost dog.",
+          "alsoAccepted": [
+            "This story is about a boy who finds a lost dog.",
+            "The story is about a boy who finds a missing dog."
+          ],
+          "translations": {
+            "bn": "গল্পটা একটা ছেলেকে নিয়ে, যে একটা হারানো কুকুর খুঁজে পায়।",
+            "hi": "कहानी एक लड़के के बारे में है, जिसे एक खोया हुआ कुत्ता मिलता है।"
+          },
+          "tips": {
+            "bn": [
+              "গল্পটা কাকে নিয়ে, তা দিয়ে শুরু করুন।",
+              "“The story is about …” দিয়ে মূল কথা বলুন।"
+            ],
+            "en": [
+              "Start with who the story is about.",
+              "“The story is about …” gives the main idea."
+            ],
+            "hi": [
+              "कहानी किसके बारे में है, इससे शुरू करें।",
+              "“The story is about …” से मुख्य बात बताएँ।"
+            ]
+          }
+        },
+        {
+          "english": "At first, he wants to keep it.",
+          "alsoAccepted": ["At first he wants to keep it.", "At first, he wants to keep the dog."],
+          "translations": {
+            "bn": "প্রথমে সে কুকুরটাকে নিজের কাছে রেখে দিতে চায়।",
+            "hi": "पहले वह उसे अपने पास रखना चाहता है।"
+          },
+          "tips": {
+            "bn": ["গল্পের সারাংশ বর্তমান কালে বলুন।", "“At first” দিয়ে শুরুটা বলুন।"],
+            "en": ["Tell a story summary in the present tense.", "“At first” tells the beginning."],
+            "hi": ["कहानी का सार वर्तमान काल में बताएँ।", "“At first” से शुरुआत बताएँ।"]
+          }
+        },
+        {
+          "english": "Then he sees a poster and returns the dog to its owner.",
+          "alsoAccepted": ["Then he sees a poster and gives the dog back to its owner."],
+          "translations": {
+            "bn": "তারপর একটা পোস্টার দেখে সে কুকুরটাকে মালিকের কাছে ফিরিয়ে দেয়।",
+            "hi": "फिर वह एक पोस्टर देखता है और कुत्ता उसके मालिक को लौटा देता है।"
+          },
+          "tips": {
+            "bn": ["শুধু জরুরি ঘটনাগুলো রাখুন।", "দুটো ঘটনা “and” দিয়ে জুড়ুন।"],
+            "en": ["Keep only the events that matter.", "Join two events with “and”."],
+            "hi": ["सिर्फ़ ज़रूरी घटनाएँ रखें।", "दो घटनाएँ “and” से जोड़ें।"]
+          }
+        },
+        {
+          "english": "In the end, the owner gives him a reward.",
+          "alsoAccepted": [
+            "Finally, the owner gives him a reward.",
+            "In the end the owner gives him a reward."
+          ],
+          "translations": {
+            "bn": "শেষে মালিক তাকে একটা পুরস্কার দেন।",
+            "hi": "आख़िर में मालिक उसे इनाम देता है।"
+          },
+          "tips": {
+            "bn": ["গল্প কীভাবে শেষ হলো বলুন।", "ছোটখাটো খুঁটিনাটি বাদ দিন।"],
+            "en": ["Say how the story ends.", "Leave out the small details."],
+            "hi": ["बताएँ कि कहानी कैसे ख़त्म होती है।", "छोटी-मोटी बातें छोड़ दें।"]
+          }
+        },
+        {
+          "english": "The main message is that honesty is important.",
+          "alsoAccepted": [
+            "The main message is that being honest is important.",
+            "The message is that honesty is important."
+          ],
+          "translations": {
+            "bn": "মূল বার্তা হলো, সততা জরুরি।",
+            "hi": "मुख्य संदेश यह है कि ईमानदारी ज़रूरी है।"
+          },
+          "tips": {
+            "bn": ["গল্পের শিক্ষাটা দিয়ে শেষ করুন।", "বলুন: “The main message is that …”"],
+            "en": ["End with the lesson of the story.", "Say: “The main message is that …”"],
+            "hi": ["कहानी की सीख से ख़त्म करें।", "कहें: “The main message is that …”"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Kiran",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Did the manager call while I was out?",
+          "reply": "Yes, she called at eleven. She said the meeting has moved to Thursday.",
+          "cues": {
+            "bn": "জানান কে ফোন করেছিলেন আর কী বললেন।",
+            "hi": "बताएँ कि फ़ोन किसका था और क्या कहा गया।"
+          }
+        },
+        {
+          "partner": "Thursday? Did she say what time?",
+          "reply": "She said it would start at three o’clock.",
+          "cues": {
+            "bn": "সময়টা জানান, যেমন বলা হয়েছিল।",
+            "hi": "समय बताएँ, जैसा कहा गया था।"
+          }
+        },
+        {
+          "partner": "Did she want anything from me?",
+          "reply": "Yes, she asked you to bring the sales figures.",
+          "cues": {
+            "bn": "কী আনতে বলা হয়েছে জানান।",
+            "hi": "बताएँ कि क्या लाने को कहा गया है।"
+          }
+        },
+        {
+          "partner": "Anything else?",
+          "reply": "She told us not to be late, because the director is coming.",
+          "cues": {
+            "bn": "একটা নির্দেশ আর তার কারণ জানান।",
+            "hi": "एक हिदायत और उसकी वजह बताएँ।"
+          }
+        },
+        {
+          "partner": "OK, so what do I need to remember?",
+          "reply": "In short: Thursday at three, bring the figures and be on time.",
+          "cues": {
+            "bn": "সংক্ষেপে সারাংশ দিন।",
+            "hi": "संक्षेप में सार बताएँ।"
+          }
+        },
+        {
+          "partner": "Perfect. Thanks for passing it on!",
+          "reply": "No problem. I’m glad I could help.",
+          "cues": {
+            "bn": "ধন্যবাদের উত্তর দিন।",
+            "hi": "धन्यवाद का जवाब दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Listen, Understand and Explain",
+        "translations": {
+          "bn": "শুনুন, বুঝুন, বুঝিয়ে বলুন",
+          "hi": "सुनें, समझें और समझाएँ"
+        }
+      },
+      "instruction": {
+        "text": "Watch a short video or news clip. Then explain it in your own words, as if to a friend who missed it.",
+        "translations": {
+          "bn": "একটা ছোট ভিডিও বা খবর দেখুন। তারপর নিজের ভাষায় বুঝিয়ে বলুন, যেন এমন বন্ধুকে বলছেন যে দেখেনি।",
+          "hi": "कोई छोटा वीडियो या ख़बर देखें। फिर अपने शब्दों में ऐसे समझाएँ, मानो किसी ऐसे दोस्त को बताना हो जिसने उसे नहीं देखा।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what it was and where you saw it",
+          "translations": {
+            "bn": "কী দেখেছেন আর কোথায়, বলুন",
+            "hi": "बताएँ कि क्या देखा और कहाँ"
+          }
+        },
+        {
+          "text": "Give the main idea in one sentence",
+          "translations": {
+            "bn": "এক বাক্যে মূল কথা বলুন",
+            "hi": "एक वाक्य में मुख्य बात बताएँ"
+          }
+        },
+        {
+          "text": "Explain two or three key points in simple words",
+          "translations": {
+            "bn": "দুই-তিনটে মূল বিষয় সহজ কথায় বুঝিয়ে বলুন",
+            "hi": "दो-तीन ख़ास बातें आसान शब्दों में समझाएँ"
+          }
+        },
+        {
+          "text": "Report what someone in it said: “She said that …”",
+          "translations": {
+            "bn": "ভেতরে কেউ কী বলেছেন জানান: “She said that …”",
+            "hi": "उसमें किसी ने क्या कहा, बताएँ: “She said that …”"
+          }
+        },
+        {
+          "text": "Leave out the small details",
+          "translations": {
+            "bn": "ছোটখাটো খুঁটিনাটি বাদ দিন",
+            "hi": "छोटी-मोटी बातें छोड़ दें"
+          }
+        },
+        {
+          "text": "End with “In short, …”",
+          "translations": {
+            "bn": "“In short, …” দিয়ে শেষ করুন",
+            "hi": "“In short, …” से ख़त्म करें"
+          }
+        }
+      ],
+      "phrases": [
+        "I watched a video about …",
+        "The main idea is that …",
+        "In other words, …",
+        "She said that …",
+        "For example, …",
+        "In short, …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "What is the main idea of a text?",
+            "translations": {
+              "bn": "কোনো লেখার মূল ভাবনা কী?",
+              "hi": "किसी लेख का मुख्य विचार क्या होता है?"
+            }
+          },
+          "answer": "Its most important point",
+          "others": ["Its first word", "Its longest sentence"]
+        },
+        {
+          "question": {
+            "text": "Which phrase explains something again, more simply?",
+            "translations": {
+              "bn": "কোন কথাটা দিয়ে কিছু আবার সহজ করে বলা হয়?",
+              "hi": "कौन-सा वाक्यांश किसी बात को फिर से, आसान ढंग से कहता है?"
+            }
+          },
+          "answer": "In other words, …",
+          "others": ["By the way, …", "Excuse me, …"]
+        },
+        {
+          "question": {
+            "text": "He said, “I am tired.” How do you report it?",
+            "translations": {
+              "bn": "উনি বললেন, “I am tired.” পরোক্ষ উক্তিতে কীভাবে বলবেন?",
+              "hi": "उन्होंने कहा, “I am tired.” इसे अप्रत्यक्ष रूप में कैसे कहें?"
+            }
+          },
+          "answer": "He said that he was tired.",
+          "others": ["He said that I am tired.", "He told that he tired."]
+        },
+        {
+          "question": {
+            "text": "What should a summary leave out?",
+            "translations": {
+              "bn": "সারাংশে কী বাদ দেওয়া উচিত?",
+              "hi": "सार में क्या छोड़ देना चाहिए?"
+            }
+          },
+          "answer": "Small details",
+          "others": ["The main idea", "How it ends"]
+        },
+        {
+          "question": {
+            "text": "Which phrase starts a short summary?",
+            "translations": {
+              "bn": "কোন কথাটা দিয়ে ছোট সারাংশ শুরু হয়?",
+              "hi": "छोटा सार किस वाक्यांश से शुरू होता है?"
+            }
+          },
+          "answer": "In short, …",
+          "others": ["Once upon a time, …", "Nice to meet you, …"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Manav",
+          "text": "Zoya, what are you reading?",
+          "translations": {
+            "bn": "জোয়া, কী পড়ছ?",
+            "hi": "ज़ोया, क्या पढ़ रही हो?"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "A short story for my book club. I have to summarise it on Sunday.",
+          "translations": {
+            "bn": "বই-পড়ার আড্ডার জন্য একটা ছোটগল্প। রবিবার এর সারাংশ বলতে হবে।",
+            "hi": "अपने बुक क्लब के लिए एक छोटी कहानी। रविवार को इसका सार बताना है।"
+          }
+        },
+        {
+          "speaker": "Manav",
+          "text": "What’s it about?",
+          "translations": {
+            "bn": "কী নিয়ে?",
+            "hi": "किस बारे में है?"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "Basically, it’s about an old farmer who has no rain for his crops.",
+          "translations": {
+            "bn": "মূলত, এক বুড়ো চাষিকে নিয়ে, যাঁর ফসলের জন্য বৃষ্টি হচ্ছে না।",
+            "hi": "मूल रूप से, यह एक बूढ़े किसान के बारे में है, जिसकी फ़सल के लिए बारिश नहीं हो रही।"
+          }
+        },
+        {
+          "speaker": "Manav",
+          "text": "And what happens?",
+          "translations": {
+            "bn": "তারপর কী হয়?",
+            "hi": "और फिर क्या होता है?"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "At first, he wants to sell his land. Then his granddaughter has an idea: to collect rainwater from the roofs.",
+          "translations": {
+            "bn": "প্রথমে উনি জমি বেচে দিতে চান। তারপর ওঁর নাতনির মাথায় একটা বুদ্ধি আসে: ছাদ থেকে বৃষ্টির জল জমানো।",
+            "hi": "पहले वह अपनी ज़मीन बेचना चाहता है। फिर उसकी पोती को एक विचार आता है: छतों से बारिश का पानी जमा करना।"
+          }
+        },
+        {
+          "speaker": "Manav",
+          "text": "Clever! Does it work?",
+          "translations": {
+            "bn": "চমৎকার! কাজ হয়?",
+            "hi": "वाह! क्या यह काम करता है?"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "Yes. The whole village helps, and in the end they have water all year.",
+          "translations": {
+            "bn": "হ্যাঁ। গোটা গ্রাম সাহায্য করে, আর শেষে সারা বছর জল থাকে।",
+            "hi": "हाँ। पूरा गाँव मदद करता है, और आख़िर में उनके पास साल भर पानी रहता है।"
+          }
+        },
+        {
+          "speaker": "Manav",
+          "text": "So what’s the main message?",
+          "translations": {
+            "bn": "তাহলে মূল বার্তা কী?",
+            "hi": "तो मुख्य संदेश क्या है?"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "In short: working together can solve big problems.",
+          "translations": {
+            "bn": "সংক্ষেপে: একসঙ্গে কাজ করলে বড় সমস্যারও সমাধান হয়।",
+            "hi": "संक्षेप में: मिलकर काम करने से बड़ी समस्याएँ भी हल हो सकती हैं।"
+          }
+        },
+        {
+          "speaker": "Manav",
+          "text": "Great summary. Now I don’t need to read it!",
+          "translations": {
+            "bn": "দারুণ সারাংশ। এখন আর আমার পড়ার দরকার নেই!",
+            "hi": "बढ़िया सार। अब मुझे इसे पढ़ने की ज़रूरत नहीं!"
+          }
+        },
+        {
+          "speaker": "Zoya",
+          "text": "Ha! You should, it’s beautiful.",
+          "translations": {
+            "bn": "হা হা! পড়া উচিত, খুব সুন্দর গল্প।",
+            "hi": "हा हा! पढ़नी चाहिए, बहुत सुंदर है।"
+          }
+        }
+      ],
+      "voices": {
+        "Manav": "male",
+        "Zoya": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Grandpa",
+      "asWoman": "Grandma",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "My phone says my photos are “in the cloud”. What does that mean?",
+          "reply": "In simple words, your photos are saved on a big computer far away.",
+          "cues": {
+            "bn": "সহজ কথায় বুঝিয়ে বলুন।",
+            "hi": "आसान शब्दों में समझाएँ।"
+          }
+        },
+        {
+          "partner": "Far away? Why not on my phone?",
+          "reply": "They’re on your phone too. The cloud keeps a copy, in case you lose your phone.",
+          "cues": {
+            "bn": "কেন দরকার, বুঝিয়ে বলুন।",
+            "hi": "समझाएँ कि यह क्यों ज़रूरी है।"
+          }
+        },
+        {
+          "partner": "So if my phone breaks, my photos are safe?",
+          "reply": "Exactly. In other words, the cloud is like a safe box for your photos.",
+          "cues": {
+            "bn": "চেনা কিছুর সঙ্গে তুলনা করুন।",
+            "hi": "किसी जानी-पहचानी चीज़ से तुलना करें।"
+          }
+        },
+        {
+          "partner": "Now I understand. Thank you!",
+          "reply": "You’re welcome. It’s easier than it sounds.",
+          "cues": {
+            "bn": "ধন্যবাদের উত্তর দিন।",
+            "hi": "धन्यवाद का जवाब दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A news video",
+            "translations": {
+              "bn": "খবরের ভিডিও",
+              "hi": "ख़बरों का वीडियो"
+            }
+          },
+          "roleplay": {
+            "partner": "Arun",
+            "asWoman": "Aruna",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Did you see the news this morning?",
+                "reply": "Yes, I watched a short video about the new bridge in our city.",
+                "cues": {
+                  "bn": "কী দেখেছেন বলুন।",
+                  "hi": "बताएँ कि क्या देखा।"
+                }
+              },
+              {
+                "partner": "What was the main point?",
+                "reply": "The main point is that the bridge will open next month.",
+                "cues": {
+                  "bn": "মূল কথাটা বলুন।",
+                  "hi": "मुख्य बात बताएँ।"
+                }
+              },
+              {
+                "partner": "Did anyone say anything interesting?",
+                "reply": "Yes, the engineer said that it would cut travel time by half.",
+                "cues": {
+                  "bn": "কেউ কী বলেছেন জানান।",
+                  "hi": "बताएँ कि किसी ने क्या कहा।"
+                }
+              },
+              {
+                "partner": "That’s good news!",
+                "reply": "It is. In short, traffic should be much better soon.",
+                "cues": {
+                  "bn": "সংক্ষেপে শেষ করুন।",
+                  "hi": "संक्षेप में ख़त्म करें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Passing on a message",
+            "translations": {
+              "bn": "খবরটা পৌঁছে দেওয়া",
+              "hi": "संदेश पहुँचाना"
+            }
+          },
+          "roleplay": {
+            "partner": "Mum",
+            "asMan": "Dad",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Did anyone call while I was out?",
+                "reply": "Yes, your friend Rekha called. She said she’s coming on Sunday.",
+                "cues": {
+                  "bn": "কে ফোন করেছিলেন আর কী বললেন জানান।",
+                  "hi": "बताएँ कि फ़ोन किसका था और क्या कहा गया।"
+                }
+              },
+              {
+                "partner": "Sunday? What time?",
+                "reply": "She said she would come for lunch, at around one.",
+                "cues": {
+                  "bn": "সময়টা জানান।",
+                  "hi": "समय बताएँ।"
+                }
+              },
+              {
+                "partner": "Did she ask for anything?",
+                "reply": "She asked if you could make your famous biryani.",
+                "cues": {
+                  "bn": "অনুরোধটা জানান।",
+                  "hi": "उनकी फ़रमाइश बताएँ।"
+                }
+              },
+              {
+                "partner": "Ha! Of course I can.",
+                "reply": "Great. I told her you’d be happy to see her.",
+                "cues": {
+                  "bn": "উত্তরে কী বলা হয়েছিল জানান।",
+                  "hi": "बताएँ कि जवाब में क्या कहा गया।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A book club",
+            "translations": {
+              "bn": "বই-পড়ার আড্ডা",
+              "hi": "बुक क्लब"
+            }
+          },
+          "roleplay": {
+            "partner": "the club leader",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Can you summarise the story you read?",
+                "reply": "Sure. It’s about a girl who wants to be a pilot.",
+                "cues": {
+                  "bn": "গল্পটা কাকে নিয়ে বলুন।",
+                  "hi": "बताएँ कि कहानी किसके बारे में है।"
+                }
+              },
+              {
+                "partner": "What happens to her?",
+                "reply": "At first, everyone says it’s impossible. But she studies hard and saves money.",
+                "cues": {
+                  "bn": "শুরু আর মাঝের ঘটনা বলুন।",
+                  "hi": "शुरुआत और बीच की घटनाएँ बताएँ।"
+                }
+              },
+              {
+                "partner": "And how does it end?",
+                "reply": "In the end, she flies her first plane over her village.",
+                "cues": {
+                  "bn": "শেষটা বলুন।",
+                  "hi": "अंत बताएँ।"
+                }
+              },
+              {
+                "partner": "What’s the message?",
+                "reply": "Basically, never give up on your dream.",
+                "cues": {
+                  "bn": "মূল বার্তা বলুন।",
+                  "hi": "मुख्य संदेश बताएँ।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

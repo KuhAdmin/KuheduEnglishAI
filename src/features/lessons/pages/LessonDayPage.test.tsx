@@ -796,8 +796,8 @@ describe('Day 2: Learn useful words', () => {
           stress: 2,
         })
         expect(region).toHaveTextContent('That sounded right. Well done!')
-        // Every time: nothing has measured it on learners yet.
-        expect(region).toHaveTextContent('This check is new and can be wrong.')
+        // Without the note that it is new and can be wrong: taken off by the user.
+        expect(region).not.toHaveTextContent(/can be wrong/)
         // That take has been checked; another one brings the button back.
         expect(checkButton()).toBeNull()
         // Never a condition of the day.
@@ -1293,7 +1293,7 @@ describe('Day 3: Translate and speak', () => {
           'These words sounded a little different: Good, morning. Listen again and compare.',
         )
         expect(within(region).getByText('morning')).toHaveAttribute('lang', 'en')
-        expect(region).toHaveTextContent('This check is new and can be wrong.')
+        expect(region).not.toHaveTextContent(/can be wrong/)
         // Nothing is drawn of a sentence: it has no parts to draw.
         expect(within(region).queryByRole('img')).toBeNull()
 
@@ -1484,25 +1484,53 @@ describe('Day 4: a role-play', () => {
     expect(face?.querySelector('[role="img"]')).toBeNull()
   })
 
-  it('keeps the partner’s face, the way back and the day’s place in the week in view, above what scrolls', async () => {
-    const face = () => document.querySelector('[data-mood]')
+  it('shows the partner’s face above the conversation until it starts, then beside each of their lines', async () => {
+    const faces = () => [...document.querySelectorAll<HTMLElement>('[data-mood]')]
     const scrolls = () => screen.getByRole('main')
     const stays = (element: Element | null) => element !== null && !scrolls().contains(element)
-    renderDay(day4)
-    await step()
-
-    // Before the conversation starts, and from then on: the face does not move between them.
-    for (const begun of [false, true]) {
-      if (begun) await userEvent.click(button('Start the conversation'))
-      expect(stays(face())).toBe(true)
+    /** What stays in view throughout: the way back and the day's place in the week. */
+    const expectTheBand = () => {
       expect(stays(screen.getByRole('link', { name: 'Back to the week' }))).toBe(true)
       expect(stays(screen.getByRole('progressbar', { name: 'Days of this week' }))).toBe(true)
       expect(stays(screen.getByRole('link', { name: 'Go back to Day 3' }))).toBe(true)
       expect(stays(screen.getByText('4/7'))).toBe(true)
-      // Under it, and scrolling: who is being talked to, and the conversation.
+      // Under it, and scrolling: who is being talked to.
       expect(scrolls()).toContainElement(screen.getByRole('heading', { level: 1 }))
     }
+    renderDay(day4)
+    await step()
+
+    // Before the conversation the learner meets who they will talk to, above what scrolls.
+    expectTheBand()
+    expect(faces()).toHaveLength(1)
+    expect(stays(faces()[0] ?? null)).toBe(true)
+
+    await userEvent.click(button('Start the conversation'))
+
+    // Then the fixed part gives its room to the conversation, and the face is in it.
+    expectTheBand()
+    expect(faces()).toHaveLength(1)
+    expect(screen.getAllByRole('listitem')[0]).toContainElement(faces()[0] ?? null)
     expect(scrolls()).toContainElement(screen.getByRole('list', { name: 'Conversation' }))
+
+    // One beside each of the partner's lines; none on the learner's side.
+    await userEvent.click(button('Skip this turn'))
+    expect(faces()).toHaveLength(2)
+    expect(screen.getAllByRole('listitem')[1]?.querySelector('[data-mood]')).toBeNull()
+  })
+
+  it('moves the lips of the face beside the line being said, and of no other', async () => {
+    let finish: (outcome: 'ended') => void = () => {}
+    await start()
+    vi.mocked(speak).mockImplementationOnce(() => new Promise((resolve) => (finish = resolve)))
+    await userEvent.click(button('Skip this turn'))
+
+    const faces = () => [...document.querySelectorAll('[data-mood]')]
+    // The second line is being said: its face has stopped smiling to speak, the first has not.
+    expect(faces().map((face) => face.getAttribute('data-mood'))).toEqual(['smile', 'neutral'])
+
+    await act(async () => finish('ended'))
+    expect(faces().map((face) => face.getAttribute('data-mood'))).toEqual(['smile', 'smile'])
   })
 
   it('calls the partner what fits the tutor who plays them: Ravi from a man, Asha from a woman', async () => {
@@ -1524,20 +1552,26 @@ describe('Day 4: a role-play', () => {
     expect(screen.queryByText(/Ravi/)).toBeNull()
   })
 
-  it('shows the learner’s own picture on their side of the conversation, still, or a plain figure', async () => {
-    // The only picture a conversation can hold: the partner's lines have none beside them.
-    const mine = () => screen.getByRole('list', { name: 'Conversation' }).querySelector('img')
+  it('shows the learner’s own picture beside what they answered, still, or a plain figure', async () => {
+    // The only pictures a conversation can hold: the partner's face is drawn.
+    const mine = () => screen.getByRole('list', { name: 'Conversation' }).querySelectorAll('img')
     await start()
-    await userEvent.click(button('Skip this turn'))
+    await answer()
 
     // No picture of their own: a figure, and nothing asked of the network.
-    expect(said()[1]).toBe('You could sayGood morning!')
-    expect(mine()).toBeNull()
+    await waitFor(() => expect(said()[1]).toMatch(/^You answered/))
+    expect(mine()).toHaveLength(0)
 
     act(() => useProfilePhotoStore.setState({ photo: 'data:image/png;base64,AAAA' }))
-    expect(mine()).toHaveAttribute('src', 'data:image/png;base64,AAAA')
+    expect(mine()).toHaveLength(1)
+    expect(mine()[0]).toHaveAttribute('src', 'data:image/png;base64,AAAA')
     // Decoration: the line beside it says whose turn it was.
-    expect(mine()).toHaveAttribute('alt', '')
+    expect(mine()[0]).toHaveAttribute('alt', '')
+
+    // A turn they skipped is not shown as something they said: it has no picture of theirs.
+    await userEvent.click(button('Skip this turn'))
+    expect(said()[3]).toBe('SkippedYou could sayI’m fine, thank you. And you?')
+    expect(mine()).toHaveLength(1)
   })
 
   it('opens with the partner’s first line, said aloud and written out, then it is the learner’s turn', async () => {
@@ -1565,40 +1599,55 @@ describe('Day 4: a role-play', () => {
     expect(screen.getAllByRole('listitem')[0]).not.toHaveAttribute('aria-current')
   })
 
-  it('goes on to the partner’s next line when the learner has spoken, and shows a reply they could have given', async () => {
+  it('goes on to the partner’s next line when the learner has spoken, and shows their answer as theirs', async () => {
     const play = vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue()
     await start()
 
     await answer()
 
     expect(speak).toHaveBeenLastCalledWith('How are you?', { rate: 1 })
-    expect(said()).toEqual([
-      'RaviHello! Good morning.',
-      'You could sayGood morning!',
-      'RaviHow are you?',
-    ])
-    // Their own recording stays with the turn it answered, until another answer replaces it.
-    await userEvent.click(await screen.findByRole('button', { name: 'Listen to yourself' }))
+    // Their recording, how long it ran, and under it the lesson's sentence as one they could say.
+    await waitFor(() =>
+      expect(said()).toEqual([
+        'RaviHello! Good morning.',
+        'You answeredListen to yourself0:01You could sayGood morning!',
+        'RaviHow are you?',
+      ]),
+    )
+    await userEvent.click(button('Listen to yourself'))
     expect(play).toHaveBeenCalledOnce()
-    await userEvent.click(button('Tap to speak'))
-    await screen.findByText(/^Recording…/)
-    expect(button('Listen to yourself')).toBeVisible()
-    await userEvent.click(button('Stop recording'))
+    play.mockRestore()
+  })
 
-    // It has moved to the second answer: the last of the two "You could say" bubbles.
+  it('keeps every answer’s recording with its own turn, to the end of the conversation', async () => {
+    const play = vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue()
     const answers = () =>
       within(screen.getByRole('list', { name: 'Conversation' }))
         .getAllByRole('listitem')
-        .filter((item) => item.textContent.startsWith('You could say'))
-    await waitFor(() =>
-      expect(
-        within(answers().at(-1) ?? document.body).getByRole('button', {
-          name: 'Listen to yourself',
-        }),
-      ).toBeVisible(),
-    )
-    expect(answers()).toHaveLength(2)
-    expect(screen.getAllByRole('button', { name: 'Listen to yourself' })).toHaveLength(1)
+        .filter((item) => item.textContent.startsWith('You answered'))
+    const listenIn = (item: HTMLElement | undefined) =>
+      within(item ?? document.body).getByRole('button', { name: 'Listen to yourself' })
+    await start()
+
+    await answer()
+    await waitFor(() => expect(listenIn(answers()[0])).toBeVisible())
+    // While the next answer is being given, and after it, the first is still there to hear.
+    await userEvent.click(button('Tap to speak'))
+    await screen.findByText(/^Recording…/)
+    expect(listenIn(answers()[0])).toBeVisible()
+    await userEvent.click(button('Stop recording'))
+    await waitFor(() => expect(answers()).toHaveLength(2))
+    await waitFor(() => expect(listenIn(answers()[1])).toBeVisible())
+    expect(listenIn(answers()[0])).toBeVisible()
+
+    for (let turn = 0; turn < 3; turn += 1) await userEvent.click(button('Skip this turn'))
+    await screen.findByText('Well done! You finished the conversation.')
+
+    // Both can be heard at the end, which is when there is time to.
+    expect(screen.getAllByRole('button', { name: 'Listen to yourself' })).toHaveLength(2)
+    await userEvent.click(listenIn(answers()[0]))
+    expect(play).toHaveBeenCalledOnce()
+    expect(screen.getByText('Your answers are above. You can listen to them again.')).toBeVisible()
     play.mockRestore()
   })
 
@@ -1699,11 +1748,8 @@ describe('Day 4: a role-play', () => {
       later(3100)
 
       await waitFor(() => expect(speak).toHaveBeenLastCalledWith('How are you?', { rate: 1 }))
-      expect(said()).toEqual([
-        'RaviHello! Good morning.',
-        'You could sayGood morning!',
-        'RaviHow are you?',
-      ])
+      expect(said()).toHaveLength(3)
+      expect(said()[1]).toMatch(/^You answered.*You could sayGood morning!$/)
     })
 
     it('counts down the last twenty seconds of a turn, then hands it to the partner', async () => {
@@ -1821,9 +1867,6 @@ describe('Day 4: a role-play', () => {
       await answer()
 
       expect(await screen.findByRole('button', { name: 'Check my reply' })).toBeVisible()
-      expect(
-        screen.getByText('Sends this recording to our server to be checked. It is not kept.'),
-      ).toBeVisible()
       expect(checkReply).not.toHaveBeenCalled()
 
       await askToCheck()
@@ -1837,8 +1880,8 @@ describe('Day 4: a role-play', () => {
       expect(region).toHaveTextContent('We heard')
       expect(within(region).getByText('Good morning.')).toHaveAttribute('lang', 'en')
       expect(region).toHaveTextContent('We found nothing to change.')
-      // Every time: nothing has measured it on learners yet.
-      expect(region).toHaveTextContent('This check is new and can be wrong.')
+      // Without the note that it is new and can be wrong: taken off by the user.
+      expect(region).not.toHaveTextContent(/can be wrong/)
       // That reply has been checked.
       expect(checkButton()).toBeNull()
       // The conversation went on meanwhile, whatever was found.
@@ -1888,7 +1931,64 @@ describe('Day 4: a role-play', () => {
       expect(region).not.toHaveTextContent('We heard')
     })
 
-    it('keeps what was found with its turn after the recording has gone to the next answer', async () => {
+    const whatCheckingDoes = 'Checking a reply sends its recording to our server. It is not kept.'
+
+    it('says what checking does before the conversation and at its end, not under every button', async () => {
+      vi.mocked(checkReply).mockResolvedValue({ heard: 'Good morning.', fits: true, better: null })
+      renderDay(day4)
+      await step()
+      expect(screen.getByText(whatCheckingDoes)).toBeVisible()
+
+      await userEvent.click(button('Start the conversation'))
+      await answer()
+      expect(await screen.findByRole('button', { name: 'Check my reply' })).toBeVisible()
+      expect(screen.queryByText(whatCheckingDoes)).toBeNull()
+
+      for (let turn = 0; turn < 4; turn += 1) await userEvent.click(button('Skip this turn'))
+      await screen.findByText('Well done! You finished the conversation.')
+      // By the way out, while a reply can still be sent.
+      expect(screen.getByText(whatCheckingDoes)).toBeVisible()
+
+      await askToCheck()
+      await found()
+      expect(screen.queryByText(whatCheckingDoes)).toBeNull()
+    })
+
+    it('does not speak of checking on a device that cannot send its recording', async () => {
+      vi.mocked(canMakeWav).mockReturnValue(false)
+      renderDay(day4)
+      await step()
+      expect(screen.queryByText(whatCheckingDoes)).toBeNull()
+
+      await userEvent.click(button('Start the conversation'))
+      await answer()
+      for (let turn = 0; turn < 4; turn += 1) await userEvent.click(button('Skip this turn'))
+      await screen.findByText('Well done! You finished the conversation.')
+      expect(screen.queryByText(whatCheckingDoes)).toBeNull()
+    })
+
+    it('lets an earlier reply be checked after the conversation has gone on', async () => {
+      vi.mocked(checkReply).mockResolvedValue({ heard: 'Good morning.', fits: true, better: null })
+      await start()
+      await answer()
+      await answer()
+      await waitFor(() =>
+        expect(screen.getAllByRole('button', { name: 'Check my reply' })).toHaveLength(2),
+      )
+
+      // The first reply, two turns back: it is the one sent, with the line it answered.
+      await userEvent.click(screen.getAllByRole('button', { name: 'Check my reply' })[0] as Element)
+      await found()
+      expect(checkReply).toHaveBeenCalledExactlyOnceWith(wav, {
+        partner: 'Hello! Good morning.',
+        suggested: 'Good morning!',
+      })
+      expect(said()[1]).toContain('We found nothing to change.')
+      // The second reply is still there to be checked.
+      expect(screen.getAllByRole('button', { name: 'Check my reply' })).toHaveLength(1)
+    })
+
+    it('keeps what was found with its turn as the conversation goes on', async () => {
       vi.mocked(checkReply).mockResolvedValue({ heard: 'Good morning.', fits: true, better: null })
       await start()
       await answer()
@@ -1950,7 +2050,12 @@ describe('Day 4: a role-play', () => {
 
     expect(startRecording).not.toHaveBeenCalled()
     expect(speak).toHaveBeenLastCalledWith('How are you?', { rate: 1 })
-    expect(said()).toHaveLength(3)
+    // Shown as skipped, with what could have been said: never as something the learner said.
+    expect(said()).toEqual([
+      'RaviHello! Good morning.',
+      'SkippedYou could sayGood morning!',
+      'RaviHow are you?',
+    ])
     expect(screen.queryByRole('button', { name: 'Listen to yourself' })).toBeNull()
   })
 
@@ -2012,8 +2117,11 @@ describe('Day 4: a role-play', () => {
 
     expect(await screen.findByText('Well done! You finished the conversation.')).toBeVisible()
     expect(said()).toHaveLength(10)
-    expect(said().at(-1)).toBe('You could sayGoodbye! Have a nice day.')
+    expect(said().at(-1)).toMatch(/^You answered.*You could sayGoodbye! Have a nice day\.$/)
     expect(screen.queryByRole('button', { name: 'Skip this turn' })).toBeNull()
+    // The tutor closes the conversation with a thumbs up; starting over is beside it.
+    expect(document.querySelector('[data-mood="encourage"]')).not.toBeNull()
+    expect(button('Practise again')).toBeVisible()
     expect(progress().doneDays).toEqual({})
 
     await userEvent.click(next())
@@ -2203,9 +2311,9 @@ describe('Day 5: the week’s challenge', () => {
     await step()
 
     await userEvent.click(button('Tap to speak'))
-    expect(await screen.findByText(/^Recording… 0:0\d \/ 2:00$/)).toBeVisible()
+    expect(await screen.findByText(/^Recording… 0:0\d \/ 5:00$/)).toBeVisible()
     // The recorder is given the same limit, or its own shorter one would end the take.
-    expect(startRecording).toHaveBeenCalledWith({ maxDurationMs: 120_000 })
+    expect(startRecording).toHaveBeenCalledWith({ maxDurationMs: 300_000 })
     // While the attempt is under way there is nothing to judge yet.
     expect(screen.queryByRole('checkbox')).toBeNull()
     await userEvent.click(button('Stop recording'))
@@ -3130,7 +3238,7 @@ describe('Day 7: the real-world challenge', () => {
       await userEvent.click(button('Skip this turn'))
       expect(said().slice(0, 2)).toEqual([
         'PriyaHello! Good evening.',
-        'You could sayGood evening!',
+        'SkippedYou could sayGood evening!',
       ])
       expect(screen.queryByText('What to say')).toBeNull()
     })

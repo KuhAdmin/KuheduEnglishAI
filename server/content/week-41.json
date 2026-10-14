@@ -1,0 +1,794 @@
+{
+  "week": 41,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Ritu",
+          "text": "Excuse me. Which platform does the Chennai Express leave from?",
+          "translations": {
+            "bn": "শুনছেন, চেন্নাই এক্সপ্রেস কোন প্ল্যাটফর্ম থেকে ছাড়বে?",
+            "hi": "सुनिए, चेन्नई एक्सप्रेस किस प्लेटफ़ॉर्म से छूटेगी?"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Platform five, madam. But it’s running about forty minutes late.",
+          "translations": {
+            "bn": "পাঁচ নম্বর প্ল্যাটফর্ম, ম্যাডাম। তবে প্রায় চল্লিশ মিনিট দেরিতে চলছে।",
+            "hi": "प्लेटफ़ॉर्म पाँच, मैडम। पर वह लगभग चालीस मिनट देर से चल रही है।"
+          }
+        },
+        {
+          "speaker": "Ritu",
+          "text": "Forty minutes? So it leaves at seven-thirty instead of six-fifty?",
+          "translations": {
+            "bn": "চল্লিশ মিনিট? তাহলে ছ’টা পঞ্চাশের বদলে সাড়ে সাতটায় ছাড়বে?",
+            "hi": "चालीस मिनट? तो छह पचास की जगह साढ़े सात बजे छूटेगी?"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "That’s right. Please listen for the announcements. The platform may change too.",
+          "translations": {
+            "bn": "ঠিক। ঘোষণাগুলো খেয়াল করে শুনবেন। প্ল্যাটফর্মও বদলাতে পারে।",
+            "hi": "जी हाँ। घोषणाएँ ध्यान से सुनिए। प्लेटफ़ॉर्म भी बदल सकता है।"
+          }
+        },
+        {
+          "speaker": "Ritu",
+          "text": "OK. Is there a waiting room where I can sit?",
+          "translations": {
+            "bn": "আচ্ছা। বসার জন্য কোনো ওয়েটিং রুম আছে?",
+            "hi": "ठीक है। क्या कोई प्रतीक्षालय है, जहाँ मैं बैठ सकूँ?"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Yes. Go up the stairs, turn left, and it’s next to the food court.",
+          "translations": {
+            "bn": "আছে। সিঁড়ি দিয়ে উঠে বাঁ দিকে যান, খাবারের জায়গার ঠিক পাশে।",
+            "hi": "हाँ। सीढ़ियाँ चढ़कर बाएँ मुड़िए, वह फ़ूड कोर्ट के बगल में है।"
+          }
+        },
+        {
+          "speaker": "Ritu",
+          "text": "Up the stairs, then left. Thank you. One more problem: my hotel in Chennai closes check-in at midnight.",
+          "translations": {
+            "bn": "সিঁড়ি দিয়ে উঠে বাঁ দিকে। ধন্যবাদ। আরেকটা সমস্যা: চেন্নাইয়ে আমার হোটেলে রাত বারোটার পরে চেক-ইন হয় না।",
+            "hi": "सीढ़ियाँ चढ़कर बाएँ। धन्यवाद। एक और परेशानी है: चेन्नई में मेरे होटल में चेक-इन आधी रात को बंद हो जाता है।"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Then you should call them and tell them you’ll be late. Most hotels will keep the room.",
+          "translations": {
+            "bn": "তাহলে ওদের ফোন করে জানিয়ে দিন যে দেরি হবে। বেশিরভাগ হোটেল ঘর রেখে দেয়।",
+            "hi": "तो उन्हें फ़ोन करके बता दीजिए कि आपको देर होगी। ज़्यादातर होटल कमरा रोककर रखते हैं।"
+          }
+        },
+        {
+          "speaker": "Ritu",
+          "text": "Good idea. And can I still use this ticket?",
+          "translations": {
+            "bn": "ভালো বুদ্ধি। আর এই টিকিটটা কি এখনও চলবে?",
+            "hi": "अच्छा सुझाव है। और क्या यह टिकट अब भी चलेगा?"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "Yes, your ticket and seat are the same. Only the time has changed.",
+          "translations": {
+            "bn": "হ্যাঁ, টিকিট আর সিট একই আছে। শুধু সময়টা বদলেছে।",
+            "hi": "हाँ, आपका टिकट और सीट वही हैं। सिर्फ़ समय बदला है।"
+          }
+        },
+        {
+          "speaker": "Ritu",
+          "text": "That’s a relief. Can I also leave my big bag somewhere?",
+          "translations": {
+            "bn": "বাঁচা গেল। আমার বড় ব্যাগটা কোথাও রাখা যাবে?",
+            "hi": "चलो, राहत मिली। क्या मैं अपना बड़ा बैग कहीं रख सकती हूँ?"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "There’s a cloakroom on platform one. It costs thirty rupees a day.",
+          "translations": {
+            "bn": "এক নম্বর প্ল্যাটফর্মে মালপত্র রাখার ঘর আছে। দিনে তিরিশ টাকা।",
+            "hi": "प्लेटफ़ॉर्म एक पर अमानती घर है। एक दिन के तीस रुपये लगते हैं।"
+          }
+        },
+        {
+          "speaker": "Ritu",
+          "text": "Perfect. Thanks so much for your help.",
+          "translations": {
+            "bn": "চমৎকার। অনেক ধন্যবাদ।",
+            "hi": "बढ़िया। आपकी मदद के लिए बहुत धन्यवाद।"
+          }
+        },
+        {
+          "speaker": "Clerk",
+          "text": "You’re welcome. Have a safe journey.",
+          "translations": {
+            "bn": "স্বাগত। যাত্রা শুভ হোক।",
+            "hi": "कोई बात नहीं। आपकी यात्रा सुरक्षित हो।"
+          }
+        }
+      ],
+      "voices": {
+        "Ritu": "female",
+        "Clerk": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "reservation",
+          "phonetic": "/ˌrezəˈveɪʃn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বুকিং",
+            "hi": "बुकिंग, आरक्षण"
+          },
+          "syllables": ["res", "er", "va", "tion"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“va” জোর দিয়ে বলুন।", "বলুন: “I have a reservation under the name …”"],
+            "en": ["Say “va” stronger.", "Say: “I have a reservation under the name …”"],
+            "hi": ["“va” ज़ोर से बोलें।", "कहें: “I have a reservation under the name …”"]
+          }
+        },
+        {
+          "word": "check in",
+          "phonetic": "/ˌtʃek ˈɪn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হোটেলে পৌঁছে নাম লেখানো",
+            "hi": "होटल पहुँचकर नाम दर्ज कराना"
+          },
+          "syllables": ["check", "in"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“in” জোর দিয়ে বলুন।", "বলুন: “I’d like to check in, please.”"],
+            "en": ["Say “in” stronger.", "Say: “I’d like to check in, please.”"],
+            "hi": ["“in” ज़ोर से बोलें।", "कहें: “I’d like to check in, please.”"]
+          }
+        },
+        {
+          "word": "check out",
+          "phonetic": "/ˌtʃek ˈaʊt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হোটেল ছেড়ে যাওয়া",
+            "hi": "होटल छोड़ना"
+          },
+          "syllables": ["check", "out"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“out” জোর দিয়ে বলুন।", "জিজ্ঞেস করুন: “What time do I need to check out?”"],
+            "en": ["Say “out” stronger.", "Ask: “What time do I need to check out?”"],
+            "hi": ["“out” ज़ोर से बोलें।", "पूछें: “What time do I need to check out?”"]
+          }
+        },
+        {
+          "word": "available",
+          "phonetic": "/əˈveɪləbl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "পাওয়া যাচ্ছে, খালি",
+            "hi": "उपलब्ध, ख़ाली"
+          },
+          "syllables": ["a", "vail", "a", "ble"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "জিজ্ঞেস করুন: “Is a room available tonight?”"
+            ],
+            "en": ["Say the second part stronger.", "Ask: “Is a room available tonight?”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "पूछें: “Is a room available tonight?”"]
+          }
+        },
+        {
+          "word": "extra",
+          "phonetic": "/ˈekstrə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বাড়তি",
+            "hi": "अतिरिक्त, एक और"
+          },
+          "syllables": ["ex", "tra"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "জিজ্ঞেস করুন: “Could I have an extra pillow?”"],
+            "en": ["Say the first part stronger.", "Ask: “Could I have an extra pillow?”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "पूछें: “Could I have an extra pillow?”"]
+          }
+        },
+        {
+          "word": "included",
+          "phonetic": "/ɪnˈkluːdɪd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধরা আছে",
+            "hi": "शामिल"
+          },
+          "syllables": ["in", "clud", "ed"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "জিজ্ঞেস করুন: “Is breakfast included?”"],
+            "en": ["Say the second part stronger.", "Ask: “Is breakfast included?”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "पूछें: “Is breakfast included?”"]
+          }
+        },
+        {
+          "word": "key card",
+          "phonetic": "/ˈkiː kɑːd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "চাবির কার্ড",
+            "hi": "चाबी वाला कार्ड"
+          },
+          "syllables": ["key", "card"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“key” জোর দিয়ে বলুন।", "চাবির কার্ড দিয়ে ঘরের দরজা খোলে।"],
+            "en": ["Say “key” stronger.", "A key card opens the door of your room."],
+            "hi": ["“key” ज़ोर से बोलें।", "चाबी वाले कार्ड से कमरे का दरवाज़ा खुलता है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Excuse me, how do I get to the bus stand?",
+          "alsoAccepted": [
+            "Excuse me, how can I get to the bus stand?",
+            "Excuse me, how do I get to the bus station?"
+          ],
+          "translations": {
+            "bn": "শুনছেন, বাসস্ট্যান্ডে কীভাবে যাব?",
+            "hi": "सुनिए, बस अड्डे तक कैसे पहुँचें?"
+          },
+          "tips": {
+            "bn": [
+              "ভদ্রভাবে “Excuse me” দিয়ে শুরু করুন।",
+              "“How do I get to …?” দিয়ে পথ জিজ্ঞেস করুন।"
+            ],
+            "en": ["Start politely with “Excuse me”.", "“How do I get to …?” asks for the way."],
+            "hi": ["विनम्रता से “Excuse me” से शुरू करें।", "“How do I get to …?” से रास्ता पूछें।"]
+          }
+        },
+        {
+          "english": "Is it far from here, or can I walk?",
+          "alsoAccepted": ["Is it far from here, or can I go on foot?"],
+          "translations": {
+            "bn": "এখান থেকে কি অনেক দূর, নাকি হেঁটে যাওয়া যায়?",
+            "hi": "क्या यह यहाँ से दूर है, या पैदल जाया जा सकता है?"
+          },
+          "tips": {
+            "bn": ["দূরত্বের কথা জিজ্ঞেস করুন।", "তারপর হেঁটে যাওয়া যায় কি না।"],
+            "en": ["Ask about the distance.", "Then ask if you can walk."],
+            "hi": ["दूरी के बारे में पूछें।", "फिर पूछें कि पैदल जा सकते हैं या नहीं।"]
+          }
+        },
+        {
+          "english": "Go straight and take the second left.",
+          "alsoAccepted": [
+            "Go straight on and take the second left.",
+            "Go straight and take the second turning on the left."
+          ],
+          "translations": {
+            "bn": "সোজা গিয়ে বাঁ দিকের দ্বিতীয় রাস্তাটা নিন।",
+            "hi": "सीधे जाइए और दूसरा बायाँ मोड़ लीजिए।"
+          },
+          "tips": {
+            "bn": [
+              "নির্দেশ আবার বলে মিলিয়ে নিন।",
+              "“the second left” মানে বাঁ দিকের দ্বিতীয় রাস্তা।"
+            ],
+            "en": [
+              "Repeat directions to check them.",
+              "“the second left” is the second road on the left."
+            ],
+            "hi": ["निर्देश दोहराकर पक्का करें।", "“the second left” मतलब बाईं ओर की दूसरी सड़क।"]
+          }
+        },
+        {
+          "english": "Sorry, could you say that again more slowly?",
+          "alsoAccepted": [
+            "Sorry, could you repeat that more slowly?",
+            "Sorry, can you say that again more slowly?"
+          ],
+          "translations": {
+            "bn": "মাফ করবেন, আরেকবার একটু ধীরে বলবেন?",
+            "hi": "माफ़ कीजिए, क्या आप यह फिर से थोड़ा धीरे बोल सकते हैं?"
+          },
+          "tips": {
+            "bn": ["আবার জিজ্ঞেস করায় কোনো দোষ নেই।", "“more slowly” বললে প্রতিটা ধাপ ধরা যায়।"],
+            "en": ["It is fine to ask again.", "“more slowly” helps you catch every step."],
+            "hi": ["दोबारा पूछना बिल्कुल ठीक है।", "“more slowly” से हर क़दम समझ आता है।"]
+          }
+        },
+        {
+          "english": "Is there a landmark near it?",
+          "alsoAccepted": ["Is there a landmark near there?", "Is there a landmark close to it?"],
+          "translations": {
+            "bn": "কাছাকাছি চেনার মতো কিছু আছে?",
+            "hi": "क्या उसके पास कोई पहचान की जगह है?"
+          },
+          "tips": {
+            "bn": ["সবাই চেনে এমন জায়গাকে landmark বলে।", "এতে পথ খুঁজে পাওয়া সহজ হয়।"],
+            "en": ["A landmark is a place everyone knows.", "It makes the way easier to find."],
+            "hi": ["landmark वह जगह है जिसे सब जानते हैं।", "इससे रास्ता ढूँढना आसान होता है।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the airline agent",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good evening. How can I help you?",
+          "reply": "Hello. My flight to Kolkata has been cancelled. What can I do?",
+          "cues": {
+            "bn": "সমস্যাটা জানান: ফ্লাইট বাতিল হয়েছে।",
+            "hi": "समस्या बताएँ: फ़्लाइट रद्द हो गई है।"
+          }
+        },
+        {
+          "partner": "I’m sorry about that. Can I see your ticket, please?",
+          "reply": "Of course. Here it is. I have an important meeting tomorrow morning.",
+          "cues": {
+            "bn": "টিকিট দিন আর কেন তাড়া আছে বলুন।",
+            "hi": "टिकट दें और बताएँ कि जल्दी क्यों है।"
+          }
+        },
+        {
+          "partner": "The next flight is at six tomorrow morning. Is that OK?",
+          "reply": "Six is fine. Is there a hotel for tonight?",
+          "cues": {
+            "bn": "রাজি হয়ে রাতে থাকার কথা জিজ্ঞেস করুন।",
+            "hi": "हाँ कहें और रात रुकने के बारे में पूछें।"
+          }
+        },
+        {
+          "partner": "Yes, we’ll give you a free room at the airport hotel.",
+          "reply": "Thank you. How do I get there?",
+          "cues": {
+            "bn": "ধন্যবাদ দিয়ে কীভাবে যাবেন জিজ্ঞেস করুন।",
+            "hi": "धन्यवाद दें और पूछें कि वहाँ कैसे पहुँचें।"
+          }
+        },
+        {
+          "partner": "A free bus leaves from gate three every twenty minutes.",
+          "reply": "Gate three, every twenty minutes. And what about my checked bag?",
+          "cues": {
+            "bn": "শুনে আবার বলে নিশ্চিত হন, তারপর ব্যাগের কথা জিজ্ঞেস করুন।",
+            "hi": "दोहराकर पक्का करें, फिर अपने बैग के बारे में पूछें।"
+          }
+        },
+        {
+          "partner": "Your bag will go on the morning flight with you.",
+          "reply": "Great. Thank you for your help.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Complete Travel Simulation",
+        "translations": {
+          "bn": "পুরো যাত্রার মহড়া",
+          "hi": "पूरी यात्रा का अभ्यास"
+        }
+      },
+      "instruction": {
+        "text": "Imagine a trip to a new city. Speak each step aloud: the station, the hotel, the way and a problem.",
+        "translations": {
+          "bn": "নতুন শহরে একটা যাত্রা কল্পনা করুন। প্রতিটা ধাপ জোরে বলুন: স্টেশন, হোটেল, পথ আর একটা সমস্যা।",
+          "hi": "किसी नए शहर की यात्रा की कल्पना करें। हर क़दम बोलकर करें: स्टेशन, होटल, रास्ता और एक समस्या।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "At the station: ask about your train’s time and platform",
+          "translations": {
+            "bn": "স্টেশনে: ট্রেনের সময় আর প্ল্যাটফর্ম জিজ্ঞেস করুন",
+            "hi": "स्टेशन पर: ट्रेन का समय और प्लेटफ़ॉर्म पूछें"
+          }
+        },
+        {
+          "text": "At the hotel: check in and ask one question",
+          "translations": {
+            "bn": "হোটেলে: চেক-ইন করুন আর একটা প্রশ্ন করুন",
+            "hi": "होटल में: चेक-इन करें और एक सवाल पूछें"
+          }
+        },
+        {
+          "text": "Make one request, like an extra towel",
+          "translations": {
+            "bn": "একটা অনুরোধ করুন, যেমন বাড়তি তোয়ালে",
+            "hi": "एक अनुरोध करें, जैसे एक और तौलिया"
+          }
+        },
+        {
+          "text": "Ask the way to a place and repeat the directions",
+          "translations": {
+            "bn": "কোনো জায়গার পথ জিজ্ঞেস করে নির্দেশটা আবার বলুন",
+            "hi": "किसी जगह का रास्ता पूछें और निर्देश दोहराएँ"
+          }
+        },
+        {
+          "text": "Explain a problem, like a lost bag, and ask for help",
+          "translations": {
+            "bn": "একটা সমস্যা বুঝিয়ে বলুন, যেমন ব্যাগ হারানো, আর সাহায্য চান",
+            "hi": "कोई समस्या समझाएँ, जैसे बैग खोना, और मदद माँगें"
+          }
+        }
+      ],
+      "phrases": [
+        "Which platform does … leave from?",
+        "I have a reservation under …",
+        "Could I have an extra …?",
+        "How do I get to …?",
+        "I have a problem: …",
+        "Could you help me, please?"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "You hear: “The train is running late.” What does it mean?",
+            "translations": {
+              "bn": "আপনি শুনলেন: “The train is running late.” এর মানে কী?",
+              "hi": "आपने सुना: “The train is running late.” इसका मतलब क्या है?"
+            }
+          },
+          "answer": "The train will come after its time.",
+          "others": ["The train is early.", "The train is cancelled."]
+        },
+        {
+          "question": {
+            "text": "Which sentence do you say at a hotel reception?",
+            "translations": {
+              "bn": "হোটেলের রিসেপশনে কোন বাক্যটা বলবেন?",
+              "hi": "होटल के रिसेप्शन पर कौन-सा वाक्य कहेंगे?"
+            }
+          },
+          "answer": "I have a reservation under the name Rao.",
+          "others": ["I’d like a coffee, please.", "Which platform is it?"]
+        },
+        {
+          "question": {
+            "text": "Complete: Is breakfast ___?",
+            "translations": {
+              "bn": "পূরণ করুন: Is breakfast ___?",
+              "hi": "पूरा करें: Is breakfast ___?"
+            }
+          },
+          "answer": "included",
+          "others": ["including", "include"]
+        },
+        {
+          "question": {
+            "text": "Which is a polite way to ask for directions?",
+            "translations": {
+              "bn": "ভদ্রভাবে পথ জিজ্ঞেস করার উপায় কোনটি?",
+              "hi": "रास्ता पूछने का विनम्र तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "Excuse me, how do I get to the museum?",
+          "others": ["Museum where?", "Tell me the museum."]
+        },
+        {
+          "question": {
+            "text": "Your flight is cancelled. What do you say first?",
+            "translations": {
+              "bn": "ফ্লাইট বাতিল হয়েছে। প্রথমে কী বলবেন?",
+              "hi": "फ़्लाइट रद्द हो गई है। पहले क्या कहें?"
+            }
+          },
+          "answer": "My flight has been cancelled. What can I do?",
+          "others": ["Goodbye!", "I like flying."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Receptionist",
+          "text": "Good evening, and welcome to Hotel Lake View. How can I help?",
+          "translations": {
+            "bn": "শুভ সন্ধ্যা, হোটেল লেক ভিউতে স্বাগত। কী সাহায্য করতে পারি?",
+            "hi": "शुभ संध्या, होटल लेक व्यू में आपका स्वागत है। मैं आपकी क्या मदद करूँ?"
+          }
+        },
+        {
+          "speaker": "Vikas",
+          "text": "Good evening. I have a reservation under the name Vikas Rao.",
+          "translations": {
+            "bn": "শুভ সন্ধ্যা। বিকাশ রাও নামে আমার একটা বুকিং আছে।",
+            "hi": "शुभ संध्या। विकास राव के नाम से मेरी बुकिंग है।"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Yes, Mr Rao. Two nights, a single room. Could I see your ID, please?",
+          "translations": {
+            "bn": "হ্যাঁ, মিস্টার রাও। দু রাত, একজনের ঘর। আপনার পরিচয়পত্রটা দেখাবেন?",
+            "hi": "जी, मिस्टर राव। दो रातें, एक सिंगल कमरा। क्या मैं आपका पहचान-पत्र देख सकती हूँ?"
+          }
+        },
+        {
+          "speaker": "Vikas",
+          "text": "Here you are. Is breakfast included?",
+          "translations": {
+            "bn": "এই নিন। সকালের জলখাবার কি ধরা আছে?",
+            "hi": "यह लीजिए। क्या नाश्ता शामिल है?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Yes, it’s served from seven to ten in the restaurant on the ground floor.",
+          "translations": {
+            "bn": "হ্যাঁ, একতলার রেস্তোরাঁয় সকাল সাতটা থেকে দশটা পর্যন্ত।",
+            "hi": "हाँ, भूतल के रेस्तराँ में सुबह सात से दस बजे तक मिलता है।"
+          }
+        },
+        {
+          "speaker": "Vikas",
+          "text": "Great. And what time do I need to check out?",
+          "translations": {
+            "bn": "বাহ্। আর কখন হোটেল ছাড়তে হবে?",
+            "hi": "बढ़िया। और मुझे कितने बजे चेक-आउट करना है?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Check-out is at eleven. Here’s your key card. Your room is 304, on the third floor.",
+          "translations": {
+            "bn": "এগারোটায়। এই নিন চাবির কার্ড। আপনার ঘর তিনতলায়, ৩০৪।",
+            "hi": "चेक-आउट ग्यारह बजे है। यह रहा आपका कार्ड। आपका कमरा 304 है, तीसरी मंज़िल पर।"
+          }
+        },
+        {
+          "speaker": "Vikas",
+          "text": "Thank you. Could I have an extra pillow, please?",
+          "translations": {
+            "bn": "ধন্যবাদ। একটা বাড়তি বালিশ পাওয়া যাবে?",
+            "hi": "धन्यवाद। क्या मुझे एक और तकिया मिल सकता है?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Of course. I’ll send one up in ten minutes.",
+          "translations": {
+            "bn": "নিশ্চয়ই। দশ মিনিটের মধ্যে পাঠিয়ে দিচ্ছি।",
+            "hi": "ज़रूर। मैं दस मिनट में भिजवा देती हूँ।"
+          }
+        },
+        {
+          "speaker": "Vikas",
+          "text": "One more thing. How do I get to the lake from here?",
+          "translations": {
+            "bn": "আরেকটা কথা। এখান থেকে লেকে যাব কীভাবে?",
+            "hi": "एक बात और। यहाँ से झील तक कैसे जाऊँ?"
+          }
+        },
+        {
+          "speaker": "Receptionist",
+          "text": "Turn right outside the hotel and walk for five minutes. You can’t miss it.",
+          "translations": {
+            "bn": "হোটেল থেকে বেরিয়ে ডান দিকে পাঁচ মিনিট হাঁটুন। চোখ এড়াবে না।",
+            "hi": "होटल से निकलकर दाएँ मुड़िए और पाँच मिनट चलिए। आप उसे देखे बिना नहीं रहेंगे।"
+          }
+        },
+        {
+          "speaker": "Vikas",
+          "text": "Perfect. Thanks for your help.",
+          "translations": {
+            "bn": "চমৎকার। ধন্যবাদ।",
+            "hi": "बढ़िया। मदद के लिए धन्यवाद।"
+          }
+        }
+      ],
+      "voices": {
+        "Receptionist": "female",
+        "Vikas": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the passer-by",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Yes? Can I help you?",
+          "reply": "Excuse me, how do I get to the City Museum?",
+          "cues": {
+            "bn": "ভদ্রভাবে পথ জিজ্ঞেস করুন।",
+            "hi": "विनम्रता से रास्ता पूछें।"
+          }
+        },
+        {
+          "partner": "Go straight, take the second left, then it’s on your right.",
+          "reply": "Sorry, could you say that again more slowly?",
+          "cues": {
+            "bn": "আরেকবার ধীরে বলতে বলুন।",
+            "hi": "फिर से धीरे बोलने को कहें।"
+          }
+        },
+        {
+          "partner": "Sure. Straight on… second left… and it’s on the right.",
+          "reply": "Straight, second left, on the right. Is it far?",
+          "cues": {
+            "bn": "নির্দেশটা আবার বলে দূরত্ব জিজ্ঞেস করুন।",
+            "hi": "निर्देश दोहराएँ और दूरी पूछें।"
+          }
+        },
+        {
+          "partner": "No, about ten minutes on foot.",
+          "reply": "Thank you so much!",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Buying a train ticket",
+            "translations": {
+              "bn": "ট্রেনের টিকিট কাটা",
+              "hi": "ट्रेन का टिकट लेना"
+            }
+          },
+          "roleplay": {
+            "partner": "the ticket clerk",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Next, please. Where to?",
+                "reply": "One ticket to Pune on the next train, please.",
+                "cues": {
+                  "bn": "কোথায় যাবেন বলে টিকিট চান।",
+                  "hi": "बताएँ कि कहाँ का टिकट चाहिए।"
+                }
+              },
+              {
+                "partner": "The next one is at a quarter past four. Sleeper or AC?",
+                "reply": "AC, please. How long does the journey take?",
+                "cues": {
+                  "bn": "শ্রেণি বেছে যাত্রার সময় জিজ্ঞেস করুন।",
+                  "hi": "श्रेणी चुनें और सफ़र का समय पूछें।"
+                }
+              },
+              {
+                "partner": "About three hours. That’s four hundred and fifty rupees.",
+                "reply": "OK. Which platform does it leave from?",
+                "cues": {
+                  "bn": "প্ল্যাটফর্ম জিজ্ঞেস করুন।",
+                  "hi": "प्लेटफ़ॉर्म पूछें।"
+                }
+              },
+              {
+                "partner": "Platform two. Here’s your ticket.",
+                "reply": "Thank you. Have a good day.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A problem in the room",
+            "translations": {
+              "bn": "ঘরে একটা সমস্যা",
+              "hi": "कमरे में एक समस्या"
+            }
+          },
+          "roleplay": {
+            "partner": "the receptionist",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Front desk, how can I help?",
+                "reply": "Hello, I’m in room 212. The air conditioner isn’t working.",
+                "cues": {
+                  "bn": "ঘরের নম্বর আর সমস্যা বলুন।",
+                  "hi": "कमरा नंबर और समस्या बताएँ।"
+                }
+              },
+              {
+                "partner": "I’m sorry. Have you tried the remote?",
+                "reply": "Yes, I have. It still doesn’t turn on.",
+                "cues": {
+                  "bn": "বলুন চেষ্টা করেছেন, তবু চলছে না।",
+                  "hi": "बताएँ कि कोशिश की, फिर भी नहीं चला।"
+                }
+              },
+              {
+                "partner": "I’ll send someone right away.",
+                "reply": "Thank you. Could you also send an extra towel?",
+                "cues": {
+                  "bn": "ধন্যবাদ দিয়ে একটা অনুরোধ করুন।",
+                  "hi": "धन्यवाद दें और एक अनुरोध करें।"
+                }
+              },
+              {
+                "partner": "Of course. Anything else?",
+                "reply": "No, that’s all. Thanks for your help.",
+                "cues": {
+                  "bn": "বলুন আর কিছু নয়, আর ধন্যবাদ দিন।",
+                  "hi": "बताएँ कि बस इतना ही, और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Lost bag at the airport",
+            "translations": {
+              "bn": "বিমানবন্দরে ব্যাগ হারাল",
+              "hi": "हवाई अड्डे पर खोया बैग"
+            }
+          },
+          "roleplay": {
+            "partner": "the airline agent",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello. Is there a problem?",
+                "reply": "Yes. My suitcase didn’t come out on the belt.",
+                "cues": {
+                  "bn": "সমস্যাটা জানান।",
+                  "hi": "समस्या बताएँ।"
+                }
+              },
+              {
+                "partner": "I’m sorry. Can you describe it?",
+                "reply": "It’s a large green suitcase with a black strap.",
+                "cues": {
+                  "bn": "সুটকেসের বর্ণনা দিন।",
+                  "hi": "सूटकेस का वर्णन करें।"
+                }
+              },
+              {
+                "partner": "Thank you. Where are you staying?",
+                "reply": "At the Sea View Hotel, near the beach.",
+                "cues": {
+                  "bn": "কোথায় থাকছেন বলুন।",
+                  "hi": "बताएँ कि कहाँ ठहरना है।"
+                }
+              },
+              {
+                "partner": "We’ll send it to your hotel when it arrives.",
+                "reply": "Thank you. Could you give me a phone number to check?",
+                "cues": {
+                  "bn": "ধন্যবাদ দিয়ে যোগাযোগের নম্বর চান।",
+                  "hi": "धन्यवाद दें और संपर्क नंबर माँगें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

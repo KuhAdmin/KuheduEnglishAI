@@ -1,0 +1,787 @@
+{
+  "week": 36,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Kabir",
+          "text": "Nisha, can you meet my aunt at the station tomorrow? I’m stuck at work.",
+          "translations": {
+            "bn": "নিশা, কাল স্টেশনে আমার মাসিকে আনতে যেতে পারবে? আমি অফিসে আটকে গেছি।",
+            "hi": "निशा, क्या तुम कल स्टेशन पर मेरी मौसी को लेने जा सकती हो? मैं दफ़्तर में फँस गया हूँ।"
+          }
+        },
+        {
+          "speaker": "Nisha",
+          "text": "Of course. But I’ve never met her. What does she look like?",
+          "translations": {
+            "bn": "নিশ্চয়ই। কিন্তু ওঁকে তো আমি কখনও দেখিনি। উনি দেখতে কেমন?",
+            "hi": "ज़रूर। पर मैं उनसे कभी मिली नहीं। वे दिखती कैसी हैं?"
+          }
+        },
+        {
+          "speaker": "Kabir",
+          "text": "She’s quite tall, with short grey hair and round glasses. She’s about sixty, and she smiles a lot.",
+          "translations": {
+            "bn": "উনি বেশ লম্বা, ছোট পাকা চুল, গোল চশমা। বয়স ষাটের কাছাকাছি, আর খুব হাসিখুশি।",
+            "hi": "वे काफ़ी लंबी हैं, छोटे सफ़ेद बाल और गोल चश्मा। उम्र लगभग साठ साल, और वे बहुत मुस्कुराती हैं।"
+          }
+        },
+        {
+          "speaker": "Nisha",
+          "text": "Tall, grey hair, round glasses. Got it. Where should I wait?",
+          "translations": {
+            "bn": "লম্বা, পাকা চুল, গোল চশমা। বুঝেছি। কোথায় অপেক্ষা করব?",
+            "hi": "लंबी, सफ़ेद बाल, गोल चश्मा। समझ गई। मैं कहाँ इंतज़ार करूँ?"
+          }
+        },
+        {
+          "speaker": "Kabir",
+          "text": "Wait at the café near platform two. It’s small and busy, and it smells of fresh coffee. There’s a big clock above the door.",
+          "translations": {
+            "bn": "দু নম্বর প্ল্যাটফর্মের কাছের ক্যাফেতে অপেক্ষা কোরো। ছোট, ভিড়ে ভরা, আর তাজা কফির গন্ধ। দরজার ওপরে একটা বড় ঘড়ি আছে।",
+            "hi": "प्लेटफ़ॉर्म दो के पास वाले कैफ़े में इंतज़ार करना। वह छोटा है, भीड़ वाला, और ताज़ी कॉफ़ी की ख़ुशबू आती है। दरवाज़े के ऊपर एक बड़ी घड़ी है।"
+          }
+        },
+        {
+          "speaker": "Nisha",
+          "text": "The café with the big clock. Will she have a lot of luggage?",
+          "translations": {
+            "bn": "বড় ঘড়িওয়ালা ক্যাফে। ওঁর সঙ্গে কি অনেক মালপত্র থাকবে?",
+            "hi": "बड़ी घड़ी वाला कैफ़े। क्या उनके पास बहुत सामान होगा?"
+          }
+        },
+        {
+          "speaker": "Kabir",
+          "text": "Just one suitcase. It’s bright red and medium-sized, made of hard plastic, with a black handle.",
+          "translations": {
+            "bn": "শুধু একটা সুটকেস। টকটকে লাল, মাঝারি মাপের, শক্ত প্লাস্টিকের, কালো হাতল।",
+            "hi": "बस एक सूटकेस। चटक लाल, मध्यम आकार का, सख़्त प्लास्टिक का, काले हैंडल वाला।"
+          }
+        },
+        {
+          "speaker": "Nisha",
+          "text": "A red suitcase is easy to spot. Do you have a photo of her?",
+          "translations": {
+            "bn": "লাল সুটকেস সহজেই চোখে পড়বে। ওঁর কোনো ছবি আছে?",
+            "hi": "लाल सूटकेस आसानी से दिख जाएगा। तुम्हारे पास उनकी कोई फ़ोटो है?"
+          }
+        },
+        {
+          "speaker": "Kabir",
+          "text": "Yes, look. This is from my sister’s wedding. She’s on the left, in the green sari, next to my uncle.",
+          "translations": {
+            "bn": "হ্যাঁ, দেখো। এটা আমার বোনের বিয়ের ছবি। উনি বাঁ দিকে, সবুজ শাড়িতে, মেসোমশাইয়ের পাশে।",
+            "hi": "हाँ, देखो। यह मेरी बहन की शादी की है। वे बाईं ओर हैं, हरी साड़ी में, मौसाजी के बगल में।"
+          }
+        },
+        {
+          "speaker": "Nisha",
+          "text": "Oh, she looks friendly. And behind them there’s a big garden with lights, right?",
+          "translations": {
+            "bn": "বাহ্, ওঁকে বেশ মিশুকে লাগছে। আর পেছনে আলো দিয়ে সাজানো একটা বড় বাগান, তাই না?",
+            "hi": "अरे, वे तो मिलनसार लगती हैं। और पीछे रोशनी से सजा एक बड़ा बग़ीचा है, है न?"
+          }
+        },
+        {
+          "speaker": "Kabir",
+          "text": "That’s right. So: tall, grey hair, round glasses, a red suitcase, at the café with the clock.",
+          "translations": {
+            "bn": "ঠিক। তাহলে: লম্বা, পাকা চুল, গোল চশমা, লাল সুটকেস, ঘড়িওয়ালা ক্যাফেতে।",
+            "hi": "बिल्कुल। तो: लंबी, सफ़ेद बाल, गोल चश्मा, लाल सूटकेस, घड़ी वाले कैफ़े में।"
+          }
+        },
+        {
+          "speaker": "Nisha",
+          "text": "Perfect. I can picture her now. Don’t worry, I’ll find her.",
+          "translations": {
+            "bn": "চমৎকার। এখন চোখের সামনে ওঁকে দেখতে পাচ্ছি। চিন্তা কোরো না, খুঁজে নেব।",
+            "hi": "बढ़िया। अब वे मेरी आँखों के सामने हैं। चिंता मत करो, मैं उन्हें ढूँढ लूँगी।"
+          }
+        }
+      ],
+      "voices": {
+        "Kabir": "male",
+        "Nisha": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "crowded",
+          "phonetic": "/ˈkraʊdɪd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভিড়ে ভরা",
+            "hi": "भीड़-भाड़ वाला"
+          },
+          "syllables": ["crowd", "ed"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "এখানে “-ed”-এর উচ্চারণ “ইড”।"],
+            "en": ["Say the first part stronger.", "The “-ed” sounds like “id” here."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "यहाँ “-ed” की आवाज़ “इड” है।"]
+          }
+        },
+        {
+          "word": "peaceful",
+          "phonetic": "/ˈpiːsfl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "শান্ত",
+            "hi": "शांत"
+          },
+          "syllables": ["peace", "ful"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“ea” লম্বা, “see”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “ea” is long, as in “see”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“ea” लंबा है, “see” जैसा।"]
+          }
+        },
+        {
+          "word": "narrow",
+          "phonetic": "/ˈnærəʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সরু",
+            "hi": "संकरा, तंग"
+          },
+          "syllables": ["nar", "row"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "শেষের “ow”-এর উচ্চারণ “ও”।"],
+            "en": ["Say the first part stronger.", "The “ow” at the end sounds like “oh”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "आख़िरी “ow” की आवाज़ “ओ” है।"]
+          }
+        },
+        {
+          "word": "view",
+          "phonetic": "/vjuː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দৃশ্য",
+            "hi": "नज़ारा"
+          },
+          "syllables": ["view"],
+          "stress": null,
+          "tips": {
+            "bn": ["উচ্চারণ “ভিউ”।", "বলুন: “There’s a view of the river.”"],
+            "en": ["It sounds like “vyoo”.", "Say: “There’s a view of the river.”"],
+            "hi": ["इसकी आवाज़ “व्यू” है।", "कहें: “There’s a view of the river.”"]
+          }
+        },
+        {
+          "word": "in the middle",
+          "phonetic": "/ɪn ðə ˈmɪdl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মাঝখানে",
+            "hi": "बीच में"
+          },
+          "syllables": ["in", "the", "mid", "dle"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“mid” জোর দিয়ে বলুন।", "বলুন: “In the middle of the room, there’s …”"],
+            "en": ["Say “mid” stronger.", "Say: “In the middle of the room, there’s …”"],
+            "hi": ["“mid” ज़ोर से बोलें।", "कहें: “In the middle of the room, there’s …”"]
+          }
+        },
+        {
+          "word": "surrounded by",
+          "phonetic": "/səˈraʊndɪd baɪ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "দিয়ে ঘেরা",
+            "hi": "से घिरा हुआ"
+          },
+          "syllables": ["sur", "round", "ed", "by"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“round” জোর দিয়ে বলুন।", "বলুন: “It’s surrounded by trees.”"],
+            "en": ["Say “round” stronger.", "Say: “It’s surrounded by trees.”"],
+            "hi": ["“round” ज़ोर से बोलें।", "कहें: “It’s surrounded by trees.”"]
+          }
+        },
+        {
+          "word": "smell",
+          "phonetic": "/smel/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "গন্ধ",
+            "hi": "गंध, महक"
+          },
+          "syllables": ["smell"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“sm” একসঙ্গে বলুন, আগে কোনো স্বর ছাড়া।",
+              "“It smells of …” দিয়ে গন্ধে জায়গার বর্ণনা হয়।"
+            ],
+            "en": [
+              "Say “sm” together, with no sound before it.",
+              "“It smells of …” describes a place with your nose."
+            ],
+            "hi": [
+              "“sm” एक साथ बोलें, पहले कोई स्वर नहीं।",
+              "“It smells of …” से गंध के ज़रिए जगह का वर्णन होता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "It’s a small, round box made of wood.",
+          "alsoAccepted": [
+            "It is a small, round box made of wood.",
+            "It’s a small, round wooden box."
+          ],
+          "translations": {
+            "bn": "এটা কাঠের তৈরি একটা ছোট, গোল বাক্স।",
+            "hi": "यह लकड़ी का बना एक छोटा, गोल डिब्बा है।"
+          },
+          "tips": {
+            "bn": ["আগে মাপ, তারপর আকার, তারপর কী দিয়ে তৈরি।", "“made of” মানে কী দিয়ে তৈরি।"],
+            "en": [
+              "Size first, then shape, then what it is made of.",
+              "“made of” tells what it is made from."
+            ],
+            "hi": [
+              "पहले आकार, फिर बनावट, फिर किस चीज़ का बना है।",
+              "“made of” मतलब किस चीज़ से बना।"
+            ]
+          }
+        },
+        {
+          "english": "My phone is thin and light, and it has a big screen.",
+          "alsoAccepted": ["My phone is light and thin, and it has a big screen."],
+          "translations": {
+            "bn": "আমার ফোনটা পাতলা আর হালকা, আর এর স্ক্রিনটা বড়।",
+            "hi": "मेरा फ़ोन पतला और हल्का है, और इसकी स्क्रीन बड़ी है।"
+          },
+          "tips": {
+            "bn": [
+              "“and” দিয়ে একটার পর আরেকটা বৈশিষ্ট্য যোগ করুন।",
+              "কোনো অংশের জন্য “has”: it has a screen।"
+            ],
+            "en": [
+              "Use “and” to add one feature to another.",
+              "Use “has” for a part: it has a screen."
+            ],
+            "hi": [
+              "“and” से एक ख़ूबी के साथ दूसरी जोड़ें।",
+              "किसी हिस्से के लिए “has”: it has a screen।"
+            ]
+          }
+        },
+        {
+          "english": "This bag is useful because it has many pockets.",
+          "alsoAccepted": ["This bag is useful because it has lots of pockets."],
+          "translations": {
+            "bn": "ব্যাগটা কাজের, কারণ এতে অনেকগুলো পকেট আছে।",
+            "hi": "यह बैग काम का है, क्योंकि इसमें कई जेबें हैं।"
+          },
+          "tips": {
+            "bn": ["কী ভালো বলুন, তারপর কেন।", "“because” দিয়ে কারণ বলুন।"],
+            "en": ["Say what is good about it, then why.", "“because” gives the reason."],
+            "hi": ["बताएँ कि क्या अच्छा है, फिर क्यों।", "“because” से वजह बताएँ।"]
+          }
+        },
+        {
+          "english": "It looks like a pen, but it’s actually a torch.",
+          "alsoAccepted": [
+            "It looks like a pen, but it is actually a torch.",
+            "It looks like a pen, but it’s really a torch."
+          ],
+          "translations": {
+            "bn": "দেখতে কলমের মতো, কিন্তু আসলে এটা একটা টর্চ।",
+            "hi": "यह दिखने में पेन जैसा है, पर असल में टॉर्च है।"
+          },
+          "tips": {
+            "bn": ["চেনা কিছুর সঙ্গে তুলনা করুন।", "“looks like”-এর পরে একটা জিনিস।"],
+            "en": ["Compare it with something familiar.", "“looks like” + a thing."],
+            "hi": ["किसी जानी-पहचानी चीज़ से तुलना करें।", "“looks like” के बाद कोई चीज़।"]
+          }
+        },
+        {
+          "english": "It’s blue, about the size of a book, and very easy to carry.",
+          "alsoAccepted": ["It is blue, about the size of a book, and very easy to carry."],
+          "translations": {
+            "bn": "এটা নীল, মোটামুটি একটা বইয়ের মাপের, আর বয়ে নেওয়া খুব সহজ।",
+            "hi": "यह नीला है, लगभग एक किताब जितना बड़ा, और इसे ले जाना बहुत आसान है।"
+          },
+          "tips": {
+            "bn": ["রং, মাপ, তারপর কী ভালো।", "“about the size of …” শুনে মনে ছবি তৈরি হয়।"],
+            "en": [
+              "Colour, size, then what is good about it.",
+              "“about the size of …” helps someone picture it."
+            ],
+            "hi": [
+              "रंग, आकार, फिर क्या अच्छा है।",
+              "“about the size of …” से सुनने वाला उसे मन में देख पाता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Ishaan",
+      "asWoman": "Ishita",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "You went to the village fair? Tell me about the photo you took.",
+          "reply": "In this photo, there’s a big Ferris wheel in the middle.",
+          "cues": {
+            "bn": "ছবির মাঝখানে কী আছে বলুন।",
+            "hi": "बताएँ कि फ़ोटो के बीच में क्या है।"
+          }
+        },
+        {
+          "partner": "Nice! What can you see around it?",
+          "reply": "On the left, there are food stalls, and on the right, people are dancing.",
+          "cues": {
+            "bn": "বাঁ দিকে আর ডান দিকে কী আছে বলুন।",
+            "hi": "बाईं और दाईं ओर क्या है, बताएँ।"
+          }
+        },
+        {
+          "partner": "What time of day was it?",
+          "reply": "It was evening. The sky is orange, and the lights are on.",
+          "cues": {
+            "bn": "দিনের কোন সময়, আর আকাশ কেমন দেখাচ্ছে বলুন।",
+            "hi": "दिन का कौन-सा समय था और आसमान कैसा दिख रहा है, बताएँ।"
+          }
+        },
+        {
+          "partner": "Who is in the front of the picture?",
+          "reply": "In the front, there’s a little girl with a balloon. She looks very happy.",
+          "cues": {
+            "bn": "সামনে কে আছে, আর মুখে কেমন ভাব বলুন।",
+            "hi": "बताएँ कि सामने कौन है और चेहरे पर क्या भाव है।"
+          }
+        },
+        {
+          "partner": "It sounds like a fun evening. What was it like to be there?",
+          "reply": "It was noisy and busy, but really exciting. It smelled of sweets.",
+          "cues": {
+            "bn": "জায়গাটা কেমন লাগছিল বলুন: শব্দ, ভিড়, গন্ধ।",
+            "hi": "बताएँ कि वहाँ कैसा लगा: आवाज़, भीड़, ख़ुशबू।"
+          }
+        },
+        {
+          "partner": "I can almost see it! Thanks for describing it so well.",
+          "reply": "You’re welcome. Next time, you should come too!",
+          "cues": {
+            "bn": "ধন্যবাদের উত্তর দিন আর পরের বার আসতে বলুন।",
+            "hi": "धन्यवाद का जवाब दें और अगली बार साथ चलने को कहें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "The Art of Detailed Description",
+        "translations": {
+          "bn": "বিশদ বর্ণনার কৌশল",
+          "hi": "विस्तार से वर्णन की कला"
+        }
+      },
+      "instruction": {
+        "text": "Choose a place, person or object you know well. Describe it for two minutes so someone can picture it.",
+        "translations": {
+          "bn": "ভালো করে চেনেন এমন একটা জায়গা, মানুষ বা জিনিস বাছুন। দু মিনিট ধরে এমনভাবে বর্ণনা করুন যাতে কেউ চোখের সামনে দেখতে পায়।",
+          "hi": "कोई जानी-पहचानी जगह, व्यक्ति या चीज़ चुनें। दो मिनट तक ऐसे वर्णन करें कि सुनने वाला उसे मन में देख सके।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say what you are describing and where it is",
+          "translations": {
+            "bn": "কী বর্ণনা করছেন আর সেটা কোথায় বলুন",
+            "hi": "बताएँ कि वर्णन किसका है और वह कहाँ है"
+          }
+        },
+        {
+          "text": "Give its size, shape and colour",
+          "translations": {
+            "bn": "মাপ, আকার আর রং বলুন",
+            "hi": "उसका आकार, बनावट और रंग बताएँ"
+          }
+        },
+        {
+          "text": "Use one of your senses: sound, smell or touch",
+          "translations": {
+            "bn": "একটা ইন্দ্রিয়ের কথা বলুন: শব্দ, গন্ধ বা ছোঁয়া",
+            "hi": "किसी एक इंद्रिय की बात करें: आवाज़, गंध या स्पर्श"
+          }
+        },
+        {
+          "text": "Compare it with something familiar",
+          "translations": {
+            "bn": "চেনা কোনো কিছুর সঙ্গে তুলনা করুন",
+            "hi": "किसी जानी-पहचानी चीज़ से तुलना करें"
+          }
+        },
+        {
+          "text": "Go in order: the big picture first, then small details",
+          "translations": {
+            "bn": "ক্রম মেনে চলুন: আগে পুরো ছবি, তারপর খুঁটিনাটি",
+            "hi": "क्रम से बोलें: पहले पूरी तस्वीर, फिर छोटी बातें"
+          }
+        },
+        {
+          "text": "End with why it matters to you",
+          "translations": {
+            "bn": "শেষে বলুন কেন এটা আপনার কাছে বিশেষ",
+            "hi": "आख़िर में बताएँ कि यह आपके लिए क्यों ख़ास है"
+          }
+        }
+      ],
+      "phrases": [
+        "I’d like to describe …",
+        "It’s about the size of …",
+        "It’s made of …",
+        "On the left, there’s …",
+        "It looks like …",
+        "It smells of …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which sentence describes how a person looks?",
+            "translations": {
+              "bn": "কোন বাক্যে কারও চেহারার বর্ণনা?",
+              "hi": "कौन-सा वाक्य बताता है कि कोई दिखता कैसा है?"
+            }
+          },
+          "answer": "She has short grey hair and round glasses.",
+          "others": ["She lives in Pune.", "She works every day."]
+        },
+        {
+          "question": {
+            "text": "Complete: The box is made ___ wood.",
+            "translations": {
+              "bn": "পূরণ করুন: The box is made ___ wood.",
+              "hi": "पूरा करें: The box is made ___ wood."
+            }
+          },
+          "answer": "of",
+          "others": ["by", "at"]
+        },
+        {
+          "question": {
+            "text": "Which sentence describes a place using the senses?",
+            "translations": {
+              "bn": "কোন বাক্যে ইন্দ্রিয় দিয়ে জায়গার বর্ণনা?",
+              "hi": "कौन-सा वाक्य इंद्रियों से जगह का वर्णन करता है?"
+            }
+          },
+          "answer": "It’s noisy, and it smells of coffee.",
+          "others": ["It’s on Main Road.", "It opens at nine."]
+        },
+        {
+          "question": {
+            "text": "In a picture, where is the thing closest to you?",
+            "translations": {
+              "bn": "ছবিতে আপনার সবচেয়ে কাছের জিনিসটা কোথায় থাকে?",
+              "hi": "तस्वीर में आपके सबसे पास की चीज़ कहाँ होती है?"
+            }
+          },
+          "answer": "in the front",
+          "others": ["in the background", "at the top"]
+        },
+        {
+          "question": {
+            "text": "Which is the best order for a description?",
+            "translations": {
+              "bn": "বর্ণনার সবচেয়ে ভালো ক্রম কোনটি?",
+              "hi": "वर्णन का सबसे अच्छा क्रम कौन-सा है?"
+            }
+          },
+          "answer": "The big picture first, then the details",
+          "others": ["Small details only, then stop", "Any order, as fast as you can"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rehan",
+          "text": "Pooja, how’s your new flat? Tell me everything!",
+          "translations": {
+            "bn": "পূজা, নতুন ফ্ল্যাট কেমন? সব বলো!",
+            "hi": "पूजा, नया फ़्लैट कैसा है? सब बताओ!"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "It’s lovely. It’s on the fourth floor, so it’s bright and quiet.",
+          "translations": {
+            "bn": "খুব সুন্দর। চারতলায়, তাই আলো-ভরা আর শান্ত।",
+            "hi": "बहुत प्यारा है। चौथी मंज़िल पर है, इसलिए रोशनी भी है और शांति भी।"
+          }
+        },
+        {
+          "speaker": "Rehan",
+          "text": "How big is it?",
+          "translations": {
+            "bn": "কত বড়?",
+            "hi": "कितना बड़ा है?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "It’s not huge. There’s one bedroom, a small kitchen and a living room about the size of a classroom.",
+          "translations": {
+            "bn": "খুব বড় নয়। একটা শোবার ঘর, ছোট রান্নাঘর, আর একটা ক্লাসঘরের মাপের বসার ঘর।",
+            "hi": "बहुत बड़ा नहीं है। एक बेडरूम, छोटी रसोई और लगभग एक क्लासरूम जितना बड़ा बैठक।"
+          }
+        },
+        {
+          "speaker": "Rehan",
+          "text": "What can you see from the window?",
+          "translations": {
+            "bn": "জানলা দিয়ে কী দেখা যায়?",
+            "hi": "खिड़की से क्या दिखता है?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "A park with tall trees. In the morning, I can hear birds.",
+          "translations": {
+            "bn": "লম্বা লম্বা গাছওয়ালা একটা পার্ক। সকালে পাখির ডাক শোনা যায়।",
+            "hi": "ऊँचे पेड़ों वाला एक पार्क। सुबह मुझे चिड़ियों की आवाज़ सुनाई देती है।"
+          }
+        },
+        {
+          "speaker": "Rehan",
+          "text": "That sounds peaceful. And the kitchen?",
+          "translations": {
+            "bn": "শুনেই শান্তি লাগছে। আর রান্নাঘর?",
+            "hi": "सुनकर ही सुकून मिलता है। और रसोई?"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "It’s narrow, but it has a big window and white cupboards made of wood.",
+          "translations": {
+            "bn": "সরু, কিন্তু একটা বড় জানলা আছে, আর কাঠের সাদা আলমারি।",
+            "hi": "संकरी है, पर उसमें एक बड़ी खिड़की है और लकड़ी की सफ़ेद अलमारियाँ।"
+          }
+        },
+        {
+          "speaker": "Rehan",
+          "text": "I can picture it. It sounds like a happy place.",
+          "translations": {
+            "bn": "চোখের সামনে দেখতে পাচ্ছি। বেশ সুখের জায়গা মনে হচ্ছে।",
+            "hi": "मैं उसे अपनी आँखों के सामने देख पा रहा हूँ। ख़ुशियों भरी जगह लगती है।"
+          }
+        },
+        {
+          "speaker": "Pooja",
+          "text": "It is! Come and see it on Sunday.",
+          "translations": {
+            "bn": "সত্যিই! রবিবার এসে দেখে যাও।",
+            "hi": "है ही! रविवार को आकर देख लो।"
+          }
+        }
+      ],
+      "voices": {
+        "Rehan": "male",
+        "Pooja": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the clerk",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Lost property office. How can I help?",
+          "reply": "Hello. I left my bag on the train this morning.",
+          "cues": {
+            "bn": "জানান যে ট্রেনে ব্যাগ ফেলে এসেছেন।",
+            "hi": "बताएँ कि बैग ट्रेन में छूट गया।"
+          }
+        },
+        {
+          "partner": "Can you describe it?",
+          "reply": "It’s a black backpack, medium-sized and made of cloth.",
+          "cues": {
+            "bn": "রং, মাপ আর কী দিয়ে তৈরি বলুন।",
+            "hi": "रंग, आकार और किस चीज़ का बना है, बताएँ।"
+          }
+        },
+        {
+          "partner": "Lots of black backpacks come in. Is there anything special about it?",
+          "reply": "Yes, it has a yellow key ring and a small tear on the front pocket.",
+          "cues": {
+            "bn": "বিশেষ কোনো চিহ্ন বলুন।",
+            "hi": "कोई ख़ास निशानी बताएँ।"
+          }
+        },
+        {
+          "partner": "A yellow key ring… Is this it?",
+          "reply": "Yes, that’s it! Thank you so much.",
+          "cues": {
+            "bn": "চিনে নিয়ে ধন্যবাদ দিন।",
+            "hi": "पहचानें और धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Meeting at a concert",
+            "translations": {
+              "bn": "কনসার্টে দেখা",
+              "hi": "कॉन्सर्ट में मुलाक़ात"
+            }
+          },
+          "roleplay": {
+            "partner": "Kavya",
+            "asMan": "Kartik",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I’m at the gate. What does your brother look like?",
+                "reply": "He’s tall and thin, with curly black hair.",
+                "cues": {
+                  "bn": "চেহারা বলুন: উচ্চতা, গড়ন, চুল।",
+                  "hi": "रूप-रंग बताएँ: क़द, बनावट, बाल।"
+                }
+              },
+              {
+                "partner": "What is he wearing today?",
+                "reply": "He’s wearing a white shirt and blue jeans.",
+                "cues": {
+                  "bn": "কী পরেছে বলুন।",
+                  "hi": "बताएँ कि क्या पहना है।"
+                }
+              },
+              {
+                "partner": "There are lots of people in white shirts!",
+                "reply": "He also has a red cap and a guitar on his back.",
+                "cues": {
+                  "bn": "আলাদা করে চেনার মতো কিছু বলুন।",
+                  "hi": "कोई अलग पहचान बताएँ।"
+                }
+              },
+              {
+                "partner": "A red cap and a guitar… I can see him!",
+                "reply": "Great! Thanks for meeting him.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Selling a used bicycle",
+            "translations": {
+              "bn": "পুরোনো সাইকেল বিক্রি",
+              "hi": "पुरानी साइकिल बेचना"
+            }
+          },
+          "roleplay": {
+            "partner": "the buyer",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi, I saw your advert for the bicycle. Can you tell me about it?",
+                "reply": "Sure. It’s a blue bicycle, three years old, in very good condition.",
+                "cues": {
+                  "bn": "রং, কত পুরোনো আর অবস্থা বলুন।",
+                  "hi": "रंग, कितनी पुरानी है और हालत बताएँ।"
+                }
+              },
+              {
+                "partner": "What size is it?",
+                "reply": "It’s medium-sized, good for an adult or a tall teenager.",
+                "cues": {
+                  "bn": "মাপ বলুন আর কার জন্য ঠিক।",
+                  "hi": "आकार बताएँ और किसके लिए ठीक है।"
+                }
+              },
+              {
+                "partner": "Does it have any special features?",
+                "reply": "Yes, it has seven gears, a light at the front and a basket.",
+                "cues": {
+                  "bn": "বিশেষ সুবিধাগুলো বলুন।",
+                  "hi": "ख़ास ख़ूबियाँ बताएँ।"
+                }
+              },
+              {
+                "partner": "Sounds great. Can I come and see it tomorrow?",
+                "reply": "Of course. Come at five o’clock.",
+                "cues": {
+                  "bn": "রাজি হয়ে সময় বলুন।",
+                  "hi": "हाँ कहें और समय बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Holiday photos",
+            "translations": {
+              "bn": "ছুটির ছবি",
+              "hi": "छुट्टियों की तस्वीरें"
+            }
+          },
+          "roleplay": {
+            "partner": "Grandma",
+            "asMan": "Grandpa",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Show me your holiday photos! What’s in this one?",
+                "reply": "This is the beach in Goa. The sea is in the background.",
+                "cues": {
+                  "bn": "ছবিটা কোথাকার আর পেছনে কী আছে বলুন।",
+                  "hi": "बताएँ कि फ़ोटो कहाँ की है और पीछे क्या है।"
+                }
+              },
+              {
+                "partner": "And who are those people in the front?",
+                "reply": "That’s my family. We’re sitting under a big umbrella.",
+                "cues": {
+                  "bn": "সামনে কারা আর কী করছে বলুন।",
+                  "hi": "बताएँ कि सामने कौन हैं और क्या कर रहे हैं।"
+                }
+              },
+              {
+                "partner": "What was the weather like?",
+                "reply": "It was hot and sunny, and the sand was soft and warm.",
+                "cues": {
+                  "bn": "আবহাওয়া আর বালির কথা বলুন।",
+                  "hi": "मौसम और रेत के बारे में बताएँ।"
+                }
+              },
+              {
+                "partner": "It looks beautiful. I feel like I was there!",
+                "reply": "Next time, you should come with us.",
+                "cues": {
+                  "bn": "পরের বার সঙ্গে আসতে বলুন।",
+                  "hi": "अगली बार साथ चलने को कहें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

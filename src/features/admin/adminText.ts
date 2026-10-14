@@ -8,8 +8,6 @@ export const adminText = {
   signOut: 'Sign out',
   signOutFailed: 'Could not sign out: the server did not answer. You are still signed in.',
   sectionsLabel: 'Admin sections',
-  localNotice:
-    'No database yet: changes are saved in this browser only and show up in other tabs of the same browser.',
 
   nav: {
     texts: 'Screen texts',
@@ -28,7 +26,7 @@ export const adminText = {
     resetAllShort: 'Reset',
     resetAllConfirm:
       'Reset this section to the built-in defaults? Your saved changes will be lost.',
-    saved: 'Saved. Open tabs of the app update straight away.',
+    saved: 'Saved for everyone. Learners see it the next time they open the app.',
     reset: 'Reset to the built-in defaults.',
     unsaved: 'You have unsaved changes.',
     storageFull:
@@ -259,7 +257,7 @@ export const adminText = {
     noChallenge: 'no challenge yet',
     challenge: 'Challenge',
     challengeIntro:
-      'The week’s task done from start to finish: the learner reads what to do, records themselves doing all of it in one go (up to 2 minutes), then listens back and ticks what they managed. Nothing is sent or assessed yet, and the screen says so. The picture is the week’s own, uploaded under Curriculum. Learners read the name, the instruction and the tasks in their own language, or in English where it is not written in theirs.',
+      'The week’s task done from start to finish: the learner reads what to do, records themselves doing all of it in one go (up to 5 minutes), then listens back and ticks what they managed. Nothing is sent or assessed yet, and the screen says so. The picture is the week’s own, uploaded under Curriculum. Learners read the name, the instruction and the tasks in their own language, or in English where it is not written in theirs.',
     challengeTitle: 'Name of the challenge',
     challengeTitleIn: 'Name in',
     instruction: 'Instruction',

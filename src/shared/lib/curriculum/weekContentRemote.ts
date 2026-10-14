@@ -6,8 +6,9 @@ import {
   weekLessonsSchema,
   type WeekContentKind,
 } from '@kuhedu/contracts'
-import { apiRequest, ApiError } from '../api/client'
+import { apiRequest } from '../api/client'
 import { settingsRepository } from '../appConfig/settingsRepository'
+import { isStaleSave, type SettingsRemote } from '../appConfig/settingsRemote'
 
 /**
  * A week's lesson content is kept on the server, in the database. The settings objects the
@@ -220,15 +221,6 @@ async function removePiece(kind: WeekContentKind, week: number) {
   keepHere(kind, week, null)
 }
 
-/** Where an editor's save goes, in place of this browser's storage. */
-export type SettingsRemote = {
-  /**
-   * Bring the server from what was saved to what is to be saved. Each piece it takes is in this
-   * browser's copy at once; it throws at the first it does not take, and the rest stay unsaved.
-   */
-  save: (previous: unknown, next: unknown) => Promise<void>
-}
-
 const byWeek = (value: unknown): Record<string, unknown> =>
   typeof value === 'object' && value !== null ? (value as Record<string, unknown>) : {}
 
@@ -253,6 +245,6 @@ export function lessonsRemote(name: string): SettingsRemote | undefined {
   }
 }
 
-/** Whether a save failed because someone else saved the same piece first. */
-export const isStaleSave = (error: unknown) =>
-  error instanceof ApiError && error.code === 'conflict'
+// Each piece the server takes is in this browser's copy at once; a save throws at the first it
+// does not take, and the rest stay unsaved.
+export { isStaleSave, type SettingsRemote }

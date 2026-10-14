@@ -12,6 +12,7 @@ import { authRoutes } from './modules/auth/routes.ts'
 import type { Grader } from './modules/conversation/grader.ts'
 import type { Listener } from './modules/conversation/listener.ts'
 import { adminLessonRoutes, lessonRoutes } from './modules/content/routes.ts'
+import { adminAppConfigRoutes, appConfigRoutes } from './modules/content/settingsRoutes.ts'
 import { conversationRoutes } from './modules/conversation/routes.ts'
 import { meRoutes } from './modules/me/routes.ts'
 import { pronunciationRoutes } from './modules/pronunciation/routes.ts'
@@ -53,6 +54,8 @@ export type AppServices = {
   meRequestsPerMinute?: number
   /** Weeks of lessons one address may ask for in a minute. */
   lessonRequestsPerMinute?: number
+  /** Times one address may ask for the admin's settings in a minute. */
+  appConfigRequestsPerMinute?: number
 }
 
 /** What the speaking routes need. Without it the app has no voices, and is silent. */
@@ -87,6 +90,8 @@ const REPLY_REQUESTS_PER_MINUTE = 10
 const ME_REQUESTS_PER_MINUTE = 120
 // A learner opens a week, then its days; a classroom may share one address.
 const LESSON_REQUESTS_PER_MINUTE = 240
+// Asked once as the app opens; a classroom may share one address.
+const APP_CONFIG_REQUESTS_PER_MINUTE = 120
 
 /**
  * The HTTP application, with nothing started: tests drive it with `inject`, `index.ts` makes
@@ -146,6 +151,14 @@ export function buildApp({
       requestsPerMinute: services.lessonRequestsPerMinute ?? LESSON_REQUESTS_PER_MINUTE,
     })
     void app.register(adminLessonRoutes, { prefix: '/api/admin/lessons', db })
+    // Everything else an admin manages (landing page, languages, profile pictures, screen texts,
+    // the course's wording): anyone's to read, an admin's to write.
+    void app.register(appConfigRoutes, {
+      prefix: '/api/app-config',
+      db,
+      requestsPerMinute: services.appConfigRequestsPerMinute ?? APP_CONFIG_REQUESTS_PER_MINUTE,
+    })
+    void app.register(adminAppConfigRoutes, { prefix: '/api/admin/app-config', db })
     void app.register(meRoutes, {
       prefix: '/api/me',
       db,

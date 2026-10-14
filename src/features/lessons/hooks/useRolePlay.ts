@@ -13,6 +13,7 @@ import type { TurnHint } from '../components/TalkTranscript'
 import { MAX_TURN_MS, turnTiming } from '../lib/turnTiming'
 import { useReplyChecks } from './useReplyChecks'
 import { useSpokenPractice } from './useSpokenPractice'
+import { useTurnTakes } from './useTurnTakes'
 
 /** Before the first line, while turns are being taken, and after the last one. */
 export type RolePlayStage = 'intro' | 'talking' | 'done'
@@ -30,7 +31,9 @@ const RECORDER_MARGIN_MS = 2_000
 /**
  * A scripted conversation as the learner goes through it: the partner says a line with the
  * device's voice, the learner answers into the microphone (or skips), and the next line follows
- * whatever they said. The recording is only theirs to hear, unless they ask to have that reply
+ * whatever they said. **Every answer's recording is kept with its turn until the conversation is
+ * started again or left** (`useTurnTakes`), so that each can be heard and checked afterwards,
+ * when there is time to. A recording is only theirs to hear, unless they ask to have that reply
  * checked (`checkReply`): then it is sent to the server, on that tap and never by itself.
  *
  * Turns are taken without tapping where the device allows it: the microphone opens when the
@@ -41,17 +44,30 @@ const RECORDER_MARGIN_MS = 2_000
 export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked') {
   const language = useLanguage()
   const playback = useSpeechPlayback()
+  const takes = useTurnTakes()
+  /** The turn the recording now ending is the answer to; `null` when it was not ended as one. */
+  const answering = useRef<number | null>(null)
   const { recording, startSpeaking, stopSpeaking, cancelSpeaking } = useSpokenPractice(
-    playback.stop,
+    // Neither the app's voice nor the learner's own may be recorded as their answer.
+    () => {
+      playback.stop()
+      takes.stop()
+    },
     {
       maxDurationMs: MAX_TURN_MS + RECORDER_MARGIN_MS,
       listen: true,
-      // The learner's last answer stays to be heard until they give another.
-      keepTake: true,
       onProgress: (progress) => {
+        // Another recording is under way: whatever the one before it was for has come or gone.
+        answering.current = null
         const { action } = turnTiming(progress)
         if (action === 'shut') cancelSpeaking()
         else if (action === 'answer') endTurn()
+      },
+      // Only a recording ended as an answer is kept: one cut off by the screen going dark is not.
+      onTake: (made) => {
+        const turn = answering.current
+        answering.current = null
+        if (turn !== null) takes.keep(turn, made)
       },
     },
   )
@@ -66,8 +82,8 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
   // 0: no help yet; 1: what to say, in the learner's language; 2: the English as well.
   const [askedLevel, setAskedLevel] = useState<0 | 1 | 2>(0)
   const [partnerSaying, setPartnerSaying] = useState<number | null>(null)
-  // The turn the take under way will belong to, once it has replaced the one before it.
-  const [takeFor, setTakeFor] = useState<{ turn: number; after: number } | null>(null)
+  // The turns answered aloud; the others that are over were skipped.
+  const [spoken, setSpoken] = useState<ReadonlySet<number>>(() => new Set())
   // Nothing may open the microphone while the learner decides whether to leave.
   const [held, setHeld] = useState(false)
   /** Goes up whenever a line is said or the learner turns to something else. */
@@ -89,6 +105,7 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
     const request = ++lineRequest.current
     // A microphone that failed is not tried again until the learner taps it.
     const mayListen = thenListen && !held && recording.problem === null
+    takes.stop()
     setPartnerSaying(index)
     void playback.play(line.partner).then((outcome) => {
       // Cut short by another request: that one now says who is speaking.
@@ -108,6 +125,7 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
   /** Something the learner asked to hear again; it must not end up in a recording under way. */
   const hearAgain = (say: () => void) => {
     if (micOpen) recording.cancel()
+    takes.stop()
     say()
   }
 
@@ -116,8 +134,10 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
     prepareListening()
     primeMicrophonePermission()
     recording.reset()
+    answering.current = null
+    takes.clear()
     replies.clear()
-    setTakeFor(null)
+    setSpoken(new Set())
     setHeld(false)
     setAskedLevel(0)
     setPosition(0)
@@ -139,9 +159,10 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
   /** Stopping a recording that captured something is the learner's answer: move on. */
   const endTurn = () => {
     const captured = recording.phase === 'recording'
+    if (captured) answering.current = turnIndex
     stopSpeaking()
     if (captured) {
-      setTakeFor({ turn: turnIndex, after: recording.attempts })
+      setSpoken((turnsSpoken) => new Set(turnsSpoken).add(turnIndex))
       advance()
     }
   }
@@ -150,10 +171,6 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
     stage === 'talking' && turn && hintLevel > 0
       ? { cue, reply: hintLevel === 2 ? turn.reply : undefined }
       : null
-
-  /** The turn whose recording is still kept; a take is dropped when another replaces it. */
-  const takeTurn =
-    takeFor && recording.take && recording.attempts > takeFor.after ? takeFor.turn : null
 
   return {
     stage,
@@ -165,8 +182,12 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
     moreHelpLeft: hintLevel === 1,
     noHelpLeft: hintLevel === 2,
     speakingTurn: playback.status === 'playing' ? partnerSaying : null,
-    /** The turn whose recording can be played back, and checked. */
-    takeTurn,
+    /** The turns the learner answered aloud. */
+    spoken,
+    /** Their recordings, by the number of the turn: each can be played back, and checked. */
+    takes: takes.takes,
+    /** The turn whose recording is being played back. */
+    playingTake: takes.playing,
     /** What checking a reply came to, by the number of its turn. */
     replyChecks: replies.checks,
     /** Whether a reply can be sent to be checked from this browser at all. */
@@ -193,24 +214,24 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
         void playback.play(line.reply)
       }),
     /** They are listening, not answering: the microphone then waits for a tap. */
-    listenToSelf: () => {
+    listenToSelf: (index: number) => {
       lineRequest.current += 1
       if (micOpen) recording.cancel()
-      recording.playTake()
+      // Their own voice and the app's are not heard over each other.
+      playback.stop()
+      takes.play(index)
     },
     /**
-     * Send the reply that is still kept to be checked. They have turned to what they said, as
-     * when they listen to it: the microphone then waits for a tap, and the answer can be read.
+     * Send a reply to be checked. They have turned to what they said, as when they listen to
+     * it: the microphone then waits for a tap, and the answer can be read.
      */
-    checkReply: () => {
-      const answered = takeTurn === null ? undefined : turns[takeTurn]
-      if (takeTurn === null || !answered || !recording.take) return
+    checkReply: (index: number) => {
+      const answered = turns[index]
+      const take = takes.takes[index]
+      if (!answered || !take) return
       lineRequest.current += 1
       if (micOpen) recording.cancel()
-      void replies.check(takeTurn, recording.take, {
-        partner: answered.partner,
-        suggested: answered.reply,
-      })
+      void replies.check(index, take, { partner: answered.partner, suggested: answered.reply })
     },
     startTurn: () => {
       prepareListening()
@@ -225,6 +246,7 @@ export function useRolePlay(roleplay: WeekRoleplay, help: RolePlayHelp = 'asked'
     pause: () => {
       setHeld(true)
       playback.stop()
+      takes.stop()
       if (micOpen) recording.cancel()
     },
     resume: () => setHeld(false),

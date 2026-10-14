@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import type { z } from 'zod'
+import { appConfigRemote } from '@/shared/lib/appConfig/appConfigRemote'
+import { isStaleSave, type SettingsRemote } from '@/shared/lib/appConfig/settingsRemote'
 import { settingsRepository, SettingsStorageError } from '@/shared/lib/appConfig/settingsRepository'
 import { useAppConfig } from '@/shared/lib/appConfig/useAppConfig'
-import { isStaleSave, lessonsRemote } from '@/shared/lib/curriculum/weekContentRemote'
+import { lessonsRemote } from '@/shared/lib/curriculum/weekContentRemote'
 
 /**
  * What happened to the last save. `saving`: it is on its way to the server. `failed`: the server
@@ -22,10 +24,13 @@ type SettingsDraftOptions<T> = {
  * Editing state for one settings object: the admin changes a draft, then saves it (every open
  * tab of the app updates), discards it, or resets the section to the built-in defaults.
  *
- * **Where a save goes depends on the settings object.** The lessons' are kept on the server
- * (`lessonsRemote`), so their save is sent there and reaches every device; every other one is
- * still this browser's alone (`TODO(backend)`).
+ * **A save goes to the server**, which keeps every settings object an admin edits: the lessons'
+ * through `lessonsRemote`, everything else through `appConfigRemote`. It reaches every device.
+ * Only where neither is running (a unit test of an editor) is a save this browser's alone.
  */
+const remoteFor = (name: string): SettingsRemote | undefined =>
+  lessonsRemote(name) ?? appConfigRemote(name)
+
 export function useSettingsDraft<T>({ name, schema, defaults }: SettingsDraftOptions<T>) {
   const saved = useAppConfig({ name, schema, defaults })
   // `null` while nothing has been edited: the form then mirrors what is saved.
@@ -36,11 +41,7 @@ export function useSettingsDraft<T>({ name, schema, defaults }: SettingsDraftOpt
   const isDirty = draft !== null && JSON.stringify(draft) !== JSON.stringify(saved)
 
   /** Send a value to the server, which is where this settings object is kept. */
-  const send = (
-    next: T,
-    done: DraftStatus,
-    remote: NonNullable<ReturnType<typeof lessonsRemote>>,
-  ) => {
+  const send = (next: T, done: DraftStatus, remote: SettingsRemote) => {
     setStatus('saving')
     remote.save(saved, next).then(
       () => {
@@ -70,7 +71,7 @@ export function useSettingsDraft<T>({ name, schema, defaults }: SettingsDraftOpt
       // Run the draft through the schema so what is stored is exactly what screens will read.
       const result = schema.safeParse(finalise ? finalise(value) : value)
       if (!result.success) return
-      const remote = lessonsRemote(name)
+      const remote = remoteFor(name)
       if (remote) return send(result.data, 'saved', remote)
       try {
         settingsRepository.write(name, result.data)
@@ -89,7 +90,7 @@ export function useSettingsDraft<T>({ name, schema, defaults }: SettingsDraftOpt
 
     resetToDefaults() {
       if (status === 'saving') return
-      const remote = lessonsRemote(name)
+      const remote = remoteFor(name)
       if (remote) return send(defaults, 'reset', remote)
       settingsRepository.remove(name)
       setDraft(null)

@@ -1,0 +1,770 @@
+{
+  "week": 22,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Arnav",
+          "text": "Priyanka! I haven’t seen you for a year. How are you?",
+          "translations": {
+            "bn": "প্রিয়াঙ্কা! এক বছর দেখা নেই। কেমন আছ?",
+            "hi": "प्रियंका! एक साल से तुम्हें नहीं देखा। कैसी हो?"
+          }
+        },
+        {
+          "speaker": "Priyanka",
+          "text": "Arnav! I’m great. I have big news. I moved to Pune for a new job.",
+          "translations": {
+            "bn": "অর্ণব! খুব ভালো। একটা বড় খবর আছে। নতুন চাকরি নিয়ে পুনে চলে গেছি।",
+            "hi": "अर्णव! मैं बढ़िया हूँ। एक बड़ी ख़बर है। मैं नई नौकरी के लिए पुणे चली गई हूँ।"
+          }
+        },
+        {
+          "speaker": "Arnav",
+          "text": "Wow, congratulations! So you live in Pune now?",
+          "translations": {
+            "bn": "বাহ, অভিনন্দন! তাহলে তুমি এখন পুনেতে থাকো?",
+            "hi": "वाह, बधाई हो! तो अब तुम पुणे में रहती हो?"
+          }
+        },
+        {
+          "speaker": "Priyanka",
+          "text": "Yes, since March. I work at a hospital. I’m a nurse there.",
+          "translations": {
+            "bn": "হ্যাঁ, মার্চ থেকে। একটা হাসপাতালে কাজ করি। ওখানে আমি নার্স।",
+            "hi": "हाँ, मार्च से। मैं एक अस्पताल में काम करती हूँ। वहाँ नर्स हूँ।"
+          }
+        },
+        {
+          "speaker": "Arnav",
+          "text": "That’s wonderful. Do you like it?",
+          "translations": {
+            "bn": "দারুণ। ভালো লাগছে?",
+            "hi": "यह तो बहुत अच्छा है। पसंद आ रहा है?"
+          }
+        },
+        {
+          "speaker": "Priyanka",
+          "text": "I love the work, but I miss my family. And the rent is very high.",
+          "translations": {
+            "bn": "কাজটা খুব ভালো লাগে, কিন্তু পরিবারের কথা মনে পড়ে। আর ভাড়াও খুব বেশি।",
+            "hi": "काम बहुत पसंद है, पर घरवालों की याद आती है। और किराया भी बहुत ज़्यादा है।"
+          }
+        },
+        {
+          "speaker": "Arnav",
+          "text": "Oh, I see. That must be hard.",
+          "translations": {
+            "bn": "ও, বুঝলাম। নিশ্চয়ই কঠিন।",
+            "hi": "अच्छा, समझा। यह मुश्किल होगा।"
+          }
+        },
+        {
+          "speaker": "Priyanka",
+          "text": "A little. What about you? Any news?",
+          "translations": {
+            "bn": "একটু। তোমার কী খবর?",
+            "hi": "थोड़ा। तुम्हारी क्या ख़बर है?"
+          }
+        },
+        {
+          "speaker": "Arnav",
+          "text": "Well, I got married in June!",
+          "translations": {
+            "bn": "আসলে, জুনে আমার বিয়ে হয়েছে!",
+            "hi": "दरअसल, जून में मेरी शादी हो गई!"
+          }
+        },
+        {
+          "speaker": "Priyanka",
+          "text": "Really? That’s great news! Who is the lucky person?",
+          "translations": {
+            "bn": "সত্যি? দারুণ খবর! ভাগ্যবান মানুষটি কে?",
+            "hi": "सच में? क्या बढ़िया ख़बर है! वह ख़ुशक़िस्मत इंसान कौन है?"
+          }
+        },
+        {
+          "speaker": "Arnav",
+          "text": "Her name is Tara. She’s a teacher. You must meet her.",
+          "translations": {
+            "bn": "ওর নাম তারা। ও শিক্ষিকা। তোমাকে আলাপ করতেই হবে।",
+            "hi": "उसका नाम तारा है। वह टीचर है। तुम्हें उससे ज़रूर मिलना चाहिए।"
+          }
+        },
+        {
+          "speaker": "Priyanka",
+          "text": "I’d love to. Let’s all have dinner when I’m back next month.",
+          "translations": {
+            "bn": "নিশ্চয়ই। পরের মাসে ফিরলে সবাই মিলে রাতের খাবার খাব।",
+            "hi": "ज़रूर। अगले महीने जब मैं लौटूँगी, तो सब साथ में खाना खाएँगे।"
+          }
+        },
+        {
+          "speaker": "Arnav",
+          "text": "Perfect. Next month, dinner. I’ll remember!",
+          "translations": {
+            "bn": "একদম। পরের মাসে, রাতের খাবার। মনে থাকবে!",
+            "hi": "बिल्कुल। अगले महीने, डिनर। याद रहेगा!"
+          }
+        }
+      ],
+      "voices": {
+        "Arnav": "male",
+        "Priyanka": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "main",
+          "phonetic": "/meɪn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "প্রধান, মূল",
+            "hi": "मुख्य"
+          },
+          "syllables": ["main"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“ai”-এর উচ্চারণ “day”-এর “ay”-এর মতো।",
+              "“the main idea” মানে সবচেয়ে জরুরি কথা।"
+            ],
+            "en": [
+              "The “ai” sounds like the “ay” in “day”.",
+              "“the main idea” is the most important point."
+            ],
+            "hi": ["“ai” की आवाज़ “day” के “ay” जैसी है।", "“the main idea” मतलब सबसे ज़रूरी बात।"]
+          }
+        },
+        {
+          "word": "idea",
+          "phonetic": "/aɪˈdɪə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধারণা, ভাবনা",
+            "hi": "विचार"
+          },
+          "syllables": ["i", "de", "a"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন: “ডি”।", "“আই” দিয়ে শুরু: “আই-ডি-আ”।"],
+            "en": ["Say the second part stronger: “DEE”.", "Start with “eye”: “eye-DEE-uh”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें: “डी”।", "“आइ” से शुरू करें: “आइ-डी-अ”।"]
+          }
+        },
+        {
+          "word": "news",
+          "phonetic": "/njuːz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "খবর",
+            "hi": "ख़बर, समाचार"
+          },
+          "syllables": ["news"],
+          "stress": null,
+          "tips": {
+            "bn": ["“s”-এর উচ্চারণ “z”-এর মতো।", "বলুন “good news”, “a good news” নয়।"],
+            "en": ["The “s” sounds like “z”.", "Say “good news”, not “a good news”."],
+            "hi": ["“s” की आवाज़ “z” जैसी है।", "कहें “good news”, “a good news” नहीं।"]
+          }
+        },
+        {
+          "word": "mean",
+          "phonetic": "/miːn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বোঝানো",
+            "hi": "मतलब होना"
+          },
+          "syllables": ["mean"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ea” লম্বা, “see”-এর মতো।", "জিজ্ঞেস করুন: “What do you mean?”"],
+            "en": ["The “ea” is long, as in “see”.", "Ask: “What do you mean?”"],
+            "hi": ["“ea” लंबा है, “see” जैसा।", "पूछें: “What do you mean?”"]
+          }
+        },
+        {
+          "word": "point",
+          "phonetic": "/pɔɪnt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মূল কথা",
+            "hi": "मुद्दा, मुख्य बात"
+          },
+          "syllables": ["point"],
+          "stress": null,
+          "tips": {
+            "bn": [
+              "“oi”-এর উচ্চারণ “boy”-এর “oy”-এর মতো।",
+              "“What’s your point?” মানে মূল কথাটা কী।"
+            ],
+            "en": [
+              "The “oi” sounds like the “oy” in “boy”.",
+              "“What’s your point?” asks for the main idea."
+            ],
+            "hi": [
+              "“oi” की आवाज़ “boy” के “oy” जैसी है।",
+              "“What’s your point?” का मतलब है मुख्य बात क्या है।"
+            ]
+          }
+        },
+        {
+          "word": "summary",
+          "phonetic": "/ˈsʌməri/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সারাংশ",
+            "hi": "सारांश"
+          },
+          "syllables": ["sum", "ma", "ry"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "মাঝের অংশটি খুব ছোট।"],
+            "en": ["Say the first part stronger.", "The middle part is very short."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "बीच का हिस्सा बहुत छोटा है।"]
+          }
+        },
+        {
+          "word": "understand",
+          "phonetic": "/ˌʌndəˈstænd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বোঝা",
+            "hi": "समझना"
+          },
+          "syllables": ["un", "der", "stand"],
+          "stress": 3,
+          "tips": {
+            "bn": ["শেষ অংশটি জোর দিয়ে বলুন।", "বলুন “I understand”, “I am understanding” নয়।"],
+            "en": ["Say the last part stronger.", "Say “I understand”, not “I am understanding”."],
+            "hi": [
+              "आख़िरी हिस्सा ज़ोर से बोलें।",
+              "कहें “I understand”, “I am understanding” नहीं।"
+            ]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I’m sorry to hear that.",
+          "alsoAccepted": ["I’m sorry to hear about that."],
+          "translations": {
+            "bn": "শুনে খারাপ লাগল।",
+            "hi": "यह सुनकर दुख हुआ।"
+          },
+          "tips": {
+            "bn": ["খারাপ খবর শুনলে এটি বলুন।", "ধীরে আর নরমভাবে বলুন।"],
+            "en": ["Use it when you hear bad news.", "Say it slowly and kindly."],
+            "hi": ["बुरी ख़बर सुनकर यह कहें।", "धीरे और प्यार से कहें।"]
+          }
+        },
+        {
+          "english": "Congratulations! You must be very happy.",
+          "alsoAccepted": ["Congratulations! You must be so happy."],
+          "translations": {
+            "bn": "অভিনন্দন! আপনি নিশ্চয়ই খুব খুশি।",
+            "hi": "बधाई हो! आप बहुत ख़ुश होंगे।"
+          },
+          "tips": {
+            "bn": ["ভালো খবরে এটি বলুন।", "“must be” দিয়ে অনুমান করুন তাঁর অনুভূতি।"],
+            "en": ["Use it for good news.", "“must be” guesses how they feel."],
+            "hi": ["अच्छी ख़बर पर यह कहें।", "“must be” से उनकी भावना का अंदाज़ा लगाएँ।"]
+          }
+        },
+        {
+          "english": "That’s a good question. Let me think.",
+          "alsoAccepted": ["Good question. Let me think."],
+          "translations": {
+            "bn": "ভালো প্রশ্ন। একটু ভেবে বলি।",
+            "hi": "अच्छा सवाल है। मुझे सोचने दीजिए।"
+          },
+          "tips": {
+            "bn": ["এতে ভাবার সময় পান।", "তারপর প্রশ্নের উত্তর দিন।"],
+            "en": ["It gives you time to think.", "Then answer the question."],
+            "hi": ["इससे सोचने का समय मिलता है।", "फिर सवाल का जवाब दें।"]
+          }
+        },
+        {
+          "english": "So you mean the meeting is on Friday?",
+          "alsoAccepted": ["So the meeting is on Friday?"],
+          "translations": {
+            "bn": "তার মানে মিটিং শুক্রবার?",
+            "hi": "यानी मीटिंग शुक्रवार को है?"
+          },
+          "tips": {
+            "bn": ["নিশ্চিত হতে মূল কথাটা আবার বলুন।", "শেষে গলা ওপরে তুলুন।"],
+            "en": ["Say the main point back to check it.", "Your voice goes up at the end."],
+            "hi": ["पक्का करने के लिए मुख्य बात दोहराएँ।", "आख़िर में आवाज़ ऊपर ले जाएँ।"]
+          }
+        },
+        {
+          "english": "Don’t worry. I can help you.",
+          "alsoAccepted": ["Don’t worry, I can help you."],
+          "translations": {
+            "bn": "চিন্তা করবেন না। আমি সাহায্য করতে পারি।",
+            "hi": "चिंता मत कीजिए। मदद के लिए मैं हूँ न।"
+          },
+          "tips": {
+            "bn": ["সমস্যার কথা শুনলে সাহায্যের কথা বলুন।", "“Don’t” মানে “do not”।"],
+            "en": ["Answer a problem with an offer of help.", "“Don’t” is “do not”."],
+            "hi": ["किसी परेशानी पर मदद की पेशकश करें।", "“Don’t” मतलब “do not”।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Smita",
+      "asMan": "Sumit",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Guess what? I started learning the guitar.",
+          "reply": "Oh, really? That’s exciting!",
+          "cues": {
+            "bn": "অবাক হয়ে আগ্রহ দেখান।",
+            "hi": "हैरानी और दिलचस्पी दिखाएँ।"
+          }
+        },
+        {
+          "partner": "Yes, I practise every evening after work.",
+          "reply": "I see. Is it difficult?",
+          "cues": {
+            "bn": "বুঝেছেন বোঝান, আর জিজ্ঞেস করুন কঠিন কি না।",
+            "hi": "जताएँ कि बात समझ आई, और पूछें कि क्या यह मुश्किल है।"
+          }
+        },
+        {
+          "partner": "At first my fingers hurt a lot.",
+          "reply": "Oh no! That sounds painful.",
+          "cues": {
+            "bn": "সহানুভূতি দেখান।",
+            "hi": "सहानुभूति दिखाएँ।"
+          }
+        },
+        {
+          "partner": "But now I can play three songs!",
+          "reply": "Wow, well done! Which songs?",
+          "cues": {
+            "bn": "প্রশংসা করে জিজ্ঞেস করুন কোন গান।",
+            "hi": "तारीफ़ करें और पूछें कि कौन-से गाने।"
+          }
+        },
+        {
+          "partner": "Old film songs. My grandmother loves them.",
+          "reply": "That’s lovely. I’d like to hear you play.",
+          "cues": {
+            "bn": "বলুন আপনি শুনতে চান।",
+            "hi": "कहें कि आप सुनना चाहेंगे।"
+          }
+        },
+        {
+          "partner": "Come on Sunday, then!",
+          "reply": "Great, I’ll be there.",
+          "cues": {
+            "bn": "রাজি হোন।",
+            "hi": "हामी भरें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Listen and Continue the Conversation",
+        "translations": {
+          "bn": "শুনুন, আর কথা চালিয়ে যান",
+          "hi": "सुनें और बातचीत आगे बढ़ाएँ"
+        }
+      },
+      "instruction": {
+        "text": "Ask a friend to tell you some news. Listen, show interest and keep the talk going for about one minute.",
+        "translations": {
+          "bn": "কোনো বন্ধুকে একটা খবর বলতে বলুন। শুনুন, আগ্রহ দেখান, প্রায় এক মিনিট কথা চালিয়ে যান।",
+          "hi": "किसी दोस्त से कोई ख़बर सुनाने को कहें। सुनें, दिलचस्पी दिखाएँ और लगभग एक मिनट बातचीत जारी रखें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say the main news back in your own words",
+          "translations": {
+            "bn": "মূল খবরটা নিজের ভাষায় আবার বলুন",
+            "hi": "मुख्य ख़बर अपने शब्दों में दोहराएँ"
+          }
+        },
+        {
+          "text": "Show interest: “Really?” or “I see.”",
+          "translations": {
+            "bn": "আগ্রহ দেখান: “Really?” বা “I see.”",
+            "hi": "दिलचस्पी दिखाएँ: “Really?” या “I see.”"
+          }
+        },
+        {
+          "text": "Respond to the feeling: good news or bad news",
+          "translations": {
+            "bn": "অনুভূতির উত্তর দিন: ভালো খবর না খারাপ খবর",
+            "hi": "भावना के हिसाब से जवाब दें: अच्छी ख़बर या बुरी ख़बर"
+          }
+        },
+        {
+          "text": "Ask two questions about what you heard",
+          "translations": {
+            "bn": "যা শুনলেন তা নিয়ে দুটো প্রশ্ন করুন",
+            "hi": "जो सुना, उस पर दो सवाल पूछें"
+          }
+        },
+        {
+          "text": "Share something of your own that is related",
+          "translations": {
+            "bn": "এর সঙ্গে মেলে এমন নিজের কিছু বলুন",
+            "hi": "इससे जुड़ी अपनी कोई बात बताएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "So you mean …?",
+        "Really? Tell me more.",
+        "That’s great news!",
+        "I’m sorry to hear that.",
+        "What happened next?",
+        "That reminds me …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Your friend says, “I lost my job.” What is a good response?",
+            "translations": {
+              "bn": "বন্ধু বললেন, “I lost my job.” ভালো উত্তর কোনটি?",
+              "hi": "दोस्त ने कहा, “I lost my job.” अच्छा जवाब कौन-सा है?"
+            }
+          },
+          "answer": "I’m sorry to hear that.",
+          "others": ["That’s great!", "OK, bye."]
+        },
+        {
+          "question": {
+            "text": "Which phrase shows that you are listening?",
+            "translations": {
+              "bn": "কোন কথায় বোঝায় আপনি শুনছেন?",
+              "hi": "कौन-सा वाक्यांश बताता है कि आप सुन रहे हैं?"
+            }
+          },
+          "answer": "I see.",
+          "others": ["Stop.", "Whatever."]
+        },
+        {
+          "question": {
+            "text": "Your friend says, “I passed my driving test!” What do you say?",
+            "translations": {
+              "bn": "বন্ধু বললেন, “I passed my driving test!” কী বলবেন?",
+              "hi": "दोस्त ने कहा, “I passed my driving test!” आप क्या कहेंगे?"
+            }
+          },
+          "answer": "Congratulations!",
+          "others": ["Never mind.", "I’m sorry."]
+        },
+        {
+          "question": {
+            "text": "“The bus was late, so I missed the start of the film.” What is the main idea?",
+            "translations": {
+              "bn": "“The bus was late, so I missed the start of the film.” মূল কথাটা কী?",
+              "hi": "“The bus was late, so I missed the start of the film.” मुख्य बात क्या है?"
+            }
+          },
+          "answer": "They missed the start of the film.",
+          "others": ["The film was bad.", "They took a taxi."]
+        },
+        {
+          "question": {
+            "text": "Which sentence checks the main point?",
+            "translations": {
+              "bn": "কোন বাক্যে মূল কথাটা মিলিয়ে নেওয়া হচ্ছে?",
+              "hi": "कौन-सा वाक्य मुख्य बात की जाँच करता है?"
+            }
+          },
+          "answer": "So you mean you’re moving?",
+          "others": ["Are you hungry?", "I like moving."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Bina",
+          "text": "Ajay? Is that you? It’s been years!",
+          "translations": {
+            "bn": "অজয়? তুমি? কত বছর পর!",
+            "hi": "अजय? तुम हो? कितने सालों बाद!"
+          }
+        },
+        {
+          "speaker": "Ajay",
+          "text": "Bina! Yes! How have you been?",
+          "translations": {
+            "bn": "বীণা! হ্যাঁ! কেমন ছিলে?",
+            "hi": "बीना! हाँ! इतने दिन कैसी रहीं?"
+          }
+        },
+        {
+          "speaker": "Bina",
+          "text": "Busy! I opened a small clothes shop last year.",
+          "translations": {
+            "bn": "খুব ব্যস্ত! গত বছর একটা ছোট জামাকাপড়ের দোকান খুলেছি।",
+            "hi": "बहुत व्यस्त! पिछले साल मैंने कपड़ों की एक छोटी दुकान खोली।"
+          }
+        },
+        {
+          "speaker": "Ajay",
+          "text": "Your own shop? That’s amazing! How is it going?",
+          "translations": {
+            "bn": "নিজের দোকান? দারুণ! কেমন চলছে?",
+            "hi": "अपनी दुकान? कमाल है! कैसी चल रही है?"
+          }
+        },
+        {
+          "speaker": "Bina",
+          "text": "Slowly at first, but now it’s busy every day.",
+          "translations": {
+            "bn": "প্রথমে ধীরে, কিন্তু এখন রোজ ভিড় হয়।",
+            "hi": "शुरू में धीरे, पर अब रोज़ भीड़ रहती है।"
+          }
+        },
+        {
+          "speaker": "Ajay",
+          "text": "I’m so happy to hear that. You always loved fashion.",
+          "translations": {
+            "bn": "শুনে খুব ভালো লাগল। তুমি তো বরাবরই সাজপোশাক ভালোবাসতে।",
+            "hi": "यह सुनकर बहुत ख़ुशी हुई। तुम्हें तो हमेशा से फ़ैशन पसंद था।"
+          }
+        },
+        {
+          "speaker": "Bina",
+          "text": "That’s true! And you? Are you still at the bank?",
+          "translations": {
+            "bn": "ঠিক! আর তুমি? এখনও ব্যাংকেই আছ?",
+            "hi": "सही कहा! और तुम? अब भी बैंक में हो?"
+          }
+        },
+        {
+          "speaker": "Ajay",
+          "text": "No, I teach maths now. I changed jobs last year.",
+          "translations": {
+            "bn": "না, এখন অঙ্ক পড়াই। গত বছর চাকরি বদলেছি।",
+            "hi": "नहीं, अब मैं गणित पढ़ाता हूँ। पिछले साल नौकरी बदली।"
+          }
+        },
+        {
+          "speaker": "Bina",
+          "text": "Oh, I see! So we both started something new last year.",
+          "translations": {
+            "bn": "ও, তাই! তাহলে আমরা দুজনেই গত বছর নতুন কিছু শুরু করেছি।",
+            "hi": "अच्छा! तो हम दोनों ने पिछले साल कुछ नया शुरू किया।"
+          }
+        },
+        {
+          "speaker": "Ajay",
+          "text": "Ha, that’s right! Let’s have tea and talk more.",
+          "translations": {
+            "bn": "হা, ঠিক! চলো চা খেতে খেতে আরও গল্প করি।",
+            "hi": "हा, सही बात! चलो चाय पीते हुए और बातें करते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Bina": "female",
+        "Ajay": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I have some bad news. My cat is ill.",
+          "reply": "Oh no, I’m sorry to hear that.",
+          "cues": {
+            "bn": "সহানুভূতি দেখান।",
+            "hi": "सहानुभूति दिखाएँ।"
+          }
+        },
+        {
+          "partner": "The vet says she needs to rest for a week.",
+          "reply": "So she needs to rest. Will she be OK?",
+          "cues": {
+            "bn": "মূল কথাটা আবার বলে জিজ্ঞেস করুন সে ভালো হবে কি না।",
+            "hi": "मुख्य बात दोहराएँ और पूछें कि क्या वह ठीक हो जाएगी।"
+          }
+        },
+        {
+          "partner": "Yes, the vet thinks so.",
+          "reply": "That’s good news. I’m glad.",
+          "cues": {
+            "bn": "স্বস্তি জানান।",
+            "hi": "राहत जताएँ।"
+          }
+        },
+        {
+          "partner": "Thanks for listening.",
+          "reply": "Of course. Tell me if you need any help.",
+          "cues": {
+            "bn": "সাহায্যের প্রস্তাব দিন।",
+            "hi": "मदद की पेशकश करें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Good news",
+            "translations": {
+              "bn": "সুখবর",
+              "hi": "अच्छी ख़बर"
+            }
+          },
+          "roleplay": {
+            "partner": "Rupa",
+            "asMan": "Rupak",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I have some news. I got into the university!",
+                "reply": "That’s fantastic! Congratulations!",
+                "cues": {
+                  "bn": "খুশি হয়ে অভিনন্দন জানান।",
+                  "hi": "ख़ुशी से बधाई दें।"
+                }
+              },
+              {
+                "partner": "Thank you! I start in August.",
+                "reply": "In August? Which subject will you study?",
+                "cues": {
+                  "bn": "মাসটা আবার বলে জিজ্ঞেস করুন কোন বিষয় পড়বেন।",
+                  "hi": "महीना दोहराएँ और पूछें कि कौन-सा विषय पढ़ना है।"
+                }
+              },
+              {
+                "partner": "Computer science. It’s my dream.",
+                "reply": "Your dream! I’m really happy for you.",
+                "cues": {
+                  "bn": "আনন্দ জানান।",
+                  "hi": "ख़ुशी जताएँ।"
+                }
+              },
+              {
+                "partner": "Let’s celebrate this weekend.",
+                "reply": "Yes, let’s! Where shall we go?",
+                "cues": {
+                  "bn": "রাজি হোন, জিজ্ঞেস করুন কোথায় যাবেন।",
+                  "hi": "हामी भरें और पूछें कि कहाँ चलें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A friend’s problem",
+            "translations": {
+              "bn": "বন্ধুর সমস্যা",
+              "hi": "दोस्त की परेशानी"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I’m tired. I can’t sleep well these days.",
+                "reply": "Oh no. Why can’t you sleep?",
+                "cues": {
+                  "bn": "সহানুভূতি দেখিয়ে কারণ জিজ্ঞেস করুন।",
+                  "hi": "सहानुभूति दिखाएँ और कारण पूछें।"
+                }
+              },
+              {
+                "partner": "My neighbours play loud music at night.",
+                "reply": "That must be really annoying.",
+                "cues": {
+                  "bn": "তাঁর অনুভূতি বুঝে কিছু বলুন।",
+                  "hi": "उनकी भावना समझकर कुछ कहें।"
+                }
+              },
+              {
+                "partner": "It is. I don’t know what to do.",
+                "reply": "Why don’t you talk to them politely?",
+                "cues": {
+                  "bn": "একটা পরামর্শ দিন।",
+                  "hi": "एक सुझाव दें।"
+                }
+              },
+              {
+                "partner": "That’s a good idea. I’ll try tomorrow.",
+                "reply": "Good luck. Tell me how it goes.",
+                "cues": {
+                  "bn": "শুভকামনা জানান।",
+                  "hi": "शुभकामना दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Back from a trip",
+            "translations": {
+              "bn": "বেড়িয়ে ফেরা",
+              "hi": "यात्रा से लौटना"
+            }
+          },
+          "roleplay": {
+            "partner": "Kamal",
+            "asWoman": "Kamala",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I’m back from Kerala!",
+                "reply": "Welcome back! How was it?",
+                "cues": {
+                  "bn": "স্বাগত জানিয়ে জিজ্ঞেস করুন কেমন কাটল।",
+                  "hi": "स्वागत करें और पूछें कि कैसा रहा।"
+                }
+              },
+              {
+                "partner": "Beautiful, but it rained every day.",
+                "reply": "Every day? That’s a pity.",
+                "cues": {
+                  "bn": "দুঃখ প্রকাশ করুন।",
+                  "hi": "अफ़सोस जताएँ।"
+                }
+              },
+              {
+                "partner": "Yes, but I saw the backwaters from a boat.",
+                "reply": "Wow, that sounds amazing!",
+                "cues": {
+                  "bn": "আগ্রহ দেখান।",
+                  "hi": "दिलचस्पी दिखाएँ।"
+                }
+              },
+              {
+                "partner": "I took lots of photos.",
+                "reply": "Really? Can I see them?",
+                "cues": {
+                  "bn": "ছবিগুলো দেখতে চান।",
+                  "hi": "फ़ोटो देखने की इच्छा जताएँ।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

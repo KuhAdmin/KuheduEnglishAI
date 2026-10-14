@@ -1,0 +1,758 @@
+{
+  "week": 28,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Yash",
+          "text": "Tanya, what are you going to do this weekend?",
+          "translations": {
+            "bn": "তানিয়া, এই সপ্তাহান্তে কী করবে?",
+            "hi": "तान्या, इस वीकेंड क्या करने वाली हो?"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "I’m going to visit my aunt in Lonavala. I’m taking the early train on Saturday.",
+          "translations": {
+            "bn": "লোনাভলায় মাসির কাছে যাব। শনিবার ভোরের ট্রেন ধরছি।",
+            "hi": "मैं लोनावला में अपनी मौसी से मिलने जा रही हूँ। शनिवार सुबह की ट्रेन ले रही हूँ।"
+          }
+        },
+        {
+          "speaker": "Yash",
+          "text": "Nice! Have you booked your ticket?",
+          "translations": {
+            "bn": "বাহ! টিকিট কেটেছ?",
+            "hi": "बढ़िया! टिकट बुक कर लिया?"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "Yes, I booked it yesterday. The train leaves at six.",
+          "translations": {
+            "bn": "হ্যাঁ, কাল কেটেছি। ট্রেন ছটায় ছাড়ে।",
+            "hi": "हाँ, कल बुक किया। ट्रेन छह बजे चलती है।"
+          }
+        },
+        {
+          "speaker": "Yash",
+          "text": "It’s the monsoon. I think it will rain all weekend.",
+          "translations": {
+            "bn": "এখন বর্ষা। মনে হয় সারা সপ্তাহান্ত বৃষ্টি হবে।",
+            "hi": "अभी बारिश का मौसम है। मुझे लगता है पूरे वीकेंड बारिश होगी।"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "Probably! But the hills will look beautiful in the rain. What about you? Any plans?",
+          "translations": {
+            "bn": "সম্ভবত! তবে বৃষ্টিতে পাহাড় দারুণ দেখাবে। তোমার কী পরিকল্পনা?",
+            "hi": "शायद! पर बारिश में पहाड़ बहुत सुंदर लगेंगे। और तुम? कोई योजना?"
+          }
+        },
+        {
+          "speaker": "Yash",
+          "text": "I’m meeting my old school friends on Sunday. We’re having lunch together.",
+          "translations": {
+            "bn": "রবিবার স্কুলের পুরোনো বন্ধুদের সঙ্গে দেখা করছি। একসঙ্গে দুপুরের খাবার খাচ্ছি।",
+            "hi": "रविवार को मैं स्कूल के पुराने दोस्तों से मिल रहा हूँ। हम साथ में दोपहर का खाना खा रहे हैं।"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "That will be fun. Where are you going to eat?",
+          "translations": {
+            "bn": "দারুণ মজা হবে। কোথায় খাবে?",
+            "hi": "मज़ा आएगा। कहाँ खाने वाले हो?"
+          }
+        },
+        {
+          "speaker": "Yash",
+          "text": "We haven’t decided yet. Maybe the new Chinese place.",
+          "translations": {
+            "bn": "এখনও ঠিক করিনি। হয়তো নতুন চাইনিজ জায়গাটায়।",
+            "hi": "अभी तय नहीं किया। शायद नई चाइनीज़ जगह पर।"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "And next month? Are you going to take a holiday?",
+          "translations": {
+            "bn": "আর পরের মাসে? ছুটি নেবে?",
+            "hi": "और अगले महीने? छुट्टी लेने वाले हो?"
+          }
+        },
+        {
+          "speaker": "Yash",
+          "text": "Yes, I’m going to Kerala with my family. I think we’ll have a great time.",
+          "translations": {
+            "bn": "হ্যাঁ, পরিবারের সঙ্গে কেরালা যাচ্ছি। মনে হয় খুব ভালো সময় কাটবে।",
+            "hi": "हाँ, परिवार के साथ केरल जा रहा हूँ। मुझे लगता है बहुत अच्छा समय बीतेगा।"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "Lucky you! Send me some photos.",
+          "translations": {
+            "bn": "তোমার কপাল ভালো! কয়েকটা ছবি পাঠিও।",
+            "hi": "क्या क़िस्मत है! कुछ फ़ोटो भेजना।"
+          }
+        }
+      ],
+      "voices": {
+        "Yash": "male",
+        "Tanya": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "will",
+          "phonetic": "/wɪl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভবিষ্যৎ বোঝানোর শব্দ",
+            "hi": "भविष्य बताने का शब्द"
+          },
+          "syllables": ["will"],
+          "stress": null,
+          "tips": {
+            "bn": ["“i” ছোট, “sit”-এর মতো।", "“I’ll” হল “I will”-এর সংক্ষেপ।"],
+            "en": ["The “i” is short, as in “sit”.", "“I’ll” is short for “I will”."],
+            "hi": ["“i” छोटा है, “sit” जैसा।", "“I’ll”, “I will” का छोटा रूप है।"]
+          }
+        },
+        {
+          "word": "tomorrow",
+          "phonetic": "/təˈmɒrəʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আগামীকাল",
+            "hi": "आने वाला कल"
+          },
+          "syllables": ["to", "mor", "row"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "প্রথম অংশটি ছোট আর দুর্বল “টু”।"],
+            "en": ["Say the second part stronger.", "The first part is a short, weak “tuh”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "पहला हिस्सा छोटा और हल्का “टु” है।"]
+          }
+        },
+        {
+          "word": "future",
+          "phonetic": "/ˈfjuːtʃə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভবিষ্যৎ",
+            "hi": "भविष्य"
+          },
+          "syllables": ["fu", "ture"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “ফিউ”।", "“ture”-এর উচ্চারণ “চার”-এর মতো।"],
+            "en": ["Say the first part stronger: “FEW”.", "“ture” sounds like “cher”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “फ़्यू”।", "“ture” की आवाज़ “चर” जैसी है।"]
+          }
+        },
+        {
+          "word": "predict",
+          "phonetic": "/prɪˈdɪkt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আগে থেকে বলা",
+            "hi": "भविष्यवाणी करना"
+          },
+          "syllables": ["pre", "dict"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন: “I predict that …”"],
+            "en": ["Say the second part stronger.", "Say: “I predict that …”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें: “I predict that …”"]
+          }
+        },
+        {
+          "word": "likely",
+          "phonetic": "/ˈlaɪkli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সম্ভাবনা আছে এমন",
+            "hi": "संभावित"
+          },
+          "syllables": ["like", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“It’s likely to rain” মানে সম্ভবত বৃষ্টি হবে।"],
+            "en": [
+              "Say the first part stronger.",
+              "“It’s likely to rain” means it will probably rain."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“It’s likely to rain” मतलब शायद बारिश होगी।"]
+          }
+        },
+        {
+          "word": "soon",
+          "phonetic": "/suːn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "শিগগির",
+            "hi": "जल्द ही"
+          },
+          "syllables": ["soon"],
+          "stress": null,
+          "tips": {
+            "bn": ["“oo” লম্বা, “moon”-এর মতো।", "“See you soon!” বন্ধুত্বপূর্ণ বিদায়।"],
+            "en": ["The “oo” is long, as in “moon”.", "“See you soon!” is a friendly goodbye."],
+            "hi": ["“oo” लंबा है, “moon” जैसा।", "“See you soon!” दोस्ताना विदाई है।"]
+          }
+        },
+        {
+          "word": "forecast",
+          "phonetic": "/ˈfɔːkɑːst/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "পূর্বাভাস",
+            "hi": "पूर्वानुमान"
+          },
+          "syllables": ["fore", "cast"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“the weather forecast” কালকের আবহাওয়া জানায়।"],
+            "en": [
+              "Say the first part stronger.",
+              "“the weather forecast” tells you tomorrow’s weather."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“the weather forecast” कल का मौसम बताता है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I’m meeting my friend at six tomorrow.",
+          "alsoAccepted": ["I’m meeting a friend at six tomorrow."],
+          "translations": {
+            "bn": "কাল ছটায় বন্ধুর সঙ্গে আমার দেখা করার কথা।",
+            "hi": "कल छह बजे मेरी अपने दोस्त से मुलाक़ात तय है।"
+          },
+          "tips": {
+            "bn": [
+              "সময় ঠিক করা পরিকল্পনায় “am/is/are + -ing”।",
+              "সময়টা বলুন: “at six tomorrow”।"
+            ],
+            "en": [
+              "Use “am/is/are + -ing” for a plan with a time.",
+              "Say the time: “at six tomorrow”."
+            ],
+            "hi": ["समय तय योजना के लिए “am/is/are + -ing”।", "समय बताएँ: “at six tomorrow”।"]
+          }
+        },
+        {
+          "english": "We’re having a party on Saturday.",
+          "alsoAccepted": ["We are having a party this Saturday."],
+          "translations": {
+            "bn": "শনিবার আমাদের একটা পার্টি আছে।",
+            "hi": "शनिवार को हमारे यहाँ एक पार्टी है।"
+          },
+          "tips": {
+            "bn": ["“We’re” মানে “we are”।", "“having a party” মানে পার্টি দেওয়া।"],
+            "en": ["“We’re” is “we are”.", "“having a party” means holding one."],
+            "hi": ["“We’re” मतलब “we are”।", "“having a party” मतलब पार्टी रखना।"]
+          }
+        },
+        {
+          "english": "Are you free on Friday evening?",
+          "alsoAccepted": ["Are you free on Friday night?"],
+          "translations": {
+            "bn": "শুক্রবার সন্ধ্যায় আপনি কি ফাঁকা আছেন?",
+            "hi": "क्या शुक्रवार शाम आप ख़ाली हैं?"
+          },
+          "tips": {
+            "bn": ["পরিকল্পনার প্রস্তাবের আগে এটি জিজ্ঞেস করুন।", "এখানে “free” মানে ব্যস্ত নয়।"],
+            "en": ["Ask this before you suggest a plan.", "Here “free” means not busy."],
+            "hi": ["योजना सुझाने से पहले यह पूछें।", "यहाँ “free” का मतलब है व्यस्त नहीं।"]
+          }
+        },
+        {
+          "english": "My train leaves at ten o’clock.",
+          "alsoAccepted": ["My train leaves at ten.", "My train departs at ten o’clock."],
+          "translations": {
+            "bn": "আমার ট্রেন দশটায় ছাড়ে।",
+            "hi": "मेरी ट्रेन दस बजे चलती है।"
+          },
+          "tips": {
+            "bn": ["সময়সূচির কথায় সাধারণ বর্তমান কাল।", "“leaves”-এর শেষে “z” ধ্বনি।"],
+            "en": ["For a timetable, use the simple present.", "“leaves” ends with a “z” sound."],
+            "hi": ["समय-सारणी के लिए साधारण वर्तमान काल।", "“leaves” के आख़िर में “z” की आवाज़ है।"]
+          }
+        },
+        {
+          "english": "I have a doctor’s appointment on Monday.",
+          "alsoAccepted": ["I have an appointment with the doctor on Monday."],
+          "translations": {
+            "bn": "সোমবার আমার ডাক্তার দেখানোর সময় নেওয়া আছে।",
+            "hi": "सोमवार को मेरा डॉक्टर से मिलने का समय तय है।"
+          },
+          "tips": {
+            "bn": [
+              "Appointment মানে দেখা করার নির্দিষ্ট সময়।",
+              "বলুন “on Monday”, “in Monday” নয়।"
+            ],
+            "en": ["An appointment is a fixed time to meet.", "Say “on Monday”, not “in Monday”."],
+            "hi": ["Appointment मतलब मिलने का तय समय।", "कहें “on Monday”, “in Monday” नहीं।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Ishaan",
+      "asWoman": "Isha",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "My exams finish next week!",
+          "reply": "Great! What are you going to do after that?",
+          "cues": {
+            "bn": "খুশি হয়ে পরের পরিকল্পনা জিজ্ঞেস করুন।",
+            "hi": "ख़ुशी जताएँ और आगे की योजना पूछें।"
+          }
+        },
+        {
+          "partner": "I’m going to travel to Ladakh with friends.",
+          "reply": "Wow! When are you leaving?",
+          "cues": {
+            "bn": "কবে রওনা, জিজ্ঞেস করুন।",
+            "hi": "पूछें कि रवानगी कब है।"
+          }
+        },
+        {
+          "partner": "On the fifteenth. We’re driving there.",
+          "reply": "How long will it take?",
+          "cues": {
+            "bn": "কত সময় লাগবে, জিজ্ঞেস করুন।",
+            "hi": "पूछें कि कितना समय लगेगा।"
+          }
+        },
+        {
+          "partner": "About three days. I think it will be cold.",
+          "reply": "Are you going to take warm clothes?",
+          "cues": {
+            "bn": "গরম জামা নিচ্ছেন কি না, জিজ্ঞেস করুন।",
+            "hi": "पूछें कि क्या गरम कपड़े साथ हैं।"
+          }
+        },
+        {
+          "partner": "Of course! What about you? Any plans for the holidays?",
+          "reply": "I’m going to …",
+          "cues": {
+            "bn": "আপনার নিজের পরিকল্পনা বলুন।",
+            "hi": "अपनी योजना बताएँ।"
+          }
+        },
+        {
+          "partner": "That sounds nice. Let’s meet before I go.",
+          "reply": "Sure. Are you free on Saturday?",
+          "cues": {
+            "bn": "রাজি হয়ে একটা দিনের কথা বলুন।",
+            "hi": "हामी भरें और एक दिन सुझाएँ।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "My Plans for the Coming Year",
+        "translations": {
+          "bn": "আগামী বছরের পরিকল্পনা",
+          "hi": "आने वाले साल की योजनाएँ"
+        }
+      },
+      "instruction": {
+        "text": "Talk about your plans for next year: what you are going to do, and what you think will happen.",
+        "translations": {
+          "bn": "আগামী বছরের পরিকল্পনা বলুন: কী কী করবেন, আর কী ঘটবে বলে মনে হয়।",
+          "hi": "अगले साल की अपनी योजनाएँ बताएँ: क्या करने का इरादा है, और क्या होगा, ऐसा लगता है।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Say one plan with “I’m going to …”",
+          "translations": {
+            "bn": "“I’m going to …” দিয়ে একটা পরিকল্পনা বলুন",
+            "hi": "“I’m going to …” से एक योजना बताएँ"
+          }
+        },
+        {
+          "text": "Say one fixed arrangement, with a date",
+          "translations": {
+            "bn": "তারিখ দিয়ে একটা ঠিক করা ব্যবস্থার কথা বলুন",
+            "hi": "तारीख़ के साथ एक तय कार्यक्रम बताएँ"
+          }
+        },
+        {
+          "text": "Make one prediction with “I think … will …”",
+          "translations": {
+            "bn": "“I think … will …” দিয়ে একটা অনুমান করুন",
+            "hi": "“I think … will …” से एक अंदाज़ा लगाएँ"
+          }
+        },
+        {
+          "text": "Say why the plan matters to you",
+          "translations": {
+            "bn": "পরিকল্পনাটা আপনার কাছে কেন জরুরি, বলুন",
+            "hi": "बताएँ कि यह योजना आपके लिए क्यों ज़रूरी है"
+          }
+        },
+        {
+          "text": "Say one thing you hope for",
+          "translations": {
+            "bn": "একটা আশার কথা বলুন",
+            "hi": "एक उम्मीद बताएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "Next year, I’m going to …",
+        "In March, I’m …",
+        "I think it will be …",
+        "I’d like to …",
+        "I hope …",
+        "That’s why …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Complete: I’m ___ to visit my aunt.",
+            "translations": {
+              "bn": "পূরণ করুন: I’m ___ to visit my aunt.",
+              "hi": "पूरा करें: I’m ___ to visit my aunt."
+            }
+          },
+          "answer": "going",
+          "others": ["go", "went"]
+        },
+        {
+          "question": {
+            "text": "Which sentence is a prediction?",
+            "translations": {
+              "bn": "কোন বাক্যটা অনুমান?",
+              "hi": "कौन-सा वाक्य अंदाज़ा है?"
+            }
+          },
+          "answer": "I think it will rain tomorrow.",
+          "others": ["It rained yesterday.", "It is raining now."]
+        },
+        {
+          "question": {
+            "text": "Which sentence is a fixed arrangement?",
+            "translations": {
+              "bn": "কোন বাক্যে ঠিক করা ব্যবস্থার কথা আছে?",
+              "hi": "कौन-सा वाक्य तय कार्यक्रम बताता है?"
+            }
+          },
+          "answer": "I’m meeting Ravi at five today.",
+          "others": ["I met Ravi yesterday.", "I like Ravi."]
+        },
+        {
+          "question": {
+            "text": "Complete: What ___ you going to do this weekend?",
+            "translations": {
+              "bn": "পূরণ করুন: What ___ you going to do this weekend?",
+              "hi": "पूरा करें: What ___ you going to do this weekend?"
+            }
+          },
+          "answer": "are",
+          "others": ["do", "will"]
+        },
+        {
+          "question": {
+            "text": "Which question asks about future plans?",
+            "translations": {
+              "bn": "কোন প্রশ্ন ভবিষ্যতের পরিকল্পনা নিয়ে?",
+              "hi": "कौन-सा सवाल आगे की योजनाओं के बारे में है?"
+            }
+          },
+          "answer": "What are your plans for next year?",
+          "others": ["What did you do last year?", "How old are you?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Kriti",
+          "text": "Deven, are you going home for Diwali?",
+          "translations": {
+            "bn": "দেবেন, দিওয়ালিতে বাড়ি যাচ্ছেন?",
+            "hi": "देवेन, क्या आप दिवाली पर घर जा रहे हैं?"
+          }
+        },
+        {
+          "speaker": "Deven",
+          "text": "Yes, I’m flying to Indore on the twentieth.",
+          "translations": {
+            "bn": "হ্যাঁ, কুড়ি তারিখে ইন্দোর উড়ে যাচ্ছি।",
+            "hi": "हाँ, बीस तारीख़ को इंदौर की फ़्लाइट ले रहा हूँ।"
+          }
+        },
+        {
+          "speaker": "Kriti",
+          "text": "How long are you staying?",
+          "translations": {
+            "bn": "কত দিন থাকছেন?",
+            "hi": "कितने दिन रुक रहे हैं?"
+          }
+        },
+        {
+          "speaker": "Deven",
+          "text": "Five days. I’m going to help my parents clean the house.",
+          "translations": {
+            "bn": "পাঁচ দিন। বাবা-মাকে ঘর পরিষ্কারে সাহায্য করব।",
+            "hi": "पाँच दिन। मैं घर की सफ़ाई में अपने माता-पिता की मदद करूँगा।"
+          }
+        },
+        {
+          "speaker": "Kriti",
+          "text": "That’s nice. I think the airport will be very busy.",
+          "translations": {
+            "bn": "ভালো। মনে হয় বিমানবন্দরে খুব ভিড় হবে।",
+            "hi": "अच्छा है। मुझे लगता है हवाई अड्डे पर बहुत भीड़ होगी।"
+          }
+        },
+        {
+          "speaker": "Deven",
+          "text": "Probably. I’m going to leave home early. What about you?",
+          "translations": {
+            "bn": "সম্ভবত। আমি তাড়াতাড়ি বেরোব। আপনি?",
+            "hi": "शायद। मैं घर से जल्दी निकलूँगा। और आप?"
+          }
+        },
+        {
+          "speaker": "Kriti",
+          "text": "My sister is coming here, so we’re cooking a big dinner.",
+          "translations": {
+            "bn": "আমার বোন এখানে আসছে, তাই আমরা বড় করে রাতের খাবার রাঁধছি।",
+            "hi": "मेरी बहन यहाँ आ रही है, इसलिए हम एक बड़ा डिनर बना रहे हैं।"
+          }
+        },
+        {
+          "speaker": "Deven",
+          "text": "Sounds delicious! What are you going to make?",
+          "translations": {
+            "bn": "শুনেই জিভে জল! কী রাঁধবেন?",
+            "hi": "सुनकर ही मुँह में पानी आ गया! क्या बनाने वाली हैं?"
+          }
+        },
+        {
+          "speaker": "Kriti",
+          "text": "Puri, kheer and lots of sweets. Happy Diwali in advance!",
+          "translations": {
+            "bn": "পুরি, পায়েস আর অনেক মিষ্টি। আগাম শুভ দীপাবলি!",
+            "hi": "पूरी, खीर और ढेर सारी मिठाइयाँ। दिवाली की अग्रिम शुभकामनाएँ!"
+          }
+        },
+        {
+          "speaker": "Deven",
+          "text": "Thank you! Happy Diwali to you too!",
+          "translations": {
+            "bn": "ধন্যবাদ! আপনাকেও শুভ দীপাবলি!",
+            "hi": "धन्यवाद! आपको भी दिवाली मुबारक!"
+          }
+        }
+      ],
+      "voices": {
+        "Kriti": "female",
+        "Deven": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "What are you going to do this evening?",
+          "reply": "I’m going to …",
+          "cues": {
+            "bn": "আজ সন্ধ্যার পরিকল্পনা বলুন।",
+            "hi": "आज शाम की योजना बताएँ।"
+          }
+        },
+        {
+          "partner": "And tomorrow? Any arrangements?",
+          "reply": "Yes, I’m meeting … at …",
+          "cues": {
+            "bn": "কালকের একটা ঠিক করা কাজের কথা বলুন।",
+            "hi": "कल की कोई तय मुलाक़ात बताएँ।"
+          }
+        },
+        {
+          "partner": "What do you think the weather will be like?",
+          "reply": "I think it will be …",
+          "cues": {
+            "bn": "আবহাওয়া নিয়ে অনুমান করুন।",
+            "hi": "मौसम का अंदाज़ा लगाएँ।"
+          }
+        },
+        {
+          "partner": "Have fun tomorrow!",
+          "reply": "Thanks! You too.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Planning a holiday",
+            "translations": {
+              "bn": "ছুটির পরিকল্পনা",
+              "hi": "छुट्टी की योजना"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Where are you going to go on holiday this year?",
+                "reply": "I’m going to visit Darjeeling.",
+                "cues": {
+                  "bn": "কোথায় যাবেন, বলুন।",
+                  "hi": "बताएँ कि कहाँ जाने का इरादा है।"
+                }
+              },
+              {
+                "partner": "Lovely! When are you leaving?",
+                "reply": "I’m leaving on the tenth of May.",
+                "cues": {
+                  "bn": "কবে রওনা, বলুন।",
+                  "hi": "रवानगी की तारीख़ बताएँ।"
+                }
+              },
+              {
+                "partner": "Do you think it will be cold?",
+                "reply": "I think it will be cool, but not too cold.",
+                "cues": {
+                  "bn": "আবহাওয়া নিয়ে অনুমান করুন।",
+                  "hi": "मौसम का अंदाज़ा लगाएँ।"
+                }
+              },
+              {
+                "partner": "What are you going to do there?",
+                "reply": "I’m going to drink lots of tea and walk in the hills.",
+                "cues": {
+                  "bn": "সেখানে কী করবেন, বলুন।",
+                  "hi": "बताएँ कि वहाँ क्या करने का इरादा है।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A friend’s birthday",
+            "translations": {
+              "bn": "বন্ধুর জন্মদিন",
+              "hi": "दोस्त का जन्मदिन"
+            }
+          },
+          "roleplay": {
+            "partner": "Mitali",
+            "asMan": "Mitesh",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "It’s Rahul’s birthday on Friday. Are you coming to the party?",
+                "reply": "Yes, of course! What time does it start?",
+                "cues": {
+                  "bn": "হ্যাঁ বলুন, কটায় শুরু জিজ্ঞেস করুন।",
+                  "hi": "हाँ कहें और पूछें कि कितने बजे शुरू है।"
+                }
+              },
+              {
+                "partner": "At seven. I’m going to bake a cake.",
+                "reply": "Great! I’m going to bring some snacks.",
+                "cues": {
+                  "bn": "বলুন আপনি কী আনবেন।",
+                  "hi": "बताएँ कि आप क्या लाएँगे।"
+                }
+              },
+              {
+                "partner": "Do you think he will like a surprise?",
+                "reply": "I think he’ll love it!",
+                "cues": {
+                  "bn": "অনুমান করুন।",
+                  "hi": "अंदाज़ा लगाएँ।"
+                }
+              },
+              {
+                "partner": "Perfect. See you on Friday!",
+                "reply": "See you then!",
+                "cues": {
+                  "bn": "বিদায় জানান।",
+                  "hi": "विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Next year’s goals",
+            "translations": {
+              "bn": "আগামী বছরের লক্ষ্য",
+              "hi": "अगले साल के लक्ष्य"
+            }
+          },
+          "roleplay": {
+            "partner": "the teacher",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "What are your goals for next year?",
+                "reply": "I’m going to improve my English.",
+                "cues": {
+                  "bn": "একটা লক্ষ্য বলুন।",
+                  "hi": "एक लक्ष्य बताएँ।"
+                }
+              },
+              {
+                "partner": "How are you going to do that?",
+                "reply": "I’m going to practise speaking every day.",
+                "cues": {
+                  "bn": "কীভাবে করবেন, বলুন।",
+                  "hi": "बताएँ कि कैसे करने का इरादा है।"
+                }
+              },
+              {
+                "partner": "Do you think it will be difficult?",
+                "reply": "Maybe, but I think I can do it.",
+                "cues": {
+                  "bn": "সৎভাবে অনুমান করুন।",
+                  "hi": "ईमानदारी से अंदाज़ा लगाएँ।"
+                }
+              },
+              {
+                "partner": "I’m sure you will. Good luck!",
+                "reply": "Thank you!",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,779 @@
+{
+  "week": 42,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Ms Iyer",
+          "text": "So, that’s how rainwater harvesting works. Any questions?",
+          "translations": {
+            "bn": "তাহলে, বৃষ্টির জল এভাবেই ধরে রাখা হয়। কোনো প্রশ্ন?",
+            "hi": "तो, बारिश का पानी ऐसे ही जमा किया जाता है। कोई सवाल?"
+          }
+        },
+        {
+          "speaker": "Rahul",
+          "text": "Yes, I have a question. Could you explain how the water is cleaned?",
+          "translations": {
+            "bn": "হ্যাঁ, একটা প্রশ্ন আছে। জলটা কীভাবে পরিষ্কার হয়, একটু বুঝিয়ে বলবেন?",
+            "hi": "जी, मेरा एक सवाल है। क्या आप समझा सकती हैं कि पानी साफ़ कैसे होता है?"
+          }
+        },
+        {
+          "speaker": "Ms Iyer",
+          "text": "Good question. It passes through sand and stones, which act as a filter.",
+          "translations": {
+            "bn": "ভালো প্রশ্ন। জলটা বালি আর পাথরের মধ্যে দিয়ে যায়, ওগুলো ছাঁকনির কাজ করে।",
+            "hi": "अच्छा सवाल है। पानी रेत और पत्थरों से होकर गुज़रता है, जो छलनी का काम करते हैं।"
+          }
+        },
+        {
+          "speaker": "Rahul",
+          "text": "I see. So the sand catches the dirt, and clean water goes through?",
+          "translations": {
+            "bn": "বুঝলাম। তাহলে বালি ময়লা আটকে দেয়, আর পরিষ্কার জল বেরিয়ে যায়?",
+            "hi": "समझ गया। तो रेत गंदगी रोक लेती है, और साफ़ पानी निकल जाता है?"
+          }
+        },
+        {
+          "speaker": "Ms Iyer",
+          "text": "Exactly. Now, can you tell me what you’ve learned today?",
+          "translations": {
+            "bn": "একদম। এবার বলো তো, আজ কী শিখলে?",
+            "hi": "बिल्कुल। अब बताओ, आज तुमने क्या सीखा?"
+          }
+        },
+        {
+          "speaker": "Rahul",
+          "text": "I’ve learned that we can collect rain from roofs, store it in tanks and use it later.",
+          "translations": {
+            "bn": "শিখলাম যে ছাদ থেকে বৃষ্টির জল ধরে ট্যাংকে রেখে পরে ব্যবহার করা যায়।",
+            "hi": "मैंने सीखा कि हम छतों से बारिश का पानी इकट्ठा करके टंकियों में रख सकते हैं और बाद में इस्तेमाल कर सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Ms Iyer",
+          "text": "Very good. Next week, your group will present one way to save water.",
+          "translations": {
+            "bn": "খুব ভালো। পরের সপ্তাহে তোমাদের দল জল বাঁচানোর একটা উপায় নিয়ে বলবে।",
+            "hi": "बहुत अच्छे। अगले हफ़्ते तुम्हारा समूह पानी बचाने का एक तरीक़ा पेश करेगा।"
+          }
+        },
+        {
+          "speaker": "Rahul",
+          "text": "Our group has discussed it already. We think we should present drip irrigation.",
+          "translations": {
+            "bn": "আমাদের দল এটা নিয়ে আলোচনা করে ফেলেছে। আমরা ভাবছি ড্রিপ সেচ নিয়ে বলব।",
+            "hi": "हमारे समूह ने इस पर पहले ही चर्चा कर ली है। हमें लगता है कि हमें ड्रिप सिंचाई पेश करनी चाहिए।"
+          }
+        },
+        {
+          "speaker": "Ms Iyer",
+          "text": "Why drip irrigation?",
+          "translations": {
+            "bn": "ড্রিপ সেচ কেন?",
+            "hi": "ड्रिप सिंचाई क्यों?"
+          }
+        },
+        {
+          "speaker": "Rahul",
+          "text": "Because it gives water straight to the roots, so less water is wasted.",
+          "translations": {
+            "bn": "কারণ এতে জল সোজা শিকড়ে যায়, তাই কম জল নষ্ট হয়।",
+            "hi": "क्योंकि इसमें पानी सीधे जड़ों तक जाता है, इसलिए कम पानी बर्बाद होता है।"
+          }
+        },
+        {
+          "speaker": "Ms Iyer",
+          "text": "But some people say it’s too expensive for small farmers.",
+          "translations": {
+            "bn": "কিন্তু অনেকে বলেন ছোট চাষিদের পক্ষে এটা খুব দামি।",
+            "hi": "पर कुछ लोग कहते हैं कि यह छोटे किसानों के लिए बहुत महँगा है।"
+          }
+        },
+        {
+          "speaker": "Rahul",
+          "text": "That’s true. However, it saves money on water later, so it pays for itself.",
+          "translations": {
+            "bn": "ঠিক কথা। তবে পরে জলের খরচ বাঁচে, তাই খরচটা উঠে আসে।",
+            "hi": "यह सच है। फिर भी, बाद में पानी का ख़र्च बचता है, इसलिए इसकी क़ीमत वसूल हो जाती है।"
+          }
+        },
+        {
+          "speaker": "Ms Iyer",
+          "text": "Well argued. You explained your answer and defended it with a reason.",
+          "translations": {
+            "bn": "চমৎকার যুক্তি। উত্তরটা বুঝিয়ে বললে, আর কারণ দিয়ে সমর্থনও করলে।",
+            "hi": "बढ़िया तर्क। तुमने अपना जवाब समझाया और वजह देकर उसका बचाव भी किया।"
+          }
+        },
+        {
+          "speaker": "Rahul",
+          "text": "Thank you. I’ll make sure our presentation has clear examples too.",
+          "translations": {
+            "bn": "ধন্যবাদ। আমাদের উপস্থাপনায় স্পষ্ট উদাহরণও রাখব।",
+            "hi": "धन्यवाद। मैं ध्यान रखूँगा कि हमारी प्रस्तुति में साफ़ उदाहरण भी हों।"
+          }
+        }
+      ],
+      "voices": {
+        "Ms Iyer": "female",
+        "Rahul": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "topic",
+          "phonetic": "/ˈtɒpɪk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বিষয়",
+            "hi": "विषय"
+          },
+          "syllables": ["top", "ic"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “Today’s topic was …”"],
+            "en": ["Say the first part stronger.", "Say: “Today’s topic was …”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “Today’s topic was …”"]
+          }
+        },
+        {
+          "word": "concept",
+          "phonetic": "/ˈkɒnsept/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ধারণা",
+            "hi": "अवधारणा"
+          },
+          "syllables": ["con", "cept"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "পড়াশোনার কোনো ভাবনাকে concept বলে।"],
+            "en": ["Say the first part stronger.", "A concept is an idea you study."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "पढ़ाई का कोई विचार concept कहलाता है।"]
+          }
+        },
+        {
+          "word": "understand",
+          "phonetic": "/ˌʌndəˈstænd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বোঝা",
+            "hi": "समझना"
+          },
+          "syllables": ["un", "der", "stand"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“stand” জোর দিয়ে বলুন।", "বলুন: “Now I understand how …”"],
+            "en": ["Say “stand” stronger.", "Say: “Now I understand how …”"],
+            "hi": ["“stand” ज़ोर से बोलें।", "कहें: “Now I understand how …”"]
+          }
+        },
+        {
+          "word": "learned",
+          "phonetic": "/lɜːnd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "শিখেছি",
+            "hi": "सीखा"
+          },
+          "syllables": ["learned"],
+          "stress": null,
+          "tips": {
+            "bn": ["একটাই অংশ: “-ed”-এর উচ্চারণ নরম “ড”।", "বলুন: “I’ve learned that …”"],
+            "en": ["It is one part: the “-ed” is a soft “d”.", "Say: “I’ve learned that …”"],
+            "hi": [
+              "यह एक ही हिस्सा है: “-ed” की आवाज़ हल्का “ड” है।",
+              "कहें: “I’ve learned that …”"
+            ]
+          }
+        },
+        {
+          "word": "realise",
+          "phonetic": "/ˈrɪəlaɪz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "উপলব্ধি করা",
+            "hi": "एहसास होना"
+          },
+          "syllables": ["re", "al", "ise"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "হঠাৎ কিছু বুঝলে বলুন “I realised that …”।"],
+            "en": [
+              "Say the first part stronger.",
+              "“I realised that …” is for something you suddenly understood."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "अचानक कुछ समझ आए, तो कहें “I realised that …”।"]
+          }
+        },
+        {
+          "word": "important",
+          "phonetic": "/ɪmˈpɔːtnt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "গুরুত্বপূর্ণ",
+            "hi": "अहम, ज़रूरी"
+          },
+          "syllables": ["im", "por", "tant"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন।",
+              "বলুন: “The most important thing I learned is …”"
+            ],
+            "en": [
+              "Say the second part stronger.",
+              "Say: “The most important thing I learned is …”"
+            ],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें: “The most important thing I learned is …”"]
+          }
+        },
+        {
+          "word": "conclusion",
+          "phonetic": "/kənˈkluːʒn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সিদ্ধান্ত, উপসংহার",
+            "hi": "निष्कर्ष"
+          },
+          "syllables": ["con", "clu", "sion"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন: “My conclusion is that …”"],
+            "en": ["Say the second part stronger.", "Say: “My conclusion is that …”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें: “My conclusion is that …”"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I agree with Priya, and I’d like to add something.",
+          "alsoAccepted": ["I agree with Priya, and I would like to add something."],
+          "translations": {
+            "bn": "আমি প্রিয়ার সঙ্গে একমত, আর একটা কথা যোগ করতে চাই।",
+            "hi": "प्रिया की बात से मैं सहमत हूँ, और मुझे कुछ जोड़ना है।"
+          },
+          "tips": {
+            "bn": ["যাঁর সঙ্গে একমত, তাঁর নাম বলুন।", "তারপর নিজের কথা যোগ করুন।"],
+            "en": ["Name the person you agree with.", "Then add your own point."],
+            "hi": ["जिससे सहमत हैं, उसका नाम लें।", "फिर अपनी बात जोड़ें।"]
+          }
+        },
+        {
+          "english": "Sorry, can I say something here?",
+          "alsoAccepted": [
+            "Sorry, could I say something here?",
+            "Excuse me, can I say something here?"
+          ],
+          "translations": {
+            "bn": "মাফ করবেন, এখানে একটা কথা বলতে পারি?",
+            "hi": "माफ़ कीजिए, क्या मैं यहाँ कुछ कहूँ?"
+          },
+          "tips": {
+            "bn": ["ভদ্রভাবে আলোচনায় যোগ দিতে এটা বলুন।", "আগে একটা ছোট বিরতির অপেক্ষা করুন।"],
+            "en": ["Use this to join a discussion politely.", "Wait for a short pause first."],
+            "hi": [
+              "चर्चा में विनम्रता से शामिल होने के लिए यह कहें।",
+              "पहले थोड़ा रुकने का इंतज़ार करें।"
+            ]
+          }
+        },
+        {
+          "english": "I see your point, but I have a different idea.",
+          "alsoAccepted": ["I see your point, but I have another idea."],
+          "translations": {
+            "bn": "আপনার কথা বুঝলাম, কিন্তু আমার ভাবনাটা একটু অন্য।",
+            "hi": "आपकी बात समझ आई, पर मेरा विचार अलग है।"
+          },
+          "tips": {
+            "bn": ["দ্বিমত করার আগে সম্মান দেখান।", "“but” দিয়ে নিজের ভাবনা আনুন।"],
+            "en": ["Show respect before you disagree.", "“but” brings in your idea."],
+            "hi": ["असहमति से पहले सम्मान दिखाएँ।", "“but” से अपना विचार रखें।"]
+          }
+        },
+        {
+          "english": "What do you think, Sana?",
+          "alsoAccepted": ["Sana, what do you think?"],
+          "translations": {
+            "bn": "সানা, তোমার কী মনে হয়?",
+            "hi": "सना, तुम्हें क्या लगता है?"
+          },
+          "tips": {
+            "bn": ["চুপচাপ কাউকে বলার সুযোগ দিন।", "তাঁর নাম ধরে ডাকুন।"],
+            "en": ["Invite a quiet person to speak.", "Use their name."],
+            "hi": ["किसी चुप बैठे व्यक्ति को बोलने का मौक़ा दें।", "उनका नाम लेकर पूछें।"]
+          }
+        },
+        {
+          "english": "So, do we all agree on the first idea?",
+          "alsoAccepted": [
+            "So, do we all agree with the first idea?",
+            "So do we all agree on the first idea?"
+          ],
+          "translations": {
+            "bn": "তাহলে প্রথম ভাবনাটায় আমরা সবাই একমত তো?",
+            "hi": "तो, क्या हम सब पहले विचार पर सहमत हैं?"
+          },
+          "tips": {
+            "bn": ["দল কী ঠিক করল, মিলিয়ে নিন।", "এতে আলোচনা এগোয়।"],
+            "en": ["Check what the group has decided.", "It helps the discussion move on."],
+            "hi": ["देखें कि समूह ने क्या तय किया।", "इससे चर्चा आगे बढ़ती है।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the professor",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "You may begin your presentation.",
+          "reply": "Good morning. Today I’ll talk about plastic pollution in our rivers.",
+          "cues": {
+            "bn": "শুভেচ্ছা জানিয়ে বিষয়টা বলুন।",
+            "hi": "अभिवादन करें और विषय बताएँ।"
+          }
+        },
+        {
+          "partner": "Please go on.",
+          "reply": "My presentation has three parts: the problem, the causes and some solutions.",
+          "cues": {
+            "bn": "তিনটে অংশের কথা বলুন।",
+            "hi": "तीन हिस्सों के बारे में बताएँ।"
+          }
+        },
+        {
+          "partner": "What is the main problem?",
+          "reply": "Every year, tonnes of plastic enter rivers. It harms fish and makes the water unsafe.",
+          "cues": {
+            "bn": "একটা তথ্য দিয়ে মূল সমস্যাটা বলুন।",
+            "hi": "एक तथ्य के साथ मुख्य समस्या बताएँ।"
+          }
+        },
+        {
+          "partner": "And what causes it?",
+          "reply": "Mainly, people throw away plastic bags and bottles instead of recycling them.",
+          "cues": {
+            "bn": "কারণ বলুন।",
+            "hi": "वजह बताएँ।"
+          }
+        },
+        {
+          "partner": "What do you suggest?",
+          "reply": "First, we can use cloth bags. Second, towns need more recycling bins.",
+          "cues": {
+            "bn": "দুটো সমাধান বলুন।",
+            "hi": "दो हल बताएँ।"
+          }
+        },
+        {
+          "partner": "Thank you. How would you conclude?",
+          "reply": "To conclude, small changes by everyone can make our rivers clean again. Thank you.",
+          "cues": {
+            "bn": "উপসংহার টেনে ধন্যবাদ দিন।",
+            "hi": "निष्कर्ष दें और धन्यवाद कहें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Explain and Defend Your Answer",
+        "translations": {
+          "bn": "উত্তর বুঝিয়ে বলুন, যুক্তি দিন",
+          "hi": "जवाब समझाएँ, उसका बचाव करें"
+        }
+      },
+      "instruction": {
+        "text": "Answer the question “Should students have homework?” Explain your answer and defend it.",
+        "translations": {
+          "bn": "এই প্রশ্নের উত্তর দিন: “Should students have homework?” উত্তরটা বুঝিয়ে বলুন আর যুক্তি দিয়ে সমর্থন করুন।",
+          "hi": "इस सवाल का जवाब दें: “Should students have homework?” अपना जवाब समझाएँ और उसका बचाव करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Give your answer in one clear sentence",
+          "translations": {
+            "bn": "এক স্পষ্ট বাক্যে উত্তর দিন",
+            "hi": "एक साफ़ वाक्य में जवाब दें"
+          }
+        },
+        {
+          "text": "Explain two reasons with “because”",
+          "translations": {
+            "bn": "“because” দিয়ে দুটো কারণ বুঝিয়ে বলুন",
+            "hi": "“because” से दो वजहें समझाएँ"
+          }
+        },
+        {
+          "text": "Give an example from your own life",
+          "translations": {
+            "bn": "নিজের জীবন থেকে একটা উদাহরণ দিন",
+            "hi": "अपनी ज़िंदगी से एक उदाहरण दें"
+          }
+        },
+        {
+          "text": "Say what others might disagree with, and answer it",
+          "translations": {
+            "bn": "অন্যরা কোথায় দ্বিমত করতে পারেন বলে তার উত্তর দিন",
+            "hi": "बताएँ कि दूसरे किस बात पर असहमत हो सकते हैं, और उसका जवाब दें"
+          }
+        },
+        {
+          "text": "Finish by repeating your answer",
+          "translations": {
+            "bn": "উত্তরটা আবার বলে শেষ করুন",
+            "hi": "अपना जवाब दोहराकर ख़त्म करें"
+          }
+        }
+      ],
+      "phrases": [
+        "In my opinion, …",
+        "The main reason is that …",
+        "For example, …",
+        "Some people say …, but …",
+        "That’s why I believe …",
+        "So, my answer is …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which is a good question to ask in class?",
+            "translations": {
+              "bn": "ক্লাসে জিজ্ঞেস করার মতো ভালো প্রশ্ন কোনটি?",
+              "hi": "क्लास में पूछने लायक़ अच्छा सवाल कौन-सा है?"
+            }
+          },
+          "answer": "Could you explain that part again, please?",
+          "others": ["What’s for lunch?", "Can I go home?"]
+        },
+        {
+          "question": {
+            "text": "How do you add to what someone said?",
+            "translations": {
+              "bn": "কারও কথার সঙ্গে কীভাবে যোগ করবেন?",
+              "hi": "किसी की बात में अपनी बात कैसे जोड़ें?"
+            }
+          },
+          "answer": "I agree, and I’d like to add that …",
+          "others": ["No. Next.", "Whatever."]
+        },
+        {
+          "question": {
+            "text": "Which sentence disagrees politely?",
+            "translations": {
+              "bn": "কোন বাক্যে ভদ্রভাবে দ্বিমত করা হয়েছে?",
+              "hi": "कौन-सा वाक्य विनम्रता से असहमति जताता है?"
+            }
+          },
+          "answer": "I see your point, but I think differently.",
+          "others": ["You’re wrong.", "That’s a silly idea."]
+        },
+        {
+          "question": {
+            "text": "Which phrase ends a presentation?",
+            "translations": {
+              "bn": "কোন কথা দিয়ে উপস্থাপনা শেষ হয়?",
+              "hi": "प्रस्तुति किस वाक्यांश से ख़त्म होती है?"
+            }
+          },
+          "answer": "To conclude, …",
+          "others": ["To begin with, …", "First of all, …"]
+        },
+        {
+          "question": {
+            "text": "Which sentence defends an answer?",
+            "translations": {
+              "bn": "কোন বাক্যে উত্তরের পক্ষে যুক্তি আছে?",
+              "hi": "कौन-सा वाक्य जवाब का बचाव करता है?"
+            }
+          },
+          "answer": "I think so because the results show it.",
+          "others": ["I just think so.", "Because I said so."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Sana",
+          "text": "OK, let’s decide. What should our class do for Environment Day?",
+          "translations": {
+            "bn": "চলো, ঠিক করি। পরিবেশ দিবসে আমাদের ক্লাস কী করবে?",
+            "hi": "चलो, तय करते हैं। पर्यावरण दिवस पर हमारी क्लास क्या करे?"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "I think we should plant trees around the school.",
+          "translations": {
+            "bn": "আমার মনে হয় স্কুলের চারপাশে গাছ লাগানো উচিত।",
+            "hi": "मुझे लगता है कि हमें स्कूल के चारों ओर पेड़ लगाने चाहिए।"
+          }
+        },
+        {
+          "speaker": "Sana",
+          "text": "That’s a good idea. I’d like to add something: we could also clean the park.",
+          "translations": {
+            "bn": "ভালো ভাবনা। একটা কথা যোগ করি: পার্কটাও পরিষ্কার করতে পারি।",
+            "hi": "अच्छा विचार है। मैं कुछ जोड़ना चाहती हूँ: हम पार्क की सफ़ाई भी कर सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "Hmm, I see your point, but can we do both in one day?",
+          "translations": {
+            "bn": "হুম, কথাটা বুঝলাম, কিন্তু এক দিনে দুটোই হবে?",
+            "hi": "हम्म, तुम्हारी बात समझ आई, पर क्या एक दिन में दोनों हो पाएँगे?"
+          }
+        },
+        {
+          "speaker": "Sana",
+          "text": "Maybe not. So which one is more useful?",
+          "translations": {
+            "bn": "হয়তো না। তাহলে কোনটা বেশি কাজের?",
+            "hi": "शायद नहीं। तो कौन-सा ज़्यादा काम का है?"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "Trees, because they help for many years. Cleaning only helps for a few weeks.",
+          "translations": {
+            "bn": "গাছ, কারণ বহু বছর কাজে লাগে। পরিষ্কার করলে কয়েক সপ্তাহ।",
+            "hi": "पेड़, क्योंकि वे कई साल काम आते हैं। सफ़ाई बस कुछ हफ़्ते काम आती है।"
+          }
+        },
+        {
+          "speaker": "Sana",
+          "text": "That’s true. However, the park is very dirty right now.",
+          "translations": {
+            "bn": "ঠিক। তবে পার্কটা এখন খুব নোংরা।",
+            "hi": "सच है। फिर भी, पार्क अभी बहुत गंदा है।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "OK, what if we plant trees in the park after we clean it?",
+          "translations": {
+            "bn": "আচ্ছা, পার্কটা পরিষ্কার করে তারপর ওখানেই গাছ লাগালে?",
+            "hi": "ठीक है, अगर हम पार्क साफ़ करके फिर वहीं पेड़ लगाएँ तो?"
+          }
+        },
+        {
+          "speaker": "Sana",
+          "text": "Great! So we all agree: clean the park first, then plant trees there.",
+          "translations": {
+            "bn": "দারুণ! তাহলে আমরা সবাই একমত: আগে পার্ক পরিষ্কার, তারপর সেখানে গাছ।",
+            "hi": "बढ़िया! तो हम सब सहमत हैं: पहले पार्क की सफ़ाई, फिर वहाँ पेड़।"
+          }
+        },
+        {
+          "speaker": "Karan",
+          "text": "Agreed. Let’s tell the teacher.",
+          "translations": {
+            "bn": "একমত। চলো, টিচারকে জানাই।",
+            "hi": "सहमत। चलो, टीचर को बताते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Sana": "female",
+        "Karan": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the teacher",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "That’s all for today. Does anyone have a question?",
+          "reply": "Yes, please. Could you explain the last example again?",
+          "cues": {
+            "bn": "ভদ্রভাবে আবার বোঝাতে বলুন।",
+            "hi": "विनम्रता से फिर से समझाने को कहें।"
+          }
+        },
+        {
+          "partner": "Of course. Which part was difficult?",
+          "reply": "I didn’t understand why the answer is twenty, not fifteen.",
+          "cues": {
+            "bn": "কোন অংশটা বোঝেননি বলুন।",
+            "hi": "बताएँ कि कौन-सा हिस्सा समझ नहीं आया।"
+          }
+        },
+        {
+          "partner": "Because we add the five from the first step. Is that clear now?",
+          "reply": "Yes, now I understand. Can I ask one more question?",
+          "cues": {
+            "bn": "বুঝেছেন বলে আরেকটা প্রশ্নের অনুমতি চান।",
+            "hi": "बताएँ कि समझ आ गया, और एक और सवाल की इजाज़त माँगें।"
+          }
+        },
+        {
+          "partner": "Sure, go ahead.",
+          "reply": "Will this topic be in the test next week?",
+          "cues": {
+            "bn": "পরীক্ষার কথা জিজ্ঞেস করুন।",
+            "hi": "टेस्ट के बारे में पूछें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A study group",
+            "translations": {
+              "bn": "পড়ার দল",
+              "hi": "पढ़ाई का समूह"
+            }
+          },
+          "roleplay": {
+            "partner": "Nikhil",
+            "asWoman": "Nikita",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Shall we start? Today’s topic is the water cycle.",
+                "reply": "Sure. Can I start by explaining what I learned in class?",
+                "cues": {
+                  "bn": "ক্লাসে যা শিখেছেন, তা দিয়ে শুরু করার প্রস্তাব দিন।",
+                  "hi": "क्लास में जो सीखा, उससे शुरू करने का सुझाव दें।"
+                }
+              },
+              {
+                "partner": "Go ahead.",
+                "reply": "The sun heats water, it becomes vapour, and then it falls as rain.",
+                "cues": {
+                  "bn": "সহজ কথায় ধাপগুলো বলুন।",
+                  "hi": "आसान शब्दों में चरण बताएँ।"
+                }
+              },
+              {
+                "partner": "I think clouds come first, before the water heats up.",
+                "reply": "I see your point, but water has to become vapour before clouds can form.",
+                "cues": {
+                  "bn": "ভদ্রভাবে দ্বিমত করে কারণ দিন।",
+                  "hi": "विनम्रता से असहमति जताएँ और वजह दें।"
+                }
+              },
+              {
+                "partner": "Oh, you’re right. Thanks for explaining!",
+                "reply": "No problem. Shall we make a diagram together?",
+                "cues": {
+                  "bn": "একসঙ্গে কিছু করার প্রস্তাব দিন।",
+                  "hi": "साथ मिलकर कुछ करने का सुझाव दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "An online course",
+            "translations": {
+              "bn": "অনলাইন কোর্স",
+              "hi": "ऑनलाइन कोर्स"
+            }
+          },
+          "roleplay": {
+            "partner": "the tutor",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Welcome back. What did you learn from last week’s video?",
+                "reply": "I learned how to write a good email to a company.",
+                "cues": {
+                  "bn": "কী শিখেছেন বলুন।",
+                  "hi": "बताएँ कि क्या सीखा।"
+                }
+              },
+              {
+                "partner": "Great. What’s the most important thing to remember?",
+                "reply": "The most important thing is to keep it short and clear.",
+                "cues": {
+                  "bn": "সবচেয়ে জরুরি বিষয়টা বলুন।",
+                  "hi": "सबसे ज़रूरी बात बताएँ।"
+                }
+              },
+              {
+                "partner": "Do you have any questions?",
+                "reply": "Yes. How do I end an email politely?",
+                "cues": {
+                  "bn": "একটা প্রশ্ন করুন।",
+                  "hi": "एक सवाल पूछें।"
+                }
+              },
+              {
+                "partner": "You can write “Best regards” and your name.",
+                "reply": "Thank you, that’s very helpful.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "An oral exam",
+            "translations": {
+              "bn": "মৌখিক পরীক্ষা",
+              "hi": "मौखिक परीक्षा"
+            }
+          },
+          "roleplay": {
+            "partner": "the examiner",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Question one: is it better to live in a city or a village?",
+                "reply": "In my opinion, it’s better to live in a village.",
+                "cues": {
+                  "bn": "নিজের মত বলুন।",
+                  "hi": "अपनी राय बताएँ।"
+                }
+              },
+              {
+                "partner": "Why do you think so?",
+                "reply": "Because the air is cleaner, and life is less stressful.",
+                "cues": {
+                  "bn": "কারণ বলুন।",
+                  "hi": "वजह बताएँ।"
+                }
+              },
+              {
+                "partner": "But cities have better jobs and hospitals.",
+                "reply": "That’s true. However, many villages now have good roads and the internet.",
+                "cues": {
+                  "bn": "মেনে নিয়ে নিজের মতের পক্ষে বলুন।",
+                  "hi": "बात मानें और अपनी राय का बचाव करें।"
+                }
+              },
+              {
+                "partner": "So what is your final answer?",
+                "reply": "So my answer is still a village, because health matters most.",
+                "cues": {
+                  "bn": "উত্তরটা আবার বলুন।",
+                  "hi": "अपना जवाब दोहराएँ।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

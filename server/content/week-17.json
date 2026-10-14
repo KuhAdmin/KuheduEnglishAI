@@ -1,0 +1,768 @@
+{
+  "week": 17,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Neha",
+          "text": "Excuse me! Can you help me, please?",
+          "translations": {
+            "bn": "মাফ করবেন! আমাকে একটু সাহায্য করতে পারবেন?",
+            "hi": "माफ़ कीजिए! क्या आप मेरी मदद कर सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Ramesh",
+          "text": "Of course. What do you need?",
+          "translations": {
+            "bn": "নিশ্চয়ই। কী দরকার?",
+            "hi": "ज़रूर। आपको क्या चाहिए?"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "Could you tell me where the ticket office is?",
+          "translations": {
+            "bn": "টিকিট কাউন্টারটা কোথায়, বলতে পারবেন?",
+            "hi": "क्या आप बता सकते हैं कि टिकट घर कहाँ है?"
+          }
+        },
+        {
+          "speaker": "Ramesh",
+          "text": "Go straight, then take the stairs down. It’s on your left.",
+          "translations": {
+            "bn": "সোজা যান, তারপর সিঁড়ি দিয়ে নিচে নামুন। বাঁ দিকে পাবেন।",
+            "hi": "सीधे जाइए, फिर सीढ़ियों से नीचे उतरिए। वह आपके बाईं ओर है।"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "Sorry, could you say that again, please? More slowly?",
+          "translations": {
+            "bn": "দুঃখিত, আরেকবার বলবেন? একটু আস্তে?",
+            "hi": "माफ़ कीजिए, क्या आप फिर से बताएँगे? थोड़ा धीरे?"
+          }
+        },
+        {
+          "speaker": "Ramesh",
+          "text": "Sure. Go straight. Take the stairs down. Then turn left.",
+          "translations": {
+            "bn": "নিশ্চয়ই। সোজা যান। সিঁড়ি দিয়ে নিচে নামুন। তারপর বাঁ দিকে ঘুরুন।",
+            "hi": "ज़रूर। सीधे जाइए। सीढ़ियों से नीचे उतरिए। फिर बाएँ मुड़िए।"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "So I go straight, down the stairs and left. Is that right?",
+          "translations": {
+            "bn": "তাহলে সোজা, সিঁড়ি দিয়ে নিচে, তারপর বাঁয়ে। ঠিক তো?",
+            "hi": "तो मैं सीधे जाऊँ, सीढ़ियों से नीचे और फिर बाएँ। ठीक है न?"
+          }
+        },
+        {
+          "speaker": "Ramesh",
+          "text": "Exactly. What time is your train?",
+          "translations": {
+            "bn": "একদম। আপনার ট্রেন কটায়?",
+            "hi": "बिल्कुल। आपकी ट्रेन कितने बजे है?"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "At ten. What does “platform change” mean on the board?",
+          "translations": {
+            "bn": "দশটায়। বোর্ডে “platform change” মানে কী?",
+            "hi": "दस बजे। बोर्ड पर “platform change” का क्या मतलब है?"
+          }
+        },
+        {
+          "speaker": "Ramesh",
+          "text": "It means your train will leave from a different platform. Check the screen.",
+          "translations": {
+            "bn": "মানে আপনার ট্রেন অন্য প্ল্যাটফর্ম থেকে ছাড়বে। স্ক্রিনটা দেখে নিন।",
+            "hi": "इसका मतलब है आपकी ट्रेन किसी दूसरे प्लेटफ़ॉर्म से जाएगी। स्क्रीन देख लीजिए।"
+          }
+        },
+        {
+          "speaker": "Neha",
+          "text": "I see. Thank you so much for your help!",
+          "translations": {
+            "bn": "বুঝেছি। সাহায্যের জন্য অনেক ধন্যবাদ!",
+            "hi": "समझ गई। मदद के लिए बहुत-बहुत धन्यवाद!"
+          }
+        },
+        {
+          "speaker": "Ramesh",
+          "text": "You’re welcome. Have a good journey!",
+          "translations": {
+            "bn": "স্বাগত। যাত্রা শুভ হোক!",
+            "hi": "कोई बात नहीं। आपकी यात्रा शुभ हो!"
+          }
+        }
+      ],
+      "voices": {
+        "Neha": "female",
+        "Ramesh": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "excuse me",
+          "phonetic": "/ɪkˈskjuːz miː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মাফ করবেন",
+            "hi": "माफ़ कीजिए"
+          },
+          "syllables": ["ex", "cuse", "me"],
+          "stress": 2,
+          "tips": {
+            "bn": ["মাঝের অংশটি জোর দিয়ে বলুন: “কিউজ”।", "কারও মনোযোগ ভদ্রভাবে পেতে এটি বলুন।"],
+            "en": [
+              "Say the middle part stronger: “kyooz”.",
+              "Say it to get someone’s attention politely."
+            ],
+            "hi": [
+              "बीच का हिस्सा ज़ोर से बोलें: “क्यूज़”।",
+              "किसी का ध्यान विनम्रता से खींचने के लिए यह कहें।"
+            ]
+          }
+        },
+        {
+          "word": "could",
+          "phonetic": "/kʊd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "পারবেন কি (ভদ্র প্রশ্নে)",
+            "hi": "सकना (विनम्र सवाल में)"
+          },
+          "syllables": ["cou(l)d"],
+          "stress": null,
+          "tips": {
+            "bn": ["“l” উচ্চারিত হয় না।", "“Could you …?” “Can you …?”-এর চেয়ে বেশি ভদ্র।"],
+            "en": ["The “l” is not said.", "“Could you …?” is more polite than “Can you …?”."],
+            "hi": ["“l” नहीं बोला जाता।", "“Could you …?” “Can you …?” से ज़्यादा विनम्र है।"]
+          }
+        },
+        {
+          "word": "information",
+          "phonetic": "/ˌɪnfəˈmeɪʃn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "তথ্য",
+            "hi": "जानकारी"
+          },
+          "syllables": ["in", "for", "ma", "tion"],
+          "stress": 3,
+          "tips": {
+            "bn": ["তৃতীয় অংশটি জোর দিয়ে বলুন: “মেই”।", "“tion”-এর উচ্চারণ “শন”-এর মতো।"],
+            "en": ["Say the third part stronger: “MAY”.", "“tion” sounds like “shun”."],
+            "hi": ["तीसरा हिस्सा ज़ोर से बोलें: “मे”।", "“tion” की आवाज़ “शन” जैसी है।"]
+          }
+        },
+        {
+          "word": "nearest",
+          "phonetic": "/ˈnɪərɪst/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সবচেয়ে কাছের",
+            "hi": "सबसे नज़दीकी"
+          },
+          "syllables": ["near", "est"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“the nearest bank” মানে সবচেয়ে কাছের ব্যাংক।"],
+            "en": [
+              "Say the first part stronger.",
+              "“the nearest bank” is the bank closest to you."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“the nearest bank” मतलब सबसे पास का बैंक।"]
+          }
+        },
+        {
+          "word": "timetable",
+          "phonetic": "/ˈtaɪmteɪbl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সময়সূচি",
+            "hi": "समय-सारणी"
+          },
+          "syllables": ["time", "ta", "ble"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "শেষ অংশটি ছোট: “বল”।"],
+            "en": ["Say the first part stronger.", "The last part is short: “bl”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "आख़िरी हिस्सा छोटा है: “बल”।"]
+          }
+        },
+        {
+          "word": "open",
+          "phonetic": "/ˈəʊpən/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "খোলা",
+            "hi": "खुला"
+          },
+          "syllables": ["o", "pen"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “ওউ”।", "জিজ্ঞেস করুন: “What time does it open?”"],
+            "en": ["Say the first part stronger: “OH”.", "Ask: “What time does it open?”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “ओ”।", "पूछें: “What time does it open?”"]
+          }
+        },
+        {
+          "word": "available",
+          "phonetic": "/əˈveɪləbl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "পাওয়া যায়, খালি",
+            "hi": "उपलब्ध"
+          },
+          "syllables": ["a", "vai", "la", "ble"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন: “ভেই”।", "প্রথম অংশটি ছোট আর দুর্বল “অ্যা”।"],
+            "en": ["Say the second part stronger: “VAY”.", "The first part is a short, weak “uh”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें: “वे”।", "पहला हिस्सा छोटा और हल्का “अ” है।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Sorry, could you repeat that, please?",
+          "alsoAccepted": [
+            "Sorry, can you repeat that, please?",
+            "Sorry, could you say that again, please?"
+          ],
+          "translations": {
+            "bn": "দুঃখিত, আরেকবার বলবেন?",
+            "hi": "माफ़ कीजिए, क्या आप वह फिर से कह सकते हैं?"
+          },
+          "tips": {
+            "bn": ["ভদ্রতার জন্য “Sorry” দিয়ে শুরু করুন।", "“that” মানে এইমাত্র যা বললেন।"],
+            "en": ["Start with “Sorry” to be polite.", "“that” means what they just said."],
+            "hi": [
+              "विनम्रता के लिए “Sorry” से शुरू करें।",
+              "“that” का मतलब है जो उन्होंने अभी कहा।"
+            ]
+          }
+        },
+        {
+          "english": "Could you speak a little more slowly?",
+          "alsoAccepted": [
+            "Can you speak a little more slowly?",
+            "Could you speak a bit more slowly?"
+          ],
+          "translations": {
+            "bn": "একটু আস্তে বলবেন?",
+            "hi": "क्या आप थोड़ा और धीरे बोल सकते हैं?"
+          },
+          "tips": {
+            "bn": ["“more slowly” মানে আরও আস্তে।", "“a little” কথাটাকে নরম করে।"],
+            "en": ["“more slowly” means at a lower speed.", "“a little” makes it softer."],
+            "hi": ["“more slowly” मतलब और धीरे।", "“a little” बात को नरम बनाता है।"]
+          }
+        },
+        {
+          "english": "What does this word mean?",
+          "alsoAccepted": ["What is the meaning of this word?"],
+          "translations": {
+            "bn": "এই শব্দটার মানে কী?",
+            "hi": "इस शब्द का क्या मतलब है?"
+          },
+          "tips": {
+            "bn": ["প্রশ্ন করার সময় শব্দটি দেখান।", "ক্রিয়াটি “mean”: “What does it mean?”"],
+            "en": ["Point to the word as you ask.", "The verb is “mean”: “What does it mean?”"],
+            "hi": ["पूछते समय शब्द की ओर इशारा करें।", "क्रिया “mean” है: “What does it mean?”"]
+          }
+        },
+        {
+          "english": "I’m sorry, I didn’t understand.",
+          "alsoAccepted": ["Sorry, I didn’t understand."],
+          "translations": {
+            "bn": "দুঃখিত, আমি বুঝতে পারিনি।",
+            "hi": "माफ़ कीजिए, मुझे समझ नहीं आया।"
+          },
+          "tips": {
+            "bn": ["এ কথা বলায় দোষ নেই: লোকে সাহায্য করবে।", "“didn’t” মানে “did not”।"],
+            "en": ["It is fine to say this: people will help.", "“didn’t” is “did not”."],
+            "hi": ["यह कहने में कोई बुराई नहीं: लोग मदद करेंगे।", "“didn’t” मतलब “did not”।"]
+          }
+        },
+        {
+          "english": "Could you show me on the map?",
+          "alsoAccepted": ["Can you show me on the map?"],
+          "translations": {
+            "bn": "ম্যাপে দেখিয়ে দেবেন?",
+            "hi": "क्या आप मुझे नक्शे पर दिखा सकते हैं?"
+          },
+          "tips": {
+            "bn": ["“show me” মানে দেখিয়ে দিন।", "“on the map” বলুন, “in the map” নয়।"],
+            "en": ["“show me” asks them to point.", "Say “on the map”, not “in the map”."],
+            "hi": ["“show me” का मतलब है दिखाइए।", "“on the map” कहें, “in the map” नहीं।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the receptionist",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Good morning. How can I help you?",
+          "reply": "I’m looking for Dr Sen’s room.",
+          "cues": {
+            "bn": "বলুন আপনি ডাক্তার সেনের ঘর খুঁজছেন।",
+            "hi": "डॉक्टर सेन के कमरे के बारे में पूछें।"
+          }
+        },
+        {
+          "partner": "Take the lift to the third floor. Then turn right.",
+          "reply": "The third floor, then right. OK.",
+          "cues": {
+            "bn": "নির্দেশটা আবার বলে নিশ্চিত হন।",
+            "hi": "निर्देश दोहराकर पक्का करें।"
+          }
+        },
+        {
+          "partner": "Room 305 is at the end of the corridor.",
+          "reply": "Sorry, what does “corridor” mean?",
+          "cues": {
+            "bn": "“corridor” শব্দের মানে জিজ্ঞেস করুন।",
+            "hi": "“corridor” शब्द का मतलब पूछें।"
+          }
+        },
+        {
+          "partner": "It is the long passage between the rooms.",
+          "reply": "I see. Thank you.",
+          "cues": {
+            "bn": "বলুন বুঝেছেন, আর ধন্যবাদ দিন।",
+            "hi": "कहें कि बात समझ आ गई, और धन्यवाद दें।"
+          }
+        },
+        {
+          "partner": "Also, please fill in this form first.",
+          "reply": "Should I write my phone number here?",
+          "cues": {
+            "bn": "জিজ্ঞেস করুন ফোন নম্বর এখানে লিখতে হবে কি না।",
+            "hi": "पूछें कि क्या फ़ोन नंबर यहाँ लिखना है।"
+          }
+        },
+        {
+          "partner": "Yes, and sign at the bottom.",
+          "reply": "OK. I’ll sign here.",
+          "cues": {
+            "bn": "বলুন আপনি নিচে সই করবেন।",
+            "hi": "कहें कि आप नीचे हस्ताक्षर करेंगे।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "I Need Some Help!",
+        "translations": {
+          "bn": "আমার একটু সাহায্য দরকার!",
+          "hi": "मुझे थोड़ी मदद चाहिए!"
+        }
+      },
+      "instruction": {
+        "text": "You are lost in a new town. Ask someone for help to find a place. Speak for about one minute.",
+        "translations": {
+          "bn": "নতুন শহরে পথ খুঁজে পাচ্ছেন না। একটা জায়গা খুঁজতে কারও সাহায্য চান। প্রায় এক মিনিট বলুন।",
+          "hi": "नए शहर में आपको रास्ता नहीं मिल रहा। कोई जगह ढूँढ़ने के लिए किसी से मदद माँगें। लगभग एक मिनट बोलें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Get the person’s attention politely",
+          "translations": {
+            "bn": "ভদ্রভাবে তাঁর মনোযোগ নিন",
+            "hi": "विनम्रता से उनका ध्यान खींचें"
+          }
+        },
+        {
+          "text": "Say what you need help with",
+          "translations": {
+            "bn": "কী নিয়ে সাহায্য চান, বলুন",
+            "hi": "बताएँ कि आपको किस बात में मदद चाहिए"
+          }
+        },
+        {
+          "text": "Ask one polite question for information",
+          "translations": {
+            "bn": "তথ্যের জন্য একটা ভদ্র প্রশ্ন করুন",
+            "hi": "जानकारी के लिए एक विनम्र सवाल पूछें"
+          }
+        },
+        {
+          "text": "Ask them to repeat or explain one thing",
+          "translations": {
+            "bn": "একটা কথা আবার বলতে বা বুঝিয়ে দিতে বলুন",
+            "hi": "किसी एक बात को दोहराने या समझाने को कहें"
+          }
+        },
+        {
+          "text": "Repeat the directions to check, then say thank you",
+          "translations": {
+            "bn": "নিশ্চিত হতে পথটা আবার বলুন, তারপর ধন্যবাদ দিন",
+            "hi": "पक्का करने के लिए रास्ता दोहराएँ, फिर धन्यवाद दें"
+          }
+        }
+      ],
+      "phrases": [
+        "Excuse me, can you help me?",
+        "I’m looking for …",
+        "Could you tell me where … is?",
+        "Sorry, could you say that again?",
+        "So I go … and then …?",
+        "Thank you so much for your help."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which is the most polite way to ask?",
+            "translations": {
+              "bn": "জিজ্ঞেস করার সবচেয়ে ভদ্র উপায় কোনটি?",
+              "hi": "पूछने का सबसे विनम्र तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "Could you tell me where the bank is?",
+          "others": ["Where is the bank?", "Tell me the bank."]
+        },
+        {
+          "question": {
+            "text": "You did not hear what someone said. What do you say?",
+            "translations": {
+              "bn": "কারও কথা শুনতে পাননি। কী বলবেন?",
+              "hi": "आपने किसी की बात नहीं सुनी। आप क्या कहेंगे?"
+            }
+          },
+          "answer": "Sorry, could you repeat that?",
+          "others": ["What?", "Say again."]
+        },
+        {
+          "question": {
+            "text": "Complete: ___ me, can you help me?",
+            "translations": {
+              "bn": "পূরণ করুন: ___ me, can you help me?",
+              "hi": "पूरा करें: ___ me, can you help me?"
+            }
+          },
+          "answer": "Excuse",
+          "others": ["Sorry", "Please"]
+        },
+        {
+          "question": {
+            "text": "Someone says, “Turn left at the bank.” How do you check?",
+            "translations": {
+              "bn": "কেউ বললেন, “Turn left at the bank.” কীভাবে নিশ্চিত হবেন?",
+              "hi": "किसी ने कहा, “Turn left at the bank.” आप कैसे पक्का करेंगे?"
+            }
+          },
+          "answer": "So I turn left at the bank?",
+          "others": ["The bank is left.", "OK, goodbye."]
+        },
+        {
+          "question": {
+            "text": "What does “opposite” mean in “The bank is opposite the park”?",
+            "translations": {
+              "bn": "“The bank is opposite the park” বাক্যে “opposite” মানে কী?",
+              "hi": "“The bank is opposite the park” में “opposite” का क्या मतलब है?"
+            }
+          },
+          "answer": "on the other side, facing it",
+          "others": ["next to it", "behind it"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Kiran",
+          "text": "Excuse me, is this the information desk?",
+          "translations": {
+            "bn": "মাফ করবেন, এটা কি তথ্যকেন্দ্র?",
+            "hi": "माफ़ कीजिए, क्या यह पूछताछ केंद्र है?"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "Yes, it is. How can I help you?",
+          "translations": {
+            "bn": "হ্যাঁ। কীভাবে সাহায্য করতে পারি?",
+            "hi": "जी हाँ। मैं आपकी क्या मदद कर सकता हूँ?"
+          }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "I lost my bag. Could you help me find it?",
+          "translations": {
+            "bn": "আমার ব্যাগ হারিয়ে গেছে। খুঁজতে সাহায্য করবেন?",
+            "hi": "मेरा बैग खो गया है। क्या आप उसे ढूँढ़ने में मदद कर सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "Of course. What colour is it, and where did you last see it?",
+          "translations": {
+            "bn": "নিশ্চয়ই। কী রঙের, আর শেষ কোথায় দেখেছিলেন?",
+            "hi": "ज़रूर। उसका रंग क्या है, और आपने उसे आख़िरी बार कहाँ देखा था?"
+          }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "It’s blue. I think I left it in the food court.",
+          "translations": {
+            "bn": "নীল। মনে হয় ফুড কোর্টে রেখে এসেছি।",
+            "hi": "नीला है। मुझे लगता है मैं उसे फ़ूड कोर्ट में छोड़ आई।"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "Please wait here. I’ll call security.",
+          "translations": {
+            "bn": "এখানে একটু অপেক্ষা করুন। আমি নিরাপত্তারক্ষীদের ফোন করছি।",
+            "hi": "कृपया यहाँ रुकिए। मैं सुरक्षा विभाग को फ़ोन करता हूँ।"
+          }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "Sorry, could you say that again?",
+          "translations": {
+            "bn": "দুঃখিত, আবার বলবেন?",
+            "hi": "माफ़ कीजिए, क्या आप फिर से बताएँगे?"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "Wait here, please. I will phone the security team.",
+          "translations": {
+            "bn": "দয়া করে এখানে অপেক্ষা করুন। আমি নিরাপত্তা দলকে ফোন করব।",
+            "hi": "कृपया यहीं रुकिए। मैं सुरक्षा टीम को फ़ोन करूँगा।"
+          }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "OK, thank you. I’ll wait.",
+          "translations": {
+            "bn": "আচ্ছা, ধন্যবাদ। আমি অপেক্ষা করছি।",
+            "hi": "ठीक है, धन्यवाद। मैं इंतज़ार करती हूँ।"
+          }
+        },
+        {
+          "speaker": "Arjun",
+          "text": "Good news! They found a blue bag. Is this yours?",
+          "translations": {
+            "bn": "সুখবর! ওঁরা একটা নীল ব্যাগ পেয়েছেন। এটা কি আপনার?",
+            "hi": "अच्छी ख़बर! उन्हें एक नीला बैग मिला है। क्या यह आपका है?"
+          }
+        },
+        {
+          "speaker": "Kiran",
+          "text": "Yes, it is! Thank you so much!",
+          "translations": {
+            "bn": "হ্যাঁ, এটাই! অনেক ধন্যবাদ!",
+            "hi": "हाँ, यही है! बहुत-बहुत धन्यवाद!"
+          }
+        }
+      ],
+      "voices": {
+        "Kiran": "female",
+        "Arjun": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the guard",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello. Do you need any help?",
+          "reply": "Yes, please. I’m looking for the exit.",
+          "cues": {
+            "bn": "হ্যাঁ বলুন, আর বলুন বেরোনোর পথ খুঁজছেন।",
+            "hi": "हाँ कहें और बाहर निकलने का रास्ता पूछें।"
+          }
+        },
+        {
+          "partner": "Go past the shoe shop and take the escalator down.",
+          "reply": "Sorry, what is an escalator?",
+          "cues": {
+            "bn": "“escalator” মানে জিজ্ঞেস করুন।",
+            "hi": "“escalator” का मतलब पूछें।"
+          }
+        },
+        {
+          "partner": "It’s the moving stairs.",
+          "reply": "Oh, I see. Past the shoe shop and down the moving stairs?",
+          "cues": {
+            "bn": "নির্দেশটা আবার বলে নিশ্চিত হন।",
+            "hi": "निर्देश दोहराकर पक्का करें।"
+          }
+        },
+        {
+          "partner": "That’s right. The exit is in front of you.",
+          "reply": "Thank you very much.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "At a bus stop",
+            "translations": {
+              "bn": "বাস স্টপে",
+              "hi": "बस स्टॉप पर"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi. You look lost. Can I help?",
+                "reply": "Yes, please. Which bus goes to the museum?",
+                "cues": {
+                  "bn": "জাদুঘরে কোন বাস যায়, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि संग्रहालय कौन-सी बस जाती है।"
+                }
+              },
+              {
+                "partner": "Bus 42. It comes every fifteen minutes.",
+                "reply": "Sorry, every fifteen or fifty minutes?",
+                "cues": {
+                  "bn": "ঠিক শুনেছেন কি না, জিজ্ঞেস করে নিশ্চিত হন।",
+                  "hi": "पूछकर पक्का करें कि आपने ठीक सुना।"
+                }
+              },
+              {
+                "partner": "Fifteen. One, five.",
+                "reply": "Thank you. Where do I get off?",
+                "cues": {
+                  "bn": "কোথায় নামতে হবে, জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि कहाँ उतरना है।"
+                }
+              },
+              {
+                "partner": "At the third stop, City Square.",
+                "reply": "The third stop. Thanks a lot!",
+                "cues": {
+                  "bn": "আবার বলে ধন্যবাদ দিন।",
+                  "hi": "दोहराएँ और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At a pharmacy",
+            "translations": {
+              "bn": "ওষুধের দোকানে",
+              "hi": "दवा की दुकान पर"
+            }
+          },
+          "roleplay": {
+            "partner": "the pharmacist",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Good evening. What can I do for you?",
+                "reply": "I have a headache. Can you help me?",
+                "cues": {
+                  "bn": "বলুন মাথাব্যথা করছে, সাহায্য চান।",
+                  "hi": "बताएँ कि सिर में दर्द है और मदद माँगें।"
+                }
+              },
+              {
+                "partner": "Take one tablet after food, twice a day.",
+                "reply": "Sorry, could you explain that again?",
+                "cues": {
+                  "bn": "আবার বুঝিয়ে বলতে অনুরোধ করুন।",
+                  "hi": "फिर से समझाने को कहें।"
+                }
+              },
+              {
+                "partner": "One tablet in the morning and one at night, after you eat.",
+                "reply": "OK. One in the morning, one at night.",
+                "cues": {
+                  "bn": "নির্দেশটা আবার বলুন।",
+                  "hi": "निर्देश दोहराएँ।"
+                }
+              },
+              {
+                "partner": "That’s right. Get well soon!",
+                "reply": "Thank you very much.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "In a new office",
+            "translations": {
+              "bn": "নতুন অফিসে",
+              "hi": "नए दफ़्तर में"
+            }
+          },
+          "roleplay": {
+            "partner": "Tarun",
+            "asWoman": "Tara",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! Are you looking for someone?",
+                "reply": "Yes. Could you tell me where the meeting room is?",
+                "cues": {
+                  "bn": "মিটিং রুম কোথায়, ভদ্রভাবে জিজ্ঞেস করুন।",
+                  "hi": "विनम्रता से पूछें कि मीटिंग रूम कहाँ है।"
+                }
+              },
+              {
+                "partner": "It’s on the fifth floor, next to the kitchen.",
+                "reply": "Is there a lift?",
+                "cues": {
+                  "bn": "লিফট আছে কি না জিজ্ঞেস করুন।",
+                  "hi": "पूछें कि क्या लिफ़्ट है।"
+                }
+              },
+              {
+                "partner": "Yes, behind the reception. Press five.",
+                "reply": "Behind the reception, and press five. Got it.",
+                "cues": {
+                  "bn": "নির্দেশটা আবার বলে নিশ্চিত হন।",
+                  "hi": "निर्देश दोहराकर पक्का करें।"
+                }
+              },
+              {
+                "partner": "Good luck with your meeting!",
+                "reply": "Thank you for your help.",
+                "cues": {
+                  "bn": "সাহায্যের জন্য ধন্যবাদ দিন।",
+                  "hi": "मदद के लिए धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

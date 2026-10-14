@@ -289,6 +289,11 @@ test('Week 1, Day 4: a role-play taken turn by turn, with a hint, to its end', a
   await expect(talk(page)).toHaveText(['RaviHello! Good morning.'])
   await expect(page.getByText('Your turn. Tap to speak.')).toBeVisible()
   await expect(next(page)).toHaveCount(0)
+  // The band keeps only the way back and the day's place: the face is beside the partner's line.
+  const band = await page.getByRole('link', { name: 'Back to the week' }).boundingBox()
+  const heading1 = await heading(page).boundingBox()
+  expect((heading1?.y ?? 0) - (band?.y ?? 0)).toBeLessThan(96)
+  await expect(talk(page).first().locator('[data-mood]')).toBeVisible()
 
   // Everything the learner needs is in reach of the thumb, and big enough to hit.
   const mic = page.getByRole('button', { name: 'Tap to speak' })
@@ -307,11 +312,11 @@ test('Week 1, Day 4: a role-play taken turn by turn, with a hint, to its end', a
   await expect(talk(page)).toHaveText(['RaviHello! Good morning.', 'What to sayGood morning!'])
   await expect(page.getByRole('button', { name: 'Hint', exact: true })).toBeDisabled()
 
-  // Skipping goes on without the microphone, and shows what could have been said.
+  // Skipping goes on without the microphone, says so, and shows what could have been said.
   await page.getByRole('button', { name: 'Skip this turn' }).click()
   await expect(talk(page)).toHaveText([
     'RaviHello! Good morning.',
-    'You could sayGood morning!',
+    'SkippedYou could sayGood morning!',
     'RaviHow are you?',
   ])
   await expect(page.getByRole('button', { name: 'Hint', exact: true })).toBeEnabled()
@@ -326,15 +331,16 @@ test('Week 1, Day 4: a role-play taken turn by turn, with a hint, to its end', a
   for (let left = 4; left > 0; left -= 1) {
     await page.getByRole('button', { name: 'Skip this turn' }).click()
   }
-  await expect(page.getByText('Well done! You finished the conversation.')).toBeVisible()
+  // The conversation closes with the tutor's thumbs up, brought into view, and Next is pinned.
+  const finished = page.getByText('Well done! You finished the conversation.')
+  await expect(finished).toBeInViewport({ ratio: 1 })
+  await expect(page.locator('[data-mood="encourage"]')).toBeInViewport({ ratio: 1 })
   await expect(talk(page)).toHaveCount(10)
-  await expect(talk(page).last()).toHaveText('You could sayGoodbye! Have a nice day.')
+  await expect(talk(page).last()).toHaveText('SkippedYou could sayGoodbye! Have a nice day.')
   await expect(page.getByRole('button', { name: 'Practise again' })).toBeVisible()
   await expect(next(page)).toBeInViewport({ ratio: 1 })
-  // The partner and the way back stay where they were, however long the conversation has grown.
-  await expect(page.locator('[data-mood]')).toBeInViewport({ ratio: 1 })
+  // The way back stays where it was, however long the conversation has grown.
   await expect(page.getByRole('link', { name: 'Back to the week' })).toBeInViewport({ ratio: 1 })
-  await expect(talk(page).last()).toBeInViewport({ ratio: 1 })
   await expectNoHorizontalScroll(page)
 
   await next(page).click()
@@ -825,7 +831,7 @@ test.describe('recording the challenge', () => {
     await page.goto('/lessons/weeks/1/days/5')
 
     await page.getByRole('button', { name: 'Tap to speak' }).click()
-    await expect(page.getByText(/^Recording… 0:0\d \/ 2:00$/)).toBeVisible()
+    await expect(page.getByText(/^Recording… 0:0\d \/ 5:00$/)).toBeVisible()
     await page.getByRole('button', { name: 'Stop recording' }).click()
     await expect(page.getByText('Recorded. Listen, or try again.')).toBeVisible()
     await expect(next(page)).toBeEnabled()
@@ -875,9 +881,11 @@ test.describe('answering in the role-play', () => {
     await expect(page.getByText(/^(Start speaking now|Recording…)$/)).toBeVisible()
     await page.getByRole('button', { name: 'Stop recording' }).click()
 
+    // The answered turn is shown as theirs, with their recording, and "Check my reply" where a
+    // recording can be sent.
     await expect(talk(page)).toHaveText([
       'RaviHello! Good morning.',
-      'You could sayGood morning!',
+      /^You answeredListen to yourself0:\d\dYou could sayGood morning!/,
       'RaviHow are you?',
     ])
     const listen = page.getByRole('button', { name: 'Listen to yourself' })
@@ -912,13 +920,125 @@ test.describe('answering in the role-play', () => {
 
     // Tapping still ends the turn at once, without waiting for a pause.
     await stop.click()
-    // The answered turn may carry "Check my reply" under it, where a recording was made.
     await expect(talk(page)).toHaveText([
       'RaviHello! Good morning.',
-      /^You could sayGood morning!/,
+      /^You answered.*You could sayGood morning!/,
       'RaviHow are you?',
     ])
   })
+
+  for (const { language, note } of [
+    {
+      language: 'en',
+      note: 'We will ask to use your microphone. Your recording is not saved.',
+    },
+    {
+      language: 'bn',
+      note: 'আমরা মাইক্রোফোন ব্যবহারের অনুমতি চাইব। রেকর্ডিং রাখা হয় না।',
+    },
+    {
+      language: 'hi',
+      note: 'हम माइक्रोफ़ोन इस्तेमाल करने की अनुमति माँगेंगे। रिकॉर्डिंग सेव नहीं होती।',
+    },
+  ]) {
+    test(`before a role-play the microphone note is one line, and the next note its size (${language})`, async ({
+      page,
+    }) => {
+      await seedLanguage(page, language)
+      await stubSpeech(page)
+      // The narrow phone the app is designed for first: where the line has least room.
+      await page.setViewportSize({ width: 360, height: 740 })
+      await page.goto('/lessons/weeks/1/days/4')
+
+      const line = page.getByText(note)
+      await expect(line).toBeVisible()
+      const drawn = await line.evaluate((element) => {
+        const lines = (of: Element) => {
+          const range = document.createRange()
+          range.selectNodeContents(of)
+          // One box for each line the text is drawn on.
+          return new Set([...range.getClientRects()].map((box) => Math.round(box.top))).size
+        }
+        const next = element.nextElementSibling
+        if (!next) throw new Error('the second note is missing')
+        return {
+          lines: lines(element),
+          size: Number.parseFloat(getComputedStyle(element).fontSize),
+          fits: element.scrollWidth <= element.clientWidth,
+          nextLines: lines(next),
+          nextSize: Number.parseFloat(getComputedStyle(next).fontSize),
+        }
+      })
+      expect(drawn.lines).toBe(1)
+      expect(drawn.fits).toBe(true)
+      expect(drawn.size).toBeGreaterThanOrEqual(11)
+      expect(drawn.size).toBeLessThanOrEqual(14)
+      // The longer note under it wraps, at the size the first was fitted to.
+      expect(drawn.nextSize).toBe(drawn.size)
+      expect(drawn.nextLines).toBeGreaterThan(1)
+      await expectNoHorizontalScroll(page)
+    })
+  }
+
+  for (const { language, start, stop, skip, note } of [
+    {
+      language: 'en',
+      start: 'Start the conversation',
+      stop: 'Stop recording',
+      skip: 'Skip this turn',
+      note: 'Checking a reply sends its recording to our server. It is not kept.',
+    },
+    {
+      language: 'bn',
+      start: 'কথোপকথন শুরু করুন',
+      stop: 'রেকর্ডিং থামান',
+      skip: 'এই পালা বাদ দিন',
+      note: 'উত্তর পরীক্ষা করলে তার রেকর্ডিং আমাদের সার্ভারে যায়। এটি রাখা হয় না।',
+    },
+    {
+      language: 'hi',
+      start: 'बातचीत शुरू करें',
+      stop: 'रिकॉर्डिंग रोकें',
+      skip: 'यह बारी छोड़ें',
+      note: 'जवाब जाँचने पर उसकी रिकॉर्डिंग हमारे सर्वर पर जाती है। इसे रखा नहीं जाता।',
+    },
+  ]) {
+    test(`at the end, what checking a reply does is one line above Next (${language})`, async ({
+      page,
+      context,
+    }) => {
+      await context.grantPermissions(['microphone'])
+      await seedLanguage(page, language)
+      await stubSpeech(page)
+      // The narrow phone the app is designed for first: where the line has least room.
+      await page.setViewportSize({ width: 360, height: 740 })
+      await page.goto('/lessons/weeks/1/days/4')
+      await page.getByRole('button', { name: start }).click()
+      // The microphone opens by itself once the partner's line ends; a tap ends the turn.
+      await page.getByRole('button', { name: stop }).click()
+      for (let left = 4; left > 0; left -= 1) await page.getByRole('button', { name: skip }).click()
+
+      const line = page.getByText(note)
+      await expect(line).toBeVisible()
+      const drawn = await line.evaluate((element) => {
+        const range = document.createRange()
+        range.selectNodeContents(element)
+        // One box for each line the text is drawn on.
+        const tops = new Set([...range.getClientRects()].map((box) => Math.round(box.top)))
+        return {
+          lines: tops.size,
+          size: Number.parseFloat(getComputedStyle(element).fontSize),
+          fits: element.scrollWidth <= element.clientWidth,
+        }
+      })
+      // On one line, inside its place, and still a size that can be read.
+      expect(drawn.lines).toBe(1)
+      expect(drawn.fits).toBe(true)
+      expect(drawn.size).toBeGreaterThanOrEqual(11)
+      expect(drawn.size).toBeLessThanOrEqual(14)
+      await expectNoHorizontalScroll(page)
+    })
+  }
 })
 
 test('a blocked microphone in the role-play is explained, and turns can still be skipped', async ({
@@ -1198,7 +1318,7 @@ test('a role-play written by the admin opens that week’s Day 4, partner’s pi
   await learnerTab.getByRole('button', { name: 'Start the conversation' }).click()
   await expect(talk(learnerTab)).toHaveText(['the baristaHi! Welcome! What would you like today?'])
   await learnerTab.getByRole('button', { name: 'Skip this turn' }).click()
-  await expect(talk(learnerTab).last()).toHaveText('You could sayI’d like a coffee, please.')
+  await expect(talk(learnerTab).last()).toHaveText('SkippedYou could sayI’d like a coffee, please.')
   await expect(next(learnerTab)).toBeVisible()
 
   // Week 1's built-in role-play can be changed, and put back.

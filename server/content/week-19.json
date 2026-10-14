@@ -1,0 +1,745 @@
+{
+  "week": 19,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Anjali",
+          "text": "I think we should go to the hills this weekend.",
+          "translations": {
+            "bn": "আমার মনে হয় এই সপ্তাহান্তে আমাদের পাহাড়ে যাওয়া উচিত।",
+            "hi": "मुझे लगता है हमें इस सप्ताहांत पहाड़ों पर जाना चाहिए।"
+          }
+        },
+        {
+          "speaker": "Kartik",
+          "text": "I agree. The city is too hot right now.",
+          "translations": {
+            "bn": "আমি একমত। শহরে এখন খুব গরম।",
+            "hi": "मैं सहमत हूँ। शहर में अभी बहुत गर्मी है।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "Let’s go by bus. It’s cheap.",
+          "translations": {
+            "bn": "চলো বাসে যাই। সস্তা।",
+            "hi": "चलो बस से चलते हैं। सस्ता है।"
+          }
+        },
+        {
+          "speaker": "Kartik",
+          "text": "Hmm, I don’t agree. The bus takes eight hours.",
+          "translations": {
+            "bn": "হুম, আমি একমত নই। বাসে আট ঘণ্টা লাগে।",
+            "hi": "हम्म, मैं सहमत नहीं हूँ। बस से आठ घंटे लगते हैं।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "Is the train faster?",
+          "translations": {
+            "bn": "ট্রেনে কি তাড়াতাড়ি হয়?",
+            "hi": "क्या ट्रेन से जल्दी पहुँचेंगे?"
+          }
+        },
+        {
+          "speaker": "Kartik",
+          "text": "I think so, but I’m not sure. Let me check.",
+          "translations": {
+            "bn": "মনে হয় হ্যাঁ, তবে নিশ্চিত নই। দেখে নিই।",
+            "hi": "मुझे लगता है हाँ, पर पक्का नहीं पता। देख लेता हूँ।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "I see your point, but trains are often full at weekends.",
+          "translations": {
+            "bn": "তোমার কথা বুঝলাম, কিন্তু সপ্তাহান্তে ট্রেন প্রায়ই ভর্তি থাকে।",
+            "hi": "मैं तुम्हारी बात समझती हूँ, पर सप्ताहांत में ट्रेनें अक्सर भरी रहती हैं।"
+          }
+        },
+        {
+          "speaker": "Kartik",
+          "text": "That’s true. In my opinion, we should book today.",
+          "translations": {
+            "bn": "ঠিক কথা। আমার মতে, আজই টিকিট কেটে ফেলা উচিত।",
+            "hi": "यह सच है। मेरी राय में, हमें आज ही बुकिंग कर लेनी चाहिए।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "Maybe you’re right. But I’d prefer a hotel near the lake.",
+          "translations": {
+            "bn": "হয়তো তুমি ঠিক। তবে আমার লেকের কাছের হোটেল পছন্দ।",
+            "hi": "शायद तुम सही हो। पर मुझे झील के पास वाला होटल पसंद है।"
+          }
+        },
+        {
+          "speaker": "Kartik",
+          "text": "Really? I’d prefer one in the town. It’s closer to the market.",
+          "translations": {
+            "bn": "তাই? আমার শহরের ভেতরেরটা পছন্দ। বাজারের কাছে।",
+            "hi": "सच में? मुझे शहर के अंदर वाला पसंद है। वह बाज़ार के पास है।"
+          }
+        },
+        {
+          "speaker": "Anjali",
+          "text": "OK, let’s look at both and decide together.",
+          "translations": {
+            "bn": "ঠিক আছে, দুটোই দেখে একসঙ্গে ঠিক করি।",
+            "hi": "ठीक है, दोनों देखकर साथ में तय करते हैं।"
+          }
+        },
+        {
+          "speaker": "Kartik",
+          "text": "Good idea. I’m sure we’ll find a nice place.",
+          "translations": {
+            "bn": "ভালো বুদ্ধি। আমি নিশ্চিত, ভালো জায়গা পাব।",
+            "hi": "अच्छा विचार है। मुझे यक़ीन है, हमें अच्छी जगह मिल जाएगी।"
+          }
+        }
+      ],
+      "voices": {
+        "Anjali": "female",
+        "Kartik": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "agree",
+          "phonetic": "/əˈɡriː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "একমত হওয়া",
+            "hi": "सहमत होना"
+          },
+          "syllables": ["a", "gree"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "বলুন “I agree”, “I am agree” নয়।"],
+            "en": ["Say the second part stronger.", "Say “I agree”, not “I am agree”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "कहें “I agree”, “I am agree” नहीं।"]
+          }
+        },
+        {
+          "word": "sure",
+          "phonetic": "/ʃʊə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "নিশ্চিত",
+            "hi": "पक्का, निश्चित"
+          },
+          "syllables": ["sure"],
+          "stress": null,
+          "tips": {
+            "bn": ["“s”-এর উচ্চারণ “sh”-এর মতো।", "“I’m sure” মানে আপনি জানেন এটা সত্যি।"],
+            "en": ["The “s” sounds like “sh”.", "“I’m sure” means you know it is true."],
+            "hi": ["“s” की आवाज़ “sh” जैसी है।", "“I’m sure” का मतलब है आपको पता है कि यह सच है।"]
+          }
+        },
+        {
+          "word": "maybe",
+          "phonetic": "/ˈmeɪbi/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হয়তো",
+            "hi": "शायद"
+          },
+          "syllables": ["may", "be"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "নিশ্চিত না হলে এটি বলুন।"],
+            "en": ["Say the first part stronger.", "Use it when you are not sure."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "जब पक्का न हो, तब यह कहें।"]
+          }
+        },
+        {
+          "word": "probably",
+          "phonetic": "/ˈprɒbəbli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সম্ভবত",
+            "hi": "संभवतः"
+          },
+          "syllables": ["prob", "ab", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "মানে প্রায় নিশ্চিত।"],
+            "en": ["Say the first part stronger.", "It means almost sure."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "इसका मतलब है लगभग पक्का।"]
+          }
+        },
+        {
+          "word": "perhaps",
+          "phonetic": "/pəˈhæps/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হয়তো",
+            "hi": "शायद"
+          },
+          "syllables": ["per", "haps"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "মানে “maybe”-এর মতোই।"],
+            "en": ["Say the second part stronger.", "It means the same as “maybe”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "इसका मतलब “maybe” जैसा ही है।"]
+          }
+        },
+        {
+          "word": "certain",
+          "phonetic": "/ˈsɜːtn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "নিশ্চিত",
+            "hi": "निश्चित"
+          },
+          "syllables": ["cer", "tain"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“c”-এর উচ্চারণ “s”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “c” sounds like “s”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“c” की आवाज़ “s” जैसी है।"]
+          }
+        },
+        {
+          "word": "definitely",
+          "phonetic": "/ˈdefɪnətli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অবশ্যই, নিশ্চিতভাবে",
+            "hi": "बिल्कुल, निश्चित रूप से"
+          },
+          "syllables": ["def", "i", "nit(e)", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "খুব নিশ্চিত হলে এটি বলুন।"],
+            "en": ["Say the first part stronger.", "Use it when you are very sure."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "जब बहुत पक्का हो, तब यह कहें।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I see your point, but I don’t agree.",
+          "alsoAccepted": ["I see what you mean, but I don’t agree."],
+          "translations": {
+            "bn": "আপনার কথা বুঝলাম, কিন্তু আমি একমত নই।",
+            "hi": "आपकी बात समझ में आती है, पर मैं इससे सहमत नहीं हूँ।"
+          },
+          "tips": {
+            "bn": ["আগে বোঝান আপনি বুঝেছেন, তারপর দ্বিমত।", "“I see your point” শুনতে নরম।"],
+            "en": ["First show you understand, then disagree.", "“I see your point” sounds kind."],
+            "hi": [
+              "पहले जताएँ कि बात समझ आई, फिर असहमति।",
+              "“I see your point” सुनने में नरम लगता है।"
+            ]
+          }
+        },
+        {
+          "english": "I’m afraid I disagree.",
+          "alsoAccepted": ["I’m afraid I don’t agree."],
+          "translations": {
+            "bn": "দুঃখিত, আমি একমত হতে পারছি না।",
+            "hi": "माफ़ कीजिए, मेरी राय अलग है।"
+          },
+          "tips": {
+            "bn": ["“I’m afraid” খারাপ খবরকে নরম করে।", "এর মানে ভয় পাওয়া নয়।"],
+            "en": ["“I’m afraid” makes bad news softer.", "It does not mean you are scared."],
+            "hi": ["“I’m afraid” बुरी बात को नरम बनाता है।", "इसका मतलब डरना नहीं है।"]
+          }
+        },
+        {
+          "english": "That’s true, but it is very expensive.",
+          "alsoAccepted": ["That’s right, but it is very expensive."],
+          "translations": {
+            "bn": "ঠিক কথা, কিন্তু এটা খুব দামি।",
+            "hi": "यह सही है, पर यह बहुत महँगा है।"
+          },
+          "tips": {
+            "bn": ["আগে একটা অংশে একমত হোন।", "তারপর “but”-এর পরে নিজের কথা বলুন।"],
+            "en": ["Agree with one part first.", "Then give your point after “but”."],
+            "hi": ["पहले एक बात पर सहमति दें।", "फिर “but” के बाद अपनी बात कहें।"]
+          }
+        },
+        {
+          "english": "Maybe, but I have a different idea.",
+          "alsoAccepted": ["Perhaps, but I have a different idea."],
+          "translations": {
+            "bn": "হয়তো, তবে আমার একটা অন্য ভাবনা আছে।",
+            "hi": "शायद, पर मेरे पास एक अलग विचार है।"
+          },
+          "tips": {
+            "bn": ["“Maybe” কথাটাকে বন্ধুত্বপূর্ণ রাখে।", "“a different idea” অন্য পথ দেখায়।"],
+            "en": ["“Maybe” keeps it friendly.", "“a different idea” offers another way."],
+            "hi": ["“Maybe” बात को दोस्ताना रखता है।", "“a different idea” दूसरा रास्ता सुझाता है।"]
+          }
+        },
+        {
+          "english": "I’m not sure that’s a good idea.",
+          "alsoAccepted": ["I’m not sure it is a good idea."],
+          "translations": {
+            "bn": "আমি নিশ্চিত নই এটা ভালো বুদ্ধি কি না।",
+            "hi": "मुझे पक्का नहीं लगता कि यह अच्छा विचार है।"
+          },
+          "tips": {
+            "bn": ["“I’m not sure” “No”-এর চেয়ে নরম।", "শান্তভাবে বলুন, জোরে নয়।"],
+            "en": ["“I’m not sure” is softer than “No”.", "Say it calmly, not loudly."],
+            "hi": ["“I’m not sure” “No” से नरम है।", "शांति से कहें, ज़ोर से नहीं।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Tanvi",
+      "asMan": "Tanmay",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "What do you think? Is city life better than village life?",
+          "reply": "In my opinion, … is better.",
+          "cues": {
+            "bn": "“In my opinion” দিয়ে আপনার মত বলুন।",
+            "hi": "“In my opinion” से अपनी राय बताएँ।"
+          }
+        },
+        {
+          "partner": "Why do you think so?",
+          "reply": "Because …",
+          "cues": {
+            "bn": "“because” দিয়ে কারণ বলুন।",
+            "hi": "“because” से कारण बताएँ।"
+          }
+        },
+        {
+          "partner": "I think the village is more peaceful.",
+          "reply": "That’s true, but there are fewer jobs.",
+          "cues": {
+            "bn": "মেনে নিন, কিন্তু অন্য দিকটা বলুন: কাজ কম।",
+            "hi": "बात मानें, पर दूसरा पहलू बताएँ: काम कम है।"
+          }
+        },
+        {
+          "partner": "Hmm. Are you sure about that?",
+          "reply": "I think so, but I’m not completely sure.",
+          "cues": {
+            "bn": "বলুন মনে হয় হ্যাঁ, তবে পুরো নিশ্চিত নন।",
+            "hi": "कहें कि शायद हाँ, पर पूरा यक़ीन नहीं है।"
+          }
+        },
+        {
+          "partner": "What about the air? The city air is not clean.",
+          "reply": "I agree with you on that.",
+          "cues": {
+            "bn": "ওই বিষয়ে একমত হোন।",
+            "hi": "उस बात पर सहमति जताएँ।"
+          }
+        },
+        {
+          "partner": "So, where would you like to live one day?",
+          "reply": "Personally, I’d like to live …",
+          "cues": {
+            "bn": "বলুন আপনি নিজে কোথায় থাকতে চান।",
+            "hi": "बताएँ कि आप ख़ुद कहाँ रहना चाहेंगे।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Let’s Discuss Our Different Opinions",
+        "translations": {
+          "bn": "আমাদের আলাদা মত নিয়ে আলোচনা",
+          "hi": "अलग-अलग राय पर चर्चा"
+        }
+      },
+      "instruction": {
+        "text": "Talk about a topic, like phones for children. Give your view, then answer a different view politely.",
+        "translations": {
+          "bn": "একটা বিষয় নিয়ে বলুন, যেমন ছোটদের ফোন। নিজের মত দিন, তারপর ভিন্ন মতের ভদ্রভাবে উত্তর দিন।",
+          "hi": "किसी विषय पर बोलें, जैसे बच्चों के लिए फ़ोन। अपनी राय दें, फिर अलग राय का विनम्रता से जवाब दें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Name the topic and give your opinion",
+          "translations": {
+            "bn": "বিষয়টা বলুন আর নিজের মত দিন",
+            "hi": "विषय बताएँ और अपनी राय दें"
+          }
+        },
+        {
+          "text": "Give a reason with “because”",
+          "translations": {
+            "bn": "“because” দিয়ে একটা কারণ দিন",
+            "hi": "“because” से एक कारण दें"
+          }
+        },
+        {
+          "text": "Say one view that is different from yours",
+          "translations": {
+            "bn": "আপনার থেকে আলাদা একটা মত বলুন",
+            "hi": "आपसे अलग एक राय बताएँ"
+          }
+        },
+        {
+          "text": "Agree with one part of it, politely",
+          "translations": {
+            "bn": "তার একটা অংশে ভদ্রভাবে একমত হোন",
+            "hi": "उसकी एक बात पर विनम्रता से सहमति दें"
+          }
+        },
+        {
+          "text": "Disagree with one part, and say why",
+          "translations": {
+            "bn": "একটা অংশে দ্বিমত করুন, আর কারণ বলুন",
+            "hi": "एक बात पर असहमति जताएँ और कारण बताएँ"
+          }
+        },
+        {
+          "text": "End with what you think now",
+          "translations": {
+            "bn": "শেষে বলুন এখন আপনি কী ভাবেন",
+            "hi": "आख़िर में बताएँ कि अब आप क्या सोचते हैं"
+          }
+        }
+      ],
+      "phrases": [
+        "In my opinion, …",
+        "I think … because …",
+        "Some people say …",
+        "That’s true, but …",
+        "I see your point, but I don’t agree.",
+        "So, I still think …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which sentence shows that you agree?",
+            "translations": {
+              "bn": "কোন বাক্যে বোঝায় আপনি একমত?",
+              "hi": "कौन-सा वाक्य बताता है कि आप सहमत हैं?"
+            }
+          },
+          "answer": "I completely agree with you.",
+          "others": ["I’m afraid I disagree.", "I’m not sure."]
+        },
+        {
+          "question": {
+            "text": "Which is the most polite way to disagree?",
+            "translations": {
+              "bn": "দ্বিমত করার সবচেয়ে ভদ্র উপায় কোনটি?",
+              "hi": "असहमति जताने का सबसे विनम्र तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "I see your point, but I don’t agree.",
+          "others": ["You are wrong.", "That’s a silly idea."]
+        },
+        {
+          "question": {
+            "text": "You are not certain. What do you say?",
+            "translations": {
+              "bn": "আপনি নিশ্চিত নন। কী বলবেন?",
+              "hi": "आपको पक्का नहीं पता। आप क्या कहेंगे?"
+            }
+          },
+          "answer": "I’m not sure.",
+          "others": ["Definitely!", "I’m certain."]
+        },
+        {
+          "question": {
+            "text": "Complete: In my ___, it’s a good idea.",
+            "translations": {
+              "bn": "পূরণ করুন: In my ___, it’s a good idea.",
+              "hi": "पूरा करें: In my ___, it’s a good idea."
+            }
+          },
+          "answer": "opinion",
+          "others": ["think", "agree"]
+        },
+        {
+          "question": {
+            "text": "Someone says, “Tea is better than coffee.” You think the same. What do you say?",
+            "translations": {
+              "bn": "কেউ বললেন, “Tea is better than coffee.” আপনিও তাই ভাবেন। কী বলবেন?",
+              "hi": "किसी ने कहा, “Tea is better than coffee.” आप भी यही सोचते हैं। क्या कहेंगे?"
+            }
+          },
+          "answer": "I think so too.",
+          "others": ["I don’t think so.", "Not really."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Nandini",
+          "text": "Faisal, what do you think about working from home on Fridays?",
+          "translations": {
+            "bn": "ফয়সল, শুক্রবার বাড়ি থেকে কাজ করা নিয়ে আপনার কী মত?",
+            "hi": "फ़ैसल, शुक्रवार को घर से काम करने के बारे में आपकी क्या राय है?"
+          }
+        },
+        {
+          "speaker": "Faisal",
+          "text": "In my opinion, it’s a great idea. We save time on travel.",
+          "translations": {
+            "bn": "আমার মতে দারুণ ভাবনা। যাতায়াতের সময় বাঁচে।",
+            "hi": "मेरी राय में यह बहुत अच्छा विचार है। आने-जाने का समय बचता है।"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "That’s true. But I think we need to meet in person too.",
+          "translations": {
+            "bn": "ঠিক কথা। কিন্তু আমার মনে হয় সামনাসামনি দেখা হওয়াও দরকার।",
+            "hi": "यह सच है। पर मुझे लगता है आमने-सामने मिलना भी ज़रूरी है।"
+          }
+        },
+        {
+          "speaker": "Faisal",
+          "text": "I agree. We can meet on the other days.",
+          "translations": {
+            "bn": "একমত। বাকি দিনগুলোতে দেখা হতে পারে।",
+            "hi": "मैं सहमत हूँ। बाक़ी दिनों में मिल सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "Will the manager say yes, do you think?",
+          "translations": {
+            "bn": "আপনার কী মনে হয়, ম্যানেজার রাজি হবেন?",
+            "hi": "आपको क्या लगता है, क्या मैनेजर हाँ कहेंगे?"
+          }
+        },
+        {
+          "speaker": "Faisal",
+          "text": "I’m not sure. Maybe, if our work is done on time.",
+          "translations": {
+            "bn": "নিশ্চিত নই। হয়তো, যদি কাজ সময়ে শেষ হয়।",
+            "hi": "पक्का नहीं कह सकता। शायद, अगर हमारा काम समय पर हो जाए।"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "I’m afraid some people will not like it.",
+          "translations": {
+            "bn": "আমার ভয়, কিছু লোকের এটা পছন্দ হবে না।",
+            "hi": "मुझे डर है कि कुछ लोगों को यह पसंद नहीं आएगा।"
+          }
+        },
+        {
+          "speaker": "Faisal",
+          "text": "Maybe, but we can ask everyone first.",
+          "translations": {
+            "bn": "হয়তো, তবে আগে সবাইকে জিজ্ঞেস করা যায়।",
+            "hi": "शायद, पर पहले सबसे पूछ सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Nandini",
+          "text": "Good point. Let’s send a short survey.",
+          "translations": {
+            "bn": "ভালো কথা। চলুন একটা ছোট সমীক্ষা পাঠাই।",
+            "hi": "अच्छी बात है। चलिए एक छोटा सर्वे भेजते हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Nandini": "female",
+        "Faisal": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I think everyone should learn to cook. Do you agree?",
+          "reply": "Yes, I agree with you.",
+          "cues": {
+            "bn": "একমত হোন।",
+            "hi": "सहमति जताएँ।"
+          }
+        },
+        {
+          "partner": "And I think fast food is always bad.",
+          "reply": "I see your point, but it’s fine sometimes.",
+          "cues": {
+            "bn": "ভদ্রভাবে দ্বিমত করুন: মাঝে মাঝে চলে।",
+            "hi": "विनम्रता से असहमति जताएँ: कभी-कभी ठीक है।"
+          }
+        },
+        {
+          "partner": "Will cooking classes be popular, do you think?",
+          "reply": "I think so, but I’m not sure.",
+          "cues": {
+            "bn": "বলুন মনে হয় হ্যাঁ, তবে নিশ্চিত নন।",
+            "hi": "कहें कि लगता तो है, पर पक्का नहीं।"
+          }
+        },
+        {
+          "partner": "What is your opinion of cooking at home?",
+          "reply": "In my opinion, …",
+          "cues": {
+            "bn": "আপনার মত দিন।",
+            "hi": "अपनी राय दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Choosing a restaurant",
+            "translations": {
+              "bn": "রেস্তোরাঁ বাছাই",
+              "hi": "रेस्तराँ चुनना"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Let’s eat at the new pizza place.",
+                "reply": "I’m not sure. It’s quite expensive.",
+                "cues": {
+                  "bn": "সন্দেহ জানান: জায়গাটা দামি।",
+                  "hi": "संदेह जताएँ: वह जगह महँगी है।"
+                }
+              },
+              {
+                "partner": "Maybe, but the food is very good.",
+                "reply": "That’s true, but I’d prefer something cheaper.",
+                "cues": {
+                  "bn": "মেনে নিন, কিন্তু সস্তা কিছু চান।",
+                  "hi": "बात मानें, पर कुछ सस्ता चाहें।"
+                }
+              },
+              {
+                "partner": "What about the South Indian café?",
+                "reply": "I agree. That’s a great choice!",
+                "cues": {
+                  "bn": "খুশি হয়ে একমত হোন।",
+                  "hi": "ख़ुशी से सहमति दें।"
+                }
+              },
+              {
+                "partner": "Great. Shall we go at eight?",
+                "reply": "Yes, eight is perfect.",
+                "cues": {
+                  "bn": "রাজি হোন।",
+                  "hi": "हामी भरें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A class debate",
+            "translations": {
+              "bn": "ক্লাসের বিতর্ক",
+              "hi": "कक्षा की बहस"
+            }
+          },
+          "roleplay": {
+            "partner": "the teacher",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Should we stop homework? What is your opinion?",
+                "reply": "In my opinion, …",
+                "cues": {
+                  "bn": "আপনার মত বলুন।",
+                  "hi": "अपनी राय बताएँ।"
+                }
+              },
+              {
+                "partner": "Why do you think that?",
+                "reply": "Because …",
+                "cues": {
+                  "bn": "কারণ বলুন।",
+                  "hi": "कारण बताएँ।"
+                }
+              },
+              {
+                "partner": "Some students say homework helps them learn. Do you agree?",
+                "reply": "I see their point, but …",
+                "cues": {
+                  "bn": "ভদ্রভাবে দ্বিমত করুন।",
+                  "hi": "विनम्रता से असहमति जताएँ।"
+                }
+              },
+              {
+                "partner": "Thank you. That was a good answer.",
+                "reply": "Thank you.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Painting the room",
+            "translations": {
+              "bn": "ঘর রং করা",
+              "hi": "कमरे की पुताई"
+            }
+          },
+          "roleplay": {
+            "partner": "Lata",
+            "asMan": "Lalit",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Let’s paint the living room yellow.",
+                "reply": "Hmm, I’m not sure about yellow.",
+                "cues": {
+                  "bn": "হলুদ নিয়ে সন্দেহ জানান।",
+                  "hi": "पीले रंग पर संदेह जताएँ।"
+                }
+              },
+              {
+                "partner": "Why not? It’s bright and happy.",
+                "reply": "That’s true, but I think light blue is calmer.",
+                "cues": {
+                  "bn": "মেনে নিন, তবে হালকা নীলের কথা বলুন।",
+                  "hi": "बात मानें, पर हल्के नीले का सुझाव दें।"
+                }
+              },
+              {
+                "partner": "Blue? Hmm, maybe you’re right.",
+                "reply": "Shall we try a little on one wall first?",
+                "cues": {
+                  "bn": "আগে একটা দেওয়ালে চেষ্টা করার প্রস্তাব দিন।",
+                  "hi": "पहले एक दीवार पर आज़माने का सुझाव दें।"
+                }
+              },
+              {
+                "partner": "Good idea. Let’s do that.",
+                "reply": "Great, I agree.",
+                "cues": {
+                  "bn": "একমত হোন।",
+                  "hi": "सहमति जताएँ।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

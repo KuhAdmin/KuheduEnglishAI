@@ -1,0 +1,847 @@
+{
+  "week": 48,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Vinod",
+          "text": "Hi, I don’t think we’ve met. I’m Vinod, Ramesh’s cousin.",
+          "translations": {
+            "bn": "নমস্কার, আমাদের বোধহয় আলাপ হয়নি। আমি বিনোদ, রমেশের তুতো ভাই।",
+            "hi": "नमस्ते, शायद हम पहले नहीं मिले। मैं विनोद हूँ, रमेश का चचेरा भाई।"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Nice to meet you, Vinod. I’m Shalini. Ramesh and I work together.",
+          "translations": {
+            "bn": "আলাপ করে ভালো লাগল, বিনোদ। আমি শালিনী। রমেশ আর আমি একসঙ্গে কাজ করি।",
+            "hi": "आपसे मिलकर अच्छा लगा, विनोद। मैं शालिनी हूँ। रमेश और मैं साथ काम करते हैं।"
+          }
+        },
+        {
+          "speaker": "Vinod",
+          "text": "Oh, really? How long have you known him?",
+          "translations": {
+            "bn": "তাই নাকি? ওকে কত দিন চেনেন?",
+            "hi": "अच्छा? आप उसे कब से जानती हैं?"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Well, let me think… about fourteen years. We started at the company together.",
+          "translations": {
+            "bn": "দাঁড়ান, ভাবি… প্রায় চোদ্দো বছর। আমরা একসঙ্গে কোম্পানিতে ঢুকেছিলাম।",
+            "hi": "हम्म, सोचने दीजिए… लगभग चौदह साल। हमने कंपनी में साथ ही शुरुआत की थी।"
+          }
+        },
+        {
+          "speaker": "Vinod",
+          "text": "Fourteen or forty? It’s a bit noisy here.",
+          "translations": {
+            "bn": "চোদ্দো, না চল্লিশ? এখানে একটু হইচই।",
+            "hi": "चौदह या चालीस? यहाँ थोड़ा शोर है।"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Fourteen: one, four. Not forty! I’m not that old.",
+          "translations": {
+            "bn": "চোদ্দো: এক, চার। চল্লিশ নয়! আমি অত বুড়ো নই।",
+            "hi": "चौदह: एक, चार। चालीस नहीं! मैं इतनी बूढ़ी नहीं हूँ।"
+          }
+        },
+        {
+          "speaker": "Vinod",
+          "text": "Ha! Sorry. So, what do you do there?",
+          "translations": {
+            "bn": "হা হা! দুঃখিত। তা, ওখানে আপনি কী করেন?",
+            "hi": "हा हा! माफ़ कीजिए। तो, आप वहाँ क्या करती हैं?"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "I’m a designer. I make the posters, the website, that kind of thing.",
+          "translations": {
+            "bn": "আমি ডিজাইনার। পোস্টার, ওয়েবসাইট, এই সব বানাই।",
+            "hi": "मैं डिज़ाइनर हूँ। पोस्टर, वेबसाइट, इस तरह की चीज़ें बनाती हूँ।"
+          }
+        },
+        {
+          "speaker": "Vinod",
+          "text": "That sounds interesting. Do you enjoy it?",
+          "translations": {
+            "bn": "বেশ মজার কাজ। ভালো লাগে?",
+            "hi": "दिलचस्प लगता है। आपको मज़ा आता है?"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Most of the time, yes. The deadlines can be stressful, but I love the creative part.",
+          "translations": {
+            "bn": "বেশিরভাগ সময়, হ্যাঁ। শেষ সময়সীমার চাপ থাকে, তবে সৃষ্টির দিকটা খুব ভালোবাসি।",
+            "hi": "ज़्यादातर, हाँ। डेडलाइन का तनाव होता है, पर रचनात्मक हिस्सा मुझे बहुत पसंद है।"
+          }
+        },
+        {
+          "speaker": "Vinod",
+          "text": "I know what you mean. I’m a teacher, and exam time is just like that.",
+          "translations": {
+            "bn": "বুঝতে পারছি। আমি শিক্ষক, পরীক্ষার সময়টা ঠিক এরকমই।",
+            "hi": "मैं समझ सकता हूँ। मैं टीचर हूँ, और परीक्षा का समय बिल्कुल ऐसा ही होता है।"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "What do you teach?",
+          "translations": {
+            "bn": "কী পড়ান?",
+            "hi": "आप क्या पढ़ाते हैं?"
+          }
+        },
+        {
+          "speaker": "Vinod",
+          "text": "Maths, to teenagers. It’s hard work, but it’s never boring.",
+          "translations": {
+            "bn": "অঙ্ক, কিশোরদের। পরিশ্রমের কাজ, তবে কখনও একঘেয়ে নয়।",
+            "hi": "गणित, किशोरों को। मेहनत का काम है, पर कभी उबाऊ नहीं।"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "I believe that! Shall we get some food and keep chatting?",
+          "translations": {
+            "bn": "বিশ্বাস করি! চলুন কিছু খাবার নিয়ে গল্প চালিয়ে যাই?",
+            "hi": "मुझे यक़ीन है! चलिए कुछ खाना लेकर बातें करते रहें?"
+          }
+        },
+        {
+          "speaker": "Vinod",
+          "text": "Good idea. The samosas look amazing.",
+          "translations": {
+            "bn": "ভালো কথা। শিঙাড়াগুলো দারুণ দেখাচ্ছে।",
+            "hi": "अच्छा विचार है। समोसे बहुत बढ़िया दिख रहे हैं।"
+          }
+        }
+      ],
+      "voices": {
+        "Vinod": "male",
+        "Shalini": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "fourteen",
+          "phonetic": "/ˌfɔːˈtiːn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "চোদ্দো",
+            "hi": "चौदह"
+          },
+          "syllables": ["four", "teen"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“teen” জোর দিয়ে বলুন।", "তাহলে “forty” বলে ভুল হবে না।"],
+            "en": ["Say “teen” stronger.", "Then it can’t be heard as “forty”."],
+            "hi": ["“teen” ज़ोर से बोलें।", "तब यह “forty” नहीं सुनाई देगा।"]
+          }
+        },
+        {
+          "word": "forty",
+          "phonetic": "/ˈfɔːti/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "চল্লিশ",
+            "hi": "चालीस"
+          },
+          "syllables": ["for", "ty"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বানান খেয়াল করুন: “four”-এর মতো “u” নেই।"],
+            "en": ["Say the first part stronger.", "Note the spelling: no “u”, unlike “four”."],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "स्पेलिंग पर ध्यान दें: “four” की तरह “u” नहीं है।"
+            ]
+          }
+        },
+        {
+          "word": "photograph",
+          "phonetic": "/ˈfəʊtəɡrɑːf/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ছবি, ফটো",
+            "hi": "तस्वीर, फ़ोटो"
+          },
+          "syllables": ["pho", "to", "graph"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "প্রথম অংশটি জোর দিয়ে বলুন।",
+              "“photographer”-এর সঙ্গে মেলান: জোরের জায়গা সরে যায়।"
+            ],
+            "en": [
+              "Say the first part stronger.",
+              "Compare it with “photographer”: the strong part moves."
+            ],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "“photographer” से मिलाएँ: ज़ोर की जगह बदल जाती है।"
+            ]
+          }
+        },
+        {
+          "word": "photographer",
+          "phonetic": "/fəˈtɒɡrəfə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আলোকচিত্রী",
+            "hi": "फ़ोटोग्राफ़र"
+          },
+          "syllables": ["pho", "tog", "ra", "pher"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "শব্দ লম্বা হলে জোরের জায়গা সরে যায়।"],
+            "en": [
+              "Say the second part stronger.",
+              "The strong part moves when the word gets longer."
+            ],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "शब्द लंबा होने पर ज़ोर की जगह बदल जाती है।"]
+          }
+        },
+        {
+          "word": "hotel",
+          "phonetic": "/həʊˈtel/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হোটেল",
+            "hi": "होटल"
+          },
+          "syllables": ["ho", "tel"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“HO-tel” নয়: দ্বিতীয় অংশে জোর।"],
+            "en": [
+              "Say the second part stronger.",
+              "Not “HO-tel”: the second part is the strong one."
+            ],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“HO-tel” नहीं: दूसरे हिस्से पर ज़ोर है।"]
+          }
+        },
+        {
+          "word": "develop",
+          "phonetic": "/dɪˈveləp/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "গড়ে তোলা, উন্নত করা",
+            "hi": "विकसित करना"
+          },
+          "syllables": ["de", "vel", "op"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“DE-ve-lop” নয়: মাঝের অংশে জোর।"],
+            "en": ["Say the second part stronger.", "Not “DE-ve-lop”: the middle part is strong."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“DE-ve-lop” नहीं: बीच के हिस्से पर ज़ोर है।"]
+          }
+        },
+        {
+          "word": "comfortable",
+          "phonetic": "/ˈkʌmftəbl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আরামদায়ক",
+            "hi": "आरामदायक"
+          },
+          "syllables": ["comf(or)", "ta", "ble"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“or” সাধারণত উচ্চারণ হয় না: চার নয়, তিন অংশ।"],
+            "en": [
+              "Say the first part stronger.",
+              "The “or” is usually not said: three parts, not four."
+            ],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "“or” आमतौर पर नहीं बोला जाता: चार नहीं, तीन हिस्से।"
+            ]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Would you like a cup of tea?",
+          "alsoAccepted": ["Do you want a cup of tea?", "Would you like some tea?"],
+          "translations": {
+            "bn": "এক কাপ চা খাবেন?",
+            "hi": "एक कप चाय चलेगी?"
+          },
+          "tips": {
+            "bn": [
+              "শব্দ জুড়ে বলুন: “a cup of” শোনায় “a cuppa”-র মতো।",
+              "শেষে গলা একটু ওপরে তুলুন।"
+            ],
+            "en": [
+              "Link the words: “a cup of” sounds like “a cuppa”.",
+              "Let your voice go up at the end."
+            ],
+            "hi": [
+              "शब्द जोड़कर बोलें: “a cup of” “a cuppa” जैसा सुनाई देता है।",
+              "आख़िर में आवाज़ थोड़ी ऊपर ले जाएँ।"
+            ]
+          }
+        },
+        {
+          "english": "What time does it start?",
+          "alsoAccepted": ["What time does it begin?", "When does it start?"],
+          "translations": {
+            "bn": "কটায় শুরু হবে?",
+            "hi": "यह कितने बजे शुरू होगा?"
+          },
+          "tips": {
+            "bn": ["“does it” শোনায় “ডাজিট”-এর মতো।", "“what” দিয়ে প্রশ্নে শেষে গলা নামে।"],
+            "en": [
+              "“does it” sounds like “duzit”.",
+              "In a “what” question, the voice goes down at the end."
+            ],
+            "hi": [
+              "“does it” “डज़िट” जैसा सुनाई देता है।",
+              "“what” वाले सवाल में आख़िर में आवाज़ नीचे जाती है।"
+            ]
+          }
+        },
+        {
+          "english": "Let’s meet at eight in front of the station.",
+          "alsoAccepted": [
+            "Let’s meet in front of the station at eight.",
+            "Let us meet at eight in front of the station."
+          ],
+          "translations": {
+            "bn": "চলুন আটটায় স্টেশনের সামনে দেখা করি।",
+            "hi": "चलिए आठ बजे स्टेशन के सामने मिलते हैं।"
+          },
+          "tips": {
+            "bn": [
+              "“meet at eight” জুড়ে বলুন: “মি-টাট-এইট”।",
+              "জরুরি শব্দে জোর দিন: meet, eight, station।"
+            ],
+            "en": [
+              "Link “meet at eight”: “mee-tat-eight”.",
+              "Stress the important words: meet, eight, station."
+            ],
+            "hi": [
+              "“meet at eight” जोड़कर बोलें: “मी-टैट-एट”।",
+              "ज़रूरी शब्दों पर ज़ोर दें: meet, eight, station।"
+            ]
+          }
+        },
+        {
+          "english": "It’s not far. It’s just around the corner.",
+          "alsoAccepted": [
+            "It isn’t far. It’s just around the corner.",
+            "It’s not far. It’s just round the corner."
+          ],
+          "translations": {
+            "bn": "দূরে নয়। এই তো মোড়ের কাছেই।",
+            "hi": "दूर नहीं है। बस नुक्कड़ पर ही है।"
+          },
+          "tips": {
+            "bn": ["“just around” জুড়ে যায়: “জাস-টারাউন্ড”।", "দাঁড়িতে একটু থামুন।"],
+            "en": ["“just around” links: “jus-taround”.", "Pause a little at the full stop."],
+            "hi": ["“just around” जुड़ जाता है: “जस-टराउंड”।", "पूर्ण विराम पर थोड़ा रुकें।"]
+          }
+        },
+        {
+          "english": "Really? I didn’t know that!",
+          "alsoAccepted": ["Really? I did not know that!", "Really? I didn’t know!"],
+          "translations": {
+            "bn": "তাই নাকি? জানতাম না তো!",
+            "hi": "सच में? मुझे यह पता नहीं था!"
+          },
+          "tips": {
+            "bn": ["অবাক ভাব বোঝাতে “Really?”-তে গলা তুলুন।", "“know”-তে জোর দিন।"],
+            "en": ["Let “Really?” rise to show surprise.", "Stress “know”."],
+            "hi": ["हैरानी दिखाने के लिए “Really?” पर आवाज़ ऊपर ले जाएँ।", "“know” पर ज़ोर दें।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Zara",
+      "asMan": "Zubin",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "So, what’s the best place you’ve ever visited?",
+          "reply": "Hmm, let me think… I’d say Darjeeling, because of the mountains.",
+          "cues": {
+            "bn": "ভাবার সময় নিতে কিছু একটা বলে উত্তর দিন।",
+            "hi": "सोचने का समय लेते हुए कुछ कहें, फिर जवाब दें।"
+          }
+        },
+        {
+          "partner": "Why the mountains?",
+          "reply": "Well, it’s hard to explain, but the air feels so fresh and calm.",
+          "cues": {
+            "bn": "থেমে না গিয়ে একটা কথা দিয়ে শুরু করে কারণ বলুন।",
+            "hi": "रुकने की बजाय कोई शब्द कहकर शुरू करें और वजह बताएँ।"
+          }
+        },
+        {
+          "partner": "What did you do there?",
+          "reply": "We walked a lot, drank amazing tea, and, what else… oh, we took the toy train.",
+          "cues": {
+            "bn": "না থেমে ওখানকার কয়েকটা কথা বলুন।",
+            "hi": "बिना रुके वहाँ की कुछ बातें बताएँ।"
+          }
+        },
+        {
+          "partner": "What’s the toy train?",
+          "reply": "It’s a small, slow train, kind of like a toy, that goes up the hills.",
+          "cues": {
+            "bn": "ঠিক শব্দ না পেলে কাছাকাছি কিছু দিয়ে বোঝান।",
+            "hi": "सटीक शब्द न मिले, तो मिलती-जुलती बात से समझाएँ।"
+          }
+        },
+        {
+          "partner": "Would you go back?",
+          "reply": "Oh, definitely. To be honest, I’d go back tomorrow if I could.",
+          "cues": {
+            "bn": "জোর দিয়ে হ্যাঁ বলুন।",
+            "hi": "पूरे यक़ीन से हाँ कहें।"
+          }
+        },
+        {
+          "partner": "You make it sound wonderful.",
+          "reply": "It really is. You should go there one day.",
+          "cues": {
+            "bn": "পরামর্শ দিন।",
+            "hi": "सलाह दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Five-minute Fluency Challenge",
+        "translations": {
+          "bn": "পাঁচ মিনিটের সাবলীলতার চ্যালেঞ্জ",
+          "hi": "पाँच मिनट की धाराप्रवाह चुनौती"
+        }
+      },
+      "instruction": {
+        "text": "Speak for five minutes about a place, a person and a plan in your life. Keep going, in clear groups of words.",
+        "translations": {
+          "bn": "আপনার জীবনের একটা জায়গা, একজন মানুষ আর একটা পরিকল্পনা নিয়ে পাঁচ মিনিট বলুন। থামবেন না, স্পষ্ট শব্দগুচ্ছে বলুন।",
+          "hi": "अपनी ज़िंदगी की एक जगह, एक व्यक्ति और एक योजना पर पाँच मिनट बोलें। रुकें नहीं, शब्दों के साफ़ समूहों में बोलें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Speak in short groups of words, with small pauses",
+          "translations": {
+            "bn": "ছোট ছোট শব্দগুচ্ছে বলুন, মাঝে একটু থেমে",
+            "hi": "शब्दों के छोटे समूहों में बोलें, बीच में हल्का रुककर"
+          }
+        },
+        {
+          "text": "Stress the important word in each idea",
+          "translations": {
+            "bn": "প্রতিটা ভাবনার জরুরি শব্দে জোর দিন",
+            "hi": "हर विचार के ज़रूरी शब्द पर ज़ोर दें"
+          }
+        },
+        {
+          "text": "Link words together: “an apple”, “not at all”",
+          "translations": {
+            "bn": "শব্দ জুড়ে বলুন: “an apple”, “not at all”",
+            "hi": "शब्द जोड़कर बोलें: “an apple”, “not at all”"
+          }
+        },
+        {
+          "text": "Use a filler, not silence: “Well, let me think …”",
+          "translations": {
+            "bn": "চুপ না থেকে কিছু একটা বলুন: “Well, let me think …”",
+            "hi": "चुप रहने की बजाय कुछ कहें: “Well, let me think …”"
+          }
+        },
+        {
+          "text": "Keep a steady pace: not too fast, not too slow",
+          "translations": {
+            "bn": "সমান গতিতে বলুন: খুব দ্রুতও না, খুব ধীরেও না",
+            "hi": "एक-सी रफ़्तार रखें: न बहुत तेज़, न बहुत धीमे"
+          }
+        },
+        {
+          "text": "Speak for five minutes without stopping",
+          "translations": {
+            "bn": "না থেমে পাঁচ মিনিট বলুন",
+            "hi": "बिना रुके पाँच मिनट बोलें"
+          }
+        }
+      ],
+      "phrases": [
+        "Well, let me think …",
+        "What I’d like to say is …",
+        "The thing is, …",
+        "Another thing is …",
+        "Anyway, …",
+        "To sum up, …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which part is strong in “fourteen”?",
+            "translations": {
+              "bn": "“fourteen”-এ কোন অংশে জোর?",
+              "hi": "“fourteen” में किस हिस्से पर ज़ोर है?"
+            }
+          },
+          "answer": "teen",
+          "others": ["four", "both the same"]
+        },
+        {
+          "question": {
+            "text": "Which part is strong in “hotel”?",
+            "translations": {
+              "bn": "“hotel”-এ কোন অংশে জোর?",
+              "hi": "“hotel” में किस हिस्से पर ज़ोर है?"
+            }
+          },
+          "answer": "tel",
+          "others": ["ho", "neither"]
+        },
+        {
+          "question": {
+            "text": "In “Are you coming?”, your voice usually…",
+            "translations": {
+              "bn": "“Are you coming?” বলার সময় গলা সাধারণত…",
+              "hi": "“Are you coming?” में आवाज़ आमतौर पर…"
+            }
+          },
+          "answer": "goes up at the end",
+          "others": ["goes down at the end", "stays flat"]
+        },
+        {
+          "question": {
+            "text": "You need a second to think. What can you say?",
+            "translations": {
+              "bn": "ভাবার জন্য এক মুহূর্ত দরকার। কী বলবেন?",
+              "hi": "सोचने के लिए एक पल चाहिए। क्या कह सकते हैं?"
+            }
+          },
+          "answer": "Well, let me think…",
+          "others": ["Er… er… er… er…", "Stop."]
+        },
+        {
+          "question": {
+            "text": "Which is split into natural groups of words?",
+            "translations": {
+              "bn": "কোনটা স্বাভাবিক শব্দগুচ্ছে ভাগ করা?",
+              "hi": "कौन-सा वाक्य शब्दों के सहज समूहों में बँटा है?"
+            }
+          },
+          "answer": "After lunch / we went / to the park.",
+          "others": [
+            "After / lunch we / went to the / park.",
+            "After lunch we went to / the / park."
+          ]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Prakash",
+          "text": "Hello! Are you the new neighbour in 4C?",
+          "translations": {
+            "bn": "নমস্কার! আপনি কি 4C-র নতুন প্রতিবেশী?",
+            "hi": "नमस्ते! क्या आप 4C की नई पड़ोसी हैं?"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "Yes, that’s me. I’m Gita. We moved in last week.",
+          "translations": {
+            "bn": "হ্যাঁ, আমিই। আমি গীতা। গত সপ্তাহে এসেছি।",
+            "hi": "हाँ, मैं ही हूँ। मैं गीता हूँ। हम पिछले हफ़्ते आए।"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Welcome! I’m Prakash, from 4D. How are you finding the building?",
+          "translations": {
+            "bn": "স্বাগত! আমি প্রকাশ, 4D-তে থাকি। বাড়িটা কেমন লাগছে?",
+            "hi": "स्वागत है! मैं प्रकाश हूँ, 4D से। इमारत कैसी लग रही है?"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "Well, it’s quiet, which I love. And the view from the balcony is lovely.",
+          "translations": {
+            "bn": "বেশ শান্ত, যেটা আমার খুব পছন্দ। আর বারান্দা থেকে দৃশ্যটা চমৎকার।",
+            "hi": "हम्म, यहाँ शांति है, जो मुझे बहुत पसंद है। और बालकनी से नज़ारा बहुत प्यारा है।"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Isn’t it? Where did you live before?",
+          "translations": {
+            "bn": "তাই না? আগে কোথায় থাকতেন?",
+            "hi": "है न? पहले आप कहाँ रहती थीं?"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "In Bhopal, for about ten years. My husband got a job here, so… here we are.",
+          "translations": {
+            "bn": "ভোপালে, প্রায় দশ বছর। আমার স্বামী এখানে চাকরি পেলেন, তাই… চলে এলাম।",
+            "hi": "भोपाल में, लगभग दस साल। मेरे पति को यहाँ नौकरी मिली, तो… हम यहाँ आ गए।"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Bhopal! I’ve heard it’s beautiful, with all the lakes.",
+          "translations": {
+            "bn": "ভোপাল! শুনেছি লেকগুলোর জন্য খুব সুন্দর।",
+            "hi": "भोपाल! सुना है झीलों की वजह से बहुत सुंदर है।"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "It really is. Have you ever been there?",
+          "translations": {
+            "bn": "সত্যিই সুন্দর। কখনও গেছেন?",
+            "hi": "सच में है। क्या आप कभी वहाँ गए हैं?"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Not yet. But, you know, I’d love to visit one day.",
+          "translations": {
+            "bn": "এখনও না। তবে, জানেন, একদিন যাওয়ার খুব ইচ্ছে।",
+            "hi": "अभी तक नहीं। पर, पता है, किसी दिन ज़रूर जाना चाहूँगा।"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "You should. Let me know, and I’ll tell you the best places.",
+          "translations": {
+            "bn": "যাওয়া উচিত। জানাবেন, সেরা জায়গাগুলো বলে দেব।",
+            "hi": "ज़रूर जाइए। बताइएगा, मैं सबसे अच्छी जगहें बता दूँगी।"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Thanks! And if you need anything here, just knock on my door.",
+          "translations": {
+            "bn": "ধন্যবাদ! আর এখানে কিছু দরকার হলে আমার দরজায় টোকা দেবেন।",
+            "hi": "धन्यवाद! और यहाँ कुछ भी चाहिए हो, तो बस मेरा दरवाज़ा खटखटा दीजिए।"
+          }
+        },
+        {
+          "speaker": "Gita",
+          "text": "That’s very kind. It’s nice to have friendly neighbours.",
+          "translations": {
+            "bn": "খুব ভালো লাগল। বন্ধুর মতো প্রতিবেশী পাওয়া ভাগ্যের কথা।",
+            "hi": "आप बहुत भले हैं। दोस्ताना पड़ोसी मिलना अच्छा लगता है।"
+          }
+        }
+      ],
+      "voices": {
+        "Prakash": "male",
+        "Gita": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the travel agent",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "So you’d like to fly on Thursday?",
+          "reply": "No, on Tuesday. Tuesday the ninth.",
+          "cues": {
+            "bn": "দিনটায় জোর দিয়ে শুধরে দিন।",
+            "hi": "दिन पर ज़ोर देकर सुधारें।"
+          }
+        },
+        {
+          "partner": "Sorry! Tuesday the ninth. One ticket?",
+          "reply": "Two tickets, please. One adult and one child.",
+          "cues": {
+            "bn": "সংখ্যাটায় জোর দিয়ে বলুন।",
+            "hi": "गिनती पर ज़ोर देकर बताएँ।"
+          }
+        },
+        {
+          "partner": "A morning or an evening flight?",
+          "reply": "The morning flight, if possible.",
+          "cues": {
+            "bn": "সময়টা বলুন।",
+            "hi": "समय बताएँ।"
+          }
+        },
+        {
+          "partner": "Done. Two tickets, Tuesday morning.",
+          "reply": "Perfect, thank you. That was quick!",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A chat on the train",
+            "translations": {
+              "bn": "ট্রেনে আলাপ",
+              "hi": "ट्रेन में बातचीत"
+            }
+          },
+          "roleplay": {
+            "partner": "the passenger",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Excuse me, is this seat free?",
+                "reply": "Yes, it is. Please sit down.",
+                "cues": {
+                  "bn": "হ্যাঁ বলে বসতে বলুন।",
+                  "hi": "हाँ कहें और बैठने को कहें।"
+                }
+              },
+              {
+                "partner": "Thanks. Are you going all the way to Mumbai?",
+                "reply": "Yes. I’m visiting my sister for a week. How about you?",
+                "cues": {
+                  "bn": "উত্তর দিয়ে পাল্টা প্রশ্ন করুন।",
+                  "hi": "जवाब दें और वही सवाल वापस पूछें।"
+                }
+              },
+              {
+                "partner": "I’m going for work. Have you been to Mumbai before?",
+                "reply": "Well, let me think… yes, twice, but a long time ago.",
+                "cues": {
+                  "bn": "ভাবার সময় নিয়ে উত্তর দিন।",
+                  "hi": "सोचने का समय लेकर जवाब दें।"
+                }
+              },
+              {
+                "partner": "It’s changed a lot. You’ll see!",
+                "reply": "I’m sure it has. I can’t wait to see it.",
+                "cues": {
+                  "bn": "আগ্রহ দেখান।",
+                  "hi": "उत्सुकता दिखाएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Small talk at work",
+            "translations": {
+              "bn": "অফিসে টুকটাক কথা",
+              "hi": "दफ़्तर में हल्की-फुल्की बात"
+            }
+          },
+          "roleplay": {
+            "partner": "Ankita",
+            "asMan": "Ankit",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! Did you have a good weekend?",
+                "reply": "Yes, thanks. I went hiking with some friends. What about you?",
+                "cues": {
+                  "bn": "উত্তর দিয়ে পাল্টা জিজ্ঞেস করুন।",
+                  "hi": "जवाब दें और वापस पूछें।"
+                }
+              },
+              {
+                "partner": "I just relaxed at home. Where did you go hiking?",
+                "reply": "We went to a hill near the city. It was, you know, quite a long climb.",
+                "cues": {
+                  "bn": "না থেমে জায়গাটার কথা বলুন।",
+                  "hi": "बिना रुके जगह के बारे में बताएँ।"
+                }
+              },
+              {
+                "partner": "Was it worth it?",
+                "reply": "Oh, absolutely. The view from the top was amazing.",
+                "cues": {
+                  "bn": "জোর দিয়ে উত্তর দিন।",
+                  "hi": "ज़ोर देकर जवाब दें।"
+                }
+              },
+              {
+                "partner": "Maybe I’ll join you next time.",
+                "reply": "You should! I’ll let you know when we go again.",
+                "cues": {
+                  "bn": "রাজি হয়ে ডাকার কথা দিন।",
+                  "hi": "हाँ कहें और बुलाने का वादा करें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Meeting a new classmate",
+            "translations": {
+              "bn": "নতুন সহপাঠীর সঙ্গে আলাপ",
+              "hi": "नए सहपाठी से मुलाक़ात"
+            }
+          },
+          "roleplay": {
+            "partner": "Arya",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi, I’m new in this class. Is this the English course?",
+                "reply": "Yes, it is. Welcome! I started here three months ago.",
+                "cues": {
+                  "bn": "স্বাগত জানিয়ে নিজের কথা বলুন।",
+                  "hi": "स्वागत करें और अपने बारे में बताएँ।"
+                }
+              },
+              {
+                "partner": "Is the teacher nice?",
+                "reply": "Very nice. She’s patient, and she makes the lessons fun.",
+                "cues": {
+                  "bn": "শিক্ষকের কথা বলুন।",
+                  "hi": "टीचर के बारे में बताएँ।"
+                }
+              },
+              {
+                "partner": "Why are you learning English?",
+                "reply": "Well, the thing is, I want to study abroad next year.",
+                "cues": {
+                  "bn": "থেমে না গিয়ে একটা কথা দিয়ে শুরু করে কারণ বলুন।",
+                  "hi": "रुकने की बजाय कोई शब्द कहकर शुरू करें, फिर वजह बताएँ।"
+                }
+              },
+              {
+                "partner": "That’s exciting! Good luck.",
+                "reply": "Thanks! Let’s practise together sometime.",
+                "cues": {
+                  "bn": "একসঙ্গে অনুশীলনের প্রস্তাব দিন।",
+                  "hi": "साथ अभ्यास करने का सुझाव दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

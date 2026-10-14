@@ -1,0 +1,808 @@
+{
+  "week": 50,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Asha",
+          "text": "Ravi? Is that you? We met at the English class last year!",
+          "translations": {
+            "bn": "রবি? তুমি? গত বছর ইংরেজি ক্লাসে আমাদের আলাপ হয়েছিল!",
+            "hi": "रवि? तुम हो? पिछले साल अंग्रेज़ी क्लास में हम मिले थे!"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "Asha! Of course I remember. You were so nervous on the first day.",
+          "translations": {
+            "bn": "আশা! মনে আছে বইকি। প্রথম দিন তুমি খুব ঘাবড়ে ছিলে।",
+            "hi": "आशा! बिल्कुल याद है। पहले दिन तुम बहुत घबराई हुई थीं।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "I was! I could only say “Hello, my name is Asha.” Now I use English every day.",
+          "translations": {
+            "bn": "ছিলাম তো! শুধু “Hello, my name is Asha” বলতে পারতাম। এখন রোজ ইংরেজি বলি।",
+            "hi": "थी तो! मैं बस “Hello, my name is Asha” कह पाती थी। अब रोज़ अंग्रेज़ी बोलती हूँ।"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "Me too. Sorry, did you hear that announcement? I think our train is delayed.",
+          "translations": {
+            "bn": "আমিও। দাঁড়াও, ঘোষণাটা শুনলে? মনে হয় আমাদের ট্রেন দেরিতে।",
+            "hi": "मैं भी। सुनो, क्या तुमने वह घोषणा सुनी? लगता है हमारी ट्रेन लेट है।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Yes. It said the train to Delhi is twenty minutes late, from platform three.",
+          "translations": {
+            "bn": "হ্যাঁ। বলল দিল্লির ট্রেন কুড়ি মিনিট দেরিতে, তিন নম্বর প্ল্যাটফর্ম থেকে।",
+            "hi": "हाँ। कहा कि दिल्ली वाली ट्रेन बीस मिनट लेट है, प्लेटफ़ॉर्म तीन से।"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "Twenty minutes. Perfect, then we have time for tea. Tell me, how was your year?",
+          "translations": {
+            "bn": "কুড়ি মিনিট। ভালোই হলো, চা খাওয়ার সময় আছে। বলো, বছরটা কেমন গেল?",
+            "hi": "बीस मिनट। बढ़िया, तो चाय का समय है। बताओ, तुम्हारा साल कैसा रहा?"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Well, a lot happened. In March, I started a new job, which was scary at first.",
+          "translations": {
+            "bn": "অনেক কিছু হয়েছে। মার্চে নতুন চাকরি শুরু করলাম, প্রথমে বেশ ভয় লাগত।",
+            "hi": "हम्म, बहुत कुछ हुआ। मार्च में मैंने नई नौकरी शुरू की, जो शुरू में डरावनी लगी।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Then, in my first meeting, I had to give an update in English. My hands were shaking!",
+          "translations": {
+            "bn": "তারপর প্রথম মিটিংয়েই ইংরেজিতে আপডেট দিতে হলো। হাত কাঁপছিল!",
+            "hi": "फिर, पहली ही मीटिंग में मुझे अंग्रेज़ी में अपडेट देना पड़ा। मेरे हाथ काँप रहे थे!"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "And? What happened?",
+          "translations": {
+            "bn": "তারপর? কী হলো?",
+            "hi": "और? क्या हुआ?"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "I spoke slowly, I connected my ideas, and in the end my manager said it was very clear.",
+          "translations": {
+            "bn": "ধীরে বললাম, ভাবনাগুলো জুড়ে জুড়ে বললাম, আর শেষে ম্যানেজার বললেন খুব স্পষ্ট হয়েছে।",
+            "hi": "मैंने धीरे-धीरे बात की, अपने विचार जोड़े, और आख़िर में मैनेजर ने कहा कि बात बहुत साफ़ थी।"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "That’s brilliant. Do you think learning English has changed you?",
+          "translations": {
+            "bn": "দারুণ। তোমার কি মনে হয় ইংরেজি শেখা তোমাকে বদলে দিয়েছে?",
+            "hi": "शानदार। क्या तुम्हें लगता है कि अंग्रेज़ी सीखने से तुम बदल गई हो?"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "In my view, yes. I’m more confident. On the other hand, I still make mistakes.",
+          "translations": {
+            "bn": "আমার মতে, হ্যাঁ। আত্মবিশ্বাস বেড়েছে। অন্যদিকে, এখনও ভুল করি।",
+            "hi": "मेरे विचार में, हाँ। मुझमें आत्मविश्वास आया है। दूसरी तरफ़, ग़लतियाँ अब भी होती हैं।"
+          }
+        },
+        {
+          "speaker": "Ravi",
+          "text": "Everyone does. The important thing is that you keep talking.",
+          "translations": {
+            "bn": "সবাই করে। আসল কথা হলো, কথা বলে যাওয়া।",
+            "hi": "सबसे होती हैं। ज़रूरी बात यह है कि तुम बोलती रहो।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Exactly. Oh, there’s our train. Let’s keep in touch, in English!",
+          "translations": {
+            "bn": "একদম। ও, ওই তো ট্রেন। যোগাযোগ রেখো, ইংরেজিতে!",
+            "hi": "बिल्कुल। अरे, हमारी ट्रेन आ गई। संपर्क में रहना, अंग्रेज़ी में!"
+          }
+        }
+      ],
+      "voices": {
+        "Asha": "female",
+        "Ravi": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "by the way",
+          "phonetic": "/baɪ ðə ˈweɪ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভালো কথা",
+            "hi": "वैसे"
+          },
+          "syllables": ["by", "the", "way"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“way” জোর দিয়ে বলুন।", "প্রসঙ্গ বদলাতে বলুন।"],
+            "en": ["Say “way” stronger.", "Use it to change the topic."],
+            "hi": ["“way” ज़ोर से बोलें।", "बात का विषय बदलने के लिए।"]
+          }
+        },
+        {
+          "word": "anyway",
+          "phonetic": "/ˈeniweɪ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যাই হোক",
+            "hi": "ख़ैर"
+          },
+          "syllables": ["an", "y", "way"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "মূল কথায় ফিরতে বলুন।"],
+            "en": ["Say the first part stronger.", "Use it to go back to the main point."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "मुख्य बात पर लौटने के लिए।"]
+          }
+        },
+        {
+          "word": "actually",
+          "phonetic": "/ˈæktʃuəli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আসলে",
+            "hi": "दरअसल"
+          },
+          "syllables": ["ac", "tu", "al", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "কিছু শুধরে দিতে বা অবাক করা কিছু যোগ করতে।"],
+            "en": [
+              "Say the first part stronger.",
+              "Use it to correct something, or to add a surprise."
+            ],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "कुछ सुधारने या कोई हैरान करने वाली बात जोड़ने के लिए।"
+            ]
+          }
+        },
+        {
+          "word": "catch up",
+          "phonetic": "/ˌkætʃ ˈʌp/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "খবরাখবর নেওয়া",
+            "hi": "हालचाल जानना"
+          },
+          "syllables": ["catch", "up"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“up” জোর দিয়ে বলুন।", "“Let’s catch up” মানে চলো খবরাখবর নিই।"],
+            "en": ["Say “up” stronger.", "“Let’s catch up” means let’s share our news."],
+            "hi": ["“up” ज़ोर से बोलें।", "“Let’s catch up” मतलब चलो एक-दूसरे का हालचाल लें।"]
+          }
+        },
+        {
+          "word": "keep in touch",
+          "phonetic": "/ˌkiːp ɪn ˈtʌtʃ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যোগাযোগ রাখা",
+            "hi": "संपर्क में रहना"
+          },
+          "syllables": ["keep", "in", "touch"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“touch” জোর দিয়ে বলুন।", "মানে কারও সঙ্গে কথা বা চিঠিপত্র চালিয়ে যাওয়া।"],
+            "en": ["Say “touch” stronger.", "It means to keep talking or writing to someone."],
+            "hi": ["“touch” ज़ोर से बोलें।", "मतलब किसी से बात करते या लिखते रहना।"]
+          }
+        },
+        {
+          "word": "sounds good",
+          "phonetic": "/ˌsaʊndz ˈɡʊd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ঠিক আছে, ভালো কথা",
+            "hi": "ठीक है, बढ़िया"
+          },
+          "syllables": ["sounds", "good"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“good” জোর দিয়ে বলুন।", "কোনো পরিকল্পনায় বন্ধুর মতো রাজি হওয়া।"],
+            "en": ["Say “good” stronger.", "A friendly way to agree to a plan."],
+            "hi": ["“good” ज़ोर से बोलें।", "किसी योजना पर दोस्ताना ढंग से हामी भरना।"]
+          }
+        },
+        {
+          "word": "you know what",
+          "phonetic": "/juː nəʊ ˈwɒt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "জানো কী",
+            "hi": "पता है क्या"
+          },
+          "syllables": ["you", "know", "what"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“what” জোর দিয়ে বলুন।", "নতুন ভাবনা বা চমকের আগে বলুন।"],
+            "en": ["Say “what” stronger.", "Use it before a new idea or a surprise."],
+            "hi": ["“what” ज़ोर से बोलें।", "किसी नए विचार या हैरानी से पहले कहें।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Last year was one of the most important years of my life.",
+          "alsoAccepted": ["Last year was one of the most important years in my life."],
+          "translations": {
+            "bn": "গত বছরটা আমার জীবনের সবচেয়ে গুরুত্বপূর্ণ বছরগুলোর একটা।",
+            "hi": "पिछला साल मेरी ज़िंदगी के सबसे अहम सालों में से एक था।"
+          },
+          "tips": {
+            "bn": ["সময়টা বলে নিজের গল্প শুরু করুন।", "“one of the most …”-এর পরে বহুবচন।"],
+            "en": [
+              "Begin a personal story by setting the time.",
+              "“one of the most …” + a plural noun."
+            ],
+            "hi": ["समय बताकर अपनी कहानी शुरू करें।", "“one of the most …” के बाद बहुवचन।"]
+          }
+        },
+        {
+          "english": "At first, speaking English felt really difficult.",
+          "alsoAccepted": [
+            "At first, speaking English was really difficult.",
+            "At first, it felt really difficult to speak English."
+          ],
+          "translations": {
+            "bn": "শুরুতে ইংরেজি বলা সত্যিই কঠিন লাগত।",
+            "hi": "शुरू में अंग्रेज़ी बोलना सच में मुश्किल लगता था।"
+          },
+          "tips": {
+            "bn": ["শুরুতে কেমন ছিল বলুন।", "“felt” দিয়ে অনুভূতি বোঝান।"],
+            "en": ["Say how things were at the start.", "“felt” describes a feeling."],
+            "hi": ["बताएँ कि शुरुआत में कैसा था।", "“felt” से भावना बताएँ।"]
+          }
+        },
+        {
+          "english": "Then I decided to practise for ten minutes every day.",
+          "alsoAccepted": [
+            "Then I decided to practice for ten minutes every day.",
+            "Then I decided to practise ten minutes every day."
+          ],
+          "translations": {
+            "bn": "তারপর রোজ দশ মিনিট অনুশীলন করার সিদ্ধান্ত নিলাম।",
+            "hi": "फिर मैंने रोज़ दस मिनट अभ्यास करने का फ़ैसला किया।"
+          },
+          "tips": {
+            "bn": ["গল্পের মোড় ঘোরানো মুহূর্তটা বলুন।", "“decided to”-এর পরে কী করলেন।"],
+            "en": ["Say the turning point of your story.", "“decided to” + what you did."],
+            "hi": ["कहानी का मोड़ बताएँ।", "“decided to” के बाद क्या किया।"]
+          }
+        },
+        {
+          "english": "Slowly, my confidence grew.",
+          "alsoAccepted": [
+            "Little by little, my confidence grew.",
+            "Slowly, I became more confident."
+          ],
+          "translations": {
+            "bn": "ধীরে ধীরে আমার আত্মবিশ্বাস বাড়ল।",
+            "hi": "धीरे-धीरे मेरा आत्मविश्वास बढ़ा।"
+          },
+          "tips": {
+            "bn": ["সময়ের সঙ্গে বদলটা দেখান।", "ছোট বাক্যে গল্প জোরালো হয়।"],
+            "en": ["Show the change over time.", "Short sentences make a story strong."],
+            "hi": ["समय के साथ बदलाव दिखाएँ।", "छोटे वाक्य कहानी को असरदार बनाते हैं।"]
+          }
+        },
+        {
+          "english": "Looking back, I’m proud of how far I’ve come.",
+          "alsoAccepted": [
+            "Looking back, I am proud of how far I have come.",
+            "Looking back, I’m proud of how far I have come."
+          ],
+          "translations": {
+            "bn": "পেছন ফিরে তাকালে, এতটা পথ আসতে পেরে আমার গর্ব হয়।",
+            "hi": "पीछे मुड़कर देखूँ, तो मुझे गर्व है कि मैंने कितना सफ़र तय किया।"
+          },
+          "tips": {
+            "bn": ["একটা অনুভূতি দিয়ে গল্প শেষ করুন।", "“Looking back” মানে অতীতের কথা ভাবা।"],
+            "en": [
+              "End your story with a feeling.",
+              "“Looking back” means thinking about the past."
+            ],
+            "hi": [
+              "एक भावना के साथ कहानी ख़त्म करें।",
+              "“Looking back” मतलब बीते समय के बारे में सोचना।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "the radio host",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Today’s question: should every child learn English at school? What’s your view?",
+          "reply": "In my view, yes. English helps children with their studies, travel and jobs.",
+          "cues": {
+            "bn": "মত দিন আর কারণ বলুন।",
+            "hi": "राय दें और वजहें बताएँ।"
+          }
+        },
+        {
+          "partner": "Can you explain that a little more?",
+          "reply": "For example, many websites and books are in English, so it opens a lot of doors.",
+          "cues": {
+            "bn": "উদাহরণ দিয়ে বুঝিয়ে বলুন।",
+            "hi": "उदाहरण देकर समझाएँ।"
+          }
+        },
+        {
+          "partner": "But some people say children should learn their home language first.",
+          "reply": "That’s a fair point. Children should learn both, and the home language mustn’t be lost.",
+          "cues": {
+            "bn": "মেনে নিয়ে মাঝামাঝি একটা কথা বলুন।",
+            "hi": "बात मानें और बीच का रास्ता बताएँ।"
+          }
+        },
+        {
+          "partner": "Is it hard to learn two languages?",
+          "reply": "Not really. Young children learn languages quickly, especially through play.",
+          "cues": {
+            "bn": "নিজের মত কারণসহ বলুন।",
+            "hi": "वजह के साथ अपनी राय दें।"
+          }
+        },
+        {
+          "partner": "What would you say to someone who is afraid of speaking English?",
+          "reply": "I’d say: start small, make mistakes and keep talking. That’s how I learned.",
+          "cues": {
+            "bn": "নিজের অভিজ্ঞতা থেকে পরামর্শ দিন।",
+            "hi": "अपने अनुभव से सलाह दें।"
+          }
+        },
+        {
+          "partner": "Wonderful advice. Thank you for joining us.",
+          "reply": "Thank you for having me. It was a pleasure.",
+          "cues": {
+            "bn": "ধন্যবাদ জানিয়ে শেষ করুন।",
+            "hi": "धन्यवाद कहकर ख़त्म करें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "My Independent English Performance",
+        "translations": {
+          "bn": "আমার নিজের ইংরেজি পরিবেশনা",
+          "hi": "मेरी आत्मनिर्भर अंग्रेज़ी प्रस्तुति"
+        }
+      },
+      "instruction": {
+        "text": "Show everything you can do. Talk about your English journey: a story, an opinion and your next goal.",
+        "translations": {
+          "bn": "যা পারেন সব দেখান। আপনার ইংরেজি শেখার যাত্রা নিয়ে বলুন: একটা গল্প, একটা মত আর পরের লক্ষ্য।",
+          "hi": "जो कुछ आता है, सब दिखाएँ। अपनी अंग्रेज़ी यात्रा पर बोलें: एक कहानी, एक राय और अगला लक्ष्य।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Open clearly: say what you will talk about",
+          "translations": {
+            "bn": "স্পষ্টভাবে শুরু করুন: কী নিয়ে বলবেন বলুন",
+            "hi": "साफ़ शुरुआत करें: बताएँ कि किस बारे में बोलना है"
+          }
+        },
+        {
+          "text": "Tell a short story from your journey",
+          "translations": {
+            "bn": "আপনার যাত্রার একটা ছোট গল্প বলুন",
+            "hi": "अपनी यात्रा की एक छोटी कहानी सुनाएँ"
+          }
+        },
+        {
+          "text": "Describe a real situation where you used English",
+          "translations": {
+            "bn": "এমন একটা সত্যি পরিস্থিতির কথা বলুন যেখানে ইংরেজি বলেছেন",
+            "hi": "किसी असली मौक़े का वर्णन करें, जब अंग्रेज़ी में बात की"
+          }
+        },
+        {
+          "text": "Give an opinion and defend it with a reason",
+          "translations": {
+            "bn": "একটা মত দিন আর কারণ দিয়ে তার পক্ষে বলুন",
+            "hi": "एक राय दें और वजह से उसका बचाव करें"
+          }
+        },
+        {
+          "text": "Explain your next English goal",
+          "translations": {
+            "bn": "ইংরেজিতে আপনার পরের লক্ষ্য বুঝিয়ে বলুন",
+            "hi": "अंग्रेज़ी में अपना अगला लक्ष्य समझाएँ"
+          }
+        },
+        {
+          "text": "Finish with a clear summary",
+          "translations": {
+            "bn": "স্পষ্ট সারাংশ দিয়ে শেষ করুন",
+            "hi": "साफ़ सार के साथ ख़त्म करें"
+          }
+        }
+      ],
+      "phrases": [
+        "Today I’d like to share …",
+        "When I started, …",
+        "One day, …",
+        "In my view, …",
+        "My next goal is to …",
+        "To sum up, …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "You hear: “The train is twenty minutes late.” What can you do?",
+            "translations": {
+              "bn": "আপনি শুনলেন: “The train is twenty minutes late.” কী করতে পারেন?",
+              "hi": "आपने सुना: “The train is twenty minutes late.” क्या कर सकते हैं?"
+            }
+          },
+          "answer": "Wait, or have a cup of tea.",
+          "others": ["Run to the train now.", "Go home."]
+        },
+        {
+          "question": {
+            "text": "Which phrase changes the topic?",
+            "translations": {
+              "bn": "কোন কথা দিয়ে প্রসঙ্গ বদলানো হয়?",
+              "hi": "कौन-सा वाक्यांश बात का विषय बदलता है?"
+            }
+          },
+          "answer": "By the way, …",
+          "others": ["In short, …", "For example, …"]
+        },
+        {
+          "question": {
+            "text": "Which sentence starts a personal story?",
+            "translations": {
+              "bn": "কোন বাক্যে নিজের গল্প শুরু হয়?",
+              "hi": "कौन-सा वाक्य अपनी कहानी शुरू करता है?"
+            }
+          },
+          "answer": "Last year, something changed my life.",
+          "others": ["Thank you for listening.", "In conclusion, …"]
+        },
+        {
+          "question": {
+            "text": "Which sentence gives an opinion and explains it?",
+            "translations": {
+              "bn": "কোন বাক্যে মত দিয়ে তা বোঝানো হয়েছে?",
+              "hi": "कौन-सा वाक्य राय देता है और उसे समझाता है?"
+            }
+          },
+          "answer": "In my view, it’s useful, because it saves time.",
+          "others": ["It’s useful.", "I don’t know."]
+        },
+        {
+          "question": {
+            "text": "What matters most when you speak English?",
+            "translations": {
+              "bn": "ইংরেজি বলার সময় সবচেয়ে জরুরি কী?",
+              "hi": "अंग्रेज़ी बोलते समय सबसे ज़रूरी क्या है?"
+            }
+          },
+          "answer": "Keep talking, even with mistakes.",
+          "others": ["Never make a mistake.", "Only speak when you are perfect."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Harsh",
+          "text": "Divya, can you believe it? We’ve reached the last week of the course.",
+          "translations": {
+            "bn": "দিব্যা, বিশ্বাস হয়? আমরা কোর্সের শেষ সপ্তাহে পৌঁছে গেছি।",
+            "hi": "दिव्या, यक़ीन होता है? हम कोर्स के आख़िरी हफ़्ते तक पहुँच गए।"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "I know! Fifty weeks. It went so fast.",
+          "translations": {
+            "bn": "তাই তো! পঞ্চাশ সপ্তাহ। কত তাড়াতাড়ি কেটে গেল।",
+            "hi": "सच में! पचास हफ़्ते। कितनी जल्दी बीत गए।"
+          }
+        },
+        {
+          "speaker": "Harsh",
+          "text": "What was the hardest part for you?",
+          "translations": {
+            "bn": "তোমার কাছে সবচেয়ে কঠিন কী ছিল?",
+            "hi": "तुम्हारे लिए सबसे मुश्किल क्या था?"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "Actually, the phone calls. Without faces, I couldn’t guess what people meant.",
+          "translations": {
+            "bn": "আসলে, ফোনে কথা বলা। মুখ না দেখে বুঝতে পারতাম না লোকে কী বলতে চাইছে।",
+            "hi": "दरअसल, फ़ोन कॉल। चेहरा देखे बिना मैं समझ नहीं पाती थी कि लोग क्या कहना चाहते हैं।"
+          }
+        },
+        {
+          "speaker": "Harsh",
+          "text": "For me, it was the stories. I always forgot the past tense!",
+          "translations": {
+            "bn": "আমার কাছে গল্প বলা। অতীত কাল সবসময় ভুলে যেতাম!",
+            "hi": "मेरे लिए कहानियाँ। मैं हमेशा भूतकाल भूल जाता था!"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "And now? You told me a great story last week.",
+          "translations": {
+            "bn": "আর এখন? গত সপ্তাহেই তো দারুণ একটা গল্প বললে।",
+            "hi": "और अब? पिछले हफ़्ते तुमने मुझे एक शानदार कहानी सुनाई थी।"
+          }
+        },
+        {
+          "speaker": "Harsh",
+          "text": "True. Practice really helps. By the way, what’s your next goal?",
+          "translations": {
+            "bn": "ঠিক। অনুশীলনে সত্যিই কাজ হয়। ভালো কথা, তোমার পরের লক্ষ্য কী?",
+            "hi": "सच है। अभ्यास से सच में फ़र्क़ पड़ता है। वैसे, तुम्हारा अगला लक्ष्य क्या है?"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "I want to read one English book a month. What about you?",
+          "translations": {
+            "bn": "মাসে একটা ইংরেজি বই পড়তে চাই। আর তোমার?",
+            "hi": "मैं हर महीने एक अंग्रेज़ी किताब पढ़ना चाहती हूँ। और तुम?"
+          }
+        },
+        {
+          "speaker": "Harsh",
+          "text": "I’d like to join a speaking club, where I can talk with new people.",
+          "translations": {
+            "bn": "একটা কথা বলার ক্লাবে যোগ দিতে চাই, যেখানে নতুন লোকের সঙ্গে কথা বলা যায়।",
+            "hi": "मैं एक स्पीकिंग क्लब से जुड़ना चाहता हूँ, जहाँ नए लोगों से बात कर सकूँ।"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "Sounds good. Maybe I’ll join too.",
+          "translations": {
+            "bn": "ভালো কথা। হয়তো আমিও যোগ দেব।",
+            "hi": "बढ़िया। शायद मैं भी जुड़ जाऊँ।"
+          }
+        },
+        {
+          "speaker": "Harsh",
+          "text": "Great. Anyway, whatever happens, let’s keep in touch.",
+          "translations": {
+            "bn": "দারুণ। যাই হোক, যা-ই হোক না কেন, যোগাযোগ রেখো।",
+            "hi": "बढ़िया। ख़ैर, जो भी हो, संपर्क में रहना।"
+          }
+        },
+        {
+          "speaker": "Divya",
+          "text": "Definitely. And let’s keep talking in English!",
+          "translations": {
+            "bn": "অবশ্যই। আর ইংরেজিতেই কথা চালিয়ে যাব!",
+            "hi": "ज़रूर। और अंग्रेज़ी में ही बात करते रहेंगे!"
+          }
+        }
+      ],
+      "voices": {
+        "Harsh": "male",
+        "Divya": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the neighbour",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! I haven’t seen you for weeks. How are you?",
+          "reply": "Hi! I’m fine, thanks. I’ve been really busy with work. How about you?",
+          "cues": {
+            "bn": "উত্তর দিয়ে পাল্টা জিজ্ঞেস করুন।",
+            "hi": "जवाब दें और वापस पूछें।"
+          }
+        },
+        {
+          "partner": "Good, thanks. By the way, there’s a building party on Sunday.",
+          "reply": "Oh, really? What time does it start?",
+          "cues": {
+            "bn": "আগ্রহ দেখিয়ে সময় জিজ্ঞেস করুন।",
+            "hi": "दिलचस्पी दिखाएँ और समय पूछें।"
+          }
+        },
+        {
+          "partner": "At six, on the roof. Everyone is bringing some food.",
+          "reply": "Sounds good. I’ll bring a salad. Do you need any help setting up?",
+          "cues": {
+            "bn": "রাজি হয়ে সাহায্যের প্রস্তাব দিন।",
+            "hi": "हाँ कहें और मदद की पेशकश करें।"
+          }
+        },
+        {
+          "partner": "That would be great! Come at five.",
+          "reply": "Five o’clock. See you on Sunday, then!",
+          "cues": {
+            "bn": "সময়টা আবার বলে বিদায় জানান।",
+            "hi": "समय दोहराएँ और अलविदा कहें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A hotel mix-up",
+            "translations": {
+              "bn": "হোটেলে গোলমাল",
+              "hi": "होटल में गड़बड़"
+            }
+          },
+          "roleplay": {
+            "partner": "the receptionist",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Sorry, I can’t find your booking.",
+                "reply": "That’s strange. I booked online last week. Here’s the confirmation email.",
+                "cues": {
+                  "bn": "সমস্যাটা বুঝিয়ে প্রমাণ দেখান।",
+                  "hi": "समस्या समझाएँ और सबूत दिखाएँ।"
+                }
+              },
+              {
+                "partner": "Ah, it’s for next Friday, not this Friday.",
+                "reply": "Oh no, I think I chose the wrong date. Is there a room available tonight?",
+                "cues": {
+                  "bn": "ভুলটা মেনে নিয়ে সমাধান চান।",
+                  "hi": "ग़लती मानें और हल माँगें।"
+                }
+              },
+              {
+                "partner": "Only a bigger room, for five hundred rupees more.",
+                "reply": "I understand. Could you give me a small discount, since it was a mistake?",
+                "cues": {
+                  "bn": "ভদ্রভাবে দরাদরি করুন।",
+                  "hi": "विनम्रता से मोलभाव करें।"
+                }
+              },
+              {
+                "partner": "OK, I can do two hundred more.",
+                "reply": "That’s fair. Thank you, I’ll take it.",
+                "cues": {
+                  "bn": "রাজি হয়ে ধন্যবাদ দিন।",
+                  "hi": "हाँ कहें और धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Lunch with new people",
+            "translations": {
+              "bn": "নতুনদের সঙ্গে দুপুরের খাবার",
+              "hi": "नए लोगों के साथ लंच"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi, mind if I join you? I’m Sam.",
+                "reply": "Not at all, please sit down. Nice to meet you, Sam.",
+                "cues": {
+                  "bn": "স্বাগত জানিয়ে পরিচয় দিন।",
+                  "hi": "स्वागत करें और परिचय दें।"
+                }
+              },
+              {
+                "partner": "Are you here for the conference?",
+                "reply": "Yes, I am. Actually, I’m giving a short talk this afternoon.",
+                "cues": {
+                  "bn": "উত্তর দিয়ে একটা নতুন খবর জানান।",
+                  "hi": "जवाब दें और एक नई बात बताएँ।"
+                }
+              },
+              {
+                "partner": "Wow! What’s it about?",
+                "reply": "It’s about how small businesses can use social media. I’m a bit nervous!",
+                "cues": {
+                  "bn": "বিষয়টা সংক্ষেপে বলুন, আর মনের অবস্থাও।",
+                  "hi": "विषय संक्षेप में बताएँ, और अपनी भावना भी।"
+                }
+              },
+              {
+                "partner": "You’ll be great. I’ll come and listen.",
+                "reply": "Thank you, that’s really kind. It starts at three, in Room 2.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিয়ে সময় আর জায়গা বলুন।",
+                  "hi": "धन्यवाद दें और समय व जगह बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Telling the day’s story",
+            "translations": {
+              "bn": "দিনের গল্প বলা",
+              "hi": "दिन भर की कहानी"
+            }
+          },
+          "roleplay": {
+            "partner": "Mum",
+            "asMan": "Dad",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "You’re home! How was your day?",
+                "reply": "Long, but amazing. Let me tell you everything.",
+                "cues": {
+                  "bn": "দিনটা কেমন ছিল এক কথায় বলে শুরু করুন।",
+                  "hi": "दिन कैसा रहा, एक बात में बताकर शुरू करें।"
+                }
+              },
+              {
+                "partner": "Go on, I’m listening.",
+                "reply": "First, there was a problem at the hotel, but I sorted it out in English.",
+                "cues": {
+                  "bn": "প্রথম ঘটনাটা বলুন।",
+                  "hi": "पहली घटना बताएँ।"
+                }
+              },
+              {
+                "partner": "Well done! And then?",
+                "reply": "Then I gave my talk, and people asked lots of questions. I answered them all!",
+                "cues": {
+                  "bn": "পরের ঘটনা আর তার ফল বলুন।",
+                  "hi": "अगली घटना और उसका नतीजा बताएँ।"
+                }
+              },
+              {
+                "partner": "I’m so proud of you.",
+                "reply": "Thanks! A year ago, I couldn’t do any of this. Today, I did it all in English.",
+                "cues": {
+                  "bn": "এক বছর আগের সঙ্গে তুলনা করে শেষ করুন।",
+                  "hi": "एक साल पहले से तुलना करके ख़त्म करें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

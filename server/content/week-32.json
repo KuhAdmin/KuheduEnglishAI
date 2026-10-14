@@ -1,0 +1,766 @@
+{
+  "week": 32,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Mehak",
+          "text": "Hi, Nishant. You look upset. Are you OK?",
+          "translations": {
+            "bn": "হাই, নিশান্ত। তোমাকে মনমরা লাগছে। ঠিক আছ?",
+            "hi": "हाय, निशांत। तुम परेशान लग रहे हो। ठीक हो?"
+          }
+        },
+        {
+          "speaker": "Nishant",
+          "text": "Not really. I didn’t get the job I wanted.",
+          "translations": {
+            "bn": "তেমন না। যে চাকরিটা চেয়েছিলাম, পাইনি।",
+            "hi": "ठीक नहीं। जो नौकरी चाहिए थी, वह नहीं मिली।"
+          }
+        },
+        {
+          "speaker": "Mehak",
+          "text": "Oh no, I’m so sorry to hear that. You must be really disappointed.",
+          "translations": {
+            "bn": "ইস, শুনে খুব খারাপ লাগল। নিশ্চয়ই খুব মন খারাপ।",
+            "hi": "अरे, यह सुनकर बहुत दुख हुआ। तुम्हें बहुत निराशा हुई होगी।"
+          }
+        },
+        {
+          "speaker": "Nishant",
+          "text": "I am. I was so sure about it. When they called, I was shocked.",
+          "translations": {
+            "bn": "হ্যাঁ। আমি এত নিশ্চিত ছিলাম। ফোনটা পেয়ে হতবাক হয়ে গেলাম।",
+            "hi": "हाँ। मुझे पूरा यक़ीन था। जब उनका फ़ोन आया, तो मैं हैरान रह गया।"
+          }
+        },
+        {
+          "speaker": "Mehak",
+          "text": "That must have been hard. How do you feel now?",
+          "translations": {
+            "bn": "নিশ্চয়ই কঠিন ছিল। এখন কেমন লাগছে?",
+            "hi": "वह बहुत मुश्किल रहा होगा। अब कैसा लग रहा है?"
+          }
+        },
+        {
+          "speaker": "Nishant",
+          "text": "A bit better, now that I’m talking about it.",
+          "translations": {
+            "bn": "একটু ভালো, এখন কথা বলে।",
+            "hi": "थोड़ा बेहतर, अब इस बारे में बात करके।"
+          }
+        },
+        {
+          "speaker": "Mehak",
+          "text": "Don’t worry. There will be other jobs. Is there anything I can do?",
+          "translations": {
+            "bn": "চিন্তা কোরো না। আরও চাকরি আসবে। আমি কিছু করতে পারি?",
+            "hi": "चिंता मत करो। और नौकरियाँ मिलेंगी। क्या मैं कुछ कर सकती हूँ?"
+          }
+        },
+        {
+          "speaker": "Nishant",
+          "text": "Thanks. Actually, I have some good news too. My sister is getting married!",
+          "translations": {
+            "bn": "ধন্যবাদ। আসলে একটা সুখবরও আছে। আমার বোনের বিয়ে!",
+            "hi": "शुक्रिया। दरअसल, एक अच्छी ख़बर भी है। मेरी बहन की शादी हो रही है!"
+          }
+        },
+        {
+          "speaker": "Mehak",
+          "text": "Really? What wonderful news! I’m so happy for her.",
+          "translations": {
+            "bn": "সত্যি? কী দারুণ খবর! ওর জন্য খুব আনন্দ হচ্ছে।",
+            "hi": "सच में? क्या बढ़िया ख़बर है! उसके लिए मुझे बहुत ख़ुशी हुई।"
+          }
+        },
+        {
+          "speaker": "Nishant",
+          "text": "And guess what? She wants you to come to the wedding!",
+          "translations": {
+            "bn": "আর জানো? ও চায় তুমি বিয়েতে আসো!",
+            "hi": "और पता है? वह चाहती है कि तुम शादी में आओ!"
+          }
+        },
+        {
+          "speaker": "Mehak",
+          "text": "Wow, what a surprise! I’d love to. You’ve made my day!",
+          "translations": {
+            "bn": "বাহ, কী চমক! নিশ্চয়ই যাব। আমার দিনটাই ভালো করে দিলে!",
+            "hi": "वाह, क्या सरप्राइज़ है! मैं ज़रूर आऊँगी। तुमने मेरा दिन बना दिया!"
+          }
+        }
+      ],
+      "voices": {
+        "Mehak": "female",
+        "Nishant": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "upset",
+          "phonetic": "/ʌpˈset/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মন খারাপ, বিচলিত",
+            "hi": "परेशान, दुखी"
+          },
+          "syllables": ["up", "set"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "জিজ্ঞেস করুন: “Why are you upset?”"],
+            "en": ["Say the second part stronger.", "Ask: “Why are you upset?”"],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "पूछें: “Why are you upset?”"]
+          }
+        },
+        {
+          "word": "disappointed",
+          "phonetic": "/ˌdɪsəˈpɔɪntɪd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হতাশ",
+            "hi": "निराश"
+          },
+          "syllables": ["dis", "ap", "point", "ed"],
+          "stress": 3,
+          "tips": {
+            "bn": ["তৃতীয় অংশটি জোর দিয়ে বলুন: “পয়েন্ট”।", "“t”-এর পরে “-ed”-এর উচ্চারণ “ইড”।"],
+            "en": ["Say the third part stronger: “POINT”.", "After a “t”, “-ed” sounds like “id”."],
+            "hi": [
+              "तीसरा हिस्सा ज़ोर से बोलें: “पॉइंट”।",
+              "“t” के बाद “-ed” की आवाज़ “इड” होती है।"
+            ]
+          }
+        },
+        {
+          "word": "excited",
+          "phonetic": "/ɪkˈsaɪtɪd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "উত্তেজিত, খুশিতে ভরা",
+            "hi": "उत्साहित"
+          },
+          "syllables": ["ex", "cit", "ed"],
+          "stress": 2,
+          "tips": {
+            "bn": [
+              "দ্বিতীয় অংশটি জোর দিয়ে বলুন: “সাইট”।",
+              "বলুন “I’m excited”, “I’m exciting” নয়।"
+            ],
+            "en": [
+              "Say the second part stronger: “SITE”.",
+              "Say “I’m excited”, not “I’m exciting”."
+            ],
+            "hi": [
+              "दूसरा हिस्सा ज़ोर से बोलें: “साइट”।",
+              "कहें “I’m excited”, “I’m exciting” नहीं।"
+            ]
+          }
+        },
+        {
+          "word": "worried",
+          "phonetic": "/ˈwʌrid/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "চিন্তিত",
+            "hi": "चिंतित"
+          },
+          "syllables": ["wor", "ried"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“o”-এর উচ্চারণ “cup”-এর “u”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “o” sounds like the “u” in “cup”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“o” की आवाज़ “cup” के “u” जैसी है।"]
+          }
+        },
+        {
+          "word": "relieved",
+          "phonetic": "/rɪˈliːvd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "স্বস্তি পাওয়া",
+            "hi": "राहत महसूस होना"
+          },
+          "syllables": ["re", "lieved"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "চিন্তা কাটলে বলুন: “I’m so relieved!”"],
+            "en": [
+              "Say the second part stronger.",
+              "Say it when a worry is over: “I’m so relieved!”"
+            ],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "चिंता ख़त्म होने पर कहें: “I’m so relieved!”"]
+          }
+        },
+        {
+          "word": "proud",
+          "phonetic": "/praʊd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "গর্বিত",
+            "hi": "गर्व महसूस होना"
+          },
+          "syllables": ["proud"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ou”-এর উচ্চারণ “now”-এর “ow”-এর মতো।", "বলুন “proud of”: “I’m proud of you.”"],
+            "en": [
+              "The “ou” sounds like the “ow” in “now”.",
+              "Say “proud of”: “I’m proud of you.”"
+            ],
+            "hi": ["“ou” की आवाज़ “now” के “ow” जैसी है।", "कहें “proud of”: “I’m proud of you.”"]
+          }
+        },
+        {
+          "word": "embarrassed",
+          "phonetic": "/ɪmˈbærəst/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অপ্রস্তুত, লজ্জিত",
+            "hi": "शर्मिंदा"
+          },
+          "syllables": ["em", "bar", "rassed"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "এতে দুটো “r” আর দুটো “s”।"],
+            "en": ["Say the second part stronger.", "It has a double “r” and a double “s”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "इसमें दो “r” और दो “s” हैं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "I’m so sorry about your loss.",
+          "alsoAccepted": ["I’m so sorry for your loss.", "I’m very sorry about your loss."],
+          "translations": {
+            "bn": "আপনার এই ক্ষতির জন্য আমি খুবই দুঃখিত।",
+            "hi": "आपके इस नुक़सान के लिए मुझे बहुत अफ़सोस है।"
+          },
+          "tips": {
+            "bn": ["কেউ কাউকে বা কিছু হারালে এটি বলুন।", "আস্তে আর নরমভাবে বলুন।"],
+            "en": [
+              "Use it when someone has lost a person or a thing.",
+              "Say it quietly and kindly."
+            ],
+            "hi": ["जब किसी ने कोई व्यक्ति या चीज़ खोई हो, तब कहें।", "धीरे और प्यार से कहें।"]
+          }
+        },
+        {
+          "english": "That must be really hard for you.",
+          "alsoAccepted": ["That must be very hard for you."],
+          "translations": {
+            "bn": "এটা নিশ্চয়ই আপনার জন্য খুব কঠিন।",
+            "hi": "यह आपके लिए सच में बहुत मुश्किल होगा।"
+          },
+          "tips": {
+            "bn": ["“must be” দিয়ে বোঝান আপনি বুঝছেন।", "চট করে “I know how you feel” বলবেন না।"],
+            "en": [
+              "“must be” shows you understand.",
+              "Do not say “I know how you feel” too quickly."
+            ],
+            "hi": ["“must be” से जताएँ कि आप समझते हैं।", "झट से “I know how you feel” न कहें।"]
+          }
+        },
+        {
+          "english": "Is there anything I can do to help?",
+          "alsoAccepted": ["Can I do anything to help?"],
+          "translations": {
+            "bn": "সাহায্যের জন্য আমি কিছু করতে পারি?",
+            "hi": "क्या मदद के लिए मुझसे कुछ हो सकता है?"
+          },
+          "tips": {
+            "bn": ["মন থেকে সাহায্যের প্রস্তাব দিন।", "তারপর উত্তরের জন্য অপেক্ষা করুন।"],
+            "en": ["Offer help, and mean it.", "Then wait for the answer."],
+            "hi": ["मदद की पेशकश दिल से करें।", "फिर जवाब का इंतज़ार करें।"]
+          }
+        },
+        {
+          "english": "Take care of yourself.",
+          "alsoAccepted": ["Please take care of yourself."],
+          "translations": {
+            "bn": "নিজের যত্ন নিন।",
+            "hi": "अपना ख़याल रखिए।"
+          },
+          "tips": {
+            "bn": ["দুঃখী বা অসুস্থ কাউকে ছেড়ে যাওয়ার সময় বলুন।", "“yourself” মানে আপনি নিজে।"],
+            "en": ["Say it when you leave someone who is sad or ill.", "“yourself” means you."],
+            "hi": ["किसी उदास या बीमार से विदा लेते समय कहें।", "“yourself” मतलब आप ख़ुद।"]
+          }
+        },
+        {
+          "english": "I hope you feel better soon.",
+          "alsoAccepted": ["I hope you get better soon."],
+          "translations": {
+            "bn": "আশা করি আপনি তাড়াতাড়ি ভালো হয়ে উঠবেন।",
+            "hi": "उम्मीद है आप जल्दी ठीक हो जाएँगे।"
+          },
+          "tips": {
+            "bn": [
+              "“I hope” দিয়ে বোঝান আপনার চিন্তা আছে।",
+              "“feel better” অসুস্থ বা দুঃখী কারও জন্য।"
+            ],
+            "en": ["“I hope” shows you care.", "“feel better” is for someone who is ill or sad."],
+            "hi": [
+              "“I hope” से आपकी परवाह दिखती है।",
+              "“feel better” बीमार या उदास के लिए कहा जाता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Shikha",
+      "asMan": "Shekhar",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I got the scholarship!",
+          "reply": "That’s fantastic! Congratulations!",
+          "cues": {
+            "bn": "খুশি হয়ে অভিনন্দন জানান।",
+            "hi": "ख़ुशी से बधाई दें।"
+          }
+        },
+        {
+          "partner": "Thanks! But I have to move to another city.",
+          "reply": "Oh, really? How do you feel about that?",
+          "cues": {
+            "bn": "অবাক হয়ে অনুভূতি জিজ্ঞেস করুন।",
+            "hi": "हैरानी से पूछें कि इस बारे में कैसा लग रहा है।"
+          }
+        },
+        {
+          "partner": "A little scared. I don’t know anyone there.",
+          "reply": "That’s understandable. You’ll make friends quickly.",
+          "cues": {
+            "bn": "বুঝতে পারছেন বলে ভরসা দিন।",
+            "hi": "समझदारी दिखाएँ और भरोसा दिलाएँ।"
+          }
+        },
+        {
+          "partner": "Also, my grandmother is in hospital.",
+          "reply": "Oh no, I’m sorry to hear that. Is she OK?",
+          "cues": {
+            "bn": "সহানুভূতি দেখিয়ে খবর জিজ্ঞেস করুন।",
+            "hi": "सहानुभूति दिखाएँ और हाल पूछें।"
+          }
+        },
+        {
+          "partner": "She’s getting better, thank goodness.",
+          "reply": "What a relief! Please give her my best wishes.",
+          "cues": {
+            "bn": "স্বস্তি জানিয়ে শুভেচ্ছা পাঠান।",
+            "hi": "राहत जताएँ और शुभकामनाएँ भेजें।"
+          }
+        },
+        {
+          "partner": "I will. Thanks for listening.",
+          "reply": "Anytime. I’m always here for you.",
+          "cues": {
+            "bn": "পাশে থাকার কথা বলুন।",
+            "hi": "साथ होने का भरोसा दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "An Emotional Conversation",
+        "translations": {
+          "bn": "আবেগের কথোপকথন",
+          "hi": "भावनाओं भरी बातचीत"
+        }
+      },
+      "instruction": {
+        "text": "Ask a friend about a happy or a hard moment. Listen, react to their feelings and respond kindly.",
+        "translations": {
+          "bn": "কোনো বন্ধুকে একটা আনন্দের বা কঠিন মুহূর্তের কথা জিজ্ঞেস করুন। শুনুন, অনুভূতিতে সাড়া দিন, যত্ন নিয়ে উত্তর দিন।",
+          "hi": "किसी दोस्त से कोई ख़ुशी या मुश्किल का पल पूछें। सुनें, उनकी भावनाओं पर प्रतिक्रिया दें और प्यार से जवाब दें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Ask how they are feeling",
+          "translations": {
+            "bn": "তাঁর কেমন লাগছে, জিজ্ঞেস করুন",
+            "hi": "पूछें कि उन्हें कैसा लग रहा है"
+          }
+        },
+        {
+          "text": "React to their news: good or bad",
+          "translations": {
+            "bn": "খবরে সাড়া দিন: ভালো না খারাপ",
+            "hi": "उनकी ख़बर पर प्रतिक्रिया दें: अच्छी या बुरी"
+          }
+        },
+        {
+          "text": "Ask one gentle question about it",
+          "translations": {
+            "bn": "এ নিয়ে একটা নরম প্রশ্ন করুন",
+            "hi": "इसके बारे में एक नरम सवाल पूछें"
+          }
+        },
+        {
+          "text": "Say how you feel about it too",
+          "translations": {
+            "bn": "এ নিয়ে আপনার কেমন লাগছে, তাও বলুন",
+            "hi": "इस बारे में अपनी भावना भी बताएँ"
+          }
+        },
+        {
+          "text": "Offer help or encouragement",
+          "translations": {
+            "bn": "সাহায্য বা উৎসাহ দিন",
+            "hi": "मदद या हौसला दें"
+          }
+        }
+      ],
+      "phrases": [
+        "How are you feeling?",
+        "Oh no, I’m sorry to hear that.",
+        "That’s wonderful news!",
+        "That must be …",
+        "How did that make you feel?",
+        "I’m here if you need me."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Your friend failed an exam. What do you say?",
+            "translations": {
+              "bn": "বন্ধু পরীক্ষায় ফেল করেছেন। কী বলবেন?",
+              "hi": "दोस्त परीक्षा में फ़ेल हो गए। आप क्या कहेंगे?"
+            }
+          },
+          "answer": "I’m sorry. You’ll do better next time.",
+          "others": ["Ha! That’s funny.", "Great!"]
+        },
+        {
+          "question": {
+            "text": "Which word means happy that a worry is over?",
+            "translations": {
+              "bn": "কোন শব্দের মানে চিন্তা কেটে যাওয়ায় খুশি?",
+              "hi": "किस शब्द का मतलब है चिंता ख़त्म होने से ख़ुश?"
+            }
+          },
+          "answer": "relieved",
+          "others": ["worried", "bored"]
+        },
+        {
+          "question": {
+            "text": "Your friend just got engaged. What is a natural reaction?",
+            "translations": {
+              "bn": "বন্ধুর সবে বাগদান হয়েছে। স্বাভাবিক প্রতিক্রিয়া কোনটি?",
+              "hi": "दोस्त की अभी सगाई हुई है। स्वाभाविक प्रतिक्रिया कौन-सी है?"
+            }
+          },
+          "answer": "Congratulations! That’s wonderful!",
+          "others": ["Oh no!", "I’m sorry."]
+        },
+        {
+          "question": {
+            "text": "Complete: How did that make you ___?",
+            "translations": {
+              "bn": "পূরণ করুন: How did that make you ___?",
+              "hi": "पूरा करें: How did that make you ___?"
+            }
+          },
+          "answer": "feel",
+          "others": ["felt", "feeling"]
+        },
+        {
+          "question": {
+            "text": "Which phrase shows sympathy?",
+            "translations": {
+              "bn": "কোন কথায় সহানুভূতি বোঝায়?",
+              "hi": "कौन-सा वाक्यांश सहानुभूति दिखाता है?"
+            }
+          },
+          "answer": "That must be really hard.",
+          "others": ["That’s not my problem.", "So what?"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Ankita",
+          "text": "Tushar, what’s wrong? You look worried.",
+          "translations": {
+            "bn": "তুষার, কী হয়েছে? তোমাকে চিন্তিত লাগছে।",
+            "hi": "तुषार, क्या हुआ? तुम परेशान लग रहे हो।"
+          }
+        },
+        {
+          "speaker": "Tushar",
+          "text": "Someone stole my phone on the bus this morning.",
+          "translations": {
+            "bn": "আজ সকালে বাসে কেউ আমার ফোন চুরি করেছে।",
+            "hi": "आज सुबह बस में किसी ने मेरा फ़ोन चुरा लिया।"
+          }
+        },
+        {
+          "speaker": "Ankita",
+          "text": "Oh no! That’s terrible. How do you feel?",
+          "translations": {
+            "bn": "ইস! কী খারাপ। কেমন লাগছে?",
+            "hi": "अरे! यह तो बहुत बुरा हुआ। कैसा लग रहा है?"
+          }
+        },
+        {
+          "speaker": "Tushar",
+          "text": "Angry, and a bit silly. It was in my back pocket.",
+          "translations": {
+            "bn": "রাগ হচ্ছে, আর নিজেকে একটু বোকা লাগছে। পেছনের পকেটে ছিল।",
+            "hi": "ग़ुस्सा आ रहा है, और ख़ुद पर थोड़ी शर्म भी। पीछे की जेब में था।"
+          }
+        },
+        {
+          "speaker": "Ankita",
+          "text": "Don’t blame yourself. It could happen to anyone.",
+          "translations": {
+            "bn": "নিজেকে দোষ দিয়ো না। যে কারও সঙ্গে হতে পারে।",
+            "hi": "ख़ुद को दोष मत दो। यह किसी के साथ भी हो सकता है।"
+          }
+        },
+        {
+          "speaker": "Tushar",
+          "text": "Thanks. I’m worried about my photos, though.",
+          "translations": {
+            "bn": "ধন্যবাদ। তবে ছবিগুলোর জন্য চিন্তা হচ্ছে।",
+            "hi": "शुक्रिया। पर मुझे अपनी फ़ोटो की चिंता है।"
+          }
+        },
+        {
+          "speaker": "Ankita",
+          "text": "Did you save them online?",
+          "translations": {
+            "bn": "অনলাইনে রেখেছিলে?",
+            "hi": "क्या तुमने उन्हें ऑनलाइन सेव किया था?"
+          }
+        },
+        {
+          "speaker": "Tushar",
+          "text": "Yes, I think so! Let me check… Yes, they’re all there!",
+          "translations": {
+            "bn": "হ্যাঁ, মনে হয়! দেখি… হ্যাঁ, সব আছে!",
+            "hi": "हाँ, शायद! देखता हूँ… हाँ, सब हैं!"
+          }
+        },
+        {
+          "speaker": "Ankita",
+          "text": "What a relief! Is there anything else I can do?",
+          "translations": {
+            "bn": "কী স্বস্তি! আর কিছু করতে পারি?",
+            "hi": "क्या राहत है! और कुछ कर सकती हूँ?"
+          }
+        },
+        {
+          "speaker": "Tushar",
+          "text": "You’ve already helped a lot. Thank you.",
+          "translations": {
+            "bn": "তুমি এমনিতেই অনেক সাহায্য করেছ। ধন্যবাদ।",
+            "hi": "तुमने पहले ही बहुत मदद की है। शुक्रिया।"
+          }
+        }
+      ],
+      "voices": {
+        "Ankita": "female",
+        "Tushar": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I didn’t sleep at all last night. My baby was crying.",
+          "reply": "Oh no, you must be so tired.",
+          "cues": {
+            "bn": "সহানুভূতি দেখান।",
+            "hi": "सहानुभूति दिखाएँ।"
+          }
+        },
+        {
+          "partner": "I am. And I have a big meeting today.",
+          "reply": "That sounds stressful. Can I help with anything?",
+          "cues": {
+            "bn": "চিন্তা জানিয়ে সাহায্যের প্রস্তাব দিন।",
+            "hi": "फ़िक्र जताएँ और मदद की पेशकश करें।"
+          }
+        },
+        {
+          "partner": "Could you bring me a coffee?",
+          "reply": "Of course! I’ll get you one right now.",
+          "cues": {
+            "bn": "খুশি মনে রাজি হোন।",
+            "hi": "ख़ुशी से हामी भरें।"
+          }
+        },
+        {
+          "partner": "Thank you so much. You’re a good friend.",
+          "reply": "Anytime. Good luck with your meeting!",
+          "cues": {
+            "bn": "শুভকামনা জানান।",
+            "hi": "शुभकामना दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A friend’s good news",
+            "translations": {
+              "bn": "বন্ধুর সুখবর",
+              "hi": "दोस्त की ख़ुशख़बरी"
+            }
+          },
+          "roleplay": {
+            "partner": "Bhavna",
+            "asMan": "Bhavesh",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Guess what? I’m going to be a parent!",
+                "reply": "Wow! That’s amazing news! Congratulations!",
+                "cues": {
+                  "bn": "খুব খুশি হয়ে অভিনন্দন জানান।",
+                  "hi": "बहुत ख़ुशी से बधाई दें।"
+                }
+              },
+              {
+                "partner": "Thank you! I’m excited, but also a little nervous.",
+                "reply": "That’s completely natural. You’ll be great.",
+                "cues": {
+                  "bn": "ভরসা দিন।",
+                  "hi": "भरोसा दिलाएँ।"
+                }
+              },
+              {
+                "partner": "The baby is due in March.",
+                "reply": "March! That’s so soon. How are you feeling?",
+                "cues": {
+                  "bn": "আগ্রহ দেখিয়ে কেমন আছেন জিজ্ঞেস করুন।",
+                  "hi": "दिलचस्पी दिखाएँ और हाल पूछें।"
+                }
+              },
+              {
+                "partner": "Tired, but very happy.",
+                "reply": "I’m so happy for you. Let me know if you need anything.",
+                "cues": {
+                  "bn": "আনন্দ জানিয়ে সাহায্যের কথা বলুন।",
+                  "hi": "ख़ुशी जताएँ और मदद की बात कहें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A colleague is ill",
+            "translations": {
+              "bn": "সহকর্মী অসুস্থ",
+              "hi": "सहकर्मी बीमार हैं"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi. I won’t be at work this week. I have a high fever.",
+                "reply": "Oh no, I’m sorry to hear that. Have you seen a doctor?",
+                "cues": {
+                  "bn": "সহানুভূতি দেখিয়ে ডাক্তারের কথা জিজ্ঞেস করুন।",
+                  "hi": "सहानुभूति दिखाएँ और डॉक्टर के बारे में पूछें।"
+                }
+              },
+              {
+                "partner": "Yes, the doctor says I need to rest.",
+                "reply": "Then please rest. Don’t worry about work.",
+                "cues": {
+                  "bn": "বিশ্রাম নিতে বলুন, কাজের চিন্তা করতে মানা করুন।",
+                  "hi": "आराम करने को कहें, और काम की चिंता न करने को।"
+                }
+              },
+              {
+                "partner": "Could you send the report to the client for me?",
+                "reply": "Of course. I’ll do it today.",
+                "cues": {
+                  "bn": "রাজি হোন।",
+                  "hi": "हामी भरें।"
+                }
+              },
+              {
+                "partner": "Thank you so much.",
+                "reply": "Take care, and get well soon!",
+                "cues": {
+                  "bn": "তাড়াতাড়ি সেরে ওঠার শুভকামনা জানান।",
+                  "hi": "जल्दी ठीक होने की शुभकामना दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A missed train",
+            "translations": {
+              "bn": "ট্রেন ফসকানো",
+              "hi": "छूटी हुई ट्रेन"
+            }
+          },
+          "roleplay": {
+            "partner": "Rina",
+            "asMan": "Rajan",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "I missed my train! Now I’ll be late for my sister’s party.",
+                "reply": "Oh no, how frustrating! When is the next train?",
+                "cues": {
+                  "bn": "সহানুভূতি দেখিয়ে পরের ট্রেনের কথা জিজ্ঞেস করুন।",
+                  "hi": "सहानुभूति दिखाएँ और अगली ट्रेन के बारे में पूछें।"
+                }
+              },
+              {
+                "partner": "In two hours.",
+                "reply": "That’s a long wait. Why don’t you take a bus?",
+                "cues": {
+                  "bn": "একটা উপায় বলুন।",
+                  "hi": "एक रास्ता सुझाएँ।"
+                }
+              },
+              {
+                "partner": "Good idea! There’s one in twenty minutes.",
+                "reply": "Great! You’ll be there on time.",
+                "cues": {
+                  "bn": "স্বস্তি জানান।",
+                  "hi": "राहत जताएँ।"
+                }
+              },
+              {
+                "partner": "Thank you. I feel much better now.",
+                "reply": "I’m glad. Enjoy the party!",
+                "cues": {
+                  "bn": "আনন্দ জানান।",
+                  "hi": "ख़ुशी जताएँ।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

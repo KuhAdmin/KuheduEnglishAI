@@ -1,0 +1,740 @@
+{
+  "week": 34,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Aarti",
+          "text": "Vinay, look at this. Our electricity bill is twice as high this month.",
+          "translations": {
+            "bn": "বিনয়, এটা দেখো। এ মাসে আমাদের বিদ্যুতের বিল দ্বিগুণ।",
+            "hi": "विनय, यह देखो। इस महीने हमारा बिजली का बिल दोगुना आया है।"
+          }
+        },
+        {
+          "speaker": "Vinay",
+          "text": "Twice! That’s a lot. Is it a mistake?",
+          "translations": {
+            "bn": "দ্বিগুণ! সে তো অনেক। ভুল নয় তো?",
+            "hi": "दोगुना! यह तो बहुत है। कहीं ग़लती तो नहीं?"
+          }
+        },
+        {
+          "speaker": "Aarti",
+          "text": "No, I checked. We used much more electricity than last month.",
+          "translations": {
+            "bn": "না, আমি দেখেছি। আমরা গত মাসের চেয়ে অনেক বেশি বিদ্যুৎ খরচ করেছি।",
+            "hi": "नहीं, मैंने जाँचा है। हमने पिछले महीने से बहुत ज़्यादा बिजली ख़र्च की है।"
+          }
+        },
+        {
+          "speaker": "Vinay",
+          "text": "Why did that happen, do you think?",
+          "translations": {
+            "bn": "তোমার কী মনে হয়, এমন কেন হল?",
+            "hi": "तुम्हें क्या लगता है, ऐसा क्यों हुआ?"
+          }
+        },
+        {
+          "speaker": "Aarti",
+          "text": "I think it’s because of the AC. It was very hot, so it was on all night.",
+          "translations": {
+            "bn": "আমার মনে হয় এসির জন্য। খুব গরম ছিল, তাই সারা রাত চলেছে।",
+            "hi": "मुझे लगता है एसी की वजह से। बहुत गर्मी थी, इसलिए वह पूरी रात चला।"
+          }
+        },
+        {
+          "speaker": "Vinay",
+          "text": "And the old fridge uses a lot too. So, what can we do?",
+          "translations": {
+            "bn": "আর পুরোনো ফ্রিজটাও অনেক খায়। তাহলে কী করা যায়?",
+            "hi": "और पुराना फ़्रिज भी बहुत बिजली खाता है। तो, हम क्या कर सकते हैं?"
+          }
+        },
+        {
+          "speaker": "Aarti",
+          "text": "One option is to set the AC to 26 degrees. Another is to use a timer.",
+          "translations": {
+            "bn": "একটা উপায় হল এসি ছাব্বিশ ডিগ্রিতে রাখা। আরেকটা হল টাইমার ব্যবহার করা।",
+            "hi": "एक रास्ता है एसी को 26 डिग्री पर रखना। दूसरा है टाइमर लगाना।"
+          }
+        },
+        {
+          "speaker": "Vinay",
+          "text": "Good ideas. We could also buy a new fridge.",
+          "translations": {
+            "bn": "ভালো বুদ্ধি। নতুন ফ্রিজও কিনতে পারি।",
+            "hi": "अच्छे सुझाव हैं। हम नया फ़्रिज भी ख़रीद सकते हैं।"
+          }
+        },
+        {
+          "speaker": "Aarti",
+          "text": "That would save power, but the disadvantage is the cost. It’s very expensive.",
+          "translations": {
+            "bn": "তাতে বিদ্যুৎ বাঁচবে, কিন্তু অসুবিধা হল খরচ। খুব দামি।",
+            "hi": "उससे बिजली बचेगी, पर नुक़सान यह है कि वह बहुत महँगा है।"
+          }
+        },
+        {
+          "speaker": "Vinay",
+          "text": "True. The advantage of the timer is that it’s cheap and quick.",
+          "translations": {
+            "bn": "ঠিক। টাইমারের সুবিধা হল এটা সস্তা আর তাড়াতাড়ি হয়।",
+            "hi": "सही। टाइमर का फ़ायदा यह है कि वह सस्ता है और जल्दी लग जाता है।"
+          }
+        },
+        {
+          "speaker": "Aarti",
+          "text": "So let’s try the timer and 26 degrees first, and check next month’s bill.",
+          "translations": {
+            "bn": "তাহলে আগে টাইমার আর ছাব্বিশ ডিগ্রি দিয়ে চেষ্টা করি, পরের মাসের বিল দেখি।",
+            "hi": "तो पहले टाइमर और 26 डिग्री आज़माते हैं, और अगले महीने का बिल देखते हैं।"
+          }
+        },
+        {
+          "speaker": "Vinay",
+          "text": "Agreed. If it’s still high, we’ll think about the fridge.",
+          "translations": {
+            "bn": "একমত। তখনও বেশি এলে ফ্রিজের কথা ভাবব।",
+            "hi": "तय रहा। अगर तब भी ज़्यादा आया, तो फ़्रिज के बारे में सोचेंगे।"
+          }
+        }
+      ],
+      "voices": {
+        "Aarti": "female",
+        "Vinay": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "problem",
+          "phonetic": "/ˈprɒbləm/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সমস্যা",
+            "hi": "समस्या"
+          },
+          "syllables": ["prob", "lem"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন: “The problem is that …”"],
+            "en": ["Say the first part stronger.", "Say: “The problem is that …”"],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें: “The problem is that …”"]
+          }
+        },
+        {
+          "word": "cause",
+          "phonetic": "/kɔːz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কারণ",
+            "hi": "वजह"
+          },
+          "syllables": ["cause"],
+          "stress": null,
+          "tips": {
+            "bn": ["শেষে “z” ধ্বনি।", "“the cause” মানে যা থেকে ঘটেছে।"],
+            "en": ["It ends with a “z” sound.", "“the cause” is what made it happen."],
+            "hi": ["आख़िर में “z” की आवाज़ है।", "“the cause” मतलब जिसकी वजह से हुआ।"]
+          }
+        },
+        {
+          "word": "because of",
+          "phonetic": "/bɪˈkɒz əv/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কারণে",
+            "hi": "की वजह से"
+          },
+          "syllables": ["be", "cause", "of"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“cause” জোর দিয়ে বলুন।", "এর পরে বিশেষ্য: “because of the rain”।"],
+            "en": ["Say “cause” stronger.", "Put a noun after it: “because of the rain”."],
+            "hi": ["“cause” ज़ोर से बोलें।", "इसके बाद संज्ञा आती है: “because of the rain”।"]
+          }
+        },
+        {
+          "word": "due to",
+          "phonetic": "/ˈdjuː tə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কারণে",
+            "hi": "के कारण"
+          },
+          "syllables": ["due", "to"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "এটা একটু আনুষ্ঠানিক “because of”।"],
+            "en": ["Say the first part stronger.", "It is a more formal “because of”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "यह थोड़ा औपचारिक “because of” है।"]
+          }
+        },
+        {
+          "word": "result",
+          "phonetic": "/rɪˈzʌlt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ফল",
+            "hi": "नतीजा"
+          },
+          "syllables": ["re", "sult"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“As a result, …” বলে তারপর কী হল।"],
+            "en": ["Say the second part stronger.", "“As a result, …” tells what happened next."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“As a result, …” बताता है कि फिर क्या हुआ।"]
+          }
+        },
+        {
+          "word": "therefore",
+          "phonetic": "/ˈðeəfɔː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সেই কারণে",
+            "hi": "इसलिए"
+          },
+          "syllables": ["there", "fore"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "এটা আনুষ্ঠানিক “so”।"],
+            "en": ["Say the first part stronger.", "It is a formal “so”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "यह औपचारिक “so” है।"]
+          }
+        },
+        {
+          "word": "broken",
+          "phonetic": "/ˈbrəʊkən/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভাঙা, খারাপ",
+            "hi": "टूटा हुआ, ख़राब"
+          },
+          "syllables": ["bro", "ken"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "বলুন “It’s broken”, “It’s break” নয়।"],
+            "en": ["Say the first part stronger.", "Say “It’s broken”, not “It’s break”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "कहें “It’s broken”, “It’s break” नहीं।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "One solution is to fix the pipe.",
+          "alsoAccepted": ["One solution would be to fix the pipe."],
+          "translations": {
+            "bn": "একটা সমাধান হল পাইপটা সারানো।",
+            "hi": "एक हल है पाइप ठीक करवाना।"
+          },
+          "tips": {
+            "bn": ["“One solution is to …” শান্তভাবে উপায় বলে।", "“to”-এর পরে ক্রিয়ার মূল রূপ।"],
+            "en": [
+              "“One solution is to …” gives an idea calmly.",
+              "After “to”, use the plain verb."
+            ],
+            "hi": [
+              "“One solution is to …” शांति से उपाय बताता है।",
+              "“to” के बाद क्रिया का मूल रूप।"
+            ]
+          }
+        },
+        {
+          "english": "Why don’t we call a plumber?",
+          "alsoAccepted": ["Why don’t we call the plumber?"],
+          "translations": {
+            "bn": "একজন মিস্ত্রি ডাকলে কেমন হয়?",
+            "hi": "क्यों न किसी प्लंबर को बुलाएँ?"
+          },
+          "tips": {
+            "bn": ["“Why don’t we …?” বন্ধুত্বপূর্ণ প্রস্তাব।", "Plumber জলের পাইপ সারান।"],
+            "en": ["“Why don’t we …?” is a friendly suggestion.", "A plumber fixes water pipes."],
+            "hi": ["“Why don’t we …?” दोस्ताना सुझाव है।", "Plumber पानी के पाइप ठीक करते हैं।"]
+          }
+        },
+        {
+          "english": "Another option is to wait until Monday.",
+          "alsoAccepted": ["Another option would be to wait until Monday."],
+          "translations": {
+            "bn": "আরেকটা উপায় হল সোমবার পর্যন্ত অপেক্ষা করা।",
+            "hi": "दूसरा रास्ता है सोमवार तक रुकना।"
+          },
+          "tips": {
+            "bn": ["“Another option” দিয়ে দ্বিতীয় উপায়।", "একের বেশি বিকল্প দিন।"],
+            "en": ["“Another option” adds a second idea.", "Give more than one choice."],
+            "hi": ["“Another option” से दूसरा उपाय जुड़ता है।", "एक से ज़्यादा विकल्प दें।"]
+          }
+        },
+        {
+          "english": "It might help to turn off the water first.",
+          "alsoAccepted": ["It may help to turn off the water first."],
+          "translations": {
+            "bn": "আগে জল বন্ধ করলে হয়তো সুবিধা হবে।",
+            "hi": "पहले पानी बंद कर दें, तो शायद मदद मिले।"
+          },
+          "tips": {
+            "bn": ["“It might help” নরম শোনায়।", "“might” মানে হয়তো।"],
+            "en": ["“It might help” sounds gentle.", "“might” means maybe."],
+            "hi": ["“It might help” नरम लगता है।", "“might” मतलब शायद।"]
+          }
+        },
+        {
+          "english": "If that doesn’t work, we could try something else.",
+          "alsoAccepted": ["If that doesn’t work, we can try something else."],
+          "translations": {
+            "bn": "তাতে কাজ না হলে, আমরা অন্য কিছু চেষ্টা করতে পারি।",
+            "hi": "अगर उससे बात न बने, तो हम कुछ और आज़मा सकते हैं।"
+          },
+          "tips": {
+            "bn": ["সবসময় একটা বিকল্প পরিকল্পনা রাখুন।", "“doesn’t work” মানে কাজ হয় না।"],
+            "en": ["Always have a second plan.", "“doesn’t work” means does not solve it."],
+            "hi": ["हमेशा एक दूसरी योजना रखें।", "“doesn’t work” मतलब बात नहीं बनती।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Naina",
+      "asMan": "Naman",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "My office is far. Should I move house or buy a scooter?",
+          "reply": "Let’s think about the advantages of each.",
+          "cues": {
+            "bn": "দুটোর সুবিধা ভেবে দেখার কথা বলুন।",
+            "hi": "दोनों के फ़ायदों पर सोचने को कहें।"
+          }
+        },
+        {
+          "partner": "A scooter is cheaper than moving.",
+          "reply": "That’s a big advantage. But the disadvantage is the traffic.",
+          "cues": {
+            "bn": "একটা সুবিধা আর একটা অসুবিধা বলুন।",
+            "hi": "एक फ़ायदा और एक नुक़सान बताएँ।"
+          }
+        },
+        {
+          "partner": "And moving? It’s expensive and tiring.",
+          "reply": "True, but you would save time every day.",
+          "cues": {
+            "bn": "মেনে নিয়ে একটা সুবিধা বলুন।",
+            "hi": "बात मानें और एक फ़ायदा बताएँ।"
+          }
+        },
+        {
+          "partner": "How much time, do you think?",
+          "reply": "Maybe two hours a day. That’s ten hours a week!",
+          "cues": {
+            "bn": "হিসেব করে বলুন।",
+            "hi": "हिसाब लगाकर बताएँ।"
+          }
+        },
+        {
+          "partner": "Wow, I didn’t think of that. So moving is better?",
+          "reply": "On balance, yes. But only if the rent is similar.",
+          "cues": {
+            "bn": "সব মিলিয়ে মত দিন, একটা শর্তসহ।",
+            "hi": "कुल मिलाकर राय दें, एक शर्त के साथ।"
+          }
+        },
+        {
+          "partner": "Good point. I’ll look at flats near the office.",
+          "reply": "Good idea. I can help you look.",
+          "cues": {
+            "bn": "সাহায্যের প্রস্তাব দিন।",
+            "hi": "मदद की पेशकश करें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Let’s Solve a Problem Together",
+        "translations": {
+          "bn": "চলুন একসঙ্গে সমস্যা মেটাই",
+          "hi": "आइए मिलकर समस्या सुलझाएँ"
+        }
+      },
+      "instruction": {
+        "text": "Choose a real problem, like a noisy street. Talk about causes and solutions with someone, then choose one.",
+        "translations": {
+          "bn": "একটা সত্যিকারের সমস্যা বাছুন, যেমন হইচইয়ের রাস্তা। কারও সঙ্গে কারণ আর সমাধান নিয়ে কথা বলে একটা বেছে নিন।",
+          "hi": "कोई असली समस्या चुनें, जैसे शोर वाली गली। किसी के साथ कारण और हल पर बात करें, फिर एक हल चुनें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Describe the problem clearly",
+          "translations": {
+            "bn": "সমস্যাটা স্পষ্ট করে বলুন",
+            "hi": "समस्या साफ़-साफ़ बताएँ"
+          }
+        },
+        {
+          "text": "Say why you think it happens",
+          "translations": {
+            "bn": "কেন হয় বলে মনে করেন, বলুন",
+            "hi": "बताएँ कि आपके हिसाब से यह क्यों होता है"
+          }
+        },
+        {
+          "text": "Suggest two possible solutions",
+          "translations": {
+            "bn": "দুটো সম্ভাব্য সমাধান বলুন",
+            "hi": "दो संभावित हल सुझाएँ"
+          }
+        },
+        {
+          "text": "Say one advantage and one disadvantage",
+          "translations": {
+            "bn": "একটা সুবিধা আর একটা অসুবিধা বলুন",
+            "hi": "एक फ़ायदा और एक नुक़सान बताएँ"
+          }
+        },
+        {
+          "text": "Agree together on the best solution",
+          "translations": {
+            "bn": "সবচেয়ে ভালো সমাধানে দুজনে একমত হোন",
+            "hi": "सबसे अच्छे हल पर मिलकर सहमति बनाएँ"
+          }
+        }
+      ],
+      "phrases": [
+        "The problem is that …",
+        "I think it’s because …",
+        "One solution is to …",
+        "Another option is …",
+        "The advantage is …, but …",
+        "Let’s try … first."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which sentence describes a problem clearly?",
+            "translations": {
+              "bn": "কোন বাক্যে সমস্যাটা স্পষ্ট করে বলা হয়েছে?",
+              "hi": "कौन-सा वाक्य समस्या साफ़-साफ़ बताता है?"
+            }
+          },
+          "answer": "The kitchen tap is leaking.",
+          "others": ["Something is bad.", "It’s a thing."]
+        },
+        {
+          "question": {
+            "text": "Complete: The road is closed ___ the rain.",
+            "translations": {
+              "bn": "পূরণ করুন: The road is closed ___ the rain.",
+              "hi": "पूरा करें: The road is closed ___ the rain."
+            }
+          },
+          "answer": "because of",
+          "others": ["because", "so"]
+        },
+        {
+          "question": {
+            "text": "Which sentence suggests a solution?",
+            "translations": {
+              "bn": "কোন বাক্যে সমাধানের প্রস্তাব?",
+              "hi": "कौन-सा वाक्य हल सुझाता है?"
+            }
+          },
+          "answer": "Why don’t we call the landlord?",
+          "others": ["The landlord is old.", "I called yesterday."]
+        },
+        {
+          "question": {
+            "text": "What is a disadvantage?",
+            "translations": {
+              "bn": "Disadvantage কী?",
+              "hi": "Disadvantage क्या है?"
+            }
+          },
+          "answer": "a bad point",
+          "others": ["a good point", "a solution"]
+        },
+        {
+          "question": {
+            "text": "Complete: It’s cheap and quick. ___, it’s a good choice.",
+            "translations": {
+              "bn": "পূরণ করুন: It’s cheap and quick. ___, it’s a good choice.",
+              "hi": "पूरा करें: It’s cheap and quick. ___, it’s a good choice."
+            }
+          },
+          "answer": "Therefore",
+          "others": ["However", "Although"]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Sakshi",
+          "text": "Rafiq, have you seen the rubbish at the end of our lane?",
+          "translations": {
+            "bn": "রফিক, আমাদের গলির শেষে আবর্জনা দেখেছেন?",
+            "hi": "रफ़ीक़, क्या आपने हमारी गली के आख़िर में कूड़ा देखा है?"
+          }
+        },
+        {
+          "speaker": "Rafiq",
+          "text": "Yes, it’s terrible. It’s been there for a week.",
+          "translations": {
+            "bn": "হ্যাঁ, ভয়ানক। এক সপ্তাহ ধরে পড়ে আছে।",
+            "hi": "हाँ, बहुत बुरा है। एक हफ़्ते से वहीं पड़ा है।"
+          }
+        },
+        {
+          "speaker": "Sakshi",
+          "text": "Why do you think the truck hasn’t come?",
+          "translations": {
+            "bn": "আপনার কী মনে হয়, গাড়িটা কেন আসেনি?",
+            "hi": "आपको क्या लगता है, गाड़ी क्यों नहीं आई?"
+          }
+        },
+        {
+          "speaker": "Rafiq",
+          "text": "I heard it’s because of a new timetable. Nobody told us.",
+          "translations": {
+            "bn": "শুনলাম নতুন সময়সূচির জন্য। আমাদের কেউ জানায়নি।",
+            "hi": "मैंने सुना है नई समय-सारणी की वजह से। हमें किसी ने बताया नहीं।"
+          }
+        },
+        {
+          "speaker": "Sakshi",
+          "text": "So what can we do? One idea is to call the city office.",
+          "translations": {
+            "bn": "তাহলে কী করা যায়? একটা উপায় হল পুরসভায় ফোন করা।",
+            "hi": "तो हम क्या कर सकते हैं? एक उपाय है नगर निगम को फ़ोन करना।"
+          }
+        },
+        {
+          "speaker": "Rafiq",
+          "text": "Good idea. Another option is to write a letter from all the neighbours.",
+          "translations": {
+            "bn": "ভালো বুদ্ধি। আরেকটা উপায় হল সব প্রতিবেশী মিলে একটা চিঠি লেখা।",
+            "hi": "अच्छा विचार है। दूसरा रास्ता है सब पड़ोसियों की तरफ़ से एक चिट्ठी लिखना।"
+          }
+        },
+        {
+          "speaker": "Sakshi",
+          "text": "A letter is stronger, but it’s slower. A call is quick.",
+          "translations": {
+            "bn": "চিঠির জোর বেশি, কিন্তু সময় লাগে। ফোন তাড়াতাড়ি।",
+            "hi": "चिट्ठी में ज़्यादा दम है, पर उसमें समय लगता है। फ़ोन जल्दी होता है।"
+          }
+        },
+        {
+          "speaker": "Rafiq",
+          "text": "Then let’s do both. I’ll call today, and you start the letter.",
+          "translations": {
+            "bn": "তাহলে দুটোই করি। আমি আজ ফোন করছি, আপনি চিঠিটা শুরু করুন।",
+            "hi": "तो दोनों करते हैं। मैं आज फ़ोन करता हूँ, आप चिट्ठी शुरू कीजिए।"
+          }
+        },
+        {
+          "speaker": "Sakshi",
+          "text": "Perfect. Teamwork!",
+          "translations": {
+            "bn": "একদম। মিলেমিশে কাজ!",
+            "hi": "बिल्कुल सही। मिलकर काम!"
+          }
+        }
+      ],
+      "voices": {
+        "Sakshi": "female",
+        "Rafiq": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the landlord",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello. You called about a problem?",
+          "reply": "Yes. The kitchen tap is leaking.",
+          "cues": {
+            "bn": "সমস্যাটা স্পষ্ট করে বলুন।",
+            "hi": "समस्या साफ़-साफ़ बताएँ।"
+          }
+        },
+        {
+          "partner": "When did it start?",
+          "reply": "Three days ago. I think something inside is broken.",
+          "cues": {
+            "bn": "কবে থেকে আর কেন, বলুন।",
+            "hi": "बताएँ कब से और क्यों।"
+          }
+        },
+        {
+          "partner": "I can come next week.",
+          "reply": "Could you send a plumber sooner? A lot of water is being wasted.",
+          "cues": {
+            "bn": "কারণ দেখিয়ে তাড়াতাড়ি সমাধান চান।",
+            "hi": "कारण बताकर जल्दी हल का अनुरोध करें।"
+          }
+        },
+        {
+          "partner": "OK, I’ll send someone tomorrow.",
+          "reply": "Thank you. That would be great.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A broken laptop",
+            "translations": {
+              "bn": "খারাপ ল্যাপটপ",
+              "hi": "ख़राब लैपटॉप"
+            }
+          },
+          "roleplay": {
+            "partner": "the technician",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "What seems to be the problem?",
+                "reply": "My laptop won’t turn on.",
+                "cues": {
+                  "bn": "সমস্যাটা বলুন।",
+                  "hi": "समस्या बताएँ।"
+                }
+              },
+              {
+                "partner": "Did anything happen to it?",
+                "reply": "Yes, I spilled some tea on it yesterday.",
+                "cues": {
+                  "bn": "কী ঘটেছিল, বলুন।",
+                  "hi": "बताएँ कि क्या हुआ था।"
+                }
+              },
+              {
+                "partner": "I see. I can repair it, or you can buy a new one.",
+                "reply": "Which is cheaper, and how long will the repair take?",
+                "cues": {
+                  "bn": "দুটো বিকল্প নিয়ে প্রশ্ন করুন।",
+                  "hi": "दोनों विकल्पों के बारे में पूछें।"
+                }
+              },
+              {
+                "partner": "Repair is cheaper. Three days.",
+                "reply": "Then please repair it.",
+                "cues": {
+                  "bn": "সিদ্ধান্ত জানান।",
+                  "hi": "फ़ैसला बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A noisy neighbour",
+            "translations": {
+              "bn": "হইচইয়ে প্রতিবেশী",
+              "hi": "शोर करने वाले पड़ोसी"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "What’s wrong? You look tired.",
+                "reply": "My neighbour plays loud music every night.",
+                "cues": {
+                  "bn": "সমস্যাটা বলুন।",
+                  "hi": "समस्या बताएँ।"
+                }
+              },
+              {
+                "partner": "Have you spoken to them?",
+                "reply": "Not yet. I don’t want to start a fight.",
+                "cues": {
+                  "bn": "কেন কথা বলেননি, বলুন।",
+                  "hi": "बताएँ कि अब तक बात क्यों नहीं हुई।"
+                }
+              },
+              {
+                "partner": "Why don’t you write them a friendly note?",
+                "reply": "That’s a good idea. It’s polite, and there’s no fight.",
+                "cues": {
+                  "bn": "সুবিধার কথা বলে রাজি হোন।",
+                  "hi": "फ़ायदा बताते हुए हामी भरें।"
+                }
+              },
+              {
+                "partner": "And if that doesn’t work?",
+                "reply": "Then I’ll talk to the building manager.",
+                "cues": {
+                  "bn": "দ্বিতীয় পরিকল্পনা বলুন।",
+                  "hi": "दूसरी योजना बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "Late for class",
+            "translations": {
+              "bn": "ক্লাসে দেরি",
+              "hi": "कक्षा में देर"
+            }
+          },
+          "roleplay": {
+            "partner": "the teacher",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "You’ve been late four times this month. Why?",
+                "reply": "I’m sorry. The bus is often late.",
+                "cues": {
+                  "bn": "দুঃখ প্রকাশ করে কারণ বলুন।",
+                  "hi": "माफ़ी माँगें और कारण बताएँ।"
+                }
+              },
+              {
+                "partner": "What can you do about it?",
+                "reply": "One solution is to take an earlier bus.",
+                "cues": {
+                  "bn": "একটা সমাধান দিন।",
+                  "hi": "एक हल बताएँ।"
+                }
+              },
+              {
+                "partner": "That means getting up earlier.",
+                "reply": "Yes, but the advantage is that I won’t miss anything.",
+                "cues": {
+                  "bn": "অসুবিধা মেনে সুবিধা বলুন।",
+                  "hi": "नुक़सान मानें और फ़ायदा बताएँ।"
+                }
+              },
+              {
+                "partner": "Good. Let’s see how it goes.",
+                "reply": "Thank you. I’ll try my best.",
+                "cues": {
+                  "bn": "চেষ্টার কথা দিন।",
+                  "hi": "पूरी कोशिश का वादा करें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

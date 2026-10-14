@@ -1,0 +1,767 @@
+{
+  "week": 23,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rajiv",
+          "text": "Excuse me, is the Chennai flight late?",
+          "translations": {
+            "bn": "মাফ করবেন, চেন্নাইয়ের ফ্লাইট কি দেরিতে?",
+            "hi": "माफ़ कीजिए, क्या चेन्नई की फ़्लाइट लेट है?"
+          }
+        },
+        {
+          "speaker": "Swati",
+          "text": "Yes, by one hour. Are you going home?",
+          "translations": {
+            "bn": "হ্যাঁ, এক ঘণ্টা। আপনি কি বাড়ি যাচ্ছেন?",
+            "hi": "हाँ, एक घंटा। क्या आप घर जा रहे हैं?"
+          }
+        },
+        {
+          "speaker": "Rajiv",
+          "text": "No, I’m going for work. I have a meeting tomorrow morning. And you?",
+          "translations": {
+            "bn": "না, কাজে যাচ্ছি। কাল সকালে একটা মিটিং আছে। আর আপনি?",
+            "hi": "नहीं, काम से जा रहा हूँ। कल सुबह मेरी एक मीटिंग है। और आप?"
+          }
+        },
+        {
+          "speaker": "Swati",
+          "text": "I’m visiting my sister. She just had a baby, so I’m going to help her for two weeks.",
+          "translations": {
+            "bn": "দিদির কাছে যাচ্ছি। ওর সবে একটা বাচ্চা হয়েছে, তাই দু সপ্তাহ সাহায্য করতে যাচ্ছি।",
+            "hi": "मैं अपनी बहन के पास जा रही हूँ। उसका अभी बच्चा हुआ है, इसलिए दो हफ़्ते उसकी मदद करूँगी।"
+          }
+        },
+        {
+          "speaker": "Rajiv",
+          "text": "Congratulations! Is it a boy or a girl? What’s the baby’s name?",
+          "translations": {
+            "bn": "অভিনন্দন! ছেলে না মেয়ে? বাচ্চার নাম কী?",
+            "hi": "बधाई हो! लड़का है या लड़की? बच्चे का नाम क्या है?"
+          }
+        },
+        {
+          "speaker": "Swati",
+          "text": "A girl. Her name is Anya. My sister chose it.",
+          "translations": {
+            "bn": "মেয়ে। ওর নাম অন্যা। দিদি নামটা রেখেছে।",
+            "hi": "लड़की। उसका नाम अन्या है। मेरी बहन ने रखा है।"
+          }
+        },
+        {
+          "speaker": "Rajiv",
+          "text": "That’s a beautiful name. Have you been to Chennai before?",
+          "translations": {
+            "bn": "খুব সুন্দর নাম। আপনি আগে চেন্নাই গেছেন?",
+            "hi": "बहुत सुंदर नाम है। क्या आप पहले चेन्नई गई हैं?"
+          }
+        },
+        {
+          "speaker": "Swati",
+          "text": "Yes, many times. I love the beach there, especially in the evening.",
+          "translations": {
+            "bn": "হ্যাঁ, অনেকবার। ওখানকার সমুদ্রসৈকত খুব ভালো লাগে, বিশেষ করে সন্ধ্যায়।",
+            "hi": "हाँ, कई बार। मुझे वहाँ का समुद्र तट बहुत पसंद है, ख़ासकर शाम को।"
+          }
+        },
+        {
+          "speaker": "Rajiv",
+          "text": "Speaking of evenings, do you know a good place to eat near the beach?",
+          "translations": {
+            "bn": "সন্ধ্যার কথায় মনে পড়ল, সৈকতের কাছে খাওয়ার ভালো জায়গা জানেন?",
+            "hi": "शाम की बात चली है तो, क्या आप समुद्र तट के पास खाने की कोई अच्छी जगह जानती हैं?"
+          }
+        },
+        {
+          "speaker": "Swati",
+          "text": "Yes! There’s a small café that makes great dosas. I’ll write down the name for you.",
+          "translations": {
+            "bn": "হ্যাঁ! একটা ছোট ক্যাফে আছে, দারুণ দোসা বানায়। নামটা লিখে দিচ্ছি।",
+            "hi": "हाँ! एक छोटा कैफ़े है, बहुत बढ़िया डोसे बनाता है। मैं आपको नाम लिख देती हूँ।"
+          }
+        },
+        {
+          "speaker": "Rajiv",
+          "text": "Thank you! By the way, I’m Rajiv.",
+          "translations": {
+            "bn": "ধন্যবাদ! ভালো কথা, আমি রাজীব।",
+            "hi": "धन्यवाद! वैसे, मैं राजीव हूँ।"
+          }
+        },
+        {
+          "speaker": "Swati",
+          "text": "I’m Swati. Oh, look, they’re calling our flight!",
+          "translations": {
+            "bn": "আমি স্বাতী। ও, দেখুন, আমাদের ফ্লাইটের ঘোষণা হচ্ছে!",
+            "hi": "मैं स्वाति हूँ। अरे, देखिए, हमारी फ़्लाइट की घोषणा हो रही है!"
+          }
+        }
+      ],
+      "voices": {
+        "Rajiv": "male",
+        "Swati": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "especially",
+          "phonetic": "/ɪˈspeʃəli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "বিশেষ করে",
+            "hi": "ख़ासकर"
+          },
+          "syllables": ["es", "pe", "cial", "ly"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“cial”-এর উচ্চারণ “শল”-এর মতো।"],
+            "en": ["Say the second part stronger.", "“cial” sounds like “shul”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“cial” की आवाज़ “शल” जैसी है।"]
+          }
+        },
+        {
+          "word": "usually",
+          "phonetic": "/ˈjuːʒuəli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সাধারণত",
+            "hi": "आमतौर पर"
+          },
+          "syllables": ["u", "su", "al", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “ইউ”।", "“s”-এর উচ্চারণ “measure”-এর “s”-এর মতো।"],
+            "en": [
+              "Say the first part stronger: “YOU”.",
+              "The “s” sounds like the “s” in “measure”."
+            ],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “यू”।", "“s” की आवाज़ “measure” के “s” जैसी है।"]
+          }
+        },
+        {
+          "word": "actually",
+          "phonetic": "/ˈæktʃuəli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আসলে",
+            "hi": "दरअसल"
+          },
+          "syllables": ["ac", "tu", "al", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“tu”-এর উচ্চারণ “চু”-এর মতো।"],
+            "en": ["Say the first part stronger.", "“tu” sounds like “choo”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“tu” की आवाज़ “चु” जैसी है।"]
+          }
+        },
+        {
+          "word": "recently",
+          "phonetic": "/ˈriːsntli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সম্প্রতি",
+            "hi": "हाल ही में"
+          },
+          "syllables": ["re", "cent", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "মাঝের অংশটি খুব ছোট।"],
+            "en": ["Say the first part stronger.", "The middle part is very short."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "बीच का हिस्सा बहुत छोटा है।"]
+          }
+        },
+        {
+          "word": "favourite",
+          "phonetic": "/ˈfeɪvərɪt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "প্রিয়",
+            "hi": "पसंदीदा"
+          },
+          "syllables": ["fa", "vour", "it(e)"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন: “ফেই”।", "শেষটা “রিট”-এর মতো শোনায়।"],
+            "en": ["Say the first part stronger: “FAY”.", "The end sounds like “rit”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें: “फ़े”।", "आख़िर की आवाज़ “रिट” जैसी है।"]
+          }
+        },
+        {
+          "word": "sometimes",
+          "phonetic": "/ˈsʌmtaɪmz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মাঝে মাঝে",
+            "hi": "कभी-कभी"
+          },
+          "syllables": ["some", "times"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "শেষে “z” ধ্বনি।"],
+            "en": ["Say the first part stronger.", "The end sounds like “z”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "आख़िर में “z” की आवाज़ है।"]
+          }
+        },
+        {
+          "word": "a lot",
+          "phonetic": "/ə ˈlɒt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অনেক",
+            "hi": "बहुत"
+          },
+          "syllables": ["a", "lot"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“lot” জোর দিয়ে বলুন।", "বলুন: “I like it a lot.”"],
+            "en": ["Say “lot” stronger.", "Say: “I like it a lot.”"],
+            "hi": ["“lot” ज़ोर से बोलें।", "कहें: “I like it a lot.”"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Oh, you like cooking? What do you usually make?",
+          "alsoAccepted": ["You like cooking? What do you usually cook?"],
+          "translations": {
+            "bn": "ও, আপনি রান্না ভালোবাসেন? সাধারণত কী রাঁধেন?",
+            "hi": "अच्छा, आपको खाना बनाना पसंद है? आप आमतौर पर क्या बनाते हैं?"
+          },
+          "tips": {
+            "bn": ["তাঁর বিষয়টা আবার বলুন, তারপর প্রশ্ন করুন।", "“usually” মানে বেশির ভাগ সময়।"],
+            "en": ["Repeat their topic, then ask about it.", "“usually” means most of the time."],
+            "hi": ["उनका विषय दोहराएँ, फिर उसके बारे में पूछें।", "“usually” मतलब ज़्यादातर।"]
+          }
+        },
+        {
+          "english": "Where did you learn that?",
+          "alsoAccepted": ["Where did you learn it?"],
+          "translations": {
+            "bn": "এটা কোথায় শিখেছেন?",
+            "hi": "आपने यह कहाँ सीखा?"
+          },
+          "tips": {
+            "bn": ["অতীতের জন্য “did”।", "“did”-এর পরে “learn”, “learned” নয়।"],
+            "en": ["Use “did” for the past.", "After “did”, use “learn”, not “learned”."],
+            "hi": ["बीते समय के लिए “did”।", "“did” के बाद “learn”, “learned” नहीं।"]
+          }
+        },
+        {
+          "english": "What was the best part of your trip?",
+          "alsoAccepted": ["What was the best thing about your trip?"],
+          "translations": {
+            "bn": "আপনার বেড়ানোর সবচেয়ে ভালো অংশ কোনটা ছিল?",
+            "hi": "आपकी यात्रा का सबसे अच्छा हिस्सा क्या था?"
+          },
+          "tips": {
+            "bn": [
+              "গল্প শুনতে সবচেয়ে ভালো অংশের কথা জিজ্ঞেস করুন।",
+              "“the best” মানে সবার চেয়ে ভালো।"
+            ],
+            "en": [
+              "Ask about the best part to hear a story.",
+              "“the best” means better than all the rest."
+            ],
+            "hi": [
+              "कहानी सुनने के लिए सबसे अच्छे हिस्से के बारे में पूछें।",
+              "“the best” मतलब सबसे अच्छा।"
+            ]
+          }
+        },
+        {
+          "english": "Do you go there often?",
+          "alsoAccepted": ["Do you often go there?"],
+          "translations": {
+            "bn": "আপনি কি ওখানে প্রায়ই যান?",
+            "hi": "क्या आप वहाँ अक्सर जाते हैं?"
+          },
+          "tips": {
+            "bn": [
+              "“often” শেষে বা “go”-এর আগে বসতে পারে।",
+              "হ্যাঁ বা না শুনে আরেকটা প্রশ্ন করুন।"
+            ],
+            "en": [
+              "“often” can go at the end or before “go”.",
+              "After a yes or no, ask another question."
+            ],
+            "hi": [
+              "“often” आख़िर में या “go” से पहले आ सकता है।",
+              "हाँ या ना सुनकर एक और सवाल पूछें।"
+            ]
+          }
+        },
+        {
+          "english": "How did you feel about that?",
+          "alsoAccepted": ["How did you feel about it?"],
+          "translations": {
+            "bn": "সেটা নিয়ে আপনার কেমন লেগেছিল?",
+            "hi": "उसके बारे में आपको कैसा लगा?"
+          },
+          "tips": {
+            "bn": ["গভীরে যেতে অনুভূতির কথা জিজ্ঞেস করুন।", "“that” মানে এইমাত্র যা বললেন।"],
+            "en": ["Ask about feelings to go deeper.", "“that” means what they just told you."],
+            "hi": [
+              "बात को गहराई तक ले जाने के लिए भावनाओं के बारे में पूछें।",
+              "“that” मतलब जो उन्होंने अभी बताया।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Ananya",
+      "asMan": "Anand",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "This train is so slow today.",
+          "reply": "Yes, it is. By the way, where are you going?",
+          "cues": {
+            "bn": "রাজি হোন, তারপর “By the way” দিয়ে বিষয় বদলান।",
+            "hi": "सहमति दें, फिर “By the way” से विषय बदलें।"
+          }
+        },
+        {
+          "partner": "To Jaipur, for my cousin’s wedding.",
+          "reply": "How exciting! Speaking of weddings, do you like dancing?",
+          "cues": {
+            "bn": "“Speaking of …” দিয়ে কাছাকাছি একটা বিষয়ে যান।",
+            "hi": "“Speaking of …” से किसी जुड़े विषय पर जाएँ।"
+          }
+        },
+        {
+          "partner": "I love it! I’ve practised for weeks.",
+          "reply": "That’s great. What kind of dance is it?",
+          "cues": {
+            "bn": "নাচ নিয়ে আরেকটা প্রশ্ন করুন।",
+            "hi": "नाच के बारे में एक और सवाल पूछें।"
+          }
+        },
+        {
+          "partner": "A folk dance from Rajasthan.",
+          "reply": "Nice. That reminds me, have you tried the food in Jaipur?",
+          "cues": {
+            "bn": "“That reminds me” দিয়ে খাবারের কথায় যান।",
+            "hi": "“That reminds me” से खाने की बात पर जाएँ।"
+          }
+        },
+        {
+          "partner": "Yes, dal baati is my favourite!",
+          "reply": "I’ve never tried it. What is it like?",
+          "cues": {
+            "bn": "বলুন কখনও খাননি, আর জিজ্ঞেস করুন কেমন খেতে।",
+            "hi": "बताएँ कि कभी नहीं चखा, और पूछें कि कैसा होता है।"
+          }
+        },
+        {
+          "partner": "Spicy and delicious. You must try it!",
+          "reply": "I will. Thanks for the tip!",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Five-minute Conversation Challenge",
+        "translations": {
+          "bn": "পাঁচ মিনিটের কথোপকথন চ্যালেঞ্জ",
+          "hi": "पाँच मिनट की बातचीत की चुनौती"
+        }
+      },
+      "instruction": {
+        "text": "Talk with someone for five minutes. Record two minutes of it, and keep the talk going.",
+        "translations": {
+          "bn": "কারও সঙ্গে পাঁচ মিনিট কথা বলুন। তার দু মিনিট রেকর্ড করুন, আর কথা থামাবেন না।",
+          "hi": "किसी से पाँच मिनट बात करें। उसमें से दो मिनट रिकॉर्ड करें, और बातचीत रुकने न दें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Answer with more than “yes” or “no”",
+          "translations": {
+            "bn": "শুধু “yes” বা “no” নয়, বেশি করে উত্তর দিন",
+            "hi": "सिर्फ़ “yes” या “no” नहीं, ज़्यादा करके जवाब दें"
+          }
+        },
+        {
+          "text": "Add a detail or an example to your answers",
+          "translations": {
+            "bn": "উত্তরে একটা খুঁটিনাটি বা উদাহরণ যোগ করুন",
+            "hi": "जवाब में एक ब्योरा या उदाहरण जोड़ें"
+          }
+        },
+        {
+          "text": "Ask two related questions",
+          "translations": {
+            "bn": "দুটো সম্পর্কিত প্রশ্ন করুন",
+            "hi": "दो जुड़े हुए सवाल पूछें"
+          }
+        },
+        {
+          "text": "Move to a new topic with “By the way” or “Speaking of …”",
+          "translations": {
+            "bn": "“By the way” বা “Speaking of …” দিয়ে নতুন বিষয়ে যান",
+            "hi": "“By the way” या “Speaking of …” से नए विषय पर जाएँ"
+          }
+        },
+        {
+          "text": "Keep talking for the full five minutes",
+          "translations": {
+            "bn": "পুরো পাঁচ মিনিট কথা চালিয়ে যান",
+            "hi": "पूरे पाँच मिनट बात करते रहें"
+          }
+        }
+      ],
+      "phrases": [
+        "Actually, …",
+        "Especially …",
+        "What about you?",
+        "By the way, …",
+        "Speaking of …, …",
+        "That reminds me …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Someone asks, “Do you like music?” Which answer keeps the conversation going?",
+            "translations": {
+              "bn": "কেউ জিজ্ঞেস করলেন, “Do you like music?” কোন উত্তরে কথা চলতে থাকে?",
+              "hi": "किसी ने पूछा, “Do you like music?” किस जवाब से बातचीत आगे बढ़ती है?"
+            }
+          },
+          "answer": "Yes, especially old songs. What about you?",
+          "others": ["Yes.", "No."]
+        },
+        {
+          "question": {
+            "text": "Which phrase changes the topic?",
+            "translations": {
+              "bn": "কোন কথায় বিষয় বদলায়?",
+              "hi": "कौन-सा वाक्यांश विषय बदलता है?"
+            }
+          },
+          "answer": "By the way, …",
+          "others": ["For example, …", "Because …"]
+        },
+        {
+          "question": {
+            "text": "They say, “I play cricket.” Which is a related question?",
+            "translations": {
+              "bn": "তিনি বললেন, “I play cricket.” কোনটা সম্পর্কিত প্রশ্ন?",
+              "hi": "उन्होंने कहा, “I play cricket.” जुड़ा हुआ सवाल कौन-सा है?"
+            }
+          },
+          "answer": "How often do you play?",
+          "others": ["What time is it?", "Do you like rice?"]
+        },
+        {
+          "question": {
+            "text": "Complete: I love fruit, ___ mangoes.",
+            "translations": {
+              "bn": "পূরণ করুন: I love fruit, ___ mangoes.",
+              "hi": "पूरा करें: I love fruit, ___ mangoes."
+            }
+          },
+          "answer": "especially",
+          "others": ["actually", "sometimes"]
+        },
+        {
+          "question": {
+            "text": "Which answer adds a detail?",
+            "translations": {
+              "bn": "কোন উত্তরে খুঁটিনাটি যোগ হয়েছে?",
+              "hi": "किस जवाब में ब्योरा जोड़ा गया है?"
+            }
+          },
+          "answer": "I live in Pune, near the river.",
+          "others": ["I live in Pune.", "Pune."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Naresh",
+          "text": "It’s a long wait today, isn’t it?",
+          "translations": {
+            "bn": "আজ অনেকক্ষণ অপেক্ষা করতে হচ্ছে, তাই না?",
+            "hi": "आज काफ़ी लंबा इंतज़ार है, है न?"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Yes, it is. I’ve been here for an hour. Actually, I’m only here for my mother’s medicine.",
+          "translations": {
+            "bn": "হ্যাঁ। এক ঘণ্টা ধরে বসে আছি। আসলে আমি শুধু মায়ের ওষুধ নিতে এসেছি।",
+            "hi": "हाँ। मैं एक घंटे से यहाँ हूँ। दरअसल, मैं बस अपनी माँ की दवा लेने आई हूँ।"
+          }
+        },
+        {
+          "speaker": "Naresh",
+          "text": "I hope she’s OK. Does she live with you?",
+          "translations": {
+            "bn": "আশা করি উনি ভালো আছেন। উনি কি আপনার সঙ্গে থাকেন?",
+            "hi": "उम्मीद है वे ठीक हैं। क्या वे आपके साथ रहती हैं?"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Yes, she does. She’s fine, just a cold. She loves gardening, so she was out in the rain!",
+          "translations": {
+            "bn": "হ্যাঁ। ভালো আছেন, শুধু সর্দি। বাগান করতে খুব ভালোবাসেন, তাই বৃষ্টিতে বাইরে ছিলেন!",
+            "hi": "हाँ। वे ठीक हैं, बस ज़ुकाम है। उन्हें बाग़बानी बहुत पसंद है, इसलिए बारिश में बाहर थीं!"
+          }
+        },
+        {
+          "speaker": "Naresh",
+          "text": "Gardening! What does she grow?",
+          "translations": {
+            "bn": "বাগান! উনি কী কী লাগান?",
+            "hi": "बाग़बानी! वे क्या उगाती हैं?"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Tomatoes, chillies and lots of flowers, especially roses.",
+          "translations": {
+            "bn": "টমেটো, লঙ্কা আর অনেক ফুল, বিশেষ করে গোলাপ।",
+            "hi": "टमाटर, मिर्च और ढेर सारे फूल, ख़ासकर गुलाब।"
+          }
+        },
+        {
+          "speaker": "Naresh",
+          "text": "Speaking of flowers, there’s a flower show in the park next week.",
+          "translations": {
+            "bn": "ফুলের কথায় মনে পড়ল, সামনের সপ্তাহে পার্কে ফুলের প্রদর্শনী আছে।",
+            "hi": "फूलों की बात चली तो, अगले हफ़्ते पार्क में फूलों की प्रदर्शनी है।"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Really? She would love that. Which day is it?",
+          "translations": {
+            "bn": "তাই? মায়ের খুব ভালো লাগবে। কোন দিন?",
+            "hi": "सच में? माँ को बहुत पसंद आएगी। किस दिन है?"
+          }
+        },
+        {
+          "speaker": "Naresh",
+          "text": "Saturday and Sunday. I’m going on Sunday.",
+          "translations": {
+            "bn": "শনি আর রবিবার। আমি রবিবার যাচ্ছি।",
+            "hi": "शनिवार और रविवार। मैं रविवार को जा रहा हूँ।"
+          }
+        },
+        {
+          "speaker": "Farah",
+          "text": "Maybe we’ll see you there. Oh, that’s my name. Nice talking to you!",
+          "translations": {
+            "bn": "হয়তো ওখানে দেখা হবে। ও, আমার নাম ডাকছে। কথা বলে ভালো লাগল!",
+            "hi": "शायद वहाँ मुलाक़ात हो। अरे, मेरा नाम पुकारा गया। आपसे बात करके अच्छा लगा!"
+          }
+        }
+      ],
+      "voices": {
+        "Naresh": "male",
+        "Farah": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Do you like your city?",
+          "reply": "Yes, I do. Especially the old markets.",
+          "cues": {
+            "bn": "হ্যাঁ বলুন, আর একটা খুঁটিনাটি যোগ করুন।",
+            "hi": "हाँ कहें और एक ब्योरा जोड़ें।"
+          }
+        },
+        {
+          "partner": "Oh, I love markets too!",
+          "reply": "Really? Which market is your favourite?",
+          "cues": {
+            "bn": "একটা সম্পর্কিত প্রশ্ন করুন।",
+            "hi": "एक जुड़ा हुआ सवाल पूछें।"
+          }
+        },
+        {
+          "partner": "The flower market, early in the morning.",
+          "reply": "Speaking of mornings, do you get up early?",
+          "cues": {
+            "bn": "“Speaking of …” দিয়ে বিষয় বদলান।",
+            "hi": "“Speaking of …” से विषय बदलें।"
+          }
+        },
+        {
+          "partner": "Yes, I get up at five!",
+          "reply": "Five! That’s very early. What do you do first?",
+          "cues": {
+            "bn": "অবাক হয়ে আরেকটা প্রশ্ন করুন।",
+            "hi": "हैरानी जताएँ और एक और सवाल पूछें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "Waiting for a bus",
+            "translations": {
+              "bn": "বাসের অপেক্ষায়",
+              "hi": "बस का इंतज़ार"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "The bus is late again.",
+                "reply": "Yes, it is. Do you take this bus every day?",
+                "cues": {
+                  "bn": "রাজি হোন, তারপর একটা প্রশ্ন করুন।",
+                  "hi": "सहमति दें, फिर एक सवाल पूछें।"
+                }
+              },
+              {
+                "partner": "Yes, to my office in the city.",
+                "reply": "What do you do there?",
+                "cues": {
+                  "bn": "কাজের কথা জিজ্ঞেস করুন।",
+                  "hi": "काम के बारे में पूछें।"
+                }
+              },
+              {
+                "partner": "I design websites.",
+                "reply": "That sounds interesting. Do you enjoy it?",
+                "cues": {
+                  "bn": "আগ্রহ দেখিয়ে আরেকটা প্রশ্ন করুন।",
+                  "hi": "दिलचस्पी दिखाएँ और एक और सवाल पूछें।"
+                }
+              },
+              {
+                "partner": "Very much. Oh, here’s the bus!",
+                "reply": "Finally! Nice talking to you.",
+                "cues": {
+                  "bn": "বিদায় জানান।",
+                  "hi": "विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "On a long flight",
+            "translations": {
+              "bn": "লম্বা বিমানযাত্রায়",
+              "hi": "लंबी हवाई यात्रा में"
+            }
+          },
+          "roleplay": {
+            "partner": "Hema",
+            "asMan": "Hemant",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Is this your first time flying to London?",
+                "reply": "No, it’s my second time. I went last year for work.",
+                "cues": {
+                  "bn": "না বলুন, আর খুঁটিনাটি দিন।",
+                  "hi": "ना कहें और ब्योरा दें।"
+                }
+              },
+              {
+                "partner": "Oh, what kind of work do you do?",
+                "reply": "I’m a …, and I often travel.",
+                "cues": {
+                  "bn": "আপনার কাজের কথা বলুন।",
+                  "hi": "अपने काम के बारे में बताएँ।"
+                }
+              },
+              {
+                "partner": "Nice. Do you like travelling?",
+                "reply": "Yes, especially to new countries. What about you?",
+                "cues": {
+                  "bn": "খুঁটিনাটি যোগ করুন, আর পাল্টা প্রশ্ন করুন।",
+                  "hi": "ब्योरा जोड़ें और पलटकर सवाल पूछें।"
+                }
+              },
+              {
+                "partner": "I love it too. I want to visit Japan next.",
+                "reply": "That reminds me, I’d love to try real Japanese food!",
+                "cues": {
+                  "bn": "“That reminds me” দিয়ে বিষয় বদলান।",
+                  "hi": "“That reminds me” से विषय बदलें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At a wedding dinner",
+            "translations": {
+              "bn": "বিয়ের নিমন্ত্রণে",
+              "hi": "शादी की दावत में"
+            }
+          },
+          "roleplay": {
+            "partner": "the guest",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "The food here is wonderful.",
+                "reply": "Yes, especially the biryani. Have you tried it?",
+                "cues": {
+                  "bn": "রাজি হয়ে খুঁটিনাটি যোগ করুন, আর প্রশ্ন করুন।",
+                  "hi": "सहमति दें, ब्योरा जोड़ें और सवाल पूछें।"
+                }
+              },
+              {
+                "partner": "Not yet. Is it spicy?",
+                "reply": "A little, but it’s really tasty.",
+                "cues": {
+                  "bn": "একটা খুঁটিনাটি দিয়ে উত্তর দিন।",
+                  "hi": "एक ब्योरे के साथ जवाब दें।"
+                }
+              },
+              {
+                "partner": "How do you know the couple?",
+                "reply": "I went to school with the bride. And you?",
+                "cues": {
+                  "bn": "কীভাবে চেনেন বলুন, আর পাল্টা প্রশ্ন করুন।",
+                  "hi": "बताएँ कि जान-पहचान कैसे है, और पलटकर पूछें।"
+                }
+              },
+              {
+                "partner": "I work with the groom.",
+                "reply": "Oh, nice! By the way, do you know when the music starts?",
+                "cues": {
+                  "bn": "“By the way” দিয়ে বিষয় বদলান।",
+                  "hi": "“By the way” से विषय बदलें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

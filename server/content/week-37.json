@@ -1,0 +1,800 @@
+{
+  "week": 37,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Riya",
+          "text": "Sameer, you won’t believe what happened to me yesterday!",
+          "translations": {
+            "bn": "সমীর, কাল আমার সঙ্গে কী হয়েছে, তুমি বিশ্বাসই করবে না!",
+            "hi": "समीर, कल मेरे साथ क्या हुआ, तुम यक़ीन नहीं करोगे!"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "What? Tell me!",
+          "translations": {
+            "bn": "কী? বলো বলো!",
+            "hi": "क्या? बताओ!"
+          }
+        },
+        {
+          "speaker": "Riya",
+          "text": "So, it was about eight in the evening, and I was on my way home by bus. It was raining heavily.",
+          "translations": {
+            "bn": "তখন সন্ধে প্রায় আটটা, আমি বাসে করে বাড়ি ফিরছিলাম। খুব জোরে বৃষ্টি পড়ছিল।",
+            "hi": "तो, शाम के क़रीब आठ बजे थे, और मैं बस से घर जा रही थी। तेज़ बारिश हो रही थी।"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "OK, and then?",
+          "translations": {
+            "bn": "আচ্ছা, তারপর?",
+            "hi": "अच्छा, फिर?"
+          }
+        },
+        {
+          "speaker": "Riya",
+          "text": "First, I got off at my stop. Then I opened my bag, and my phone wasn’t there!",
+          "translations": {
+            "bn": "প্রথমে আমি আমার স্টপে নামলাম। তারপর ব্যাগ খুলে দেখি, ফোনটা নেই!",
+            "hi": "पहले मैं अपने स्टॉप पर उतरी। फिर मैंने बैग खोला, और फ़ोन उसमें नहीं था!"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "Oh no! What did you do?",
+          "translations": {
+            "bn": "সর্বনাশ! তারপর কী করলে?",
+            "hi": "अरे नहीं! फिर तुमने क्या किया?"
+          }
+        },
+        {
+          "speaker": "Riya",
+          "text": "I ran back, but the bus was already gone. I was standing there in the rain, completely wet.",
+          "translations": {
+            "bn": "ছুটে ফিরে গেলাম, কিন্তু বাস ততক্ষণে চলে গেছে। বৃষ্টিতে দাঁড়িয়ে ছিলাম, পুরো ভিজে।",
+            "hi": "मैं वापस भागी, पर बस जा चुकी थी। मैं बारिश में खड़ी थी, पूरी भीगी हुई।"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "That’s terrible.",
+          "translations": {
+            "bn": "কী বিচ্ছিরি ব্যাপার।",
+            "hi": "यह तो बहुत बुरा हुआ।"
+          }
+        },
+        {
+          "speaker": "Riya",
+          "text": "Wait, it gets better. Suddenly, an old man with an umbrella came up to me. He was holding something.",
+          "translations": {
+            "bn": "দাঁড়াও, এরপর আরও মজার। হঠাৎ ছাতা হাতে এক বয়স্ক ভদ্রলোক আমার কাছে এলেন। ওঁর হাতে কিছু একটা ছিল।",
+            "hi": "रुको, आगे और भी अच्छा है। अचानक छाता लिए एक बुज़ुर्ग आदमी मेरे पास आए। उनके हाथ में कुछ था।"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "Don’t tell me… your phone?",
+          "translations": {
+            "bn": "বোলো না… তোমার ফোন?",
+            "hi": "कहीं… तुम्हारा फ़ोन तो नहीं?"
+          }
+        },
+        {
+          "speaker": "Riya",
+          "text": "Yes! He was on the same bus. He saw my phone on the seat and got off at the next stop to find me.",
+          "translations": {
+            "bn": "হ্যাঁ! উনি একই বাসে ছিলেন। সিটে আমার ফোনটা দেখে পরের স্টপে নেমে আমাকে খুঁজতে এসেছিলেন।",
+            "hi": "हाँ! वे उसी बस में थे। उन्होंने सीट पर मेरा फ़ोन देखा और मुझे ढूँढने के लिए अगले स्टॉप पर उतर गए।"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "Wow! That’s amazing. Did you thank him?",
+          "translations": {
+            "bn": "বাহ্! দারুণ ব্যাপার। ওঁকে ধন্যবাদ দিয়েছিলে?",
+            "hi": "वाह! कमाल है। तुमने उन्हें धन्यवाद कहा?"
+          }
+        },
+        {
+          "speaker": "Riya",
+          "text": "Of course. In the end, I bought him a cup of tea, and we talked for an hour.",
+          "translations": {
+            "bn": "অবশ্যই। শেষে ওঁকে এক কাপ চা খাওয়ালাম, আর আমরা এক ঘণ্টা গল্প করলাম।",
+            "hi": "बिल्कुल। आख़िर में मैंने उन्हें एक कप चाय पिलाई, और हमने एक घंटे बातें कीं।"
+          }
+        },
+        {
+          "speaker": "Sameer",
+          "text": "What a story! You told it so well, I was holding my breath.",
+          "translations": {
+            "bn": "কী গল্প! এত সুন্দর করে বললে, আমি দম বন্ধ করে শুনছিলাম।",
+            "hi": "क्या कहानी है! तुमने इतने अच्छे से सुनाई कि मेरी तो साँस रुक गई थी।"
+          }
+        }
+      ],
+      "voices": {
+        "Riya": "female",
+        "Sameer": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "first",
+          "phonetic": "/fɜːst/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "প্রথমে",
+            "hi": "पहले"
+          },
+          "syllables": ["first"],
+          "stress": null,
+          "tips": {
+            "bn": ["“ir”-এর উচ্চারণ “her”-এর “er”-এর মতো।", "ঘটনা শুরু করুন “First, …” দিয়ে।"],
+            "en": ["The “ir” sounds like “er” in “her”.", "Start the events with “First, …”"],
+            "hi": ["“ir” की आवाज़ “her” के “er” जैसी है।", "घटनाएँ “First, …” से शुरू करें।"]
+          }
+        },
+        {
+          "word": "then",
+          "phonetic": "/ðen/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "তারপর",
+            "hi": "फिर"
+          },
+          "syllables": ["then"],
+          "stress": null,
+          "tips": {
+            "bn": ["“th”-এর জন্য জিভ দাঁতের মাঝে রাখুন।", "“Then” দিয়ে পরের ঘটনায় যান।"],
+            "en": [
+              "Put your tongue between your teeth for “th”.",
+              "“Then” moves to the next event."
+            ],
+            "hi": ["“th” के लिए जीभ दाँतों के बीच रखें।", "“Then” से अगली घटना पर जाएँ।"]
+          }
+        },
+        {
+          "word": "after that",
+          "phonetic": "/ˈɑːftə ðæt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "তার পরে",
+            "hi": "उसके बाद"
+          },
+          "syllables": ["af", "ter", "that"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“af” জোর দিয়ে বলুন।", "“then”-এর মতো, পরের ঘটনার জন্য।"],
+            "en": ["Say “af” stronger.", "Use it for the next event, like “then”."],
+            "hi": ["“af” ज़ोर से बोलें।", "“then” की तरह, अगली घटना के लिए।"]
+          }
+        },
+        {
+          "word": "suddenly",
+          "phonetic": "/ˈsʌdənli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হঠাৎ",
+            "hi": "अचानक"
+          },
+          "syllables": ["sud", "den", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "দ্রুত আর অবাক করা কিছুর জন্য।"],
+            "en": ["Say the first part stronger.", "Use it for something quick and surprising."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "किसी तेज़ और हैरान करने वाली बात के लिए।"]
+          }
+        },
+        {
+          "word": "while",
+          "phonetic": "/waɪl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যখন, … করার সময়",
+            "hi": "जब, … के दौरान"
+          },
+          "syllables": ["w(h)ile"],
+          "stress": null,
+          "tips": {
+            "bn": ["“h” উচ্চারণ হয় না।", "“While I was waiting, …” একই সময়ে দুটো ঘটনার জন্য।"],
+            "en": [
+              "The “h” is not said.",
+              "“While I was waiting, …” is for two things at the same time."
+            ],
+            "hi": ["“h” नहीं बोला जाता।", "“While I was waiting, …” एक ही समय की दो बातों के लिए।"]
+          }
+        },
+        {
+          "word": "finally",
+          "phonetic": "/ˈfaɪnəli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অবশেষে",
+            "hi": "आख़िरकार"
+          },
+          "syllables": ["fi", "nal", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "শেষ ঘটনার জন্য।"],
+            "en": ["Say the first part stronger.", "Use it for the last event."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "आख़िरी घटना के लिए।"]
+          }
+        },
+        {
+          "word": "in the end",
+          "phonetic": "/ɪn ði ˈend/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "শেষ পর্যন্ত",
+            "hi": "अंत में"
+          },
+          "syllables": ["in", "the", "end"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“end” জোর দিয়ে বলুন।", "“In the end” বলে গল্প কীভাবে শেষ হলো।"],
+            "en": ["Say “end” stronger.", "“In the end” tells how the story finished."],
+            "hi": ["“end” ज़ोर से बोलें।", "“In the end” बताता है कि कहानी का अंत कैसे हुआ।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "It was a cold, dark night in December.",
+          "alsoAccepted": ["It was a dark, cold night in December."],
+          "translations": {
+            "bn": "সেটা ছিল ডিসেম্বরের এক ঠান্ডা, অন্ধকার রাত।",
+            "hi": "दिसंबर की एक ठंडी, अँधेरी रात थी।"
+          },
+          "tips": {
+            "bn": ["দৃশ্যটা সাজান: কখন, আর কেমন ছিল।", "দুটো বর্ণনার শব্দ কমা দিয়ে জুড়ুন।"],
+            "en": [
+              "Set the scene: when, and what it was like.",
+              "Join two describing words with a comma."
+            ],
+            "hi": ["माहौल बनाएँ: कब, और कैसा था।", "दो वर्णन वाले शब्द अल्पविराम से जोड़ें।"]
+          }
+        },
+        {
+          "english": "My grandmother was sitting in the garden with a book.",
+          "alsoAccepted": ["My grandmother was sitting in the garden with a book in her hand."],
+          "translations": {
+            "bn": "আমার ঠাকুমা একটা বই নিয়ে বাগানে বসে ছিলেন।",
+            "hi": "मेरी दादी किताब लेकर बग़ीचे में बैठी थीं।"
+          },
+          "tips": {
+            "bn": ["কে, কোথায়, আর কী করছিলেন।", "“was sitting” ঘটনার আগে ছবিটা আঁকে।"],
+            "en": [
+              "Who, where, and what they were doing.",
+              "“was sitting” paints the picture before the action."
+            ],
+            "hi": ["कौन, कहाँ, और क्या कर रहे थे।", "“was sitting” घटना से पहले तस्वीर बनाता है।"]
+          }
+        },
+        {
+          "english": "The market was crowded, noisy and full of colour.",
+          "alsoAccepted": ["The market was crowded, noisy and colourful."],
+          "translations": {
+            "bn": "বাজারটা ছিল ভিড়ে ভরা, কোলাহলে মুখর আর রঙে ভরপুর।",
+            "hi": "बाज़ार भीड़ से भरा, शोर वाला और रंगों से भरपूर था।"
+          },
+          "tips": {
+            "bn": ["জায়গার খুঁটিনাটি শুনে শ্রোতা সেটা দেখতে পান।", "বর্ণনার শব্দগুলো পরপর বলুন।"],
+            "en": [
+              "Details about a place help the listener see it.",
+              "Put the describing words in a list."
+            ],
+            "hi": [
+              "जगह के ब्योरे सुनने वाले को वह दिखा देते हैं।",
+              "वर्णन वाले शब्द एक के बाद एक बोलें।"
+            ]
+          }
+        },
+        {
+          "english": "A tall man in a black coat walked into the room.",
+          "alsoAccepted": [
+            "A tall man wearing a black coat walked into the room.",
+            "A tall man in a black coat came into the room."
+          ],
+          "translations": {
+            "bn": "কালো কোট পরা একজন লম্বা লোক ঘরে ঢুকলেন।",
+            "hi": "काले कोट में एक लंबा आदमी कमरे में आया।"
+          },
+          "tips": {
+            "bn": ["নতুন কেউ এলে তখনই তাঁর বর্ণনা দিন।", "“in a black coat” বলে উনি কী পরে আছেন।"],
+            "en": [
+              "Describe a new person as they arrive.",
+              "“in a black coat” tells what he is wearing."
+            ],
+            "hi": [
+              "कोई नया आए, तो उसी समय उसका वर्णन करें।",
+              "“in a black coat” बताता है कि उसने क्या पहना है।"
+            ]
+          }
+        },
+        {
+          "english": "We had no idea what was going to happen.",
+          "alsoAccepted": [
+            "We didn’t know what was going to happen.",
+            "We had no idea what would happen."
+          ],
+          "translations": {
+            "bn": "কী হতে চলেছে, আমাদের কোনো ধারণাই ছিল না।",
+            "hi": "हमें बिल्कुल अंदाज़ा नहीं था कि क्या होने वाला है।"
+          },
+          "tips": {
+            "bn": ["এমন একটা লাইন শ্রোতার আগ্রহ বাড়ায়।", "ধীরে বলুন, তারপর একটু থামুন।"],
+            "en": ["A line like this makes the listener want more.", "Say it slowly, then pause."],
+            "hi": ["ऐसी पंक्ति सुनने वाले की उत्सुकता बढ़ाती है।", "धीरे बोलें, फिर थोड़ा रुकें।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Dev",
+      "asWoman": "Devika",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "You look excited. What happened?",
+          "reply": "You won’t believe this. Last night, I heard a strange noise in the kitchen.",
+          "cues": {
+            "bn": "কৌতূহল জাগিয়ে গল্প শুরু করুন।",
+            "hi": "उत्सुकता जगाते हुए कहानी शुरू करें।"
+          }
+        },
+        {
+          "partner": "A noise? What kind of noise?",
+          "reply": "A soft scratching sound. It was two in the morning, and everyone was asleep.",
+          "cues": {
+            "bn": "শব্দটা আর সময়টা বর্ণনা করুন।",
+            "hi": "आवाज़ और समय के बारे में बताएँ।"
+          }
+        },
+        {
+          "partner": "That’s scary! What did you do?",
+          "reply": "I picked up a torch and walked slowly to the door. My heart was beating fast.",
+          "cues": {
+            "bn": "ধীরে ধীরে এরপর কী হলো বলুন, উত্তেজনা ধরে রাখুন।",
+            "hi": "धीरे-धीरे बताएँ कि आगे क्या हुआ, रोमांच बनाए रखें।"
+          }
+        },
+        {
+          "partner": "And? Don’t stop now!",
+          "reply": "Then, suddenly, something jumped off the table!",
+          "cues": {
+            "bn": "হঠাৎ কী হলো বলুন।",
+            "hi": "बताएँ कि अचानक क्या हुआ।"
+          }
+        },
+        {
+          "partner": "What was it?",
+          "reply": "It was our neighbour’s cat! It came in through the window.",
+          "cues": {
+            "bn": "রহস্যটা খুলে বলুন।",
+            "hi": "राज़ खोलें।"
+          }
+        },
+        {
+          "partner": "Ha! What a story. You really kept me guessing.",
+          "reply": "Thanks! In the end, I gave it some milk and went back to bed.",
+          "cues": {
+            "bn": "গল্পটা শেষ করুন।",
+            "hi": "कहानी पूरी करें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Tell Me a Story",
+        "translations": {
+          "bn": "আমাকে একটা গল্প বলুন",
+          "hi": "मुझे एक कहानी सुनाइए"
+        }
+      },
+      "instruction": {
+        "text": "Tell a short true story about something surprising. Begin well, give the events in order and add details.",
+        "translations": {
+          "bn": "অবাক করা কোনো সত্যি ঘটনার ছোট গল্প বলুন। সুন্দর করে শুরু করুন, ক্রমে ঘটনা বলুন, খুঁটিনাটি যোগ করুন।",
+          "hi": "किसी हैरान करने वाली सच्ची घटना की छोटी कहानी सुनाएँ। अच्छी शुरुआत करें, घटनाएँ क्रम से बताएँ और ब्योरे जोड़ें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Begin: say when and where it happened",
+          "translations": {
+            "bn": "শুরুতে বলুন কখন আর কোথায় ঘটেছিল",
+            "hi": "शुरुआत में बताएँ कि यह कब और कहाँ हुआ"
+          }
+        },
+        {
+          "text": "Introduce the people in the story",
+          "translations": {
+            "bn": "গল্পের মানুষদের পরিচয় দিন",
+            "hi": "कहानी के लोगों का परिचय दें"
+          }
+        },
+        {
+          "text": "Tell three events in order: first, then, after that",
+          "translations": {
+            "bn": "তিনটে ঘটনা ক্রমে বলুন: first, then, after that",
+            "hi": "तीन घटनाएँ क्रम से बताएँ: first, then, after that"
+          }
+        },
+        {
+          "text": "Build up to the surprise with “suddenly”",
+          "translations": {
+            "bn": "“suddenly” দিয়ে চমকের দিকে এগোন",
+            "hi": "“suddenly” से चौंकाने वाले पल तक पहुँचें"
+          }
+        },
+        {
+          "text": "Finish with how it ended and how you felt",
+          "translations": {
+            "bn": "শেষে বলুন কীভাবে শেষ হলো আর আপনার কেমন লাগল",
+            "hi": "आख़िर में बताएँ कि अंत कैसे हुआ और आपको कैसा लगा"
+          }
+        }
+      ],
+      "phrases": [
+        "You won’t believe what happened …",
+        "It was a … day.",
+        "First, … Then, …",
+        "Suddenly, …",
+        "I couldn’t believe it!",
+        "In the end, …"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which is a good way to begin a story?",
+            "translations": {
+              "bn": "গল্প শুরু করার ভালো উপায় কোনটি?",
+              "hi": "कहानी शुरू करने का अच्छा तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "You won’t believe what happened last week!",
+          "others": ["The end.", "What is your name?"]
+        },
+        {
+          "question": {
+            "text": "Which word is for something quick and surprising?",
+            "translations": {
+              "bn": "দ্রুত আর অবাক করা কিছুর জন্য কোন শব্দ?",
+              "hi": "तेज़ और हैरान करने वाली बात के लिए कौन-सा शब्द है?"
+            }
+          },
+          "answer": "suddenly",
+          "others": ["finally", "first"]
+        },
+        {
+          "question": {
+            "text": "Complete: “I woke up late. ___, I missed the bus.”",
+            "translations": {
+              "bn": "পূরণ করুন: “I woke up late. ___, I missed the bus.”",
+              "hi": "पूरा करें: “I woke up late. ___, I missed the bus.”"
+            }
+          },
+          "answer": "Then",
+          "others": ["First", "Before"]
+        },
+        {
+          "question": {
+            "text": "Which sentence adds a detail about a person?",
+            "translations": {
+              "bn": "কোন বাক্যে কোনো মানুষের খুঁটিনাটি যোগ হয়েছে?",
+              "hi": "कौन-सा वाक्य किसी व्यक्ति के बारे में ब्योरा जोड़ता है?"
+            }
+          },
+          "answer": "She was an old woman with a bright yellow umbrella.",
+          "others": ["She was there.", "Then she left."]
+        },
+        {
+          "question": {
+            "text": "Which line keeps the listener interested?",
+            "translations": {
+              "bn": "কোন লাইনে শ্রোতার আগ্রহ ধরে থাকে?",
+              "hi": "कौन-सी पंक्ति सुनने वाले की दिलचस्पी बनाए रखती है?"
+            }
+          },
+          "answer": "And then… you’ll never guess who was at the door.",
+          "others": ["That’s all.", "I don’t remember the rest."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Tanya",
+          "text": "Kunal, how was your first day at the new office?",
+          "translations": {
+            "bn": "কুণাল, নতুন অফিসে প্রথম দিনটা কেমন গেল?",
+            "hi": "कुणाल, नए दफ़्तर में पहला दिन कैसा रहा?"
+          }
+        },
+        {
+          "speaker": "Kunal",
+          "text": "Funny! Let me tell you. In the morning, I was in a hurry, so I ran into the lift.",
+          "translations": {
+            "bn": "মজার! শোনো। সকালে খুব তাড়া ছিল, তাই দৌড়ে লিফটে ঢুকলাম।",
+            "hi": "मज़ेदार! सुनो। सुबह मुझे बहुत जल्दी थी, तो मैं भागकर लिफ़्ट में घुसा।"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "And then?",
+          "translations": {
+            "bn": "তারপর?",
+            "hi": "फिर?"
+          }
+        },
+        {
+          "speaker": "Kunal",
+          "text": "There was a man inside with a cup of coffee. I said, “This lift is so slow, isn’t it?”",
+          "translations": {
+            "bn": "ভেতরে এক ভদ্রলোক কফির কাপ হাতে। আমি বললাম, “লিফটটা খুব ধীরে চলে, তাই না?”",
+            "hi": "अंदर एक आदमी कॉफ़ी का कप लिए खड़े थे। मैंने कहा, “यह लिफ़्ट कितनी धीमी है, है न?”"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "What did he say?",
+          "translations": {
+            "bn": "উনি কী বললেন?",
+            "hi": "उन्होंने क्या कहा?"
+          }
+        },
+        {
+          "speaker": "Kunal",
+          "text": "He just smiled. Then he asked me what I thought of the company.",
+          "translations": {
+            "bn": "উনি শুধু হাসলেন। তারপর জিজ্ঞেস করলেন কোম্পানিটা আমার কেমন লাগছে।",
+            "hi": "वे बस मुस्कुराए। फिर उन्होंने पूछा कि मुझे कंपनी कैसी लगी।"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "Uh-oh. I think I know where this is going.",
+          "translations": {
+            "bn": "ওহো। মনে হচ্ছে বুঝতে পারছি কী হতে চলেছে।",
+            "hi": "ओहो। लगता है मुझे पता है कि आगे क्या होने वाला है।"
+          }
+        },
+        {
+          "speaker": "Kunal",
+          "text": "Yes! An hour later, I walked into my first meeting, and guess who was at the front?",
+          "translations": {
+            "bn": "হ্যাঁ! এক ঘণ্টা পরে প্রথম মিটিংয়ে ঢুকলাম, আর আন্দাজ করো তো সামনে কে বসে?",
+            "hi": "हाँ! एक घंटे बाद मैं अपनी पहली मीटिंग में गया, और सोचो सामने कौन था?"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "The man from the lift?",
+          "translations": {
+            "bn": "লিফটের সেই ভদ্রলোক?",
+            "hi": "लिफ़्ट वाले वही आदमी?"
+          }
+        },
+        {
+          "speaker": "Kunal",
+          "text": "Exactly. He was the director! In the end, he laughed and said, “Welcome to the team.”",
+          "translations": {
+            "bn": "একদম। উনিই ডিরেক্টর! শেষে উনি হেসে বললেন, “দলে স্বাগত।”",
+            "hi": "बिल्कुल। वे डायरेक्टर थे! आख़िर में वे हँसे और बोले, “टीम में आपका स्वागत है।”"
+          }
+        },
+        {
+          "speaker": "Tanya",
+          "text": "What a start! That’s a great story.",
+          "translations": {
+            "bn": "কী শুরু! দারুণ গল্প।",
+            "hi": "क्या शुरुआत है! बढ़िया कहानी है।"
+          }
+        }
+      ],
+      "voices": {
+        "Tanya": "female",
+        "Kunal": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Jay",
+      "asWoman": "Jaya",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "How was your weekend? Anything interesting?",
+          "reply": "Yes! On Saturday, I went to my cousin’s wedding in Jaipur.",
+          "cues": {
+            "bn": "কখন আর কোথায় বলে শুরু করুন।",
+            "hi": "कब और कहाँ, यह बताकर शुरू करें।"
+          }
+        },
+        {
+          "partner": "Nice! What happened there?",
+          "reply": "First, we danced for hours. Then, suddenly, the lights went out.",
+          "cues": {
+            "bn": "ক্রমে দুটো ঘটনা বলুন।",
+            "hi": "क्रम से दो घटनाएँ बताएँ।"
+          }
+        },
+        {
+          "partner": "Oh no! What happened next?",
+          "reply": "Everyone was quiet. After that, someone started singing in the dark.",
+          "cues": {
+            "bn": "এরপর কী হলো বলুন।",
+            "hi": "बताएँ कि उसके बाद क्या हुआ।"
+          }
+        },
+        {
+          "partner": "That sounds magical!",
+          "reply": "It was. In the end, it was the best part of the wedding.",
+          "cues": {
+            "bn": "গল্পটা শেষ করুন।",
+            "hi": "कहानी का अंत बताएँ।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "At a family dinner",
+            "translations": {
+              "bn": "পারিবারিক নৈশভোজে",
+              "hi": "परिवार के साथ खाने पर"
+            }
+          },
+          "roleplay": {
+            "partner": "Uncle",
+            "asWoman": "Aunty",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Tell us a funny story from when you were little.",
+                "reply": "OK! When I was six, I tried to cook breakfast for my parents.",
+                "cues": {
+                  "bn": "কবেকার গল্প, তা বলে শুরু করুন।",
+                  "hi": "बताएँ कि यह कब की बात है।"
+                }
+              },
+              {
+                "partner": "Oh dear. What happened?",
+                "reply": "First, I put some bread in the toaster. Then I forgot about it.",
+                "cues": {
+                  "bn": "ক্রমে ঘটনা বলুন।",
+                  "hi": "घटनाएँ क्रम से बताएँ।"
+                }
+              },
+              {
+                "partner": "Uh-oh!",
+                "reply": "Suddenly, the kitchen was full of smoke, and the alarm started ringing!",
+                "cues": {
+                  "bn": "হঠাৎ কী হলো বলুন।",
+                  "hi": "बताएँ कि अचानक क्या हुआ।"
+                }
+              },
+              {
+                "partner": "Ha! And then?",
+                "reply": "In the end, my parents laughed, and we had fruit for breakfast.",
+                "cues": {
+                  "bn": "শেষটা বলুন।",
+                  "hi": "अंत बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A day that went wrong",
+            "translations": {
+              "bn": "যে দিনটা খারাপ গেল",
+              "hi": "एक गड़बड़ दिन"
+            }
+          },
+          "roleplay": {
+            "partner": "Neel",
+            "asWoman": "Neela",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "You look tired. Bad day?",
+                "reply": "Very bad! It started this morning when my alarm didn’t ring.",
+                "cues": {
+                  "bn": "কীভাবে শুরু হয়েছিল বলুন।",
+                  "hi": "बताएँ कि शुरुआत कैसे हुई।"
+                }
+              },
+              {
+                "partner": "Oh no. Were you late?",
+                "reply": "Yes. I ran to the station, but the train was just leaving.",
+                "cues": {
+                  "bn": "এরপর কী হলো বলুন।",
+                  "hi": "आगे क्या हुआ, बताएँ।"
+                }
+              },
+              {
+                "partner": "What did you do?",
+                "reply": "I took an auto. Then, halfway there, it started raining heavily.",
+                "cues": {
+                  "bn": "আরও একটা ঘটনা যোগ করুন।",
+                  "hi": "एक और घटना जोड़ें।"
+                }
+              },
+              {
+                "partner": "What a day! Did it get better?",
+                "reply": "Yes. In the end, my boss was late too, so nobody noticed!",
+                "cues": {
+                  "bn": "মজার শেষটা বলুন।",
+                  "hi": "मज़ेदार अंत बताएँ।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A surprise visitor",
+            "translations": {
+              "bn": "অপ্রত্যাশিত অতিথি",
+              "hi": "अचानक आया मेहमान"
+            }
+          },
+          "roleplay": {
+            "partner": "Sara",
+            "asMan": "Sahil",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Did anything surprising happen this week?",
+                "reply": "Yes! On Sunday, someone knocked on our door at midnight.",
+                "cues": {
+                  "bn": "কৌতূহল জাগিয়ে শুরু করুন।",
+                  "hi": "उत्सुकता जगाते हुए शुरू करें।"
+                }
+              },
+              {
+                "partner": "At midnight? Who was it?",
+                "reply": "Wait, let me tell you. We were all scared, so my father opened the door slowly.",
+                "cues": {
+                  "bn": "উত্তেজনা ধরে রাখুন।",
+                  "hi": "रोमांच बनाए रखें।"
+                }
+              },
+              {
+                "partner": "And?",
+                "reply": "It was my brother! He came home from Canada without telling anyone.",
+                "cues": {
+                  "bn": "রহস্যটা খুলে বলুন।",
+                  "hi": "राज़ खोलें।"
+                }
+              },
+              {
+                "partner": "What a lovely surprise!",
+                "reply": "It was. We stayed up all night talking.",
+                "cues": {
+                  "bn": "কেমন লাগল বলে শেষ করুন।",
+                  "hi": "कैसा लगा, यह बताकर ख़त्म करें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

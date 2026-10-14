@@ -1,0 +1,798 @@
+{
+  "week": 49,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Leena",
+          "text": "Gaurav, have you ever heard of urban beekeeping?",
+          "translations": {
+            "bn": "গৌরব, আরবান বিকিপিংয়ের নাম শুনেছ কখনও?",
+            "hi": "गौरव, क्या तुमने कभी अर्बन बीकीपिंग के बारे में सुना है?"
+          }
+        },
+        {
+          "speaker": "Gaurav",
+          "text": "Not really. Beekeeping is keeping bees for honey, right? But urban?",
+          "translations": {
+            "bn": "ঠিক না। বিকিপিং মানে মধুর জন্য মৌমাছি পোষা, তাই তো? কিন্তু আরবান?",
+            "hi": "ठीक से नहीं। बीकीपिंग मतलब शहद के लिए मधुमक्खियाँ पालना, है न? पर अर्बन?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "Exactly. Urban means in the city. People keep bees on roofs and balconies.",
+          "translations": {
+            "bn": "একদম। আরবান মানে শহরে। লোকে ছাদে আর বারান্দায় মৌমাছি পোষে।",
+            "hi": "बिल्कुल। अर्बन मतलब शहर में। लोग छतों और बालकनियों पर मधुमक्खियाँ पालते हैं।"
+          }
+        },
+        {
+          "speaker": "Gaurav",
+          "text": "Interesting. I didn’t understand every word, but I think I get the idea.",
+          "translations": {
+            "bn": "বাহ্। সব শব্দ বুঝিনি, তবে মনে হয় ব্যাপারটা ধরতে পেরেছি।",
+            "hi": "दिलचस्प। मुझे हर शब्द समझ नहीं आया, पर लगता है बात समझ गया।"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "That’s enough! Bees need flowers, and cities have lots of parks and gardens.",
+          "translations": {
+            "bn": "ওতেই হবে! মৌমাছির ফুল লাগে, আর শহরে প্রচুর পার্ক আর বাগান আছে।",
+            "hi": "इतना काफ़ी है! मधुमक्खियों को फूल चाहिए, और शहरों में बहुत से पार्क और बग़ीचे हैं।"
+          }
+        },
+        {
+          "speaker": "Gaurav",
+          "text": "So the bees are good for the city plants too?",
+          "translations": {
+            "bn": "তাহলে মৌমাছিরা শহরের গাছপালার জন্যও ভালো?",
+            "hi": "तो मधुमक्खियाँ शहर के पौधों के लिए भी अच्छी हैं?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "Yes, they help the flowers make seeds. Now, here’s a question for you: would you keep bees?",
+          "translations": {
+            "bn": "হ্যাঁ, ওরা ফুলে বীজ তৈরিতে সাহায্য করে। এবার তোমায় একটা প্রশ্ন: তুমি মৌমাছি পুষবে?",
+            "hi": "हाँ, वे फूलों को बीज बनाने में मदद करती हैं। अब तुमसे एक सवाल: क्या तुम मधुमक्खियाँ पालोगे?"
+          }
+        },
+        {
+          "speaker": "Gaurav",
+          "text": "Hmm, good question. Let me think for a second.",
+          "translations": {
+            "bn": "হুম, ভালো প্রশ্ন। এক সেকেন্ড ভাবি।",
+            "hi": "हम्म, अच्छा सवाल है। एक पल सोचने दो।"
+          }
+        },
+        {
+          "speaker": "Gaurav",
+          "text": "First, I’d worry about getting stung. But second, fresh honey sounds great.",
+          "translations": {
+            "bn": "প্রথমত, হুল ফোটানোর ভয় পাব। কিন্তু দ্বিতীয়ত, টাটকা মধু শুনতেই দারুণ।",
+            "hi": "पहली बात, मुझे डंक लगने की चिंता होगी। पर दूसरी बात, ताज़ा शहद तो बढ़िया लगता है।"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "Most bees are calm if you don’t disturb them.",
+          "translations": {
+            "bn": "বিরক্ত না করলে বেশিরভাগ মৌমাছি শান্তই থাকে।",
+            "hi": "अगर उन्हें छेड़ो नहीं, तो ज़्यादातर मधुमक्खियाँ शांत रहती हैं।"
+          }
+        },
+        {
+          "speaker": "Gaurav",
+          "text": "Really? Then maybe I would. How do people start?",
+          "translations": {
+            "bn": "সত্যি? তাহলে হয়তো পুষব। লোকে শুরু করে কীভাবে?",
+            "hi": "सच में? तो शायद मैं पालूँ। लोग शुरुआत कैसे करते हैं?"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "Usually with a short course and one small box of bees.",
+          "translations": {
+            "bn": "সাধারণত একটা ছোট কোর্স আর মৌমাছির একটা ছোট বাক্স দিয়ে।",
+            "hi": "आमतौर पर एक छोटे कोर्स और मधुमक्खियों के एक छोटे बक्से से।"
+          }
+        },
+        {
+          "speaker": "Gaurav",
+          "text": "I knew nothing about this ten minutes ago, and now I’m almost ready!",
+          "translations": {
+            "bn": "দশ মিনিট আগে এ বিষয়ে কিছুই জানতাম না, আর এখন প্রায় তৈরি!",
+            "hi": "दस मिनट पहले मुझे इसके बारे में कुछ पता नहीं था, और अब मैं लगभग तैयार हूँ!"
+          }
+        },
+        {
+          "speaker": "Leena",
+          "text": "See? You don’t need to know a topic to join the conversation.",
+          "translations": {
+            "bn": "দেখলে? আলোচনায় যোগ দিতে বিষয়টা জানা থাকতে হয় না।",
+            "hi": "देखा? बातचीत में शामिल होने के लिए विषय पहले से पता होना ज़रूरी नहीं।"
+          }
+        }
+      ],
+      "voices": {
+        "Leena": "female",
+        "Gaurav": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "first of all",
+          "phonetic": "/ˌfɜːst əv ˈɔːl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "প্রথমত",
+            "hi": "सबसे पहले"
+          },
+          "syllables": ["first", "of", "all"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“all” জোর দিয়ে বলুন।", "প্রথম কথাটা এ দিয়ে শুরু হয়।"],
+            "en": ["Say “all” stronger.", "It starts your first point."],
+            "hi": ["“all” ज़ोर से बोलें।", "पहली बात इससे शुरू होती है।"]
+          }
+        },
+        {
+          "word": "on the one hand",
+          "phonetic": "/ɒn ðə ˈwʌn hænd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "একদিকে",
+            "hi": "एक तरफ़"
+          },
+          "syllables": ["on", "the", "one", "hand"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“one” জোর দিয়ে বলুন।", "কোনো ভাবনার একটা দিক বলতে।"],
+            "en": ["Say “one” stronger.", "Use it for one side of an idea."],
+            "hi": ["“one” ज़ोर से बोलें।", "किसी बात का एक पहलू बताने के लिए।"]
+          }
+        },
+        {
+          "word": "on the other hand",
+          "phonetic": "/ɒn ði ˈʌðə hænd/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অন্যদিকে",
+            "hi": "दूसरी तरफ़"
+          },
+          "syllables": ["on", "the", "oth", "er", "hand"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“oth” জোর দিয়ে বলুন।", "অন্য দিকটা বলতে।"],
+            "en": ["Say “oth” stronger.", "Use it for the other side."],
+            "hi": ["“oth” ज़ोर से बोलें।", "दूसरा पहलू बताने के लिए।"]
+          }
+        },
+        {
+          "word": "it depends",
+          "phonetic": "/ɪt dɪˈpendz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "নির্ভর করে",
+            "hi": "यह इस पर निर्भर है"
+          },
+          "syllables": ["it", "de", "pends"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“pends” জোর দিয়ে বলুন।", "“It depends on …” দিয়ে সাবধানী উত্তর দিন।"],
+            "en": ["Say “pends” stronger.", "“It depends on …” gives a careful answer."],
+            "hi": ["“pends” ज़ोर से बोलें।", "“It depends on …” से सोच-समझकर जवाब दें।"]
+          }
+        },
+        {
+          "word": "as far as I know",
+          "phonetic": "/əz ˈfɑːr əz aɪ ˈnəʊ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আমি যতদূর জানি",
+            "hi": "जहाँ तक मुझे पता है"
+          },
+          "syllables": ["as", "far", "as", "I", "know"],
+          "stress": 5,
+          "tips": {
+            "bn": ["“know” জোর দিয়ে বলুন।", "পুরো নিশ্চিত না হলে বলুন।"],
+            "en": ["Say “know” stronger.", "Use it when you are not completely sure."],
+            "hi": ["“know” ज़ोर से बोलें।", "जब पूरा यक़ीन न हो, तब कहें।"]
+          }
+        },
+        {
+          "word": "in my view",
+          "phonetic": "/ɪn maɪ ˈvjuː/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আমার মতে",
+            "hi": "मेरे विचार में"
+          },
+          "syllables": ["in", "my", "view"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“view” জোর দিয়ে বলুন।", "মানে “in my opinion”।"],
+            "en": ["Say “view” stronger.", "It means “in my opinion”."],
+            "hi": ["“view” ज़ोर से बोलें।", "मतलब “in my opinion”।"]
+          }
+        },
+        {
+          "word": "overall",
+          "phonetic": "/ˌəʊvərˈɔːl/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সব মিলিয়ে",
+            "hi": "कुल मिलाकर"
+          },
+          "syllables": ["o", "ver", "all"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“all” জোর দিয়ে বলুন।", "ভাবনাগুলো গুছিয়ে শেষ করতে।"],
+            "en": ["Say “all” stronger.", "Use it to sum up your ideas."],
+            "hi": ["“all” ज़ोर से बोलें।", "अपनी बातें समेटने के लिए।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "That’s a good question. Let me think for a moment.",
+          "alsoAccepted": [
+            "That’s a great question. Let me think for a moment.",
+            "Good question. Let me think for a moment."
+          ],
+          "translations": {
+            "bn": "ভালো প্রশ্ন। একটু ভেবে বলি।",
+            "hi": "अच्छा सवाल है। मुझे एक पल सोचने दीजिए।"
+          },
+          "tips": {
+            "bn": ["চুপ না থেকে ভাবার সময় পাওয়া যায়।", "তারপর শান্তভাবে উত্তর দিন।"],
+            "en": ["It gives you time, without a silence.", "Then answer calmly."],
+            "hi": ["चुप हुए बिना सोचने का समय मिल जाता है।", "फिर शांति से जवाब दें।"]
+          }
+        },
+        {
+          "english": "I’ve never thought about it, but I think it’s a good idea.",
+          "alsoAccepted": [
+            "I have never thought about it, but I think it’s a good idea.",
+            "I’ve never thought about that, but I think it’s a good idea."
+          ],
+          "translations": {
+            "bn": "এ নিয়ে কখনও ভাবিনি, তবে মনে হয় ভালো ভাবনা।",
+            "hi": "इस बारे में कभी सोचा नहीं, पर मुझे लगता है कि यह अच्छा विचार है।"
+          },
+          "tips": {
+            "bn": ["কিছু নতুন লাগলে বলায় দোষ নেই।", "তারপরও একটা উত্তর দিন।"],
+            "en": ["It is fine to say something is new to you.", "Then still give an answer."],
+            "hi": ["कोई बात नई हो, तो कहना ठीक है।", "फिर भी जवाब दें।"]
+          }
+        },
+        {
+          "english": "It depends on the situation.",
+          "alsoAccepted": [
+            "That depends on the situation.",
+            "It depends on the situation, really."
+          ],
+          "translations": {
+            "bn": "এটা পরিস্থিতির ওপর নির্ভর করে।",
+            "hi": "यह हालात पर निर्भर करता है।"
+          },
+          "tips": {
+            "bn": ["কঠিন প্রশ্নের সাবধানী উত্তর।", "তারপর একটা উদাহরণ দিন।"],
+            "en": ["A careful answer to a hard question.", "Then give one example."],
+            "hi": ["मुश्किल सवाल का सोचा-समझा जवाब।", "फिर एक उदाहरण दें।"]
+          }
+        },
+        {
+          "english": "Do you mean at home or at work?",
+          "alsoAccepted": ["Do you mean at work or at home?"],
+          "translations": {
+            "bn": "মানে বাড়িতে, না অফিসে?",
+            "hi": "आपका मतलब घर पर, या काम पर?"
+          },
+          "tips": {
+            "bn": ["ভালো করে বুঝতে একটা প্রশ্ন করুন।", "এতে বোঝা যায় আপনি মন দিয়ে শুনছেন।"],
+            "en": ["Ask a question to understand better.", "It shows you are listening."],
+            "hi": [
+              "बेहतर समझने के लिए एक सवाल पूछें।",
+              "इससे पता चलता है कि आपका ध्यान बातचीत पर है।"
+            ]
+          }
+        },
+        {
+          "english": "I’m not an expert, but as far as I know, it’s safe.",
+          "alsoAccepted": [
+            "I am not an expert, but as far as I know, it is safe.",
+            "I’m no expert, but as far as I know, it’s safe."
+          ],
+          "translations": {
+            "bn": "আমি বিশেষজ্ঞ নই, তবে যতদূর জানি, এটা নিরাপদ।",
+            "hi": "मैं विशेषज्ञ नहीं हूँ, पर जहाँ तक मुझे पता है, यह सुरक्षित है।"
+          },
+          "tips": {
+            "bn": ["যা জানেন না, তা সোজাসুজি বলুন।", "তারপর যা জানেন, তা বলুন।"],
+            "en": ["Be honest about what you don’t know.", "Then share what you do know."],
+            "hi": ["जो नहीं पता, वह साफ़ कहें।", "फिर जो पता है, वह बताएँ।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Omar",
+      "asWoman": "Amira",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "I read that some hospitals now use robots. What do you think about that?",
+          "reply": "I don’t know much about it, but it sounds interesting. What do the robots do?",
+          "cues": {
+            "bn": "বিষয়টা অচেনা বলে একটা প্রশ্ন করুন।",
+            "hi": "बताएँ कि विषय नया है, और एक सवाल पूछें।"
+          }
+        },
+        {
+          "partner": "They carry medicine and help doctors with operations.",
+          "reply": "So they do the heavy or careful work, and doctors have more time for patients?",
+          "cues": {
+            "bn": "নিজের ভাষায় বলে মিলিয়ে নিন ঠিক বুঝেছেন কি না।",
+            "hi": "अपने शब्दों में दोहराकर पक्का करें कि बात समझी।"
+          }
+        },
+        {
+          "partner": "Exactly. Would you trust a robot with an operation?",
+          "reply": "Hmm, it depends. If a doctor is watching, then yes, I think so.",
+          "cues": {
+            "bn": "ভেবে, শর্তসহ উত্তর দিন।",
+            "hi": "सोचकर, शर्त के साथ जवाब दें।"
+          }
+        },
+        {
+          "partner": "Some people worry that robots will take jobs.",
+          "reply": "On the one hand, that’s true. On the other hand, robots need people to look after them.",
+          "cues": {
+            "bn": "দুই দিক থেকেই বলুন।",
+            "hi": "दोनों पहलू बताएँ।"
+          }
+        },
+        {
+          "partner": "That’s a fair point. What about in your town?",
+          "reply": "As far as I know, our hospital doesn’t have robots yet, but it might soon.",
+          "cues": {
+            "bn": "যতটুকু জানেন, সেটুকু বলুন।",
+            "hi": "जितना पता है, उतना बताएँ।"
+          }
+        },
+        {
+          "partner": "You know more than you think!",
+          "reply": "Thanks! I learned a lot just by asking questions.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন।",
+            "hi": "धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Unscripted Conversation Challenge",
+        "translations": {
+          "bn": "স্ক্রিপ্ট ছাড়া কথোপকথনের চ্যালেঞ্জ",
+          "hi": "बिना स्क्रिप्ट की बातचीत की चुनौती"
+        }
+      },
+      "instruction": {
+        "text": "Talk with a friend or family member in English. Let them choose a topic you know little about.",
+        "translations": {
+          "bn": "একজন বন্ধু বা পরিবারের কারও সঙ্গে ইংরেজিতে কথা বলুন। বিষয়টা ওঁকেই বাছতে দিন, এমন বিষয় যা নিয়ে আপনি কম জানেন।",
+          "hi": "किसी दोस्त या घर के सदस्य से अंग्रेज़ी में बात करें। विषय उन्हें चुनने दें, जिसके बारे में आपको कम पता हो।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Listen for the main idea, not every word",
+          "translations": {
+            "bn": "প্রতিটা শব্দ নয়, মূল কথাটা ধরুন",
+            "hi": "हर शब्द नहीं, मुख्य बात समझें"
+          }
+        },
+        {
+          "text": "Ask two questions to learn more",
+          "translations": {
+            "bn": "আরও জানতে দুটো প্রশ্ন করুন",
+            "hi": "और जानने के लिए दो सवाल पूछें"
+          }
+        },
+        {
+          "text": "Answer one surprise question after a short pause",
+          "translations": {
+            "bn": "একটু থেমে একটা অপ্রত্যাশিত প্রশ্নের উত্তর দিন",
+            "hi": "थोड़ा रुककर एक अचानक आए सवाल का जवाब दें"
+          }
+        },
+        {
+          "text": "Give your view with “in my view” or “it depends”",
+          "translations": {
+            "bn": "“in my view” বা “it depends” দিয়ে নিজের মত দিন",
+            "hi": "“in my view” या “it depends” से अपनी राय दें"
+          }
+        },
+        {
+          "text": "Keep talking without changing to another language",
+          "translations": {
+            "bn": "অন্য ভাষায় না গিয়ে কথা চালিয়ে যান",
+            "hi": "दूसरी भाषा पर गए बिना बात जारी रखें"
+          }
+        },
+        {
+          "text": "End by summing up what you learned",
+          "translations": {
+            "bn": "শেষে বলুন কী শিখলেন",
+            "hi": "आख़िर में बताएँ कि क्या सीखा"
+          }
+        }
+      ],
+      "phrases": [
+        "Sorry, what does … mean?",
+        "So, you mean …?",
+        "That’s a good question.",
+        "In my view, …",
+        "It depends on …",
+        "I didn’t know that!"
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "You don’t understand one word. What is best?",
+            "translations": {
+              "bn": "একটা শব্দ বোঝেননি। কী করা সবচেয়ে ভালো?",
+              "hi": "एक शब्द समझ नहीं आया। सबसे अच्छा क्या है?"
+            }
+          },
+          "answer": "Keep listening for the main idea.",
+          "others": ["Stop the conversation.", "Translate every word first."]
+        },
+        {
+          "question": {
+            "text": "Which phrase gives you time to think?",
+            "translations": {
+              "bn": "কোন কথা ভাবার সময় দেয়?",
+              "hi": "कौन-सा वाक्यांश सोचने का समय देता है?"
+            }
+          },
+          "answer": "That’s a good question.",
+          "others": ["Goodbye.", "No."]
+        },
+        {
+          "question": {
+            "text": "Which phrase brings in the other side?",
+            "translations": {
+              "bn": "কোন কথা দিয়ে অন্য দিকটা আনা হয়?",
+              "hi": "किस वाक्यांश से दूसरा पहलू आता है?"
+            }
+          },
+          "answer": "On the other hand, …",
+          "others": ["First of all, …", "In short, …"]
+        },
+        {
+          "question": {
+            "text": "Which answer is careful and honest?",
+            "translations": {
+              "bn": "কোন উত্তরটা সাবধানী আর সৎ?",
+              "hi": "कौन-सा जवाब सोचा-समझा और ईमानदार है?"
+            }
+          },
+          "answer": "I’m not an expert, but as far as I know, it’s true.",
+          "others": ["I know everything about it.", "I won’t answer."]
+        },
+        {
+          "question": {
+            "text": "Someone asks a strange question. A good first answer is…",
+            "translations": {
+              "bn": "কেউ অদ্ভুত প্রশ্ন করলেন। ভালো প্রথম উত্তর…",
+              "hi": "किसी ने अजीब सवाल पूछा। अच्छा पहला जवाब है…"
+            }
+          },
+          "answer": "Hmm, I’ve never thought about that.",
+          "others": ["That’s a stupid question.", "Ask someone else."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Ritika",
+          "text": "Sandeep, have you heard of minimalism?",
+          "translations": {
+            "bn": "সন্দীপ, মিনিমালিজমের কথা শুনেছ?",
+            "hi": "संदीप, क्या तुमने मिनिमलिज़्म के बारे में सुना है?"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "I’ve heard the word, but I’m not sure what it means.",
+          "translations": {
+            "bn": "শব্দটা শুনেছি, তবে মানেটা ঠিক জানি না।",
+            "hi": "शब्द सुना है, पर ठीक से नहीं पता कि इसका मतलब क्या है।"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "It means living with fewer things: only what you really need.",
+          "translations": {
+            "bn": "মানে কম জিনিস নিয়ে বাঁচা: শুধু যা সত্যিই দরকার।",
+            "hi": "मतलब कम चीज़ों के साथ जीना: सिर्फ़ वही जो सच में ज़रूरी हो।"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "Oh, I see. Like clearing out your cupboards?",
+          "translations": {
+            "bn": "ও, বুঝলাম। মানে আলমারি খালি করার মতো?",
+            "hi": "अच्छा, समझा। जैसे अलमारियाँ ख़ाली करना?"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "Yes, but more than that. People buy less and focus on experiences.",
+          "translations": {
+            "bn": "হ্যাঁ, তবে তার চেয়েও বেশি। লোকে কম কেনে আর অভিজ্ঞতার দিকে মন দেয়।",
+            "hi": "हाँ, पर उससे भी ज़्यादा। लोग कम ख़रीदते हैं और अनुभवों पर ध्यान देते हैं।"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "Interesting. So, what do you think about it?",
+          "translations": {
+            "bn": "বাহ্। তা, তোমার কী মনে হয়?",
+            "hi": "दिलचस्प। तो, तुम्हें इसके बारे में क्या लगता है?"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "I like it. My flat feels calmer since I gave away half my clothes. What about you?",
+          "translations": {
+            "bn": "আমার ভালো লাগে। অর্ধেক জামাকাপড় দিয়ে দেওয়ার পর থেকে ফ্ল্যাটটা শান্ত লাগে। আর তোমার?",
+            "hi": "मुझे पसंद है। जबसे मैंने आधे कपड़े दे दिए, फ़्लैट ज़्यादा सुकून भरा लगता है। और तुम्हें?"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "Hmm, let me think. On the one hand, less stuff means less cleaning.",
+          "translations": {
+            "bn": "হুম, ভাবি। একদিকে, কম জিনিস মানে কম পরিষ্কার।",
+            "hi": "हम्म, सोचने दो। एक तरफ़, कम सामान मतलब कम सफ़ाई।"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "On the other hand, I love my books. I couldn’t give them away!",
+          "translations": {
+            "bn": "অন্যদিকে, আমি বই খুব ভালোবাসি। ওগুলো দিয়ে দিতে পারব না!",
+            "hi": "दूसरी तरफ़, मुझे अपनी किताबें बहुत प्यारी हैं। उन्हें मैं नहीं दे सकता!"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "You don’t have to. It depends on what makes you happy.",
+          "translations": {
+            "bn": "দিতে হবে না তো। কীসে তুমি খুশি, তার ওপর নির্ভর করে।",
+            "hi": "देने की ज़रूरत नहीं। यह इस पर निर्भर है कि तुम्हें किस चीज़ से ख़ुशी मिलती है।"
+          }
+        },
+        {
+          "speaker": "Sandeep",
+          "text": "In that case, overall, I think I’m half a minimalist.",
+          "translations": {
+            "bn": "তাহলে সব মিলিয়ে, আমি বোধহয় আধা মিনিমালিস্ট।",
+            "hi": "तो कुल मिलाकर, मुझे लगता है मैं आधा मिनिमलिस्ट हूँ।"
+          }
+        },
+        {
+          "speaker": "Ritika",
+          "text": "Ha! That’s a great way to put it.",
+          "translations": {
+            "bn": "হা হা! দারুণ বললে।",
+            "hi": "हा हा! क्या ख़ूब कहा।"
+          }
+        }
+      ],
+      "voices": {
+        "Ritika": "female",
+        "Sandeep": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the barista",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi there! What can I get you?",
+          "reply": "A small coffee with milk, please.",
+          "cues": {
+            "bn": "কী চান, সরাসরি বলুন।",
+            "hi": "सीधे बताएँ कि क्या चाहिए।"
+          }
+        },
+        {
+          "partner": "For here or to go?",
+          "reply": "To go, please.",
+          "cues": {
+            "bn": "বলুন সঙ্গে নিয়ে যাবেন।",
+            "hi": "बताएँ कि साथ ले जाना है।"
+          }
+        },
+        {
+          "partner": "Anything else with that? Our muffins are fresh today.",
+          "reply": "No, thanks. Just the coffee.",
+          "cues": {
+            "bn": "ভদ্রভাবে না বলুন।",
+            "hi": "विनम्रता से मना करें।"
+          }
+        },
+        {
+          "partner": "That’s a hundred and twenty. Card or cash?",
+          "reply": "Card, please. Here you go.",
+          "cues": {
+            "bn": "কীভাবে টাকা দেবেন বলুন।",
+            "hi": "बताएँ कि भुगतान कैसे करना है।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "A dinner-table debate",
+            "translations": {
+              "bn": "খাবার টেবিলে তর্ক",
+              "hi": "खाने की मेज़ पर बहस"
+            }
+          },
+          "roleplay": {
+            "partner": "Uncle",
+            "asWoman": "Aunty",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Do you think children should have mobile phones?",
+                "reply": "That’s a good question. I think it depends on their age.",
+                "cues": {
+                  "bn": "সময় নিয়ে, শর্তসহ উত্তর দিন।",
+                  "hi": "समय लेकर, शर्त के साथ जवाब दें।"
+                }
+              },
+              {
+                "partner": "What age, then?",
+                "reply": "In my view, around twelve, when they start travelling alone.",
+                "cues": {
+                  "bn": "নিজের মত কারণসহ বলুন।",
+                  "hi": "वजह के साथ अपनी राय दें।"
+                }
+              },
+              {
+                "partner": "But phones are bad for their eyes.",
+                "reply": "On the one hand, that’s true. On the other hand, phones help children stay safe.",
+                "cues": {
+                  "bn": "দুই দিকই বলুন।",
+                  "hi": "दोनों पहलू बताएँ।"
+                }
+              },
+              {
+                "partner": "Hmm, you have a point.",
+                "reply": "Overall, I think phones are fine, with some rules.",
+                "cues": {
+                  "bn": "সব মিলিয়ে উপসংহার টানুন।",
+                  "hi": "कुल मिलाकर निष्कर्ष दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "An unusual hobby",
+            "translations": {
+              "bn": "অদ্ভুত একটা শখ",
+              "hi": "एक अनोखा शौक़"
+            }
+          },
+          "roleplay": {
+            "partner": "Mira",
+            "asMan": "Mihir",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "My hobby is birdwatching. Have you ever tried it?",
+                "reply": "No, never. What exactly do you do?",
+                "cues": {
+                  "bn": "বিষয়টা অচেনা বলে প্রশ্ন করুন।",
+                  "hi": "बताएँ कि यह नया है, और सवाल पूछें।"
+                }
+              },
+              {
+                "partner": "I go to the lake early and look for different birds with binoculars.",
+                "reply": "So you look at the birds from far away and learn their names?",
+                "cues": {
+                  "bn": "নিজের ভাষায় বলে মিলিয়ে নিন।",
+                  "hi": "अपने शब्दों में दोहराकर पक्का करें।"
+                }
+              },
+              {
+                "partner": "Yes! Would you like to come one day?",
+                "reply": "Hmm, let me think. Yes, but not too early, please!",
+                "cues": {
+                  "bn": "ভেবে, মজা করে উত্তর দিন।",
+                  "hi": "सोचकर, मज़ाक़ में जवाब दें।"
+                }
+              },
+              {
+                "partner": "Ha! Seven o’clock?",
+                "reply": "Seven is fine. I’m curious now.",
+                "cues": {
+                  "bn": "রাজি হন।",
+                  "hi": "हामी भरें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A tricky question",
+            "translations": {
+              "bn": "একটা কঠিন প্রশ্ন",
+              "hi": "एक मुश्किल सवाल"
+            }
+          },
+          "roleplay": {
+            "partner": "the interviewer",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "If you were an animal, which animal would you be?",
+                "reply": "Ha, I didn’t expect that! Let me think… maybe an elephant.",
+                "cues": {
+                  "bn": "অবাক হয়ে, সময় নিয়ে উত্তর দিন।",
+                  "hi": "हैरानी जताएँ, समय लें और जवाब दें।"
+                }
+              },
+              {
+                "partner": "Why an elephant?",
+                "reply": "Because elephants are calm and strong, and they never forget.",
+                "cues": {
+                  "bn": "কারণ বলুন।",
+                  "hi": "वजह बताएँ।"
+                }
+              },
+              {
+                "partner": "Interesting. How does that help you at work?",
+                "reply": "I stay calm under pressure, and I remember details well.",
+                "cues": {
+                  "bn": "কাজের সঙ্গে জুড়ুন।",
+                  "hi": "काम से जोड़ें।"
+                }
+              },
+              {
+                "partner": "Great answer.",
+                "reply": "Thank you. That was a fun question!",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -84,9 +84,6 @@ export function AdminLayout() {
             {adminText.signOutFailed}
           </p>
         )}
-        <p className="mt-4 rounded-md bg-warning-soft px-4 py-3 text-sm text-fg">
-          {adminText.localNotice}
-        </p>
         <Outlet />
       </main>
     </div>

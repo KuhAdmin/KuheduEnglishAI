@@ -1,0 +1,771 @@
+{
+  "week": 25,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Prakash",
+          "text": "Shalini? What a surprise! What are you doing here?",
+          "translations": {
+            "bn": "শালিনী? কী অবাক কাণ্ড! তুমি এখানে কী করছ?",
+            "hi": "शालिनी? क्या इत्तफ़ाक़ है! तुम यहाँ क्या कर रही हो?"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Prakash! Wow! I’m, um, buying a gift for my brother. And you?",
+          "translations": {
+            "bn": "প্রকাশ! বাহ! আমি, ইয়ে, ভাইয়ের জন্য একটা উপহার কিনছি। আর তুমি?",
+            "hi": "प्रकाश! वाह! मैं, अं, अपने भाई के लिए तोहफ़ा ख़रीद रही हूँ। और तुम?"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Just looking around. So, what does your brother like?",
+          "translations": {
+            "bn": "এমনি ঘুরে দেখছি। তা, তোমার ভাই কী ভালোবাসে?",
+            "hi": "बस घूम रहा हूँ। तो, तुम्हारे भाई को क्या पसंद है?"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Let me think… He likes football, and he’s learning to cook.",
+          "translations": {
+            "bn": "দাঁড়াও ভাবি… ও ফুটবল ভালোবাসে, আর রান্না শিখছে।",
+            "hi": "सोचने दो… उसे फ़ुटबॉल पसंद है, और वह खाना बनाना सीख रहा है।"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Here’s a strange question: if you could cook one dish for the whole world, what would it be?",
+          "translations": {
+            "bn": "একটা অদ্ভুত প্রশ্ন: সারা পৃথিবীর জন্য একটা পদ রাঁধতে পারলে কোনটা রাঁধতে?",
+            "hi": "एक अजीब सवाल: अगर तुम पूरी दुनिया के लिए एक व्यंजन बना सकतीं, तो कौन-सा बनातीं?"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Ha! Good question. Hmm, probably my mother’s fish curry. It’s amazing.",
+          "translations": {
+            "bn": "হা! ভালো প্রশ্ন। হুম, সম্ভবত মায়ের মাছের ঝোল। অসাধারণ।",
+            "hi": "हा! अच्छा सवाल है। हम्म, शायद मेरी माँ की मछली करी। कमाल की होती है।"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Now I’m hungry! Do you have time for coffee?",
+          "translations": {
+            "bn": "এবার আমার খিদে পেয়ে গেল! কফি খাওয়ার সময় আছে?",
+            "hi": "अब मुझे भूख लग गई! कॉफ़ी का समय है?"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Sure. Tell me, what have you been doing all this time?",
+          "translations": {
+            "bn": "নিশ্চয়ই। বলো, এতদিন কী করছিলে?",
+            "hi": "ज़रूर। बताओ, इतने समय क्या करते रहे?"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "Well, that’s a long story! I started a small business selling plants.",
+          "translations": {
+            "bn": "আসলে, সে অনেক কথা! গাছ বিক্রির একটা ছোট ব্যবসা শুরু করেছি।",
+            "hi": "दरअसल, लंबी कहानी है! मैंने पौधे बेचने का एक छोटा कारोबार शुरू किया।"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Plants? I didn’t expect that! How did that happen?",
+          "translations": {
+            "bn": "গাছ? এটা তো ভাবিনি! কীভাবে হল?",
+            "hi": "पौधे? यह तो सोचा नहीं था! यह कैसे हुआ?"
+          }
+        },
+        {
+          "speaker": "Prakash",
+          "text": "I’ll tell you over coffee. And then you can tell me about your job.",
+          "translations": {
+            "bn": "কফি খেতে খেতে বলব। তারপর তুমি তোমার কাজের কথা বলবে।",
+            "hi": "कॉफ़ी पर बताऊँगा। फिर तुम अपने काम के बारे में बताना।"
+          }
+        },
+        {
+          "speaker": "Shalini",
+          "text": "Deal! I know a nice café nearby.",
+          "translations": {
+            "bn": "ঠিক আছে! কাছেই একটা ভালো ক্যাফে জানি।",
+            "hi": "पक्का! पास में एक अच्छा कैफ़े पता है।"
+          }
+        }
+      ],
+      "voices": {
+        "Prakash": "male",
+        "Shalini": "female"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "well",
+          "phonetic": "/wel/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আচ্ছা, তো (ভাবার সময়)",
+            "hi": "ख़ैर, अच्छा (सोचते समय)"
+          },
+          "syllables": ["well"],
+          "stress": null,
+          "tips": {
+            "bn": ["উত্তর শুরু করতে আস্তে বলুন।", "এতে ভাবার এক মুহূর্ত পাওয়া যায়।"],
+            "en": ["Say it softly to start an answer.", "It gives you a second to think."],
+            "hi": ["जवाब शुरू करने के लिए धीरे से कहें।", "इससे सोचने का एक पल मिल जाता है।"]
+          }
+        },
+        {
+          "word": "let me think",
+          "phonetic": "/let mi ˈθɪŋk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "একটু ভাবি",
+            "hi": "सोचने दीजिए"
+          },
+          "syllables": ["let", "me", "think"],
+          "stress": 3,
+          "tips": {
+            "bn": ["“think” জোর দিয়ে বলুন।", "“think”-এর “th” বলতে জিভ দাঁতের মাঝে রাখুন।"],
+            "en": [
+              "Say “think” stronger.",
+              "For the “th” in “think”, put your tongue between your teeth."
+            ],
+            "hi": ["“think” ज़ोर से बोलें।", "“think” का “th” बोलने के लिए जीभ दाँतों के बीच रखें।"]
+          }
+        },
+        {
+          "word": "good question",
+          "phonetic": "/ɡʊd ˈkwestʃən/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ভালো প্রশ্ন",
+            "hi": "अच्छा सवाल"
+          },
+          "syllables": ["good", "ques", "tion"],
+          "stress": 2,
+          "tips": {
+            "bn": ["“ques” জোর দিয়ে বলুন।", "এখানে “tion”-এর উচ্চারণ “চন”-এর মতো।"],
+            "en": ["Say “ques” stronger.", "Here “tion” sounds like “chun”."],
+            "hi": ["“ques” ज़ोर से बोलें।", "यहाँ “tion” की आवाज़ “चन” जैसी है।"]
+          }
+        },
+        {
+          "word": "honestly",
+          "phonetic": "/ˈɒnɪstli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "সত্যি বলতে",
+            "hi": "सच कहूँ तो"
+          },
+          "syllables": ["(h)on", "est", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“h” উচ্চারিত হয় না।", "প্রথম অংশটি জোর দিয়ে বলুন।"],
+            "en": ["The “h” is not said.", "Say the first part stronger."],
+            "hi": ["“h” नहीं बोला जाता।", "पहला हिस्सा ज़ोर से बोलें।"]
+          }
+        },
+        {
+          "word": "surprise",
+          "phonetic": "/səˈpraɪz/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "অবাক করা ব্যাপার",
+            "hi": "हैरानी, अचंभा"
+          },
+          "syllables": ["sur", "prise"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন: “প্রাইজ”।", "শেষের “s”-এর উচ্চারণ “z”-এর মতো।"],
+            "en": ["Say the second part stronger: “PRIZE”.", "The “s” at the end sounds like “z”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें: “प्राइज़”।", "आख़िरी “s” की आवाज़ “z” जैसी है।"]
+          }
+        },
+        {
+          "word": "imagine",
+          "phonetic": "/ɪˈmædʒɪn/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "কল্পনা করা",
+            "hi": "कल्पना करना"
+          },
+          "syllables": ["i", "ma", "gin(e)"],
+          "stress": 2,
+          "tips": {
+            "bn": ["দ্বিতীয় অংশটি জোর দিয়ে বলুন।", "“g”-এর উচ্চারণ “j”-এর মতো।"],
+            "en": ["Say the second part stronger.", "The “g” sounds like “j”."],
+            "hi": ["दूसरा हिस्सा ज़ोर से बोलें।", "“g” की आवाज़ “j” जैसी है।"]
+          }
+        },
+        {
+          "word": "interesting",
+          "phonetic": "/ˈɪntrəstɪŋ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "মজার, আকর্ষণীয়",
+            "hi": "दिलचस्प"
+          },
+          "syllables": ["in", "ter", "est", "ing"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "অনেকে তিন অংশে বলেন: “ইন-ট্রেস-টিং”।"],
+            "en": [
+              "Say the first part stronger.",
+              "Many people say it in three parts: “IN-tres-ting”."
+            ],
+            "hi": [
+              "पहला हिस्सा ज़ोर से बोलें।",
+              "कई लोग इसे तीन हिस्सों में बोलते हैं: “इन-ट्रेस-टिंग”।"
+            ]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "There are two reasons.",
+          "alsoAccepted": ["I have two reasons."],
+          "translations": {
+            "bn": "দুটো কারণ আছে।",
+            "hi": "इसके दो कारण हैं।"
+          },
+          "tips": {
+            "bn": ["আগে বলুন কটা কথা বলবেন।", "এতে শ্রোতা সহজে বুঝতে পারেন।"],
+            "en": ["Say how many points you have first.", "It helps the listener follow you."],
+            "hi": [
+              "पहले बताएँ कि कितनी बातें कहेंगे।",
+              "इससे सुनने वाले को समझने में आसानी होती है।"
+            ]
+          }
+        },
+        {
+          "english": "First of all, I think it’s fun.",
+          "alsoAccepted": ["First, I think it’s fun."],
+          "translations": {
+            "bn": "প্রথমত, আমার মনে হয় এটা মজার।",
+            "hi": "सबसे पहले, मुझे लगता है यह मज़ेदार है।"
+          },
+          "tips": {
+            "bn": ["“First of all” দিয়ে প্রথম কথা শুরু।", "তারপর কথাটা বলুন।"],
+            "en": ["“First of all” starts your first point.", "Then give the point."],
+            "hi": ["“First of all” से पहली बात शुरू होती है।", "फिर अपनी बात कहें।"]
+          }
+        },
+        {
+          "english": "Another thing is the price.",
+          "alsoAccepted": ["Another point is the price."],
+          "translations": {
+            "bn": "আরেকটা ব্যাপার হল দাম।",
+            "hi": "एक और बात है दाम।"
+          },
+          "tips": {
+            "bn": ["“Another thing” দিয়ে নতুন কথা যোগ হয়।", "“and, and, and”-এর বদলে এটি বলুন।"],
+            "en": ["“Another thing” adds a new point.", "Use it instead of “and, and, and”."],
+            "hi": ["“Another thing” से नई बात जुड़ती है।", "“and, and, and” की जगह इसे कहें।"]
+          }
+        },
+        {
+          "english": "On the other hand, it takes a lot of time.",
+          "alsoAccepted": ["But on the other hand, it takes a lot of time."],
+          "translations": {
+            "bn": "আবার অন্য দিকে, এতে অনেক সময় লাগে।",
+            "hi": "दूसरी ओर, इसमें बहुत समय लगता है।"
+          },
+          "tips": {
+            "bn": [
+              "“On the other hand” দিয়ে অন্য দিকটা বলা হয়।",
+              "কোনো সমস্যা বা ভিন্ন ভাবনার আগে এটি বলুন।"
+            ],
+            "en": [
+              "“On the other hand” gives the other side.",
+              "Use it before a problem or a different idea."
+            ],
+            "hi": [
+              "“On the other hand” से दूसरा पहलू बताया जाता है।",
+              "किसी परेशानी या अलग विचार से पहले कहें।"
+            ]
+          }
+        },
+        {
+          "english": "So, in short, I like it.",
+          "alsoAccepted": ["So, all in all, I like it."],
+          "translations": {
+            "bn": "তাই, সংক্ষেপে, আমার এটা ভালো লাগে।",
+            "hi": "तो, कुल मिलाकर, मुझे यह पसंद है।"
+          },
+          "tips": {
+            "bn": ["“In short” দিয়ে উত্তর শেষ করুন।", "মূল কথাটা আরেকবার বলুন।"],
+            "en": ["“In short” finishes your answer.", "Say your main idea once more."],
+            "hi": ["“In short” से जवाब ख़त्म करें।", "मुख्य बात एक बार फिर कहें।"]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Sunny",
+      "asWoman": "Sunaina",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Quick question: what’s the best thing about today?",
+          "reply": "Hmm, let me think… The weather is lovely.",
+          "cues": {
+            "bn": "একটু ভেবে উত্তর দিন।",
+            "hi": "थोड़ा सोचकर जवाब दें।"
+          }
+        },
+        {
+          "partner": "Nice! If you had a free day tomorrow, what would you do?",
+          "reply": "Well, I’d probably …",
+          "cues": {
+            "bn": "“Well” দিয়ে সময় নিয়ে উত্তর দিন।",
+            "hi": "“Well” से समय लेकर जवाब दें।"
+          }
+        },
+        {
+          "partner": "Interesting. Now you ask me something!",
+          "reply": "OK. What’s your favourite season, and why?",
+          "cues": {
+            "bn": "উল্টে তাঁকে একটা প্রশ্ন করুন।",
+            "hi": "पलटकर उनसे एक सवाल पूछें।"
+          }
+        },
+        {
+          "partner": "Winter, because I love hot tea.",
+          "reply": "Me too! What else do you like about winter?",
+          "cues": {
+            "bn": "একটা পরের প্রশ্ন করুন।",
+            "hi": "आगे का एक सवाल पूछें।"
+          }
+        },
+        {
+          "partner": "Warm clothes and short days. Do you agree?",
+          "reply": "Honestly, I prefer long days.",
+          "cues": {
+            "bn": "সৎভাবে নিজের মত বলুন।",
+            "hi": "ईमानदारी से अपनी राय बताएँ।"
+          }
+        },
+        {
+          "partner": "Fair enough! That was fun.",
+          "reply": "Yes, it was. Let’s do it again sometime.",
+          "cues": {
+            "bn": "রাজি হোন, আবার করার কথা বলুন।",
+            "hi": "सहमति दें और फिर करने की बात कहें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "My First Unscripted Conversation",
+        "translations": {
+          "bn": "আমার প্রথম স্ক্রিপ্ট ছাড়া কথোপকথন",
+          "hi": "मेरी पहली बिना स्क्रिप्ट की बातचीत"
+        }
+      },
+      "instruction": {
+        "text": "Talk with someone for about one minute with no notes. Let them ask anything, and keep the talk going.",
+        "translations": {
+          "bn": "কোনো নোট ছাড়া কারও সঙ্গে প্রায় এক মিনিট কথা বলুন। যা খুশি জিজ্ঞেস করতে দিন, আর কথা চালিয়ে যান।",
+          "hi": "बिना नोट्स के किसी से लगभग एक मिनट बात करें। उन्हें कुछ भी पूछने दें, और बातचीत जारी रखें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Start the conversation yourself",
+          "translations": {
+            "bn": "নিজেই কথা শুরু করুন",
+            "hi": "बातचीत ख़ुद शुरू करें"
+          }
+        },
+        {
+          "text": "Answer a question you did not expect",
+          "translations": {
+            "bn": "অপ্রত্যাশিত একটা প্রশ্নের উত্তর দিন",
+            "hi": "किसी अनपेक्षित सवाल का जवाब दें"
+          }
+        },
+        {
+          "text": "Use “Well …” or “Let me think …” when you need time",
+          "translations": {
+            "bn": "সময় দরকার হলে “Well …” বা “Let me think …” বলুন",
+            "hi": "समय चाहिए तो “Well …” या “Let me think …” कहें"
+          }
+        },
+        {
+          "text": "Ask two questions of your own",
+          "translations": {
+            "bn": "নিজে দুটো প্রশ্ন করুন",
+            "hi": "अपनी ओर से दो सवाल पूछें"
+          }
+        },
+        {
+          "text": "Keep going if you make a mistake",
+          "translations": {
+            "bn": "ভুল হলেও থামবেন না",
+            "hi": "ग़लती हो जाए तो भी रुकें नहीं"
+          }
+        },
+        {
+          "text": "End the conversation politely",
+          "translations": {
+            "bn": "ভদ্রভাবে কথা শেষ করুন",
+            "hi": "बातचीत विनम्रता से ख़त्म करें"
+          }
+        }
+      ],
+      "phrases": [
+        "Well, …",
+        "Let me think …",
+        "That’s a good question.",
+        "Honestly, …",
+        "What about you?",
+        "It was nice talking to you."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "You need a moment to think. What can you say?",
+            "translations": {
+              "bn": "ভাবার জন্য একটু সময় দরকার। কী বলতে পারেন?",
+              "hi": "सोचने के लिए एक पल चाहिए। आप क्या कह सकते हैं?"
+            }
+          },
+          "answer": "Let me think …",
+          "others": ["Stop talking.", "I don’t know you."]
+        },
+        {
+          "question": {
+            "text": "Someone asks you a surprising question. Which is a good start?",
+            "translations": {
+              "bn": "কেউ একটা অবাক করা প্রশ্ন করলেন। শুরুটা কেমন হলে ভালো?",
+              "hi": "किसी ने हैरान करने वाला सवाल पूछा। अच्छी शुरुआत कौन-सी है?"
+            }
+          },
+          "answer": "That’s a good question!",
+          "others": ["Why do you ask?", "No."]
+        },
+        {
+          "question": {
+            "text": "Which phrase adds another point?",
+            "translations": {
+              "bn": "কোন কথায় আরেকটা বিষয় যোগ হয়?",
+              "hi": "कौन-सा वाक्यांश एक और बात जोड़ता है?"
+            }
+          },
+          "answer": "Another thing is …",
+          "others": ["In short, …", "Let me think …"]
+        },
+        {
+          "question": {
+            "text": "Which phrase finishes your answer?",
+            "translations": {
+              "bn": "কোন কথায় উত্তর শেষ হয়?",
+              "hi": "कौन-सा वाक्यांश जवाब ख़त्म करता है?"
+            }
+          },
+          "answer": "So, in short, …",
+          "others": ["First of all, …", "Another thing is …"]
+        },
+        {
+          "question": {
+            "text": "You make a small mistake while speaking. What should you do?",
+            "translations": {
+              "bn": "বলতে গিয়ে ছোট ভুল হল। কী করবেন?",
+              "hi": "बोलते हुए छोटी ग़लती हो गई। आपको क्या करना चाहिए?"
+            }
+          },
+          "answer": "Keep going.",
+          "others": ["Stop and say nothing.", "Start again from the beginning."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Ashok",
+          "text": "Oh, sorry! Were you going to take this book?",
+          "translations": {
+            "bn": "ও, দুঃখিত! আপনি কি এই বইটা নিতে যাচ্ছিলেন?",
+            "hi": "अरे, माफ़ कीजिए! क्या आप यह किताब लेने वाली थीं?"
+          }
+        },
+        {
+          "speaker": "Sonal",
+          "text": "Yes, but please, you take it. I can find another one.",
+          "translations": {
+            "bn": "হ্যাঁ, তবে আপনিই নিন। আমি আরেকটা খুঁজে নেব।",
+            "hi": "हाँ, पर आप ही ले लीजिए। मैं दूसरी ढूँढ़ लूँगी।"
+          }
+        },
+        {
+          "speaker": "Ashok",
+          "text": "No, no. Have you read this writer before?",
+          "translations": {
+            "bn": "না, না। এই লেখকের লেখা আগে পড়েছেন?",
+            "hi": "नहीं, नहीं। क्या आपने इस लेखक को पहले पढ़ा है?"
+          }
+        },
+        {
+          "speaker": "Sonal",
+          "text": "Yes, all her books! Honestly, she’s my favourite.",
+          "translations": {
+            "bn": "হ্যাঁ, ওঁর সব বই! সত্যি বলতে, উনিই আমার প্রিয়।",
+            "hi": "हाँ, उनकी सारी किताबें! सच कहूँ तो, वही मेरी पसंदीदा हैं।"
+          }
+        },
+        {
+          "speaker": "Ashok",
+          "text": "Then let me ask you: which one should I read first?",
+          "translations": {
+            "bn": "তাহলে আপনাকেই জিজ্ঞেস করি: কোনটা আগে পড়ব?",
+            "hi": "तो आपसे ही पूछ लूँ: मुझे पहले कौन-सी पढ़नी चाहिए?"
+          }
+        },
+        {
+          "speaker": "Sonal",
+          "text": "Good question. Let me think… Start with her first one. It’s short and funny.",
+          "translations": {
+            "bn": "ভালো প্রশ্ন। একটু ভাবি… প্রথমটা দিয়ে শুরু করুন। ছোট আর মজার।",
+            "hi": "अच्छा सवाल है। सोचने दीजिए… उनकी पहली किताब से शुरू कीजिए। छोटी और मज़ेदार है।"
+          }
+        },
+        {
+          "speaker": "Ashok",
+          "text": "Great. And what kind of books do you usually read?",
+          "translations": {
+            "bn": "দারুণ। আর আপনি সাধারণত কী ধরনের বই পড়েন?",
+            "hi": "बढ़िया। और आप आमतौर पर किस तरह की किताबें पढ़ती हैं?"
+          }
+        },
+        {
+          "speaker": "Sonal",
+          "text": "Mostly stories, but recently I’ve started reading about space.",
+          "translations": {
+            "bn": "বেশির ভাগ গল্প, তবে ইদানীং মহাকাশ নিয়ে পড়তে শুরু করেছি।",
+            "hi": "ज़्यादातर कहानियाँ, पर हाल ही में अंतरिक्ष के बारे में पढ़ना शुरू किया है।"
+          }
+        },
+        {
+          "speaker": "Ashok",
+          "text": "Space? That’s unexpected! What got you interested?",
+          "translations": {
+            "bn": "মহাকাশ? এটা তো ভাবিনি! আগ্রহ হল কীভাবে?",
+            "hi": "अंतरिक्ष? यह तो सोचा नहीं था! दिलचस्पी कैसे जागी?"
+          }
+        },
+        {
+          "speaker": "Sonal",
+          "text": "A film I watched last month. Well, it was nice talking to you!",
+          "translations": {
+            "bn": "গত মাসে দেখা একটা সিনেমা থেকে। যাক, কথা বলে ভালো লাগল!",
+            "hi": "पिछले महीने देखी एक फ़िल्म से। ख़ैर, आपसे बात करके अच्छा लगा!"
+          }
+        }
+      ],
+      "voices": {
+        "Ashok": "male",
+        "Sonal": "female"
+      }
+    },
+    "review_roleplay": {
+      "partner": "Sam",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hey! I didn’t expect to see you here!",
+          "reply": "Me neither! What a nice surprise.",
+          "cues": {
+            "bn": "অবাক আর খুশি হয়ে উত্তর দিন।",
+            "hi": "हैरानी और ख़ुशी से जवाब दें।"
+          }
+        },
+        {
+          "partner": "If you could live in any city, where would you live?",
+          "reply": "Hmm, good question. Maybe …",
+          "cues": {
+            "bn": "একটু সময় নিয়ে উত্তর দিন।",
+            "hi": "थोड़ा समय लेकर जवाब दें।"
+          }
+        },
+        {
+          "partner": "Why there?",
+          "reply": "Well, first of all, …",
+          "cues": {
+            "bn": "কারণগুলো গুছিয়ে বলুন।",
+            "hi": "कारण क्रम से बताएँ।"
+          }
+        },
+        {
+          "partner": "Sounds great. I have to go now!",
+          "reply": "OK! It was lovely to see you.",
+          "cues": {
+            "bn": "বিদায় জানান।",
+            "hi": "विदा लें।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "An old classmate",
+            "translations": {
+              "bn": "পুরোনো সহপাঠী",
+              "hi": "पुराने सहपाठी"
+            }
+          },
+          "roleplay": {
+            "partner": "Bela",
+            "asMan": "Bimal",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Is that you? We were in school together!",
+                "reply": "Yes! Wow, it’s been so long!",
+                "cues": {
+                  "bn": "চিনতে পেরে খুশি হয়ে উত্তর দিন।",
+                  "hi": "पहचानें और ख़ुशी से जवाब दें।"
+                }
+              },
+              {
+                "partner": "What are you doing these days?",
+                "reply": "Well, I’m …",
+                "cues": {
+                  "bn": "এখন কী করছেন, বলুন।",
+                  "hi": "बताएँ कि आजकल क्या चल रहा है।"
+                }
+              },
+              {
+                "partner": "Do you still play the guitar?",
+                "reply": "Ha, not really! I stopped years ago. Do you still sing?",
+                "cues": {
+                  "bn": "সৎ উত্তর দিয়ে পাল্টা প্রশ্ন করুন।",
+                  "hi": "सच्चा जवाब दें और पलटकर पूछें।"
+                }
+              },
+              {
+                "partner": "Only in the shower! Let’s meet properly soon.",
+                "reply": "Yes, let’s. Here’s my number.",
+                "cues": {
+                  "bn": "রাজি হয়ে নম্বর দিন।",
+                  "hi": "हामी भरें और अपना नंबर दें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A stranger in a lift",
+            "translations": {
+              "bn": "লিফটে অচেনা কেউ",
+              "hi": "लिफ़्ट में अजनबी"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "This lift is so slow!",
+                "reply": "I know! I usually take the stairs.",
+                "cues": {
+                  "bn": "রাজি হয়ে একটা খুঁটিনাটি যোগ করুন।",
+                  "hi": "सहमति दें और एक ब्योरा जोड़ें।"
+                }
+              },
+              {
+                "partner": "Really? How many floors?",
+                "reply": "Six floors. It’s good exercise!",
+                "cues": {
+                  "bn": "কটা তলা, বলুন।",
+                  "hi": "बताएँ कितनी मंज़िलें।"
+                }
+              },
+              {
+                "partner": "Which company do you work for?",
+                "reply": "I work for … And you?",
+                "cues": {
+                  "bn": "উত্তর দিয়ে পাল্টা প্রশ্ন করুন।",
+                  "hi": "जवाब दें और पलटकर पूछें।"
+                }
+              },
+              {
+                "partner": "I’m new here. This is my floor. Bye!",
+                "reply": "Welcome! See you around.",
+                "cues": {
+                  "bn": "স্বাগত জানিয়ে বিদায় দিন।",
+                  "hi": "स्वागत करें और विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A surprise interview",
+            "translations": {
+              "bn": "হঠাৎ সাক্ষাৎকার",
+              "hi": "अचानक इंटरव्यू"
+            }
+          },
+          "roleplay": {
+            "partner": "the reporter",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! I’m from City TV. Can I ask you one question?",
+                "reply": "Um, sure. What is it?",
+                "cues": {
+                  "bn": "একটু অবাক হয়ে রাজি হোন।",
+                  "hi": "थोड़ी हैरानी के साथ हामी भरें।"
+                }
+              },
+              {
+                "partner": "What would make this city better?",
+                "reply": "Hmm, let me think. More parks, I’d say.",
+                "cues": {
+                  "bn": "সময় নিয়ে একটা উত্তর দিন।",
+                  "hi": "समय लेकर एक जवाब दें।"
+                }
+              },
+              {
+                "partner": "Why parks?",
+                "reply": "Well, first of all, children need places to play.",
+                "cues": {
+                  "bn": "কারণগুলো গুছিয়ে বলুন।",
+                  "hi": "कारण क्रम से बताएँ।"
+                }
+              },
+              {
+                "partner": "Great answer. Thank you!",
+                "reply": "You’re welcome. That was fun!",
+                "cues": {
+                  "bn": "হাসিমুখে উত্তর দিন।",
+                  "hi": "मुस्कुराकर जवाब दें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

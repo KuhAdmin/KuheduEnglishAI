@@ -24,11 +24,17 @@ export type VoiceRecordingOptions = {
   maxDurationMs?: number
   /** Also listen for the learner's voice, where the device can (see `voiceActivity.ts`). */
   listen?: boolean
-  /** Keep the earlier take until a new one replaces it, not only until the next one starts. */
-  keepTake?: boolean
   /** Told several times a second while recording; the place for rules that end it. */
   onProgress?: (progress: RecordingProgress) => void
+  /**
+   * Handed each recording as it is finished, for a screen that keeps more than the last one (a
+   * conversation's answers, turn by turn). One that was cancelled is never handed over.
+   */
+  onTake?: (recording: FinishedTake) => void
 }
+
+/** A recording as it was made, before anything is kept of it. */
+export type FinishedTake = { blob: Blob; durationMs: number }
 
 const TICK_MS = 200
 
@@ -65,12 +71,6 @@ export function useVoiceRecording(options: VoiceRecordingOptions = {}) {
     settings.current = options
   })
 
-  const stopPlayer = useCallback(() => {
-    player.current?.pause()
-    player.current = null
-    setPlaying(false)
-  }, [])
-
   const dropTake = useCallback(() => {
     player.current?.pause()
     player.current = null
@@ -83,17 +83,12 @@ export function useVoiceRecording(options: VoiceRecordingOptions = {}) {
     busy.current = true
     const run = generation.current
     const current = () => mounted.current && run === generation.current
-    const { maxDurationMs, listen, keepTake } = settings.current
+    const { maxDurationMs, listen } = settings.current
     stopWhenReady.current = false
     ending.current = false
-    // Either way the earlier take must not play into the new one.
-    if (keepTake) {
-      stopPlayer()
-    } else {
-      dropTake()
-      setTake(null)
-      setPlaying(false)
-    }
+    dropTake()
+    setTake(null)
+    setPlaying(false)
     setProblem(null)
     setElapsedMs(0)
     setVoice(null)
@@ -139,15 +134,16 @@ export function useVoiceRecording(options: VoiceRecordingOptions = {}) {
       setPlaying(false)
       setAttempts((count) => count + 1)
       setPhase('recorded')
+      settings.current.onTake?.({ blob: result.blob, durationMs: result.durationMs })
     } catch (error) {
       active.current = null
       if (!current()) return
       setProblem(error instanceof MicrophoneError ? error.problem : 'unavailable')
-      setPhase(url.current ? 'recorded' : 'idle')
+      setPhase('idle')
     } finally {
       busy.current = false
     }
-  }, [dropTake, stopPlayer])
+  }, [dropTake])
 
   const stop = useCallback(() => {
     ending.current = true
@@ -168,13 +164,13 @@ export function useVoiceRecording(options: VoiceRecordingOptions = {}) {
     setPhase('idle')
   }, [stop, dropTake])
 
-  /** Close the microphone and make nothing of what it picked up; an earlier take is kept. */
+  /** Close the microphone and make nothing of what it picked up. */
   const cancel = useCallback(() => {
     generation.current += 1
     stop()
     setElapsedMs(0)
     setVoice(null)
-    setPhase(url.current ? 'recorded' : 'idle')
+    setPhase('idle')
   }, [stop])
 
   const playTake = useCallback(() => {

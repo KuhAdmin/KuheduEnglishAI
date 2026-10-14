@@ -1,0 +1,786 @@
+{
+  "week": 16,
+  "content": {
+    "dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Rohan",
+          "text": "Hi! Is this seat free?",
+          "translations": {
+            "bn": "হাই! এই জায়গাটা কি খালি?",
+            "hi": "हाय! क्या यह सीट ख़ाली है?"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "Yes, please sit down. I’m Meera.",
+          "translations": {
+            "bn": "হ্যাঁ, বসুন। আমি মীরা।",
+            "hi": "हाँ, बैठिए। मैं मीरा हूँ।"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Nice to meet you, Meera. I’m Rohan. How do you know Anil?",
+          "translations": {
+            "bn": "আলাপ হয়ে ভালো লাগল, মীরা। আমি রোহন। আপনি অনিলকে কীভাবে চেনেন?",
+            "hi": "आपसे मिलकर अच्छा लगा, मीरा। मैं रोहन हूँ। आप अनिल को कैसे जानती हैं?"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "We work together. And you?",
+          "translations": {
+            "bn": "আমরা একসঙ্গে কাজ করি। আর আপনি?",
+            "hi": "हम साथ काम करते हैं। और आप?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "He’s my neighbour. Lovely weather today, isn’t it?",
+          "translations": {
+            "bn": "উনি আমার প্রতিবেশী। আজ আবহাওয়াটা দারুণ, তাই না?",
+            "hi": "वे मेरे पड़ोसी हैं। आज मौसम बहुत अच्छा है, है न?"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "Yes, it’s not too hot. Do you live near here?",
+          "translations": {
+            "bn": "হ্যাঁ, খুব গরম নেই। আপনি কি কাছেই থাকেন?",
+            "hi": "हाँ, ज़्यादा गर्मी नहीं है। क्या आप पास में ही रहते हैं?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Yes, five minutes away. I just started a new job.",
+          "translations": {
+            "bn": "হ্যাঁ, পাঁচ মিনিটের পথ। আমি সবে একটা নতুন চাকরি শুরু করেছি।",
+            "hi": "हाँ, पाँच मिनट की दूरी पर। मैंने अभी-अभी नई नौकरी शुरू की है।"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "Really? That’s great! What do you do?",
+          "translations": {
+            "bn": "তাই নাকি? দারুণ! আপনি কী কাজ করেন?",
+            "hi": "सच में? बहुत बढ़िया! आप क्या काम करते हैं?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "I’m a teacher. I teach maths.",
+          "translations": {
+            "bn": "আমি শিক্ষক। অঙ্ক পড়াই।",
+            "hi": "मैं शिक्षक हूँ। गणित पढ़ाता हूँ।"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "Oh, how interesting! Do you enjoy it?",
+          "translations": {
+            "bn": "ও, কী মজার! আপনার ভালো লাগে?",
+            "hi": "अरे, कितना दिलचस्प! क्या आपको यह अच्छा लगता है?"
+          }
+        },
+        {
+          "speaker": "Rohan",
+          "text": "Very much. Oh, here’s my friend Kabir. Kabir, this is Meera. She works with Anil.",
+          "translations": {
+            "bn": "খুব। ও, এই তো আমার বন্ধু কবীর। কবীর, ইনি মীরা। উনি অনিলের সঙ্গে কাজ করেন।",
+            "hi": "बहुत। अरे, ये रहा मेरा दोस्त कबीर। कबीर, ये मीरा हैं। ये अनिल के साथ काम करती हैं।"
+          }
+        },
+        {
+          "speaker": "Kabir",
+          "text": "Hello, Meera. It’s nice to meet you.",
+          "translations": {
+            "bn": "হ্যালো, মীরা। আলাপ হয়ে ভালো লাগল।",
+            "hi": "नमस्ते, मीरा। आपसे मिलकर अच्छा लगा।"
+          }
+        },
+        {
+          "speaker": "Meera",
+          "text": "Nice to meet you too, Kabir. Please join us!",
+          "translations": {
+            "bn": "আপনার সঙ্গেও আলাপ হয়ে ভালো লাগল, কবীর। আমাদের সঙ্গে বসুন!",
+            "hi": "आपसे मिलकर मुझे भी अच्छा लगा, कबीर। हमारे साथ बैठिए!"
+          }
+        }
+      ],
+      "voices": {
+        "Rohan": "male",
+        "Meera": "female",
+        "Kabir": "male"
+      }
+    },
+    "vocabulary": {
+      "words": [
+        {
+          "word": "small talk",
+          "phonetic": "/ˈsmɔːl tɔːk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "হালকা আলাপ",
+            "hi": "हल्की-फुल्की बातचीत"
+          },
+          "syllables": ["small", "talk"],
+          "stress": 1,
+          "tips": {
+            "bn": [
+              "“small” একটু জোর দিয়ে বলুন।",
+              "হালকা আলাপ সহজ বিষয়ে: আবহাওয়া, জায়গা, খাবার।"
+            ],
+            "en": [
+              "Say “small” a little stronger.",
+              "Small talk is about easy things: the weather, the place, the food."
+            ],
+            "hi": [
+              "“small” थोड़ा ज़ोर से बोलें।",
+              "हल्की बातचीत आसान विषयों पर होती है: मौसम, जगह, खाना।"
+            ]
+          }
+        },
+        {
+          "word": "weather",
+          "phonetic": "/ˈweðə/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "আবহাওয়া",
+            "hi": "मौसम"
+          },
+          "syllables": ["wea", "ther"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“th” নরম, “this”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “th” is soft, as in “this”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“th” नरम है, “this” जैसा।"]
+          }
+        },
+        {
+          "word": "lovely",
+          "phonetic": "/ˈlʌvli/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "চমৎকার, সুন্দর",
+            "hi": "बहुत अच्छा, प्यारा"
+          },
+          "syllables": ["love", "ly"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“o”-এর উচ্চারণ “cup”-এর “u”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “o” sounds like the “u” in “cup”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“o” की आवाज़ “cup” के “u” जैसी है।"]
+          }
+        },
+        {
+          "word": "busy",
+          "phonetic": "/ˈbɪzi/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ব্যস্ত",
+            "hi": "व्यस्त"
+          },
+          "syllables": ["bu", "sy"],
+          "stress": 1,
+          "tips": {
+            "bn": ["“u”-এর উচ্চারণ ছোট “i”-এর মতো: “বিজি”।", "“s”-এর উচ্চারণ “z”-এর মতো।"],
+            "en": ["The “u” sounds like a short “i”: “bizzy”.", "The “s” sounds like “z”."],
+            "hi": ["“u” छोटे “i” जैसा है: “बिज़ी”।", "“s” की आवाज़ “z” जैसी है।"]
+          }
+        },
+        {
+          "word": "traffic",
+          "phonetic": "/ˈtræfɪk/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "যানজট, রাস্তার গাড়ি",
+            "hi": "ट्रैफ़िक, यातायात"
+          },
+          "syllables": ["traf", "fic"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "“a” খোলা, “cat”-এর মতো।"],
+            "en": ["Say the first part stronger.", "The “a” is open, as in “cat”."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "“a” खुला है, “cat” जैसा।"]
+          }
+        },
+        {
+          "word": "holiday",
+          "phonetic": "/ˈhɒlədeɪ/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "ছুটি",
+            "hi": "छुट्टी"
+          },
+          "syllables": ["hol", "i", "day"],
+          "stress": 1,
+          "tips": {
+            "bn": ["প্রথম অংশটি জোর দিয়ে বলুন।", "মাঝের অংশটি খুব ছোট।"],
+            "en": ["Say the first part stronger.", "The middle part is very short."],
+            "hi": ["पहला हिस्सा ज़ोर से बोलें।", "बीच का हिस्सा बहुत छोटा है।"]
+          }
+        },
+        {
+          "word": "chat",
+          "phonetic": "/tʃæt/",
+          "imageUrl": null,
+          "meanings": {
+            "bn": "গল্প করা, আড্ডা",
+            "hi": "गपशप करना"
+          },
+          "syllables": ["chat"],
+          "stress": null,
+          "tips": {
+            "bn": ["“a” খোলা, “cat”-এর মতো।", "“Let’s chat” মানে চলুন গল্প করি।"],
+            "en": [
+              "The “a” is open, as in “cat”.",
+              "“Let’s chat” means let’s talk in a friendly way."
+            ],
+            "hi": ["“a” खुला है, “cat” जैसा।", "“Let’s chat” का मतलब है चलिए बातें करें।"]
+          }
+        }
+      ]
+    },
+    "sentences": {
+      "sentences": [
+        {
+          "english": "Really? That sounds great!",
+          "alsoAccepted": ["Really? That sounds wonderful!"],
+          "translations": {
+            "bn": "তাই নাকি? দারুণ শোনাচ্ছে!",
+            "hi": "सच में? यह तो बहुत अच्छा लगता है!"
+          },
+          "tips": {
+            "bn": ["“Really?” বলার সময় গলা ওপরে তুলুন।", "“That sounds …” দিয়ে বোঝান আপনি খুশি।"],
+            "en": [
+              "Say “Really?” with your voice going up.",
+              "“That sounds …” shows you are happy for them."
+            ],
+            "hi": ["“Really?” बोलते समय आवाज़ ऊपर ले जाएँ।", "“That sounds …” से ख़ुशी दिखाएँ।"]
+          }
+        },
+        {
+          "english": "How interesting! Tell me more.",
+          "alsoAccepted": ["That is interesting! Tell me more."],
+          "translations": {
+            "bn": "কী মজার! আরও বলুন।",
+            "hi": "कितना दिलचस्प! और बताइए।"
+          },
+          "tips": {
+            "bn": ["“How …!” দিয়ে জোরালো অনুভূতি বোঝায়।", "“Tell me more” মানে আরও বলুন।"],
+            "en": ["“How …!” shows a strong feeling.", "“Tell me more” asks them to go on."],
+            "hi": ["“How …!” से गहरी भावना झलकती है।", "“Tell me more” का मतलब है और बताइए।"]
+          }
+        },
+        {
+          "english": "What do you like about your job?",
+          "alsoAccepted": ["What do you like about your work?"],
+          "translations": {
+            "bn": "আপনার কাজের কোন দিকটা আপনার ভালো লাগে?",
+            "hi": "आपको अपने काम में क्या अच्छा लगता है?"
+          },
+          "tips": {
+            "bn": ["লম্বা উত্তর পেতে “What” দিয়ে প্রশ্ন করুন।", "“about” মানে সেই বিষয়ে।"],
+            "en": ["Ask with “What” to get a long answer.", "“about” means on that subject."],
+            "hi": ["लंबा जवाब पाने के लिए “What” से पूछें।", "“about” का मतलब है उस बारे में।"]
+          }
+        },
+        {
+          "english": "Oh, I see. How long have you lived here?",
+          "alsoAccepted": [
+            "I see. How long have you lived here?",
+            "Oh, I see. How long have you been living here?"
+          ],
+          "translations": {
+            "bn": "ও, বুঝলাম। আপনি এখানে কত দিন আছেন?",
+            "hi": "ओह, अच्छा। आप यहाँ कब से रहते हैं?"
+          },
+          "tips": {
+            "bn": [
+              "“I see” মানে আপনি বুঝেছেন।",
+              "এখন পর্যন্ত কত সময়, জানতে বলুন “How long have you …?”"
+            ],
+            "en": [
+              "“I see” means you understand.",
+              "Ask “How long have you …?” for the time until now."
+            ],
+            "hi": [
+              "“I see” का मतलब है बात समझ आ गई।",
+              "अब तक कितना समय हुआ, यह पूछने के लिए “How long have you …?”"
+            ]
+          }
+        },
+        {
+          "english": "That must be fun. Do you do it every weekend?",
+          "alsoAccepted": ["That sounds fun. Do you do it every weekend?"],
+          "translations": {
+            "bn": "নিশ্চয়ই খুব মজার। আপনি কি প্রতি সপ্তাহান্তে এটা করেন?",
+            "hi": "यह तो मज़ेदार होगा। क्या आप यह हर सप्ताहांत करते हैं?"
+          },
+          "tips": {
+            "bn": ["“must be” দিয়ে অনুমান করুন কেমন লাগে।", "পরের প্রশ্ন আলাপ চালু রাখে।"],
+            "en": [
+              "“must be” guesses how something feels.",
+              "A follow-up question keeps the talk going."
+            ],
+            "hi": [
+              "“must be” से अंदाज़ा लगाएँ कि कैसा लगता होगा।",
+              "अगला सवाल बातचीत को आगे बढ़ाता है।"
+            ]
+          }
+        }
+      ]
+    },
+    "roleplay": {
+      "partner": "Anil",
+      "asWoman": "Anita",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hi! Welcome to my party. Who is this with you?",
+          "reply": "This is my friend Sam. Sam, this is Anil.",
+          "cues": {
+            "bn": "আপনার বন্ধু স্যামের সঙ্গে তাঁর পরিচয় করিয়ে দিন।",
+            "hi": "अपने दोस्त सैम का उनसे परिचय कराएँ।"
+          }
+        },
+        {
+          "partner": "Nice to meet you, Sam. How do you two know each other?",
+          "reply": "We went to school together.",
+          "cues": {
+            "bn": "বলুন আপনারা একসঙ্গে স্কুলে পড়তেন।",
+            "hi": "बताएँ कि आप दोनों साथ स्कूल में पढ़ते थे।"
+          }
+        },
+        {
+          "partner": "Oh, lovely! And what does Sam do?",
+          "reply": "Sam is a nurse at the city hospital.",
+          "cues": {
+            "bn": "স্যামের কাজের কথা বলুন: শহরের হাসপাতালে নার্স।",
+            "hi": "सैम का काम बताएँ: शहर के अस्पताल में नर्स।"
+          }
+        },
+        {
+          "partner": "Great. Do you know my sister Ritu?",
+          "reply": "No, I don’t think we have met.",
+          "cues": {
+            "bn": "বলুন, মনে হয় আপনাদের দেখা হয়নি।",
+            "hi": "कहें कि शायद आपकी मुलाक़ात नहीं हुई।"
+          }
+        },
+        {
+          "partner": "Ritu, this is my friend. Please introduce yourself.",
+          "reply": "Hello, Ritu. I’m … Nice to meet you.",
+          "cues": {
+            "bn": "রিতুকে নমস্কার জানিয়ে নিজের নাম বলুন।",
+            "hi": "रितु को नमस्ते कहें और अपना नाम बताएँ।"
+          }
+        },
+        {
+          "partner": "Wonderful. Now everyone knows everyone!",
+          "reply": "Thank you for introducing us.",
+          "cues": {
+            "bn": "পরিচয় করিয়ে দেওয়ার জন্য ধন্যবাদ দিন।",
+            "hi": "परिचय कराने के लिए धन्यवाद दें।"
+          }
+        }
+      ]
+    },
+    "challenge": {
+      "title": {
+        "text": "Meeting Someone for the First Time",
+        "translations": {
+          "bn": "প্রথমবার কারও সঙ্গে দেখা",
+          "hi": "किसी से पहली बार मिलना"
+        }
+      },
+      "instruction": {
+        "text": "You meet someone new at a party. Greet them, make small talk and get to know them in about one minute.",
+        "translations": {
+          "bn": "পার্টিতে নতুন কারও সঙ্গে দেখা হল। নমস্কার করুন, হালকা আলাপ করুন, প্রায় এক মিনিটে চেনাজানা করুন।",
+          "hi": "पार्टी में कोई नया व्यक्ति मिला। नमस्ते कहें, हल्की बातचीत करें और लगभग एक मिनट में जान-पहचान करें।"
+        }
+      },
+      "tasks": [
+        {
+          "text": "Greet the person and say your name",
+          "translations": {
+            "bn": "নমস্কার জানিয়ে নিজের নাম বলুন",
+            "hi": "नमस्ते कहें और अपना नाम बताएँ"
+          }
+        },
+        {
+          "text": "Ask their name and where they are from",
+          "translations": {
+            "bn": "তাঁর নাম আর কোথা থেকে এসেছেন, জিজ্ঞেস করুন",
+            "hi": "उनका नाम पूछें और यह कि वे कहाँ से हैं"
+          }
+        },
+        {
+          "text": "Make small talk about the place or the weather",
+          "translations": {
+            "bn": "জায়গা বা আবহাওয়া নিয়ে হালকা আলাপ করুন",
+            "hi": "जगह या मौसम पर हल्की बातचीत करें"
+          }
+        },
+        {
+          "text": "Show interest and ask one follow-up question",
+          "translations": {
+            "bn": "আগ্রহ দেখান, আর একটা পরের প্রশ্ন করুন",
+            "hi": "दिलचस्पी दिखाएँ और एक आगे का सवाल पूछें"
+          }
+        },
+        {
+          "text": "End politely: “It was nice meeting you.”",
+          "translations": {
+            "bn": "ভদ্রভাবে শেষ করুন: “It was nice meeting you.”",
+            "hi": "विनम्रता से ख़त्म करें: “It was nice meeting you.”"
+          }
+        }
+      ],
+      "phrases": [
+        "Hi, I’m … Nice to meet you.",
+        "Where are you from?",
+        "Lovely weather today, isn’t it?",
+        "Really? That sounds interesting.",
+        "What do you do?",
+        "It was nice meeting you."
+      ]
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": {
+            "text": "Which is a good way to start a conversation with someone new?",
+            "translations": {
+              "bn": "নতুন কারও সঙ্গে কথা শুরু করার ভালো উপায় কোনটি?",
+              "hi": "किसी नए व्यक्ति से बातचीत शुरू करने का अच्छा तरीक़ा कौन-सा है?"
+            }
+          },
+          "answer": "Hi! Is this seat free?",
+          "others": ["Give me that seat.", "Who are you?"]
+        },
+        {
+          "question": {
+            "text": "Complete: ___ weather today, isn’t it?",
+            "translations": {
+              "bn": "পূরণ করুন: ___ weather today, isn’t it?",
+              "hi": "पूरा करें: ___ weather today, isn’t it?"
+            }
+          },
+          "answer": "Lovely",
+          "others": ["Love", "Loving"]
+        },
+        {
+          "question": {
+            "text": "Someone says: “I just got a new job.” What is a good reply?",
+            "translations": {
+              "bn": "কেউ বললেন: “I just got a new job.” ভালো উত্তর কোনটি?",
+              "hi": "किसी ने कहा: “I just got a new job.” अच्छा जवाब कौन-सा है?"
+            }
+          },
+          "answer": "Really? That’s great!",
+          "others": ["OK.", "So what?"]
+        },
+        {
+          "question": {
+            "text": "How do you introduce your friend Sam to Mrs Rao?",
+            "translations": {
+              "bn": "মিসেস রাওয়ের সঙ্গে বন্ধু স্যামের পরিচয় কীভাবে করাবেন?",
+              "hi": "मिसेज़ राव से अपने दोस्त सैम का परिचय कैसे कराएँगे?"
+            }
+          },
+          "answer": "Mrs Rao, this is my friend Sam.",
+          "others": ["Mrs Rao, he is Sam friend.", "Sam is here, Mrs Rao."]
+        },
+        {
+          "question": {
+            "text": "What do you say when you meet someone for the first time?",
+            "translations": {
+              "bn": "প্রথমবার কারও সঙ্গে দেখা হলে কী বলবেন?",
+              "hi": "किसी से पहली बार मिलने पर क्या कहेंगे?"
+            }
+          },
+          "answer": "Nice to meet you.",
+          "others": ["Nice to see you again.", "See you later."]
+        }
+      ]
+    },
+    "review_dialogue": {
+      "videoUrl": null,
+      "lines": [
+        {
+          "speaker": "Vikram",
+          "text": "Hello! I don’t think we have met. I’m Vikram.",
+          "translations": {
+            "bn": "নমস্কার! মনে হয় আমাদের আগে দেখা হয়নি। আমি বিক্রম।",
+            "hi": "नमस्ते! मुझे लगता है हम पहले नहीं मिले। मैं विक्रम हूँ।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Hi, Vikram. I’m Asha. I live on the second floor.",
+          "translations": {
+            "bn": "হাই, বিক্রম। আমি আশা। আমি দোতলায় থাকি।",
+            "hi": "हाय, विक्रम। मैं आशा हूँ। मैं दूसरी मंज़िल पर रहती हूँ।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Oh, nice! I just moved in last week.",
+          "translations": {
+            "bn": "ও, বেশ! আমি গত সপ্তাহেই এখানে এসেছি।",
+            "hi": "अरे, अच्छा! मैं पिछले हफ़्ते ही यहाँ आया हूँ।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Welcome! How do you like the building?",
+          "translations": {
+            "bn": "স্বাগত! বাড়িটা কেমন লাগছে?",
+            "hi": "स्वागत है! आपको यह इमारत कैसी लगी?"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "I like it. It’s quiet, and the people are friendly.",
+          "translations": {
+            "bn": "ভালো লাগছে। শান্ত, আর লোকজন বেশ মিশুকে।",
+            "hi": "मुझे अच्छी लगी। यहाँ शांति है, और लोग मिलनसार हैं।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "That’s good to hear. What do you do, Vikram?",
+          "translations": {
+            "bn": "শুনে ভালো লাগল। আপনি কী করেন, বিক্রম?",
+            "hi": "यह सुनकर अच्छा लगा। आप क्या करते हैं, विक्रम?"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "I’m a cook. I work at a hotel.",
+          "translations": {
+            "bn": "আমি রাঁধুনি। একটা হোটেলে কাজ করি।",
+            "hi": "मैं रसोइया हूँ। एक होटल में काम करता हूँ।"
+          }
+        },
+        {
+          "speaker": "Asha",
+          "text": "Really? How interesting! Oh, here’s my husband, Dev. Dev, this is Vikram, our new neighbour.",
+          "translations": {
+            "bn": "তাই নাকি? কী মজার! ও, এই আমার স্বামী দেব। দেব, ইনি বিক্রম, আমাদের নতুন প্রতিবেশী।",
+            "hi": "सच में? कितना दिलचस्प! अरे, ये मेरे पति देव हैं। देव, ये विक्रम हैं, हमारे नए पड़ोसी।"
+          }
+        },
+        {
+          "speaker": "Dev",
+          "text": "Welcome, Vikram. Nice to meet you.",
+          "translations": {
+            "bn": "স্বাগত, বিক্রম। আলাপ হয়ে ভালো লাগল।",
+            "hi": "स्वागत है, विक्रम। आपसे मिलकर अच्छा लगा।"
+          }
+        },
+        {
+          "speaker": "Vikram",
+          "text": "Nice to meet you too. Please come for tea one day.",
+          "translations": {
+            "bn": "আপনার সঙ্গেও আলাপ হয়ে ভালো লাগল। একদিন চা খেতে আসুন।",
+            "hi": "आपसे मिलकर मुझे भी अच्छा लगा। किसी दिन चाय पर आइए।"
+          }
+        }
+      ],
+      "voices": {
+        "Vikram": "male",
+        "Asha": "female",
+        "Dev": "male"
+      }
+    },
+    "review_roleplay": {
+      "partner": "the host",
+      "imageUrl": null,
+      "turns": [
+        {
+          "partner": "Hello! Welcome. I don’t think we have met.",
+          "reply": "Hello! I’m … Nice to meet you.",
+          "cues": {
+            "bn": "নমস্কার জানিয়ে নিজের নাম বলুন।",
+            "hi": "नमस्ते कहें और अपना नाम बताएँ।"
+          }
+        },
+        {
+          "partner": "Nice to meet you too. How do you know everyone here?",
+          "reply": "I’m a friend of …",
+          "cues": {
+            "bn": "বলুন আপনি কার বন্ধু।",
+            "hi": "बताएँ कि आप किसके दोस्त हैं।"
+          }
+        },
+        {
+          "partner": "I love cooking. I made all the food today!",
+          "reply": "Really? It’s delicious!",
+          "cues": {
+            "bn": "আগ্রহ দেখান আর খাবারের প্রশংসা করুন।",
+            "hi": "दिलचस्पी दिखाएँ और खाने की तारीफ़ करें।"
+          }
+        },
+        {
+          "partner": "Thank you! Come, let me introduce you to my friends.",
+          "reply": "Thank you, I’d love to meet them.",
+          "cues": {
+            "bn": "ধন্যবাদ দিন, বলুন আপনি আলাপ করতে চান।",
+            "hi": "धन्यवाद दें और कहें कि आप उनसे मिलना चाहेंगे।"
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "scenarios": [
+        {
+          "name": {
+            "text": "On a train",
+            "translations": {
+              "bn": "ট্রেনে",
+              "hi": "ट्रेन में"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hello. Are you going to Delhi too?",
+                "reply": "Yes, I am. Is this your first time there?",
+                "cues": {
+                  "bn": "হ্যাঁ বলুন, আর জিজ্ঞেস করুন এটাই প্রথমবার কি না।",
+                  "hi": "हाँ कहें और पूछें कि क्या वहाँ उनका यह पहला मौक़ा है।"
+                }
+              },
+              {
+                "partner": "No, I go often for work. And you?",
+                "reply": "I’m visiting my family.",
+                "cues": {
+                  "bn": "বলুন আপনি পরিবারের কাছে যাচ্ছেন।",
+                  "hi": "बताएँ कि आपकी यात्रा परिवार से मिलने के लिए है।"
+                }
+              },
+              {
+                "partner": "That’s nice. Where does your family live?",
+                "reply": "They live in …",
+                "cues": {
+                  "bn": "বলুন তাঁরা কোথায় থাকেন।",
+                  "hi": "बताएँ कि वे कहाँ रहते हैं।"
+                }
+              },
+              {
+                "partner": "This is my station. It was nice talking to you!",
+                "reply": "Nice talking to you too. Have a good day!",
+                "cues": {
+                  "bn": "ভালো লেগেছে বলে বিদায় জানান।",
+                  "hi": "कहें कि बात करके अच्छा लगा, और विदा लें।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "At a wedding",
+            "translations": {
+              "bn": "বিয়েবাড়িতে",
+              "hi": "शादी में"
+            }
+          },
+          "roleplay": {
+            "partner": "Nisha",
+            "asMan": "Nikhil",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi! Are you from the bride’s side or the groom’s?",
+                "reply": "The groom’s side. I’m his friend from college.",
+                "cues": {
+                  "bn": "বলুন আপনি বরের দিকের, কলেজের বন্ধু।",
+                  "hi": "बताएँ कि आप दूल्हे की ओर से हैं, कॉलेज के दोस्त।"
+                }
+              },
+              {
+                "partner": "Oh, nice! The food is wonderful, isn’t it?",
+                "reply": "Yes, it is. The sweets are delicious!",
+                "cues": {
+                  "bn": "রাজি হোন আর মিষ্টির প্রশংসা করুন।",
+                  "hi": "सहमति जताएँ और मिठाई की तारीफ़ करें।"
+                }
+              },
+              {
+                "partner": "I made the sweets myself.",
+                "reply": "Really? That’s amazing! How did you learn?",
+                "cues": {
+                  "bn": "অবাক হয়ে আগ্রহ দেখান, একটা প্রশ্ন করুন।",
+                  "hi": "हैरानी और दिलचस्पी दिखाएँ, और एक सवाल पूछें।"
+                }
+              },
+              {
+                "partner": "From my grandmother. Come, I’ll introduce you to her!",
+                "reply": "I’d love to meet her.",
+                "cues": {
+                  "bn": "বলুন আপনি তাঁর সঙ্গে আলাপ করতে চান।",
+                  "hi": "कहें कि आप उनसे ज़रूर मिलना चाहेंगे।"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "name": {
+            "text": "A new colleague",
+            "translations": {
+              "bn": "নতুন সহকর্মী",
+              "hi": "नए सहकर्मी"
+            }
+          },
+          "roleplay": {
+            "partner": "Sam",
+            "imageUrl": null,
+            "turns": [
+              {
+                "partner": "Hi, you must be new here. I’m Sam.",
+                "reply": "Yes, today is my first day. I’m …",
+                "cues": {
+                  "bn": "বলুন আজ আপনার প্রথম দিন, আর নিজের নাম বলুন।",
+                  "hi": "बताएँ कि आज आपका पहला दिन है, और अपना नाम बताएँ।"
+                }
+              },
+              {
+                "partner": "Welcome to the team! How do you feel?",
+                "reply": "A little nervous, but excited.",
+                "cues": {
+                  "bn": "বলুন একটু ভয় করছে, আবার আনন্দও হচ্ছে।",
+                  "hi": "बताएँ कि थोड़ी घबराहट है, पर उत्साह भी है।"
+                }
+              },
+              {
+                "partner": "Don’t worry, everyone is friendly. Let me introduce you to our manager.",
+                "reply": "Thank you, that’s very kind.",
+                "cues": {
+                  "bn": "ধন্যবাদ দিন।",
+                  "hi": "धन्यवाद दें।"
+                }
+              },
+              {
+                "partner": "This is Mrs Das, our manager. Mrs Das, this is our new colleague.",
+                "reply": "Good morning, Mrs Das. It’s nice to meet you.",
+                "cues": {
+                  "bn": "মিসেস দাসকে সুপ্রভাত জানান।",
+                  "hi": "मिसेज़ दास को सुप्रभात कहें।"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

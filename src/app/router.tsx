@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router'
+import { ensureAppConfig } from '@/shared/lib/appConfig/appConfigRemote'
 import { adminRoutes } from '@/features/admin'
 import { authRoutes, authStepRoutes, requireAccount, requireAdmin } from '@/features/auth'
 import { conversationRoutes } from '@/features/conversation'
@@ -29,6 +30,14 @@ export const createAppRouter = () =>
       ErrorBoundary: RouteError,
       // Shown while the first lazy route loads; the HTML background already matches the theme.
       HydrateFallback: () => null,
+      // What an admin wrote (the landing page, the languages, the screen texts…) is the server's:
+      // waited for a moment as the app opens, so the first screen is not drawn with what is
+      // built in and then redrawn. Once, not at every step taken inside.
+      loader: async () => {
+        await ensureAppConfig()
+        return null
+      },
+      shouldRevalidate: () => false,
       children: [
         // Learner app: phone-width column
         {
